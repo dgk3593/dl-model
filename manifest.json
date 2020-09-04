@@ -1,6 +1,6 @@
 {
-    "short_name": "React App",
-    "name": "Create React App Sample",
+    "short_name": "DL Model",
+    "name": "Dragalia Lost Model Viewer",
     "icons": [
         {
             "src": "favicon.ico",
