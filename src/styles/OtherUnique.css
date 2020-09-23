@@ -1,0 +1,54 @@
+.OtherUnique {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.OtherUnique-Selectors {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0.5rem 0;
+    justify-content: center;
+}
+
+.OtherUnique-content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.OtherUnique-chara {
+    display: flex;
+    padding: 0.2rem;
+    min-width: 48%;
+    margin: 0.1rem 0.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.OtherUnique-chara:hover {
+    border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.OtherUnique-charaInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OtherUnique-charaName {
+    margin: 0.3rem auto;
+}
+
+.OtherUnique-charaIcon {
+    width: 4rem;
+    height: 4rem;
+}
+
+.OtherUnique-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

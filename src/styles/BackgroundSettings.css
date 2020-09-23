@@ -1,0 +1,20 @@
+.BackgroundSettings {
+    display: flex;
+    justify-content: center;
+}
+
+.BackgroundSettings button {
+    border: 1px solid black;
+}
+
+.BackgroundSettings-btn {
+    display: flex;
+    margin: 0 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.BackgroundSettings-common {
+    display: flex;
+    flex-direction: column;
+}

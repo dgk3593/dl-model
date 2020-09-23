@@ -1,0 +1,17 @@
+.UniqueByWeapon {
+    padding: 0.3rem 0.3rem;
+}
+
+.UniqueByWeapon-Selectors {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0.5rem 0;
+    justify-content: center;
+}
+
+.UniqueByWeapon-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

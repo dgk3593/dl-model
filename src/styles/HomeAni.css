@@ -1,0 +1,12 @@
+.HomeAni-groupTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0.2rem;
+}
+
+.HomeAni-Btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

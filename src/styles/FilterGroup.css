@@ -1,0 +1,7 @@
+.FilterGroup {
+    display: -webkit-flex;
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
