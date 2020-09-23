@@ -841,4 +841,12 @@ export const extraAnimation = {
     Guns: {
         "Handgun Shoot": "HandgunShoot+",
     },
+    Combat: {
+        "Hurricane Kick": "HurricaneKick+",
+        "Flying Kick": "FlyingKick+",
+        "Roundhouse Kick": "RoundhouseKick+",
+        "Left Jab": "LeftJab+",
+        "Punching Bag": "PunchingBag+",
+        "Hook Punch": "HookPunch+",
+    },
 };
