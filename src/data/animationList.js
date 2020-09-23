@@ -285,6 +285,21 @@ export const skills = {
                 "SKL_110272_01+LAN_SKL_02_01_11027201>+LAN_SKL_02_02_11027201>+LAN_SKL_02_03_11027201",
         },
     ],
+    Wand: [
+        {
+            icon: "img/skillIcons/Icon_Skill_154.png",
+            name: "Girls' Night Out",
+            subtitle: "Incognito Nefaria",
+            value: "SKL_110053_03+ROD_SKL_01_01_11005303",
+        },
+        {
+            icon: "img/skillIcons/Icon_Skill_155.png",
+            name: "Ancient Incandescence",
+            subtitle: "Incognito Nefaria",
+            value:
+                "SKL_110053_03+ROD_SKL_02_01_11005303>+ROD_SKL_02_02_11005303>+ROD_SKL_02_03_11005303",
+        },
+    ],
 };
 
 export const otherUnique = {
