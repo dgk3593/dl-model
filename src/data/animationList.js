@@ -809,21 +809,21 @@ export const uniqueCombo = {
     ],
 };
 
-export const dance = {
-    "Slide Step": "SlideStep+",
-    Rumba: "Rumba+",
-    Flair: "Flair+",
-    Catwalk: "FemaleWalk+",
-    "Raise The Roof": "RaiseTheRoof+",
-};
-
-export const acrobatics = {
-    "Kip Up": "KipUp+",
-    "Butterfly Twirl": "ButterflyTwirl+",
-    Backflip: "Backflip+",
-    "Forward Flip": "ForwardFlip+",
-};
-
-export const guns = {
-    "Handgun Shoot": "HandgunShoot+",
+export const extraAnimation = {
+    Dance: {
+        "Slide Step": "SlideStep+",
+        Rumba: "Rumba+",
+        Flair: "Flair+",
+        Catwalk: "FemaleWalk+",
+        "Raise The Roof": "RaiseTheRoof+",
+    },
+    Acrobatics: {
+        "Kip Up": "KipUp+",
+        "Butterfly Twirl": "ButterflyTwirl+",
+        Backflip: "Backflip+",
+        "Forward Flip": "ForwardFlip+",
+    },
+    Guns: {
+        "Handgun Shoot": "HandgunShoot+",
+    },
 };
