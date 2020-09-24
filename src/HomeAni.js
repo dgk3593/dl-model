@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import GenderSelector from "./GenderSelector";
 
-import { homeAnimation } from "./data/animationList";
+import homeAnimation from "./data/animationHome";
 import { aniButtonsFromObject } from "./helpers";
 
 import "./styles/HomeAni.css";

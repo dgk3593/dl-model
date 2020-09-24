@@ -15,7 +15,7 @@ import {
     getRollCode,
     aniButtonsFromObject,
 } from "./helpers";
-import { weaponExtra } from "./data/animationList";
+import weaponExtra from "./data/animationWeaponExtra";
 
 import "./styles/WeaponAni.css";
 

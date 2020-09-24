@@ -5,7 +5,7 @@ import Tab from "@material-ui/core/Tab";
 
 import "./styles/AnimationSelect.css";
 
-import { extraAnimation } from "./data/animationList";
+import extraAnimation from "./data/animationExtra";
 import { aniButtonsFromObject } from "./helpers";
 
 function ExtraAni({ handleSelect }) {

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import WeaponSelector from "./WeaponSelector";
 import Button from "@material-ui/core/Button";
 
-import { otherUnique } from "./data/animationList";
+import otherUnique from "./data/animationOtherUnique";
 import { WEAPON_LIST } from "./consts";
 
 import "./styles/OtherUnique.css";

@@ -9,14 +9,13 @@ import UniqueByWeapon from "./UniqueByWeapon";
 
 import "./styles/AnimationSelect.css";
 
-import {
-    skills,
-    uniqueCombo,
-    unidentified,
-    questAnimation,
-    uniqueFS,
-    uniqueVictory,
-} from "./data/animationList";
+import { unidentified } from "./data/animationOthers";
+import questAnimation from "./data/animationQuest";
+import uniqueFS from "./data/animationUniqueFS";
+import skills from "./data/animationSkills";
+import uniqueVictory from "./data/animationUniqueVictory";
+import uniqueCombo from "./data/animationUniqueCombo";
+
 import { aniButtonsFromObject } from "./helpers";
 
 function GameAni({ handleSelect }) {

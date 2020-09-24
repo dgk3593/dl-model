@@ -477,6 +477,7 @@ class ModelViewer extends Component {
 
     componentWillUnmount() {
         cancelAnimationFrame(this.frameId);
+        disposeItem(this.scene);
         this.mixers = null;
         this.clock = null;
         this.camera = null;
