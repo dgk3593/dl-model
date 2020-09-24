@@ -83,6 +83,7 @@ function ShareContent({ method }) {
                         variant="filled"
                         autoFocus
                         fullWidth
+                        inputProps={{ readOnly: true }}
                         label={label}
                         InputLabelProps={{ color: "primary" }}
                         id="shareTextField"
