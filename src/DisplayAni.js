@@ -54,6 +54,7 @@ function DisplayAni(props) {
         repetitions,
         handleChange,
         singlePlay,
+        deleteSingle,
     } = props;
     const [showMore, toggleShowMore] = useToggleState(false);
     const mainContent = showMore ? (
@@ -73,7 +74,7 @@ function DisplayAni(props) {
         <div className="DisplayAni">
             <div className="DisplayAni-name">{name}</div>
             <div className="DisplayAni-content">
-                <Button>
+                <Button id={id} onClick={deleteSingle}>
                     <Close />
                 </Button>
                 {mainContent}

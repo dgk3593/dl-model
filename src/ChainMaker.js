@@ -62,6 +62,17 @@ function ChainMaker({ openControl }) {
         applyCode(code);
     };
 
+    const deleteSingle = event => {
+        if (chain.length === 1) return;
+        const { id } = event.currentTarget;
+        const action = {
+            type: "update",
+            key: "chainMaker",
+            value: { chain: chain.filter(ani => ani.id !== id) },
+        };
+        dispatch(action);
+    };
+
     const playAll = () => {
         const code = generateChainCode(chain);
         applyCode(code);
@@ -95,6 +106,7 @@ function ChainMaker({ openControl }) {
                 <div className="ChainMaker-list">
                     <DisplayAniList
                         singlePlay={singlePlay}
+                        deleteSingle={deleteSingle}
                         handleChange={handleChange}
                         chain={chain}
                     />
