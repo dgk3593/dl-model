@@ -23,6 +23,7 @@ function ControlPanel(props) {
             );
             break;
         case "animation":
+        case "addAni":
             content = <AnimationSelect toggleControlOpen={toggleControlOpen} />;
             break;
         case "background":

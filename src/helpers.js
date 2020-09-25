@@ -10,6 +10,8 @@ import {
     FS_LENGTH,
 } from "./consts";
 
+import { chainCodeToList } from "./viewerHelpers";
+
 export const setInitialSettings = params => {
     if (params.length === 0) return;
     let faceTextureDefined = false;
@@ -23,8 +25,16 @@ export const setInitialSettings = params => {
 
         let setValue = value.length === 1 ? value[0] : value.join("=");
 
-        if (keycode === "ft") {
-            faceTextureDefined = true;
+        switch (keycode) {
+            case "ft":
+                faceTextureDefined = true;
+                break;
+            case "cc":
+                // initialize chain maker chain
+                const chainList = chainCodeToList(setValue, "Animation");
+                initSettings["chainMaker"]["chain"] = chainList;
+                break;
+            default:
         }
         const { group, key } = initKey[keycode];
 
@@ -40,6 +50,45 @@ export const setInitialSettings = params => {
     if (!faceTextureDefined) {
         initSettings["model"]["faceTexture"] = initSettings["model"]["id"];
     }
+};
+
+export const generateChainCode = chain => {
+    console.log(chain);
+    const defaultMod = {
+        timeScale: 1,
+        repetitions: 1,
+    };
+    const modList = {
+        ts: "timeScale",
+        r: "repetitions",
+    };
+    const length = chain.length;
+    let output = "";
+    chain.forEach((ani, i) => {
+        const { fileName, aniName } = ani;
+        if (fileName) {
+            if (i === 0) {
+                output = output.concat(fileName);
+            } else {
+                output = output.concat(
+                    fileName !== chain[i - 1].fileName ? fileName : ""
+                );
+            }
+            output = output.concat("+");
+        }
+        output = output.concat(aniName);
+        // Add modifiers
+        Object.keys(modList).forEach(modKey => {
+            const key = modList[modKey];
+            if (ani[key] !== defaultMod[key]) {
+                output = output.concat(`&${modKey}=${ani[key]}`);
+            }
+        });
+        if (i < length - 1) {
+            output = output.concat(">");
+        }
+    });
+    return output;
 };
 
 export const collectFilter = toggleState => {
@@ -73,13 +122,14 @@ export const complementaryColor = color => {
     return `#${("000000" + ("0xffffff" ^ hexColor).toString(16)).slice(-6)}`;
 };
 
-export const aniButtonsFromObject = (object, handleSelect) => {
+export const aniButtonsFromObject = (object, handleSelect, groupName) => {
     if (!object) return null;
     return Object.keys(object).map(key => (
         <Button
             variant="contained"
             key={key}
             data-value={object[key]}
+            data-name={`${groupName ? `${groupName} ` : ""}${key}`}
             onClick={handleSelect}
             style={{ maxWidth: "13.5rem" }}
         >

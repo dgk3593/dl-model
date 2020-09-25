@@ -7,7 +7,7 @@ import { WEAPON_LIST } from "./consts";
 
 import "./styles/UniqueByWeapon.css";
 
-function UniqueByWeapon({ data, handleSelect }) {
+function UniqueByWeapon({ data, groupName, handleSelect }) {
     const [weapon, setWeapon] = useState("Sword");
 
     const handleClick = event => {
@@ -26,6 +26,7 @@ function UniqueByWeapon({ data, handleSelect }) {
             <ButtonWithIcons
                 key={`${item.name}-${item.subtitle}`}
                 data={item}
+                groupName={groupName}
                 handleClick={handleSelect}
             />
         ))

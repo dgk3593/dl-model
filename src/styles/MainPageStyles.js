@@ -45,13 +45,12 @@ const useStyles = makeStyles(theme => ({
         },
     },
     drawerHeader: {
-        height: `4rem`,
+        height: "4rem",
         width: "100%",
         fontSize: "1.5rem",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        filter: "drop-shadow(0px 20px 10px rgba(0, 0, 0, $shadow-opacity))",
         backgroundColor: drawerBG,
         backgroundImage: `url(${bg})`,
         /* background by SVGBackgrounds.com */

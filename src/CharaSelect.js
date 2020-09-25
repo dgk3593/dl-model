@@ -1,7 +1,6 @@
 import React, { useContext, useMemo, useState } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
-import { DispatchContext } from "./context/SettingsContext";
-import { SettingsContext } from "./context/SettingsContext";
+import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import Filters from "./Filters";

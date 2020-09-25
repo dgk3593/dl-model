@@ -9,19 +9,46 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-import { DispatchContext } from "./context/SettingsContext";
+import { DispatchContext, SettingsContext } from "./context/SettingsContext";
+import { chainCodeToList } from "./viewerHelpers";
 
 function AnimationSelect(props) {
     const { toggleControlOpen } = props;
     const [aniSet, setAniSet] = useState(0);
     const dispatch = useContext(DispatchContext);
+    const {
+        chainMaker: { enable: chainMode, chain: currentChain },
+    } = useContext(SettingsContext);
 
     const handleSelect = event => {
         const aniCode = event.currentTarget.dataset.value;
+        const name = event.currentTarget.dataset.name;
+        if (!chainMode) {
+            // Set Animation
+            let action = {
+                type: "update",
+                key: "animation",
+                value: { code: aniCode },
+            };
+            dispatch(action);
+            // Reinitialize Chain Maker's chain
+            const chainList = chainCodeToList(aniCode, name);
+            action.key = "chainMaker";
+            action.value = { chain: chainList };
+            dispatch(action);
+
+            // Close Animation Select
+            toggleControlOpen();
+            return;
+        }
+        // Add to chain
+        console.log("Add to Chain");
+        const chainList = chainCodeToList(aniCode, name);
+        const chain = [...currentChain, ...chainList];
         const action = {
             type: "update",
-            key: "animation",
-            value: { code: aniCode },
+            key: "chainMaker",
+            value: { chain },
         };
         dispatch(action);
         toggleControlOpen();
@@ -35,7 +62,7 @@ function AnimationSelect(props) {
         <>
             <DialogTop>
                 <DialogTitle onClose={toggleControlOpen}>
-                    Select an Animation
+                    {chainMode ? "Add Animation" : "Select an Animation"}
                 </DialogTitle>
                 <AppBar position="static">
                     <Tabs centered value={aniSet} onChange={handleChange}>

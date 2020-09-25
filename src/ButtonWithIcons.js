@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 
 import "./styles/ButtonWithIcons.css";
 
-function ButtonWithIcons({ data, handleClick }) {
+function ButtonWithIcons({ data, groupName, handleClick }) {
     const { icon, name, subtitle, value } = data;
 
     const fullIconUrl = icon && `${process.env.PUBLIC_URL}/${icon}`;
@@ -34,6 +34,7 @@ function ButtonWithIcons({ data, handleClick }) {
         <Button
             variant="outlined"
             data-value={value}
+            data-name={`${name} ${groupName || ""}`}
             onClick={handleClick}
             startIcon={icons}
             className="ButtonWithIcons"

@@ -41,6 +41,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getLobbyCode(weapon, gender)}
+                    data-name={`${gender} ${weapon} Lobby`}
                     onClick={handleSelect}
                 >
                     Join Lobby
@@ -48,6 +49,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getStandbyCode(weapon, gender)}
+                    data-name={`${gender} ${weapon} Standby`}
                     onClick={handleSelect}
                 >
                     Standby
@@ -55,6 +57,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getVictoryCode(weapon)}
+                    data-name={`${weapon} Victory`}
                     onClick={handleSelect}
                 >
                     Victory
@@ -62,6 +65,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getComboCode(weapon)}
+                    data-name={`${weapon} Combo`}
                     onClick={handleSelect}
                 >
                     Combo Chain
@@ -69,6 +73,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getFSCode(weapon)}
+                    data-name={`${weapon} Force Strike`}
                     onClick={handleSelect}
                 >
                     Force Strike
@@ -76,6 +81,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getDashAtkCode(weapon)}
+                    data-name={`${weapon} Dash Attack`}
                     onClick={handleSelect}
                 >
                     Dash Attack
@@ -83,6 +89,7 @@ function WeaponAni({ handleSelect }) {
                 <Button
                     variant="contained"
                     data-value={getRollCode(weapon)}
+                    data-name={`${weapon} Roll`}
                     onClick={handleSelect}
                 >
                     Roll

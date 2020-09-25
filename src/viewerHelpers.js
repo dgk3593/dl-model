@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { fbxSource } from "./App";
+import { v4 as uuid } from "uuid";
 
 let FBXLoader = require("three-fbxloader-offical");
 
@@ -68,11 +69,11 @@ export const changeMaterialToBasic = (object, texturePath) => {
             if (Array.isArray(child.material)) {
                 const size = child.material.length;
 
-                child.material = child.material.forEach(i => {
+                child.material = child.material.forEach(e => {
                     if (texturePath) {
-                        i.map.dispose();
+                        e.map.dispose();
                     }
-                    i.dispose();
+                    e.dispose();
                 });
                 child.material = new Array(size).fill(newMaterial);
             } else {
@@ -180,4 +181,22 @@ export const analyzeChainCode = code => {
         animationList.push(currentAni);
     }
     return [fileList, animationList];
+};
+
+export const chainCodeToList = (code, name) => {
+    const [fileList, animationList] = analyzeChainCode(code);
+    const length = animationList.length;
+    const output = animationList.map((ani, i) => {
+        const { fileIdx, aniName, timeScale, repetitions } = ani;
+        const partName = name.concat(length > 1 ? `#${i + 1}` : "");
+        return {
+            name: partName,
+            fileName: fileList[fileIdx],
+            aniName,
+            timeScale,
+            repetitions,
+            id: uuid(),
+        };
+    });
+    return output;
 };

@@ -5,8 +5,7 @@ import { ChromePicker } from "react-color";
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import { complementaryColor } from "./helpers";
 import { commonBG } from "./consts";
-import { DispatchContext } from "./context/SettingsContext";
-import { SettingsContext } from "./context/SettingsContext";
+import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import "./styles/BackgroundSettings.css";
 

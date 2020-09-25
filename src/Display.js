@@ -8,6 +8,7 @@ import { faceOffsets, cameraPositions, controlsPositions } from "./consts";
 
 function Display(props) {
     const { viewport } = props;
+
     const settings = useContext(SettingsContext);
     const {
         model: {
@@ -18,7 +19,7 @@ function Display(props) {
             weaponRight,
             weaponLeft,
         },
-        animation: { code: aniCode, timeScale },
+        animation: { code: chainCode, timeScale },
         scene: { background: bgColor },
         app: { showAniControl },
     } = settings;
@@ -55,7 +56,7 @@ function Display(props) {
                 bgColor={bgColor}
                 weaponRight={weaponRight}
                 weaponLeft={weaponLeft}
-                aniCode={aniCode}
+                aniCode={chainCode}
             />
         </div>
     );

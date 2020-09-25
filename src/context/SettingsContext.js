@@ -4,6 +4,15 @@ import { settingsReducer } from "../reducer/settingsReducer";
 export const SettingsContext = createContext();
 export const DispatchContext = createContext();
 
+const initAni = {
+    name: "Bob",
+    fileName: "MWM_CMN",
+    aniName: "CMN_MWM_03",
+    timeScale: 1,
+    repetitions: 1,
+    id: "0",
+};
+
 export const initSettings = {
     model: {
         id: "c100001_01",
@@ -14,8 +23,9 @@ export const initSettings = {
         weaponLeft: "",
     },
     scene: { background: "#cccccc" },
-    animation: { code: "MWM_CMN+CMN_MWM_03", timeScale: 1 },
+    animation: { code: `${initAni.fileName}+${initAni.aniName}`, timeScale: 1 },
     app: { showSettings: true, showAniControl: true },
+    chainMaker: { enable: false, chain: [initAni] },
 };
 
 export function SettingsProvider(props) {

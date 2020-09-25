@@ -22,7 +22,11 @@ function HomeAni({ handleSelect }) {
             <h3 className="HomeAni-groupTitle">Gender Specific</h3>
             <GenderSelector value={gender} handleClick={handleClick} />
             <div className="HomeAni-Btns">
-                {aniButtonsFromObject(homeAnimation[gender], handleSelect)}
+                {aniButtonsFromObject(
+                    homeAnimation[gender],
+                    handleSelect,
+                    gender
+                )}
             </div>
         </div>
     );

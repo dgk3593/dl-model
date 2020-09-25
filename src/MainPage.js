@@ -4,7 +4,6 @@ import useToggleState from "./hooks/useToggleState";
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import Menu from "@material-ui/icons/Menu";
 
-import { Divider } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useStyles from "./styles/MainPageStyles";
@@ -93,7 +92,7 @@ function MainPage({ location }) {
                             >
                                 <ArrowLeft />
                             </div>
-                            <Divider />
+
                             <DrawerContent openControl={openControl} />
                         </Drawer>
                     </React.Fragment>

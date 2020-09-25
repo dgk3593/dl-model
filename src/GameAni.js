@@ -39,6 +39,7 @@ function GameAni({ handleSelect }) {
         case 3: // Unique Combo animations
             content = (
                 <UniqueByWeapon
+                    groupName="Combo"
                     data={uniqueCombo}
                     handleSelect={handleSelect}
                 />
@@ -46,13 +47,18 @@ function GameAni({ handleSelect }) {
             break;
         case 4: // Unique FS
             content = (
-                <UniqueByWeapon data={uniqueFS} handleSelect={handleSelect} />
+                <UniqueByWeapon
+                    groupName="Force Strike"
+                    data={uniqueFS}
+                    handleSelect={handleSelect}
+                />
             );
             break;
         case 5: // Unique victory
             content = (
                 <UniqueByWeapon
                     data={uniqueVictory}
+                    groupName="Victory"
                     handleSelect={handleSelect}
                 />
             );
