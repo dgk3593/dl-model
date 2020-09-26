@@ -53,7 +53,6 @@ export const setInitialSettings = params => {
 };
 
 export const generateChainCode = chain => {
-    console.log(chain);
     const defaultMod = {
         timeScale: 1,
         repetitions: 1,
@@ -142,7 +141,8 @@ export const aniButtonsFromObject = (object, handleSelect, groupName) => {
 export const getStandbyCode = (weapon, gender) =>
     `LOB_${WEAPON_CODE[weapon]}+${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
 
-export const getVictoryCode = weapon => `WIN+${WEAPON_CODE[weapon]}_WIN_01`;
+export const getVictoryCode = weapon =>
+    `WIN_${WEAPON_CODE[weapon]}+${WEAPON_CODE[weapon]}_WIN_01>+${WEAPON_CODE[weapon]}_WIN_02`;
 
 export const getDashAtkCode = weapon => `DAS+${WEAPON_CODE[weapon]}_DAS_02`;
 

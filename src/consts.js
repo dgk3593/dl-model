@@ -39,6 +39,7 @@ export const WEAPON_CODE = {
     Bow: "BOW",
     Wand: "ROD",
     Staff: "CAN",
+    Manacaster: "GUN",
 };
 
 export const WEAPON_LIST = [
@@ -50,6 +51,7 @@ export const WEAPON_LIST = [
     "Bow",
     "Wand",
     "Staff",
+    "Manacaster",
 ];
 
 export const GENDER_CODE = {
@@ -91,6 +93,7 @@ export const FILTERS = {
         "Bow",
         "Wand",
         "Staff",
+        "Manacaster",
     ],
 };
 
@@ -106,6 +109,7 @@ export const WEAPON_FILTERS = {
         "Bow",
         "Wand",
         "Staff",
+        "Manacaster",
     ],
 };
 

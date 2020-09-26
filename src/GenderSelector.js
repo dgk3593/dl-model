@@ -1,15 +1,15 @@
 import React from "react";
 
-import "./styles/GenderSelect.css";
+import "./styles/GenderSelector.css";
 
 function GenderSelector({ value, handleClick }) {
     return (
-        <div className="GenderSelect">
+        <div className="GenderSelector">
             <div
                 data-name="gender"
                 data-value="Male"
                 onClick={handleClick}
-                className={`GenderSelect-Gender ${
+                className={`GenderSelector-Gender ${
                     value === "Male" ? "selected" : ""
                 }`}
             >
@@ -19,7 +19,7 @@ function GenderSelector({ value, handleClick }) {
                 data-name="gender"
                 data-value="Female"
                 onClick={handleClick}
-                className={`GenderSelect-Gender ${
+                className={`GenderSelector-Gender ${
                     value === "Female" ? "selected" : ""
                 }`}
             >

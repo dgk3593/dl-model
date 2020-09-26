@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import GenderSelector from "./GenderSelector";
 import WeaponSelector from "./WeaponSelector";
+import GunModeSelector from "./GunModeSelector";
 
 import Button from "@material-ui/core/Button";
 
@@ -15,12 +16,16 @@ import {
     getRollCode,
     aniButtonsFromObject,
 } from "./helpers";
-import weaponExtra from "./data/animationWeaponExtra";
+import weaponExtra, { gunModeExtra } from "./data/animationWeaponExtra";
 
 import "./styles/WeaponAni.css";
 
 function WeaponAni({ handleSelect }) {
-    const [params, setParams] = useState({ weapon: "Sword", gender: "Male" });
+    const [params, setParams] = useState({
+        weapon: "Sword",
+        gender: "Male",
+        gunMode: "A",
+    });
     const { weapon, gender } = params;
 
     const handleClick = event => {
@@ -62,22 +67,27 @@ function WeaponAni({ handleSelect }) {
                 >
                     Victory
                 </Button>
-                <Button
-                    variant="contained"
-                    data-value={getComboCode(weapon)}
-                    data-name={`${weapon} Combo`}
-                    onClick={handleSelect}
-                >
-                    Combo Chain
-                </Button>
-                <Button
-                    variant="contained"
-                    data-value={getFSCode(weapon)}
-                    data-name={`${weapon} Force Strike`}
-                    onClick={handleSelect}
-                >
-                    Force Strike
-                </Button>
+                {weapon !== "Manacaster" && ( // Don't display combo button for manacaster
+                    <>
+                        <Button
+                            variant="contained"
+                            data-value={getComboCode(weapon)}
+                            data-name={`${weapon} Combo`}
+                            onClick={handleSelect}
+                        >
+                            Combo Chain
+                        </Button>
+
+                        <Button
+                            variant="contained"
+                            data-value={getFSCode(weapon)}
+                            data-name={`${weapon} Force Strike`}
+                            onClick={handleSelect}
+                        >
+                            Force Strike
+                        </Button>
+                    </>
+                )}
                 <Button
                     variant="contained"
                     data-value={getDashAtkCode(weapon)}
@@ -98,6 +108,22 @@ function WeaponAni({ handleSelect }) {
             <div className="WeaponAni-Btns">
                 {aniButtonsFromObject(weaponExtra[weapon], handleSelect)}
             </div>
+            {weapon === "Manacaster" && (
+                <>
+                    <div className="WeaponAni-Selectors">
+                        <GunModeSelector
+                            value={params.gunMode}
+                            handleClick={handleClick}
+                        />
+                    </div>
+                    <div className="WeaponAni-Btns">
+                        {aniButtonsFromObject(
+                            gunModeExtra[params.gunMode],
+                            handleSelect
+                        )}
+                    </div>
+                </>
+            )}
         </div>
     );
 }
