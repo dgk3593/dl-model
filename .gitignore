@@ -11,6 +11,7 @@
 # public data
 /public/fbx
 /public/img
+/.vscode
 
 # production
 /build

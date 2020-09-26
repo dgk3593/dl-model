@@ -1591,14 +1591,14 @@ const adv = [
         element: "Shadow",
         weapon: "Sword",
     },
-    // {
-    //     cid: "110003_02",
-    //     name: "Sharpshooter Joe",
-    //     title: "Scorching Sharpshooter",
-    //     rarity: "3",
-    //     element: "Light",
-    //     weapon: "Manacaster",
-    // },
+    {
+        cid: "110003_02",
+        name: "Sharpshooter Joe",
+        title: "Scorching Sharpshooter",
+        rarity: "3",
+        element: "Light",
+        weapon: "Manacaster",
+    },
     {
         cid: "110024_01",
         name: "Sophie",
