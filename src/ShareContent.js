@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import useToggleState from "./hooks/useToggleState";
 
 import FileCopy from "@material-ui/icons/FileCopy";
 
@@ -15,7 +16,10 @@ import "./styles/ShareContent.css";
 
 function ShareContent({ method }) {
     const [show, setShow] = useState({ AC: true, Settings: true });
-    const [label, setLabel] = useState("Link");
+    const [transparentBackground, toggleTransparentBackground] = useToggleState(
+        false
+    );
+    const [label, setLabel] = useState("Code");
     const currentSettings = useContext(SettingsContext);
 
     const CopyButton = () => (
@@ -51,8 +55,30 @@ function ShareContent({ method }) {
             const { group, key } = initKey[keyCode];
             const currentValue = currentSettings[group][key];
             const defaultValue = defaultSettings[group][key];
-            if (currentValue !== defaultValue) {
-                link = link.concat(`${keyCode}=${currentValue}/`);
+            switch (keyCode) {
+                case "bg":
+                    if (transparentBackground) {
+                        link = link.concat(`bg=transparent/`);
+                        break;
+                    }
+                    if (currentValue !== defaultValue) {
+                        link = link.concat(
+                            `${keyCode}=${currentValue.replace("#", "")}/`
+                        );
+                    }
+                    break;
+                case "ft":
+                    if (
+                        currentSettings["model"]["faceTexture"] !==
+                        currentSettings["model"]["id"]
+                    ) {
+                        link = link.concat(`${keyCode}=${currentValue}/`);
+                    }
+                    break;
+                default:
+                    if (currentValue !== defaultValue) {
+                        link = link.concat(`${keyCode}=${currentValue}/`);
+                    }
             }
         });
 
@@ -65,19 +91,50 @@ function ShareContent({ method }) {
     };
 
     const shareLink = getShareLink();
+    const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
+        transparentBackground ? 'allowtransparency="true" ' : ""
+    }/></iframe>`;
 
     useEffect(() => {
-        if (method === 1) return; // QR
+        if (method !== 1) return; // QR
         const shareTextField = document.getElementById("shareTextField");
         if (!shareTextField) return;
         shareTextField.focus();
         shareTextField.select();
     }, [shareLink, method]);
 
-    return (
-        <div>
-            <div className="ShareContent-main">
-                {method !== 1 && (
+    let display;
+    switch (method) {
+        case 0: // Link
+            display = (
+                <TextField
+                    color="secondary"
+                    variant="filled"
+                    autoFocus
+                    fullWidth
+                    inputProps={{ readOnly: true }}
+                    label={label}
+                    InputLabelProps={{ color: "primary" }}
+                    id="shareTextField"
+                    margin="dense"
+                    value={shareLink}
+                    InputProps={{ endAdornment: <CopyButton /> }}
+                />
+            );
+            break;
+        case 1: // QR
+            display = (
+                <>
+                    <div className="ShareContent-QR">
+                        <QRCode includeMargin size={256} value={shareLink} />
+                    </div>
+                    <div>Right click to save or copy</div>
+                </>
+            );
+            break;
+        case 2: // Embed
+            display = (
+                <>
                     <TextField
                         color="secondary"
                         variant="filled"
@@ -88,23 +145,30 @@ function ShareContent({ method }) {
                         InputLabelProps={{ color: "primary" }}
                         id="shareTextField"
                         margin="dense"
-                        value={shareLink}
+                        value={embedCode}
                         InputProps={{ endAdornment: <CopyButton /> }}
                     />
-                )}
-                {method === 1 && (
-                    <>
-                        <div className="ShareContent-QR">
-                            <QRCode
-                                includeMargin
-                                size={256}
-                                value={shareLink}
-                            />
-                        </div>
-                        <div>Right click to save or copy</div>
-                    </>
-                )}
-            </div>
+                    <div>
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={transparentBackground}
+                                    onChange={toggleTransparentBackground}
+                                    color="primary"
+                                />
+                            }
+                            label="Transparent Background"
+                        />
+                    </div>
+                </>
+            );
+            break;
+        default:
+    }
+
+    return (
+        <div>
+            <div className="ShareContent-main">{display}</div>
             <div className="ShareContent-checkboxes">
                 <FormControlLabel
                     control={

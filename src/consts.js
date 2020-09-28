@@ -1,7 +1,7 @@
 export const DRAWER_WIDTH = "15rem";
 export const DRAWER_BGCOLOR = "#330000";
 
-export const baseUrl = "http://dgk3593.github.io/dl-model/#/";
+export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
 export const defaultSettings = {
     model: {

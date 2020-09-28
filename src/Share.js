@@ -22,6 +22,7 @@ function Share({ toggleControlOpen }) {
                     <Tabs centered value={method} onChange={handleChange}>
                         <Tab label="Link" />
                         <Tab label="QR" />
+                        <Tab label="Embed" />
                     </Tabs>
                 </AppBar>
             </DialogTop>
