@@ -1,4 +1,24 @@
 const skills = {
+    Sword: [
+        {
+            icon: "img/skillIcons/Icon_Skill_044.png",
+            name: "Rising Circlet",
+            subtitle: "Gala Prince",
+            value: "SKL_100001_08+SWD_SKL_01_01_10000108",
+        },
+        {
+            icon: "img/skillIcons/Icon_Skill_062.png",
+            name: "Exalted Glory",
+            subtitle: "Gala Prince",
+            value: "SKL_100001_08+SWD_SKL_02_01_10000108",
+        },
+        {
+            icon: "img/skillIcons/Icon_Skill_011.png",
+            name: "Lightning Burst",
+            subtitle: "Albert",
+            value: "SKL_110274_01+",
+        },
+    ],
     Blade: [
         {
             icon: "img/skillIcons/Icon_Skill_925.png",
@@ -25,6 +45,18 @@ const skills = {
             name: "Tempering Fancy",
             subtitle: "Haloween Mym",
             value: "SKL_100010_07+",
+        },
+        {
+            icon: "img/skillIcons/Icon_Skill_030.png",
+            name: "Holy Accord",
+            subtitle: "Gala Elisanne",
+            value: "SKL_100002_13+AXE_SKL_02_01_10000213",
+        },
+        {
+            icon: "img/skillIcons/Icon_Skill_011.png",
+            name: "Celestial Ascent",
+            subtitle: "Gala Elisanne",
+            value: "SKL_100002_13+AXE_SKL_01_01_10000213&ts=0.75",
         },
     ],
     Lance: [

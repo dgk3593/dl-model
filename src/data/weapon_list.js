@@ -4274,7 +4274,7 @@ const weapon_list = [
     {
         wid: "w309007_01",
         iconName: "309007_01_40401.png",
-        name: "TBA",
+        name: "Antique Ray",
         weapon: "Manacaster",
         rarity: "4",
         element: "Light",

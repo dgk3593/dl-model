@@ -42,7 +42,6 @@ function AnimationSelect(props) {
             return;
         }
         // Add to chain
-        console.log("Add to Chain");
         const chainList = chainCodeToList(aniCode, name);
         const chain = [...currentChain, ...chainList];
         const action = {
