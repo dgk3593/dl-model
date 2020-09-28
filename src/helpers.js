@@ -34,6 +34,11 @@ export const setInitialSettings = params => {
                 const chainList = chainCodeToList(setValue, "Animation");
                 initSettings["chainMaker"]["chain"] = chainList;
                 break;
+            case "bg":
+                if (setValue !== "transparent") {
+                    setValue = `#${setValue}`;
+                }
+                break;
             default:
         }
         const { group, key } = initKey[keycode];

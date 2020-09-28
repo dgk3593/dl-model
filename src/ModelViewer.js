@@ -49,7 +49,10 @@ class ModelViewer extends Component {
 
         // Scene
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(this.props.bgColor);
+        this.scene.background =
+            this.props.bgColor !== "transparent"
+                ? new THREE.Color(this.props.bgColor)
+                : null;
 
         // Camera
         this.camera = new THREE.PerspectiveCamera(
@@ -471,7 +474,10 @@ class ModelViewer extends Component {
 
         // Update background color
         if (prevProps.bgColor !== this.props.bgColor) {
-            this.scene.background = new THREE.Color(this.props.bgColor);
+            this.scene.background =
+                this.props.bgColor !== "transparent"
+                    ? new THREE.Color(this.props.bgColor)
+                    : null;
         }
     }
 
