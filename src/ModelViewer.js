@@ -22,7 +22,6 @@ class ModelViewer extends Component {
             this.mixers.forEach(mixer => mixer.update(dt));
         }
         this.renderer.render(this.scene, this.camera);
-        console.log(this.renderer.info.render.triangles);
     };
 
     // set up initial scene
