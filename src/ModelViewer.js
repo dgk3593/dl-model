@@ -123,9 +123,7 @@ class ModelViewer extends Component {
         }
         this._aniIdx = 0;
         object.mixer.timeScale = timeScale; // Global timeScale
-        if (this.nAni > 1) {
-            object.mixer.addEventListener("finished", this.playNextAni);
-        }
+        object.mixer.addEventListener("finished", this.playNextAni);
         this.aniSettings = animationList.map(ani => {
             return {
                 timeScale: ani.timeScale,
@@ -156,6 +154,7 @@ class ModelViewer extends Component {
     };
 
     set aniIdx(newIdx) {
+        console.log(`set aniIdx to ${newIdx}`);
         this._aniIdx = newIdx;
         const anim = this.animations[newIdx];
         const mixer = this.models.main.mixer;

@@ -121,6 +121,30 @@ const skills = {
             name: "Surging Sparrows",
             value: "SKL_110335_02+AXE_SKL_02_01_11033502",
         },
+        {
+            icon: "img/advIcons/110355_01_r05.png",
+            name: "Smithy Spin",
+            value: "SKL_110355_01+AXE_SKL_01_01_11035501",
+        },
+
+        {
+            icon: "img/advIcons/110355_01_r05.png",
+            name: "Hyper Smithy Spin",
+            value:
+                "SKL_110355_01+AXE_SKL_03_01_11035501>+AXE_SKL_03_02_11035501&r=3>+AXE_SKL_03_03_11035501",
+        },
+        {
+            icon: "img/advIcons/110355_01_r05.png",
+            name: "Smithy Arm",
+            subtitle: "Forge Mode",
+            value: "SKL_110355_01+AXE_SKL_02_01_11035501",
+        },
+        {
+            icon: "img/advIcons/110355_01_r05.png",
+            name: "Smithy Arm",
+            subtitle: "Power Mode",
+            value: "SKL_110355_01+AXE_SKL_04_01_11035501",
+        },
     ],
     Lance: [
         {
