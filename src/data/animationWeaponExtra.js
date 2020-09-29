@@ -27,6 +27,7 @@ const weaponExtra = {
         "Stand Back Up": "BST_KAT+KAT_BST_07&ts=0.1>+KAT_BST_06",
         Ukemi: "UKM_KAT+KAT_UKM_01&ts=0.5>+KAT_UKM_03",
         "Ukemi 2": "UKM_KAT+KAT_UKM_11&ts=0.5>+KAT_UKM_03",
+        Buff: "SKL_KAT+KAT_050_99",
     },
     Manacaster: {
         Die: "CMN_GUN+GUN_DIE_02",

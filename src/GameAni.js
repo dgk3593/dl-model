@@ -4,6 +4,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import HomeAni from "./HomeAni";
 import WeaponAni from "./WeaponAni";
+import GenericSkills from "./GenericSkills";
 import OtherUnique from "./OtherUnique";
 import UniqueByWeapon from "./UniqueByWeapon";
 
@@ -13,6 +14,7 @@ import { unidentified } from "./data/animationOthers";
 import questAnimation from "./data/animationQuest";
 import uniqueFS from "./data/animationUniqueFS";
 import skills from "./data/animationSkills";
+import genericSkills from "./data/animationGenericSkills";
 import uniqueVictory from "./data/animationUniqueVictory";
 import uniqueCombo from "./data/animationUniqueCombo";
 
@@ -63,15 +65,23 @@ function GameAni({ handleSelect }) {
                 />
             );
             break;
-        case 6: // Skills
+        case 6: // Generic Skills
+            content = (
+                <GenericSkills
+                    data={genericSkills}
+                    handleSelect={handleSelect}
+                />
+            );
+            break;
+        case 7: // Special Skills
             content = (
                 <UniqueByWeapon data={skills} handleSelect={handleSelect} />
             );
             break;
-        case 7: // Special characters
+        case 8: // Special characters
             content = <OtherUnique handleSelect={handleSelect} />;
             break;
-        case 8: // Unused
+        case 9: // Unused
             content = aniButtonsFromObject(unidentified, handleSelect);
             break;
         default:
@@ -91,7 +101,8 @@ function GameAni({ handleSelect }) {
                 <Tab label="Unique Combo" />
                 <Tab label="Unique Force Strike" />
                 <Tab label="Unique Victory" />
-                <Tab label="Skills" />
+                <Tab label="Generic Skills" />
+                <Tab label="Special Skills" />
                 <Tab label="Other Unique" />
                 <Tab label="Unused" />
             </Tabs>
