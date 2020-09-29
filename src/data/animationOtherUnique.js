@@ -230,11 +230,23 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "RUN_110366_01+BOW_RUN_05_11036601",
+                    value: "RUN_110366_01+",
                 },
             ],
         },
     },
+    Axe: {
+        "Summer Patia": {
+            icon: "img/advIcons/110335_02_r05.png",
+            animations: [
+                {
+                    name: "Force Strike Run",
+                    value: "RUN_110335_02+",
+                },
+            ],
+        },
+    },
+
     Staff: {
         Zethia: {
             icon: "img/advIcons/100009_01_r05.png",
