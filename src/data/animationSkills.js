@@ -33,6 +33,13 @@ const skills = {
             value: "SKL_100003_02+KAT_SKL_02_01_10000302",
         },
     ],
+    Dagger: [
+        {
+            icon: "img/advIcons/100004_02_r05.png",
+            name: "Starlit Gift",
+            value: "SKL_100004_02+",
+        },
+    ],
     Axe: [
         {
             icon: "img/advIcons/100002_13_r05.png",
@@ -267,6 +274,11 @@ const skills = {
             value: "SKL_100004_01+",
         },
         {
+            icon: "img/advIcons/100009_08_r05.png",
+            name: "Glorious Sanctuary",
+            value: "SKL_100009_08+",
+        },
+        {
             icon: "img/advIcons/110004_02_r04.png",
             name: "Dream Wedding",
             value: "SKL_110004_02+",
@@ -287,14 +299,14 @@ const skills = {
             value: "SKL_110059_01+",
         },
         {
-            icon: "img/advIcons/110280_01_r05.png",
-            name: "Call of Chaos",
-            value: "SKL_110280_01+",
-        },
-        {
             icon: "img/advIcons/110257_02_r04.png",
             name: "You won't trick me!",
             value: "SKL_110257_02+",
+        },
+        {
+            icon: "img/advIcons/110280_01_r05.png",
+            name: "Call of Chaos",
+            value: "SKL_110280_01+",
         },
         {
             icon: "img/advIcons/110304_01_r04.png",
@@ -307,15 +319,15 @@ const skills = {
             value: "SKL_110341_01+",
         },
         {
+            icon: "img/advIcons/110351_01_r05.png",
+            name: "Curative Catch",
+            value: "SKL_110351_01+",
+        },
+        {
             icon: "img/advIcons/110337_03_r05.png",
             name: "Goldfish of the Hereafter",
             value:
                 "SKL_110337_03+CAN_SKL_01_01_11033703>+CAN_SKL_01_02_11033703>+CAN_SKL_01_03_11033703",
-        },
-        {
-            icon: "img/advIcons/110351_01_r05.png",
-            name: "Curative Catch",
-            value: "SKL_110351_01+",
         },
     ],
 };

@@ -124,7 +124,6 @@ const uniqueFS = {
                 "FS_110366_01+BOW_CHR_01_11036601>+BOW_CHR_02_11036601>+BOW_CHR_03_11036601",
         },
     ],
-
     Wand: [
         {
             icon: "img/advIcons/110354_01_r05.png",
@@ -138,6 +137,15 @@ const uniqueFS = {
             name: "Peony",
             value:
                 "FS_110361_01+ROD_CHR_01_11036101>+ROD_CHR_02_11036101>+ROD_CHR_03_11036101",
+        },
+    ],
+    Staff: [
+        {
+            icon: "img/advIcons/100009_08_r05.png",
+            name: "Gala Zena",
+            subtitle: "Twilight Moon",
+            value:
+                "FS_100009_08+CAN_CHR_A_01_10000908>+CAN_CHR_A_02_10000908>+CAN_CHR_A_03_10000908",
         },
     ],
 };

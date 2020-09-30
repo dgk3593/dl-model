@@ -270,6 +270,15 @@ const otherUnique = {
                 },
             ],
         },
+        "Gala Zena": {
+            icon: "img/advIcons/100009_08_r05.png",
+            animations: [
+                {
+                    name: "Force Strike Run",
+                    value: "RUN_100009_08+",
+                },
+            ],
+        },
     },
 };
 

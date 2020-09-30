@@ -99,9 +99,14 @@ const uniqueVictory = {
         },
         {
             icon: "img/advIcons/100029_03_r05.png",
-            name: "Hunter Vanessa",
+            name: "Hunter Sarisse",
             value:
                 "WIN_100029_03+BOW_WIN_03_10002903>+BOW_WIN_01_10002903>+BOW_WIN_02_10002903",
+        },
+        {
+            icon: "img/advIcons/110368_01_r05.png",
+            name: "Meene",
+            value: "WIN_110368_01+BOW_WIN_01_11036801>+BOW_WIN_02_11036801",
         },
     ],
     Wand: [
@@ -124,6 +129,13 @@ const uniqueVictory = {
             icon: "img/advIcons/110361_01_r05.png",
             name: "Peony",
             value: "WIN_110361_01+ROD_WIN_01_11036101>+ROD_WIN_02_11036101",
+        },
+    ],
+    Staff: [
+        {
+            icon: "img/advIcons/100009_08_r05.png",
+            name: "Gala Zena",
+            value: "WIN_100009_08+CAN_WIN_01_10000908>+CAN_WIN_02_10000908",
         },
     ],
 };

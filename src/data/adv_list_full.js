@@ -224,6 +224,14 @@ const adv = [
         weapon: "Bow",
     },
     {
+        cid: "100009_08",
+        name: "Gala Zena",
+        title: "Unwavering Auspex",
+        rarity: "5",
+        element: "Light",
+        weapon: "Staff",
+    },
+    {
         cid: "110059_01",
         name: "Grace",
         title: "Wistful Widow",
@@ -424,6 +432,14 @@ const adv = [
         weapon: "Sword",
     },
     {
+        cid: "110368_01",
+        name: "Meene",
+        title: "Motherly Faerie",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Bow",
+    },
+    {
         cid: "110354_01",
         name: "Mega Man",
         title: "Kindly Android",
@@ -454,6 +470,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Dagger",
+    },
+    {
+        cid: "110369_01",
+        name: "Mordecai",
+        title: "Innocent Being",
+        rarity: "5",
+        element: "Light",
+        weapon: "Blade",
     },
     {
         cid: "110357_01",

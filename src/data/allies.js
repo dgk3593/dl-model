@@ -27,6 +27,10 @@ const allies = [
         id: "c100007_05",
         name: "Anniversary Notte*",
     },
+    {
+        id: "c100007_09",
+        name: "2nd Anniversary Notte*",
+    },
 ];
 
 export default allies;
