@@ -260,6 +260,64 @@ const skills = {
                 "SKL_110053_03+ROD_SKL_02_01_11005303>+ROD_SKL_02_02_11005303>+ROD_SKL_02_03_11005303",
         },
     ],
+    Staff: [
+        {
+            icon: "img/advIcons/100004_01_r04.png",
+            name: "Elder Cure",
+            value: "SKL_100004_01+",
+        },
+        {
+            icon: "img/advIcons/110004_02_r04.png",
+            name: "Dream Wedding",
+            value: "SKL_110004_02+",
+        },
+        {
+            icon: "img/advIcons/110043_01_r05.png",
+            name: "Radiant Savior",
+            value: "SKL_110043_01+",
+        },
+        {
+            icon: "img/advIcons/110043_02_r05.png",
+            name: "Blooming Love",
+            value: "SKL_110043_02+",
+        },
+        {
+            icon: "img/advIcons/110059_01_r05.png",
+            name: "Sorrow's Requiem",
+            value: "SKL_110059_01+",
+        },
+        {
+            icon: "img/advIcons/110280_01_r05.png",
+            name: "Call of Chaos",
+            value: "SKL_110280_01+",
+        },
+        {
+            icon: "img/advIcons/110257_02_r04.png",
+            name: "You won't trick me!",
+            value: "SKL_110257_02+",
+        },
+        {
+            icon: "img/advIcons/110304_01_r04.png",
+            name: "Spirited Song",
+            value: "SKL_110304_01+",
+        },
+        {
+            icon: "img/advIcons/110341_01_r05.png",
+            name: "Vital Gate",
+            value: "SKL_110341_01+",
+        },
+        {
+            icon: "img/advIcons/110337_03_r05.png",
+            name: "Goldfish of the Hereafter",
+            value:
+                "SKL_110337_03+CAN_SKL_01_01_11033703>+CAN_SKL_01_02_11033703>+CAN_SKL_01_03_11033703",
+        },
+        {
+            icon: "img/advIcons/110351_01_r05.png",
+            name: "Curative Catch",
+            value: "SKL_110351_01+",
+        },
+    ],
 };
 
 export default skills;

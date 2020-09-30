@@ -31,7 +31,6 @@ export const setInitialSettings = params => {
                 break;
             case "cc":
                 // initialize chain maker chain
-                setValue = setValue.replace("%3E", ">");
                 const chainList = chainCodeToList(setValue, "Animation");
                 initSettings["chainMaker"]["chain"] = chainList;
                 break;
