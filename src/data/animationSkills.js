@@ -169,6 +169,84 @@ const skills = {
                 "SKL_110272_01+LAN_SKL_02_01_11027201>+LAN_SKL_02_02_11027201>+LAN_SKL_02_03_11027201",
         },
     ],
+    Bow: [
+        {
+            icon: "img/advIcons/100004_04_r05.png",
+            name: "Parasol Shot",
+            value: "SKL_100004_04+BOW_SKL_01_01_10000404",
+        },
+        {
+            icon: "img/advIcons/100004_04_r05.png",
+            name: "Tropical Breeze",
+            value: "SKL_100004_04+BOW_SKL_02_01_10000404",
+        },
+        {
+            icon: "img/advIcons/100006_01_r04.png",
+            name: "Radiant Bonds",
+            value: "SKL_100006_01+",
+        },
+        {
+            icon: "img/advIcons/100029_02_r05.png",
+            name: "Brilliant Bolt",
+            value: "SKL_100029_02+",
+        },
+        {
+            icon: "img/advIcons/100029_03_r05.png",
+            name: "Tactical Retreat",
+            value: "SKL_100029_03+",
+        },
+        {
+            icon: "img/advIcons/110010_02_r05.png",
+            name: "Radiant Bolt",
+            value: "SKL_110010_02+BOW_SKL_01_01_11001002",
+        },
+        {
+            icon: "img/advIcons/110010_02_r05.png",
+            name: "Magnanimity's Call",
+            value: "SKL_110010_02+BOW_SKL_02_01_11001002",
+        },
+        {
+            icon: "img/advIcons/110053_01_r05.png",
+            name: "Night of Antiquity",
+            value: "SKL_110053_01+",
+        },
+        {
+            icon: "img/advIcons/110256_01_r05.png",
+            name: "Piercing Wind",
+            value: "SKL_110256_01+",
+        },
+        {
+            icon: "img/advIcons/110267_01_r05.png",
+            name: "Savage Hawk",
+            value: "SKL_110267_01+",
+        },
+        {
+            icon: "img/advIcons/110310_02_r05.png",
+            name: "Coarse Judgment",
+            value: "SKL_110310_02+",
+        },
+        {
+            icon: "img/advIcons/110317_01_r05.png",
+            name: "Vivid Volley",
+            value: "SKL_110317_01+",
+        },
+        {
+            icon: "img/advIcons/110342_01_r05.png",
+            name: "Love's Liberation",
+            value: "SKL_110342_01+",
+        },
+        {
+            icon: "img/advIcons/110350_01_r04.png",
+            name: "Last Resort",
+            value: "SKL_110350_01+&ts=0.5",
+        },
+        {
+            icon: "img/advIcons/110366_01_r05.png",
+            name: "Sanctus Arrow",
+            value:
+                "SKL_110366_01+BOW_SKL_01_01_11036601>+BOW_SKL_01_02_11036601>+BOW_SKL_01_03_11036601",
+        },
+    ],
     Wand: [
         {
             icon: "img/advIcons/110053_03_r05.png",

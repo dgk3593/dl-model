@@ -234,6 +234,15 @@ const otherUnique = {
                 },
             ],
         },
+        "Hunter Sarisse": {
+            icon: "img/advIcons/100029_03_r05.png",
+            animations: [
+                {
+                    name: "Force Strike Run",
+                    value: "RUN_100029_03+",
+                },
+            ],
+        },
     },
     Axe: {
         "Summer Patia": {

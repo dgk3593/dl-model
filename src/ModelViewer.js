@@ -154,7 +154,6 @@ class ModelViewer extends Component {
     };
 
     set aniIdx(newIdx) {
-        console.log(`set aniIdx to ${newIdx}`);
         this._aniIdx = newIdx;
         const anim = this.animations[newIdx];
         const mixer = this.models.main.mixer;
