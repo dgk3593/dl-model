@@ -18,11 +18,6 @@ const skills = {
     ],
     Blade: [
         {
-            icon: "img/advIcons/110015_02_r05.png",
-            name: "Ravishing Rainbow",
-            value: "SKL_110015_02+",
-        },
-        {
             icon: "img/advIcons/100003_02_r04.png",
             name: "Surf's Up",
             value: "SKL_100003_02+KAT_SKL_01_01_10000302",
@@ -31,6 +26,129 @@ const skills = {
             icon: "img/advIcons/100003_02_r04.png",
             name: "Barbecue Bonanza",
             value: "SKL_100003_02+KAT_SKL_02_01_10000302",
+        },
+        {
+            icon: "img/advIcons/100006_09_r05.png",
+            name: "Shining Slash",
+            value: "SKL_100006_09+",
+        },
+        {
+            icon: "img/advIcons/100032_01_r04.png",
+            name: "Code 07:",
+            subtitle: "Combustion Slash",
+            value: "SKL_100032_01+",
+        },
+        {
+            icon: "img/advIcons/110010_01_r05.png",
+            name: "Ravenous Fire",
+            value: "SKL_110010_01+KAT_SKL_01_01_11001001",
+        },
+        {
+            icon: "img/advIcons/110010_01_r05.png",
+            name: "Ravenous Fire",
+            subtitle: "(Flare)",
+            value: "SKL_110010_01+KAT_SKL_02_01_11001001",
+        },
+        {
+            icon: "img/advIcons/110010_01_r05.png",
+            name: "Ravenous Fire",
+            subtitle: "(Ruin)",
+            value: "SKL_110010_01+KAT_SKL_03_01_11001001",
+        },
+        {
+            icon: "img/advIcons/110015_02_r05.png",
+            name: "Ravishing Rainbow",
+            value: "SKL_110015_02+",
+        },
+        {
+            icon: "img/advIcons/110027_01_r03.png",
+            name: "Maid for Mayhem",
+            value: "SKL_110027_01+",
+        },
+        {
+            icon: "img/advIcons/110255_01_r04.png",
+            name: "Ardent Stream",
+            value: "SKL_110255_01+",
+        },
+        {
+            icon: "img/advIcons/110262_01_r04.png",
+            name: "Wyrmbound Eternity",
+            value: "SKL_110262_01+KAT_SKL_01_01_11026201",
+        },
+        {
+            icon: "img/advIcons/110262_01_r04.png",
+            name: "Fetters of Fear",
+            value: "SKL_110262_01+KAT_SKL_02_01_11026201",
+        },
+        {
+            icon: "img/advIcons/110262_01_r04.png",
+            name: "Unfettered Ferocity",
+            value: "SKL_110262_01+KAT_SKL_03_01_11026201",
+        },
+        {
+            icon: "img/advIcons/110264_01_r05.png",
+            name: "Roaring Furnace",
+            value: "SKL_110264_01+",
+        },
+        {
+            icon: "img/advIcons/110271_01_r05.png",
+            name: "Bliss Eternal",
+            value: "SKL_110271_01+",
+        },
+        {
+            icon: "img/advIcons/110295_01_r05.png",
+            name: "Amuse-bouche",
+            value: "SKL_110295_01+KAT_SKL_01_01_11029501",
+        },
+        {
+            icon: "img/advIcons/110295_01_r05.png",
+            name: "Bon Appétit",
+            value: "SKL_110295_01+KAT_SKL_02_01_11029501",
+        },
+        {
+            icon: "img/advIcons/110307_01_r05.png",
+            name: "Steel Formation",
+            value: "SKL_110307_01+KAT_SKL_01_01_11030701",
+        },
+        {
+            icon: "img/advIcons/110307_01_r05.png",
+            name: "Lethal Stratagem",
+            value: "SKL_110307_01+KAT_SKL_02_01_11030701",
+        },
+        {
+            icon: "img/advIcons/110313_01_r05.png",
+            name: "Sakura Flurry",
+            value: "SKL_110313_01+",
+        },
+        {
+            icon: "img/advIcons/110326_01_r05.png",
+            name: "Defiant Dance",
+            value: "SKL_110326_01+",
+        },
+        {
+            icon: "img/advIcons/110346_01_r05.png",
+            name: "Dream Offensive",
+            value: "SKL_110346_01+KAT_SKL_02_01_11034601",
+        },
+        {
+            icon: "img/advIcons/110346_01_r05.png",
+            name: "Flash of Unity",
+            value: "SKL_110346_01+KAT_SKL_01_01_11034601",
+        },
+        {
+            icon: "img/advIcons/110352_01_r05.png",
+            name: "Sacred Blade",
+            value: "SKL_110352_01+KAT_SKL_01_01_11035201",
+        },
+        {
+            icon: "img/advIcons/110352_01_r05.png",
+            name: "Revelation's Purge",
+            value: "SKL_110352_01+KAT_SKL_02_01_11035201",
+        },
+        {
+            icon: "img/advIcons/110369_01_r05.png",
+            name: "Immaculate Wings",
+            value: "SKL_110369_01+",
         },
     ],
     Dagger: [
@@ -310,6 +428,49 @@ const skills = {
     ],
     Lance: [
         {
+            icon: "img/advIcons/100002_01_r04.png",
+            name: "Hallowed Waters",
+            value: "SKL_100002_01+",
+        },
+        {
+            icon: "img/advIcons/100002_02_r05.png",
+            name: "Sacred Maiden",
+            value: "SKL_100002_02+LAN_SKL_01_01_10000202",
+        },
+        {
+            icon: "img/advIcons/100002_02_r05.png",
+            name: "Mischief Maker",
+            subtitle: "Level 3",
+            value:
+                "SKL_100002_02+LAN_SKL_02_01_10000202>+LAN_SKL_02_02_10000202>+LAN_SKL_02_03_10000202",
+        },
+        {
+            icon: "img/advIcons/100010_04_r05.png",
+            name: "Dragon Claw",
+            value: "SKL_100010_04+LAN_SKL_01_01_10001001",
+        },
+        {
+            icon: "img/advIcons/100010_04_r05.png",
+            name: "Flames of Passion",
+            value: "SKL_100010_04+LAN_SKL_02_01_10001001",
+        },
+        {
+            icon: "img/advIcons/110007_02_r05.png",
+            name: "Corkscrew Jab",
+            value:
+                "SKL_110007_02+LAN_SKL_01_01_11000702>+LAN_SKL_01_02_11000702&r=2>+LAN_SKL_01_03_11000702",
+        },
+        {
+            icon: "img/advIcons/110021_01_r05.png",
+            name: "Dragon Frostfang",
+            value: "SKL_110021_01+",
+        },
+        {
+            icon: "img/advIcons/110039_01_r04.png",
+            name: "Unused",
+            value: "SKL_110039_01+",
+        },
+        {
             icon: "img/advIcons/110260_01_r04.png",
             name: "Pom Pom Pump",
             value: "SKL_110260_01+LAN_SKL_01_01_11026001",
@@ -329,6 +490,79 @@ const skills = {
             name: "Flawless Formation",
             value:
                 "SKL_110272_01+LAN_SKL_02_01_11027201>+LAN_SKL_02_02_11027201>+LAN_SKL_02_03_11027201",
+        },
+        {
+            icon: "img/advIcons/110275_01_r05.png",
+            name: "Stunning Display",
+            value: "SKL_110275_01+LAN_SKL_01_01_11027501",
+        },
+        {
+            icon: "img/advIcons/110299_01_r04.png",
+            name: "Flame Incursion",
+            value: "SKL_110299_01+",
+        },
+        {
+            icon: "img/advIcons/110318_01_r05.png",
+            name: "Woodland Spear",
+            value: "SKL_110318_01+",
+        },
+        {
+            icon: "img/advIcons/110323_01_r04.png",
+            name: "Obstruction Armament",
+            value: "SKL_110323_01+",
+        },
+        {
+            icon: "img/advIcons/110328_01_r05.png",
+            name: "Frigid Smash",
+            value: "SKL_110328_01+LAN_SKL_01_01_11032801",
+        },
+        {
+            icon: "img/advIcons/110328_01_r05.png",
+            name: "Ice Mirror",
+            value:
+                "SKL_110328_01+LAN_SKL_02_01_11032801>+LAN_SKL_02_02_11032801>+LAN_SKL_02_03_11032801",
+        },
+        {
+            icon: "img/advIcons/110349_01_r05.png",
+            name: "Chaos Gift",
+            value:
+                "SKL_110349_01+LAN_SKL_01_01_11034901>+LAN_SKL_01_02_11034901>+LAN_SKL_01_03_11034901",
+        },
+        {
+            icon: "img/advIcons/110353_01_r05.png",
+            name: "Patriot's Charge",
+            value:
+                "SKL_110353_01+LAN_SKL_01_01_11035301>+LAN_SKL_01_02_11035301>+LAN_SKL_01_03_11035301",
+        },
+        {
+            icon: "img/advIcons/110356_01_r04.png",
+            name: "Chaotic Fissure",
+            value: "SKL_110356_01+",
+        },
+        {
+            icon: "img/advIcons/110357_01_r05.png",
+            name: "Snappy Selfie",
+            value: "SKL_110357_01+",
+        },
+        {
+            icon: "img/advIcons/110358_01_r05.png",
+            name: "Resplendent Slash",
+            value: "SKL_110358_01+LAN_SKL_01_01_11035801",
+        },
+        {
+            icon: "img/advIcons/110358_01_r05.png",
+            name: "Luna",
+            value: "SKL_110358_01+LAN_SKL_02_01_11035801",
+        },
+        {
+            icon: "img/advIcons/110364_01_r05.png",
+            name: "Beck and Call",
+            value: "SKL_110364_01+LAN_SKL_01_01_11036401",
+        },
+        {
+            icon: "img/advIcons/110364_01_r05.png",
+            name: "Perfect Order",
+            value: "SKL_110364_01+LAN_SKL_02_01_11036401",
         },
     ],
     Bow: [
