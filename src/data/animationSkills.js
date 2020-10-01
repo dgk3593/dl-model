@@ -39,6 +39,161 @@ const skills = {
             name: "Starlit Gift",
             value: "SKL_100004_02+",
         },
+        {
+            icon: "img/advIcons/100005_01_r04.png",
+            name: "Shadow Weaver",
+            value: "SKL_100005_01+",
+        },
+        {
+            icon: "img/advIcons/100032_04_r05.png",
+            name: "Code 14: Conviction",
+            value: "SKL_100032_04+DAG_SKL_01_01_10003204",
+        },
+        {
+            icon: "img/advIcons/100032_04_r05.png",
+            name: "Eden Code 05: Gevurah",
+            value: "SKL_100032_04+DAG_SKL_02_01_10003204",
+        },
+        {
+            icon: "img/advIcons/100032_04_r05.png",
+            name: "Eden Mode",
+            value: "SKL_100032_04+DAG_SKL_03_01_10003204",
+        },
+        {
+            icon: "img/advIcons/100032_04_r05.png",
+            name: "Eden Code 01: Keter ",
+            value:
+                "SKL_100032_04+DAG_SKL_04_01_10003204>+DAG_SKL_04_02_10003204>+DAG_SKL_04_03_10003204",
+        },
+        {
+            icon: "img/advIcons/110002_02_r05.png",
+            name: "Ninja Bride Sweep",
+            value: "SKL_110002_02+DAG_SKL_01_01_11000202",
+        },
+        {
+            icon: "img/advIcons/110002_02_r05.png",
+            name: "Ninja Bride Sunshower",
+            value: "SKL_110002_02+DAG_SKL_02_01_11000202",
+        },
+        {
+            icon: "img/advIcons/110011_01_r05.png",
+            name: "Howling Meteor",
+            value: "SKL_110011_01+DAG_SKL_01_01_11001101",
+        },
+        {
+            icon: "img/advIcons/110066_02_r05.png",
+            name: "Summer Memories",
+            value: "SKL_110066_02+DAG_SKL_01_01_11006602",
+        },
+        {
+            icon: "img/advIcons/110066_02_r05.png",
+            name: "Ephemeral Love",
+            value: "SKL_110066_02+DAG_SKL_02_01_11006602",
+        },
+        {
+            icon: "img/advIcons/110281_02_r05.png",
+            name: "Ricochet Bolts",
+            value: "SKL_110281_02+DAG_SKL_01_01_11028102",
+        },
+        {
+            icon: "img/advIcons/110281_02_r05.png",
+            name: "Maskable Faith",
+            value: "SKL_110281_02+DAG_SKL_02_01_11028102",
+        },
+        {
+            icon: "img/advIcons/110281_02_r05.png",
+            name: "Shimmering Pinwheels",
+            value: "SKL_110281_02+DAG_SKL_03_01_11028102",
+        },
+        {
+            icon: "img/advIcons/110296_01_r05.png",
+            name: "Hearty Helping",
+            value: "SKL_110296_01+",
+        },
+        {
+            icon: "img/advIcons/110306_01_r05.png",
+            name: "Renegade Descent",
+            value:
+                "SKL_110306_01+DAG_SKL_01_01_11030601>+DAG_SKL_01_02_11030601>+DAG_SKL_01_03_11030601&ts=0.5",
+        },
+        {
+            icon: "img/advIcons/110306_01_r05.png",
+            name: "Renegade Gambit",
+            value: "SKL_110306_01+DAG_SKL_02_01_11030601",
+        },
+        {
+            icon: "img/advIcons/110306_01_r05.png",
+            name: "Renegade Dragonfall",
+            value: "SKL_110306_01+DAG_SKL_03_01_11030601",
+        },
+        {
+            icon: "img/advIcons/110306_01_r05.png",
+            name: "Renegade Shadowblaze",
+            value:
+                "SKL_110306_01+DAG_SKL_04_01_11030601>+DAG_SKL_04_02_11030601>+DAG_SKL_04_03_11030601",
+        },
+        {
+            icon: "img/advIcons/110314_01_r04.png",
+            name: "Gale Slice",
+            value: "SKL_110314_01+&ts=0.25",
+        },
+        {
+            icon: "img/advIcons/110319_01_r04.png",
+            name: "Captivating Canvas",
+            value: "SKL_110319_01+",
+        },
+        {
+            icon: "img/advIcons/110324_01_r05.png",
+            name: "Ruyi Jingu Bang",
+            value: "SKL_110324_01+",
+        },
+        {
+            icon: "img/advIcons/110336_01_r05.png",
+            name: "Ruination Cage",
+            value: "SKL_110336_01+DAG_SKL_01_01_11033601",
+        },
+        {
+            icon: "img/advIcons/110336_01_r05.png",
+            name: "Corrosive Cage",
+            value:
+                "SKL_110336_01+DAG_SKL_02_01_11033601&ts=0.5>+DAG_SKL_02_02_11033601&ts=0.5>+DAG_SKL_02_03_11033601",
+        },
+        {
+            icon: "img/advIcons/110344_01_r04.png",
+            name: "Deadly Joyride",
+            value:
+                "SKL_110344_01+DAG_SKL_01_01_11034401>+DAG_SKL_01_02_11034401>+DAG_SKL_01_03_11034401",
+        },
+        {
+            icon: "img/advIcons/110345_01_r05.png",
+            name: "Mouse's Revenge",
+            value: "SKL_110345_01+DAG_SKL_01_01_11034501",
+        },
+        {
+            icon: "img/advIcons/110345_01_r05.png",
+            name: "Calamity Drop",
+            value: "SKL_110345_01+DAG_SKL_02_01_11034501",
+        },
+        {
+            icon: "img/advIcons/110360_01_r05.png",
+            name: "Divine Wings",
+            value: "SKL_110360_01+DAG_SKL_01_01_11036001",
+        },
+        {
+            icon: "img/advIcons/110360_01_r05.png",
+            name: "Dragon Valor",
+            value: "SKL_110360_01+DAG_SKL_02_01_11036001",
+        },
+        {
+            icon: "img/advIcons/110365_01_r05.png",
+            name: "Victoria Strategy",
+            value: "SKL_110365_01+DAG_SKL_01_01_11036501",
+        },
+        {
+            icon: "img/advIcons/110365_01_r05.png",
+            name: "Magnus Apocalypse",
+            value: "SKL_110365_01+DAG_SKL_02_01_11036501",
+        },
     ],
     Axe: [
         {
@@ -213,6 +368,11 @@ const skills = {
             value: "SKL_110010_02+BOW_SKL_02_01_11001002",
         },
         {
+            icon: "img/advIcons/110011_02_r04.png",
+            name: "Floral Explosion",
+            value: "SKL_110011_02+",
+        },
+        {
             icon: "img/advIcons/110053_01_r05.png",
             name: "Night of Antiquity",
             value: "SKL_110053_01+",
@@ -252,6 +412,16 @@ const skills = {
             name: "Sanctus Arrow",
             value:
                 "SKL_110366_01+BOW_SKL_01_01_11036601>+BOW_SKL_01_02_11036601>+BOW_SKL_01_03_11036601",
+        },
+        {
+            icon: "img/advIcons/110368_01_r05.png",
+            name: "Faerie Magic",
+            value: "SKL_110368_01+BOW_SKL_01_01_11036801",
+        },
+        {
+            icon: "img/advIcons/110368_01_r05.png",
+            name: "Butterfly Kiss",
+            value: "SKL_110368_01+BOW_SKL_02_01_11036801",
         },
     ],
     Wand: [
