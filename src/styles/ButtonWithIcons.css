@@ -1,6 +1,6 @@
 .ButtonWithIcons.MuiButton-root {
-    padding: 0.3rem 0.5rem;
-    max-width: 18rem;
+    padding: 0.3rem;
+    max-width: 14.3rem;
 }
 .ButtonWithIcons .MuiButton-label {
     display: flex;
