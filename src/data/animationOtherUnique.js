@@ -243,6 +243,96 @@ const otherUnique = {
                 },
             ],
         },
+        Meene: {
+            icon: "img/advIcons/110368_01_r05.png",
+            animations: [
+                {
+                    name: "Join Room",
+                    value:
+                        "LOB_110368_01+BOW_ONT_06_11036801&ts=-0.5>+BOW_ONT_04_11036801>+BOW_ONT_09_11036801>+BOW_ONT_10_11036801>+BOW_ONT_23_11036801",
+                },
+                {
+                    name: "Standby",
+                    value: "LOB_110368_01+BOW_ONT_23_11036801",
+                },
+                {
+                    name: "Idle",
+                    value: "INT_110368_01+",
+                },
+                {
+                    name: "Fly Slow",
+                    value: "RUN_110368_01+CMN_RUN_01_11036801",
+                },
+                {
+                    name: "Fly Fast",
+                    value: "RUN_110368_01+CMN_RUN_02_11036801",
+                },
+                {
+                    name: "Combo",
+                    value:
+                        "CMB_110368_01+BOW_CMB_01_11036801>+BOW_CMB_02_11036801>+BOW_CMB_03_11036801>+BOW_CMB_04_11036801>+BOW_CMB_05_11036801",
+                },
+                {
+                    name: "Roll",
+                    value: "CMN_110368_01+BOW_ROL_01_11036801",
+                },
+                {
+                    name: "Dash Attack",
+                    value: "CMN_110368_01+BOW_DAS_02_11036801",
+                },
+                {
+                    name: "Force Strike Run",
+                    value: "CMN_110368_01+BOW_RUN_05_11036801",
+                },
+                {
+                    name: "Quick Turn",
+                    value: "CMN_110368_01+CMN_QTN_01_11036801&ts=0.5",
+                },
+                {
+                    name: "Knocked Away",
+                    value:
+                        "BST_110368_01+CMN_BST_01_11036801>+CMN_BST_04_11036801",
+                },
+                {
+                    name: "Fall to Ground",
+                    value: "BST_110368_01+CMN_BST_05_11036801",
+                },
+                {
+                    name: "Stand back up",
+                    value: "BST_110368_01+CMN_BST_06_11036801",
+                },
+                {
+                    name: "Ukemi",
+                    value:
+                        "UKM_110368_01+CMN_UKM_01_11036801&ts=0.5>+CMN_UKM_03_11036801",
+                },
+                {
+                    name: "Ukemi 2",
+                    value:
+                        "UKM_110368_01+CMN_UKM_11_11036801&ts=0.5>+CMN_UKM_03_11036801",
+                },
+                {
+                    name: "Stun",
+                    value: "CMN_110368_01+CMN_SWN_01_11036801",
+                },
+                {
+                    name: "Frozen",
+                    value: "CMN_110368_01+CMN_FRZ_01_11036801",
+                },
+                {
+                    name: "Take Damage",
+                    value: "CMN_110368_01+CMN_KNB_01_11036801",
+                },
+                {
+                    name: "Die",
+                    value: "CMN_110368_01+CMN_DIE_02_11036801",
+                },
+                {
+                    name: "Transform",
+                    value: "CTD_110368_01+",
+                },
+            ],
+        },
     },
     Axe: {
         "Summer Patia": {

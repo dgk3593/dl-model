@@ -4,6 +4,7 @@ const specialWeaponList = [
     { wid: "w306001_02", name: "Arrow" },
     { wid: "w302063_01", name: "Laxi's Blade" },
     { wid: "w302062_01", name: "Mascula's Blade" },
+    { wid: "w399015_01", name: "Meene's Bell" },
     { wid: "w305134_01", name: "Volk's Lance" },
     { wid: "w399001_01", name: "Kai Yan's Mace" },
     { wid: "w399004_01", name: "Ciella's Bow" },

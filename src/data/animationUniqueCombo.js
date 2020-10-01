@@ -28,6 +28,12 @@ const uniqueCombo = {
             subtitle: "Sigil Released",
             value: "CMB_110366_01+BOW_CMB_06_11036601",
         },
+        {
+            icon: "img/advIcons/110368_01_r05.png",
+            name: "Meene",
+            value:
+                "CMB_110368_01+BOW_CMB_A_01_11036801>+BOW_CMB_A_02_11036801>+BOW_CMB_A_03_11036801",
+        },
     ],
     Dagger: [
         {
