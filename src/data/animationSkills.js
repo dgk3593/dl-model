@@ -16,9 +16,115 @@ const skills = {
             value: "SKL_100001_01+",
         },
         {
+            icon: "img/advIcons/100002_06_r05.png",
+            name: "Sacred Union",
+            value: "SKL_100002_06+",
+        },
+        {
+            icon: "img/advIcons/100003_07_r05.png",
+            name: "Cyclone Blade",
+            value: "SKL_100003_07+SWD_SKL_01_01_10000307",
+        },
+        {
+            icon: "img/advIcons/100003_07_r05.png",
+            name: "Wind Tactics",
+            value: "SKL_100003_07+SWD_SKL_02_01_10000307",
+        },
+        {
+            icon: "img/advIcons/100005_02_r05.png",
+            name: "Crisis Edge",
+            value: "SKL_100005_02+SWD_SKL_01_01_10000502",
+        },
+        {
+            icon: "img/advIcons/100005_02_r05.png",
+            name: "Umbral Erasure",
+            value: "SKL_100005_02+SWD_SKL_02_01_10000502",
+        },
+        {
+            icon: "img/advIcons/100018_02_r05.png",
+            name: "Feathered Gale",
+            value: "SKL_100018_02+SWD_SKL_01_01_10001802",
+        },
+        {
+            icon: "img/advIcons/100018_02_r05.png",
+            name: "Pinion Slash",
+            value: "SKL_100018_02+SWD_SKL_02_01_10001802",
+        },
+        {
+            icon: "img/advIcons/100018_02_r05.png",
+            name: "Sparrows' Protection",
+            value: "SKL_100018_02+SWD_SKL_03_01_10001802",
+        },
+        {
+            icon: "img/advIcons/100018_02_r05.png",
+            name: "Parrying Slash",
+            value: "SKL_100018_02+SWD_SKL_04_01_10001802",
+        },
+        {
+            icon: "img/advIcons/110022_01_r05.png",
+            name: "Majestic Tide",
+            value: "SKL_110022_01+",
+        },
+        {
+            icon: "img/advIcons/110050_02_r05.png",
+            name: "Moonbreaker",
+            value: "SKL_110050_02+",
+        },
+        {
+            icon: "img/advIcons/110255_02_r05.png",
+            name: "Pep Talk",
+            value: "SKL_110255_02+",
+        },
+        {
+            icon: "img/advIcons/110259_01_r05.png",
+            name: "Floral Revolution",
+            value:
+                "SKL_110259_01+SWD_SKL_01_01_11025901>+SWD_SKL_01_02_11025901&ts=0.5>+SWD_SKL_01_03_11025901",
+        },
+        {
+            icon: "img/advIcons/110266_01_r05.png",
+            name: "Crystalline Blades",
+            value: "SKL_110266_01+",
+        },
+        {
             icon: "img/advIcons/110274_01_r05.png",
             name: "Lightning Burst",
             value: "SKL_110274_01+",
+        },
+        {
+            icon: "img/advIcons/110291_01_r05.png",
+            name: "Flickering Flames",
+            value: "SKL_110291_01+",
+        },
+        {
+            icon: "img/advIcons/110327_01_r05.png",
+            name: "Blue Radiance",
+            value: "SKL_110327_01+",
+        },
+        {
+            icon: "img/advIcons/110301_02_r04.png",
+            name: "Envoy of the End",
+            value: "SKL_110301_02+",
+        },
+        {
+            icon: "img/advIcons/110325_01_r05.png",
+            name: "Festival Rush",
+            value: "SKL_110325_01+",
+        },
+        {
+            icon: "img/advIcons/110359_01_r05.png",
+            name: "Exalted Sword",
+            value: "SKL_110359_01+SWD_SKL_01_01_11035901",
+        },
+        {
+            icon: "img/advIcons/110359_01_r05.png",
+            name: "Aether",
+            value: "SKL_110359_01+SWD_SKL_02_01_11035901",
+        },
+        {
+            icon: "img/advIcons/110363_01_r05.png",
+            name: "Signature Tactics",
+            value: "SKL_110363_01+",
         },
     ],
     Blade: [

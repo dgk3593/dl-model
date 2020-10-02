@@ -11,7 +11,7 @@ const genericSkills = {
         "Spin Overhead": "SKL_SWD+SWD_004_02",
         "2 Spins": "SKL_SWD+SWD_004_03",
         "3 Spins": "SKL_SWD+SWD_004_04",
-        "Jump Attack": "SKL_SWD+SWD_005_04",
+        "Volleyball?": "SKL_SWD+SWD_005_04",
     },
     Blade: {
         "2 Slashes Jumpback": "SKL_KAT+KAT_001_02",
