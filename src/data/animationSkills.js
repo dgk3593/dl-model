@@ -102,16 +102,6 @@ const skills = {
             value: "SKL_110327_01+",
         },
         {
-            icon: "img/advIcons/110301_02_r04.png",
-            name: "Envoy of the End",
-            value: "SKL_110301_02+",
-        },
-        {
-            icon: "img/advIcons/110325_01_r05.png",
-            name: "Festival Rush",
-            value: "SKL_110325_01+",
-        },
-        {
             icon: "img/advIcons/110359_01_r05.png",
             name: "Exalted Sword",
             value: "SKL_110359_01+SWD_SKL_01_01_11035901",
@@ -121,6 +111,17 @@ const skills = {
             name: "Aether",
             value: "SKL_110359_01+SWD_SKL_02_01_11035901",
         },
+        {
+            icon: "img/advIcons/110301_02_r04.png",
+            name: "Envoy of the End",
+            value: "SKL_110301_02+",
+        },
+        {
+            icon: "img/advIcons/110325_01_r05.png",
+            name: "Festival Rush",
+            value: "SKL_110325_01+",
+        },
+
         {
             icon: "img/advIcons/110363_01_r05.png",
             name: "Signature Tactics",
@@ -201,11 +202,7 @@ const skills = {
             name: "Roaring Furnace",
             value: "SKL_110264_01+",
         },
-        {
-            icon: "img/advIcons/110271_01_r05.png",
-            name: "Bliss Eternal",
-            value: "SKL_110271_01+",
-        },
+
         {
             icon: "img/advIcons/110295_01_r05.png",
             name: "Amuse-bouche",
@@ -257,6 +254,11 @@ const skills = {
             value: "SKL_110352_01+KAT_SKL_02_01_11035201",
         },
         {
+            icon: "img/advIcons/110271_01_r05.png",
+            name: "Bliss Eternal",
+            value: "SKL_110271_01+",
+        },
+        {
             icon: "img/advIcons/110369_01_r05.png",
             name: "Immaculate Wings",
             value: "SKL_110369_01+",
@@ -305,11 +307,6 @@ const skills = {
             value: "SKL_110002_02+DAG_SKL_02_01_11000202",
         },
         {
-            icon: "img/advIcons/110011_01_r05.png",
-            name: "Howling Meteor",
-            value: "SKL_110011_01+DAG_SKL_01_01_11001101",
-        },
-        {
             icon: "img/advIcons/110066_02_r05.png",
             name: "Summer Memories",
             value: "SKL_110066_02+DAG_SKL_01_01_11006602",
@@ -318,6 +315,11 @@ const skills = {
             icon: "img/advIcons/110066_02_r05.png",
             name: "Ephemeral Love",
             value: "SKL_110066_02+DAG_SKL_02_01_11006602",
+        },
+        {
+            icon: "img/advIcons/110011_01_r05.png",
+            name: "Howling Meteor",
+            value: "SKL_110011_01+DAG_SKL_01_01_11001101",
         },
         {
             icon: "img/advIcons/110281_02_r05.png",
@@ -333,11 +335,6 @@ const skills = {
             icon: "img/advIcons/110281_02_r05.png",
             name: "Shimmering Pinwheels",
             value: "SKL_110281_02+DAG_SKL_03_01_11028102",
-        },
-        {
-            icon: "img/advIcons/110296_01_r05.png",
-            name: "Hearty Helping",
-            value: "SKL_110296_01+",
         },
         {
             icon: "img/advIcons/110306_01_r05.png",
@@ -360,6 +357,11 @@ const skills = {
             name: "Renegade Shadowblaze",
             value:
                 "SKL_110306_01+DAG_SKL_04_01_11030601>+DAG_SKL_04_02_11030601>+DAG_SKL_04_03_11030601",
+        },
+        {
+            icon: "img/advIcons/110296_01_r05.png",
+            name: "Hearty Helping",
+            value: "SKL_110296_01+",
         },
         {
             icon: "img/advIcons/110314_01_r04.png",
@@ -386,12 +388,6 @@ const skills = {
             name: "Corrosive Cage",
             value:
                 "SKL_110336_01+DAG_SKL_02_01_11033601&ts=0.5>+DAG_SKL_02_02_11033601&ts=0.5>+DAG_SKL_02_03_11033601",
-        },
-        {
-            icon: "img/advIcons/110344_01_r04.png",
-            name: "Deadly Joyride",
-            value:
-                "SKL_110344_01+DAG_SKL_01_01_11034401>+DAG_SKL_01_02_11034401>+DAG_SKL_01_03_11034401",
         },
         {
             icon: "img/advIcons/110345_01_r05.png",
@@ -422,6 +418,12 @@ const skills = {
             icon: "img/advIcons/110365_01_r05.png",
             name: "Magnus Apocalypse",
             value: "SKL_110365_01+DAG_SKL_02_01_11036501",
+        },
+        {
+            icon: "img/advIcons/110344_01_r04.png",
+            name: "Deadly Joyride",
+            value:
+                "SKL_110344_01+DAG_SKL_01_01_11034401>+DAG_SKL_01_02_11034401>+DAG_SKL_01_03_11034401",
         },
     ],
     Axe: [
@@ -457,11 +459,6 @@ const skills = {
             value: "SKL_110027_02+AXE_SKL_02_01_11002702",
         },
         {
-            icon: "img/advIcons/110036_03_r05.png",
-            name: "Starfall Surprise",
-            value: "SKL_110036_03+",
-        },
-        {
             icon: "img/advIcons/110041_02_r05.png",
             name: "Empyreal Wind",
             value: "SKL_110041_02+AXE_SKL_01_01_11004102",
@@ -482,6 +479,11 @@ const skills = {
             value: "SKL_110042_02+",
         },
         {
+            icon: "img/advIcons/110036_03_r05.png",
+            name: "Starfall Surprise",
+            value: "SKL_110036_03+",
+        },
+        {
             icon: "img/advIcons/110263_01_r05.png",
             name: "Forge Buster",
             value:
@@ -496,11 +498,6 @@ const skills = {
             icon: "img/advIcons/110281_01_r05.png",
             name: "Circular Judgment",
             value: "SKL_110281_01+",
-        },
-        {
-            icon: "img/advIcons/110322_01_r05.png",
-            name: "Bursting Fury",
-            value: "SKL_110322_01+",
         },
         {
             icon: "img/advIcons/110335_02_r05.png",
@@ -536,13 +533,13 @@ const skills = {
             subtitle: "Power Mode",
             value: "SKL_110355_01+AXE_SKL_04_01_11035501",
         },
+        {
+            icon: "img/advIcons/110322_01_r05.png",
+            name: "Bursting Fury",
+            value: "SKL_110322_01+",
+        },
     ],
     Lance: [
-        {
-            icon: "img/advIcons/100002_01_r04.png",
-            name: "Hallowed Waters",
-            value: "SKL_100002_01+",
-        },
         {
             icon: "img/advIcons/100002_02_r05.png",
             name: "Sacred Maiden",
@@ -564,6 +561,11 @@ const skills = {
             icon: "img/advIcons/100010_04_r05.png",
             name: "Flames of Passion",
             value: "SKL_100010_04+LAN_SKL_02_01_10001001",
+        },
+        {
+            icon: "img/advIcons/100002_01_r04.png",
+            name: "Hallowed Waters",
+            value: "SKL_100002_01+",
         },
         {
             icon: "img/advIcons/110007_02_r05.png",
@@ -688,11 +690,6 @@ const skills = {
             value: "SKL_100004_04+BOW_SKL_02_01_10000404",
         },
         {
-            icon: "img/advIcons/100006_01_r04.png",
-            name: "Radiant Bonds",
-            value: "SKL_100006_01+",
-        },
-        {
             icon: "img/advIcons/100029_02_r05.png",
             name: "Brilliant Bolt",
             value: "SKL_100029_02+",
@@ -703,6 +700,16 @@ const skills = {
             value: "SKL_100029_03+",
         },
         {
+            icon: "img/advIcons/100006_01_r04.png",
+            name: "Radiant Bonds",
+            value: "SKL_100006_01+",
+        },
+        {
+            icon: "img/advIcons/110011_02_r04.png",
+            name: "Floral Explosion",
+            value: "SKL_110011_02+",
+        },
+        {
             icon: "img/advIcons/110010_02_r05.png",
             name: "Radiant Bolt",
             value: "SKL_110010_02+BOW_SKL_01_01_11001002",
@@ -711,11 +718,6 @@ const skills = {
             icon: "img/advIcons/110010_02_r05.png",
             name: "Magnanimity's Call",
             value: "SKL_110010_02+BOW_SKL_02_01_11001002",
-        },
-        {
-            icon: "img/advIcons/110011_02_r04.png",
-            name: "Floral Explosion",
-            value: "SKL_110011_02+",
         },
         {
             icon: "img/advIcons/110053_01_r05.png",
