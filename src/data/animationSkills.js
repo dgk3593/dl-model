@@ -11,6 +11,11 @@ const skills = {
             value: "SKL_100001_08+SWD_SKL_02_01_10000108",
         },
         {
+            icon: "img/advIcons/100001_01_r04.png",
+            name: "Exalted Fire",
+            value: "SKL_100001_01+",
+        },
+        {
             icon: "img/advIcons/110274_01_r05.png",
             name: "Lightning Burst",
             value: "SKL_110274_01+",
@@ -660,6 +665,46 @@ const skills = {
     ],
     Wand: [
         {
+            icon: "img/advIcons/100004_10_r05.png",
+            name: "Ancient Ray",
+            value: "SKL_100004_10+ROD_SKL_01_01_10000410",
+        },
+        {
+            icon: "img/advIcons/100004_10_r05.png",
+            name: "Faith of the Elders",
+            value: "SKL_100004_10+ROD_SKL_02_01_10000410",
+        },
+        {
+            icon: "img/advIcons/100009_07_r05.png",
+            name: "Celestial Prayer",
+            value: "SKL_100009_07+ROD_SKL_02_01_10000907",
+        },
+        {
+            icon: "img/advIcons/100009_07_r05.png",
+            name: "Twilight Crown",
+            value: "SKL_100009_07+ROD_SKL_01_01_10000907",
+        },
+        {
+            icon: "img/advIcons/110009_02_r05.png",
+            name: "Chrono Trial",
+            value: "SKL_110009_02+ROD_SKL_01_01_11000902",
+        },
+        {
+            icon: "img/advIcons/110009_02_r05.png",
+            name: "Bracing Summer",
+            value: "SKL_110009_02+ROD_SKL_02_01_11000902",
+        },
+        {
+            icon: "img/advIcons/110032_01_r05.png",
+            name: "Save the Day!",
+            value: "SKL_110032_01+",
+        },
+        {
+            icon: "img/advIcons/110032_02_r05.png",
+            name: "Study Break",
+            value: "SKL_110032_02+",
+        },
+        {
             icon: "img/advIcons/110053_03_r05.png",
             name: "Girls' Night Out",
             value: "SKL_110053_03+ROD_SKL_01_01_11005303",
@@ -669,6 +714,79 @@ const skills = {
             name: "Ancient Incandescence",
             value:
                 "SKL_110053_03+ROD_SKL_02_01_11005303>+ROD_SKL_02_02_11005303>+ROD_SKL_02_03_11005303",
+        },
+        {
+            icon: "img/advIcons/110063_02_r04.png",
+            name: "Seaside Punisher",
+            value: "SKL_110063_02+",
+        },
+        {
+            icon: "img/advIcons/110252_01_r05.png",
+            name: "Glacial Blossom",
+            value: "SKL_110252_01+",
+        },
+        {
+            icon: "img/advIcons/110299_02_r05.png",
+            name: "Surging Light",
+            value: "SKL_110299_02+ROD_SKL_01_01_11029902",
+        },
+        {
+            icon: "img/advIcons/110299_02_r05.png",
+            name: "Coalescent Light",
+            value: "SKL_110299_02+ROD_SKL_02_01_11029902",
+        },
+        {
+            icon: "img/advIcons/110333_01_r05.png",
+            name: "Gespenst",
+            value: "SKL_110333_01+ROD_SKL_01_01_11033301",
+        },
+        {
+            icon: "img/advIcons/110333_01_r05.png",
+            name: "Nosferatu",
+            value: "SKL_110333_01+ROD_SKL_02_01_11033301",
+        },
+        {
+            icon: "img/advIcons/110305_01_r05.png",
+            name: "Empowering Triplet",
+            value: "SKL_110305_01+",
+        },
+        {
+            icon: "img/advIcons/110337_01_r05.png",
+            name: "Violet Uproar",
+            value:
+                "SKL_110337_01+ROD_SKL_01_01_11033701>+ROD_SKL_01_02_11033701&ts=0.5>+ROD_SKL_01_03_11033701",
+        },
+
+        {
+            icon: "img/advIcons/110354_01_r05.png",
+            name: "Metal Blade",
+            value:
+                "SKL_110354_01+ROD_SKL_01_01_11035401>+ROD_SKL_01_02_11035401>+ROD_SKL_01_03_11035401",
+        },
+        {
+            icon: "img/advIcons/110354_01_r05.png",
+            name: "Leaf Shield",
+            value: "SKL_110354_01+ROD_SKL_02_01_11035401",
+        },
+        {
+            icon: "img/advIcons/110361_01_r05.png",
+            name: "Flower of Joy",
+            value: "SKL_110361_01+ROD_SKL_01_01_11036101",
+        },
+        {
+            icon: "img/advIcons/110361_01_r05.png",
+            name: "Gentle Dream",
+            value: "SKL_110361_01+ROD_SKL_02_01_11036101",
+        },
+        {
+            icon: "img/advIcons/110340_01_r04.png",
+            name: "Sincerely Yours",
+            value: "SKL_110340_01+",
+        },
+        {
+            icon: "img/advIcons/110362_01_r05.png",
+            name: "Unknown Order",
+            value: "SKL_110362_01+",
         },
     ],
     Staff: [
