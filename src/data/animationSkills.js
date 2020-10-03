@@ -909,11 +909,6 @@ const skills = {
             value: "SKL_100009_08+",
         },
         {
-            icon: "img/advIcons/110004_02_r04.png",
-            name: "Dream Wedding",
-            value: "SKL_110004_02+",
-        },
-        {
             icon: "img/advIcons/110043_01_r05.png",
             name: "Radiant Savior",
             value: "SKL_110043_01+",
@@ -922,6 +917,11 @@ const skills = {
             icon: "img/advIcons/110043_02_r05.png",
             name: "Blooming Love",
             value: "SKL_110043_02+",
+        },
+        {
+            icon: "img/advIcons/110004_02_r04.png",
+            name: "Dream Wedding",
+            value: "SKL_110004_02+",
         },
         {
             icon: "img/advIcons/110059_01_r05.png",

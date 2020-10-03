@@ -2,14 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
-        width: "15rem",
+        width: "14rem",
         padding: 0,
         textAlign: "center",
-        margin: "0.3rem 0",
+        margin: "0.3rem 0.1rem",
         border: "2px solid rgba(0,0,0,0.1)",
         boxSizing: "content-box",
+        maxWidth: "47%",
         "&:hover": {
             border: "2px solid black",
+        },
+        "& .MuiCardContent-root": {
+            padding: "0.1rem",
         },
     },
     title: {

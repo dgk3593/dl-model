@@ -3,10 +3,6 @@ const styles = {
         margin: 0,
         padding: 0,
     },
-    root: {
-        margin: 0,
-        padding: "1rem",
-    },
     closeButton: {
         position: "absolute",
         right: "0.5rem",
@@ -20,7 +16,6 @@ const styles = {
         display: "flex",
         justifyContent: "center",
     },
-    titleText: {},
 };
 
 export default styles;

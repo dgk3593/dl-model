@@ -50,6 +50,7 @@ function ControlPanel(props) {
             onClose={toggleControlOpen}
             open={open}
             scroll="paper"
+            PaperProps={{ classes: { root: "ControlPanel" } }}
         >
             {content}
         </Dialog>
