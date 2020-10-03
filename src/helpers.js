@@ -41,7 +41,6 @@ export const setInitialSettings = params => {
                 break;
             case "cam": // parameters in form x, y, z
                 setValue = setValue.split(",").map(n => parseFloat(n));
-                console.log(setValue);
                 break;
             default:
         }
