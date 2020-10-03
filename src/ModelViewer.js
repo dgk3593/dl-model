@@ -61,16 +61,8 @@ class ModelViewer extends Component {
             CAM_PARAMS.near,
             CAM_PARAMS.far
         );
-        this.cameraPosition = this.props.cameraPosition || {
-            x: 2,
-            y: 0,
-            z: 10,
-        };
-        this.camera.position.set(
-            this.cameraPosition.x,
-            this.cameraPosition.y,
-            this.cameraPosition.z
-        );
+        this.cameraPosition = this.props.cameraPosition || [2, 0, 10];
+        this.camera.position.set(...this.cameraPosition);
         this.camera.updateProjectionMatrix();
 
         // Controls

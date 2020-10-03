@@ -22,7 +22,7 @@ export const initSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    scene: { background: "#cccccc" },
+    scene: { background: "#cccccc", initCameraPosition: null },
     animation: { code: `${initAni.fileName}+${initAni.aniName}`, timeScale: 1 },
     app: { showSettings: true, showAniControl: true },
     chainMaker: { enable: false, chain: [initAni] },

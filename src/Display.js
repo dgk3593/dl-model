@@ -20,7 +20,7 @@ function Display(props) {
             weaponLeft,
         },
         animation: { code: chainCode, timeScale },
-        scene: { background: bgColor },
+        scene: { background: bgColor, initCameraPosition },
         app: { showAniControl },
     } = settings;
 
@@ -28,9 +28,15 @@ function Display(props) {
 
     const type = modelId[0];
 
-    const cameraPosition = cameraPositions[modelId]
+    const defaultCameraPosition = cameraPositions[modelId]
         ? cameraPositions[modelId]
         : cameraPositions[type];
+
+    const cameraPosition = initCameraPosition
+        ? initCameraPosition.map((n, i) =>
+              isNaN(n) ? defaultCameraPosition[i] : n
+          )
+        : defaultCameraPosition;
 
     const controlsPosition = controlsPositions[modelId]
         ? controlsPositions[modelId]
