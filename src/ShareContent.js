@@ -10,7 +10,7 @@ import TextField from "@material-ui/core/TextField";
 import QRCode from "qrcode.react";
 
 import { SettingsContext } from "./context/SettingsContext";
-import { defaultSettings, initKey, baseUrl } from "./consts";
+import { defaultSettings, initKey, baseUrl, cameraPositions } from "./consts";
 
 import "./styles/ShareContent.css";
 
@@ -19,6 +19,8 @@ function ShareContent({ method }) {
     const [transparentBackground, toggleTransparentBackground] = useToggleState(
         false
     );
+    const [customCam, toggleCustomCam] = useToggleState(false);
+    const [camPos, setCamPos] = useState([0, 0.5, 1.5]);
     const [label, setLabel] = useState("Code");
     const currentSettings = useContext(SettingsContext);
 
@@ -31,6 +33,13 @@ function ShareContent({ method }) {
     const handleChange = event => {
         const name = event.currentTarget.name;
         setShow(oldValue => ({ ...oldValue, [name]: !oldValue[name] }));
+    };
+
+    const handleCamChange = event => {
+        const index = parseInt(event.currentTarget.getAttribute("index"));
+        const value = event.currentTarget.value;
+        const newCamPos = camPos.map((v, i) => (i === index ? value : v));
+        setCamPos(newCamPos);
     };
 
     const copyText = () => {
@@ -75,6 +84,29 @@ function ShareContent({ method }) {
                         link = link.concat(`${keyCode}=${currentValue}/`);
                     }
                     break;
+                case "cam":
+                    if (!customCam) break;
+                    const modelId = currentSettings["model"]["id"];
+                    const type = modelId[0];
+                    const defaultCameraPosition = cameraPositions[modelId]
+                        ? cameraPositions[modelId]
+                        : cameraPositions[type];
+                    if (
+                        camPos.some(
+                            (_, i) => camPos[i] !== defaultCameraPosition[i]
+                        )
+                    ) {
+                        link = link.concat("cam=");
+                        camPos.forEach((_, i) => {
+                            const value =
+                                camPos[i] !== defaultCameraPosition[i]
+                                    ? camPos[i]
+                                    : "";
+                            link = link.concat(`${value}${i < 2 ? "," : ""}`);
+                        });
+                        link = link.concat("/");
+                    }
+                    break;
                 default:
                     if (currentValue !== defaultValue) {
                         link = link.concat(`${keyCode}=${currentValue}/`);
@@ -92,7 +124,7 @@ function ShareContent({ method }) {
 
     const shareLink = getShareLink();
     const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
-        transparentBackground ? 'allowtransparency="true" ' : ""
+        transparentBackground ? "allowtransparency " : ""
     }/></iframe>`;
 
     useEffect(() => {
@@ -193,6 +225,37 @@ function ShareContent({ method }) {
                     label="Show Settings"
                 />
             </div>
+            <FormControlLabel
+                control={
+                    <Checkbox
+                        checked={customCam}
+                        onChange={toggleCustomCam}
+                        name="Settings"
+                        color="primary"
+                    />
+                }
+                label="Custom Camera Position"
+            />
+            {customCam && (
+                <div className="ShareContent-CamPos">
+                    {["x", "y", "z"].map((axis, i) => (
+                        <TextField
+                            onChange={handleCamChange}
+                            label={axis}
+                            key={axis}
+                            size="small"
+                            margin="dense"
+                            variant="outlined"
+                            inputProps={{
+                                type: "number",
+                                step: 0.5,
+                                index: i,
+                            }}
+                            value={camPos[i]}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

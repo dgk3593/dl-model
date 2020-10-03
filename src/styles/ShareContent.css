@@ -19,3 +19,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.ShareContent-CamPos {
+    max-width: 30rem;
+}
