@@ -2,7 +2,8 @@ import * as THREE from "three";
 import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
-let FBXLoader = require("three-fbxloader-offical");
+// let FBXLoader = require("three-fbxloader-offical");
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 export const loadModel = url => {
     return (

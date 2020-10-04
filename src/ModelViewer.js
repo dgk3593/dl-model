@@ -12,7 +12,7 @@ import {
     analyzeChainCode,
 } from "./viewerHelpers";
 
-let OrbitControls = require("three-orbit-controls")(THREE);
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 class ModelViewer extends Component {
     animate = () => {
@@ -81,7 +81,7 @@ class ModelViewer extends Component {
 
         // Light
         let light = new THREE.DirectionalLight(0xffffff);
-        light.position.set(0, 200, 0);
+        light.position.set(0, 50, 0);
         this.scene.add(light);
 
         // Renderer
@@ -89,6 +89,7 @@ class ModelViewer extends Component {
             antialias: false,
             alpha: true,
         });
+        this.renderer.outputEncoding = THREE.sRGBEncoding;
         this.renderer.setClearColor(0x000000, 0);
         this.renderer.setSize(this.viewport.width, this.viewport.height);
         this.mount.appendChild(this.renderer.domElement);
