@@ -29,6 +29,7 @@ export const initKey = {
     ts: { group: "animation", key: "timeScale" },
     showAC: { group: "app", key: "showAniControl" },
     showSettings: { group: "app", key: "showSettings" },
+    AA: { group: "app", key: "antiAliasing" },
 };
 
 export const WEAPON_CODE = {

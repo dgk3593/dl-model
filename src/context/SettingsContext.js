@@ -24,7 +24,7 @@ export const initSettings = {
     },
     scene: { background: "#cccccc", initCameraPosition: null },
     animation: { code: `${initAni.fileName}+${initAni.aniName}`, timeScale: 1 },
-    app: { showSettings: true, showAniControl: true },
+    app: { showSettings: true, showAniControl: true, antiAliasing: false },
     chainMaker: { enable: false, chain: [initAni] },
 };
 
