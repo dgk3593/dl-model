@@ -125,7 +125,7 @@ const uniqueFS = {
         },
         {
             icon: "img/advIcons/110368_01_r05.png",
-            name: "Meena",
+            name: "Meene",
             value:
                 "FS_110368_01+BOW_CHR_01_11036801>+BOW_CHR_02_11036801>+BOW_CHR_03_11036801",
         },

@@ -905,7 +905,7 @@ const skills = {
         },
         {
             icon: "img/advIcons/100009_08_r05.png",
-            name: "Glorious Sanctuary",
+            name: "Holy Crown",
             value: "SKL_100009_08+",
         },
         {
