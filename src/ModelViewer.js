@@ -10,6 +10,7 @@ import {
     applyFace,
     disposeItem,
     analyzeChainCode,
+    addOutline,
 } from "./viewerHelpers";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -37,6 +38,13 @@ class ModelViewer extends Component {
                 : "",
         };
 
+        // save reference for outlines
+        this.outlines = {};
+        this.outlineDetails = {
+            color: this.props.outlineColor,
+            size: this.props.outlineSize,
+        };
+
         // viewport
         this.viewport = this.props.viewport || {
             width: window.innerWidth,
@@ -45,6 +53,8 @@ class ModelViewer extends Component {
 
         // mixers
         this.mixers = [];
+
+        // clock
         this.clock = new THREE.Clock();
 
         // Scene
@@ -86,7 +96,7 @@ class ModelViewer extends Component {
 
         // Renderer
         this.renderer = new THREE.WebGLRenderer({
-            antialias: false,
+            antialias: this.props.antiAliasing,
             alpha: true,
         });
         this.renderer.outputEncoding = THREE.sRGBEncoding;
@@ -200,6 +210,9 @@ class ModelViewer extends Component {
                 }
             }
         });
+        const keyName = `weapon${side}`;
+        // remove reference to outline
+        this.outlines[keyName] = null;
     };
 
     componentDidMount() {
@@ -214,6 +227,8 @@ class ModelViewer extends Component {
                 weaponRight,
                 weaponLeft,
             };
+            // add outline to main model
+            this.outlines.main = addOutline(main, this.outlineDetails);
 
             // Save initial position and rotation
             main.initPos = main.position.clone();
@@ -226,11 +241,18 @@ class ModelViewer extends Component {
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
                 if (this.props[key]) {
-                    const texture = this.modelInfo[key].texture;
-                    changeMaterialToBasic(this.models[key], texture);
-                    if (this.modelInfo[key].flipped) {
-                        this.models[key].rotation.y = Math.PI;
+                    const weaponInfo = this.modelInfo[key];
+                    const weaponModel = this.models[key];
+                    const texture = weaponInfo.texture;
+                    changeMaterialToBasic(weaponModel, texture);
+                    if (weaponInfo.flipped) {
+                        weaponModel.rotation.y = Math.PI;
                     }
+                    // add outline to weapon
+                    this.outlines[key] = addOutline(
+                        weaponModel,
+                        this.outlineDetails
+                    );
                 }
             });
 
@@ -312,12 +334,19 @@ class ModelViewer extends Component {
             this.camera.updateProjectionMatrix();
         }
 
+        // update anti aliasing setting
+        if (prevProps.antiAliasing !== this.props.antiAliasing) {
+            this.renderer.antiAliasing = this.props.antiAliasing;
+            console.log(this.renderer);
+        }
+
         // Update main model
         if (prevProps.model !== this.props.model) {
             this.props.setIsLoading(true);
             const modelPath = `${fbxSource}/fbx/${this.props.model}/${this.props.model}.fbx`;
             loadModel(modelPath).then(model => {
                 changeMaterialToBasic(model);
+                this.outlines.main = addOutline(model, this.outlineDetails);
 
                 // remove weapons from old model if they exist
                 ["Right", "Left"].forEach(side => {
@@ -355,8 +384,16 @@ class ModelViewer extends Component {
                 // Add weapons to new model
                 ["Right", "Left"].forEach(side => {
                     const key = `weapon${side}`;
-                    if (this.models[key]) {
-                        this.addWeapon(this.models[key], side);
+                    const weaponModel = this.models[key];
+                    if (weaponModel) {
+                        this.addWeapon(weaponModel, side);
+                        // add outline if not exist
+                        if (!this.outlines[key]) {
+                            this.outlines[key] = addOutline(
+                                weaponModel,
+                                this.outlineDetails
+                            );
+                        }
                     }
                 });
 
@@ -428,6 +465,8 @@ class ModelViewer extends Component {
                     if (this.modelInfo[key].flipped) {
                         this.models[key].rotation.y = Math.PI;
                     }
+                    // add outline to new weapon
+                    this.outlines[key] = addOutline(model, this.outlineDetails);
                     this.addWeapon(model, side); // add new Weapon
                     this.props.setIsLoading(false);
                 });

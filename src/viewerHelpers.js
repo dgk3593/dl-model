@@ -37,11 +37,11 @@ export const disposeItem = item => {
         if (child.isMesh) {
             if (Array.isArray(child.material)) {
                 child.material.forEach(mat => {
-                    mat.map.dispose();
+                    if (mat.map) mat.map.dispose();
                     mat.dispose();
                 });
             } else {
-                child.material.map.dispose();
+                if (child.material.map) child.material.map.dispose();
                 child.material.dispose();
             }
             child.geometry.dispose();
@@ -52,7 +52,7 @@ export const disposeItem = item => {
 export const changeMaterialToBasic = (object, texturePath) => {
     if (!object) return;
     object.traverse(child => {
-        if (child.isMesh) {
+        if (child.isMesh && child.name !== "outline") {
             const material = child.material;
             let texture;
             if (texturePath) {
@@ -87,9 +87,68 @@ export const changeMaterialToBasic = (object, texturePath) => {
     });
 };
 
+const createOutlineMaterial = ({ size, color }) => {
+    const newMaterial = new THREE.MeshToonMaterial({
+        color,
+        side: THREE.BackSide,
+        skinning: true,
+    });
+    newMaterial.onBeforeCompile = shader => {
+        const token = "#include <begin_vertex>";
+        const customTransform = `
+            vec3 transformed = position + objectNormal*${size * 0.0005};
+        `;
+        shader.vertexShader = shader.vertexShader.replace(
+            token,
+            customTransform
+        );
+    };
+    return newMaterial;
+};
+
+const replaceMaterial = (mesh, newMaterial) => {
+    if (Array.isArray(mesh.material)) {
+        const size = mesh.material.length;
+
+        mesh.material = mesh.material.forEach(m => {
+            m.dispose();
+        });
+        mesh.material = new Array(size).fill(newMaterial);
+    } else {
+        if (mesh.material.map) {
+            mesh.material.map.dispose();
+        }
+        mesh.material.dispose();
+        mesh.material = newMaterial;
+    }
+};
+
+// Add outline to object and return reference to array outlines
+export const addOutline = (object, details) => {
+    if (!object) return;
+    if (details.size === 0) return;
+    const outlines = []; // return value
+    object.traverse(child => {
+        if (child.isMesh) {
+            const outline = child.clone();
+            outline.name = "outline";
+            outlines.push(outline);
+            const newMaterial = createOutlineMaterial(details);
+            replaceMaterial(outline, newMaterial);
+
+            if (child.isSkinnedMesh) {
+                outline.bind(child.skeleton, child.bindMatrix);
+            }
+            child.parent.add(outline);
+        }
+    });
+    return outlines;
+};
+
 export const applyFace = (object, faceTexture, faceOffset) => {
     const faceTexturePath = `${fbxSource}/fbx/${faceTexture}/${faceTexture}.png`;
     const texture = new THREE.TextureLoader().load(faceTexturePath);
+    texture.encoding = THREE.sRGBEncoding;
     const faceMaterial = new THREE.MeshBasicMaterial({
         map: texture,
         skinning: true,
