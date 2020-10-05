@@ -370,6 +370,12 @@ const otherUnique = {
             ],
         },
     },
+    Manacaster: {
+        Ilia: {
+            icon: "img/advIcons/110367_01_r05.png",
+            animations: [{ name: "Roll", value: "ROL_110367_01+" }],
+        },
+    },
 };
 
 export default otherUnique;

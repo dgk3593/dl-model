@@ -138,6 +138,13 @@ const uniqueVictory = {
             value: "WIN_100009_08+CAN_WIN_01_10000908>+CAN_WIN_02_10000908",
         },
     ],
+    Manacaster: [
+        {
+            icon: "img/advIcons/110367_01_r05.png",
+            name: "Ilia",
+            value: "WIN_110367_01+GUN_WIN_01_11036701>+GUN_WIN_02_11036701",
+        },
+    ],
 };
 
 export default uniqueVictory;

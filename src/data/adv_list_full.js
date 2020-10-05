@@ -312,6 +312,14 @@ const adv = [
         weapon: "Blade",
     },
     {
+        cid: "110367_01",
+        name: "Ilia",
+        title: "Flawless Alchemist",
+        rarity: "5",
+        element: "Light",
+        weapon: "Manacaster",
+    },
+    {
         cid: "110053_03",
         name: "Incognito Nefaria",
         title: "Yearning Queen",

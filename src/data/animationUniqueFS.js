@@ -154,6 +154,14 @@ const uniqueFS = {
                 "FS_100009_08+CAN_CHR_A_01_10000908>+CAN_CHR_A_02_10000908>+CAN_CHR_A_03_10000908",
         },
     ],
+    Manacaster: [
+        {
+            icon: "img/advIcons/110367_01_r05.png",
+            name: "Ilia",
+            value:
+                "FS_110367_01+GUN_CHR_U_01_11036701>+GUN_CHR_U_02_11036701>+GUN_CHR_U_03_11036701",
+        },
+    ],
 };
 
 export default uniqueFS;
