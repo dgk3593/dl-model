@@ -968,19 +968,17 @@ const skills = {
         },
         {
             icon: "img/advIcons/110367_01_r05.png",
-            name: "Alchemic Enhancement",
-            value: "SKL_110367_01+GUN_SKL_02_01_11036701",
-        },
-        {
-            icon: "img/advIcons/110367_01_r05.png",
-            name: "Drive Buster",
-            subtitle: "Alchemic Cartridges",
+            name: "Drive Buster II",
             value: "SKL_110367_01+GUN_SKL_03_01_11036701",
         },
         {
             icon: "img/advIcons/110367_01_r05.png",
             name: "Alchemic Enhancement",
-            subtitle: "Alchemic Cartridges",
+            value: "SKL_110367_01+GUN_SKL_02_01_11036701",
+        },
+        {
+            icon: "img/advIcons/110367_01_r05.png",
+            name: "Alchemic Enhancement II",
             value: "SKL_110367_01+GUN_SKL_04_01_11036701",
         },
     ],

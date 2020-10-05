@@ -158,6 +158,7 @@ const uniqueFS = {
         {
             icon: "img/advIcons/110367_01_r05.png",
             name: "Ilia",
+            subtitle: "Alchemic Blast",
             value:
                 "FS_110367_01+GUN_CHR_U_01_11036701>+GUN_CHR_U_02_11036701>+GUN_CHR_U_03_11036701",
         },
