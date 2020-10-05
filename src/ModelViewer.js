@@ -177,11 +177,10 @@ class ModelViewer extends Component {
         const { timeScale, repetitions } = this.aniSettings[newIdx];
         // Repeat infinitely if only 1 animation and repetition = 1
         if (this.nAni > 1 || repetitions > 1) {
-            action.clampWhenFinished = true;
             action.setLoop(THREE.LoopRepeat, repetitions);
         }
+        action.clampWhenFinished = true;
         action.timeScale = timeScale;
-        action.fadeIn(0.1);
         action.time = 0;
         action.play();
     }
@@ -222,8 +221,8 @@ class ModelViewer extends Component {
                 }
             }
         });
-        const keyName = `weapon${side}`;
         // remove reference to outline
+        const keyName = `weapon${side}`;
         this.outlines[keyName] = null;
     };
 
@@ -239,7 +238,7 @@ class ModelViewer extends Component {
                 weaponRight,
                 weaponLeft,
             };
-            // add outline to main model
+            // add outline to main model and save reference
             this.outlines.main = addOutline(main, this.outlineDetails);
 
             // Save initial position and rotation
@@ -260,7 +259,7 @@ class ModelViewer extends Component {
                     if (weaponInfo.flipped) {
                         weaponModel.rotation.y = Math.PI;
                     }
-                    // add outline to weapon
+                    // add outline to weapon and save reference
                     this.outlines[key] = addOutline(
                         weaponModel,
                         this.outlineDetails
@@ -543,6 +542,8 @@ class ModelViewer extends Component {
         this.controls = null;
         this.scene = null;
         this.renderer = null;
+        this.rendererAA = null;
+        this.rendererNoAA = null;
     }
     render() {
         return (

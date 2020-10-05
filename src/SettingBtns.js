@@ -146,8 +146,7 @@ function SettingBtns({ openControl }) {
                     </ListItem>
                 </List>
             </div>
-
-            <p>Right click and drag or swipe with 3 fingers to pan</p>
+            <br />
             <Button
                 variant="contained"
                 data-value="share"
