@@ -19,7 +19,7 @@ export const initSettings = {
         texture: "c100001_01",
         faceTexture: "c100001_01",
         face: 2,
-        weaponRight: "",
+        weaponRight: "w301142_01n",
         weaponLeft: "",
     },
     scene: { background: "#cccccc", initCameraPosition: null },

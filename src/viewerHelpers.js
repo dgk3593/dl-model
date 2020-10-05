@@ -62,6 +62,9 @@ export const changeMaterialToBasic = (object, texturePath) => {
                     ? material[0].map
                     : material.map;
             }
+            // correct texture gamma
+            texture.encoding = THREE.sRGBEncoding;
+
             const newMaterial = new THREE.MeshBasicMaterial({
                 map: texture,
                 skinning: true,
