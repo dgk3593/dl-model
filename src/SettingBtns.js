@@ -32,7 +32,7 @@ function SettingBtns({ openControl }) {
     const dispatch = useContext(DispatchContext);
     const {
         model: { weaponRight, weaponLeft },
-        app: { showAniControl },
+        app: { showAniControl, antiAliasing },
     } = settings;
 
     const handleBtnClick = e => {
@@ -56,6 +56,15 @@ function SettingBtns({ openControl }) {
             type: "update",
             key: "app",
             value: { showAniControl: !showAniControl },
+        };
+        dispatch(action);
+    };
+
+    const toggleAA = () => {
+        const action = {
+            type: "update",
+            key: "app",
+            value: { antiAliasing: !antiAliasing },
         };
         dispatch(action);
     };
@@ -124,6 +133,14 @@ function SettingBtns({ openControl }) {
                             primary={`${
                                 showAniControl ? "Hide" : "Show"
                             } Animation Control`}
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
+                    <ListItem button onClick={toggleAA}>
+                        <ListItemText
+                            primary={`Turn ${
+                                antiAliasing ? "Off" : "On"
+                            } Anti-Aliasing`}
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>

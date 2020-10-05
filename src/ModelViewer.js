@@ -95,15 +95,27 @@ class ModelViewer extends Component {
         this.scene.add(light);
 
         // Renderer
-        this.renderer = new THREE.WebGLRenderer({
-            antialias: this.props.antiAliasing,
+        this.rendererAA = new THREE.WebGLRenderer({
+            antialias: true,
             alpha: true,
         });
-        this.renderer.outputEncoding = THREE.sRGBEncoding;
-        this.renderer.setClearColor(0x000000, 0);
+        this.rendererAA.outputEncoding = THREE.sRGBEncoding;
+
+        this.rendererNoAA = new THREE.WebGLRenderer({
+            antialias: false,
+            alpha: true,
+        });
+        this.rendererNoAA.outputEncoding = THREE.sRGBEncoding;
+
+        this.renderer = this.props.antiAliasing
+            ? this.rendererAA
+            : this.rendererNoAA;
+        this.canvas = this.renderer.domElement;
         this.renderer.setSize(this.viewport.width, this.viewport.height);
-        this.mount.appendChild(this.renderer.domElement);
+        this.mount.appendChild(this.canvas);
         this.animate();
+        window.canvas = this.canvas;
+        window.mount = this.mount;
     };
 
     playNextAni = () => {
@@ -336,8 +348,19 @@ class ModelViewer extends Component {
 
         // update anti aliasing setting
         if (prevProps.antiAliasing !== this.props.antiAliasing) {
-            this.renderer.antiAliasing = this.props.antiAliasing;
-            console.log(this.renderer);
+            // get current viewport size
+            const currentSize = new THREE.Vector2();
+            this.renderer.getSize(currentSize);
+            // switch renderer
+            this.renderer = this.props.antiAliasing
+                ? this.rendererAA
+                : this.rendererNoAA;
+            this.renderer.setSize(currentSize.x, currentSize.y);
+            // remove old canvas
+            this.mount.removeChild(this.canvas);
+            // Add new canvas
+            this.canvas = this.renderer.domElement;
+            this.mount.appendChild(this.canvas);
         }
 
         // Update main model
