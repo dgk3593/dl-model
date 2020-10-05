@@ -57,6 +57,7 @@ function ShareContent({ method }) {
         const keyCodes = Object.keys(initKey).filter(
             key => initKey[key].group !== "app"
         );
+        keyCodes.push("AA");
 
         let link = baseUrl;
 
