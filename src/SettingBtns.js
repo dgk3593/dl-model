@@ -128,7 +128,7 @@ function SettingBtns({ openControl }) {
                             />
                         </ListItem>
                     )}
-                    <ListItem button onClick={toggleAniControl}>
+                    <ListItem button divider onClick={toggleAniControl}>
                         <ListItemText
                             primary={`${
                                 showAniControl ? "Hide" : "Show"
