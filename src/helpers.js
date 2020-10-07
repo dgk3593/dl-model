@@ -131,6 +131,7 @@ export const complementaryColor = color => {
 
 export const aniButtonsFromObject = (object, handleSelect, groupName) => {
     if (!object) return null;
+    const style = { maxWidth: "13.5rem" };
     return Object.keys(object).map(key => (
         <Button
             variant="contained"
@@ -138,7 +139,7 @@ export const aniButtonsFromObject = (object, handleSelect, groupName) => {
             data-value={object[key]}
             data-name={`${groupName ? `${groupName} ` : ""}${key}`}
             onClick={handleSelect}
-            style={{ maxWidth: "13.5rem" }}
+            style={style}
         >
             {key}
         </Button>
