@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as THREE from "three";
 import { fbxSource } from "./App";
 import { CAM_PARAMS } from "./consts";
@@ -15,7 +15,7 @@ import {
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-class ModelViewer extends Component {
+class ModelViewer extends PureComponent {
     animate = () => {
         this.frameId = requestAnimationFrame(this.animate);
         if (this.mixers.length > 0) {
