@@ -3,4 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    max-width: 30rem;
+}
+
+.SimpleOptionList button {
+    margin: 0.5rem;
+    padding: 0.5rem 0.8rem;
 }
