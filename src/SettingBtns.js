@@ -10,6 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 const listStyle = {
     backgroundColor: "rgba(255,255,255,0.5)",
     width: "100%",
+    paddingBottom: 0,
 };
 
 const typographyProps = {
@@ -22,8 +23,6 @@ const mainBtns = [
     { value: "model", text: "Choose a Model" },
     { value: "faceOverride", text: "Face Override" },
     { value: "face", text: "Choose Face" },
-    { value: "animation", text: "Choose Animation" },
-    { value: "background", text: "Background Settings" },
     { value: "weapon", text: "Add Weapons" },
 ];
 
@@ -81,13 +80,8 @@ function SettingBtns({ openControl }) {
     return (
         <>
             <div style={listStyle}>
-                <List dense component="nav">
-                    <ListItem button divider onClick={openChainMaker}>
-                        <ListItemText
-                            primary="Chain Maker (BETA)"
-                            primaryTypographyProps={typographyProps}
-                        />
-                    </ListItem>
+                {/* Model related */}
+                <List dense disablePadding component="nav">
                     {mainBtns.map(btn => (
                         <ListItem
                             key={btn.value}
@@ -118,7 +112,6 @@ function SettingBtns({ openControl }) {
                     {weaponRight && (
                         <ListItem
                             button
-                            divider
                             data-value="Right"
                             onClick={removeWeapon}
                         >
@@ -128,6 +121,46 @@ function SettingBtns({ openControl }) {
                             />
                         </ListItem>
                     )}
+                </List>
+            </div>
+            <br />
+            {/* Animation Related */}
+            <div style={listStyle}>
+                <List dense disablePadding component="nav">
+                    <ListItem
+                        button
+                        divider
+                        data-value="animation"
+                        onClick={handleBtnClick}
+                    >
+                        <ListItemText
+                            primary="Choose Animation"
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
+                    <ListItem button onClick={openChainMaker}>
+                        <ListItemText
+                            primary="Chain Maker (BETA)"
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
+                </List>
+            </div>
+            <br />
+            {/* Other settings */}
+            <div style={listStyle}>
+                <List dense disablePadding component="nav">
+                    <ListItem
+                        button
+                        divider
+                        data-value="background"
+                        onClick={handleBtnClick}
+                    >
+                        <ListItemText
+                            primary="Background Settings"
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
                     <ListItem button divider onClick={toggleAniControl}>
                         <ListItemText
                             primary={`${
