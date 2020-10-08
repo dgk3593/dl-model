@@ -22,10 +22,29 @@ export const initSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    scene: { background: "#cccccc", initCameraPosition: null },
-    animation: { code: `${initAni.fileName}+${initAni.aniName}`, timeScale: 1 },
-    app: { showSettings: true, showAniControl: true, antiAliasing: false },
-    chainMaker: { enable: false, chain: [initAni] },
+    scene: {
+        background: "#cccccc",
+        initCameraPosition: null,
+    },
+    animation: {
+        code: `${initAni.fileName}+${initAni.aniName}`,
+        timeScale: 1,
+    },
+    app: {
+        showSettings: true,
+        showAniControl: true,
+        antiAliasing: false,
+    },
+    chainMaker: {
+        enable: false,
+        chain: [initAni],
+    },
+    outline: {
+        enable: true,
+        size: 5, // 1 -> 20
+        color: "black",
+        opacity: 10, // 1 -> 10%, 10-> 100%
+    },
 };
 
 export function SettingsProvider(props) {

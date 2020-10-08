@@ -32,6 +32,7 @@ function SettingBtns({ openControl }) {
     const {
         model: { weaponRight, weaponLeft },
         app: { showAniControl, antiAliasing },
+        outline: { enable: outlineEnabled },
     } = settings;
 
     const handleBtnClick = e => {
@@ -50,29 +51,12 @@ function SettingBtns({ openControl }) {
         dispatch(action);
     };
 
-    const toggleAniControl = () => {
+    const toggleSetting = event => {
+        const { key, name } = event.currentTarget.dataset;
         const action = {
             type: "update",
-            key: "app",
-            value: { showAniControl: !showAniControl },
-        };
-        dispatch(action);
-    };
-
-    const toggleAA = () => {
-        const action = {
-            type: "update",
-            key: "app",
-            value: { antiAliasing: !antiAliasing },
-        };
-        dispatch(action);
-    };
-
-    const openChainMaker = () => {
-        const action = {
-            type: "update",
-            key: "chainMaker",
-            value: { enable: true },
+            key: key,
+            value: { [name]: !settings[key][name] },
         };
         dispatch(action);
     };
@@ -138,7 +122,12 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
-                    <ListItem button onClick={openChainMaker}>
+                    <ListItem
+                        button
+                        data-key="chainMaker"
+                        data-name="enable"
+                        onClick={toggleSetting}
+                    >
                         <ListItemText
                             primary="Chain Maker (BETA)"
                             primaryTypographyProps={typographyProps}
@@ -161,7 +150,13 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
-                    <ListItem button divider onClick={toggleAniControl}>
+                    <ListItem
+                        button
+                        data-key="app"
+                        data-name="showAniControl"
+                        divider
+                        onClick={toggleSetting}
+                    >
                         <ListItemText
                             primary={`${
                                 showAniControl ? "Hide" : "Show"
@@ -169,11 +164,31 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
-                    <ListItem button onClick={toggleAA}>
+                    <ListItem
+                        button
+                        data-key="app"
+                        data-name="antiAliasing"
+                        divider
+                        onClick={toggleSetting}
+                    >
                         <ListItemText
                             primary={`Turn ${
                                 antiAliasing ? "Off" : "On"
                             } Anti-Aliasing`}
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
+                    <ListItem
+                        button
+                        data-key="outline"
+                        data-name="enable"
+                        divider
+                        onClick={toggleSetting}
+                    >
+                        <ListItemText
+                            primary={`${
+                                outlineEnabled ? "Hide" : "Show"
+                            } Outline`}
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>

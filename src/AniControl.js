@@ -13,7 +13,7 @@ function AniControl(props) {
         return { value: scale, label: `${scale}x` };
     });
 
-    const setTimeScale = (event, newValue) => {
+    const setTimeScale = (_, newValue) => {
         const action = {
             type: "update",
             key: "animation",

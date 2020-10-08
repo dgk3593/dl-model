@@ -22,6 +22,11 @@ function Display(props) {
         animation: { code: chainCode, timeScale },
         scene: { background: bgColor, initCameraPosition },
         app: { showAniControl, antiAliasing },
+        outline: {
+            enable: showOutline,
+            color: outlineColor,
+            size: outlineSize,
+        },
     } = settings;
 
     const faceOffset = faceOffsets[`face${face}`];
@@ -63,8 +68,9 @@ function Display(props) {
                 weaponRight={weaponRight}
                 weaponLeft={weaponLeft}
                 aniCode={chainCode}
-                outlineColor="black"
-                outlineSize={5}
+                showOutline={showOutline}
+                outlineColor={outlineColor}
+                outlineSize={outlineSize}
                 antiAliasing={antiAliasing}
             />
         </div>

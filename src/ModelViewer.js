@@ -114,8 +114,6 @@ class ModelViewer extends PureComponent {
         this.renderer.setSize(this.viewport.width, this.viewport.height);
         this.mount.appendChild(this.canvas);
         this.animate();
-        window.canvas = this.canvas;
-        window.mount = this.mount;
     };
 
     playNextAni = () => {
@@ -530,6 +528,15 @@ class ModelViewer extends PureComponent {
                 this.props.bgColor !== "transparent"
                     ? new THREE.Color(this.props.bgColor)
                     : null;
+        }
+        // Update outline visibility
+        if (prevProps.showOutline !== this.props.showOutline) {
+            Object.keys(this.outlines).forEach(key => {
+                if (!this.outlines[key]) return;
+                this.outlines[key].forEach(
+                    outline => (outline.visible = this.props.showOutline)
+                );
+            });
         }
     }
 
