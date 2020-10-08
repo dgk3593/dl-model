@@ -14,7 +14,13 @@ export const defaultSettings = {
     },
     scene: { background: "#cccccc" },
     animation: { code: "MWM_CMN+CMN_MWM_03", timeScale: 1 },
-    app: { showSettings: true, showAniControl: true },
+    app: { showSettings: true, showAniControl: true, antiAliasing: false },
+    outline: {
+        enable: true,
+        size: 5,
+        color: "black",
+        opacity: 10,
+    },
 };
 
 export const initKey = {
@@ -25,11 +31,12 @@ export const initKey = {
     wl: { group: "model", key: "weaponLeft" },
     bg: { group: "scene", key: "background" },
     cam: { group: "scene", key: "initCameraPosition" },
-    cc: { group: "animation", key: "code" },
     ts: { group: "animation", key: "timeScale" },
     showAC: { group: "app", key: "showAniControl" },
     showSettings: { group: "app", key: "showSettings" },
+    showOutline: { group: "outline", key: "enable" },
     AA: { group: "app", key: "antiAliasing" },
+    cc: { group: "animation", key: "code" },
 };
 
 export const WEAPON_CODE = {

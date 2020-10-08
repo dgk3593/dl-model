@@ -135,6 +135,8 @@ export const addOutline = (object, details) => {
         if (child.isMesh) {
             const outline = child.clone();
             outline.name = "outline";
+            outline.visible = details.enable;
+
             outlines.push(outline);
             const newMaterial = createOutlineMaterial(details);
             replaceMaterial(outline, newMaterial);

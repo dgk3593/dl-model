@@ -43,6 +43,7 @@ class ModelViewer extends PureComponent {
         this.outlineDetails = {
             color: this.props.outlineColor,
             size: this.props.outlineSize,
+            enable: this.props.showOutline,
         };
 
         // viewport
@@ -529,12 +530,16 @@ class ModelViewer extends PureComponent {
                     ? new THREE.Color(this.props.bgColor)
                     : null;
         }
+
         // Update outline visibility
         if (prevProps.showOutline !== this.props.showOutline) {
+            const newValue = this.props.showOutline;
+            this.outlineDetails.enable = newValue;
+
             Object.keys(this.outlines).forEach(key => {
                 if (!this.outlines[key]) return;
                 this.outlines[key].forEach(
-                    outline => (outline.visible = this.props.showOutline)
+                    outline => (outline.visible = newValue)
                 );
             });
         }
