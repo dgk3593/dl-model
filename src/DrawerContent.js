@@ -7,18 +7,21 @@ import ChainMaker from "./ChainMaker";
 
 function DrawerContent({ openControl }) {
     const {
-        chainMaker: { enable: chainMode },
+        app: { sideContent },
     } = useContext(SettingsContext);
 
-    return (
-        <>
-            {chainMode ? (
-                <ChainMaker openControl={openControl} />
-            ) : (
-                <SettingBtns openControl={openControl} />
-            )}
-        </>
-    );
+    let content;
+    switch (sideContent) {
+        case "settings":
+            content = <SettingBtns openControl={openControl} />;
+            break;
+        case "chainMaker":
+            content = <ChainMaker openControl={openControl} />;
+            break;
+        default:
+    }
+
+    return <>{content}</>;
 }
 
 export default DrawerContent;

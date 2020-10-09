@@ -20,8 +20,8 @@ function ChainMaker({ openControl }) {
     const close = () => {
         const action = {
             type: "update",
-            key: "chainMaker",
-            value: { enable: false },
+            key: "app",
+            value: { sideContent: "settings" },
         };
         dispatch(action);
     };
@@ -79,7 +79,7 @@ function ChainMaker({ openControl }) {
     };
 
     const add = event => {
-        openControl(event.currentTarget.dataset.value);
+        openControl("addAni");
     };
 
     return (
@@ -95,11 +95,7 @@ function ChainMaker({ openControl }) {
                     <Button onClick={playAll} className="ChainMaker-btn">
                         Play All
                     </Button>
-                    <Button
-                        data-value="addAni"
-                        onClick={add}
-                        className="ChainMaker-btn"
-                    >
+                    <Button onClick={add} className="ChainMaker-btn">
                         Add
                     </Button>
                 </div>

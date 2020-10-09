@@ -139,16 +139,6 @@ export const CAM_PARAMS = {
     near: 0.01,
 };
 
-// export const cameraPositions = {
-//     c: { x: 0, y: 0.5, z: 1.5 },
-//     d: { x: 3, y: 0.5, z: 6 },
-
-//     c100034_01: { x: 0, y: 0.5, z: 1.75 },
-//     d210078_01: { x: 3, y: 3, z: 20 },
-//     d210114_01: { x: 3, y: 3, z: 20 },
-
-//     smith: { x: 1, y: 1, z: 2 },
-// };
 export const cameraPositions = {
     c: [0, 0.5, 1.5],
     d: [3, 0.5, 6],

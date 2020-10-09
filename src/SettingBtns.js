@@ -61,6 +61,15 @@ function SettingBtns({ openControl }) {
         dispatch(action);
     };
 
+    const openChainMaker = () => {
+        const action = {
+            type: "update",
+            key: "app",
+            value: { sideContent: "chainMaker" },
+        };
+        dispatch(action);
+    };
+
     return (
         <>
             <div style={listStyle}>
@@ -122,12 +131,7 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
-                    <ListItem
-                        button
-                        data-key="chainMaker"
-                        data-name="enable"
-                        onClick={toggleSetting}
-                    >
+                    <ListItem button onClick={openChainMaker}>
                         <ListItemText
                             primary="Chain Maker (BETA)"
                             primaryTypographyProps={typographyProps}

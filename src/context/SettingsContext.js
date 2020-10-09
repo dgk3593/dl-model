@@ -31,6 +31,7 @@ export const initSettings = {
         timeScale: 1,
     },
     app: {
+        sideContent: "settings",
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
