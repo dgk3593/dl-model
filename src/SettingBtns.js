@@ -73,7 +73,7 @@ function SettingBtns({ openControl }) {
 
     return (
         <>
-            <div className="SettingBtns-List">
+            <div style={listStyle}>
                 {/* Model related */}
                 <List dense disablePadding component="nav">
                     {mainBtns.map(btn => (
