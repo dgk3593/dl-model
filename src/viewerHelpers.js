@@ -90,10 +90,12 @@ export const changeMaterialToBasic = (object, texturePath) => {
     });
 };
 
-const createOutlineMaterial = ({ size, color }) => {
+const createOutlineMaterial = ({ size, color, opacity }) => {
     const newMaterial = new THREE.MeshToonMaterial({
         color,
+        opacity,
         side: THREE.BackSide,
+        transparent: true,
         skinning: true,
     });
     newMaterial.onBeforeCompile = shader => {
@@ -109,27 +111,73 @@ const createOutlineMaterial = ({ size, color }) => {
     return newMaterial;
 };
 
-const replaceMaterial = (mesh, newMaterial) => {
-    if (Array.isArray(mesh.material)) {
-        const size = mesh.material.length;
+// replace material of an object
+const replaceMaterial = (object, newMaterial) => {
+    if (Array.isArray(object.material)) {
+        const size = object.material.length;
 
-        mesh.material = mesh.material.forEach(m => {
+        object.material = object.material.forEach(m => {
             m.dispose();
         });
-        mesh.material = new Array(size).fill(newMaterial);
+        object.material = new Array(size).fill(newMaterial);
     } else {
-        if (mesh.material.map) {
-            mesh.material.map.dispose();
+        if (object.material.map) {
+            object.material.map.dispose();
         }
-        mesh.material.dispose();
-        mesh.material = newMaterial;
+        object.material.dispose();
+        object.material = newMaterial;
+    }
+};
+
+// change opacity of an object
+export const changeOpacity = ({ material }, opacity) => {
+    if (Array.isArray(material)) {
+        material.forEach(m => (m.opacity = opacity));
+    } else {
+        material.opacity = opacity;
+    }
+};
+
+// update outline shader
+const updateOutlineShader = (material, size) => {
+    // Hacky way to force shader recompilation, needs fixing !!!!!!!!!!!!!!!!!!
+    material.fog = !material.fog;
+    material.needsUpdate = true;
+
+    material.onBeforeCompile = shader => {
+        const token = "#include <begin_vertex>";
+        const customTransform = `
+                vec3 transformed = position + objectNormal*${size * 0.0005};
+            `;
+        shader.vertexShader = shader.vertexShader.replace(
+            token,
+            customTransform
+        );
+    };
+    setTimeout(() => {
+        material.fog = !material.fog;
+        material.needsUpdate = true;
+    }, 0);
+};
+
+// change size of outline
+export const changeOutlineSize = ({ material }, size) => {
+    if (Array.isArray(material)) {
+        const updated = new Set();
+        material.forEach(m => {
+            if (!updated.has(m.uuid)) {
+                updateOutlineShader(m, size);
+                updated.add(m.uuid);
+            }
+        });
+    } else {
+        updateOutlineShader(material, size);
     }
 };
 
 // Add outline to object and return reference to array outlines
 export const addOutline = (object, details) => {
     if (!object) return;
-    if (details.size === 0) return;
     const outlines = []; // return value
     object.traverse(child => {
         if (child.isMesh) {

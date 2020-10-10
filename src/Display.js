@@ -26,6 +26,7 @@ function Display(props) {
             enable: showOutline,
             color: outlineColor,
             size: outlineSize,
+            opacity: outlineOpacity,
         },
     } = settings;
 
@@ -71,6 +72,7 @@ function Display(props) {
                 showOutline={showOutline}
                 outlineColor={outlineColor}
                 outlineSize={outlineSize}
+                outlineOpacity={outlineOpacity}
                 antiAliasing={antiAliasing}
             />
         </div>

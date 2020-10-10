@@ -11,6 +11,8 @@ import {
     disposeItem,
     analyzeChainCode,
     addOutline,
+    changeOpacity,
+    changeOutlineSize,
 } from "./viewerHelpers";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -40,10 +42,12 @@ class ModelViewer extends PureComponent {
 
         // save reference for outlines
         this.outlines = {};
+        window.outlines = this.outlines;
         this.outlineDetails = {
             color: this.props.outlineColor,
             size: this.props.outlineSize,
             enable: this.props.showOutline,
+            opacity: this.props.outlineOpacity,
         };
 
         // viewport
@@ -543,6 +547,32 @@ class ModelViewer extends PureComponent {
                 );
             });
         }
+
+        // Update outline size
+        if (prevProps.outlineSize !== this.props.outlineSize) {
+            const size = this.props.outlineSize;
+            this.outlineDetails.size = size;
+
+            Object.keys(this.outlines).forEach(key => {
+                if (!this.outlines[key]) return;
+                this.outlines[key].forEach(outline =>
+                    changeOutlineSize(outline, size)
+                );
+            });
+        }
+
+        // Update outline opacity
+        if (prevProps.outlineOpacity !== this.props.outlineOpacity) {
+            const newValue = this.props.outlineOpacity;
+            this.outlineDetails.opacity = newValue;
+
+            Object.keys(this.outlines).forEach(key => {
+                if (!this.outlines[key]) return;
+                this.outlines[key].forEach(outline =>
+                    changeOpacity(outline, newValue)
+                );
+            });
+        }
     }
 
     componentWillUnmount() {
@@ -554,7 +584,11 @@ class ModelViewer extends PureComponent {
         this.controls = null;
         this.scene = null;
         this.renderer = null;
+        this.rendererAA.renderLists.dispose();
+        this.rendererAA.dispose();
         this.rendererAA = null;
+        this.rendererNoAA.renderLists.dispose();
+        this.rendererNoAA.dispose();
         this.rendererNoAA = null;
     }
     render() {

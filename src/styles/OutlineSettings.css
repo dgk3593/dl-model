@@ -1,0 +1,30 @@
+.OutlineSettings {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.OutlineSettings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.OutlineSettings-title {
+    text-align: center;
+    font-weight: 600;
+    margin: auto;
+}
+
+.OutlineSettings-options {
+    display: grid;
+    grid-template-columns: 7.25rem auto;
+}
+
+.OutlineSettings-optionName {
+    padding: 0.5rem 0.8rem;
+}
+
+.OutlineSettings-slider {
+    padding: 0 1.5rem 0 0.3rem;
+}

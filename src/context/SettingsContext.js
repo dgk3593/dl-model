@@ -42,9 +42,9 @@ export const initSettings = {
     },
     outline: {
         enable: true,
-        size: 5, // 1 -> 20
-        color: "black",
-        opacity: 10, // 1 -> 10%, 10-> 100%
+        size: 5, // 1 -> 10
+        color: "#000000",
+        opacity: 1, // 0.1 -> 10%, 1-> 100%
     },
 };
 

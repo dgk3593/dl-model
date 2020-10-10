@@ -4,6 +4,7 @@ import { SettingsContext } from "./context/SettingsContext";
 
 import SettingBtns from "./SettingBtns";
 import ChainMaker from "./ChainMaker";
+import AdvancedSettings from "./AdvancedSettings";
 
 function DrawerContent({ openControl }) {
     const {
@@ -17,6 +18,9 @@ function DrawerContent({ openControl }) {
             break;
         case "chainMaker":
             content = <ChainMaker openControl={openControl} />;
+            break;
+        case "advanced":
+            content = <AdvancedSettings />;
             break;
         default:
     }
