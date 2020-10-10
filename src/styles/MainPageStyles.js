@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     },
     drawer: {
         width: drawerWidth,
-        // flexShrink: 0,
+        overflowY: "scroll",
     },
     drawerPaper: {
         alignItems: "center",
@@ -46,6 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
     drawerHeader: {
         height: "4rem",
+        minHeight: "4rem",
         width: "100%",
         fontSize: "1.5rem",
         display: "flex",

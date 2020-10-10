@@ -83,32 +83,30 @@ function ChainMaker({ openControl }) {
     };
 
     return (
-        <>
-            <div className="ChainMaker">
-                <div className="ChainMaker-header">
-                    <div className="ChainMaker-title">Chain Maker</div>
-                    <div className="ChainMaker-close" onClick={close}>
-                        <Close />
-                    </div>
-                </div>
-                <div className="ChainMaker-btns">
-                    <Button onClick={playAll} className="ChainMaker-btn">
-                        Play All
-                    </Button>
-                    <Button onClick={add} className="ChainMaker-btn">
-                        Add
-                    </Button>
-                </div>
-                <div className="ChainMaker-list">
-                    <DisplayAniList
-                        singlePlay={singlePlay}
-                        deleteSingle={deleteSingle}
-                        handleChange={handleChange}
-                        chain={chain}
-                    />
+        <div className="ChainMaker">
+            <div className="ChainMaker-header">
+                <div className="ChainMaker-title">Chain Maker</div>
+                <div className="ChainMaker-close" onClick={close}>
+                    <Close />
                 </div>
             </div>
-        </>
+            <div className="ChainMaker-btns">
+                <Button onClick={playAll} className="ChainMaker-btn">
+                    Play All
+                </Button>
+                <Button onClick={add} className="ChainMaker-btn">
+                    Add
+                </Button>
+            </div>
+            <div className="ChainMaker-list">
+                <DisplayAniList
+                    singlePlay={singlePlay}
+                    deleteSingle={deleteSingle}
+                    handleChange={handleChange}
+                    chain={chain}
+                />
+            </div>
+        </div>
     );
 }
 

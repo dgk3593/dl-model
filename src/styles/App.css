@@ -11,3 +11,7 @@ body {
 .MuiDialog-paper.ControlPanel {
     margin: 1rem 0.5rem;
 }
+
+.MuiButton-root {
+    min-height: 2.5rem;
+}

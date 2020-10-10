@@ -61,18 +61,19 @@ function SettingBtns({ openControl }) {
         dispatch(action);
     };
 
-    const openChainMaker = () => {
+    const openTools = event => {
+        const value = event.currentTarget.getAttribute("value");
         const action = {
             type: "update",
             key: "app",
-            value: { sideContent: "chainMaker" },
+            value: { sideContent: value },
         };
         dispatch(action);
     };
 
     return (
         <>
-            <div style={listStyle}>
+            <div className="SettingBtns-List">
                 {/* Model related */}
                 <List dense disablePadding component="nav">
                     {mainBtns.map(btn => (
@@ -131,7 +132,7 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
-                    <ListItem button onClick={openChainMaker}>
+                    <ListItem button value="chainMaker" onClick={openTools}>
                         <ListItemText
                             primary="Chain Maker (BETA)"
                             primaryTypographyProps={typographyProps}
@@ -196,16 +197,24 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
+                    <ListItem button value="advanced" onClick={openTools}>
+                        <ListItemText
+                            primary="Advanced Settings"
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
                 </List>
             </div>
             <br />
-            <Button
-                variant="contained"
-                data-value="share"
-                onClick={handleBtnClick}
-            >
-                Share
-            </Button>
+            <div className="SettingBtns-Share">
+                <Button
+                    variant="contained"
+                    data-value="share"
+                    onClick={handleBtnClick}
+                >
+                    Share
+                </Button>
+            </div>
         </>
     );
 }
