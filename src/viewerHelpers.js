@@ -157,7 +157,7 @@ const updateOutlineShader = (material, size) => {
     setTimeout(() => {
         material.fog = !material.fog;
         material.needsUpdate = true;
-    }, 0);
+    }, 100); // Sometimes doesn't work with 0 delay
 };
 
 // change size of outline
@@ -172,6 +172,20 @@ export const changeOutlineSize = ({ material }, size) => {
         });
     } else {
         updateOutlineShader(material, size);
+    }
+};
+
+export const changeOutlineColor = ({ material }, color) => {
+    if (Array.isArray(material)) {
+        const updated = new Set();
+        material.forEach(m => {
+            if (!updated.has(m.uuid)) {
+                m.color = new THREE.Color(color);
+                updated.add(m.uuid);
+            }
+        });
+    } else {
+        material.color = new THREE.Color(color);
     }
 };
 

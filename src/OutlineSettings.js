@@ -4,15 +4,16 @@ import useToggleState from "./hooks/useToggleState";
 import Slider from "@material-ui/core/Slider";
 import Button from "@material-ui/core/Button";
 import Collapse from "@material-ui/core/Collapse";
-
 import IconButton from "@material-ui/core/IconButton";
+
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
+import { complementaryColor } from "./helpers";
 import "./styles/OutlineSettings.css";
 
-function OutlineSettings() {
+function OutlineSettings({ openControl }) {
     const [expand, toggleExpand] = useToggleState(true);
     const dispatch = useContext(DispatchContext);
     const toggleOutline = () => {
@@ -33,8 +34,12 @@ function OutlineSettings() {
         dispatch(action);
     };
 
+    const handleBtnClick = e => {
+        openControl(e.currentTarget.dataset.value);
+    };
+
     const {
-        outline: { enable, size, opacity },
+        outline: { enable, size, color, opacity },
     } = useContext(SettingsContext);
 
     return (
@@ -78,6 +83,21 @@ function OutlineSettings() {
                             max={1}
                             onChange={handleChange("opacity")}
                         />
+                    </div>
+                    <div className="OutlineSettings-optionName">Color</div>
+                    <div>
+                        <Button
+                            fullWidth
+                            style={{
+                                backgroundColor: color,
+                                color: complementaryColor(color),
+                                textShadow: `0px 0px 3px white`,
+                            }}
+                            data-value="outlineColor"
+                            onClick={handleBtnClick}
+                        >
+                            {color}
+                        </Button>
                     </div>
                 </div>
             </Collapse>

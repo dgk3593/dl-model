@@ -20,7 +20,7 @@ function DrawerContent({ openControl }) {
             content = <ChainMaker openControl={openControl} />;
             break;
         case "advanced":
-            content = <AdvancedSettings />;
+            content = <AdvancedSettings openControl={openControl} />;
             break;
         default:
     }

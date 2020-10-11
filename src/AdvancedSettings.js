@@ -6,7 +6,7 @@ import OutlineSettings from "./OutlineSettings";
 
 import "./styles/AdvancedSettings.css";
 
-function AdvancedSettings() {
+function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
 
     const close = () => {
@@ -27,7 +27,7 @@ function AdvancedSettings() {
                 </div>
             </div>
             <div className="AdvancedSettings-List">
-                <OutlineSettings />
+                <OutlineSettings openControl={openControl} />
             </div>
         </div>
     );

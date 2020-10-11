@@ -13,6 +13,7 @@ import {
     addOutline,
     changeOpacity,
     changeOutlineSize,
+    changeOutlineColor,
 } from "./viewerHelpers";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -42,7 +43,6 @@ class ModelViewer extends PureComponent {
 
         // save reference for outlines
         this.outlines = {};
-        window.outlines = this.outlines;
         this.outlineDetails = {
             color: this.props.outlineColor,
             size: this.props.outlineSize,
@@ -570,6 +570,18 @@ class ModelViewer extends PureComponent {
                 if (!this.outlines[key]) return;
                 this.outlines[key].forEach(outline =>
                     changeOpacity(outline, newValue)
+                );
+            });
+        }
+
+        // Update outline color
+        if (prevProps.outlineColor !== this.props.outlineColor) {
+            const newValue = this.props.outlineColor;
+
+            Object.keys(this.outlines).forEach(key => {
+                if (!this.outlines[key]) return;
+                this.outlines[key].forEach(outline =>
+                    changeOutlineColor(outline, newValue)
                 );
             });
         }
