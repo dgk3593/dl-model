@@ -17,8 +17,10 @@ function AnimationSelect(props) {
     const [aniSet, setAniSet] = useState(0);
     const dispatch = useContext(DispatchContext);
     const {
-        chainMaker: { enable: chainMode, chain: currentChain },
+        chainMaker: { chain: currentChain },
+        app: { sideContent },
     } = useContext(SettingsContext);
+    const chainMode = sideContent === "chainMaker";
 
     const handleSelect = event => {
         const aniCode = event.currentTarget.dataset.value;

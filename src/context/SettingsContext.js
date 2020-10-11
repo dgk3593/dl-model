@@ -31,13 +31,12 @@ export const initSettings = {
         timeScale: 1,
     },
     app: {
-        sideContent: "settings",
+        sideContent: "advanced",
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
     },
     chainMaker: {
-        enable: false,
         chain: [initAni],
     },
     outline: {
