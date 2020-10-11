@@ -7,18 +7,22 @@ import { complementaryColor } from "./helpers";
 import { commonBG } from "./consts";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
-import "./styles/BackgroundSettings.css";
+import "./styles/ColorSettings.css";
 
 function ColorSettings({ toggleControlOpen, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
-    let initColor;
+    let initColor, title, commonColor;
     switch (mode) {
         case "background":
             initColor = settings.scene.background;
+            commonColor = commonBG;
+            title = "Background Settings";
             break;
         case "outlineColor":
             initColor = settings.outline.color;
+            commonColor = {};
+            title = "Outline Color";
             break;
         default:
     }
@@ -28,26 +32,33 @@ function ColorSettings({ toggleControlOpen, mode }) {
         setColor(color.hex);
     };
 
-    const applyBG = event => {
+    const applyColor = event => {
         const value = event.currentTarget.value;
-        const BG = value === "picker" ? color : value;
-        const action = {
-            type: "update",
-            key: "scene",
-            value: { background: BG },
-        };
+        const colorToSet = value === "picker" ? color : value;
+        let action = { type: "update" };
+        switch (mode) {
+            case "background":
+                action.key = "scene";
+                action.value = { background: colorToSet };
+                break;
+            case "outlineColor":
+                action.key = "outline";
+                action.value = { color: colorToSet };
+                break;
+            default:
+        }
         dispatch(action);
         toggleControlOpen();
     };
 
-    const setBG = event => {
+    const setNewColor = event => {
         const value = event.currentTarget.value;
         setColor(value);
     };
 
-    const commonBGBtn = Object.keys(commonBG).map(color => (
+    const commonBGBtn = Object.keys(commonColor).map(color => (
         <Button
-            onClick={setBG}
+            onClick={setNewColor}
             style={{
                 backgroundColor: commonBG[color],
                 color: complementaryColor(commonBG[color]),
@@ -62,14 +73,12 @@ function ColorSettings({ toggleControlOpen, mode }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={toggleControlOpen}>
-                    Background Settings
-                </DialogTitle>
+                <DialogTitle onClose={toggleControlOpen}>{title}</DialogTitle>
             </DialogTop>
-            <DialogContent dividers className="BackgroundSettings">
-                <div className="BackgroundSettings-btn">
+            <DialogContent dividers className="ColorSettings">
+                <div className="ColorSettings-btn">
                     <Button
-                        onClick={applyBG}
+                        onClick={applyColor}
                         style={{
                             backgroundColor: color,
                             color: complementaryColor(color),
@@ -79,9 +88,7 @@ function ColorSettings({ toggleControlOpen, mode }) {
                     >
                         Apply
                     </Button>
-                    <div className="BackgroundSettings-common">
-                        {commonBGBtn}
-                    </div>
+                    <div className="ColorSettings-common">{commonBGBtn}</div>
                 </div>
                 <ChromePicker
                     color={color}
