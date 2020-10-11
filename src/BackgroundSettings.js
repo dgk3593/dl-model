@@ -64,8 +64,7 @@ function BackgroundSettings(props) {
                         style={{
                             backgroundColor: color,
                             color: complementaryColor(color),
-                            textShadow: `1px 1px 2px black
-                            }`,
+                            textShadow: `0px 0px 3px white`,
                         }}
                         value="picker"
                     >
