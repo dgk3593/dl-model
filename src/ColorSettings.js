@@ -9,11 +9,20 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import "./styles/BackgroundSettings.css";
 
-function BackgroundSettings(props) {
-    const { toggleControlOpen } = props;
+function ColorSettings({ toggleControlOpen, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
-    const [color, setColor] = useState(settings.scene.background);
+    let initColor;
+    switch (mode) {
+        case "background":
+            initColor = settings.scene.background;
+            break;
+        case "outlineColor":
+            initColor = settings.outline.color;
+            break;
+        default:
+    }
+    const [color, setColor] = useState(initColor);
 
     const handleChangeComplete = color => {
         setColor(color.hex);
@@ -83,4 +92,4 @@ function BackgroundSettings(props) {
     );
 }
 
-export default BackgroundSettings;
+export default ColorSettings;

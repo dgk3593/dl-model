@@ -3,7 +3,7 @@ import React from "react";
 import Dialog from "@material-ui/core/Dialog";
 import CharaSelect from "./CharaSelect";
 import AnimationSelect from "./AnimationSelect";
-import BackgroundSettings from "./BackgroundSettings";
+import ColorSettings from "./ColorSettings";
 import WeaponSelect from "./WeaponSelect";
 import FaceSelect from "./FaceSelect";
 import Share from "./Share";
@@ -27,8 +27,12 @@ function ControlPanel(props) {
             content = <AnimationSelect toggleControlOpen={toggleControlOpen} />;
             break;
         case "background":
+        case "outlineColor":
             content = (
-                <BackgroundSettings toggleControlOpen={toggleControlOpen} />
+                <ColorSettings
+                    mode={mode}
+                    toggleControlOpen={toggleControlOpen}
+                />
             );
             break;
         case "weapon":
