@@ -175,6 +175,7 @@ export const changeOutlineSize = ({ material }, size) => {
     }
 };
 
+// Change color of outline
 export const changeOutlineColor = ({ material }, color) => {
     if (Array.isArray(material)) {
         const updated = new Set();
@@ -189,7 +190,7 @@ export const changeOutlineColor = ({ material }, color) => {
     }
 };
 
-// Add outline to object and return reference to array outlines
+// Add outline to object and return reference to outlines
 export const addOutline = (object, details) => {
     if (!object) return;
     const outlines = []; // return value
