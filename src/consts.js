@@ -3,6 +3,8 @@ export const DRAWER_BGCOLOR = "#330000";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
+const defaultAni = "MWM_CMN+CMN_MWM_03";
+
 export const defaultSettings = {
     model: {
         id: "c100001_01",
@@ -12,14 +14,25 @@ export const defaultSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    scene: { background: "#cccccc" },
-    animation: { code: "MWM_CMN+CMN_MWM_03", timeScale: 1 },
-    app: { showSettings: true, showAniControl: true, antiAliasing: false },
+    scene: {
+        background: "#cccccc",
+        initCameraPosition: null,
+    },
+    animation: {
+        code: defaultAni,
+        timeScale: 1,
+    },
+    app: {
+        sideContent: "settings",
+        showSettings: true,
+        showAniControl: true,
+        antiAliasing: false,
+    },
     outline: {
         enable: true,
-        size: 5,
-        color: "black",
-        opacity: 10,
+        size: 5, // 1 -> 10
+        color: "#000000",
+        opacity: 1, // 0.1 -> 10%, 1-> 100%
     },
 };
 

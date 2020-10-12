@@ -1,50 +1,20 @@
 import React, { createContext, useReducer } from "react";
 import { settingsReducer } from "../reducer/settingsReducer";
+import { defaultSettings } from "../consts";
+import { chainCodeToList } from "../viewerHelpers";
 
 export const SettingsContext = createContext();
 export const DispatchContext = createContext();
 
-const initAni = {
-    name: "Bob",
-    fileName: "MWM_CMN",
-    aniName: "CMN_MWM_03",
-    timeScale: 1,
-    repetitions: 1,
-    id: "0",
-};
+const initAniChain = chainCodeToList(defaultSettings.animation.code, "init");
 
 export const initSettings = {
-    model: {
-        id: "c100001_01",
-        texture: "c100001_01",
-        faceTexture: "c100001_01",
-        face: 2,
-        weaponRight: "",
-        weaponLeft: "",
-    },
-    scene: {
-        background: "#cccccc",
-        initCameraPosition: null,
-    },
-    animation: {
-        code: `${initAni.fileName}+${initAni.aniName}`,
-        timeScale: 1,
-    },
-    app: {
-        sideContent: "advanced",
-        showSettings: true,
-        showAniControl: true,
-        antiAliasing: false,
-    },
-    chainMaker: {
-        chain: [initAni],
-    },
-    outline: {
-        enable: true,
-        size: 5, // 1 -> 10
-        color: "#000000",
-        opacity: 1, // 0.1 -> 10%, 1-> 100%
-    },
+    model: { ...defaultSettings.model },
+    scene: { ...defaultSettings.scene },
+    animation: { ...defaultSettings.animation },
+    app: { ...defaultSettings.app },
+    outline: { ...defaultSettings.outline },
+    chainMaker: { chain: initAniChain },
 };
 
 export function SettingsProvider(props) {
