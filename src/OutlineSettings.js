@@ -38,6 +38,14 @@ function OutlineSettings({ openControl }) {
         openControl(e.currentTarget.dataset.value);
     };
 
+    const resetSettings = () => {
+        const action = {
+            type: "reset",
+            key: "outline",
+        };
+        dispatch(action);
+    };
+
     const {
         outline: { enable, size, color, opacity },
     } = useContext(SettingsContext);
@@ -99,6 +107,11 @@ function OutlineSettings({ openControl }) {
                             {color}
                         </Button>
                     </div>
+                </div>
+                <div className="OutlineSettings-reset">
+                    <Button onClick={resetSettings} variant="contained">
+                        Reset
+                    </Button>
                 </div>
             </Collapse>
         </div>

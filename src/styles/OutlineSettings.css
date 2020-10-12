@@ -28,3 +28,8 @@
 .OutlineSettings-slider {
     padding: 0 1.5rem 0 0.3rem;
 }
+
+.OutlineSettings-reset {
+    display: flex;
+    justify-content: center;
+}
