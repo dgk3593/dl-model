@@ -127,7 +127,7 @@ class ModelViewer extends PureComponent {
     };
 
     // add Animation Chain
-    addAnimationChain = (object, animationChain, timeScale) => {
+    addAnimationChain = async (object, animationChain, timeScale) => {
         if (!animationChain) return; // If no Animation, return
 
         const [fileList, animationList] = analyzeChainCode(animationChain);
@@ -153,22 +153,21 @@ class ModelViewer extends PureComponent {
             return loadModel(path);
         });
 
-        Promise.all(batchLoader).then(animFiles => {
-            const animations = [];
+        const animations = [];
+        const animFiles = await Promise.all(batchLoader);
 
-            animationList.forEach(anim => {
-                const { fileIdx, aniName } = anim;
-                const animation = aniName
-                    ? animFiles[fileIdx].animations.find(
-                          ani => ani.name === aniName
-                      )
-                    : animFiles[fileIdx].animations[0];
-                animations.push(animation);
-            });
-            this.animations = animations;
-            this.aniIdx = 0;
-            this.props.setIsLoading(false);
+        animationList.forEach(anim => {
+            const { fileIdx, aniName } = anim;
+            const animation = aniName
+                ? animFiles[fileIdx].animations.find(
+                      ani => ani.name === aniName
+                  )
+                : animFiles[fileIdx].animations[0];
+            animations.push(animation);
         });
+        this.animations = animations;
+        this.aniIdx = 0;
+        this.props.setIsLoading(false);
     };
 
     set aniIdx(newIdx) {
@@ -229,98 +228,94 @@ class ModelViewer extends PureComponent {
         this.outlines[keyName] = null;
     };
 
-    componentDidMount() {
+    async componentDidMount() {
         this.init();
         this.props.setIsLoading(true);
 
-        this.initLoad().then(models => {
-            const [main, weaponRight, weaponLeft] = models;
-            // save references
-            this.models = {
-                main,
-                weaponRight,
-                weaponLeft,
-            };
-            // add outline to main model and save reference
-            this.outlines.main = addOutline(main, this.outlineDetails);
+        // Load the models
+        const [main, weaponRight, weaponLeft] = await this.initLoad();
 
-            // Save initial position and rotation
-            main.initPos = main.position.clone();
-            main.initRot = main.rotation.clone();
+        // save references
+        this.models = {
+            main,
+            weaponRight,
+            weaponLeft,
+        };
+        // add outline to main model and save reference
+        this.outlines.main = addOutline(main, this.outlineDetails);
 
-            // change the materials to MeshBasicMaterial
-            changeMaterialToBasic(main);
+        // Save initial position and rotation
+        main.initPos = main.position.clone();
+        main.initRot = main.rotation.clone();
 
-            // process weapons
-            ["Right", "Left"].forEach(side => {
-                const key = `weapon${side}`;
-                if (this.props[key]) {
-                    const weaponInfo = this.modelInfo[key];
-                    const weaponModel = this.models[key];
-                    const texture = weaponInfo.texture;
-                    changeMaterialToBasic(weaponModel, texture);
-                    if (weaponInfo.flipped) {
-                        weaponModel.rotation.y = Math.PI;
-                    }
-                    // add outline to weapon and save reference
-                    this.outlines[key] = addOutline(
-                        weaponModel,
-                        this.outlineDetails
-                    );
+        // change the materials to MeshBasicMaterial
+        changeMaterialToBasic(main);
+
+        // process weapons
+        ["Right", "Left"].forEach(side => {
+            const key = `weapon${side}`;
+            if (this.props[key]) {
+                const weaponInfo = this.modelInfo[key];
+                const weaponModel = this.models[key];
+                const texture = weaponInfo.texture;
+                changeMaterialToBasic(weaponModel, texture);
+                if (weaponInfo.flipped) {
+                    weaponModel.rotation.y = Math.PI;
                 }
-            });
-
-            // Apply face settings
-            const faceOverride = this.props.texture !== this.props.faceTexture;
-            if (
-                this.props.faceOffset.x !== 0 ||
-                this.props.faceOffset.y !== 0 ||
-                faceOverride
-            ) {
-                let offsetFix = { x: 0, y: 0 };
-                if (faceOverride) {
-                    const offsetFixBase = faceOffset[this.props.texture] || {
-                        x: 0,
-                        y: 0,
-                    };
-                    const offsetFixOverride = faceOffset[
-                        this.props.faceTexture
-                    ] || {
-                        x: 0,
-                        y: 0,
-                    };
-                    offsetFix = {
-                        x: offsetFixOverride.x - offsetFixBase.x,
-                        y: offsetFixOverride.y - offsetFixBase.y,
-                    };
-                }
-                const offset = {
-                    x: this.props.faceOffset.x + offsetFix.x,
-                    y: this.props.faceOffset.y + offsetFix.y,
-                };
-                applyFace(main, this.props.faceTexture, offset);
+                // add outline to weapon and save reference
+                this.outlines[key] = addOutline(
+                    weaponModel,
+                    this.outlineDetails
+                );
             }
-
-            // Add character to scene
-            this.scene.add(main);
-
-            // Add weapons
-            ["Right", "Left"].forEach(side => {
-                const key = `weapon${side}`;
-                if (this.props[key]) {
-                    this.addWeapon(this.models[`weapon${side}`], side);
-                }
-            });
-
-            this.props.setIsLoading(false);
-
-            // Add animation
-            this.addAnimationChain(
-                main,
-                this.props.aniCode,
-                this.props.timeScale
-            );
         });
+
+        // Apply face settings
+        const faceOverride = this.props.texture !== this.props.faceTexture;
+        if (
+            this.props.faceOffset.x !== 0 ||
+            this.props.faceOffset.y !== 0 ||
+            faceOverride
+        ) {
+            let offsetFix = { x: 0, y: 0 };
+            if (faceOverride) {
+                const offsetFixBase = faceOffset[this.props.texture] || {
+                    x: 0,
+                    y: 0,
+                };
+                const offsetFixOverride = faceOffset[
+                    this.props.faceTexture
+                ] || {
+                    x: 0,
+                    y: 0,
+                };
+                offsetFix = {
+                    x: offsetFixOverride.x - offsetFixBase.x,
+                    y: offsetFixOverride.y - offsetFixBase.y,
+                };
+            }
+            const offset = {
+                x: this.props.faceOffset.x + offsetFix.x,
+                y: this.props.faceOffset.y + offsetFix.y,
+            };
+            applyFace(main, this.props.faceTexture, offset);
+        }
+
+        // Add character to scene
+        this.scene.add(main);
+
+        // Add weapons
+        ["Right", "Left"].forEach(side => {
+            const key = `weapon${side}`;
+            if (this.props[key]) {
+                this.addWeapon(this.models[`weapon${side}`], side);
+            }
+        });
+
+        this.props.setIsLoading(false);
+
+        // Add animation
+        this.addAnimationChain(main, this.props.aniCode, this.props.timeScale);
     }
 
     componentDidUpdate(prevProps) {
