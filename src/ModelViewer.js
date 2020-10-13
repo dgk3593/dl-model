@@ -178,7 +178,7 @@ class ModelViewer extends PureComponent {
         action.play();
     }
 
-    // Load all models at initialize
+    // Promise to load all models at initialize
     initLoad = () => {
         const modelPath = `${fbxSource}/fbx/${this.props.model}/${this.props.model}.fbx`;
         const loadMain = loadModel(modelPath);
