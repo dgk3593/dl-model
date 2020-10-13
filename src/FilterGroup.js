@@ -4,12 +4,11 @@ import "./styles/FilterGroup.css";
 
 function FilterGroup(props) {
     const { groupName, filterNames, value, handleToggle } = props;
-    const filters = filterNames.map((filter, i) => (
+    const filters = filterNames.map(filter => (
         <GlowCheckbox
             group={groupName}
             checked={value[filter]}
             filterName={filter}
-            order={i}
             handleToggle={handleToggle}
             key={`${groupName}_${filter}`}
         />
