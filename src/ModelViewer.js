@@ -136,9 +136,8 @@ class ModelViewer extends PureComponent {
         this.props.setIsLoading(true);
 
         object.mixer = new THREE.AnimationMixer(object);
-        if (object.mixer) {
-            this.mixers.push(object.mixer);
-        }
+        this.mixers.push(object.mixer);
+
         this._aniIdx = 0;
         object.mixer.timeScale = timeScale; // Global timeScale
         object.mixer.addEventListener("finished", this.playNextAni);
@@ -254,20 +253,19 @@ class ModelViewer extends PureComponent {
         // process weapons
         ["Right", "Left"].forEach(side => {
             const key = `weapon${side}`;
-            if (this.props[key]) {
-                const weaponInfo = this.modelInfo[key];
-                const weaponModel = this.models[key];
-                const texture = weaponInfo.texture;
-                changeMaterialToBasic(weaponModel, texture);
-                if (weaponInfo.flipped) {
-                    weaponModel.rotation.y = Math.PI;
-                }
-                // add outline to weapon and save reference
-                this.outlines[key] = addOutline(
-                    weaponModel,
-                    this.outlineDetails
-                );
-            }
+            // if weapon not specified, return
+            if (!this.props[key]) return;
+            // add weapon
+            const weaponInfo = this.modelInfo[key];
+            const weaponModel = this.models[key];
+            const texture = weaponInfo.texture;
+            changeMaterialToBasic(weaponModel, texture);
+            // flip weapon if needed
+            weaponModel.rotation.y = weaponInfo.flipped ? Math.PI : 0;
+            // add outline to weapon and save reference
+            this.outlines[key] = addOutline(weaponModel, this.outlineDetails);
+            // add weapon to main body
+            this.addWeapon(this.models[`weapon${side}`], side);
         });
 
         // Apply face settings
@@ -303,15 +301,7 @@ class ModelViewer extends PureComponent {
 
         // Add character to scene
         this.scene.add(main);
-
-        // Add weapons
-        ["Right", "Left"].forEach(side => {
-            const key = `weapon${side}`;
-            if (this.props[key]) {
-                this.addWeapon(this.models[`weapon${side}`], side);
-            }
-        });
-
+        // main model loading finished
         this.props.setIsLoading(false);
 
         // Add animation
@@ -405,15 +395,16 @@ class ModelViewer extends PureComponent {
                 ["Right", "Left"].forEach(side => {
                     const key = `weapon${side}`;
                     const weaponModel = this.models[key];
-                    if (weaponModel) {
-                        this.addWeapon(weaponModel, side);
-                        // add outline if not exist
-                        if (!this.outlines[key]) {
-                            this.outlines[key] = addOutline(
-                                weaponModel,
-                                this.outlineDetails
-                            );
-                        }
+                    // if no weapon, return
+                    if (!weaponModel) return;
+
+                    this.addWeapon(weaponModel, side);
+                    // add outline if not exist
+                    if (!this.outlines[key]) {
+                        this.outlines[key] = addOutline(
+                            weaponModel,
+                            this.outlineDetails
+                        );
                     }
                 });
 
@@ -461,36 +452,38 @@ class ModelViewer extends PureComponent {
         }
 
         // Update Weapons
-        ["Right", "Left"].forEach(side => {
+        ["Right", "Left"].forEach(async side => {
             const key = `weapon${side}`;
-            if (prevProps[key] !== this.props[key]) {
-                // remove old weapon
-                if (!this.props[key]) {
-                    this.removeWeapon(side); // remove old weapon
-                    disposeItem(this.models[key]); // dispose old weapon
-                    this.models[key] = null;
-                    this.modelInfo[key] = "";
-                    return;
-                }
-                this.props.setIsLoading(true);
-                this.modelInfo[key] = analyzeWeaponCode(this.props[key]);
-                const { model: modelPath, texture } = this.modelInfo[key];
-
-                loadModel(modelPath).then(model => {
-                    this.removeWeapon(side); // remove old weapon
-                    disposeItem(this.models[key]); // dispose old weapon
-                    this.models[key] = model;
-                    // process new weapon
-                    changeMaterialToBasic(this.models[key], texture);
-                    if (this.modelInfo[key].flipped) {
-                        this.models[key].rotation.y = Math.PI;
-                    }
-                    // add outline to new weapon
-                    this.outlines[key] = addOutline(model, this.outlineDetails);
-                    this.addWeapon(model, side); // add new Weapon
-                    this.props.setIsLoading(false);
-                });
+            // if not changed, return
+            if (prevProps[key] === this.props[key]) return;
+            // Update weapon
+            this.removeWeapon(side); // remove old weapon
+            disposeItem(this.models[key]); // dispose old weapon
+            // if current weapon is not given (weapon removed)
+            if (!this.props[key]) {
+                this.models[key] = null;
+                this.modelInfo[key] = "";
+                return;
             }
+            // load new weapon
+            this.props.setIsLoading(true);
+
+            this.modelInfo[key] = analyzeWeaponCode(this.props[key]);
+            const { model: modelPath, texture } = this.modelInfo[key];
+
+            const model = await loadModel(modelPath);
+            this.models[key] = model;
+            // process new weapon
+            changeMaterialToBasic(this.models[key], texture);
+            if (this.modelInfo[key].flipped) {
+                this.models[key].rotation.y = Math.PI;
+            }
+            // add outline to new weapon
+            this.outlines[key] = addOutline(model, this.outlineDetails);
+            // add new weapon to main model
+            this.addWeapon(model, side);
+
+            this.props.setIsLoading(false);
         });
 
         // Update animation

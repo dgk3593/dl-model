@@ -3,6 +3,7 @@ import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { callbackOnPotentialArray } from "./helpers";
 
 export const loadModel = url => {
     return (
@@ -33,59 +34,67 @@ export const analyzeWeaponCode = code => {
 
 export const disposeItem = item => {
     if (!item) return;
+
+    // keep track of disposed objects
+    const disposedList = new Set();
+    // true if object's uuid is not in disposedList
+    const notDisposed = object => !disposedList.has(object.uuid);
+    // true if object exists and not disposed yet
+    const needToDispose = object => object && notDisposed(object);
+    // add object's uuid to disposedList and call object's dispose method
+    const disposeObject = object => {
+        disposedList.add(object.uuid);
+        object.dispose();
+    };
+    // dispose an object if need to
+    const dispose = object => {
+        if (needToDispose(object)) disposeObject(object);
+    };
+
     item.traverse(child => {
-        if (child.isMesh) {
-            if (Array.isArray(child.material)) {
-                child.material.forEach(mat => {
-                    if (mat.map) mat.map.dispose();
-                    mat.dispose();
-                });
-            } else {
-                if (child.material.map) child.material.map.dispose();
-                child.material.dispose();
-            }
-            child.geometry.dispose();
-        }
+        if (!child.isMesh) return;
+        // child is mesh
+        // dispose material
+        callbackOnPotentialArray(child.material, obj => {
+            dispose(obj.map);
+            dispose(obj);
+        });
+        // dispose geometry
+        dispose(child.geometry);
     });
 };
 
 export const changeMaterialToBasic = (object, texturePath) => {
     if (!object) return;
     object.traverse(child => {
-        if (child.isMesh && child.name !== "outline") {
-            const material = child.material;
-            let texture;
-            if (texturePath) {
-                texture = new THREE.TextureLoader().load(texturePath);
-            } else {
-                texture = Array.isArray(child.material)
-                    ? material[0].map
-                    : material.map;
-            }
-            // correct texture gamma
-            texture.encoding = THREE.sRGBEncoding;
-
-            const newMaterial = new THREE.MeshBasicMaterial({
-                map: texture,
-                skinning: true,
-            });
-            if (Array.isArray(child.material)) {
-                const size = child.material.length;
-
-                child.material = child.material.forEach(e => {
-                    if (texturePath) {
-                        e.map.dispose();
-                    }
-                    e.dispose();
-                });
-                child.material = new Array(size).fill(newMaterial);
-            } else {
-                if (texturePath && child.material.map) {
-                    child.material.map.dispose();
-                }
-                child.material.dispose();
-                child.material = newMaterial;
-            }
+        if (!child.isMesh || child.name === "outline") return;
+        // child is mesh and is not outline
+        const material = child.material;
+        let texture;
+        if (texturePath) {
+            texture = new THREE.TextureLoader().load(texturePath);
+        } else {
+            texture = Array.isArray(child.material)
+                ? material[0].map
+                : material.map;
+        }
+        // correct texture gamma
+        texture.encoding = THREE.sRGBEncoding;
+        // define new material
+        const newMaterial = new THREE.MeshBasicMaterial({
+            map: texture,
+            skinning: true,
+        });
+        // dispose old material
+        callbackOnPotentialArray(material, obj => {
+            if (texturePath && obj.map) obj.map.dispose();
+            obj.dispose();
+        });
+        // apply new material
+        if (Array.isArray(material)) {
+            child.material = new Array(material.length).fill(newMaterial);
+        } else {
+            child.material = newMaterial;
         }
     });
 };
@@ -113,32 +122,27 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
 
 // replace material of an object
 const replaceMaterial = (object, newMaterial) => {
+    // dispose old material
+    callbackOnPotentialArray(object.material, obj => {
+        if (obj.map) obj.map.dispose();
+        obj.dispose();
+    });
+    // apply new material
     if (Array.isArray(object.material)) {
-        const size = object.material.length;
-
-        object.material = object.material.forEach(m => {
-            m.dispose();
-        });
-        object.material = new Array(size).fill(newMaterial);
+        object.material = new Array(object.material.length).fill(newMaterial);
     } else {
-        if (object.material.map) {
-            object.material.map.dispose();
-        }
-        object.material.dispose();
         object.material = newMaterial;
     }
 };
 
 // change opacity of an object
 export const changeOpacity = ({ material }, opacity) => {
-    if (Array.isArray(material)) {
-        material.forEach(m => (m.opacity = opacity));
-    } else {
-        material.opacity = opacity;
-    }
+    callbackOnPotentialArray(material, obj => {
+        obj.opacity = opacity;
+    });
 };
 
-// update outline shader
+// update outline shader to change size
 const updateOutlineShader = (material, size) => {
     // Hacky way to force shader recompilation, needs fixing !!!!!!!!!!!!!!!!!!
     material.fog = !material.fog;
@@ -165,10 +169,10 @@ export const changeOutlineSize = ({ material }, size) => {
     if (Array.isArray(material)) {
         const updated = new Set();
         material.forEach(m => {
-            if (!updated.has(m.uuid)) {
-                updateOutlineShader(m, size);
-                updated.add(m.uuid);
-            }
+            if (updated.has(m.uuid)) return;
+
+            updateOutlineShader(m, size);
+            updated.add(m.uuid);
         });
     } else {
         updateOutlineShader(material, size);
@@ -180,10 +184,10 @@ export const changeOutlineColor = ({ material }, color) => {
     if (Array.isArray(material)) {
         const updated = new Set();
         material.forEach(m => {
-            if (!updated.has(m.uuid)) {
-                m.color = new THREE.Color(color);
-                updated.add(m.uuid);
-            }
+            if (updated.has(m.uuid)) return;
+
+            m.color = new THREE.Color(color);
+            updated.add(m.uuid);
         });
     } else {
         material.color = new THREE.Color(color);
@@ -195,20 +199,20 @@ export const addOutline = (object, details) => {
     if (!object) return;
     const outlines = []; // return value
     object.traverse(child => {
-        if (child.isMesh) {
-            const outline = child.clone();
-            outline.name = "outline";
-            outline.visible = details.enable;
+        if (!child.isMesh) return;
+        // child is mesh
+        const outline = child.clone();
+        outline.name = "outline";
+        outline.visible = details.enable;
 
-            outlines.push(outline);
-            const newMaterial = createOutlineMaterial(details);
-            replaceMaterial(outline, newMaterial);
+        outlines.push(outline);
+        const newMaterial = createOutlineMaterial(details);
+        replaceMaterial(outline, newMaterial);
 
-            if (child.isSkinnedMesh) {
-                outline.bind(child.skeleton, child.bindMatrix);
-            }
-            child.parent.add(outline);
+        if (child.isSkinnedMesh) {
+            outline.bind(child.skeleton, child.bindMatrix);
         }
+        child.parent.add(outline);
     });
     return outlines;
 };
@@ -265,13 +269,13 @@ export const analyzeChainCode = code => {
     const fileList = [];
     const animationList = [];
     for (let i = 0; i < nAni; i++) {
-        let timeScale = 1;
-        let repetitions = 1;
-        let fileIdx = null;
-        let aniName = null;
-        let fileName = null;
-        let details;
-        let currentAni = {};
+        let timeScale = 1,
+            repetitions = 1,
+            fileIdx = null,
+            aniName = null,
+            fileName = null,
+            details,
+            currentAni = {};
         const currentParts = aniCodes[i].split("+");
         const fromModelFile = currentParts.length === 1;
         if (fromModelFile) {

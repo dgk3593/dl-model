@@ -12,6 +12,15 @@ import {
 
 import { chainCodeToList } from "./viewerHelpers";
 
+// if object is an array, apply callback on each element of object, otherwise, apply call back on the object
+export const callbackOnPotentialArray = (object, callback) => {
+    if (Array.isArray(object)) {
+        object.forEach(child => callback(child));
+        return;
+    }
+    callback(object);
+};
+
 export const setInitialSettings = params => {
     if (params.length === 0) return;
     let faceTextureDefined = false;
@@ -188,6 +197,5 @@ export const getLobbyCode = (weapon, gender) => {
     if (gender === "Male")
         return `LOB_${code}+${code}_ONT_05&ts=-0.5>+${code}_ONT_02>+${code}_ONT_07>+${code}_ONT_08>+${code}_ONT_21`;
     // Female
-    else
-        return `LOB_${code}+${code}_ONT_06&ts=-0.5>+${code}_ONT_04>+${code}_ONT_09>+${code}_ONT_10>+${code}_ONT_23`;
+    return `LOB_${code}+${code}_ONT_06&ts=-0.5>+${code}_ONT_04>+${code}_ONT_09>+${code}_ONT_10>+${code}_ONT_23`;
 };
