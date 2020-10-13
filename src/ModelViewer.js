@@ -1,5 +1,8 @@
 import React, { PureComponent } from "react";
+
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
 import { fbxSource } from "./App";
 import { CAM_PARAMS } from "./consts";
 import faceOffset from "./data/face_offset";
@@ -15,8 +18,6 @@ import {
     changeOutlineSize,
     changeOutlineColor,
 } from "./viewerHelpers";
-
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 class ModelViewer extends PureComponent {
     animate = () => {
@@ -41,7 +42,7 @@ class ModelViewer extends PureComponent {
                 : "",
         };
 
-        // save reference for outlines
+        // save reference and specifications for outlines
         this.outlines = {};
         this.outlineDetails = {
             color: this.props.outlineColor,
@@ -82,22 +83,9 @@ class ModelViewer extends PureComponent {
 
         // Controls
         this.controls = new OrbitControls(this.camera, this.mount);
-        this.controlsPosition = this.props.controlsPosition || {
-            x: 0,
-            y: 0,
-            z: 0,
-        };
-        this.controls.target.set(
-            this.controlsPosition.x,
-            this.controlsPosition.y,
-            this.controlsPosition.z
-        );
+        this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
+        this.controls.target.set(...this.controlsPosition);
         this.controls.update();
-
-        // Light
-        let light = new THREE.DirectionalLight(0xffffff);
-        light.position.set(0, 50, 0);
-        this.scene.add(light);
 
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
@@ -118,6 +106,7 @@ class ModelViewer extends PureComponent {
         this.canvas = this.renderer.domElement;
         this.renderer.setSize(this.viewport.width, this.viewport.height);
         this.mount.appendChild(this.canvas);
+
         this.animate();
     };
 
@@ -153,6 +142,7 @@ class ModelViewer extends PureComponent {
         });
 
         const animations = [];
+        // load all animation files
         const animFiles = await Promise.all(batchLoader);
 
         animationList.forEach(anim => {
@@ -165,10 +155,12 @@ class ModelViewer extends PureComponent {
             animations.push(animation);
         });
         this.animations = animations;
+        // play first animation
         this.aniIdx = 0;
         this.props.setIsLoading(false);
     };
 
+    // this.aniIdx = n => play animation with index n
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
         const anim = this.animations[newIdx];
@@ -216,15 +208,12 @@ class ModelViewer extends PureComponent {
     removeWeapon = side => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
-            if (child.name === boneName && child.children.length === 1) {
+            if (child.children.length === 1 && child.name === boneName) {
                 if (child.children[0].type === "Group") {
                     child.remove(this.models[`weapon${side}`]);
                 }
             }
         });
-        // remove reference to outline
-        const keyName = `weapon${side}`;
-        this.outlines[keyName] = null;
     };
 
     async componentDidMount() {
@@ -308,7 +297,7 @@ class ModelViewer extends PureComponent {
         this.addAnimationChain(main, this.props.aniCode, this.props.timeScale);
     }
 
-    componentDidUpdate(prevProps) {
+    async componentDidUpdate(prevProps) {
         // console.log("component did update");
 
         // // print updated props to console
@@ -354,71 +343,69 @@ class ModelViewer extends PureComponent {
         if (prevProps.model !== this.props.model) {
             this.props.setIsLoading(true);
             const modelPath = `${fbxSource}/fbx/${this.props.model}/${this.props.model}.fbx`;
-            loadModel(modelPath).then(model => {
-                changeMaterialToBasic(model);
-                this.outlines.main = addOutline(model, this.outlineDetails);
+            // load new model
+            const model = await loadModel(modelPath);
+            changeMaterialToBasic(model);
+            // add outline
+            this.outlines.main = addOutline(model, this.outlineDetails);
 
-                // remove weapons from old model if they exist
-                ["Right", "Left"].forEach(side => {
-                    const key = `weapon${side}`;
-                    if (prevProps[key]) {
-                        this.removeWeapon(side);
-                    }
-                });
-                this.scene.remove(this.models.main); // remove old model
-                disposeItem(this.models.main); // dispose old model
-                this.models.main = model;
+            // remove weapons from old model if they exist
+            ["Right", "Left"].forEach(side => {
+                const key = `weapon${side}`;
+                if (prevProps[key]) {
+                    this.removeWeapon(side);
+                }
+            });
+            // remove and dispose old model
+            this.scene.remove(this.models.main);
+            disposeItem(this.models.main);
+            // add reference
+            this.models.main = model;
 
-                // Save initial position and rotation
-                model.initPos = model.position.clone();
-                model.initRot = model.rotation.clone();
+            // Save initial position and rotation
+            model.initPos = model.position.clone();
+            model.initRot = model.rotation.clone();
 
-                // Add new model to scene
-                this.scene.add(model);
+            // Add new model to scene
+            this.scene.add(model);
 
-                // Apply face to new model
-                const faceOverride =
-                    this.props.texture !== this.props.faceTexture;
-                if (
-                    this.props.faceOffset.x !== 0 ||
-                    this.props.faceOffset.y !== 0 ||
-                    faceOverride
-                ) {
-                    applyFace(
-                        model,
-                        this.props.faceTexture,
-                        this.props.faceOffset
+            // Apply face to new model
+            const faceOverride = this.props.texture !== this.props.faceTexture;
+            if (
+                this.props.faceOffset.x !== 0 ||
+                this.props.faceOffset.y !== 0 ||
+                faceOverride
+            ) {
+                applyFace(model, this.props.faceTexture, this.props.faceOffset);
+            }
+
+            // Add weapons to new model
+            ["Right", "Left"].forEach(side => {
+                const key = `weapon${side}`;
+                const weaponModel = this.models[key];
+                // if no weapon, return
+                if (!weaponModel) return;
+
+                this.addWeapon(weaponModel, side);
+                // add outline if not exist
+                if (!this.outlines[key]) {
+                    this.outlines[key] = addOutline(
+                        weaponModel,
+                        this.outlineDetails
                     );
                 }
-
-                // Add weapons to new model
-                ["Right", "Left"].forEach(side => {
-                    const key = `weapon${side}`;
-                    const weaponModel = this.models[key];
-                    // if no weapon, return
-                    if (!weaponModel) return;
-
-                    this.addWeapon(weaponModel, side);
-                    // add outline if not exist
-                    if (!this.outlines[key]) {
-                        this.outlines[key] = addOutline(
-                            weaponModel,
-                            this.outlineDetails
-                        );
-                    }
-                });
-
-                // Add animation to new model
-                this.addAnimationChain(
-                    model,
-                    this.props.aniCode,
-                    this.props.timeScale
-                );
-
-                this.props.setIsLoading(false);
             });
+
+            // Add animation to new model
+            this.addAnimationChain(
+                model,
+                this.props.aniCode,
+                this.props.timeScale
+            );
+
+            this.props.setIsLoading(false);
         } else {
-            // Update face
+            // Update face when main model not changed
             const faceTextureChanged =
                 prevProps.faceTexture !== this.props.faceTexture;
             if (
@@ -459,10 +446,12 @@ class ModelViewer extends PureComponent {
             // Update weapon
             this.removeWeapon(side); // remove old weapon
             disposeItem(this.models[key]); // dispose old weapon
-            // if current weapon is not given (weapon removed)
+            // if current weapon is empty (weapon removed)
             if (!this.props[key]) {
                 this.models[key] = null;
                 this.modelInfo[key] = "";
+                // remove reference to outline
+                this.outlines[key] = null;
                 return;
             }
             // load new weapon
@@ -471,6 +460,7 @@ class ModelViewer extends PureComponent {
             this.modelInfo[key] = analyzeWeaponCode(this.props[key]);
             const { model: modelPath, texture } = this.modelInfo[key];
 
+            // load new model
             const model = await loadModel(modelPath);
             this.models[key] = model;
             // process new weapon

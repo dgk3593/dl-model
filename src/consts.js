@@ -164,13 +164,13 @@ export const cameraPositions = {
 };
 
 export const controlsPositions = {
-    c: { x: 0, y: 0.5, z: 0 },
-    d: { x: 0, y: 1, z: 0 },
+    c: [0, 0.5, 0],
+    d: [0, 1, 0],
 
-    d210078_01: { x: 0, y: 3, z: 0 },
-    d210114_01: { x: 0, y: 3, z: 0 },
+    d210078_01: [0, 3, 0],
+    d210114_01: [0, 3, 0],
 
-    smith: { x: 0, y: 0.5, z: 0 },
+    smith: [0, 0.5, 0],
 };
 
 export const faceOffsets = {
