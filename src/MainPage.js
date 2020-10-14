@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
 
-import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import Menu from "@material-ui/icons/Menu";
 
 import Drawer from "@material-ui/core/Drawer";
@@ -11,6 +10,7 @@ import useStyles from "./styles/MainPageStyles";
 import Display from "./Display";
 import DrawerContent from "./DrawerContent";
 import ControlPanel from "./ControlPanel";
+import DrawerHeader from "./DrawerHeader";
 import { SettingsContext } from "./context/SettingsContext";
 import { setInitialSettings } from "./helpers";
 
@@ -83,15 +83,7 @@ function MainPage({ location }) {
                                 paper: classes.drawerPaper,
                             }}
                         >
-                            <div className={classes.drawerHeader}>
-                                <span>Settings</span>
-                            </div>
-                            <div
-                                className={classes.closeDrawerButton}
-                                onClick={toggleDrawerOpen}
-                            >
-                                <ArrowLeft />
-                            </div>
+                            <DrawerHeader toggleDrawerOpen={toggleDrawerOpen} />
 
                             <DrawerContent openControl={openControl} />
                         </Drawer>
