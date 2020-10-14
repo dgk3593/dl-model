@@ -54,9 +54,9 @@ function SettingBtns({ openControl }) {
     const toggleSetting = event => {
         const { key, name } = event.currentTarget.dataset;
         const action = {
-            type: "update",
+            type: "toggle",
             key: key,
-            value: { [name]: !settings[key][name] },
+            value: name,
         };
         dispatch(action);
     };

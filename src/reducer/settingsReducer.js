@@ -3,6 +3,14 @@ import { defaultSettings } from "../consts";
 export const settingsReducer = (state, action) => {
     let key, value;
     switch (action.type) {
+        case "toggle":
+            key = action.key;
+            value = action.value;
+            const currentValue = state[key][value];
+            return {
+                ...state,
+                [key]: { ...state[key], [value]: !currentValue },
+            };
         case "reset":
             // reset values
             // value = array of keys in settings[key] to be reset, null -> reset all
