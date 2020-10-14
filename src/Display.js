@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import { SettingsContext } from "./context/SettingsContext";
+import React, { useContext, useCallback } from "react";
+
+import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";
 import AniControl from "./AniControl";
 import "./styles/Display.css";
@@ -21,7 +22,7 @@ function Display(props) {
         },
         animation: { code: chainCode, timeScale },
         scene: { background: bgColor, initCameraPosition },
-        app: { showAniControl, antiAliasing },
+        app: { showAniControl, antiAliasing, capture },
         outline: {
             enable: showOutline,
             color: outlineColor,
@@ -29,6 +30,16 @@ function Display(props) {
             opacity: outlineOpacity,
         },
     } = settings;
+
+    const dispatch = useContext(DispatchContext);
+    const toggleCapture = useCallback(() => {
+        const action = {
+            type: "toggle",
+            key: "app",
+            value: "capture",
+        };
+        dispatch(action);
+    }, [dispatch]);
 
     const faceOffset = faceOffsets[`face${face}`];
 
@@ -57,18 +68,20 @@ function Display(props) {
             )}
             <ModelViewer
                 setIsLoading={props.setIsLoading}
+                capture={capture}
+                toggleCapture={toggleCapture}
+                viewport={viewport}
+                cameraPosition={cameraPosition}
+                controlsPosition={controlsPosition}
                 model={modelId}
                 texture={texture}
                 faceTexture={faceTexture}
-                viewport={viewport}
                 faceOffset={faceOffset}
-                cameraPosition={cameraPosition}
-                controlsPosition={controlsPosition}
-                timeScale={timeScale}
-                bgColor={bgColor}
                 weaponRight={weaponRight}
                 weaponLeft={weaponLeft}
                 aniCode={chainCode}
+                timeScale={timeScale}
+                bgColor={bgColor}
                 showOutline={showOutline}
                 outlineColor={outlineColor}
                 outlineSize={outlineSize}

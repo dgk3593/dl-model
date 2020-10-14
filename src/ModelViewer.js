@@ -87,6 +87,11 @@ class ModelViewer extends PureComponent {
         this.controls.target.set(...this.controlsPosition);
         this.controls.update();
 
+        // Light
+        let light = new THREE.DirectionalLight(0xffffff);
+        light.position.set(0, 200, 100);
+        this.scene.add(light);
+
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
             antialias: true,
@@ -111,6 +116,11 @@ class ModelViewer extends PureComponent {
     };
 
     playNextAni = () => {
+        // if capturing and finished recording current chain, stop capturing and set capture flag back to false
+        if (this.props.capture && this._aniIdx === this.nAni - 1) {
+            this.mediaRecorder.stop();
+            this.props.toggleCapture();
+        }
         const newIdx = (this._aniIdx + 1) % this.nAni;
         this.aniIdx = newIdx;
     };
@@ -168,10 +178,8 @@ class ModelViewer extends PureComponent {
         mixer.stopAllAction();
         const action = mixer.clipAction(anim);
         const { timeScale, repetitions } = this.aniSettings[newIdx];
-        // Repeat infinitely if only 1 animation and repetition = 1
-        if (this.nAni > 1 || repetitions > 1) {
-            action.setLoop(THREE.LoopRepeat, repetitions);
-        }
+
+        action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
         action.timeScale = timeScale;
         action.time = 0;
@@ -320,6 +328,36 @@ class ModelViewer extends PureComponent {
             this.renderer.setSize(width, height);
             this.camera.aspect = width / height;
             this.camera.updateProjectionMatrix();
+        }
+
+        // Capture
+        if (prevProps.capture !== this.props.capture && this.props.capture) {
+            this.videoStream = this.canvas.captureStream(30);
+            this.mediaRecorder = new MediaRecorder(this.videoStream, {
+                mimeType: "video/webm; codecs=vp9",
+            });
+            this.chunks = [];
+            this.mediaRecorder.ondataavailable = event =>
+                this.chunks.push(event.data);
+            this.mediaRecorder.onstop = () => {
+                this.props.setIsLoading(false);
+                const superBuffer = new Blob(this.chunks, {
+                    type: "video/webm",
+                });
+                var url = URL.createObjectURL(superBuffer);
+                var a = document.createElement("a");
+                document.body.appendChild(a);
+                a.style = "display: none";
+                a.href = url;
+                a.download = "animation.webm";
+                a.click();
+                window.URL.revokeObjectURL(url);
+            };
+            // disable user input
+            this.props.setIsLoading(true);
+            // play first animation and start capturing
+            this.aniIdx = 0;
+            this.mediaRecorder.start();
         }
 
         // update anti aliasing setting

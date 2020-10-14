@@ -27,6 +27,7 @@ export const defaultSettings = {
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
+        capture: false,
     },
     outline: {
         enable: true,
@@ -184,3 +185,10 @@ export const faceOffsets = {
     face8: { x: 2, y: -1 },
     face9: { x: 3, y: -1 },
 };
+
+export const videoCodecs = [
+    "video/webm;codecs=h264",
+    "video/webm;codecs=vp9",
+    "video/webm;codecs=vp8",
+    "video/webm",
+];
