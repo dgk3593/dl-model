@@ -334,7 +334,7 @@ class ModelViewer extends PureComponent {
         if (prevProps.capture !== this.props.capture && this.props.capture) {
             this.videoStream = this.canvas.captureStream(30);
             this.mediaRecorder = new MediaRecorder(this.videoStream, {
-                mimeType: "video/webm; codecs=vp9",
+                mimeType: this.props.captureSetting.codec,
             });
             this.chunks = [];
             this.mediaRecorder.ondataavailable = event =>

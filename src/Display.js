@@ -22,7 +22,8 @@ function Display(props) {
         },
         animation: { code: chainCode, timeScale },
         scene: { background: bgColor, initCameraPosition },
-        app: { showAniControl, antiAliasing, capture },
+        app: { showAniControl, antiAliasing },
+        capture: { enable: capture },
         outline: {
             enable: showOutline,
             color: outlineColor,
@@ -35,8 +36,8 @@ function Display(props) {
     const toggleCapture = useCallback(() => {
         const action = {
             type: "toggle",
-            key: "app",
-            value: "capture",
+            key: "capture",
+            value: "enable",
         };
         dispatch(action);
     }, [dispatch]);
@@ -69,6 +70,7 @@ function Display(props) {
             <ModelViewer
                 setIsLoading={props.setIsLoading}
                 capture={capture}
+                captureSetting={settings.capture}
                 toggleCapture={toggleCapture}
                 viewport={viewport}
                 cameraPosition={cameraPosition}

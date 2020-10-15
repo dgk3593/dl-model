@@ -35,6 +35,11 @@ export const defaultSettings = {
         color: "#000000",
         opacity: 1, // 0.1 -> 10%, 1-> 100%
     },
+    capture: {
+        enable: false,
+        supportedCodecs: [],
+        codec: "",
+    },
 };
 
 export const initKey = {

@@ -14,6 +14,7 @@ export const initSettings = {
     animation: { ...defaultSettings.animation },
     app: { ...defaultSettings.app },
     outline: { ...defaultSettings.outline },
+    capture: { ...defaultSettings.capture },
     chainMaker: { chain: initAniChain },
 };
 
