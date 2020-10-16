@@ -240,11 +240,27 @@ const adv = [
         weapon: "Staff",
     },
     {
+        cid: "110341_03",
+        name: "Halloween Akasha",
+        title: "Bloodthirsty One",
+        rarity: "5",
+        element: "Water",
+        weapon: "Blade",
+    },
+    {
         cid: "100002_02",
         name: "Halloween Elisanne",
         title: "Vampaladyn",
         rarity: "5",
         element: "Light",
+        weapon: "Lance",
+    },
+    {
+        cid: "110270_02",
+        name: "Halloween Melsa",
+        title: "Spirited Corpse",
+        rarity: "5",
+        element: "Wind",
         weapon: "Lance",
     },
     {

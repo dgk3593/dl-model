@@ -263,6 +263,16 @@ const skills = {
             name: "Immaculate Wings",
             value: "SKL_110369_01+",
         },
+        {
+            icon: "img/advIcons/110341_03_r05.png",
+            name: "Nameless Abductor",
+            value: "SKL_110341_03+KAT_SKL_01_01_11034103",
+        },
+        {
+            icon: "img/advIcons/110341_03_r05.png",
+            name: "Coffin of Madness",
+            value: "SKL_110341_03+KAT_SKL_02_01_11034103",
+        },
     ],
     Dagger: [
         {
@@ -676,6 +686,17 @@ const skills = {
             icon: "img/advIcons/110364_01_r05.png",
             name: "Perfect Order",
             value: "SKL_110364_01+LAN_SKL_02_01_11036401",
+        },
+        {
+            icon: "img/advIcons/110270_02_r05.png",
+            name: "Spooky Revival",
+            value: "SKL_110270_02+LAN_SKL_01_01_11027002",
+        },
+        {
+            icon: "img/advIcons/110270_02_r05.png",
+            name: "Venom Bite",
+            value:
+                "SKL_110270_02+LAN_SKL_02_01_11027002>+LAN_SKL_02_02_11027002>+LAN_SKL_02_03_11027002",
         },
     ],
     Bow: [
