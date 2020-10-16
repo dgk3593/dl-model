@@ -8,10 +8,6 @@
 # testing
 /coverage
 
-# public data
-/public/fbx
-/public/img
-
 #VSCode
 /.vscode
 
@@ -28,8 +24,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-Get_Face_Offset.py
-GetNosePosition.fig
-GetNosePosition.m
-idList.txt
-output.txt

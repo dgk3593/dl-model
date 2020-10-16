@@ -56,7 +56,7 @@ function MainPage({ location }) {
     };
 
     return (
-        <React.Fragment>
+        <>
             {isLoading && <div className={classes.loadingMsg}>Loading...</div>}
             <div className={classes.root}>
                 <CssBaseline />
@@ -66,7 +66,7 @@ function MainPage({ location }) {
                     toggleControlOpen={toggleControlOpen}
                 />
                 {showSettings && (
-                    <React.Fragment>
+                    <>
                         <button
                             onClick={toggleDrawerOpen}
                             className={classes.openDrawerButton}
@@ -87,7 +87,7 @@ function MainPage({ location }) {
 
                             <DrawerContent openControl={openControl} />
                         </Drawer>
-                    </React.Fragment>
+                    </>
                 )}
                 {initLoadDone && (
                     <main ref={viewerRef} className={classes.content}>
@@ -98,7 +98,7 @@ function MainPage({ location }) {
                     </main>
                 )}
             </div>
-        </React.Fragment>
+        </>
     );
 }
 
