@@ -1,5 +1,29 @@
 const enemies = [
     {
+        id: "c130018_01",
+        name: "Zombie Soldier (Flame)",
+    },
+    {
+        id: "c130018_02",
+        name: "Zombie Soldier (Water)",
+    },
+    {
+        id: "c130019_01",
+        name: "Zombie Archer",
+    },
+    {
+        id: "c130020_01",
+        name: "Zombie Mage (Flame)",
+    },
+    {
+        id: "c130020_02",
+        name: "Zombie Mage (Water)",
+    },
+    {
+        id: "c130021_01",
+        name: "Zombie Healer",
+    },
+    {
         id: "c100016_01",
         name: "Valyx",
     },
