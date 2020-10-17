@@ -24,7 +24,7 @@ export const loadTexture = url => {
 };
 
 export const analyzeWeaponCode = code => {
-    const flipped = code[code.length - 1] === "b";
+    const flipped = code.endsWith("b");
     const weaponCode = code.substring(0, code.length - 1);
     const model = `${fbxSource}/fbx/${weaponCode}/${weaponCode}.fbx`;
     const texture = `${fbxSource}/fbx/${weaponCode}/${weaponCode}.png`;

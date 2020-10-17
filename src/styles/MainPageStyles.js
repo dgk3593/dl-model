@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
         width: "100vw",
         padding: 0,
     },
-    openDrawerButton: {
+    openSidebarButton: {
         position: "absolute",
         top: 0,
         left: 0,

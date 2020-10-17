@@ -3,14 +3,12 @@ import useToggleState from "./hooks/useToggleState";
 
 import Menu from "@material-ui/icons/Menu";
 
-import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useStyles from "./styles/MainPageStyles";
 
 import Display from "./Display";
-import DrawerContent from "./DrawerContent";
+import SideBar from "./SideBar";
 import ControlPanel from "./ControlPanel";
-import DrawerHeader from "./DrawerHeader";
 import { SettingsContext } from "./context/SettingsContext";
 import { setInitialSettings } from "./helpers";
 
@@ -18,7 +16,7 @@ function MainPage({ location }) {
     const classes = useStyles();
 
     const [currentMode, setCurrentMode] = useState("model");
-    const [drawerOpen, toggleDrawerOpen] = useToggleState(true);
+    const [sidebarOpen, toggleSidebarOpen] = useToggleState(true);
     const [controlOpen, toggleControlOpen] = useToggleState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [initLoadDone, setInitLoadDone] = useState(false);
@@ -68,25 +66,17 @@ function MainPage({ location }) {
                 {showSettings && (
                     <>
                         <button
-                            onClick={toggleDrawerOpen}
-                            className={classes.openDrawerButton}
+                            onClick={toggleSidebarOpen}
+                            className={classes.openSidebarButton}
                         >
                             <Menu />
                         </button>
 
-                        <Drawer
-                            className={classes.drawer}
-                            variant="persistent"
-                            anchor="left"
-                            open={drawerOpen}
-                            classes={{
-                                paper: classes.drawerPaper,
-                            }}
-                        >
-                            <DrawerHeader toggleDrawerOpen={toggleDrawerOpen} />
-
-                            <DrawerContent openControl={openControl} />
-                        </Drawer>
+                        <SideBar
+                            toggleSidebarOpen={toggleSidebarOpen}
+                            open={sidebarOpen}
+                            openControl={openControl}
+                        />
                     </>
                 )}
                 {initLoadDone && (
