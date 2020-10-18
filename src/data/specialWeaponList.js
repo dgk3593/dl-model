@@ -17,6 +17,7 @@ const specialWeaponList = [
     { wid: "w302040_01", name: "Ieyasu's Blade" },
     { wid: "w301147_01", name: "Hunter Berserker's Greatsword" },
     { wid: "w305142_01", name: "Hunter Vanessa's Lance" },
+    { wid: "w305142_02", name: "Hunter Vanessa's Shield" },
     { wid: "w306135_01", name: "Hunter Sarisse's Bow" },
     { wid: "w399011_01", name: "Gala Laxi's Right Dagger" },
     { wid: "w399012_01", name: "Gala Laxi's Left Dagger" },
