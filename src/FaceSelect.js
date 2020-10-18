@@ -5,16 +5,18 @@ import { SettingsContext } from "./context/SettingsContext";
 import { DispatchContext } from "./context/SettingsContext";
 
 import { fbxSource } from "./App";
+import faceOffsetFix from "./data/face_offset";
 import useStyles from "./styles/FaceSelectStyles";
 
 function FaceSelect(props) {
-    const classes = useStyles();
-
     const { toggleControlOpen } = props;
     const dispatch = useContext(DispatchContext);
     const {
-        model: { faceTexture },
+        model: { id, faceTexture },
     } = useContext(SettingsContext);
+
+    const classes = useStyles(faceOffsetFix[id] || { x: 0, y: 0 });
+
     const imgPath = `${fbxSource}/fbx/${faceTexture}/${faceTexture}.png`;
 
     const setFace = event => {
