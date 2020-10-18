@@ -13,8 +13,8 @@ const useStyles = faceOffsetFix => {
             const faceNumber = i + 1;
             if (faceNumber === 1) return [-280, -165];
 
-            const n = (i - 2) % 4;
-            const m = Math.floor(i / 6);
+            const n = (faceNumber - 2) % 4;
+            const m = Math.floor(faceNumber / 6);
             const offsetX = -(24 + n * 128);
             const offsetY = -(293 + m * 128);
             return [offsetX, offsetY];
