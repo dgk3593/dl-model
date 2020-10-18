@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { lazy, Suspense, useContext } from "react";
 
 import { DispatchContext } from "./context/SettingsContext";
 import Close from "@material-ui/icons/Close";
-import OutlineSettings from "./OutlineSettings";
 
 import "./styles/AdvancedSettings.css";
+
+const OutlineSettings = lazy(() => import("./OutlineSettings"));
 
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
@@ -27,7 +28,9 @@ function AdvancedSettings({ openControl }) {
                 </div>
             </div>
             <div className="AdvancedSettings-List">
-                <OutlineSettings openControl={openControl} />
+                <Suspense fallback={<div>Loading</div>}>
+                    <OutlineSettings openControl={openControl} />
+                </Suspense>
             </div>
         </div>
     );

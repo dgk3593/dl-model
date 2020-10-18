@@ -1,6 +1,7 @@
 .ColorSettings {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    min-height: 17rem;
 }
 
 .ColorSettings button {

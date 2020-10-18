@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, useState } from "react";
 
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import HomeAni from "./HomeAni";
-import WeaponAni from "./WeaponAni";
-import GenericSkills from "./GenericSkills";
-import OtherUnique from "./OtherUnique";
-import UniqueByWeapon from "./UniqueByWeapon";
 
 import "./styles/AnimationSelect.css";
 
@@ -14,11 +9,16 @@ import { unidentified } from "./data/animationOthers";
 import questAnimation from "./data/animationQuest";
 import uniqueFS from "./data/animationUniqueFS";
 import skills from "./data/animationSkills";
-import genericSkills from "./data/animationGenericSkills";
 import uniqueVictory from "./data/animationUniqueVictory";
 import uniqueCombo from "./data/animationUniqueCombo";
 
 import { aniButtonsFromObject } from "./helpers";
+
+import HomeAni from "./HomeAni";
+const WeaponAni = lazy(() => import("./WeaponAni"));
+const GenericSkills = lazy(() => import("./GenericSkills"));
+const OtherUnique = lazy(() => import("./OtherUnique"));
+const UniqueByWeapon = lazy(() => import("./UniqueByWeapon"));
 
 function GameAni({ handleSelect }) {
     const [category, setCategory] = useState(0);
@@ -66,12 +66,7 @@ function GameAni({ handleSelect }) {
             );
             break;
         case 6: // Generic Skills
-            content = (
-                <GenericSkills
-                    data={genericSkills}
-                    handleSelect={handleSelect}
-                />
-            );
+            content = <GenericSkills handleSelect={handleSelect} />;
             break;
         case 7: // Special Skills
             content = (
@@ -106,7 +101,9 @@ function GameAni({ handleSelect }) {
                 <Tab label="Other Unique" />
                 <Tab label="Unused" />
             </Tabs>
-            <div className="AnimationSelect-subCategory">{content}</div>
+            <div className="AnimationSelect-subCategory">
+                <Suspense fallback={<div>Loading</div>}>{content}</Suspense>
+            </div>
         </div>
     );
 }

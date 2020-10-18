@@ -1,15 +1,16 @@
-import React, { useContext } from "react";
+import React, { lazy, Suspense, useContext } from "react";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import Close from "@material-ui/icons/Close";
 
 import Button from "@material-ui/core/Button";
-import DisplayAniList from "./DisplayAniList";
 
 import { generateChainCode } from "./helpers";
 
 import "./styles/ChainMaker.css";
+
+const DisplayAniList = lazy(() => import("./DisplayAniList"));
 
 function ChainMaker({ openControl }) {
     const {
@@ -90,22 +91,24 @@ function ChainMaker({ openControl }) {
                     <Close />
                 </div>
             </div>
-            <div className="ChainMaker-btns">
-                <Button onClick={playAll} className="ChainMaker-btn">
-                    Play All
-                </Button>
-                <Button onClick={add} className="ChainMaker-btn">
-                    Add
-                </Button>
-            </div>
-            <div className="ChainMaker-list">
-                <DisplayAniList
-                    singlePlay={singlePlay}
-                    deleteSingle={deleteSingle}
-                    handleChange={handleChange}
-                    chain={chain}
-                />
-            </div>
+            <Suspense fallback={<div>Loading</div>}>
+                <div className="ChainMaker-btns">
+                    <Button onClick={playAll} className="ChainMaker-btn">
+                        Play All
+                    </Button>
+                    <Button onClick={add} className="ChainMaker-btn">
+                        Add
+                    </Button>
+                </div>
+                <div className="ChainMaker-list">
+                    <DisplayAniList
+                        singlePlay={singlePlay}
+                        deleteSingle={deleteSingle}
+                        handleChange={handleChange}
+                        chain={chain}
+                    />
+                </div>
+            </Suspense>
         </div>
     );
 }

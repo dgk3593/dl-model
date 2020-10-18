@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { lazy, Suspense, useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
-import { ChromePicker } from "react-color";
+// import { ChromePicker } from "react-color";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import { complementaryColor } from "./helpers";
@@ -8,6 +8,10 @@ import { commonBG } from "./consts";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import "./styles/ColorSettings.css";
+
+const ChromePicker = lazy(() =>
+    import("react-color").then(module => ({ default: module.ChromePicker }))
+);
 
 function ColorSettings({ toggleControlOpen, mode }) {
     const dispatch = useContext(DispatchContext);
@@ -90,10 +94,12 @@ function ColorSettings({ toggleControlOpen, mode }) {
                     </Button>
                     <div className="ColorSettings-common">{commonBGBtn}</div>
                 </div>
-                <ChromePicker
-                    color={color}
-                    onChangeComplete={handleChangeComplete}
-                />
+                <Suspense fallback={null}>
+                    <ChromePicker
+                        color={color}
+                        onChangeComplete={handleChangeComplete}
+                    />
+                </Suspense>
             </DialogContent>
         </>
     );

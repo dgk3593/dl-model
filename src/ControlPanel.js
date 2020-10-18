@@ -1,16 +1,17 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
 import Dialog from "@material-ui/core/Dialog";
+import WeaponSelect from "./WeaponSelect";
 import CharaSelect from "./CharaSelect";
 import AnimationSelect from "./AnimationSelect";
-import ColorSettings from "./ColorSettings";
-import WeaponSelect from "./WeaponSelect";
 import FaceSelect from "./FaceSelect";
-import Share from "./Share";
+
+const ColorSettings = lazy(() => import("./ColorSettings"));
+const Share = lazy(() => import("./Share"));
 
 function ControlPanel(props) {
     const { open, mode, toggleControlOpen } = props;
-    let content;
+    let content = null;
     switch (mode) {
         case "model":
         case "texture":
@@ -45,7 +46,6 @@ function ControlPanel(props) {
             content = <Share toggleControlOpen={toggleControlOpen} />;
             break;
         default:
-            content = null;
     }
 
     return (
@@ -56,7 +56,7 @@ function ControlPanel(props) {
             scroll="paper"
             PaperProps={{ classes: { root: "ControlPanel" } }}
         >
-            {content}
+            <Suspense fallback={<div>Loading</div>}>{content}</Suspense>
         </Dialog>
     );
 }

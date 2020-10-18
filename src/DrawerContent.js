@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { lazy, Suspense, useContext } from "react";
 
 import { SettingsContext } from "./context/SettingsContext";
 
-import SettingBtns from "./SettingBtns";
-import ChainMaker from "./ChainMaker";
-import AdvancedSettings from "./AdvancedSettings";
+const SettingBtns = lazy(() => import("./SettingBtns"));
+const ChainMaker = lazy(() => import("./ChainMaker"));
+const AdvancedSettings = lazy(() => import("./AdvancedSettings"));
 
 function DrawerContent({ openControl }) {
     const {
@@ -25,7 +25,7 @@ function DrawerContent({ openControl }) {
         default:
     }
 
-    return <>{content}</>;
+    return <Suspense fallback={<div>Loading</div>}>{content}</Suspense>;
 }
 
 export default DrawerContent;

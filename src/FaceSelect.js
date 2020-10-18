@@ -28,7 +28,7 @@ function FaceSelect(props) {
         toggleControlOpen();
     };
 
-    const faces = Array.from({ length: 9 }, (v, k) => k + 1).map(i => (
+    const faces = Array.from({ length: 9 }, (_, k) => k + 1).map(i => (
         <div
             className={`${classes[`face${i}`]} ${classes["faceBox"]}`}
             style={{ backgroundImage: `url(${imgPath})` }}

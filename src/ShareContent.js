@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { lazy, Suspense, useState, useEffect, useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
 
 import FileCopy from "@material-ui/icons/FileCopy";
@@ -7,12 +7,14 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import IconButton from "@material-ui/core/IconButton";
 import Checkbox from "@material-ui/core/Checkbox";
 import TextField from "@material-ui/core/TextField";
-import QRCode from "qrcode.react";
 
 import { SettingsContext } from "./context/SettingsContext";
 import { defaultSettings, initKey, baseUrl, cameraPositions } from "./consts";
 
 import "./styles/ShareContent.css";
+// import QRCode from "qrcode.react";
+
+const QRCode = lazy(() => import("qrcode.react"));
 
 function ShareContent({ method }) {
     const [show, setShow] = useState({ AC: true, Settings: true });
@@ -201,7 +203,9 @@ function ShareContent({ method }) {
 
     return (
         <div>
-            <div className="ShareContent-main">{display}</div>
+            <div className="ShareContent-main">
+                <Suspense fallback={<div>Loading</div>}>{display}</Suspense>
+            </div>
             <div className="ShareContent-checkboxes">
                 <FormControlLabel
                     control={

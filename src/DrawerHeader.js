@@ -45,6 +45,7 @@ function DrawerHeader({ toggleDrawerOpen }) {
         };
         dispatch(action);
     };
+
     return (
         <div className={classes.root}>
             <span>Settings</span>

@@ -1,11 +1,8 @@
-import React, { useContext, useMemo, useState } from "react";
+import React, { lazy, Suspense, useContext, useMemo, useState } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
-import Filters from "./Filters";
-import CardGallery from "./CardGallery";
-import SetSelect from "./SetSelect";
 import SimpleOptionList from "./SimpleOptionList";
 
 import { FILTERS } from "./consts";
@@ -17,13 +14,17 @@ import { spFaceTextures } from "./consts";
 import { collectFilter, multiCondFilter } from "./helpers";
 import "./styles/CharaSelect.css";
 
+const SetSelect = lazy(() => import("./SetSelect"));
+const Filters = lazy(() => import("./Filters"));
+const CardGallery = lazy(() => import("./CardGallery"));
+
 const options = ["Regular Adventurers", "Allies", "Enemies"];
 
-function CharaSelect(props) {
+function CharaSelect({ toggleControlOpen, mode }) {
     const {
         model: { id: currentId },
     } = useContext(SettingsContext);
-    const { toggleControlOpen, mode } = props;
+
     const [charaSet, setCharaSet] = useState(0);
     const [groupState, groupToggle, setAll] = useToggleGroups(FILTERS);
 
@@ -70,31 +71,40 @@ function CharaSelect(props) {
                 <DialogTitle onClose={toggleControlOpen}>
                     Select a Character
                     <div className="CharaSelect-CharaSetSelect">
-                        <SetSelect
-                            options={options}
-                            handleSelect={setCharaSet}
-                            selectedIndex={charaSet}
-                        />
+                        <Suspense fallback={null}>
+                            <SetSelect
+                                options={options}
+                                handleSelect={setCharaSet}
+                                selectedIndex={charaSet}
+                            />
+                        </Suspense>
                     </div>
                 </DialogTitle>
                 {charaSet === 0 && (
-                    <Filters
-                        filterList={FILTERS}
-                        groupState={groupState}
-                        handleToggle={handleToggle}
-                        resetFilters={resetFilters}
-                    />
+                    <Suspense fallback={null}>
+                        <Filters
+                            filterList={FILTERS}
+                            groupState={groupState}
+                            handleToggle={handleToggle}
+                            resetFilters={resetFilters}
+                        />
+                    </Suspense>
                 )}
             </DialogTop>
             <DialogContent dividers>
-                {charaSet === 0 ? (
-                    <CardGallery list={advList} handleSelect={handleSelect} />
-                ) : (
-                    <SimpleOptionList
-                        options={charaSet === 1 ? allies : enemies}
-                        handleSelect={handleSelect}
-                    />
-                )}
+                <Suspense fallback={<div>Loading</div>}>
+                    {charaSet === 0 ? (
+                        <CardGallery
+                            list={advList}
+                            handleSelect={handleSelect}
+                        />
+                    ) : (
+                        <SimpleOptionList
+                            options={charaSet === 1 ? allies : enemies}
+                            handleSelect={handleSelect}
+                        />
+                    )}
+                </Suspense>
             </DialogContent>
         </>
     );

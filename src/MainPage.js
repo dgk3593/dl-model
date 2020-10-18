@@ -1,4 +1,11 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, {
+    lazy,
+    Suspense,
+    useState,
+    useRef,
+    useEffect,
+    useContext,
+} from "react";
 import useToggleState from "./hooks/useToggleState";
 
 import Menu from "@material-ui/icons/Menu";
@@ -7,10 +14,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useStyles from "./styles/MainPageStyles";
 
 import Display from "./Display";
-import SideBar from "./SideBar";
-import ControlPanel from "./ControlPanel";
 import { SettingsContext } from "./context/SettingsContext";
 import { setInitialSettings } from "./helpers";
+
+const ControlPanel = lazy(() => import("./ControlPanel"));
+const SideBar = lazy(() => import("./SideBar"));
 
 function MainPage({ location }) {
     const classes = useStyles();
@@ -57,28 +65,30 @@ function MainPage({ location }) {
         <>
             {isLoading && <div className={classes.loadingMsg}>Loading...</div>}
             <div className={classes.root}>
-                <CssBaseline />
-                <ControlPanel
-                    mode={currentMode}
-                    open={controlOpen}
-                    toggleControlOpen={toggleControlOpen}
-                />
-                {showSettings && (
-                    <>
-                        <button
-                            onClick={toggleSidebarOpen}
-                            className={classes.openSidebarButton}
-                        >
-                            <Menu />
-                        </button>
+                <Suspense fallback={null}>
+                    <CssBaseline />
+                    <ControlPanel
+                        mode={currentMode}
+                        open={controlOpen}
+                        toggleControlOpen={toggleControlOpen}
+                    />
+                    {initLoadDone && showSettings && (
+                        <>
+                            <button
+                                onClick={toggleSidebarOpen}
+                                className={classes.openSidebarButton}
+                            >
+                                <Menu />
+                            </button>
 
-                        <SideBar
-                            toggleSidebarOpen={toggleSidebarOpen}
-                            open={sidebarOpen}
-                            openControl={openControl}
-                        />
-                    </>
-                )}
+                            <SideBar
+                                toggleSidebarOpen={toggleSidebarOpen}
+                                open={sidebarOpen}
+                                openControl={openControl}
+                            />
+                        </>
+                    )}
+                </Suspense>
                 {initLoadDone && (
                     <main ref={viewerRef} className={classes.content}>
                         <Display

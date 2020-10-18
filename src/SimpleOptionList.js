@@ -15,7 +15,6 @@ function SimpleOptionList(props) {
         >
             {option.name}
         </Button>
-        // <SimpleOption key={option.id} {...option} handleSelect={handleSelect} />
     ));
     return <div className="SimpleOptionList">{buttons}</div>;
 }

@@ -1,10 +1,7 @@
-import React, { useState, useMemo } from "react";
+import React, { lazy, Suspense, useState, useMemo } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
-import WeaponBtn from "./WeaponBtn";
-import SetSelect from "./SetSelect";
-import Filters from "./Filters";
 
 import weapon_list from "./data/weapon_list";
 import specialWeaponList from "./data/specialWeaponList";
@@ -13,6 +10,11 @@ import { collectFilter, multiCondFilter } from "./helpers";
 import "./styles/WeaponSelect.css";
 
 import { WEAPON_FILTERS } from "./consts";
+
+const WeaponBtn = lazy(() => import("./WeaponBtn"));
+const SetSelect = lazy(() => import("./SetSelect"));
+const Filters = lazy(() => import("./Filters"));
+
 const options = ["Regular Weapons", "Unobtainable Weapons", "Extra Weapons"];
 
 function WeaponSelect(props) {
@@ -58,25 +60,28 @@ function WeaponSelect(props) {
                 <DialogTitle onClose={toggleControlOpen}>
                     Select a Weapon
                     <div className="WeaponSelect-WeaponSetSelect">
-                        <SetSelect
-                            options={options}
-                            handleSelect={setWeaponSet}
-                            selectedIndex={weaponSet}
-                        />
+                        <Suspense fallback={null}>
+                            <SetSelect
+                                options={options}
+                                handleSelect={setWeaponSet}
+                                selectedIndex={weaponSet}
+                            />
+                        </Suspense>
                     </div>
                 </DialogTitle>
                 {weaponSet === 0 && (
-                    <Filters
-                        filterList={WEAPON_FILTERS}
-                        groupState={groupState}
-                        handleToggle={handleToggle}
-                        resetFilters={resetFilters}
-                    />
+                    <Suspense fallback={null}>
+                        <Filters
+                            filterList={WEAPON_FILTERS}
+                            groupState={groupState}
+                            handleToggle={handleToggle}
+                            resetFilters={resetFilters}
+                        />
+                    </Suspense>
                 )}
             </DialogTop>
             <DialogContent dividers className="WeaponSelect">
-                {buttons}
-                {/* <CardGallery list={content} handleSelect={handleSelect} /> */}
+                <Suspense fallback={null}>{buttons}</Suspense>
             </DialogContent>
         </>
     );

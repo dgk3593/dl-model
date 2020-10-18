@@ -1,11 +1,12 @@
-import React, { useContext, useCallback } from "react";
+import React, { lazy, Suspense, useContext, useCallback } from "react";
 
 import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";
-import AniControl from "./AniControl";
 import "./styles/Display.css";
 
 import { faceOffsets, cameraPositions, controlsPositions } from "./consts";
+
+const AniControl = lazy(() => import("./AniControl"));
 
 function Display(props) {
     const { viewport } = props;
@@ -64,7 +65,9 @@ function Display(props) {
         <div className="Display">
             {showAniControl && (
                 <div className="Display-AniControl">
-                    <AniControl value={settings.animation.timeScale} />
+                    <Suspense fallback={null}>
+                        <AniControl value={settings.animation.timeScale} />
+                    </Suspense>
                 </div>
             )}
             <ModelViewer
