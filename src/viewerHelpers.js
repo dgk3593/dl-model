@@ -23,10 +23,6 @@ export const loadTexture = url => {
     );
 };
 
-export const isBlade = code => code.startsWith("w302");
-
-export const isSheath = code => isBlade(code) && code.endsWith("02");
-
 export const analyzeWeaponCode = code => {
     const flipped = code.endsWith("b");
     const weaponCode = code.substring(0, code.length - 1);

@@ -2,31 +2,29 @@ import React from "react";
 
 import "./styles/Selector.css";
 
-function GenderSelector({ value, handleClick }) {
+function BladeSelector({ value, handleClick }) {
     return (
         <div className="Selector">
             <div
-                data-name="gender"
-                data-value="Male"
+                data-value="Blade"
                 onClick={handleClick}
                 className={`Selector-Item ${
-                    value === "Male" ? "selected" : ""
+                    value === "Blade" ? "selected" : ""
                 }`}
             >
-                Male
+                Blade
             </div>
             <div
-                data-name="gender"
-                data-value="Female"
+                data-value="Sheath"
                 onClick={handleClick}
                 className={`Selector-Item ${
-                    value === "Female" ? "selected" : ""
+                    value === "Sheath" ? "selected" : ""
                 }`}
             >
-                Female
+                Sheath
             </div>
         </div>
     );
 }
 
-export default GenderSelector;
+export default BladeSelector;

@@ -1,16 +1,16 @@
-.GenderSelector {
+.Selector {
     display: flex;
     justify-content: center;
     cursor: pointer;
     padding: 0.3rem 0.5rem;
 }
 
-.GenderSelector-Gender {
+.Selector-Item {
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(50, 50, 50);
     padding: 0.2rem 1rem;
 }
 
-.GenderSelector-Gender.selected {
+.Selector-Item.selected {
     color: white;
 }

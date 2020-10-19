@@ -12,6 +12,10 @@ import {
 
 import { chainCodeToList } from "./viewerHelpers";
 
+export const isBlade = code => code.startsWith("w302");
+
+export const isSheath = code => isBlade(code) && code.endsWith("02");
+
 // if object is an array, apply callback on each element of object, otherwise, apply call back on the object
 export const callbackOnPotentialArray = (object, callback) => {
     if (Array.isArray(object)) {
