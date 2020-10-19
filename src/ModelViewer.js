@@ -406,7 +406,7 @@ class ModelViewer extends PureComponent {
                 }
             });
             // remove and dispose old model
-            this.scene.remove(this.models.main);
+            this.floor.remove(this.models.main);
             disposeItem(this.models.main);
             // add reference
             this.models.main = model;
