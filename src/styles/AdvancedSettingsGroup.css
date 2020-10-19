@@ -1,35 +1,35 @@
-.OutlineSettings {
+.AdvancedSettingsGroup {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     padding-bottom: 0;
 }
 
-.OutlineSettings-header {
+.AdvancedSettingsGroup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.OutlineSettings-title {
+.AdvancedSettingsGroup-title {
     text-align: center;
     font-weight: 600;
     margin: auto;
 }
 
-.OutlineSettings-options {
+.AdvancedSettingsGroup-options {
     display: grid;
     grid-template-columns: 7.25rem auto;
 }
 
-.OutlineSettings-optionName {
+.AdvancedSettingsGroup-optionName {
     padding: 0.5rem 0.8rem;
 }
 
-.OutlineSettings-slider {
+.AdvancedSettingsGroup-slider {
     padding: 0 1.5rem 0 0.3rem;
 }
 
-.OutlineSettings-reset {
+.AdvancedSettingsGroup-reset {
     display: flex;
     justify-content: center;
 }

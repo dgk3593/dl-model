@@ -22,7 +22,7 @@ function Display(props) {
             weaponLeft,
         },
         animation: { code: chainCode, timeScale },
-        scene: { background: bgColor, initCameraPosition },
+        scene: { rotateSpeed, background: bgColor, initCameraPosition },
         app: { showAniControl, antiAliasing },
         capture: { enable: capture },
         outline: {
@@ -86,6 +86,7 @@ function Display(props) {
                 weaponLeft={weaponLeft}
                 aniCode={chainCode}
                 timeScale={timeScale}
+                rotateSpeed={rotateSpeed}
                 bgColor={bgColor}
                 showOutline={showOutline}
                 outlineColor={outlineColor}

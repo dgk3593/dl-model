@@ -6,6 +6,7 @@ import Close from "@material-ui/icons/Close";
 import "./styles/AdvancedSettings.css";
 
 const OutlineSettings = lazy(() => import("./OutlineSettings"));
+const AutoRotate = lazy(() => import("./AutoRotate"));
 
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
@@ -30,6 +31,8 @@ function AdvancedSettings({ openControl }) {
             <div className="AdvancedSettings-List">
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openControl={openControl} />
+                    <br />
+                    <AutoRotate />
                 </Suspense>
             </div>
         </div>

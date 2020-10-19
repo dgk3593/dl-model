@@ -11,7 +11,7 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import { complementaryColor } from "./helpers";
-import "./styles/OutlineSettings.css";
+import "./styles/AdvancedSettingsGroup.css";
 
 function OutlineSettings({ openControl }) {
     const [expand, toggleExpand] = useToggleState(true);
@@ -51,8 +51,8 @@ function OutlineSettings({ openControl }) {
     } = useContext(SettingsContext);
 
     return (
-        <div className="OutlineSettings">
-            <div className="OutlineSettings-header">
+        <div className="AdvancedSettingsGroup">
+            <div className="AdvancedSettingsGroup-header">
                 <IconButton size="small" onClick={toggleExpand}>
                     {expand ? (
                         <KeyboardArrowUpIcon />
@@ -60,19 +60,19 @@ function OutlineSettings({ openControl }) {
                         <KeyboardArrowDownIcon />
                     )}
                 </IconButton>
-                <div className="OutlineSettings-title">Outline</div>
-                <div className="OutlineSettings-toggle">
+                <div className="AdvancedSettingsGroup-title">Outline</div>
+                <div className="AdvancedSettingsGroup-titleBtn">
                     <Button variant="contained" onClick={toggleOutline}>
                         {enable ? "On" : "Off"}
                     </Button>
                 </div>
             </div>
             <Collapse in={expand} timeout="auto" unmountOnExit>
-                <div className="OutlineSettings-options">
-                    <div className="OutlineSettings-optionName">
+                <div className="AdvancedSettingsGroup-options">
+                    <div className="AdvancedSettingsGroup-optionName">
                         Size: {size}
                     </div>
-                    <div className="OutlineSettings-slider">
+                    <div className="AdvancedSettingsGroup-slider">
                         <Slider
                             value={size}
                             min={1}
@@ -80,10 +80,10 @@ function OutlineSettings({ openControl }) {
                             onChange={handleChange("size")}
                         />
                     </div>
-                    <div className="OutlineSettings-optionName">
+                    <div className="AdvancedSettingsGroup-optionName">
                         Opacity: {opacity * 100}%
                     </div>
-                    <div className="OutlineSettings-slider">
+                    <div className="AdvancedSettingsGroup-slider">
                         <Slider
                             value={opacity}
                             min={0.1}
@@ -92,7 +92,9 @@ function OutlineSettings({ openControl }) {
                             onChange={handleChange("opacity")}
                         />
                     </div>
-                    <div className="OutlineSettings-optionName">Color</div>
+                    <div className="AdvancedSettingsGroup-optionName">
+                        Color
+                    </div>
                     <div>
                         <Button
                             fullWidth
@@ -108,7 +110,7 @@ function OutlineSettings({ openControl }) {
                         </Button>
                     </div>
                 </div>
-                <div className="OutlineSettings-reset">
+                <div className="AdvancedSettingsGroup-reset">
                     <Button onClick={resetSettings} variant="contained">
                         Reset
                     </Button>

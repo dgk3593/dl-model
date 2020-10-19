@@ -15,6 +15,7 @@ export const defaultSettings = {
         weaponLeft: "",
     },
     scene: {
+        rotateSpeed: 0,
         background: "#cccccc",
         initCameraPosition: null,
     },

@@ -22,8 +22,11 @@ import {
 class ModelViewer extends PureComponent {
     animate = () => {
         this.frameId = requestAnimationFrame(this.animate);
+        const dt = this.clock.getDelta();
+        // Rotate the floor
+        this.floor.rotateY((this.props.rotateSpeed * dt * Math.PI) / 2);
+
         if (this.mixers.length > 0) {
-            const dt = this.clock.getDelta();
             this.mixers.forEach(mixer => mixer.update(dt));
         }
         this.renderer.render(this.scene, this.camera);
@@ -69,6 +72,14 @@ class ModelViewer extends PureComponent {
             this.props.bgColor !== "transparent"
                 ? new THREE.Color(this.props.bgColor)
                 : null;
+
+        // Create a floor to add the models on
+        const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
+        floorGeometry.rotateX(Math.PI / 2);
+        const floorMaterial = new THREE.MeshBasicMaterial();
+        floorMaterial.visible = false;
+        this.floor = new THREE.Mesh(floorGeometry, floorMaterial);
+        this.scene.add(this.floor);
 
         // Camera
         this.camera = new THREE.PerspectiveCamera(
@@ -297,7 +308,7 @@ class ModelViewer extends PureComponent {
         }
 
         // Add character to scene
-        this.scene.add(main);
+        this.floor.add(main);
         // main model loading finished
         this.props.setIsLoading(false);
 
@@ -405,7 +416,7 @@ class ModelViewer extends PureComponent {
             model.initRot = model.rotation.clone();
 
             // Add new model to scene
-            this.scene.add(model);
+            this.floor.add(model);
 
             // Apply face to new model
             const faceOverride = this.props.texture !== this.props.faceTexture;
