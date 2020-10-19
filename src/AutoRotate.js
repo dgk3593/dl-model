@@ -66,7 +66,7 @@ function AutoRotate() {
                             value={rotateSpeed}
                             min={-1}
                             max={1}
-                            step={0.1}
+                            step={0.05}
                             onChange={handleChange}
                         />
                     </div>
