@@ -3,7 +3,7 @@ import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { callbackOnPotentialArray } from "./helpers";
+import { callbackOnPotentialArray, isSheath } from "./helpers";
 
 export const loadModel = url => {
     return (
@@ -29,7 +29,7 @@ export const analyzeWeaponCode = code => {
     const model = `${fbxSource}/fbx/${weaponCode}/${weaponCode}.fbx`;
     const texture = `${fbxSource}/fbx/${weaponCode}/${weaponCode}.png`;
 
-    return { model, texture, flipped };
+    return { model, texture, flipped, isSheath: isSheath(weaponCode) };
 };
 
 export const disposeItem = item => {

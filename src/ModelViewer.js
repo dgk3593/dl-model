@@ -258,7 +258,7 @@ class ModelViewer extends PureComponent {
             const texture = weaponInfo.texture;
             changeMaterialToBasic(weaponModel, texture);
             // flip weapon if needed
-            weaponModel.rotation.y = weaponInfo.flipped ? Math.PI : 0;
+            weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
             // add outline to weapon and save reference
             this.outlines[key] = addOutline(weaponModel, this.outlineDetails);
             // add weapon to main body
