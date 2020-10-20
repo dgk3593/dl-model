@@ -64,6 +64,11 @@ export const disposeItem = item => {
     });
 };
 
+const createNewMaterial = ({ type, params }) => {
+    const matType = `Mesh${type}Material`;
+    return new THREE[matType](params);
+};
+
 export const changeMaterialToBasic = (object, texturePath) => {
     if (!object) return;
     object.traverse(child => {
@@ -81,10 +86,11 @@ export const changeMaterialToBasic = (object, texturePath) => {
         // correct texture gamma
         texture.encoding = THREE.sRGBEncoding;
         // define new material
-        const newMaterial = new THREE.MeshBasicMaterial({
-            map: texture,
-            skinning: true,
+        const newMaterial = createNewMaterial({
+            type: "Basic",
+            params: { map: texture, skinning: true },
         });
+
         // dispose old material
         callbackOnPotentialArray(material, obj => {
             if (texturePath && obj.map) obj.map.dispose();
