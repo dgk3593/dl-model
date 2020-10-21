@@ -36,7 +36,7 @@ class ModelViewer extends PureComponent {
     init = () => {
         this.models = {};
         this.modelInfo = {
-            main: this.props.modelId,
+            main: this.props.model,
             weaponLeft: this.props.weaponLeft
                 ? analyzeWeaponCode(this.props.weaponLeft)
                 : "",
@@ -196,7 +196,8 @@ class ModelViewer extends PureComponent {
 
     // Promise to load all models at initialize
     initLoad = () => {
-        const modelPath = `${fbxSource}/fbx/${this.props.model}/${this.props.model}.fbx`;
+        const modelId = this.modelInfo.main;
+        const modelPath = `${fbxSource}/fbx/${modelId}/${modelId}.fbx`;
         const loadMain = loadModel(modelPath);
 
         const weaponRight = this.props.weaponRight
