@@ -198,3 +198,8 @@ export const videoCodecs = [
     "video/webm;codecs=vp8",
     "video/webm",
 ];
+
+export const asciiSet = [
+    " .:-=+*#%@",
+    " .'`^\",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$",
+];
