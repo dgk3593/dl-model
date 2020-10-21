@@ -12,10 +12,10 @@ function FaceSelect(props) {
     const { toggleControlOpen } = props;
     const dispatch = useContext(DispatchContext);
     const {
-        model: { id, faceTexture },
+        model: { faceTexture },
     } = useContext(SettingsContext);
 
-    const classes = useStyles(faceOffsetFix[id] || { x: 0, y: 0 });
+    const classes = useStyles(faceOffsetFix[faceTexture] || { x: 0, y: 0 });
 
     const imgPath = `${fbxSource}/fbx/${faceTexture}/${faceTexture}.png`;
 
