@@ -68,7 +68,10 @@ class ModelViewer extends PureComponent {
 
         // Scene
         this.scene = new THREE.Scene();
-        this.scene.background = null;
+        this.scene.background =
+            this.props.bgColor !== "transparent"
+                ? new THREE.Color(this.props.bgColor)
+                : null;
 
         // Create a floor to add the models on
         const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
@@ -552,6 +555,14 @@ class ModelViewer extends PureComponent {
             }
         }
 
+        // Update background color
+        if (prevProps.bgColor !== this.props.bgColor) {
+            this.scene.background =
+                this.props.bgColor !== "transparent"
+                    ? new THREE.Color(this.props.bgColor)
+                    : null;
+        }
+
         // Update outline visibility
         if (prevProps.showOutline !== this.props.showOutline) {
             const newValue = this.props.showOutline;
@@ -623,7 +634,6 @@ class ModelViewer extends PureComponent {
     render() {
         return (
             <div
-                style={{ backgroundColor: this.props.bgColor }}
                 ref={el => {
                     this.mount = el;
                 }}
