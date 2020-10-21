@@ -4,7 +4,7 @@ import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";
 import "./styles/Display.css";
 
-import { faceOffsets, cameraPositions, controlsPositions } from "./consts";
+import { cameraPositions, controlsPositions } from "./consts";
 
 const AniControl = lazy(() => import("./AniControl"));
 
@@ -13,24 +13,9 @@ function Display(props) {
 
     const settings = useContext(SettingsContext);
     const {
-        model: {
-            id: modelId,
-            texture,
-            faceTexture,
-            face,
-            weaponRight,
-            weaponLeft,
-        },
-        animation: { code: chainCode, timeScale },
+        model: { id: modelId },
         scene: { rotateSpeed, background: bgColor, initCameraPosition },
         app: { showAniControl, antiAliasing },
-        capture: { enable: capture },
-        outline: {
-            enable: showOutline,
-            color: outlineColor,
-            size: outlineSize,
-            opacity: outlineOpacity,
-        },
     } = settings;
 
     const dispatch = useContext(DispatchContext);
@@ -42,8 +27,6 @@ function Display(props) {
         };
         dispatch(action);
     }, [dispatch]);
-
-    const faceOffset = faceOffsets[`face${face}`];
 
     const type = modelId[0];
 
@@ -72,26 +55,16 @@ function Display(props) {
             )}
             <ModelViewer
                 setIsLoading={props.setIsLoading}
-                capture={capture}
-                captureSetting={settings.capture}
+                capture={settings.capture}
                 toggleCapture={toggleCapture}
                 viewport={viewport}
                 cameraPosition={cameraPosition}
                 controlsPosition={controlsPosition}
-                model={modelId}
-                texture={texture}
-                faceTexture={faceTexture}
-                faceOffset={faceOffset}
-                weaponRight={weaponRight}
-                weaponLeft={weaponLeft}
-                aniCode={chainCode}
-                timeScale={timeScale}
+                model={settings.model}
+                outline={settings.outline}
+                animation={settings.animation}
                 rotateSpeed={rotateSpeed}
                 bgColor={bgColor}
-                showOutline={showOutline}
-                outlineColor={outlineColor}
-                outlineSize={outlineSize}
-                outlineOpacity={outlineOpacity}
                 antiAliasing={antiAliasing}
             />
         </div>
