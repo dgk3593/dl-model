@@ -711,6 +711,16 @@ const skills = {
             value: "SKL_100004_04+BOW_SKL_02_01_10000404",
         },
         {
+            icon: "img/advIcons/100015_04_r05.png",
+            name: "Gran Tiara",
+            value: "SKL_100015_04+BOW_SKL_01_01_10001504",
+        },
+        {
+            icon: "img/advIcons/100015_04_r05.png",
+            name: "Gran Gloria",
+            value: "SKL_100015_04+BOW_SKL_02_01_10001504",
+        },
+        {
             icon: "img/advIcons/100029_02_r05.png",
             name: "Brilliant Bolt",
             value: "SKL_100029_02+",
