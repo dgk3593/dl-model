@@ -64,6 +64,14 @@ const adv = [
         weapon: "Lance",
     },
     {
+        cid: "100015_04",
+        name: "Chelle",
+        title: "Unrelenting Beauty",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Bow",
+    },
+    {
         cid: "110342_01",
         name: "Chelsea",
         title: "Obvious Admirer",
