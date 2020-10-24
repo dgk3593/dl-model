@@ -44,36 +44,35 @@ export const analyzeWeaponCode = code => {
 export const disposeItem = item => {
     if (!item) return;
 
-    // keep track of disposed objects
     const disposedList = new Set();
-    // true if object's uuid is not in disposedList
+
     const notDisposed = object => !disposedList.has(object.uuid);
-    // true if object exists and not disposed yet
+
     const needToDispose = object => object && notDisposed(object);
-    // add object's uuid to disposedList and call object's dispose method
+
     const disposeObject = object => {
         disposedList.add(object.uuid);
         object.dispose();
     };
-    // dispose an object if need to
+
     const dispose = object => {
         if (needToDispose(object)) disposeObject(object);
     };
 
     item.traverse(child => {
         if (!child.isMesh) return;
-        // child is mesh
+
         // dispose material
-        callbackOnPotentialArray(child.material, obj => {
-            if (obj.map) dispose(obj.map);
-            dispose(obj);
+        callbackOnPotentialArray(child.material, mat => {
+            if (mat.map) dispose(mat.map);
+            dispose(mat);
         });
         // dispose geometry
         dispose(child.geometry);
     });
 };
 
-const createNewMaterial = ({ materialType, params }) => {
+const createNewMaterial = (materialType, params) => {
     const matType = `Mesh${materialType}Material`;
     return new THREE[matType](params);
 };
@@ -86,13 +85,13 @@ export const changeMaterial = ({
     if (!target) return;
     target.traverse(child => {
         if (!child.isMesh || child.name === "outline") return;
-        // child is mesh and is not outline
+
         const checkParam = `isMesh${materialType}Material`;
         const material = child.material;
 
         // If material is already of desired type and no texture specified, return
         if (Array.isArray(material)) {
-            if (child.material.every(obj => obj[checkParam]) && !texturePath)
+            if (child.material.every(mat => mat[checkParam]) && !texturePath)
                 return;
         } else {
             if (material[checkParam] && !texturePath) return;
@@ -107,10 +106,11 @@ export const changeMaterial = ({
         // correct texture gamma
         texture.encoding = THREE.sRGBEncoding;
         // define new material
-        const newMaterial = createNewMaterial({
-            materialType,
-            params: { map: texture, skinning: true },
-        });
+        const materialParams = {
+            map: texture,
+            skinning: true,
+        };
+        const newMaterial = createNewMaterial(materialType, materialParams);
 
         // dispose old material
         callbackOnPotentialArray(material, mat => {
@@ -222,7 +222,7 @@ export const changeOutlineColor = ({ material }, color) => {
 };
 
 // Add outline to object and return reference to outlines
-export const addOutline = (object, params) => {
+export const createOutline = (object, params) => {
     if (!object) return;
     const outlines = []; // return value
     object.traverse(child => {
@@ -244,55 +244,54 @@ export const addOutline = (object, params) => {
     return outlines;
 };
 
-export const applyFace = ({
+export const applyFaceOffset = ({ target, offset }) => {
+    target.traverse(child => {
+        if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
+            return;
+
+        const faceGroups = child.geometry.groups.filter(k => k.count < 1000);
+        if (faceGroups.length !== 2) return;
+
+        if (offset.x !== 0 || offset.y !== 0) {
+            const start = Math.min(faceGroups[0].start, faceGroups[1].start);
+            const end = Math.max(
+                faceGroups[0].start + faceGroups[0].count,
+                faceGroups[1].start + faceGroups[1].count
+            );
+
+            const uv = child.geometry.attributes.uv;
+            for (let i = start; i < end; i++) {
+                const u = uv.getX(i) + 0.25 * offset.x;
+                const v = uv.getY(i) + 0.25 * offset.y;
+                uv.setXY(i, u, v);
+            }
+            uv.needsUpdate = true;
+        }
+    });
+};
+
+export const applyFaceTexture = ({
     target,
     materialType = "Basic",
     faceTexture,
-    faceOffset,
 }) => {
     const faceTexturePath = getTexturePath(faceTexture);
     const texture = new THREE.TextureLoader().load(faceTexturePath);
     texture.encoding = THREE.sRGBEncoding;
-    const faceMaterial = createNewMaterial({
-        materialType,
-        params: {
-            map: texture,
-            skinning: true,
-        },
-    });
-
+    const materialParams = {
+        map: texture,
+        skinning: true,
+    };
+    const faceMaterial = createNewMaterial(materialType, materialParams);
     target.traverse(child => {
-        if (child.name === "mBodyAll" && child.geometry.groups.length === 3) {
-            const faceGroups = child.geometry.groups.filter(
-                k => k.count < 1000
-            );
-            if (faceGroups.length === 2) {
-                const materialIndexes = faceGroups.map(
-                    group => group.materialIndex
-                );
-                materialIndexes.forEach(
-                    i => (child.material[i] = faceMaterial)
-                );
-                if (faceOffset.x !== 0 || faceOffset.y !== 0) {
-                    const start = Math.min(
-                        faceGroups[0].start,
-                        faceGroups[1].start
-                    );
-                    const end = Math.max(
-                        faceGroups[0].start + faceGroups[0].count,
-                        faceGroups[1].start + faceGroups[1].count
-                    );
+        if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
+            return;
 
-                    const uv = child.geometry.attributes.uv;
-                    for (let i = start; i < end; i++) {
-                        const u = uv.getX(i) + 0.25 * faceOffset.x;
-                        const v = uv.getY(i) + 0.25 * faceOffset.y;
-                        uv.setXY(i, u, v);
-                    }
-                    uv.needsUpdate = true;
-                }
-            }
-        }
+        const faceGroups = child.geometry.groups.filter(k => k.count < 1000);
+        if (faceGroups.length !== 2) return;
+
+        const materialIndexes = faceGroups.map(group => group.materialIndex);
+        materialIndexes.forEach(i => (child.material[i] = faceMaterial));
     });
 };
 

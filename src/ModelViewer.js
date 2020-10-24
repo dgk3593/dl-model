@@ -11,9 +11,10 @@ import {
     analyzeWeaponCode,
     analyzeChainCode,
     loadModel,
-    applyFace,
+    applyFaceTexture,
+    applyFaceOffset,
     disposeItem,
-    addOutline,
+    createOutline,
     changeMaterial,
     changeOpacity,
     changeOutlineSize,
@@ -215,7 +216,7 @@ class ModelViewer extends PureComponent {
         return Promise.all([loadMain, loadWeaponR, loadWeaponL]);
     };
 
-    addWeapon = (weapon, side) => {
+    attachWeapon = (weapon, side) => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
             if (child.name === boneName && child.children.length === 0) {
@@ -224,7 +225,7 @@ class ModelViewer extends PureComponent {
         });
     };
 
-    removeWeapon = side => {
+    detachWeapon = side => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
             if (child.children.length === 1 && child.name === boneName) {
@@ -249,7 +250,7 @@ class ModelViewer extends PureComponent {
             weaponLeft,
         };
         // add outline to main model and save reference
-        this.outlines.main = addOutline(main, this.outlineParams);
+        this.outlines.main = createOutline(main, this.outlineParams);
 
         // Save initial position and rotation
         main.initPos = main.position.clone();
@@ -276,9 +277,9 @@ class ModelViewer extends PureComponent {
             // flip weapon if needed
             weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
             // add outline to weapon and save reference
-            this.outlines[key] = addOutline(weaponModel, this.outlineParams);
+            this.outlines[key] = createOutline(weaponModel, this.outlineParams);
             // add weapon to main body
-            this.addWeapon(this.models[`weapon${side}`], side);
+            this.attachWeapon(this.models[`weapon${side}`], side);
         });
 
         // Apply face settings
@@ -306,12 +307,8 @@ class ModelViewer extends PureComponent {
                 x: faceOffsetX + offsetFix.x,
                 y: faceOffsetY + offsetFix.y,
             };
-            applyFace({
-                target: main,
-                materialType,
-                faceTexture,
-                faceOffset: offset,
-            });
+            applyFaceTexture({ target: main, materialType, faceTexture });
+            applyFaceOffset({ target: main, offset });
         }
 
         // Add character to scene
@@ -414,13 +411,13 @@ class ModelViewer extends PureComponent {
             const { materialType } = this.props.model;
             changeMaterial({ target: model, materialType });
             // add outline
-            this.outlines.main = addOutline(model, this.outlineParams);
+            this.outlines.main = createOutline(model, this.outlineParams);
 
             // remove weapons from old model if they exist
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
                 if (prevProps.model[key]) {
-                    this.removeWeapon(side);
+                    this.detachWeapon(side);
                 }
             });
             // remove and dispose old model
@@ -437,14 +434,12 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-            const faceOverride = texture !== faceTexture;
-            if (faceOffset.x !== 0 || faceOffset.y !== 0 || faceOverride) {
-                applyFace({
-                    target: model,
-                    type: materialType,
-                    faceTexture,
-                    faceOffset,
-                });
+            if (texture !== faceTexture) {
+                applyFaceTexture({ target: model, materialType, faceTexture });
+            }
+
+            if (faceOffset.x !== 0 || faceOffset.y !== 0) {
+                applyFaceOffset({ target: model, offset: faceOffset });
             }
 
             // Add weapons to new model
@@ -454,10 +449,10 @@ class ModelViewer extends PureComponent {
                 // if no weapon, return
                 if (!weaponModel) return;
 
-                this.addWeapon(weaponModel, side);
+                this.attachWeapon(weaponModel, side);
                 // add outline if not exist
                 if (!this.outlines[key]) {
-                    this.outlines[key] = addOutline(
+                    this.outlines[key] = createOutline(
                         weaponModel,
                         this.outlineParams
                     );
@@ -486,6 +481,12 @@ class ModelViewer extends PureComponent {
 
                 let faceOffsetFix = { x: 0, y: 0 };
                 if (faceTextureChanged) {
+                    const { materialType } = this.props.model;
+                    applyFaceTexture({
+                        target: this.models.main,
+                        materialType,
+                        faceTexture,
+                    });
                     const oldFaceOffsetFix = faceOffsetFixList[
                         prevProps.model.faceTexture
                     ] || { x: 0, y: 0 };
@@ -503,13 +504,8 @@ class ModelViewer extends PureComponent {
                     x: dx + faceOffsetFix.x,
                     y: dy + faceOffsetFix.y,
                 };
-                const { materialType } = this.props.model;
-                applyFace({
-                    target: this.models.main,
-                    materialType,
-                    faceTexture,
-                    faceOffset: offset,
-                });
+
+                applyFaceOffset({ target: this.models.main, offset });
             }
         }
 
@@ -519,7 +515,7 @@ class ModelViewer extends PureComponent {
             // if not changed, return
             if (prevProps.model[key] === this.props.model[key]) return;
             // Update weapon
-            this.removeWeapon(side); // remove old weapon
+            this.detachWeapon(side); // remove old weapon
             disposeItem(this.models[key]); // dispose old weapon
             // if current weapon is empty (weapon removed)
             if (!this.props.model[key]) {
@@ -551,9 +547,9 @@ class ModelViewer extends PureComponent {
                 this.models[key].rotation.y = Math.PI;
             }
             // add outline to new weapon
-            this.outlines[key] = addOutline(model, this.outlineParams);
+            this.outlines[key] = createOutline(model, this.outlineParams);
             // add new weapon to main model
-            this.addWeapon(model, side);
+            this.attachWeapon(model, side);
 
             this.props.setIsLoading(false);
         });
