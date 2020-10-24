@@ -1,0 +1,1 @@
+{"version":3,"sources":["AniControl.css"],"names":[],"mappings":"AAAA,mBACI,eAAgB,CAChB,aAAc,CACd,aACJ","file":"22.91cdaab4.chunk.css","sourcesContent":[".AniControl-Slider {\r\n    min-width: 20rem;\r\n    max-width: 80%;\r\n    margin: 0 1rem;\r\n}\r\n"]}
