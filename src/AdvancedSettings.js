@@ -7,6 +7,7 @@ import "./styles/AdvancedSettings.css";
 
 const OutlineSettings = lazy(() => import("./OutlineSettings"));
 const AutoRotate = lazy(() => import("./AutoRotate"));
+const MaterialSettings = lazy(() => import("./MaterialSettings"));
 
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
@@ -31,8 +32,14 @@ function AdvancedSettings({ openControl }) {
             <div className="AdvancedSettings-List">
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openControl={openControl} />
-                    <br />
+                </Suspense>
+                <br />
+                <Suspense fallback={<div>Loading</div>}>
                     <AutoRotate />
+                </Suspense>
+                <br />
+                <Suspense fallback={<div>Loading</div>}>
+                    <MaterialSettings />
                 </Suspense>
             </div>
         </div>

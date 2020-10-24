@@ -98,10 +98,10 @@ class ModelViewer extends PureComponent {
         // Light
         let light = new THREE.DirectionalLight(0xffffff);
         light.position.set(0, 200, 100);
-        // light.intensity = 0.5;
+        light.intensity = 0.5;
         this.scene.add(light);
-        // light = new THREE.AmbientLight(0xaaaaaa);
-        // this.scene.add(light);
+        light = new THREE.AmbientLight(0xaaaaaa);
+        this.scene.add(light);
 
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
@@ -323,22 +323,33 @@ class ModelViewer extends PureComponent {
     }
 
     async componentDidUpdate(prevProps) {
-        console.log("component did update");
+        // console.log("component did update");
 
-        // print updated props to console
-        Object.keys(prevProps).forEach(key => {
-            const oldGroup = prevProps[key];
-            const currentGroup = this.props[key];
-            Object.keys(oldGroup).forEach(subkey => {
-                if (oldGroup[subkey] !== currentGroup[subkey]) {
-                    console.log(
-                        `${key}.${subkey}: ${JSON.stringify(
-                            oldGroup[subkey]
-                        )} to ${JSON.stringify(currentGroup[subkey])}`
-                    );
-                }
-            });
-        });
+        // // print updated props to console
+        // Object.keys(prevProps).forEach(key => {
+        //     const oldValue = prevProps[key];
+        //     const currentValue = this.props[key];
+        //     const subkeys = Object.keys(oldValue);
+        //     if (subkeys.length === 0 || typeof oldValue === "string") {
+        //         if (oldValue !== currentValue) {
+        //             console.log(
+        //                 `${key}: ${JSON.stringify(
+        //                     oldValue
+        //                 )} to ${JSON.stringify(currentValue)}`
+        //             );
+        //         }
+        //     } else {
+        //         subkeys.forEach(subkey => {
+        //             if (oldValue[subkey] !== currentValue[subkey]) {
+        //                 console.log(
+        //                     `${key}.${subkey}: ${JSON.stringify(
+        //                         oldValue[subkey]
+        //                     )} to ${JSON.stringify(currentValue[subkey])}`
+        //                 );
+        //             }
+        //         });
+        //     }
+        // });
 
         // Update viewport
         const viewport = this.props.viewport;
@@ -558,6 +569,12 @@ class ModelViewer extends PureComponent {
 
             this.props.setIsLoading(false);
         });
+
+        // Update material
+        if (prevProps.model.materialType !== this.props.model.materialType) {
+            const { materialType } = this.props.model;
+            changeMaterial({ target: this.models.main, materialType });
+        }
 
         // Update animation
         const { code: aniCode, timeScale } = this.props.animation;

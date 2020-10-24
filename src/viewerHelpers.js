@@ -89,38 +89,52 @@ export const changeMaterial = ({
         const checkParam = `isMesh${materialType}Material`;
         const material = child.material;
 
-        // If material is already of desired type and no texture specified, return
         if (Array.isArray(material)) {
-            if (child.material.every(mat => mat[checkParam]) && !texturePath)
-                return;
+            if (material.every(mat => mat[checkParam]) && !texturePath) return;
+            const changed = new Set();
+
+            material.forEach((mat, i) => {
+                if (changed.has(mat.uuid)) return;
+
+                const texture = texturePath
+                    ? new THREE.TextureLoader().load(texturePath)
+                    : material[i].map;
+
+                texture.encoding = THREE.sRGBEncoding;
+                const materialParams = {
+                    map: texture,
+                    skinning: true,
+                };
+                const newMaterial = createNewMaterial(
+                    materialType,
+                    materialParams
+                );
+                if (texturePath && material[i].map) {
+                    material.map.dispose();
+                }
+                material[i].dispose();
+                child.material[i] = newMaterial;
+
+                changed.add(mat.uuid);
+            });
         } else {
             if (material[checkParam] && !texturePath) return;
-        }
+            const texture = texturePath
+                ? new THREE.TextureLoader().load(texturePath)
+                : material.map;
 
-        const texture = texturePath
-            ? new THREE.TextureLoader().load(texturePath)
-            : Array.isArray(material)
-            ? material[0].map
-            : material.map;
+            texture.encoding = THREE.sRGBEncoding;
+            const materialParams = {
+                map: texture,
+                skinning: true,
+            };
+            const newMaterial = createNewMaterial(materialType, materialParams);
 
-        // correct texture gamma
-        texture.encoding = THREE.sRGBEncoding;
-        // define new material
-        const materialParams = {
-            map: texture,
-            skinning: true,
-        };
-        const newMaterial = createNewMaterial(materialType, materialParams);
+            if (texturePath && material.map) {
+                material.map.dispose();
+            }
+            material.dispose();
 
-        // dispose old material
-        callbackOnPotentialArray(material, mat => {
-            if (texturePath && mat.map) mat.map.dispose();
-            mat.dispose();
-        });
-        // apply new material
-        if (Array.isArray(material)) {
-            child.material = new Array(material.length).fill(newMaterial);
-        } else {
             child.material = newMaterial;
         }
     });

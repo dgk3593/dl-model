@@ -62,6 +62,8 @@ export const initKey = {
     cc: { group: "animation", key: "code" },
 };
 
+export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong"];
+
 export const WEAPON_CODE = {
     Sword: "SWD",
     Blade: "KAT",
