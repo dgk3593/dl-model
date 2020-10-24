@@ -227,7 +227,7 @@ export const createOutline = (object, params) => {
     const outlines = []; // return value
     object.traverse(child => {
         if (!child.isMesh) return;
-        // child is mesh
+
         const outline = child.clone();
         outline.name = "outline";
         outline.visible = params.enable;

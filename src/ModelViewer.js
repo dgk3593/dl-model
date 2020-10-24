@@ -287,9 +287,11 @@ class ModelViewer extends PureComponent {
         const faceOverride = texture !== faceTexture;
         const faceNumber = `face${this.props.model.face}`;
         const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[faceNumber];
-        if (faceOffsetX !== 0 || faceOffsetY !== 0 || faceOverride) {
+        if (faceOffsetX !== 0 || faceOffsetY !== 0) {
             let offsetFix = { x: 0, y: 0 };
             if (faceOverride) {
+                applyFaceTexture({ target: main, materialType, faceTexture });
+
                 const offsetFixBase = faceOffsetFixList[texture] || {
                     x: 0,
                     y: 0,
@@ -307,7 +309,6 @@ class ModelViewer extends PureComponent {
                 x: faceOffsetX + offsetFix.x,
                 y: faceOffsetY + offsetFix.y,
             };
-            applyFaceTexture({ target: main, materialType, faceTexture });
             applyFaceOffset({ target: main, offset });
         }
 
@@ -322,18 +323,22 @@ class ModelViewer extends PureComponent {
     }
 
     async componentDidUpdate(prevProps) {
-        // console.log("component did update");
+        console.log("component did update");
 
-        // // print updated props to console
-        // Object.keys(prevProps).forEach(key => {
-        //     if (prevProps[key] !== this.props[key]) {
-        //         console.log(
-        //             `${key}: ${JSON.stringify(
-        //                 prevProps[key]
-        //             )} to ${JSON.stringify(this.props[key])}`
-        //         );
-        //     }
-        // });
+        // print updated props to console
+        Object.keys(prevProps).forEach(key => {
+            const oldGroup = prevProps[key];
+            const currentGroup = this.props[key];
+            Object.keys(oldGroup).forEach(subkey => {
+                if (oldGroup[subkey] !== currentGroup[subkey]) {
+                    console.log(
+                        `${key}.${subkey}: ${JSON.stringify(
+                            oldGroup[subkey]
+                        )} to ${JSON.stringify(currentGroup[subkey])}`
+                    );
+                }
+            });
+        });
 
         // Update viewport
         const viewport = this.props.viewport;

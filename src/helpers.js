@@ -29,7 +29,6 @@ export const setInitialSettings = params => {
     if (params.length === 0) return;
     let faceTextureDefined = false;
     params.forEach(param => {
-        // if no string given, skip
         if (!param) return;
 
         const [keycode, ...value] = param.split("="); // animation code can have "=" inside
