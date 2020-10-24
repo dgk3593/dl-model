@@ -7,6 +7,7 @@ const defaultAni = "MWM_CMN+CMN_MWM_03";
 
 export const defaultSettings = {
     model: {
+        materialType: "Basic",
         id: "c100001_01",
         texture: "c100001_01",
         faceTexture: "c100001_01",
@@ -14,6 +15,7 @@ export const defaultSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
+    materialParams: {},
     scene: {
         rotateSpeed: 0,
         background: "#cccccc",
@@ -56,6 +58,7 @@ export const initKey = {
     showSettings: { group: "app", key: "showSettings" },
     showOutline: { group: "outline", key: "enable" },
     AA: { group: "app", key: "antiAliasing" },
+    rot: { group: "scene", key: "rotateSpeed" },
     cc: { group: "animation", key: "code" },
 };
 

@@ -10,6 +10,7 @@ const initAniChain = chainCodeToList(defaultSettings.animation.code, "init");
 
 export const initSettings = {
     model: { ...defaultSettings.model },
+    materialParams: { ...defaultSettings.materialParams },
     scene: { ...defaultSettings.scene },
     animation: { ...defaultSettings.animation },
     app: { ...defaultSettings.app },

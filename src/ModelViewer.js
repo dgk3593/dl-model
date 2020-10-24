@@ -7,13 +7,14 @@ import { fbxSource } from "./App";
 import { CAM_PARAMS, faceOffsets } from "./consts";
 import faceOffsetFixList from "./data/face_offset";
 import {
-    changeMaterialToBasic,
+    getModelPath,
     analyzeWeaponCode,
+    analyzeChainCode,
     loadModel,
     applyFace,
     disposeItem,
-    analyzeChainCode,
     addOutline,
+    changeMaterial,
     changeOpacity,
     changeOutlineSize,
     changeOutlineColor,
@@ -47,7 +48,7 @@ class ModelViewer extends PureComponent {
 
         // save reference and specifications for outlines
         this.outlines = {};
-        this.outlineDetails = { ...this.props.outline };
+        this.outlineParams = { ...this.props.outline };
 
         // viewport
         this.viewport = this.props.viewport || {
@@ -198,16 +199,16 @@ class ModelViewer extends PureComponent {
     // Promise to load all models at initialize
     initLoad = () => {
         const modelId = this.modelInfo.main;
-        const modelPath = `${fbxSource}/fbx/${modelId}/${modelId}.fbx`;
+        const modelPath = getModelPath(modelId);
         const loadMain = loadModel(modelPath);
 
         const weaponRight = this.props.model.weaponRight
-            ? this.modelInfo.weaponRight.model
+            ? this.modelInfo.weaponRight.modelPath
             : "";
         const loadWeaponR = loadModel(weaponRight);
 
         const weaponLeft = this.props.model.weaponLeft
-            ? this.modelInfo.weaponLeft.model
+            ? this.modelInfo.weaponLeft.modelPath
             : "";
         const loadWeaponL = loadModel(weaponLeft);
 
@@ -248,14 +249,15 @@ class ModelViewer extends PureComponent {
             weaponLeft,
         };
         // add outline to main model and save reference
-        this.outlines.main = addOutline(main, this.outlineDetails);
+        this.outlines.main = addOutline(main, this.outlineParams);
 
         // Save initial position and rotation
         main.initPos = main.position.clone();
         main.initRot = main.rotation.clone();
 
-        // change the materials to MeshBasicMaterial
-        changeMaterialToBasic(main);
+        // change the material
+        const { materialType } = this.props.model;
+        changeMaterial({ target: main, materialType });
 
         // process weapons
         ["Right", "Left"].forEach(side => {
@@ -265,21 +267,25 @@ class ModelViewer extends PureComponent {
             // add weapon
             const weaponInfo = this.modelInfo[key];
             const weaponModel = this.models[key];
-            const texture = weaponInfo.texture;
-            changeMaterialToBasic(weaponModel, texture);
+            const { texturePath } = weaponInfo;
+            changeMaterial({
+                target: weaponModel,
+                materialType,
+                texturePath,
+            });
             // flip weapon if needed
             weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
             // add outline to weapon and save reference
-            this.outlines[key] = addOutline(weaponModel, this.outlineDetails);
+            this.outlines[key] = addOutline(weaponModel, this.outlineParams);
             // add weapon to main body
             this.addWeapon(this.models[`weapon${side}`], side);
         });
 
         // Apply face settings
-        const { texture, faceTexture } = this.props.model.texture;
+        const { texture, faceTexture } = this.props.model;
         const faceOverride = texture !== faceTexture;
-        const face = `face${this.props.model.face}`;
-        const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[face];
+        const faceNumber = `face${this.props.model.face}`;
+        const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[faceNumber];
         if (faceOffsetX !== 0 || faceOffsetY !== 0 || faceOverride) {
             let offsetFix = { x: 0, y: 0 };
             if (faceOverride) {
@@ -300,7 +306,12 @@ class ModelViewer extends PureComponent {
                 x: faceOffsetX + offsetFix.x,
                 y: faceOffsetY + offsetFix.y,
             };
-            applyFace(main, faceTexture, offset);
+            applyFace({
+                target: main,
+                materialType,
+                faceTexture,
+                faceOffset: offset,
+            });
         }
 
         // Add character to scene
@@ -344,27 +355,29 @@ class ModelViewer extends PureComponent {
             this.props.capture.enable &&
             prevProps.capture.enable !== this.props.capture.enable
         ) {
-            this.videoStream = this.canvas.captureStream(30);
-            this.mediaRecorder = new MediaRecorder(this.videoStream, {
-                mimeType: this.props.capture.codec,
-            });
             this.chunks = [];
-            this.mediaRecorder.ondataavailable = event =>
-                this.chunks.push(event.data);
-            this.mediaRecorder.onstop = () => {
-                this.props.setIsLoading(false);
-                const superBuffer = new Blob(this.chunks, {
-                    type: "video/webm",
+            this.videoStream = this.canvas.captureStream(30);
+            if (!this.mediaRecorder) {
+                this.mediaRecorder = new MediaRecorder(this.videoStream, {
+                    mimeType: this.props.capture.codec,
                 });
-                var url = URL.createObjectURL(superBuffer);
-                var a = document.createElement("a");
-                document.body.appendChild(a);
-                a.style = "display: none";
-                a.href = url;
-                a.download = "animation.webm";
-                a.click();
-                window.URL.revokeObjectURL(url);
-            };
+                this.mediaRecorder.ondataavailable = event =>
+                    this.chunks.push(event.data);
+                this.mediaRecorder.onstop = () => {
+                    this.props.setIsLoading(false);
+                    const superBuffer = new Blob(this.chunks, {
+                        type: "video/webm",
+                    });
+                    var url = URL.createObjectURL(superBuffer);
+                    var a = document.createElement("a");
+                    document.body.appendChild(a);
+                    a.style = "display: none";
+                    a.href = url;
+                    a.download = "animation.webm";
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                };
+            }
             // disable user input
             this.props.setIsLoading(true);
             // play first animation and start capturing
@@ -391,16 +404,17 @@ class ModelViewer extends PureComponent {
 
         // Update main model
         const { texture, faceTexture } = this.props.model;
-        const face = `face${this.props.model.face}`;
-        const faceOffset = faceOffsets[face];
+        const faceNumber = `face${this.props.model.face}`;
+        const faceOffset = faceOffsets[faceNumber];
         if (prevProps.model.id !== this.props.model.id) {
             this.props.setIsLoading(true);
-            const modelPath = `${fbxSource}/fbx/${this.props.model.id}/${this.props.model.id}.fbx`;
+            const modelPath = getModelPath(this.props.model.id);
             // load new model
             const model = await loadModel(modelPath);
-            changeMaterialToBasic(model);
+            const { materialType } = this.props.model;
+            changeMaterial({ target: model, materialType });
             // add outline
-            this.outlines.main = addOutline(model, this.outlineDetails);
+            this.outlines.main = addOutline(model, this.outlineParams);
 
             // remove weapons from old model if they exist
             ["Right", "Left"].forEach(side => {
@@ -423,10 +437,14 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-
             const faceOverride = texture !== faceTexture;
             if (faceOffset.x !== 0 || faceOffset.y !== 0 || faceOverride) {
-                applyFace(model, faceTexture, faceOffset);
+                applyFace({
+                    target: model,
+                    type: materialType,
+                    faceTexture,
+                    faceOffset,
+                });
             }
 
             // Add weapons to new model
@@ -441,7 +459,7 @@ class ModelViewer extends PureComponent {
                 if (!this.outlines[key]) {
                     this.outlines[key] = addOutline(
                         weaponModel,
-                        this.outlineDetails
+                        this.outlineParams
                     );
                 }
             });
@@ -457,11 +475,11 @@ class ModelViewer extends PureComponent {
                 prevProps.model.faceTexture !== faceTexture;
             const faceChanged = prevProps.model.face !== this.props.model.face;
             if (faceChanged || faceTextureChanged) {
-                const oldFace = `face${prevProps.model.face}`;
-                const face = `face${this.props.model.face}`;
+                const oldFaceNumber = `face${prevProps.model.face}`;
+                const faceNumber = `face${this.props.model.face}`;
 
-                const currentOffset = faceOffsets[face];
-                const oldOffset = faceOffsets[oldFace];
+                const currentOffset = faceOffsets[faceNumber];
+                const oldOffset = faceOffsets[oldFaceNumber];
 
                 const dx = currentOffset.x - oldOffset.x;
                 const dy = currentOffset.y - oldOffset.y;
@@ -485,7 +503,13 @@ class ModelViewer extends PureComponent {
                     x: dx + faceOffsetFix.x,
                     y: dy + faceOffsetFix.y,
                 };
-                applyFace(this.models.main, faceTexture, offset);
+                const { materialType } = this.props.model;
+                applyFace({
+                    target: this.models.main,
+                    materialType,
+                    faceTexture,
+                    faceOffset: offset,
+                });
             }
         }
 
@@ -509,18 +533,25 @@ class ModelViewer extends PureComponent {
             this.props.setIsLoading(true);
 
             this.modelInfo[key] = analyzeWeaponCode(this.props.model[key]);
-            const { model: modelPath, texture } = this.modelInfo[key];
+            const { modelPath, texturePath } = this.modelInfo[key];
 
             // load new model
             const model = await loadModel(modelPath);
             this.models[key] = model;
+
             // process new weapon
-            changeMaterialToBasic(this.models[key], texture);
+            const { materialType } = this.props.model;
+            changeMaterial({
+                target: this.models[key],
+                materialType,
+                texturePath,
+            });
+
             if (this.modelInfo[key].flipped) {
                 this.models[key].rotation.y = Math.PI;
             }
             // add outline to new weapon
-            this.outlines[key] = addOutline(model, this.outlineDetails);
+            this.outlines[key] = addOutline(model, this.outlineParams);
             // add new weapon to main model
             this.addWeapon(model, side);
 
@@ -568,7 +599,7 @@ class ModelViewer extends PureComponent {
         } = this.props.outline;
         // Update outline visibility
         if (prevProps.outline.enable !== showOutline) {
-            this.outlineDetails.enable = showOutline;
+            this.outlineParams.enable = showOutline;
 
             Object.keys(this.outlines).forEach(key => {
                 if (!this.outlines[key]) return;
@@ -580,7 +611,7 @@ class ModelViewer extends PureComponent {
 
         // Update outline size
         if (prevProps.outline.size !== outlineSize) {
-            this.outlineDetails.size = outlineSize;
+            this.outlineParams.size = outlineSize;
 
             Object.keys(this.outlines).forEach(key => {
                 if (!this.outlines[key]) return;
@@ -592,7 +623,7 @@ class ModelViewer extends PureComponent {
 
         // Update outline opacity
         if (prevProps.outline.opacity !== outlineOpacity) {
-            this.outlineDetails.opacity = outlineOpacity;
+            this.outlineParams.opacity = outlineOpacity;
 
             Object.keys(this.outlines).forEach(key => {
                 if (!this.outlines[key]) return;
@@ -604,7 +635,7 @@ class ModelViewer extends PureComponent {
 
         // Update outline color
         if (prevProps.outline.color !== outlineColor) {
-            this.outlineDetails.color = outlineColor;
+            this.outlineParams.color = outlineColor;
             Object.keys(this.outlines).forEach(key => {
                 if (!this.outlines[key]) return;
                 this.outlines[key].forEach(outline =>
