@@ -24,7 +24,7 @@ function MaterialSettings() {
     const dispatch = useContext(DispatchContext);
 
     const resetSettings = event => {
-        event.StopPropgation();
+        event.stopPropgation();
         const action = {
             type: "reset",
             key: "model",

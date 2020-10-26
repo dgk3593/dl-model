@@ -17,7 +17,7 @@ function OutlineSettings({ openControl }) {
     const [expand, toggleExpand] = useToggleState(false);
     const dispatch = useContext(DispatchContext);
     const toggleOutline = event => {
-        event.StopPropagation();
+        event.stopPropagation();
         const action = {
             type: "update",
             key: "outline",

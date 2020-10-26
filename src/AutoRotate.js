@@ -31,7 +31,7 @@ function AutoRotate() {
     };
 
     const resetSettings = event => {
-        event.StopPropagation();
+        event.stopPropagation();
         const action = {
             type: "reset",
             key: "scene",
