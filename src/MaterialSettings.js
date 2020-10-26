@@ -23,7 +23,8 @@ function MaterialSettings() {
 
     const dispatch = useContext(DispatchContext);
 
-    const resetSettings = () => {
+    const resetSettings = event => {
+        event.StopPropgation();
         const action = {
             type: "reset",
             key: "model",
@@ -50,8 +51,11 @@ function MaterialSettings() {
 
     return (
         <div className="AdvancedSettingsGroup">
-            <div className="AdvancedSettingsGroup-header">
-                <IconButton size="small" onClick={toggleExpand}>
+            <div
+                className="AdvancedSettingsGroup-header"
+                onClick={toggleExpand}
+            >
+                <IconButton size="small">
                     {expand ? (
                         <KeyboardArrowUpIcon />
                     ) : (

@@ -16,7 +16,8 @@ import "./styles/AdvancedSettingsGroup.css";
 function OutlineSettings({ openControl }) {
     const [expand, toggleExpand] = useToggleState(false);
     const dispatch = useContext(DispatchContext);
-    const toggleOutline = () => {
+    const toggleOutline = event => {
+        event.StopPropagation();
         const action = {
             type: "update",
             key: "outline",
@@ -52,8 +53,11 @@ function OutlineSettings({ openControl }) {
 
     return (
         <div className="AdvancedSettingsGroup">
-            <div className="AdvancedSettingsGroup-header">
-                <IconButton size="small" onClick={toggleExpand}>
+            <div
+                className="AdvancedSettingsGroup-header"
+                onClick={toggleExpand}
+            >
+                <IconButton size="small">
                     {expand ? (
                         <KeyboardArrowUpIcon />
                     ) : (

@@ -30,7 +30,8 @@ function AutoRotate() {
         dispatch(action);
     };
 
-    const resetSettings = () => {
+    const resetSettings = event => {
+        event.StopPropagation();
         const action = {
             type: "reset",
             key: "scene",
@@ -41,8 +42,11 @@ function AutoRotate() {
 
     return (
         <div className="AdvancedSettingsGroup">
-            <div className="AdvancedSettingsGroup-header">
-                <IconButton size="small" onClick={toggleExpand}>
+            <div
+                className="AdvancedSettingsGroup-header"
+                onClick={toggleExpand}
+            >
+                <IconButton size="small">
                     {expand ? (
                         <KeyboardArrowUpIcon />
                     ) : (
