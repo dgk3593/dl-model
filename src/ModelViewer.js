@@ -290,7 +290,11 @@ class ModelViewer extends PureComponent {
         if (faceOffsetX !== 0 || faceOffsetY !== 0) {
             let offsetFix = { x: 0, y: 0 };
             if (faceOverride) {
-                applyFaceTexture({ target: main, materialType, faceTexture });
+                applyFaceTexture({
+                    target: main,
+                    materialType,
+                    textureId: faceTexture,
+                });
 
                 const offsetFixBase = faceOffsetFixList[texture] || {
                     x: 0,
@@ -451,7 +455,11 @@ class ModelViewer extends PureComponent {
 
             // Apply face to new model
             if (texture !== faceTexture) {
-                applyFaceTexture({ target: model, materialType, faceTexture });
+                applyFaceTexture({
+                    target: model,
+                    materialType,
+                    textureId: faceTexture,
+                });
             }
 
             if (faceOffset.x !== 0 || faceOffset.y !== 0) {
@@ -501,7 +509,7 @@ class ModelViewer extends PureComponent {
                     applyFaceTexture({
                         target: this.models.main,
                         materialType,
-                        faceTexture,
+                        textureId: faceTexture,
                     });
                     const oldFaceOffsetFix = faceOffsetFixList[
                         prevProps.model.faceTexture

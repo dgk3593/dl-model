@@ -91,16 +91,14 @@ export const changeMaterial = ({
 
         if (Array.isArray(material)) {
             if (material.every(mat => mat[checkParam]) && !texturePath) return;
-            const changed = new Set();
 
             material.forEach((mat, i) => {
-                if (changed.has(mat.uuid)) return;
-
                 const texture = texturePath
                     ? new THREE.TextureLoader().load(texturePath)
                     : material[i].map;
 
                 texture.encoding = THREE.sRGBEncoding;
+
                 const materialParams = {
                     map: texture,
                     skinning: true,
@@ -109,13 +107,13 @@ export const changeMaterial = ({
                     materialType,
                     materialParams
                 );
+                newMaterial.name = mat.name;
+
                 if (texturePath && material[i].map) {
                     material.map.dispose();
                 }
                 material[i].dispose();
                 child.material[i] = newMaterial;
-
-                changed.add(mat.uuid);
             });
         } else {
             if (material[checkParam] && !texturePath) return;
@@ -129,6 +127,7 @@ export const changeMaterial = ({
                 skinning: true,
             };
             const newMaterial = createNewMaterial(materialType, materialParams);
+            newMaterial.name = material.name;
 
             if (texturePath && material.map) {
                 material.map.dispose();
@@ -258,55 +257,72 @@ export const createOutline = (object, params) => {
     return outlines;
 };
 
-export const applyFaceOffset = ({ target, offset }) => {
+const applyOffset = part => ({ target, offset }) => {
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
             return;
 
-        const faceGroups = child.geometry.groups.filter(k => k.count < 1000);
-        if (faceGroups.length !== 2) return;
+        const targetGroup = child.geometry.groups.find(
+            group => child.material[group.materialIndex].name === `mt${part}CH`
+        );
+        if (!targetGroup) return;
 
-        if (offset.x !== 0 || offset.y !== 0) {
-            const start = Math.min(faceGroups[0].start, faceGroups[1].start);
-            const end = Math.max(
-                faceGroups[0].start + faceGroups[0].count,
-                faceGroups[1].start + faceGroups[1].count
-            );
-
-            const uv = child.geometry.attributes.uv;
-            for (let i = start; i < end; i++) {
-                const u = uv.getX(i) + 0.25 * offset.x;
-                const v = uv.getY(i) + 0.25 * offset.y;
-                uv.setXY(i, u, v);
-            }
-            uv.needsUpdate = true;
+        const { start, count } = targetGroup;
+        const end = start + count;
+        const uv = child.geometry.attributes.uv;
+        for (let i = start; i < end; i++) {
+            const u = uv.getX(i) + 0.25 * offset.x;
+            const v = uv.getY(i) + 0.25 * offset.y;
+            uv.setXY(i, u, v);
         }
+        uv.needsUpdate = true;
     });
 };
 
-export const applyFaceTexture = ({
+export const applyEyeOffset = applyOffset("Eye");
+export const applyMouthOffset = applyOffset("Mouth");
+
+export const applyFaceOffset = input => {
+    if (input.offset.x === 0 && input.offset.y === 0) return;
+    applyEyeOffset(input);
+    applyMouthOffset(input);
+};
+
+const applyTexture = part => ({
     target,
     materialType = "Basic",
-    faceTexture,
+    textureId,
 }) => {
-    const faceTexturePath = getTexturePath(faceTexture);
-    const texture = new THREE.TextureLoader().load(faceTexturePath);
+    const texturePath = getTexturePath(textureId);
+    const texture = new THREE.TextureLoader().load(texturePath);
     texture.encoding = THREE.sRGBEncoding;
+
     const materialParams = {
         map: texture,
         skinning: true,
     };
-    const faceMaterial = createNewMaterial(materialType, materialParams);
+    const newMaterial = createNewMaterial(materialType, materialParams);
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
             return;
+        const targetGroup = child.geometry.groups.find(
+            group => child.material[group.materialIndex].name === `mt${part}CH`
+        );
+        if (!targetGroup) return;
 
-        const faceGroups = child.geometry.groups.filter(k => k.count < 1000);
-        if (faceGroups.length !== 2) return;
+        const { materialIndex } = targetGroup;
+        newMaterial.name = child.material[materialIndex].name;
 
-        const materialIndexes = faceGroups.map(group => group.materialIndex);
-        materialIndexes.forEach(i => (child.material[i] = faceMaterial));
+        child.material[materialIndex] = newMaterial;
     });
+};
+
+export const applyEyeTexture = applyTexture("Eye");
+export const applyMouthTexture = applyTexture("Mouth");
+
+export const applyFaceTexture = input => {
+    applyEyeTexture(input);
+    applyMouthTexture(input);
 };
 
 // Chain Code is invalid if starts with the character "+"
