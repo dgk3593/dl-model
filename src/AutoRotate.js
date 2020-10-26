@@ -13,7 +13,7 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 
 function AutoRotate() {
-    const [expand, toggleExpand] = useToggleState(true);
+    const [expand, toggleExpand] = useToggleState(false);
 
     const {
         scene: { rotateSpeed },

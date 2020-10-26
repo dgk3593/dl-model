@@ -14,7 +14,7 @@ import { complementaryColor } from "./helpers";
 import "./styles/AdvancedSettingsGroup.css";
 
 function OutlineSettings({ openControl }) {
-    const [expand, toggleExpand] = useToggleState(true);
+    const [expand, toggleExpand] = useToggleState(false);
     const dispatch = useContext(DispatchContext);
     const toggleOutline = () => {
         const action = {
