@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext, useMemo, useState } from "react";
+import { lazy, Suspense, useContext, useMemo, useState } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 

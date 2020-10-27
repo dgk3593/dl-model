@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Fragment, useState } from "react";
 
 import WeaponSelector from "./WeaponSelector";
 import Button from "@material-ui/core/Button";
@@ -33,7 +33,7 @@ function OtherUnique({ handleSelect }) {
             </Button>
         ));
         return (
-            <React.Fragment key={chara}>
+            <Fragment key={chara}>
                 <div className="OtherUnique-chara">
                     <div className="OtherUnique-charaInfo">
                         <img
@@ -45,7 +45,7 @@ function OtherUnique({ handleSelect }) {
                     </div>
                     <div className="OtherUnique-btns">{buttons}</div>
                 </div>
-            </React.Fragment>
+            </Fragment>
         );
     });
 

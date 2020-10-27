@@ -1,11 +1,4 @@
-import React, {
-    lazy,
-    Suspense,
-    useState,
-    useRef,
-    useEffect,
-    useContext,
-} from "react";
+import { lazy, Suspense, useState, useRef, useEffect, useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
 
 import Menu from "@material-ui/icons/Menu";

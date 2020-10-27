@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext, useCallback } from "react";
+import { lazy, Suspense, useContext, useCallback } from "react";
 
 import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";

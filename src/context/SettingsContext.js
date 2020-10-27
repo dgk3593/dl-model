@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import { settingsReducer } from "../reducer/settingsReducer";
 import { defaultSettings } from "../consts";
 import { chainCodeToList } from "../viewerHelpers";

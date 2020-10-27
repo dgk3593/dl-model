@@ -1,4 +1,3 @@
-import React from "react";
 import useToggleState from "./hooks/useToggleState";
 
 import Button from "@material-ui/core/Button";

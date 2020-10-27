@@ -1,4 +1,3 @@
-import React from "react";
 import GlowCheckbox from "./GlowCheckbox";
 import "./styles/FilterGroup.css";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { WEAPON_LIST } from "./consts";
 
 import "./styles/WeaponSelector.css";

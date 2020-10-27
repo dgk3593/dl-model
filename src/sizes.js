@@ -5,7 +5,7 @@ const sizes = {
     lg: "1199.98px",
 };
 
-export default {
+const outputSize = {
     up(size) {
         return `@media (min-width: ${sizes[size]})`;
     },
@@ -13,3 +13,5 @@ export default {
         return `@media (max-width: ${sizes[size]})`;
     },
 };
+
+export default outputSize;

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useEffect, useContext } from "react";
+import { lazy, Suspense, useState, useEffect, useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
 
 import FileCopy from "@material-ui/icons/FileCopy";

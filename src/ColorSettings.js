@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useContext } from "react";
+import { lazy, Suspense, useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
 // import { ChromePicker } from "react-color";
 

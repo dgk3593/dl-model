@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import WeaponSelector from "./WeaponSelector";
 import ButtonWithIcons from "./ButtonWithIcons";

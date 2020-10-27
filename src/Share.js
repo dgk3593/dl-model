@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import ShareContent from "./ShareContent";

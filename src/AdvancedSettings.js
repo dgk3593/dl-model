@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense, useContext } from "react";
 
 import { DispatchContext } from "./context/SettingsContext";
 import Close from "@material-ui/icons/Close";

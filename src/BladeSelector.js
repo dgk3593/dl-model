@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./styles/Selector.css";
 
 function BladeSelector({ value, handleClick }) {

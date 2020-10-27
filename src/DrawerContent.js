@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense, useContext } from "react";
 
 import { SettingsContext } from "./context/SettingsContext";
 

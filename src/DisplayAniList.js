@@ -1,5 +1,3 @@
-import React from "react";
-
 import DisplayAni from "./DisplayAni";
 
 function DisplayAniList(props) {

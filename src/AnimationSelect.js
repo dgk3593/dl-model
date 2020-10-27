@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useContext } from "react";
+import { lazy, Suspense, useState, useContext } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import TabPanel from "./TabPanel";

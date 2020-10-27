@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useContext } from "react";
+import { lazy, Suspense, useState, useContext } from "react";
 import useToggleState from "./hooks/useToggleState";
 import "./styles/WeaponBtn.css";
 

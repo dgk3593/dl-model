@@ -1,5 +1,3 @@
-import React from "react";
-
 import { SettingsProvider } from "./context/SettingsContext";
 
 import { Route, HashRouter } from "react-router-dom";

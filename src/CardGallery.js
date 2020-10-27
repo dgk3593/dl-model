@@ -1,4 +1,3 @@
-import React from "react";
 import AdvCard from "./AdvCard";
 import "./styles/CardGallery.css";
 

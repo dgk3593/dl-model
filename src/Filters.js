@@ -1,4 +1,3 @@
-import React from "react";
 import FilterGroup from "./FilterGroup";
 import "./styles/Filters.css";
 

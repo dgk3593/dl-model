@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./styles/GunModeSelector.css";
 
 function GunModeSelector({ value, handleClick }) {

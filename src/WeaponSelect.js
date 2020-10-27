@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useMemo } from "react";
+import { lazy, Suspense, useState, useMemo } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
