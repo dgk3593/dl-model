@@ -28,6 +28,7 @@ export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
 export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;
 
 export const analyzeWeaponCode = code => {
+    if (!code) return "";
     const flipped = code.endsWith("b");
     const weaponCode = code.substring(0, code.length - 1);
     const modelPath = getModelPath(weaponCode);
@@ -110,7 +111,7 @@ export const changeMaterial = ({
                 newMaterial.name = mat.name;
 
                 if (texturePath && material[i].map) {
-                    material.map.dispose();
+                    material[i].map.dispose();
                 }
                 material[i].dispose();
                 child.material[i] = newMaterial;
@@ -164,6 +165,7 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
 const replaceMaterial = (object, newMaterial) => {
     // dispose old material
     callbackOnPotentialArray(object.material, obj => {
+        // obj.map?.dispose?.()
         if (obj.map) obj.map.dispose();
         obj.dispose();
     });

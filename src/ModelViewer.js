@@ -39,12 +39,8 @@ class ModelViewer extends PureComponent {
         this.models = {};
         this.modelInfo = {
             main: this.props.model.id,
-            weaponLeft: this.props.model.weaponLeft
-                ? analyzeWeaponCode(this.props.model.weaponLeft)
-                : "",
-            weaponRight: this.props.model.weaponRight
-                ? analyzeWeaponCode(this.props.model.weaponRight)
-                : "",
+            weaponLeft: analyzeWeaponCode(this.props.model.weaponLeft),
+            weaponRight: analyzeWeaponCode(this.props.model.weaponRight),
         };
 
         // save reference and specifications for outlines
@@ -138,7 +134,7 @@ class ModelViewer extends PureComponent {
 
     // add Animation Chain
     addAnimationChain = async (object, animationChain, timeScale) => {
-        if (!animationChain) return; // If no Animation, return
+        if (!animationChain) return;
 
         const [fileList, animationList] = analyzeChainCode(animationChain);
         this.nAni = animationList.length;
@@ -151,12 +147,10 @@ class ModelViewer extends PureComponent {
         this._aniIdx = 0;
         object.mixer.timeScale = timeScale; // Global timeScale
         object.mixer.addEventListener("finished", this.playNextAni);
-        this.aniSettings = animationList.map(ani => {
-            return {
-                timeScale: ani.timeScale,
-                repetitions: ani.repetitions,
-            };
-        });
+        this.aniSettings = animationList.map(ani => ({
+            timeScale: ani.timeScale,
+            repetitions: ani.repetitions,
+        }));
         const batchLoader = fileList.map(file => {
             const path = `${fbxSource}/fbx/${file}.fbx`;
             return loadModel(path);
@@ -278,7 +272,7 @@ class ModelViewer extends PureComponent {
             weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
             // add outline to weapon and save reference
             this.outlines[key] = createOutline(weaponModel, this.outlineParams);
-            // add weapon to main body
+            // attach weapon to main body
             this.attachWeapon(this.models[`weapon${side}`], side);
         });
 
@@ -368,10 +362,7 @@ class ModelViewer extends PureComponent {
         }
 
         // Capture
-        if (
-            this.props.capture.enable &&
-            prevProps.capture.enable !== this.props.capture.enable
-        ) {
+        if (this.props.capture.enable && !prevProps.capture.enable) {
             this.chunks = [];
             this.videoStream = this.canvas.captureStream(30);
             if (!this.mediaRecorder) {
@@ -433,7 +424,7 @@ class ModelViewer extends PureComponent {
             // add outline
             this.outlines.main = createOutline(model, this.outlineParams);
 
-            // remove weapons from old model if they exist
+            // detach weapons from old model if they exist
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
                 if (prevProps.model[key]) {
@@ -466,7 +457,7 @@ class ModelViewer extends PureComponent {
                 applyFaceOffset({ target: model, offset: faceOffset });
             }
 
-            // Add weapons to new model
+            // Attach weapons to new model
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
                 const weaponModel = this.models[key];
@@ -572,7 +563,7 @@ class ModelViewer extends PureComponent {
             }
             // add outline to new weapon
             this.outlines[key] = createOutline(model, this.outlineParams);
-            // add new weapon to main model
+            // attach new weapon to main model
             this.attachWeapon(model, side);
 
             this.props.setIsLoading(false);
