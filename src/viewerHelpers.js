@@ -283,6 +283,7 @@ const applyOffset = part => ({ target, offset }) => {
 
 export const applyEyeOffset = applyOffset("Eye");
 export const applyMouthOffset = applyOffset("Mouth");
+export const applyBodyOffset = applyOffset("BodyAll");
 
 export const applyFaceOffset = input => {
     if (input.offset.x === 0 && input.offset.y === 0) return;
@@ -321,6 +322,7 @@ const applyTexture = part => ({
 
 export const applyEyeTexture = applyTexture("Eye");
 export const applyMouthTexture = applyTexture("Mouth");
+export const applyBodyTexture = applyTexture("BodyAll");
 
 export const applyFaceTexture = input => {
     applyEyeTexture(input);
