@@ -281,7 +281,7 @@ class ModelViewer extends PureComponent {
         const faceOverride = texture !== faceTexture;
         const faceNumber = `face${this.props.model.face}`;
         const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[faceNumber];
-        if (faceOffsetX !== 0 || faceOffsetY !== 0) {
+        if (faceOffsetX !== 0 || faceOffsetY !== 0 || faceOverride) {
             let offsetFix = { x: 0, y: 0 };
             if (faceOverride) {
                 applyFaceTexture({
