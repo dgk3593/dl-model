@@ -11,6 +11,7 @@ const listStyle = {
     backgroundColor: "rgba(255,255,255,0.5)",
     width: "100%",
     paddingBottom: 0,
+    marginBottom: "0.8rem",
 };
 
 const typographyProps = {
@@ -117,7 +118,6 @@ function SettingBtns({ openControl }) {
                     )}
                 </List>
             </div>
-            <br />
             {/* Animation Related */}
             <div style={listStyle}>
                 <List dense disablePadding component="nav">
@@ -140,7 +140,6 @@ function SettingBtns({ openControl }) {
                     </ListItem>
                 </List>
             </div>
-            <br />
             {/* Other settings */}
             <div style={listStyle}>
                 <List dense disablePadding component="nav">
@@ -205,7 +204,6 @@ function SettingBtns({ openControl }) {
                     </ListItem>
                 </List>
             </div>
-            <br />
             <div className="SettingBtns-Share">
                 <Button
                     variant="contained"

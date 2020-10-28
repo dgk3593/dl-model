@@ -8,16 +8,11 @@ export const DispatchContext = createContext();
 
 const initAniChain = chainCodeToList(defaultSettings.animation.code, "init");
 
-export const initSettings = {
-    model: { ...defaultSettings.model },
-    materialParams: { ...defaultSettings.materialParams },
-    scene: { ...defaultSettings.scene },
-    animation: { ...defaultSettings.animation },
-    app: { ...defaultSettings.app },
-    outline: { ...defaultSettings.outline },
-    capture: { ...defaultSettings.capture },
-    chainMaker: { chain: initAniChain },
-};
+const initSettings = { chainMaker: { chain: initAniChain } };
+Object.keys(defaultSettings).forEach(
+    key => (initSettings[key] = { ...defaultSettings[key] })
+);
+export { initSettings };
 
 export function SettingsProvider(props) {
     const [settings, dispatch] = useReducer(settingsReducer, initSettings);

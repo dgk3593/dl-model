@@ -197,14 +197,10 @@ class ModelViewer extends PureComponent {
         const modelPath = getModelPath(modelId);
         const loadMain = loadModel(modelPath);
 
-        const weaponRight = this.props.model.weaponRight
-            ? this.modelInfo.weaponRight.modelPath
-            : "";
+        const weaponRight = this.modelInfo.weaponRight?.modelPath;
         const loadWeaponR = loadModel(weaponRight);
 
-        const weaponLeft = this.props.model.weaponLeft
-            ? this.modelInfo.weaponLeft.modelPath
-            : "";
+        const weaponLeft = this.modelInfo.weaponLeft?.modelPath;
         const loadWeaponL = loadModel(weaponLeft);
 
         return Promise.all([loadMain, loadWeaponR, loadWeaponL]);

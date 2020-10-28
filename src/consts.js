@@ -5,6 +5,62 @@ export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
 const defaultAni = "MWM_CMN+CMN_MWM_03";
 
+export const matParamsDetails = {
+    wireframe: {
+        type: "boolean",
+        default: false,
+    },
+    useTexture: {
+        type: "boolean",
+        default: true,
+    },
+    color: {
+        type: "color",
+        default: "#ffffff",
+    },
+    emissive: {
+        type: "color",
+        default: "#000000",
+    },
+    emissiveIntensity: {
+        type: "number",
+        default: 1,
+        min: 0,
+        max: 1,
+        step: 0.05,
+    },
+    specular: {
+        type: "color",
+        default: "#111111",
+    },
+    metalness: {
+        type: "number",
+        default: 0,
+        min: 0,
+        max: 1,
+        step: 0.05,
+    },
+    roughness: {
+        type: "number",
+        default: 1,
+        min: 0,
+        max: 1,
+        step: 0.05,
+    },
+    shininess: {
+        type: "number",
+        default: 30,
+        min: 1,
+        max: 100,
+        step: 1,
+    },
+};
+
+const defaultMatParams = {};
+Object.keys(matParamsDetails).forEach(key => {
+    defaultMatParams[key] = matParamsDetails[key].default;
+});
+
 export const defaultSettings = {
     model: {
         materialType: "Basic",
@@ -15,7 +71,7 @@ export const defaultSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    materialParams: {},
+    materialParams: { ...defaultMatParams },
     scene: {
         rotateSpeed: 0,
         background: "#cccccc",
@@ -30,7 +86,6 @@ export const defaultSettings = {
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
-        capture: false,
     },
     outline: {
         enable: true,
@@ -63,6 +118,16 @@ export const initKey = {
 };
 
 export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];
+
+export const materialCommonParams = ["wireframe", "useTexture", "color"];
+
+export const materialExtraParams = {
+    Basic: [],
+    Toon: ["emissive", "emissiveIntensity", "gradientMap"],
+    Lambert: ["emissive", "emissiveIntensity"],
+    Phong: ["emissive", "emissiveIntensity", "specular", "shininess"],
+    Standard: ["emissive", "emissiveIntensity", "metalness", "roughness"],
+};
 
 export const WEAPON_CODE = {
     Sword: "SWD",
