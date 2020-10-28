@@ -1,5 +1,13 @@
 const allies = [
     {
+        id: "c110018_02",
+        name: "Opera Karina",
+    },
+    {
+        id: "c110370_01",
+        name: "Lapis",
+    },
+    {
         id: "c100009_01",
         name: "Zethia",
     },

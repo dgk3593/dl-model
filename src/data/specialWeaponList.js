@@ -1,4 +1,6 @@
 const specialWeaponList = [
+    { wid: "w399018_01", name: "Lapis' Revolver 1" },
+    { wid: "w399020_01", name: "Lapis' Revolver 2" },
     { wid: "w305038_01", name: "Unused Lance" },
     { wid: "w308035_01", name: "Unused Staff" },
     { wid: "w306001_02", name: "Arrow" },
