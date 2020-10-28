@@ -7,22 +7,27 @@ const defaultAni = "MWM_CMN+CMN_MWM_03";
 
 export const matParamsDetails = {
     wireframe: {
+        name: "Wireframe",
         type: "boolean",
         default: false,
     },
     useTexture: {
+        name: "Texture",
         type: "boolean",
         default: true,
     },
     color: {
+        name: "Color",
         type: "color",
         default: "#ffffff",
     },
     emissive: {
+        name: "Emissive",
         type: "color",
         default: "#000000",
     },
     emissiveIntensity: {
+        name: "Emissive Intensity",
         type: "number",
         default: 1,
         min: 0,
@@ -30,10 +35,12 @@ export const matParamsDetails = {
         step: 0.05,
     },
     specular: {
+        name: "Specular",
         type: "color",
         default: "#111111",
     },
     metalness: {
+        name: "Metalness",
         type: "number",
         default: 0,
         min: 0,
@@ -41,6 +48,7 @@ export const matParamsDetails = {
         step: 0.05,
     },
     roughness: {
+        name: "Roughness",
         type: "number",
         default: 1,
         min: 0,
@@ -48,11 +56,17 @@ export const matParamsDetails = {
         step: 0.05,
     },
     shininess: {
+        name: "Shininess",
         type: "number",
         default: 30,
         min: 1,
         max: 100,
         step: 1,
+    },
+    gradientMap: {
+        name: "Gradient Map",
+        type: "select",
+        default: "None",
     },
 };
 
