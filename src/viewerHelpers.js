@@ -66,6 +66,8 @@ export const disposeItem = item => {
         // dispose material
         callbackOnPotentialArray(child.material, mat => {
             if (mat.map) dispose(mat.map);
+            if (mat.backupMap) dispose(mat.backupMap);
+
             dispose(mat);
         });
         // dispose geometry
@@ -98,7 +100,7 @@ export const changeMaterial = ({
                     ? new THREE.TextureLoader().load(texturePath)
                     : material[i].map;
 
-                texture.encoding = THREE.sRGBEncoding;
+                if (texturePath) texture.encoding = THREE.sRGBEncoding;
 
                 const materialParams = {
                     map: texture,
@@ -122,7 +124,7 @@ export const changeMaterial = ({
                 ? new THREE.TextureLoader().load(texturePath)
                 : material.map;
 
-            texture.encoding = THREE.sRGBEncoding;
+            if (texturePath) texture.encoding = THREE.sRGBEncoding;
             const materialParams = {
                 map: texture,
                 skinning: true,

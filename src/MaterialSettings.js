@@ -6,6 +6,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
+import MaterialParamsSetting from "./MaterialParamsSetting";
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
@@ -81,6 +82,7 @@ function MaterialSettings() {
                             {options}
                         </Select>
                     </div>
+                    <MaterialParamsSetting materialType={materialType} />
                 </div>
             </Collapse>
         </div>

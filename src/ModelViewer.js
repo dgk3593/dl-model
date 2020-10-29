@@ -22,26 +22,184 @@ import {
 } from "./viewerHelpers";
 
 class ModelViewer extends PureComponent {
-    animate = () => {
-        this.frameId = requestAnimationFrame(this.animate);
-        const dt = this.clock.getDelta();
-        // Rotate the floor
-        this.floor.rotateY((this.props.rotateSpeed * dt * Math.PI) / 2);
+    async componentDidMount() {
+        window.app = this;
+        this.initScene();
+        this.props.setIsLoading(true);
 
-        if (this.mixers.length > 0) {
-            this.mixers.forEach(mixer => mixer.update(dt));
+        // Load the models
+        const [main, weaponRight, weaponLeft] = await this.initLoad();
+
+        // save references to models
+        this.models = {
+            main,
+            weaponRight,
+            weaponLeft,
+        };
+
+        // add outline to main model and save reference
+        this.outlines.main = createOutline(main, this.outlineParams);
+
+        // Save initial position and rotation
+        main.initPos = main.position.clone();
+        main.initRot = main.rotation.clone();
+
+        // change the material
+
+        const { materialType } = this.props.model;
+        changeMaterial({ target: main, materialType });
+
+        // process weapons
+        ["Right", "Left"].forEach(side => {
+            const key = `weapon${side}`;
+            // if weapon not specified, return
+            if (!this.props.model[key]) return;
+            // add weapon
+            const weaponInfo = this.modelInfo[key];
+            const weaponModel = this.models[key];
+            const { texturePath } = weaponInfo;
+            changeMaterial({
+                target: weaponModel,
+                materialType,
+                texturePath,
+            });
+            // flip weapon if needed
+            weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
+            // add outline to weapon and save reference
+            this.outlines[key] = createOutline(weaponModel, this.outlineParams);
+            // attach weapon to main body
+            this.attachWeapon(this.models[`weapon${side}`], side);
+        });
+
+        // Apply face settings
+        const { texture, faceTexture } = this.props.model;
+        const faceOverride = texture !== faceTexture;
+        const faceNumber = `face${this.props.model.face}`;
+        const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[faceNumber];
+        if (faceOffsetX !== 0 || faceOffsetY !== 0 || faceOverride) {
+            let offsetFix = { x: 0, y: 0 };
+            if (faceOverride) {
+                applyFaceTexture({
+                    target: main,
+                    materialType,
+                    textureId: faceTexture,
+                });
+
+                const offsetFixBase = faceOffsetFixList[texture] || {
+                    x: 0,
+                    y: 0,
+                };
+                const offsetFixOverride = faceOffsetFixList[faceTexture] || {
+                    x: 0,
+                    y: 0,
+                };
+                offsetFix = {
+                    x: offsetFixOverride.x - offsetFixBase.x,
+                    y: offsetFixOverride.y - offsetFixBase.y,
+                };
+            }
+            const offset = {
+                x: faceOffsetX + offsetFix.x,
+                y: faceOffsetY + offsetFix.y,
+            };
+            applyFaceOffset({ target: main, offset });
         }
-        this.renderer.render(this.scene, this.camera);
-    };
+
+        this.saveMaterialReference();
+        this.applyMaterialParams();
+
+        // Add character to scene
+        this.floor.add(main);
+        // main model loading finished
+        this.props.setIsLoading(false);
+
+        // Add animation
+        const { code: aniCode, timeScale } = this.props.animation;
+        this.addAnimationChain(main, aniCode, timeScale);
+    }
+
+    async componentDidUpdate(prev) {
+        const current = this.props;
+
+        // print updated props to console
+        console.log("Updated");
+        Object.keys(prev).forEach(key => {
+            const oldValue = prev[key];
+            const currentValue = this.props[key];
+            const subkeys = Object.keys(oldValue);
+            if (subkeys.length === 0 || typeof oldValue === "string") {
+                if (oldValue !== currentValue) {
+                    console.log(
+                        `${key}: ${JSON.stringify(
+                            oldValue
+                        )} to ${JSON.stringify(currentValue)}`
+                    );
+                }
+            } else {
+                subkeys.forEach(subkey => {
+                    if (oldValue[subkey] !== currentValue[subkey]) {
+                        console.log(
+                            `${key}.${subkey}: ${JSON.stringify(
+                                oldValue[subkey]
+                            )} to ${JSON.stringify(currentValue[subkey])}`
+                        );
+                    }
+                });
+            }
+        });
+
+        this.updateViewport(prev.viewport, current.viewport);
+
+        this.updateModel(prev.model, current.model);
+
+        this.updateAnimation(prev.animation, current.animation);
+
+        this.updateOutline(prev.outline, current.outline);
+
+        this.updateMaterial(prev, current);
+
+        // Update background color
+        if (prev.bgColor !== current.bgColor) {
+            this.setBackground(current.bgColor);
+        }
+
+        // Capture
+        if (current.capture.enable && !prev.capture.enable) {
+            this.captureAnimation();
+        }
+
+        // Update Anti Aliasinng
+        if (prev.antiAliasing !== current.antiAliasing) {
+            this.updateAA();
+        }
+    }
+
+    componentWillUnmount() {
+        cancelAnimationFrame(this.frameId);
+        disposeItem(this.scene);
+        this.mixers = null;
+        this.clock = null;
+        this.camera = null;
+        this.controls = null;
+        this.scene = null;
+        this.renderer = null;
+        this.rendererAA.renderLists.dispose();
+        this.rendererAA.dispose();
+        this.rendererAA = null;
+        this.rendererNoAA.renderLists.dispose();
+        this.rendererNoAA.dispose();
+        this.rendererNoAA = null;
+    }
 
     // set up initial scene
-    init = () => {
+    initScene = () => {
         this.models = {};
         this.modelInfo = {
             main: this.props.model.id,
             weaponLeft: analyzeWeaponCode(this.props.model.weaponLeft),
             weaponRight: analyzeWeaponCode(this.props.model.weaponRight),
         };
+        this.materials = [];
 
         // save reference and specifications for outlines
         this.outlines = {};
@@ -122,6 +280,57 @@ class ModelViewer extends PureComponent {
         this.animate();
     };
 
+    // Promise to load all models at initialize
+    initLoad = () => {
+        const modelId = this.modelInfo.main;
+        const modelPath = getModelPath(modelId);
+        const loadMain = loadModel(modelPath);
+
+        const weaponRight = this.modelInfo.weaponRight?.modelPath;
+        const loadWeaponR = loadModel(weaponRight);
+
+        const weaponLeft = this.modelInfo.weaponLeft?.modelPath;
+        const loadWeaponL = loadModel(weaponLeft);
+
+        return Promise.all([loadMain, loadWeaponR, loadWeaponL]);
+    };
+
+    attachWeapon = (weapon, side) => {
+        const boneName = `jWeapon${side[0]}`;
+        this.models.main.traverse(child => {
+            if (child.name === boneName && child.children.length === 0) {
+                child.add(weapon);
+            }
+        });
+    };
+
+    detachWeapon = side => {
+        const boneName = `jWeapon${side[0]}`;
+        this.models.main.traverse(child => {
+            if (child.children.length === 1 && child.name === boneName) {
+                if (child.children[0].type === "Group") {
+                    child.remove(this.models[`weapon${side}`]);
+                }
+            }
+        });
+    };
+
+    saveMaterialReference = () => {
+        this.materials = [];
+        const mainModel = this.models.main;
+        mainModel.traverse(child => {
+            if (!child.isMesh || child.name === "outline") return;
+
+            const { material } = child;
+
+            if (Array.isArray(material)) {
+                this.materials = this.materials.concat(material);
+            } else {
+                this.materials.push(material);
+            }
+        });
+    };
+
     playNextAni = () => {
         // if capturing and finished recording current chain, stop capturing and set capture flag back to false
         if (this.props.capture.enable && this._aniIdx === this.nAni - 1) {
@@ -132,7 +341,6 @@ class ModelViewer extends PureComponent {
         this.aniIdx = newIdx;
     };
 
-    // add Animation Chain
     addAnimationChain = async (object, animationChain, timeScale) => {
         if (!animationChain) return;
 
@@ -191,231 +399,74 @@ class ModelViewer extends PureComponent {
         action.play();
     }
 
-    // Promise to load all models at initialize
-    initLoad = () => {
-        const modelId = this.modelInfo.main;
-        const modelPath = getModelPath(modelId);
-        const loadMain = loadModel(modelPath);
-
-        const weaponRight = this.modelInfo.weaponRight?.modelPath;
-        const loadWeaponR = loadModel(weaponRight);
-
-        const weaponLeft = this.modelInfo.weaponLeft?.modelPath;
-        const loadWeaponL = loadModel(weaponLeft);
-
-        return Promise.all([loadMain, loadWeaponR, loadWeaponL]);
-    };
-
-    attachWeapon = (weapon, side) => {
-        const boneName = `jWeapon${side[0]}`;
-        this.models.main.traverse(child => {
-            if (child.name === boneName && child.children.length === 0) {
-                child.add(weapon);
-            }
-        });
-    };
-
-    detachWeapon = side => {
-        const boneName = `jWeapon${side[0]}`;
-        this.models.main.traverse(child => {
-            if (child.children.length === 1 && child.name === boneName) {
-                if (child.children[0].type === "Group") {
-                    child.remove(this.models[`weapon${side}`]);
-                }
-            }
-        });
-    };
-
-    async componentDidMount() {
-        this.init();
-        this.props.setIsLoading(true);
-
-        // Load the models
-        const [main, weaponRight, weaponLeft] = await this.initLoad();
-
-        // save references
-        this.models = {
-            main,
-            weaponRight,
-            weaponLeft,
-        };
-        // add outline to main model and save reference
-        this.outlines.main = createOutline(main, this.outlineParams);
-
-        // Save initial position and rotation
-        main.initPos = main.position.clone();
-        main.initRot = main.rotation.clone();
-
-        // change the material
-        const { materialType } = this.props.model;
-        changeMaterial({ target: main, materialType });
-
-        // process weapons
-        ["Right", "Left"].forEach(side => {
-            const key = `weapon${side}`;
-            // if weapon not specified, return
-            if (!this.props.model[key]) return;
-            // add weapon
-            const weaponInfo = this.modelInfo[key];
-            const weaponModel = this.models[key];
-            const { texturePath } = weaponInfo;
-            changeMaterial({
-                target: weaponModel,
-                materialType,
-                texturePath,
-            });
-            // flip weapon if needed
-            weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
-            // add outline to weapon and save reference
-            this.outlines[key] = createOutline(weaponModel, this.outlineParams);
-            // attach weapon to main body
-            this.attachWeapon(this.models[`weapon${side}`], side);
-        });
-
-        // Apply face settings
-        const { texture, faceTexture } = this.props.model;
-        const faceOverride = texture !== faceTexture;
-        const faceNumber = `face${this.props.model.face}`;
-        const { x: faceOffsetX, y: faceOffsetY } = faceOffsets[faceNumber];
-        if (faceOffsetX !== 0 || faceOffsetY !== 0 || faceOverride) {
-            let offsetFix = { x: 0, y: 0 };
-            if (faceOverride) {
-                applyFaceTexture({
-                    target: main,
-                    materialType,
-                    textureId: faceTexture,
-                });
-
-                const offsetFixBase = faceOffsetFixList[texture] || {
-                    x: 0,
-                    y: 0,
-                };
-                const offsetFixOverride = faceOffsetFixList[faceTexture] || {
-                    x: 0,
-                    y: 0,
-                };
-                offsetFix = {
-                    x: offsetFixOverride.x - offsetFixBase.x,
-                    y: offsetFixOverride.y - offsetFixBase.y,
-                };
-            }
-            const offset = {
-                x: faceOffsetX + offsetFix.x,
-                y: faceOffsetY + offsetFix.y,
-            };
-            applyFaceOffset({ target: main, offset });
-        }
-
-        // Add character to scene
-        this.floor.add(main);
-        // main model loading finished
-        this.props.setIsLoading(false);
-
-        // Add animation
-        const { code: aniCode, timeScale } = this.props.animation;
-        this.addAnimationChain(main, aniCode, timeScale);
-    }
-
-    async componentDidUpdate(prevProps) {
-        // console.log("component did update");
-
-        // // print updated props to console
-        // Object.keys(prevProps).forEach(key => {
-        //     const oldValue = prevProps[key];
-        //     const currentValue = this.props[key];
-        //     const subkeys = Object.keys(oldValue);
-        //     if (subkeys.length === 0 || typeof oldValue === "string") {
-        //         if (oldValue !== currentValue) {
-        //             console.log(
-        //                 `${key}: ${JSON.stringify(
-        //                     oldValue
-        //                 )} to ${JSON.stringify(currentValue)}`
-        //             );
-        //         }
-        //     } else {
-        //         subkeys.forEach(subkey => {
-        //             if (oldValue[subkey] !== currentValue[subkey]) {
-        //                 console.log(
-        //                     `${key}.${subkey}: ${JSON.stringify(
-        //                         oldValue[subkey]
-        //                     )} to ${JSON.stringify(currentValue[subkey])}`
-        //                 );
-        //             }
-        //         });
-        //     }
-        // });
-
-        // Update viewport
-        const viewport = this.props.viewport;
-        if (
-            prevProps.viewport.width !== viewport.width ||
-            prevProps.viewport.height !== viewport.height
-        ) {
-            const { width, height } = viewport;
+    updateViewport = (prev, current) => {
+        const { width, height } = current;
+        if (prev.width !== width || prev.height !== height) {
             this.renderer.setSize(width, height);
             this.camera.aspect = width / height;
             this.camera.updateProjectionMatrix();
         }
+    };
 
-        // Capture
-        if (this.props.capture.enable && !prevProps.capture.enable) {
-            this.chunks = [];
-            this.videoStream = this.canvas.captureStream(30);
-            if (!this.mediaRecorder) {
-                this.mediaRecorder = new MediaRecorder(this.videoStream, {
-                    mimeType: this.props.capture.codec,
+    captureAnimation = () => {
+        this.chunks = [];
+        this.videoStream = this.canvas.captureStream(30);
+
+        if (!this.mediaRecorder) {
+            this.mediaRecorder = new MediaRecorder(this.videoStream, {
+                mimeType: this.props.capture.codec,
+            });
+            this.mediaRecorder.ondataavailable = event =>
+                this.chunks.push(event.data);
+            this.mediaRecorder.onstop = () => {
+                this.props.setIsLoading(false);
+                const superBuffer = new Blob(this.chunks, {
+                    type: "video/webm",
                 });
-                this.mediaRecorder.ondataavailable = event =>
-                    this.chunks.push(event.data);
-                this.mediaRecorder.onstop = () => {
-                    this.props.setIsLoading(false);
-                    const superBuffer = new Blob(this.chunks, {
-                        type: "video/webm",
-                    });
-                    var url = URL.createObjectURL(superBuffer);
-                    var a = document.createElement("a");
-                    document.body.appendChild(a);
-                    a.style = "display: none";
-                    a.href = url;
-                    a.download = "animation.webm";
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                };
-            }
-            // disable user input
-            this.props.setIsLoading(true);
-            // play first animation and start capturing
-            this.aniIdx = 0;
-            this.mediaRecorder.start();
+                var url = URL.createObjectURL(superBuffer);
+                var a = document.createElement("a");
+                document.body.appendChild(a);
+                a.style = "display: none";
+                a.href = url;
+                a.download = "animation.webm";
+                a.click();
+                window.URL.revokeObjectURL(url);
+            };
         }
+        // disable user input
+        this.props.setIsLoading(true);
+        // play first animation and start capturing
+        this.aniIdx = 0;
+        this.mediaRecorder.start();
+    };
 
-        // update anti aliasing setting
-        if (prevProps.antiAliasing !== this.props.antiAliasing) {
-            // get current viewport size
-            const currentSize = new THREE.Vector2();
-            this.renderer.getSize(currentSize);
-            // switch renderer
-            this.renderer = this.props.antiAliasing
-                ? this.rendererAA
-                : this.rendererNoAA;
-            this.renderer.setSize(currentSize.x, currentSize.y);
-            // remove old canvas
-            this.mount.removeChild(this.canvas);
-            // Add new canvas
-            this.canvas = this.renderer.domElement;
-            this.mount.appendChild(this.canvas);
-        }
+    updateAA = () => {
+        // get current viewport size
+        const currentSize = new THREE.Vector2();
+        this.renderer.getSize(currentSize);
+        // switch renderer
+        this.renderer = this.props.antiAliasing
+            ? this.rendererAA
+            : this.rendererNoAA;
+        this.renderer.setSize(currentSize.x, currentSize.y);
+        // remove old canvas
+        this.mount.removeChild(this.canvas);
+        // Add new canvas
+        this.canvas = this.renderer.domElement;
+        this.mount.appendChild(this.canvas);
+    };
 
-        // Update main model
-        const { texture, faceTexture } = this.props.model;
-        const faceNumber = `face${this.props.model.face}`;
+    updateMainModel = async (prev, current) => {
+        const { texture, faceTexture } = current;
+        const faceOverride = texture !== faceTexture;
+        const faceNumber = `face${current.face}`;
         const faceOffset = faceOffsets[faceNumber];
-        if (prevProps.model.id !== this.props.model.id) {
+        if (prev.id !== current.id) {
             this.props.setIsLoading(true);
-            const modelPath = getModelPath(this.props.model.id);
+            const modelPath = getModelPath(current.id);
             // load new model
             const model = await loadModel(modelPath);
-            const { materialType } = this.props.model;
+            const { materialType } = current;
             changeMaterial({ target: model, materialType });
             // add outline
             this.outlines.main = createOutline(model, this.outlineParams);
@@ -423,7 +474,7 @@ class ModelViewer extends PureComponent {
             // detach weapons from old model if they exist
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
-                if (prevProps.model[key]) {
+                if (prev[key]) {
                     this.detachWeapon(side);
                 }
             });
@@ -441,7 +492,7 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-            if (texture !== faceTexture) {
+            if (faceOverride) {
                 applyFaceTexture({
                     target: model,
                     materialType,
@@ -457,9 +508,8 @@ class ModelViewer extends PureComponent {
             ["Right", "Left"].forEach(side => {
                 const key = `weapon${side}`;
                 const weaponModel = this.models[key];
-                // if no weapon, return
-                if (!weaponModel) return;
 
+                if (!weaponModel) return;
                 this.attachWeapon(weaponModel, side);
                 // add outline if not exist
                 if (!this.outlines[key]) {
@@ -477,29 +527,28 @@ class ModelViewer extends PureComponent {
             this.props.setIsLoading(false);
         } else {
             // Update face when main model not changed
-            const faceTextureChanged =
-                prevProps.model.faceTexture !== faceTexture;
-            const faceChanged = prevProps.model.face !== this.props.model.face;
+            const faceTextureChanged = prev.faceTexture !== faceTexture;
+            const faceChanged = prev.face !== current.face;
             if (faceChanged || faceTextureChanged) {
-                const oldFaceNumber = `face${prevProps.model.face}`;
-                const faceNumber = `face${this.props.model.face}`;
+                const oldFaceNumber = `face${prev.face}`;
+                const faceNumber = `face${current.face}`;
 
-                const currentOffset = faceOffsets[faceNumber];
                 const oldOffset = faceOffsets[oldFaceNumber];
+                const currentOffset = faceOffsets[faceNumber];
 
                 const dx = currentOffset.x - oldOffset.x;
                 const dy = currentOffset.y - oldOffset.y;
 
                 let faceOffsetFix = { x: 0, y: 0 };
                 if (faceTextureChanged) {
-                    const { materialType } = this.props.model;
+                    const { materialType } = current;
                     applyFaceTexture({
                         target: this.models.main,
                         materialType,
                         textureId: faceTexture,
                     });
                     const oldFaceOffsetFix = faceOffsetFixList[
-                        prevProps.model.faceTexture
+                        prev.faceTexture
                     ] || { x: 0, y: 0 };
 
                     const currentFaceOffsetFix = faceOffsetFixList[
@@ -519,17 +568,18 @@ class ModelViewer extends PureComponent {
                 applyFaceOffset({ target: this.models.main, offset });
             }
         }
+    };
 
-        // Update Weapons
+    updateWeapons = async (prev, current) => {
         ["Right", "Left"].forEach(async side => {
             const key = `weapon${side}`;
             // if not changed, return
-            if (prevProps.model[key] === this.props.model[key]) return;
+            if (prev[key] === current[key]) return;
             // Update weapon
             this.detachWeapon(side); // remove old weapon
             disposeItem(this.models[key]); // dispose old weapon
             // if current weapon is empty (weapon removed)
-            if (!this.props.model[key]) {
+            if (!current[key]) {
                 this.models[key] = null;
                 this.modelInfo[key] = "";
                 // remove reference to outline
@@ -547,7 +597,7 @@ class ModelViewer extends PureComponent {
             this.models[key] = model;
 
             // process new weapon
-            const { materialType } = this.props.model;
+            const { materialType } = current;
             changeMaterial({
                 target: this.models[key],
                 materialType,
@@ -564,116 +614,153 @@ class ModelViewer extends PureComponent {
 
             this.props.setIsLoading(false);
         });
+    };
 
-        // Update material
-        if (prevProps.model.materialType !== this.props.model.materialType) {
-            const { materialType } = this.props.model;
-            changeMaterial({ target: this.models.main, materialType });
-        }
+    updateModel = async (prev, current) => {
+        const updated = Object.keys(prev).some(
+            key => prev[key] !== current[key]
+        );
+        if (!updated) return;
 
-        // Update animation
-        const { code: aniCode, timeScale } = this.props.animation;
-        if (prevProps.animation.code !== aniCode) {
-            if (prevProps.animation.code) {
-                this.models.main.mixer.stopAllAction();
+        await this.updateMainModel(prev, current);
+        await this.updateWeapons(prev, current);
+
+        this.saveMaterialReference();
+        this.applyMaterialParams();
+    };
+
+    updateAnimation = (prev, current) => {
+        const { code, timeScale } = current;
+        if (prev.code !== code) {
+            const mainModel = this.models.main;
+            if (prev.code) {
+                mainModel.mixer.stopAllAction();
 
                 // Reset position and rotation to initial value
-                const { initPos, initRot } = this.models.main;
-                this.models.main.position.copy(initPos);
-                this.models.main.rotation.copy(initRot);
+                const { initPos, initRot } = mainModel;
+                mainModel.position.copy(initPos);
+                mainModel.rotation.copy(initRot);
 
                 this.mixers = [];
                 this.animations = [];
             }
             // Add new animation
-            this.addAnimationChain(this.models.main, aniCode, timeScale);
+            this.addAnimationChain(mainModel, code, timeScale);
         }
         //Update timeScale
-        else if (prevProps.animation.timeScale !== timeScale) {
-            if (this.mixers.length > 0) {
-                this.mixers.forEach(mixer => (mixer.timeScale = timeScale));
+        else if (prev.timeScale !== timeScale) {
+            this.mixers.forEach(mixer => (mixer.timeScale = timeScale));
+        }
+    };
+
+    updateOutline = (prev, current) => {
+        this.outlineParams = { ...current };
+        const updatedParams = Object.keys(current).filter(
+            key => prev[key] !== current[key]
+        );
+        if (updatedParams.length === 0) return;
+        const { enable, size, opacity, color } = current;
+        const outlineList = Object.keys(this.outlines);
+        outlineList.forEach(outlineName => {
+            const outlineGroup = this.outlines[outlineName];
+            if (!outlineGroup) return;
+            outlineGroup.forEach(outline => {
+                if (updatedParams.includes("enable")) {
+                    outline.visible = enable;
+                }
+                if (updatedParams.includes("size")) {
+                    changeOutlineSize(outline, size);
+                }
+                if (updatedParams.includes("opacity")) {
+                    changeOpacity(outline, opacity);
+                }
+                if (updatedParams.includes("color")) {
+                    changeOutlineColor(outline, color);
+                }
+            });
+        });
+    };
+
+    applyMaterialParams = () => {
+        const { wireframe, useTexture } = this.props.materialParams;
+        this.materials.forEach(mat => {
+            mat.wireframe = wireframe;
+            if (!useTexture) {
+                if (mat.map) mat.backupMap = mat.map;
+                mat.map = null;
+            }
+        });
+    };
+
+    updateMaterialParams = (prev, current) => {
+        const { wireframe, useTexture } = current;
+        const { materials } = this;
+        if (prev.wireframe !== wireframe) {
+            materials.forEach(mat => (mat.wireframe = wireframe));
+        }
+
+        if (prev.useTexture !== useTexture) {
+            if (!useTexture) {
+                materials.forEach(mat => {
+                    mat.backupMap = mat.map;
+                    mat.map = null;
+                    mat.needsUpdate = true;
+                });
+            } else {
+                materials.forEach(mat => {
+                    mat.map = mat.backupMap;
+                    mat.needsUpdate = true;
+                });
             }
         }
+    };
 
-        // Update background color
-        if (prevProps.bgColor !== this.props.bgColor) {
-            this.scene.background =
-                this.props.bgColor !== "transparent"
-                    ? new THREE.Color(this.props.bgColor)
-                    : null;
+    backupTexture = () => {
+        const textureMap = new Map();
+        this.materials.forEach(mat => textureMap.set(mat.name, mat.backupMap));
+        this.textureMap = textureMap;
+    };
+
+    addBackupTexture = () => {
+        const { textureMap } = this;
+        this.materials.forEach(mat => {
+            mat.backupMap = textureMap.get(mat.name);
+        });
+    };
+
+    updateMaterial = (prev, current) => {
+        // update material type
+        if (prev.model.materialType !== current.model.materialType) {
+            const { materialType } = current.model;
+
+            if (!current.materialParams.useTexture) this.backupTexture();
+
+            changeMaterial({ target: this.models.main, materialType });
+            this.saveMaterialReference();
+            if (!current.materialParams.useTexture) this.addBackupTexture();
+
+            this.applyMaterialParams();
         }
 
-        // Update outline
-        const {
-            enable: showOutline,
-            color: outlineColor,
-            size: outlineSize,
-            opacity: outlineOpacity,
-        } = this.props.outline;
-        // Update outline visibility
-        if (prevProps.outline.enable !== showOutline) {
-            this.outlineParams.enable = showOutline;
+        this.updateMaterialParams(prev.materialParams, current.materialParams);
+    };
 
-            Object.keys(this.outlines).forEach(key => {
-                if (!this.outlines[key]) return;
-                this.outlines[key].forEach(
-                    outline => (outline.visible = showOutline)
-                );
-            });
-        }
+    setBackground = bgColor => {
+        this.scene.background =
+            bgColor !== "transparent" ? new THREE.Color(bgColor) : null;
+    };
 
-        // Update outline size
-        if (prevProps.outline.size !== outlineSize) {
-            this.outlineParams.size = outlineSize;
+    animate = () => {
+        this.frameId = requestAnimationFrame(this.animate);
+        const dt = this.clock.getDelta();
+        // Rotate the floor
+        this.floor.rotateY((this.props.rotateSpeed * dt * Math.PI) / 2);
 
-            Object.keys(this.outlines).forEach(key => {
-                if (!this.outlines[key]) return;
-                this.outlines[key].forEach(outline =>
-                    changeOutlineSize(outline, outlineSize)
-                );
-            });
-        }
+        this.mixers.forEach(mixer => mixer.update(dt));
 
-        // Update outline opacity
-        if (prevProps.outline.opacity !== outlineOpacity) {
-            this.outlineParams.opacity = outlineOpacity;
+        this.renderer.render(this.scene, this.camera);
+    };
 
-            Object.keys(this.outlines).forEach(key => {
-                if (!this.outlines[key]) return;
-                this.outlines[key].forEach(outline =>
-                    changeOpacity(outline, outlineOpacity)
-                );
-            });
-        }
-
-        // Update outline color
-        if (prevProps.outline.color !== outlineColor) {
-            this.outlineParams.color = outlineColor;
-            Object.keys(this.outlines).forEach(key => {
-                if (!this.outlines[key]) return;
-                this.outlines[key].forEach(outline =>
-                    changeOutlineColor(outline, outlineColor)
-                );
-            });
-        }
-    }
-
-    componentWillUnmount() {
-        cancelAnimationFrame(this.frameId);
-        disposeItem(this.scene);
-        this.mixers = null;
-        this.clock = null;
-        this.camera = null;
-        this.controls = null;
-        this.scene = null;
-        this.renderer = null;
-        this.rendererAA.renderLists.dispose();
-        this.rendererAA.dispose();
-        this.rendererAA = null;
-        this.rendererNoAA.renderLists.dispose();
-        this.rendererNoAA.dispose();
-        this.rendererNoAA = null;
-    }
     render() {
         return (
             <div
