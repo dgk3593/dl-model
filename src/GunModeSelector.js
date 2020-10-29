@@ -31,7 +31,7 @@ function GunModeSelector({ value, handleClick }) {
                     value === "C" ? "selected" : ""
                 }`}
             >
-                Burst
+                Rapid-Fire
             </div>
         </div>
     );
