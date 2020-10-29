@@ -31,10 +31,10 @@ function AdvancedSettings({ openControl }) {
             </div>
             <div className="AdvancedSettings-List">
                 <Suspense fallback={<div>Loading</div>}>
-                    <OutlineSettings openControl={openControl} />
+                    <AutoRotate />
                 </Suspense>
                 <Suspense fallback={<div>Loading</div>}>
-                    <AutoRotate />
+                    <OutlineSettings openControl={openControl} />
                 </Suspense>
                 <Suspense fallback={<div>Loading</div>}>
                     <MaterialSettings />
