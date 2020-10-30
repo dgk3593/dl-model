@@ -1,4 +1,4 @@
-export const DRAWER_WIDTH = "15rem";
+export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
@@ -16,6 +16,16 @@ export const matParamsDetails = {
         type: "boolean",
         default: true,
     },
+    transparent: {
+        name: "Transparent",
+        type: "boolean",
+        default: false,
+    },
+    flatShading: {
+        name: "Flat Shading",
+        type: "boolean",
+        default: false,
+    },
     color: {
         name: "Color",
         type: "color",
@@ -26,9 +36,17 @@ export const matParamsDetails = {
         type: "color",
         default: "#000000",
     },
+    opacity: {
+        name: "Opacity",
+        type: "percentage",
+        default: 1,
+        min: 0,
+        max: 1,
+        step: 0.05,
+    },
     emissiveIntensity: {
         name: "Emissive Intensity",
-        type: "number",
+        type: "percentage",
         default: 1,
         min: 0,
         max: 1,
@@ -41,7 +59,7 @@ export const matParamsDetails = {
     },
     metalness: {
         name: "Metalness",
-        type: "number",
+        type: "percentage",
         default: 0,
         min: 0,
         max: 1,
@@ -49,7 +67,7 @@ export const matParamsDetails = {
     },
     roughness: {
         name: "Roughness",
-        type: "number",
+        type: "percentage",
         default: 1,
         min: 0,
         max: 1,
@@ -69,6 +87,16 @@ export const matParamsDetails = {
         default: "None",
     },
 };
+
+export const directSetMatParams = [
+    "transparent",
+    "opacity",
+    "wireframe",
+    "emissiveIntensity",
+    "metalness",
+    "roughness",
+    "shininess",
+];
 
 const defaultMatParams = {};
 Object.keys(matParamsDetails).forEach(key => {
@@ -133,14 +161,32 @@ export const initKey = {
 
 export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];
 
-export const materialCommonParams = ["wireframe", "useTexture", "color"];
+export const materialCommonParams = [
+    "transparent",
+    "opacity",
+    "wireframe",
+    "useTexture",
+    "color",
+];
 
 export const materialExtraParams = {
     Basic: [],
     Toon: ["emissive", "emissiveIntensity", "gradientMap"],
     Lambert: ["emissive", "emissiveIntensity"],
-    Phong: ["emissive", "emissiveIntensity", "specular", "shininess"],
-    Standard: ["emissive", "emissiveIntensity", "metalness", "roughness"],
+    Phong: [
+        "emissive",
+        "emissiveIntensity",
+        "specular",
+        "shininess",
+        "flatShading",
+    ],
+    Standard: [
+        "emissive",
+        "emissiveIntensity",
+        "metalness",
+        "roughness",
+        "flatShading",
+    ],
 };
 
 export const WEAPON_CODE = {
