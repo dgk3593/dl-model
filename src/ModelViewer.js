@@ -326,7 +326,6 @@ class ModelViewer extends PureComponent {
         const mainModel = this.models.main;
         mainModel.traverse(child => {
             if (!child.isMesh || child.name === "outline") return;
-            console.log(child.name);
 
             const { material } = child;
 
@@ -531,6 +530,9 @@ class ModelViewer extends PureComponent {
             const { code: aniCode, timeScale } = this.props.animation;
             this.addAnimationChain(model, aniCode, timeScale);
 
+            this.saveMaterialReference();
+            this.applyMaterialParams();
+
             this.props.setIsLoading(false);
         } else {
             // Update face when main model not changed
@@ -566,6 +568,9 @@ class ModelViewer extends PureComponent {
                         x: currentFaceOffsetFix.x - oldFaceOffsetFix.x,
                         y: currentFaceOffsetFix.y - oldFaceOffsetFix.y,
                     };
+
+                    this.saveMaterialReference();
+                    this.applyMaterialParams();
                 }
                 const offset = {
                     x: dx + faceOffsetFix.x,
@@ -619,6 +624,9 @@ class ModelViewer extends PureComponent {
             // attach new weapon to main model
             this.attachWeapon(model, side);
 
+            this.saveMaterialReference();
+            this.applyMaterialParams();
+
             this.props.setIsLoading(false);
         });
     };
@@ -629,14 +637,8 @@ class ModelViewer extends PureComponent {
         );
         if (!updated) return;
 
-        console.log("model updated");
-
         await this.updateMainModel(prev, current);
-        await this.updateWeapons(prev, current);
-
-        this.saveMaterialReference();
-        console.log(this.materials.map(mat => mat.name));
-        this.applyMaterialParams();
+        this.updateWeapons(prev, current);
     };
 
     updateAnimation = (prev, current) => {
@@ -694,11 +696,13 @@ class ModelViewer extends PureComponent {
     applyMaterialParams = () => {
         const { materialType } = this.props.model;
         const current = this.props.materialParams;
+        const { materials } = this;
         const paramsList = [
             ...materialCommonParams,
             ...materialExtraParams[materialType],
         ];
-        this.materials.forEach(mat => {
+
+        materials.forEach(mat => {
             directSetMatParams.forEach(param => {
                 if (!paramsList.includes(param)) return;
                 mat[param] = current[param];
@@ -754,6 +758,7 @@ class ModelViewer extends PureComponent {
             } else {
                 materials.forEach(mat => {
                     mat.map = mat.backupMap;
+                    delete mat.backupMap;
                     mat.needsUpdate = true;
                 });
             }
@@ -767,31 +772,16 @@ class ModelViewer extends PureComponent {
         }
     };
 
-    backupTexture = () => {
-        const textureMap = new Map();
-        this.materials.forEach(mat => textureMap.set(mat.name, mat.backupMap));
-        this.textureMap = textureMap;
-    };
-
-    addBackupTexture = () => {
-        const { textureMap } = this;
-        this.materials.forEach(mat => {
-            mat.backupMap = textureMap.get(mat.name);
-        });
-    };
-
     updateMaterial = (prev, current) => {
         // update material type
         if (prev.model.materialType !== current.model.materialType) {
             const { materialType } = current.model;
 
-            if (!current.materialParams.useTexture) this.backupTexture();
-
             changeMaterial({ target: this.models.main, materialType });
             this.saveMaterialReference();
-            if (!current.materialParams.useTexture) this.addBackupTexture();
 
             this.applyMaterialParams();
+            return;
         }
 
         this.updateMaterialParams(prev.materialParams, current.materialParams);

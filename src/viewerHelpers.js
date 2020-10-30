@@ -111,6 +111,7 @@ export const changeMaterial = ({
                     materialParams
                 );
                 newMaterial.name = mat.name;
+                if (mat.backupMap) newMaterial.backupMap = mat.backupMap;
 
                 if (texturePath && material[i].map) {
                     material[i].map.dispose();
@@ -130,7 +131,10 @@ export const changeMaterial = ({
                 skinning: true,
             };
             const newMaterial = createNewMaterial(materialType, materialParams);
+
             newMaterial.name = material.name;
+
+            if (material.backupMap) newMaterial.backupMap = material.backupMap;
 
             if (texturePath && material.map) {
                 material.map.dispose();
