@@ -15,7 +15,7 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 import { MATERIALS } from "./consts";
 
-function MaterialSettings() {
+function MaterialSettings({ openControl }) {
     const [expand, toggleExpand] = useToggleState(true);
 
     const {
@@ -31,6 +31,9 @@ function MaterialSettings() {
             key: "model",
             value: ["materialType"],
         };
+        dispatch(action);
+        action.key = "materialParams";
+        action.value = "";
         dispatch(action);
     };
 
@@ -82,7 +85,10 @@ function MaterialSettings() {
                             {options}
                         </Select>
                     </div>
-                    <MaterialParamsSetting materialType={materialType} />
+                    <MaterialParamsSetting
+                        materialType={materialType}
+                        openControl={openControl}
+                    />
                 </div>
             </Collapse>
         </div>

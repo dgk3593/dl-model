@@ -37,7 +37,7 @@ function AdvancedSettings({ openControl }) {
                     <OutlineSettings openControl={openControl} />
                 </Suspense>
                 <Suspense fallback={<div>Loading</div>}>
-                    <MaterialSettings />
+                    <MaterialSettings openControl={openControl} />
                 </Suspense>
             </div>
         </div>

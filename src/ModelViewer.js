@@ -7,6 +7,12 @@ import { fbxSource } from "./App";
 import { CAM_PARAMS, faceOffsets } from "./consts";
 import faceOffsetFixList from "./data/face_offset";
 import {
+    directSetMatParams,
+    matColorParams,
+    materialCommonParams,
+    materialExtraParams,
+} from "./consts";
+import {
     getModelPath,
     analyzeWeaponCode,
     analyzeChainCode,
@@ -320,6 +326,7 @@ class ModelViewer extends PureComponent {
         const mainModel = this.models.main;
         mainModel.traverse(child => {
             if (!child.isMesh || child.name === "outline") return;
+            console.log(child.name);
 
             const { material } = child;
 
@@ -622,10 +629,13 @@ class ModelViewer extends PureComponent {
         );
         if (!updated) return;
 
+        console.log("model updated");
+
         await this.updateMainModel(prev, current);
         await this.updateWeapons(prev, current);
 
         this.saveMaterialReference();
+        console.log(this.materials.map(mat => mat.name));
         this.applyMaterialParams();
     };
 
@@ -682,22 +692,57 @@ class ModelViewer extends PureComponent {
     };
 
     applyMaterialParams = () => {
-        const { wireframe, useTexture } = this.props.materialParams;
+        const { materialType } = this.props.model;
+        const current = this.props.materialParams;
+        const paramsList = [
+            ...materialCommonParams,
+            ...materialExtraParams[materialType],
+        ];
         this.materials.forEach(mat => {
-            mat.wireframe = wireframe;
-            if (!useTexture) {
+            directSetMatParams.forEach(param => {
+                if (!paramsList.includes(param)) return;
+                mat[param] = current[param];
+            });
+
+            matColorParams.forEach(param => {
+                if (!paramsList.includes(param)) return;
+                const currentColor = current[param];
+                const matColor = new THREE.Color(currentColor);
+                mat[param] = matColor;
+            });
+
+            if (!current.useTexture) {
                 if (mat.map) mat.backupMap = mat.map;
                 mat.map = null;
+            }
+            if (current.flatShading) {
+                mat.flatShading = current.flatShading;
+                mat.needsUpdate = true;
             }
         });
     };
 
     updateMaterialParams = (prev, current) => {
-        const { wireframe, useTexture } = current;
+        const { materialType } = this.props.model;
+        const { useTexture, flatShading } = current;
         const { materials } = this;
-        if (prev.wireframe !== wireframe) {
-            materials.forEach(mat => (mat.wireframe = wireframe));
-        }
+        const paramsList = [
+            ...materialCommonParams,
+            ...materialExtraParams[materialType],
+        ];
+        directSetMatParams.forEach(param => {
+            if (!paramsList.includes(param) || prev[param] === current[param])
+                return;
+            materials.forEach(mat => (mat[param] = current[param]));
+        });
+
+        matColorParams.forEach(param => {
+            if (!paramsList.includes(param) || prev[param] === current[param])
+                return;
+            const currentColor = current[param];
+            const matColor = new THREE.Color(currentColor);
+            materials.forEach(mat => (mat[param] = matColor));
+        });
 
         if (prev.useTexture !== useTexture) {
             if (!useTexture) {
@@ -712,6 +757,13 @@ class ModelViewer extends PureComponent {
                     mat.needsUpdate = true;
                 });
             }
+        }
+
+        if (prev.flatShading !== flatShading) {
+            materials.forEach(mat => {
+                mat.flatShading = flatShading;
+                mat.needsUpdate = true;
+            });
         }
     };
 

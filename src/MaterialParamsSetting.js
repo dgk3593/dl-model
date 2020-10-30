@@ -1,22 +1,34 @@
 import { Fragment, useContext } from "react";
 
 import Button from "@material-ui/core/Button";
+import Slider from "@material-ui/core/Slider";
 
 import {
     materialCommonParams as commonParams,
     materialExtraParams as extraParams,
+    matParamsDetails,
     matParamsDetails as paramsDetails,
 } from "./consts";
+import { complementaryColor } from "./helpers";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
-function MaterialParamsSetting({ materialType: matType }) {
+function MaterialParamsSetting({ materialType: matType, openControl }) {
     const settings = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
     const currentSettings = settings.materialParams;
 
     const paramsList = [...commonParams, ...extraParams[matType]];
+
+    const updateMatParam = (name, value) => {
+        const action = {
+            type: "update",
+            key: "materialParams",
+            value: { [name]: value },
+        };
+        dispatch(action);
+    };
 
     const toggleSetting = event => {
         const paramName = event.currentTarget.value;
@@ -28,17 +40,61 @@ function MaterialParamsSetting({ materialType: matType }) {
         dispatch(action);
     };
 
+    const handleSliderChange = key => (_, newValue) => {
+        updateMatParam(key, newValue);
+    };
+
+    const handleColorBtnClick = e => {
+        openControl(e.currentTarget.dataset.value);
+    };
+
     const createToggleButton = name => {
         const currentValue = currentSettings[name];
         return (
+            <div>
+                <Button
+                    value={name}
+                    fullWidth
+                    variant="contained"
+                    onClick={toggleSetting}
+                >
+                    {currentValue ? "ON" : "OFF"}
+                </Button>
+            </div>
+        );
+    };
+
+    const createColorButton = name => {
+        const color = currentSettings[name];
+        return (
             <Button
-                value={name}
                 fullWidth
-                variant="contained"
-                onClick={toggleSetting}
+                style={{
+                    backgroundColor: color,
+                    color: complementaryColor(color),
+                    textShadow: `0px 0px 3px white`,
+                }}
+                data-value={`materialParams-${name}`}
+                onClick={handleColorBtnClick}
             >
-                {currentValue ? "ON" : "OFF"}
+                {color}
             </Button>
+        );
+    };
+
+    const createSlider = name => {
+        const currentValue = currentSettings[name];
+        const { min, max, step } = matParamsDetails[name];
+        return (
+            <div className="AdvancedSettingsGroup-slider">
+                <Slider
+                    value={currentValue}
+                    min={min}
+                    max={max}
+                    step={step}
+                    onChange={handleSliderChange(name)}
+                />
+            </div>
         );
     };
 
@@ -47,8 +103,13 @@ function MaterialParamsSetting({ materialType: matType }) {
         switch (type) {
             case "boolean":
                 return createToggleButton(paramName);
+            case "number":
+            case "percentage":
+                return createSlider(paramName);
+            case "color":
+                return createColorButton(paramName);
             default:
-                return JSON.stringify(currentSettings[paramName]);
+                return currentSettings[paramName];
         }
     };
 
@@ -58,7 +119,7 @@ function MaterialParamsSetting({ materialType: matType }) {
                 <div className="AdvancedSettingsGroup-optionName">
                     {paramsDetails[param].name}
                 </div>
-                <div>{generateControl(param)}</div>
+                <>{generateControl(param)}</>
             </Fragment>
         );
     });

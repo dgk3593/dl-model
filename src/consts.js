@@ -84,7 +84,7 @@ export const matParamsDetails = {
     gradientMap: {
         name: "Gradient Map",
         type: "select",
-        default: "None",
+        default: "TBA",
     },
 };
 
@@ -97,6 +97,8 @@ export const directSetMatParams = [
     "roughness",
     "shininess",
 ];
+
+export const matColorParams = ["color", "emissive", "specular"];
 
 const defaultMatParams = {};
 Object.keys(matParamsDetails).forEach(key => {

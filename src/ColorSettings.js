@@ -1,6 +1,5 @@
 import { lazy, Suspense, useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
-// import { ChromePicker } from "react-color";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import { complementaryColor } from "./helpers";
@@ -29,6 +28,10 @@ function ColorSettings({ toggleControlOpen, mode }) {
             title = "Outline Color";
             break;
         default:
+            const [key, subkey] = mode.split("-");
+            initColor = settings[key][subkey];
+            commonColor = commonBG;
+            title = "Pick a Color";
     }
     const [color, setColor] = useState(initColor);
 
@@ -50,6 +53,9 @@ function ColorSettings({ toggleControlOpen, mode }) {
                 action.value = { color: colorToSet };
                 break;
             default:
+                const [key, subkey] = mode.split("-");
+                action.key = key;
+                action.value = { [subkey]: colorToSet };
         }
         dispatch(action);
         toggleControlOpen();
