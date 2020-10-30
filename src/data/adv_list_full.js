@@ -376,6 +376,14 @@ const adv = [
         weapon: "Lance",
     },
     {
+        cid: "110370_01",
+        name: "Lapis",
+        title: "The Blue Rose",
+        rarity: "5",
+        element: "Water",
+        weapon: "Manacaster",
+    },
+    {
         cid: "110317_01",
         name: "Laranoa",
         title: "Lighthearted Leader",

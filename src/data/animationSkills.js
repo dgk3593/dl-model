@@ -1012,6 +1012,16 @@ const skills = {
             name: "Alchemic Enhancement II",
             value: "SKL_110367_01+GUN_SKL_04_01_11036701",
         },
+        {
+            icon: "img/advIcons/110370_01_r05.png",
+            name: "Fantastic Flight",
+            value: "SKL_110370_01+GUN_SKL_01_01_11037001",
+        },
+        {
+            icon: "img/advIcons/110370_01_r05.png",
+            name: "Graceful Bullet",
+            value: "SKL_110370_01+GUN_SKL_02_01_11037001",
+        },
     ],
 };
 
