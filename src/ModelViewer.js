@@ -11,6 +11,7 @@ import {
     matColorParams,
     materialCommonParams,
     materialExtraParams,
+    incompatibleModels,
 } from "./consts";
 import {
     getModelPath,
@@ -59,7 +60,11 @@ class ModelViewer extends PureComponent {
 
         // basic viewer for non-human assets
         const modelId = this.props.model.id;
-        if (!modelId.startsWith("c") || modelId.endsWith("_h")) {
+        if (
+            !modelId.startsWith("c") ||
+            modelId.endsWith("_h") ||
+            incompatibleModels.has(modelId)
+        ) {
             if (isBlade(modelId)) {
                 const { texturePath } = analyzeWeaponCode(modelId + "n");
                 changeMaterial({ target: main, materialType, texturePath });
@@ -142,31 +147,31 @@ class ModelViewer extends PureComponent {
         const current = this.props;
 
         // print updated props to console
-        console.log("Updated");
-        Object.keys(prev).forEach(key => {
-            const oldValue = prev[key];
-            const currentValue = this.props[key];
-            const subkeys = Object.keys(oldValue);
-            if (subkeys.length === 0 || typeof oldValue === "string") {
-                if (oldValue !== currentValue) {
-                    console.log(
-                        `${key}: ${JSON.stringify(
-                            oldValue
-                        )} to ${JSON.stringify(currentValue)}`
-                    );
-                }
-            } else {
-                subkeys.forEach(subkey => {
-                    if (oldValue[subkey] !== currentValue[subkey]) {
-                        console.log(
-                            `${key}.${subkey}: ${JSON.stringify(
-                                oldValue[subkey]
-                            )} to ${JSON.stringify(currentValue[subkey])}`
-                        );
-                    }
-                });
-            }
-        });
+        // console.log("Updated");
+        // Object.keys(prev).forEach(key => {
+        //     const oldValue = prev[key];
+        //     const currentValue = this.props[key];
+        //     const subkeys = Object.keys(oldValue);
+        //     if (subkeys.length === 0 || typeof oldValue === "string") {
+        //         if (oldValue !== currentValue) {
+        //             console.log(
+        //                 `${key}: ${JSON.stringify(
+        //                     oldValue
+        //                 )} to ${JSON.stringify(currentValue)}`
+        //             );
+        //         }
+        //     } else {
+        //         subkeys.forEach(subkey => {
+        //             if (oldValue[subkey] !== currentValue[subkey]) {
+        //                 console.log(
+        //                     `${key}.${subkey}: ${JSON.stringify(
+        //                         oldValue[subkey]
+        //                     )} to ${JSON.stringify(currentValue[subkey])}`
+        //                 );
+        //             }
+        //         });
+        //     }
+        // });
 
         this.updateViewport(prev.viewport, current.viewport);
 

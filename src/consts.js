@@ -279,6 +279,16 @@ export const spFaceTextures = {
     c110300_01: "ec110300_01",
 };
 
+export const incompatibleModels = new Set([
+    "c100007_01",
+    "c100007_05",
+    "c100007_09",
+    "c100034_01",
+    "c100036_01",
+    "c100037_01",
+    "c100041_01",
+]);
+
 export const commonBG = {
     green: "#00ff00",
     black: "#000000",
