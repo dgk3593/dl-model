@@ -29,7 +29,6 @@ import {
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -54,6 +53,13 @@ class ModelViewer extends PureComponent {
 
         const { materialType } = this.props.model;
         changeMaterial({ target: main, materialType });
+
+        // weapon and dragon viewer
+        if (!this.props.model.id.startsWith("c")) {
+            this.floor.add(main);
+            this.props.setIsLoading(false);
+            return;
+        }
 
         // process weapons
         ["Right", "Left"].forEach(side => {
@@ -127,32 +133,32 @@ class ModelViewer extends PureComponent {
     async componentDidUpdate(prev) {
         const current = this.props;
 
-        // print updated props to console
-        console.log("Updated");
-        Object.keys(prev).forEach(key => {
-            const oldValue = prev[key];
-            const currentValue = this.props[key];
-            const subkeys = Object.keys(oldValue);
-            if (subkeys.length === 0 || typeof oldValue === "string") {
-                if (oldValue !== currentValue) {
-                    console.log(
-                        `${key}: ${JSON.stringify(
-                            oldValue
-                        )} to ${JSON.stringify(currentValue)}`
-                    );
-                }
-            } else {
-                subkeys.forEach(subkey => {
-                    if (oldValue[subkey] !== currentValue[subkey]) {
-                        console.log(
-                            `${key}.${subkey}: ${JSON.stringify(
-                                oldValue[subkey]
-                            )} to ${JSON.stringify(currentValue[subkey])}`
-                        );
-                    }
-                });
-            }
-        });
+        // // print updated props to console
+        // console.log("Updated");
+        // Object.keys(prev).forEach(key => {
+        //     const oldValue = prev[key];
+        //     const currentValue = this.props[key];
+        //     const subkeys = Object.keys(oldValue);
+        //     if (subkeys.length === 0 || typeof oldValue === "string") {
+        //         if (oldValue !== currentValue) {
+        //             console.log(
+        //                 `${key}: ${JSON.stringify(
+        //                     oldValue
+        //                 )} to ${JSON.stringify(currentValue)}`
+        //             );
+        //         }
+        //     } else {
+        //         subkeys.forEach(subkey => {
+        //             if (oldValue[subkey] !== currentValue[subkey]) {
+        //                 console.log(
+        //                     `${key}.${subkey}: ${JSON.stringify(
+        //                         oldValue[subkey]
+        //                     )} to ${JSON.stringify(currentValue[subkey])}`
+        //                 );
+        //             }
+        //         });
+        //     }
+        // });
 
         this.updateViewport(prev.viewport, current.viewport);
 
