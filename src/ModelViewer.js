@@ -55,7 +55,8 @@ class ModelViewer extends PureComponent {
         changeMaterial({ target: main, materialType });
 
         // weapon and dragon viewer
-        if (!this.props.model.id.startsWith("c")) {
+        const modelId = this.props.model.id;
+        if (!modelId.startsWith("c") || modelId.endsWith("_h")) {
             this.floor.add(main);
             this.props.setIsLoading(false);
             return;
@@ -264,9 +265,9 @@ class ModelViewer extends PureComponent {
         // Light
         let light = new THREE.DirectionalLight(0xffffff);
         light.position.set(0, 200, 100);
-        light.intensity = 0.5;
+        light.intensity = 0.8;
         this.scene.add(light);
-        light = new THREE.AmbientLight(0xaaaaaa);
+        light = new THREE.AmbientLight(0x777777);
         this.scene.add(light);
 
         // Renderer
