@@ -28,6 +28,8 @@ import {
     createGradientMap,
 } from "./viewerHelpers";
 
+import { isBlade } from "./helpers";
+
 class ModelViewer extends PureComponent {
     async componentDidMount() {
         this.initScene();
@@ -58,6 +60,10 @@ class ModelViewer extends PureComponent {
         // basic viewer for non-human assets
         const modelId = this.props.model.id;
         if (!modelId.startsWith("c") || modelId.endsWith("_h")) {
+            if (isBlade(modelId)) {
+                const { texturePath } = analyzeWeaponCode(modelId + "n");
+                changeMaterial({ target: main, materialType, texturePath });
+            }
             this.floor.add(main);
             this.props.setIsLoading(false);
             return;
