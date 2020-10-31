@@ -113,11 +113,25 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
         }
     };
 
+    const generateParamText = param => {
+        const type = paramsDetails[param].type;
+        switch (type) {
+            case "number":
+                return `${paramsDetails[param].name}: ${currentSettings[param]}`;
+            case "percentage":
+                return `${paramsDetails[param].name}: ${
+                    currentSettings[param] * 100
+                }%`;
+            default:
+                return paramsDetails[param].name;
+        }
+    };
+
     const settingsList = paramsList.map(param => {
         return (
             <Fragment key={param}>
                 <div className="AdvancedSettingsGroup-optionName">
-                    {paramsDetails[param].name}
+                    {generateParamText(param)}
                 </div>
                 <>{generateControl(param)}</>
             </Fragment>
