@@ -25,6 +25,7 @@ import {
     changeOpacity,
     changeOutlineSize,
     changeOutlineColor,
+    createGradientMap,
 } from "./viewerHelpers";
 
 class ModelViewer extends PureComponent {
@@ -54,7 +55,7 @@ class ModelViewer extends PureComponent {
         const { materialType } = this.props.model;
         changeMaterial({ target: main, materialType });
 
-        // weapon and dragon viewer
+        // basic viewer for non-human assets
         const modelId = this.props.model.id;
         if (!modelId.startsWith("c") || modelId.endsWith("_h")) {
             this.floor.add(main);
@@ -134,32 +135,32 @@ class ModelViewer extends PureComponent {
     async componentDidUpdate(prev) {
         const current = this.props;
 
-        // // print updated props to console
-        // console.log("Updated");
-        // Object.keys(prev).forEach(key => {
-        //     const oldValue = prev[key];
-        //     const currentValue = this.props[key];
-        //     const subkeys = Object.keys(oldValue);
-        //     if (subkeys.length === 0 || typeof oldValue === "string") {
-        //         if (oldValue !== currentValue) {
-        //             console.log(
-        //                 `${key}: ${JSON.stringify(
-        //                     oldValue
-        //                 )} to ${JSON.stringify(currentValue)}`
-        //             );
-        //         }
-        //     } else {
-        //         subkeys.forEach(subkey => {
-        //             if (oldValue[subkey] !== currentValue[subkey]) {
-        //                 console.log(
-        //                     `${key}.${subkey}: ${JSON.stringify(
-        //                         oldValue[subkey]
-        //                     )} to ${JSON.stringify(currentValue[subkey])}`
-        //                 );
-        //             }
-        //         });
-        //     }
-        // });
+        // print updated props to console
+        console.log("Updated");
+        Object.keys(prev).forEach(key => {
+            const oldValue = prev[key];
+            const currentValue = this.props[key];
+            const subkeys = Object.keys(oldValue);
+            if (subkeys.length === 0 || typeof oldValue === "string") {
+                if (oldValue !== currentValue) {
+                    console.log(
+                        `${key}: ${JSON.stringify(
+                            oldValue
+                        )} to ${JSON.stringify(currentValue)}`
+                    );
+                }
+            } else {
+                subkeys.forEach(subkey => {
+                    if (oldValue[subkey] !== currentValue[subkey]) {
+                        console.log(
+                            `${key}.${subkey}: ${JSON.stringify(
+                                oldValue[subkey]
+                            )} to ${JSON.stringify(currentValue[subkey])}`
+                        );
+                    }
+                });
+            }
+        });
 
         this.updateViewport(prev.viewport, current.viewport);
 
@@ -726,21 +727,34 @@ class ModelViewer extends PureComponent {
                 if (mat.map) mat.backupMap = mat.map;
                 mat.map = null;
             }
+
             if (current.flatShading) {
                 mat.flatShading = current.flatShading;
                 mat.needsUpdate = true;
+            }
+
+            if (materialType === "Toon" && current.gradientMap !== "none") {
+                let newMap = null;
+                const nTones = parseInt(current.gradientMap);
+                newMap = createGradientMap(nTones);
+
+                materials.forEach(mat => {
+                    mat.gradientMap = newMap;
+                    mat.needsUpdate = true;
+                });
             }
         });
     };
 
     updateMaterialParams = (prev, current) => {
         const { materialType } = this.props.model;
-        const { useTexture, flatShading } = current;
+        const { useTexture, flatShading, gradientMap } = current;
         const { materials } = this;
         const paramsList = [
             ...materialCommonParams,
             ...materialExtraParams[materialType],
         ];
+
         directSetMatParams.forEach(param => {
             if (!paramsList.includes(param) || prev[param] === current[param])
                 return;
@@ -774,6 +788,19 @@ class ModelViewer extends PureComponent {
         if (prev.flatShading !== flatShading) {
             materials.forEach(mat => {
                 mat.flatShading = flatShading;
+                mat.needsUpdate = true;
+            });
+        }
+
+        if (prev.gradientMap !== gradientMap) {
+            let newMap = null;
+            if (gradientMap !== "none") {
+                const nTones = parseInt(gradientMap);
+                newMap = createGradientMap(nTones);
+            }
+
+            materials.forEach(mat => {
+                mat.gradientMap = newMap;
                 mat.needsUpdate = true;
             });
         }

@@ -405,3 +405,13 @@ export const chainCodeToList = (code, name) => {
     });
     return output;
 };
+
+export const createGradientMap = nTones => {
+    const colors = new Uint8Array(nTones).map((_, i) => (i * 256) / nTones);
+    const map = new THREE.DataTexture(colors, nTones, 1, THREE.LuminanceFormat);
+    map.minFilter = THREE.NearestFilter;
+    map.magFilter = THREE.NearestFilter;
+    map.generateMipmaps = false;
+
+    return map;
+};

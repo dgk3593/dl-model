@@ -2,6 +2,8 @@ import { Fragment, useContext } from "react";
 
 import Button from "@material-ui/core/Button";
 import Slider from "@material-ui/core/Slider";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 import {
     materialCommonParams as commonParams,
@@ -46,6 +48,10 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
 
     const handleColorBtnClick = e => {
         openControl(e.currentTarget.dataset.value);
+    };
+
+    const handleSelectChange = key => e => {
+        updateMatParam(key, e.target.value);
     };
 
     const createToggleButton = name => {
@@ -98,6 +104,27 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
         );
     };
 
+    const createSelectBox = name => {
+        const currentValue = currentSettings[name];
+        const { options } = matParamsDetails[name];
+        const selectOptions = options.map(option => (
+            <MenuItem value={option} key={option}>
+                {option}
+            </MenuItem>
+        ));
+        return (
+            <div>
+                <Select
+                    fullWidth
+                    value={currentValue}
+                    onChange={handleSelectChange(name)}
+                >
+                    {selectOptions}
+                </Select>
+            </div>
+        );
+    };
+
     const generateControl = paramName => {
         const type = paramsDetails[paramName].type;
         switch (type) {
@@ -108,6 +135,8 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
                 return createSlider(paramName);
             case "color":
                 return createColorButton(paramName);
+            case "select":
+                return createSelectBox(paramName);
             default:
                 return currentSettings[paramName];
         }

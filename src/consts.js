@@ -84,7 +84,8 @@ export const matParamsDetails = {
     gradientMap: {
         name: "Gradient Map",
         type: "select",
-        default: "TBA",
+        default: "none",
+        options: ["none", "2 Tones", "3 Tones", "4 Tones", "5 Tones"],
     },
 };
 
