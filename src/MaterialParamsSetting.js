@@ -119,9 +119,9 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
             case "number":
                 return `${paramsDetails[param].name}: ${currentSettings[param]}`;
             case "percentage":
-                return `${paramsDetails[param].name}: ${
+                return `${paramsDetails[param].name}: ${~~(
                     currentSettings[param] * 100
-                }%`;
+                )}%`;
             default:
                 return paramsDetails[param].name;
         }
