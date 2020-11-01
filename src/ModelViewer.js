@@ -276,10 +276,10 @@ class ModelViewer extends PureComponent {
 
         // Light
         let light = new THREE.DirectionalLight(0xffffff);
-        light.position.set(0, 200, 100);
+        light.position.set(50, 0, 100);
         light.intensity = 0.8;
         this.scene.add(light);
-        light = new THREE.AmbientLight(0x777777);
+        light = new THREE.AmbientLight(0x444444);
         this.scene.add(light);
 
         // Renderer
