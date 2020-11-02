@@ -1,23 +1,16 @@
 import { useContext } from "react";
-import useToggleState from "./hooks/useToggleState";
 
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import Collapse from "@material-ui/core/Collapse";
-import IconButton from "@material-ui/core/IconButton";
 import MaterialParamsSetting from "./MaterialParamsSetting";
-
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import SettingsGroup from "./AdvancedSettingsGroup";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 import { MATERIALS } from "./consts";
 
 function MaterialSettings({ openControl }) {
-    const [expand, toggleExpand] = useToggleState(true);
-
     const {
         model: { materialType },
     } = useContext(SettingsContext);
@@ -53,45 +46,31 @@ function MaterialSettings({ openControl }) {
         </MenuItem>
     ));
 
+    const titleButton = (
+        <Button variant="contained" onClick={resetSettings}>
+            Reset
+        </Button>
+    );
+
     return (
-        <div className="AdvancedSettingsGroup">
-            <div
-                className="AdvancedSettingsGroup-header"
-                onClick={toggleExpand}
-            >
-                <IconButton size="small">
-                    {expand ? (
-                        <KeyboardArrowUpIcon />
-                    ) : (
-                        <KeyboardArrowDownIcon />
-                    )}
-                </IconButton>
-                <div className="AdvancedSettingsGroup-title">Material</div>
-                <div className="AdvancedSettingsGroup-toggle">
-                    <Button variant="contained" onClick={resetSettings}>
-                        Reset
-                    </Button>
+        <SettingsGroup title="Material" titleButton={titleButton} openAtStart>
+            <div className="AdvancedSettingsGroup-options">
+                <div className="AdvancedSettingsGroup-optionName">Type</div>
+                <div>
+                    <Select
+                        fullWidth
+                        onChange={handleChange}
+                        value={materialType}
+                    >
+                        {options}
+                    </Select>
                 </div>
+                <MaterialParamsSetting
+                    materialType={materialType}
+                    openControl={openControl}
+                />
             </div>
-            <Collapse in={expand} timeout="auto" unmountOnExit>
-                <div className="AdvancedSettingsGroup-options">
-                    <div className="AdvancedSettingsGroup-optionName">Type</div>
-                    <div>
-                        <Select
-                            fullWidth
-                            onChange={handleChange}
-                            value={materialType}
-                        >
-                            {options}
-                        </Select>
-                    </div>
-                    <MaterialParamsSetting
-                        materialType={materialType}
-                        openControl={openControl}
-                    />
-                </div>
-            </Collapse>
-        </div>
+        </SettingsGroup>
     );
 }
 
