@@ -14,7 +14,7 @@ function Display(props) {
     const settings = useContext(SettingsContext);
     const {
         model: { id: modelId },
-        scene: { rotateSpeed, background: bgColor, initCameraPosition },
+        scene: { rotateSpeed, background: bgColor, initCameraPosition, lights },
         app: { showAniControl, antiAliasing },
     } = settings;
 
@@ -65,6 +65,7 @@ function Display(props) {
                 outline={settings.outline}
                 animation={settings.animation}
                 rotateSpeed={rotateSpeed}
+                lights={lights}
                 bgColor={bgColor}
                 antiAliasing={antiAliasing}
             />

@@ -20,7 +20,7 @@
 
 .AdvancedSettingsGroup-options {
     display: grid;
-    grid-template-columns: 7.25rem auto;
+    grid-template-columns: 8rem auto;
 }
 
 .AdvancedSettingsGroup-optionName {

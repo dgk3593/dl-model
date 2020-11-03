@@ -33,6 +33,7 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
+        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -147,31 +148,31 @@ class ModelViewer extends PureComponent {
         const current = this.props;
 
         // print updated props to console
-        // console.log("Updated");
-        // Object.keys(prev).forEach(key => {
-        //     const oldValue = prev[key];
-        //     const currentValue = this.props[key];
-        //     const subkeys = Object.keys(oldValue);
-        //     if (subkeys.length === 0 || typeof oldValue === "string") {
-        //         if (oldValue !== currentValue) {
-        //             console.log(
-        //                 `${key}: ${JSON.stringify(
-        //                     oldValue
-        //                 )} to ${JSON.stringify(currentValue)}`
-        //             );
-        //         }
-        //     } else {
-        //         subkeys.forEach(subkey => {
-        //             if (oldValue[subkey] !== currentValue[subkey]) {
-        //                 console.log(
-        //                     `${key}.${subkey}: ${JSON.stringify(
-        //                         oldValue[subkey]
-        //                     )} to ${JSON.stringify(currentValue[subkey])}`
-        //                 );
-        //             }
-        //         });
-        //     }
-        // });
+        console.log("Updated");
+        Object.keys(prev).forEach(key => {
+            const oldValue = prev[key];
+            const currentValue = this.props[key];
+            const subkeys = Object.keys(oldValue);
+            if (subkeys.length === 0 || typeof oldValue === "string") {
+                if (oldValue !== currentValue) {
+                    console.log(
+                        `${key}: ${JSON.stringify(
+                            oldValue
+                        )} to ${JSON.stringify(currentValue)}`
+                    );
+                }
+            } else {
+                subkeys.forEach(subkey => {
+                    if (oldValue[subkey] !== currentValue[subkey]) {
+                        console.log(
+                            `${key}.${subkey}: ${JSON.stringify(
+                                oldValue[subkey]
+                            )} to ${JSON.stringify(currentValue[subkey])}`
+                        );
+                    }
+                });
+            }
+        });
 
         this.updateViewport(prev.viewport, current.viewport);
 
@@ -182,6 +183,8 @@ class ModelViewer extends PureComponent {
         this.updateOutline(prev.outline, current.outline);
 
         this.updateMaterial(prev, current);
+
+        this.updateLights(prev.lights, current.lights);
 
         // Update background color
         if (prev.bgColor !== current.bgColor) {
@@ -275,12 +278,8 @@ class ModelViewer extends PureComponent {
         this.controls.update();
 
         // Light
-        let light = new THREE.DirectionalLight(0xffffff);
-        light.position.set(50, 0, 100);
-        light.intensity = 0.8;
-        this.scene.add(light);
-        light = new THREE.AmbientLight(0x444444);
-        this.scene.add(light);
+        const { lights } = this.props;
+        this.addLights(lights);
 
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
@@ -304,6 +303,29 @@ class ModelViewer extends PureComponent {
 
         this.animate();
     };
+
+    addLights = lights => {
+        this.lights = [];
+        lights.forEach(({ type, color, enable, ...params }) => {
+            if (!enable) return;
+            const constructor = `${type}Light`;
+            const light = new THREE[constructor](color);
+
+            for (const [key, value] of Object.entries(params)) {
+                switch (key) {
+                    case "position":
+                        light.position.set(...value);
+                        break;
+                    default:
+                        light[key] = value;
+                }
+            }
+            this.scene.add(light);
+            this.lights.push(light);
+        });
+    };
+
+    removeLights = () => this.lights.forEach(light => this.scene.remove(light));
 
     // Promise to load all models at initialize
     initLoad = () => {
@@ -332,10 +354,9 @@ class ModelViewer extends PureComponent {
     detachWeapon = side => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
-            if (child.children.length === 1 && child.name === boneName) {
-                if (child.children[0].type === "Group") {
-                    child.remove(this.models[`weapon${side}`]);
-                }
+            if (child.name !== boneName || child.children.name !== 1) return;
+            if (child.children[0].type === "Group") {
+                child.remove(this.models[`weapon${side}`]);
             }
         });
     };
@@ -357,12 +378,13 @@ class ModelViewer extends PureComponent {
     };
 
     playNextAni = () => {
+        const { nAni } = this;
         // if capturing and finished recording current chain, stop capturing and set capture flag back to false
-        if (this.props.capture.enable && this._aniIdx === this.nAni - 1) {
+        if (this.props.capture.enable && this._aniIdx === nAni - 1) {
             this.mediaRecorder.stop();
             this.props.toggleCapture();
         }
-        const newIdx = (this._aniIdx + 1) % this.nAni;
+        const newIdx = (this._aniIdx + 1) % nAni;
         this.aniIdx = newIdx;
     };
 
@@ -830,6 +852,13 @@ class ModelViewer extends PureComponent {
         }
 
         this.updateMaterialParams(prev.materialParams, current.materialParams);
+    };
+
+    updateLights = (prev, current) => {
+        if (prev !== current) {
+            this.removeLights();
+            this.addLights(current);
+        }
     };
 
     setBackground = bgColor => {

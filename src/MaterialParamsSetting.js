@@ -8,7 +8,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import {
     materialCommonParams as commonParams,
     materialExtraParams as extraParams,
-    matParamsDetails,
     matParamsDetails as paramsDetails,
 } from "./consts";
 import { complementaryColor } from "./helpers";
@@ -90,7 +89,7 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
 
     const createSlider = name => {
         const currentValue = currentSettings[name];
-        const { min, max, step } = matParamsDetails[name];
+        const { min, max, step } = paramsDetails[name];
         return (
             <div className="AdvancedSettingsGroup-slider">
                 <Slider
@@ -106,7 +105,7 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
 
     const createSelectBox = name => {
         const currentValue = currentSettings[name];
-        const { options } = matParamsDetails[name];
+        const { options } = paramsDetails[name];
         const selectOptions = options.map(option => (
             <MenuItem value={option} key={option}>
                 {option}
