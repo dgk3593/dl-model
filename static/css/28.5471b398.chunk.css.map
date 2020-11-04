@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/styles/CardGallery.css"],"names":[],"mappings":"AAAA,aACI,YAAa,CACb,cAAe,CACf,6BAA8B,CAC9B,gBAAY,CAAZ,WACJ","file":"28.5471b398.chunk.css","sourcesContent":[".CardGallery {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: space-between;\r\n    row-gap: 8px;\r\n}\r\n"]}
