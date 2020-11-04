@@ -157,20 +157,6 @@ function SettingBtns({ openControl }) {
                     <ListItem
                         button
                         data-key="app"
-                        data-name="showAniControl"
-                        divider
-                        onClick={toggleSetting}
-                    >
-                        <ListItemText
-                            primary={`${
-                                showAniControl ? "Hide" : "Show"
-                            } Animation Control`}
-                            primaryTypographyProps={typographyProps}
-                        />
-                    </ListItem>
-                    <ListItem
-                        button
-                        data-key="app"
                         data-name="antiAliasing"
                         divider
                         onClick={toggleSetting}
@@ -182,6 +168,21 @@ function SettingBtns({ openControl }) {
                             primaryTypographyProps={typographyProps}
                         />
                     </ListItem>
+                    <ListItem
+                        button
+                        data-key="app"
+                        data-name="showAniControl"
+                        divider
+                        onClick={toggleSetting}
+                    >
+                        <ListItemText
+                            primary={`${
+                                showAniControl ? "Hide" : "Show"
+                            } Animation Control`}
+                            primaryTypographyProps={typographyProps}
+                        />
+                    </ListItem>
+
                     <ListItem
                         button
                         data-key="outline"
