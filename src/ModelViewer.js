@@ -313,7 +313,8 @@ class ModelViewer extends PureComponent {
             for (const [key, value] of Object.entries(params)) {
                 switch (key) {
                     case "position":
-                        light.position.set(...value);
+                        const setValue = value.map(v => (v ? v : 0));
+                        light.position.set(...setValue);
                         break;
                     default:
                         light[key] = value;

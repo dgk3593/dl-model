@@ -38,6 +38,18 @@ function LightSettings({ openControl }) {
         dispatch(action);
     };
 
+    const updatePosition = id => position => {
+        const newLights = currentLights.map(light =>
+            light.lightId === id ? { ...light, position } : light
+        );
+        const action = {
+            type: "update",
+            key: "scene",
+            value: { lights: newLights },
+        };
+        dispatch(action);
+    };
+
     const toggleLight = event => {
         const { id } = event.currentTarget.dataset;
         const targetLight = currentLights.find(({ lightId }) => lightId === id);
@@ -70,14 +82,19 @@ function LightSettings({ openControl }) {
 
     return (
         <SettingsGroup title="Lights" titleButton={titleButton}>
-            {currentLights.map(({ lightId, ...params }) => {
+            {currentLights.map(({ lightId: id, ...params }) => {
                 return (
                     <LightParamsSettings
-                        id={lightId}
-                        key={lightId}
+                        id={id}
+                        key={id}
                         toggleLight={toggleLight}
                         colorBtnClick={colorBtnClick}
-                        updateIntensity={updateIntensity(lightId)}
+                        updatePosition={
+                            params.type !== "Ambient"
+                                ? updatePosition(id)
+                                : null
+                        }
+                        updateIntensity={updateIntensity(id)}
                         {...params}
                     />
                 );
