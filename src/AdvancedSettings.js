@@ -1,6 +1,6 @@
 import { lazy, Suspense, useContext } from "react";
 
-import { DispatchContext } from "./context/SettingsContext";
+import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import Close from "@material-ui/icons/Close";
 
 import "./styles/AdvancedSettings.css";
@@ -12,6 +12,9 @@ const LightSettings = lazy(() => import("./LightSettings"));
 
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
+    const {
+        model: { materialType },
+    } = useContext(SettingsContext);
 
     const close = () => {
         const action = {
@@ -37,9 +40,11 @@ function AdvancedSettings({ openControl }) {
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openControl={openControl} />
                 </Suspense>
-                <Suspense fallback={<div>Loading</div>}>
-                    <LightSettings openControl={openControl} />
-                </Suspense>
+                {materialType !== "Basic" && (
+                    <Suspense fallback={<div>Loading</div>}>
+                        <LightSettings openControl={openControl} />
+                    </Suspense>
+                )}
                 <Suspense fallback={<div>Loading</div>}>
                     <MaterialSettings openControl={openControl} />
                 </Suspense>

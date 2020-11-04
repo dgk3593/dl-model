@@ -108,19 +108,19 @@ Object.keys(matParamsDetails).forEach(key => {
 
 const defaultLights = [
     {
-        lightId: 0,
+        lightId: "0",
+        type: "Ambient",
+        color: "#444444",
+        enable: true,
+        intensity: 1,
+    },
+    {
+        lightId: "1",
         type: "Directional",
         color: "#ffffff",
         enable: true,
         position: [50, 0, 100],
         intensity: 0.8,
-    },
-    {
-        lightId: 1,
-        type: "Ambient",
-        color: "#444444",
-        enable: true,
-        intensity: 1,
     },
 ];
 

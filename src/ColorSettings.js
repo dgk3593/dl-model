@@ -29,7 +29,14 @@ function ColorSettings({ toggleControlOpen, mode }) {
             break;
         default:
             const [key, subkey] = mode.split("-");
-            initColor = settings[key][subkey];
+            if (key === "Lights") {
+                const currentLight = settings.scene.lights.find(
+                    ({ lightId }) => lightId === subkey
+                );
+                initColor = currentLight.color;
+            } else {
+                initColor = settings[key][subkey];
+            }
             commonColor = commonBG;
             title = "Pick a Color";
     }
@@ -54,8 +61,21 @@ function ColorSettings({ toggleControlOpen, mode }) {
                 break;
             default:
                 const [key, subkey] = mode.split("-");
-                action.key = key;
-                action.value = { [subkey]: colorToSet };
+                if (key === "Lights") {
+                    const { lights } = settings.scene;
+                    const newLights = lights.map(light => {
+                        if (light.lightId === subkey) {
+                            return { ...light, color: colorToSet };
+                        }
+                        return light;
+                    });
+
+                    action.key = "scene";
+                    action.value = { lights: newLights };
+                } else {
+                    action.key = key;
+                    action.value = { [subkey]: colorToSet };
+                }
         }
         dispatch(action);
         toggleControlOpen();
