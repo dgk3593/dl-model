@@ -568,6 +568,14 @@ const adv = [
         weapon: "Blade",
     },
     {
+        cid: "110018_02",
+        name: "Opera Karina",
+        title: "Pirate Opera Prima Donna",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Bow",
+    },
+    {
         cid: "110361_01",
         name: "Peony",
         title: "Sweet Dream",

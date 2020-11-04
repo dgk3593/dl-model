@@ -1,11 +1,11 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 
 import Button from "@material-ui/core/Button";
 import Slider from "@material-ui/core/Slider";
 
 import { complementaryColor } from "./helpers";
 
-import { DispatchContext } from "./context/SettingsContext";
+// import { DispatchContext } from "./context/SettingsContext";
 
 function LightParamsSettings(props) {
     const {
@@ -16,7 +16,7 @@ function LightParamsSettings(props) {
         ...params
     } = props;
     const { type, enable, color, intensity } = params;
-    const dispatch = useContext(DispatchContext);
+    // const dispatch = useContext(DispatchContext);
 
     return (
         <div className="AdvancedSettingsGroup-options">

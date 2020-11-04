@@ -801,6 +801,17 @@ const skills = {
             name: "Butterfly Kiss",
             value: "SKL_110368_01+BOW_SKL_02_01_11036801",
         },
+        {
+            icon: "img/advIcons/110018_02_r05.png",
+            name: "Aria of the Sea",
+            value:
+                "SKL_110018_02+BOW_SKL_01_01_11001802>+BOW_SKL_01_02_11001802>+BOW_SKL_01_03_11001802>+BOW_SKL_01_04_11001802>+BOW_SKL_01_05_11001802",
+        },
+        {
+            icon: "img/advIcons/110018_02_r05.png",
+            name: "Operatic Shanty",
+            value: "SKL_110018_02+BOW_SKL_02_01_11001802",
+        },
     ],
     Wand: [
         {
