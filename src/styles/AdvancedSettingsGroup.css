@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    padding: 2px 0;
 }
 
 .AdvancedSettingsGroup-title {
@@ -19,6 +20,8 @@
 }
 
 .AdvancedSettingsGroup-options {
+    border-top: 1px solid black;
+    padding-top: 2px;
     display: grid;
     grid-template-columns: 8rem auto;
 }
