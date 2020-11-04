@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, lazy, Suspense } from "react";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import Button from "@material-ui/core/Button";
 
 import SettingsGroup from "./AdvancedSettingsGroup";
-import LightParamsSettings from "./LightParamsSettings";
+const LightParamsSettings = lazy(() => import("./LightParamsSettings"));
 
 function LightSettings({ openControl }) {
     const {
@@ -84,19 +84,20 @@ function LightSettings({ openControl }) {
         <SettingsGroup title="Lights" titleButton={titleButton}>
             {currentLights.map(({ lightId: id, ...params }) => {
                 return (
-                    <LightParamsSettings
-                        id={id}
-                        key={id}
-                        toggleLight={toggleLight}
-                        colorBtnClick={colorBtnClick}
-                        updatePosition={
-                            params.type !== "Ambient"
-                                ? updatePosition(id)
-                                : null
-                        }
-                        updateIntensity={updateIntensity(id)}
-                        {...params}
-                    />
+                    <Suspense key={id} fallback={<div>Loading</div>}>
+                        <LightParamsSettings
+                            id={id}
+                            toggleLight={toggleLight}
+                            colorBtnClick={colorBtnClick}
+                            updatePosition={
+                                params.type !== "Ambient"
+                                    ? updatePosition(id)
+                                    : null
+                            }
+                            updateIntensity={updateIntensity(id)}
+                            {...params}
+                        />
+                    </Suspense>
                 );
             })}
         </SettingsGroup>

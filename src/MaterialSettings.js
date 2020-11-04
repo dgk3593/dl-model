@@ -1,14 +1,15 @@
-import { useContext } from "react";
+import { useContext, lazy, Suspense } from "react";
 
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import MaterialParamsSetting from "./MaterialParamsSetting";
 import SettingsGroup from "./AdvancedSettingsGroup";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 import { MATERIALS } from "./consts";
+
+const MaterialParamsSetting = lazy(() => import("./MaterialParamsSetting"));
 
 function MaterialSettings({ openControl }) {
     const {
@@ -65,10 +66,12 @@ function MaterialSettings({ openControl }) {
                         {options}
                     </Select>
                 </div>
-                <MaterialParamsSetting
-                    materialType={materialType}
-                    openControl={openControl}
-                />
+                <Suspense fallback={<div>Loading</div>}>
+                    <MaterialParamsSetting
+                        materialType={materialType}
+                        openControl={openControl}
+                    />
+                </Suspense>
             </div>
         </SettingsGroup>
     );
