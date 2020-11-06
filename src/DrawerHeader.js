@@ -16,6 +16,7 @@ function DrawerHeader({ toggleDrawerOpen }) {
     const dispatch = useContext(DispatchContext);
     const {
         capture: { codec: currentCodec },
+        ascii: { enable: asciiOn },
     } = useContext(SettingsContext);
 
     useEffect(() => {
@@ -55,7 +56,7 @@ function DrawerHeader({ toggleDrawerOpen }) {
             >
                 <ArrowLeft />
             </div>
-            {currentCodec && (
+            {currentCodec && !asciiOn && (
                 <Tooltip
                     title="Save animation as video (experimental)"
                     placement="bottom-end"
