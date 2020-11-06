@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import SettingsGroup from "./AdvancedSettingsGroup";
 const LightParamsSetting = lazy(() => import("./LightParamsSetting"));
 
-function LightSettings({ openControl }) {
+function LightSettings({ openControl, openAtStart }) {
     const {
         scene: { lights: currentLights },
     } = useContext(SettingsContext);
@@ -81,7 +81,11 @@ function LightSettings({ openControl }) {
     );
 
     return (
-        <SettingsGroup title="Lights" titleButton={titleButton}>
+        <SettingsGroup
+            title="Lights"
+            titleButton={titleButton}
+            openAtStart={openAtStart}
+        >
             {currentLights.map(({ lightId: id, ...params }) => {
                 return (
                     <Suspense key={id} fallback={<div>Loading</div>}>

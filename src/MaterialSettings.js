@@ -11,7 +11,7 @@ import { MATERIALS } from "./consts";
 
 const MaterialParamsSetting = lazy(() => import("./MaterialParamsSetting"));
 
-function MaterialSettings({ openControl }) {
+function MaterialSettings({ openControl, openAtStart }) {
     const {
         model: { materialType },
     } = useContext(SettingsContext);
@@ -54,7 +54,11 @@ function MaterialSettings({ openControl }) {
     );
 
     return (
-        <SettingsGroup title="Material" titleButton={titleButton}>
+        <SettingsGroup
+            title="Material"
+            titleButton={titleButton}
+            openAtStart={openAtStart}
+        >
             <div className="AdvancedSettingsGroup-options">
                 <div className="AdvancedSettingsGroup-optionName">Type</div>
                 <div>

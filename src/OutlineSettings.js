@@ -8,7 +8,7 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import { complementaryColor } from "./helpers";
 import "./styles/AdvancedSettingsGroup.css";
 
-function OutlineSettings({ openControl }) {
+function OutlineSettings({ openControl, openAtStart }) {
     const dispatch = useContext(DispatchContext);
 
     const toggleOutline = event => {
@@ -53,7 +53,11 @@ function OutlineSettings({ openControl }) {
     );
 
     return (
-        <SettingsGroup title="Outline Settings" titleButton={titleButton}>
+        <SettingsGroup
+            title="Outline Settings"
+            titleButton={titleButton}
+            openAtStart={openAtStart}
+        >
             <div className="AdvancedSettingsGroup-options">
                 <div className="AdvancedSettingsGroup-optionName">
                     Size: {size}

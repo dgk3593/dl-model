@@ -36,7 +36,7 @@ function AdvancedSettings({ openControl }) {
             </div>
             <div className="AdvancedSettings-List">
                 <Suspense fallback={<div>Loading</div>}>
-                    <AutoRotate />
+                    <AutoRotate openAtStart />
                 </Suspense>
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openControl={openControl} />

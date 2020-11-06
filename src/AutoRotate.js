@@ -7,7 +7,7 @@ import SettingsGroup from "./AdvancedSettingsGroup";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 
-function AutoRotate() {
+function AutoRotate({ openAtStart }) {
     const {
         scene: { rotateSpeed },
     } = useContext(SettingsContext);
@@ -39,7 +39,11 @@ function AutoRotate() {
     );
 
     return (
-        <SettingsGroup title="Auto Rotate" titleButton={titleButton}>
+        <SettingsGroup
+            title="Auto Rotate"
+            titleButton={titleButton}
+            openAtStart={openAtStart}
+        >
             <div className="AdvancedSettingsGroup-options">
                 <div className="AdvancedSettingsGroup-optionName">
                     Speed: {rotateSpeed}
