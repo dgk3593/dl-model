@@ -40,6 +40,7 @@ const useStyles = makeStyles(theme => ({
         opacity: "0.5",
         borderRadius: "0.25rem",
         transition: "0.5s all ease-in-out",
+        backgroundColor: "#cccccc",
         cursor: "pointer",
         "&:hover": {
             opacity: "1",
