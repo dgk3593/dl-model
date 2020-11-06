@@ -54,7 +54,7 @@ function MaterialSettings({ openControl }) {
     );
 
     return (
-        <SettingsGroup title="Material" titleButton={titleButton} openAtStart>
+        <SettingsGroup title="Material" titleButton={titleButton}>
             <div className="AdvancedSettingsGroup-options">
                 <div className="AdvancedSettingsGroup-optionName">Type</div>
                 <div>
