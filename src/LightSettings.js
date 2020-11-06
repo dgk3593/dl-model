@@ -4,7 +4,7 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 import Button from "@material-ui/core/Button";
 
 import SettingsGroup from "./AdvancedSettingsGroup";
-const LightParamsSettings = lazy(() => import("./LightParamsSettings"));
+const LightParamsSetting = lazy(() => import("./LightParamsSetting"));
 
 function LightSettings({ openControl }) {
     const {
@@ -85,7 +85,7 @@ function LightSettings({ openControl }) {
             {currentLights.map(({ lightId: id, ...params }) => {
                 return (
                     <Suspense key={id} fallback={<div>Loading</div>}>
-                        <LightParamsSettings
+                        <LightParamsSetting
                             id={id}
                             toggleLight={toggleLight}
                             colorBtnClick={colorBtnClick}

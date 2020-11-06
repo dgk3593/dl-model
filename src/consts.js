@@ -124,6 +124,11 @@ const defaultLights = [
     },
 ];
 
+export const asciiSet = [
+    " .:-=+*#%@",
+    " .'`^\",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$",
+];
+
 export const defaultSettings = {
     model: {
         materialType: "Basic",
@@ -161,6 +166,13 @@ export const defaultSettings = {
         enable: false,
         supportedCodecs: [],
         codec: "",
+    },
+    ascii: {
+        enable: false,
+        charSet: asciiSet[1],
+        invert: false,
+        color: "#00ff00",
+        bgColor: "#000000",
     },
 };
 
@@ -379,9 +391,4 @@ export const videoCodecs = [
     "video/webm;codecs=vp9",
     "video/webm;codecs=vp8",
     "video/webm",
-];
-
-export const asciiSet = [
-    " .:-=+*#%@",
-    " .'`^\",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$",
 ];

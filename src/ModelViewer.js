@@ -46,6 +46,10 @@ class ModelViewer extends PureComponent {
             weaponLeft,
         };
 
+        // effects
+        this.loadedFX = new Set();
+        this.fxConstructors = new Map();
+
         // add outline to main model and save reference
         this.outlines.main = createOutline(main, this.outlineParams);
 
@@ -185,6 +189,8 @@ class ModelViewer extends PureComponent {
 
         this.updateLights(prev.lights, current.lights);
 
+        this.updateAscii(prev.ascii, current.ascii);
+
         // Update background color
         if (prev.bgColor !== current.bgColor) {
             this.setBackground(current.bgColor);
@@ -296,8 +302,10 @@ class ModelViewer extends PureComponent {
         this.renderer = this.props.antiAliasing
             ? this.rendererAA
             : this.rendererNoAA;
-        this.canvas = this.renderer.domElement;
-        this.renderer.setSize(this.viewport.width, this.viewport.height);
+
+        this.finalRenderer = this.renderer;
+        this.canvas = this.finalRenderer.domElement;
+        this.finalRenderer.setSize(this.viewport.width, this.viewport.height);
         this.mount.appendChild(this.canvas);
 
         this.animate();
@@ -313,7 +321,7 @@ class ModelViewer extends PureComponent {
             for (const [key, value] of Object.entries(params)) {
                 switch (key) {
                     case "position":
-                        const setValue = value.map(v => (v ? v : 0));
+                        const setValue = value.map(v => v || 0);
                         light.position.set(...setValue);
                         break;
                     default:
@@ -448,11 +456,11 @@ class ModelViewer extends PureComponent {
 
     updateViewport = (prev, current) => {
         const { width, height } = current;
-        if (prev.width !== width || prev.height !== height) {
-            this.renderer.setSize(width, height);
-            this.camera.aspect = width / height;
-            this.camera.updateProjectionMatrix();
-        }
+        if (prev.width === width && prev.height === height) return;
+
+        this.finalRenderer.setSize(width, height);
+        this.camera.aspect = width / height;
+        this.camera.updateProjectionMatrix();
     };
 
     captureAnimation = () => {
@@ -496,6 +504,8 @@ class ModelViewer extends PureComponent {
             ? this.rendererAA
             : this.rendererNoAA;
         this.renderer.setSize(currentSize.x, currentSize.y);
+
+        if (this.props.ascii.enable) return;
         // remove old canvas
         this.mount.removeChild(this.canvas);
         // Add new canvas
@@ -861,9 +871,59 @@ class ModelViewer extends PureComponent {
         }
     };
 
+    updateAscii = async (prev, current) => {
+        const updated = Object.keys(prev).some(
+            key => prev[key] !== current[key]
+        );
+        if (!updated) return;
+
+        const { enable } = current;
+        if (!enable) {
+            this.finalRenderer = this.renderer;
+            const { canvas } = this;
+            const newCanvas = this.renderer.domElement;
+            this.replaceCanvas(canvas, newCanvas);
+            this.canvas = newCanvas;
+            return;
+        }
+
+        if (!this.loadedFX.has("ascii")) {
+            const { AsciiEffect } = await import(
+                "three/examples/jsm/effects/AsciiEffect"
+            );
+            this.loadedFX.add("ascii");
+            this.fxConstructors.set("ascii", AsciiEffect);
+            this.showAscii();
+        } else this.showAscii();
+
+        this.finalRenderer.setSize(this.viewport.width, this.viewport.height);
+    };
+
+    showAscii = () => {
+        const { charSet, color, bgColor, invert } = this.props.ascii;
+        const AsciiEffect = this.fxConstructors.get("ascii");
+
+        this.effect = new AsciiEffect(this.renderer, charSet, { invert });
+        this.effect.setSize(this.viewport.width, this.viewport.height);
+
+        const newCanvas = this.effect.domElement;
+        const currentCanvas = this.canvas;
+        newCanvas.style.color = color;
+        newCanvas.style.background = bgColor;
+
+        this.replaceCanvas(currentCanvas, newCanvas);
+        this.canvas = newCanvas;
+        this.finalRenderer = this.effect;
+    };
+
     setBackground = bgColor => {
         this.scene.background =
             bgColor !== "transparent" ? new THREE.Color(bgColor) : null;
+    };
+
+    replaceCanvas = (oldCanvas, newCanvas) => {
+        this.mount.removeChild(oldCanvas);
+        this.mount.appendChild(newCanvas);
     };
 
     animate = () => {
@@ -874,7 +934,7 @@ class ModelViewer extends PureComponent {
 
         this.mixers.forEach(mixer => mixer.update(dt));
 
-        this.renderer.render(this.scene, this.camera);
+        this.finalRenderer.render(this.scene, this.camera);
     };
 
     render() {

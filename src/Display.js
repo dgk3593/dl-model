@@ -68,6 +68,7 @@ function Display(props) {
                 lights={lights}
                 bgColor={bgColor}
                 antiAliasing={antiAliasing}
+                ascii={settings.ascii}
             />
         </div>
     );

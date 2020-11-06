@@ -7,7 +7,7 @@ import { complementaryColor } from "./helpers";
 
 const CoordinatePicker = lazy(() => import("./CoordinatePicker"));
 
-function LightParamsSettings(props) {
+function LightParamsSetting(props) {
     const {
         id,
         toggleLight,
@@ -72,4 +72,4 @@ function LightParamsSettings(props) {
     );
 }
 
-export default LightParamsSettings;
+export default LightParamsSetting;

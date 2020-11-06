@@ -9,6 +9,7 @@ const OutlineSettings = lazy(() => import("./OutlineSettings"));
 const AutoRotate = lazy(() => import("./AutoRotate"));
 const MaterialSettings = lazy(() => import("./MaterialSettings"));
 const LightSettings = lazy(() => import("./LightSettings"));
+const AsciiSettings = lazy(() => import("./AsciiSettings"));
 
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
@@ -47,6 +48,9 @@ function AdvancedSettings({ openControl }) {
                 )}
                 <Suspense fallback={<div>Loading</div>}>
                     <MaterialSettings openControl={openControl} />
+                </Suspense>
+                <Suspense fallback={<div>Loading</div>}>
+                    <AsciiSettings openControl={openControl} />
                 </Suspense>
             </div>
         </div>
