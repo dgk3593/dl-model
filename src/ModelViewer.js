@@ -506,11 +506,12 @@ class ModelViewer extends PureComponent {
         this.renderer.setSize(currentSize.x, currentSize.y);
 
         if (this.props.ascii.enable) return;
-        // remove old canvas
-        this.mount.removeChild(this.canvas);
-        // Add new canvas
-        this.canvas = this.renderer.domElement;
-        this.mount.appendChild(this.canvas);
+
+        this.finalRenderer = this.renderer;
+
+        const { canvas } = this;
+        const newCanvas = this.renderer.domElement;
+        this.replaceCanvas(canvas, newCanvas);
     };
 
     updateMainModel = async (prev, current) => {
