@@ -512,6 +512,7 @@ class ModelViewer extends PureComponent {
         const { canvas } = this;
         const newCanvas = this.renderer.domElement;
         this.replaceCanvas(canvas, newCanvas);
+        this.canvas = newCanvas;
     };
 
     updateMainModel = async (prev, current) => {
