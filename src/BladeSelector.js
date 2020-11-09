@@ -1,6 +1,6 @@
 import "./styles/Selector.css";
 
-function BladeSelector({ value, handleClick }) {
+const BladeSelector = ({ value, handleClick }) => {
     return (
         <div className="Selector">
             <div
@@ -23,6 +23,6 @@ function BladeSelector({ value, handleClick }) {
             </div>
         </div>
     );
-}
+};
 
 export default BladeSelector;
