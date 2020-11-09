@@ -54,7 +54,7 @@ function OutlineSettings({ openControl, openAtStart }) {
 
     return (
         <SettingsGroup
-            title="Outline Settings"
+            title="Outline"
             titleButton={titleButton}
             openAtStart={openAtStart}
         >

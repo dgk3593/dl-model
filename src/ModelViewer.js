@@ -313,10 +313,10 @@ class ModelViewer extends PureComponent {
 
     addLights = lights => {
         this.lights = [];
-        lights.forEach(({ type, color, enable, ...params }) => {
+        lights.forEach(({ enable, type, color, intensity, ...params }) => {
             if (!enable) return;
             const constructor = `${type}Light`;
-            const light = new THREE[constructor](color);
+            const light = new THREE[constructor](color, intensity);
 
             for (const [key, value] of Object.entries(params)) {
                 switch (key) {
