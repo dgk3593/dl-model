@@ -22,7 +22,7 @@ const typographyProps = {
 
 const mainBtns = [
     { value: "model", text: "Choose a Model" },
-    { value: "faceOverride", text: "Face Override" },
+    { value: "texture", text: "Face Override" },
     { value: "face", text: "Choose Face" },
     { value: "weapon", text: "Add Weapons" },
 ];

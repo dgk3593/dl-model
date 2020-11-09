@@ -15,7 +15,6 @@ function ControlPanel(props) {
     switch (mode) {
         case "model":
         case "texture":
-        case "faceOverride":
             content = (
                 <CharaSelect
                     mode={mode}

@@ -2,6 +2,9 @@ import * as THREE from "three";
 import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
+import { idxOffsets } from "./consts";
+import textureOffsets from "./data/face_offset";
+
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnPotentialArray, isSheath } from "./helpers";
 
@@ -263,6 +266,32 @@ export const createOutline = (object, params) => {
         child.parent.add(outline);
     });
     return outlines;
+};
+
+export const calculateOffset = (texture, prevTexture, idx, prevIdx) => {
+    const textureChanged = texture !== prevTexture;
+    const idxChanged = idx !== prevIdx;
+
+    const offset = { x: 0, y: 0 };
+    if (textureChanged) {
+        const prevTextureOffset = textureOffsets[prevTexture] || {
+            x: 0,
+            y: 0,
+        };
+        const textureOffset = textureOffsets[texture] || { x: 0, y: 0 };
+
+        offset.x += textureOffset.x - prevTextureOffset.x;
+        offset.y += textureOffset.y - prevTextureOffset.y;
+    }
+
+    if (idxChanged) {
+        const prevIdxOffset = idxOffsets[`face${prevIdx}`];
+        const idxOffset = idxOffsets[`face${idx}`];
+
+        offset.x += idxOffset.x - prevIdxOffset.x;
+        offset.y += idxOffset.y - prevIdxOffset.y;
+    }
+    return offset;
 };
 
 const applyOffset = part => ({ target, offset }) => {

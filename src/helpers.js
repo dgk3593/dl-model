@@ -26,7 +26,8 @@ export const callbackOnPotentialArray = (object, callback) => {
 
 export const setInitialSettings = params => {
     if (params.length === 0) return;
-    let faceTextureDefined = false;
+    let eyeTextureDefined = false;
+    let mouthTextureDefined = false;
     params.forEach(param => {
         if (!param) return;
 
@@ -37,8 +38,11 @@ export const setInitialSettings = params => {
         let setValue = value.length === 1 ? value[0] : value.join("=");
 
         switch (keycode) {
-            case "ft":
-                faceTextureDefined = true;
+            case "et":
+                eyeTextureDefined = true;
+                break;
+            case "mt":
+                mouthTextureDefined = true;
                 break;
             case "cc":
                 // initialize chain maker chain
@@ -66,8 +70,11 @@ export const setInitialSettings = params => {
 
     initSettings["model"]["texture"] = initSettings["model"]["id"];
 
-    if (!faceTextureDefined) {
-        initSettings["model"]["faceTexture"] = initSettings["model"]["id"];
+    if (!eyeTextureDefined) {
+        initSettings["model"]["eyeTexture"] = initSettings["model"]["id"];
+    }
+    if (!mouthTextureDefined) {
+        initSettings["model"]["mouthTexture"] = initSettings["model"]["id"];
     }
 };
 

@@ -17,6 +17,7 @@ import "./styles/CharaSelect.css";
 const SetSelect = lazy(() => import("./SetSelect"));
 const Filters = lazy(() => import("./Filters"));
 const CardGallery = lazy(() => import("./CardGallery"));
+const FacePartSelector = lazy(() => import("./FacePartSelector"));
 
 const options = ["Regular Adventurers", "Allies", "Enemies"];
 
@@ -24,14 +25,16 @@ function CharaSelect({ toggleControlOpen, mode }) {
     const {
         model: { id: currentId },
     } = useContext(SettingsContext);
+    const dispatch = useContext(DispatchContext);
+
+    const title = mode === "model" ? "Select a Character" : "Override Texture";
 
     const [charaSet, setCharaSet] = useState(0);
+    const [facePart, setFacePart] = useState("both");
     const [groupState, groupToggle, setAll] = useToggleGroups(FILTERS);
 
     const filters = useMemo(() => collectFilter(groupState), [groupState]);
     const advList = useMemo(() => multiCondFilter(adv, filters), [filters]);
-
-    const dispatch = useContext(DispatchContext);
 
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;
@@ -42,26 +45,43 @@ function CharaSelect({ toggleControlOpen, mode }) {
         setAll(false);
     };
 
+    const changeFacePart = event => {
+        event.stopPropagation();
+        const mode = event.currentTarget.dataset.value;
+        setFacePart(mode);
+    };
+
     const handleSelect = event => {
         const cid = event.currentTarget.dataset.value;
-        const action =
-            mode !== "faceOverride"
-                ? {
-                      type: "update",
-                      key: "model",
-                      value: { id: cid, texture: cid, faceTexture: cid },
-                  }
-                : {
-                      type: "update",
-                      key: "model",
-                      value: {
-                          faceTexture:
-                              spFaceTextures[cid] && cid !== currentId
-                                  ? spFaceTextures[cid]
-                                  : cid,
-                      },
-                  };
-        dispatch(action);
+        const action = { type: "update", key: "model" };
+        switch (mode) {
+            case "model":
+                action.value = {
+                    id: cid,
+                    texture: cid,
+                    eyeTexture: cid,
+                    mouthTexture: cid,
+                };
+                dispatch(action);
+                break;
+            case "texture":
+                const outputTexture =
+                    spFaceTextures[cid] && cid !== currentId
+                        ? spFaceTextures[cid]
+                        : cid;
+
+                if (["eye", "both"].includes(facePart)) {
+                    action.value = { eyeTexture: outputTexture };
+                    dispatch(action);
+                }
+
+                if (["mouth", "both"].includes(facePart)) {
+                    action.value = { mouthTexture: outputTexture };
+                    dispatch(action);
+                }
+                break;
+            default:
+        }
         toggleControlOpen();
     };
 
@@ -69,7 +89,7 @@ function CharaSelect({ toggleControlOpen, mode }) {
         <>
             <DialogTop>
                 <DialogTitle onClose={toggleControlOpen}>
-                    Select a Character
+                    {title}
                     <div className="CharaSelect-CharaSetSelect">
                         <Suspense fallback={null}>
                             <SetSelect
@@ -92,6 +112,14 @@ function CharaSelect({ toggleControlOpen, mode }) {
                 )}
             </DialogTop>
             <DialogContent dividers>
+                {mode === "texture" && (
+                    <Suspense fallback={null}>
+                        <FacePartSelector
+                            value={facePart}
+                            handleClick={changeFacePart}
+                        />
+                    </Suspense>
+                )}
                 <Suspense fallback={<div>Loading</div>}>
                     {charaSet === 0 ? (
                         <CardGallery

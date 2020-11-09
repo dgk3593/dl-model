@@ -79,9 +79,17 @@ function ShareContent({ method }) {
                         );
                     }
                     break;
-                case "ft":
+                case "et":
                     if (
-                        currentSettings["model"]["faceTexture"] !==
+                        currentSettings["model"]["eyeTexture"] !==
+                        currentSettings["model"]["id"]
+                    ) {
+                        link = link.concat(`${keyCode}=${currentValue}/`);
+                    }
+                    break;
+                case "mt":
+                    if (
+                        currentSettings["model"]["mouthTexture"] !==
                         currentSettings["model"]["id"]
                     ) {
                         link = link.concat(`${keyCode}=${currentValue}/`);

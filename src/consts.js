@@ -134,8 +134,10 @@ export const defaultSettings = {
         materialType: "Basic",
         id: "c100001_01",
         texture: "c100001_01",
-        faceTexture: "c100001_01",
-        face: 2,
+        eyeTexture: "c100001_01",
+        eyeIdx: "2",
+        mouthTexture: "c100001_01",
+        mouthIdx: "2",
         weaponRight: "",
         weaponLeft: "",
     },
@@ -178,8 +180,10 @@ export const defaultSettings = {
 
 export const initKey = {
     id: { group: "model", key: "id" },
-    ft: { group: "model", key: "faceTexture" },
-    f: { group: "model", key: "face" },
+    et: { group: "model", key: "eyeTexture" },
+    ei: { group: "model", key: "eyeIdx" },
+    mt: { group: "model", key: "mouthTexture" },
+    mi: { group: "model", key: "mouthIdx" },
     wr: { group: "model", key: "weaponRight" },
     wl: { group: "model", key: "weaponLeft" },
     bg: { group: "scene", key: "background" },
@@ -374,7 +378,7 @@ export const controlsPositions = {
     smith: [0, 0.5, 0],
 };
 
-export const faceOffsets = {
+export const idxOffsets = {
     face1: { x: 2, y: 1 },
     face2: { x: 0, y: 0 },
     face3: { x: 1, y: 0 },

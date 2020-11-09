@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext, lazy, Suspense } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
 import { SettingsContext } from "./context/SettingsContext";
@@ -8,6 +8,8 @@ import { fbxSource } from "./App";
 import faceOffsetFix from "./data/face_offset";
 import useStyles from "./styles/FaceSelectStyles";
 
+const FacePartSelector = lazy(() => import("./FacePartSelector"));
+
 function FaceSelect(props) {
     const { toggleControlOpen } = props;
     const dispatch = useContext(DispatchContext);
@@ -15,18 +17,34 @@ function FaceSelect(props) {
         model: { faceTexture },
     } = useContext(SettingsContext);
 
+    const [facePart, setFacePart] = useState("both");
+
+    const changeFacePart = event => {
+        event.stopPropagation();
+        const mode = event.currentTarget.dataset.value;
+        setFacePart(mode);
+    };
+
     const classes = useStyles(faceOffsetFix[faceTexture] || { x: 0, y: 0 });
 
     const imgPath = `${fbxSource}/fbx/${faceTexture}/${faceTexture}.png`;
 
-    const setFace = event => {
+    const setIdx = event => {
         const n = event.currentTarget.dataset.value;
         const action = {
             type: "update",
             key: "model",
-            value: { face: n },
         };
-        dispatch(action);
+
+        if (["eye", "both"].includes(facePart)) {
+            action.value = { eyeIdx: n };
+            dispatch(action);
+        }
+        if (["mouth", "both"].includes(facePart)) {
+            action.value = { mouthIdx: n };
+            dispatch(action);
+        }
+
         toggleControlOpen();
     };
 
@@ -36,7 +54,7 @@ function FaceSelect(props) {
             style={{ backgroundImage: `url(${imgPath})` }}
             data-value={i}
             key={i}
-            onClick={setFace}
+            onClick={setIdx}
         />
     ));
 
@@ -46,6 +64,12 @@ function FaceSelect(props) {
                 <DialogTitle onClose={toggleControlOpen}>
                     Select a Face
                 </DialogTitle>
+                <Suspense fallback={null}>
+                    <FacePartSelector
+                        value={facePart}
+                        handleClick={changeFacePart}
+                    />
+                </Suspense>
             </DialogTop>
             <DialogContent dividers className={classes["FaceSelect"]}>
                 {faces}
