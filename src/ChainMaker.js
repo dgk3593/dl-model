@@ -79,7 +79,7 @@ function ChainMaker({ openControl }) {
         applyCode(code);
     };
 
-    const add = event => {
+    const add = () => {
         openControl("addAni");
     };
 

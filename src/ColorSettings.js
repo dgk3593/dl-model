@@ -15,11 +15,12 @@ const ChromePicker = lazy(() =>
 function ColorSettings({ toggleControlOpen, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
-    let initColor, title, commonColor;
+    let initColor,
+        title,
+        commonColor = commonBG;
     switch (mode) {
         case "background":
             initColor = settings.scene.background;
-            commonColor = commonBG;
             title = "Background Settings";
             break;
         case "outlineColor":
@@ -37,7 +38,6 @@ function ColorSettings({ toggleControlOpen, mode }) {
             } else {
                 initColor = settings[key][subkey];
             }
-            commonColor = commonBG;
             title = "Pick a Color";
     }
     const [color, setColor] = useState(initColor);

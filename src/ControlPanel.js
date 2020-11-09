@@ -46,18 +46,12 @@ function ControlPanel(props) {
             content = <Share toggleControlOpen={toggleControlOpen} />;
             break;
         default:
-            if (
-                /materialParams-.*/.test(mode) ||
-                /Lights-.*/.test(mode) ||
-                /ascii-.*/.test(mode)
-            ) {
-                content = (
-                    <ColorSettings
-                        mode={mode}
-                        toggleControlOpen={toggleControlOpen}
-                    />
-                );
-            }
+            content = mode.includes("-") && (
+                <ColorSettings
+                    mode={mode}
+                    toggleControlOpen={toggleControlOpen}
+                />
+            );
     }
 
     return (
