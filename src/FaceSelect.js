@@ -14,7 +14,7 @@ function FaceSelect(props) {
     const { toggleControlOpen } = props;
     const dispatch = useContext(DispatchContext);
     const {
-        model: { faceTexture },
+        model: { eyeTexture, mouthTexture },
     } = useContext(SettingsContext);
 
     const [facePart, setFacePart] = useState("both");
@@ -25,9 +25,12 @@ function FaceSelect(props) {
         setFacePart(mode);
     };
 
-    const classes = useStyles(faceOffsetFix[faceTexture] || { x: 0, y: 0 });
+    const classes = useStyles(faceOffsetFix[eyeTexture] || { x: 0, y: 0 });
 
-    const imgPath = `${fbxSource}/fbx/${faceTexture}/${faceTexture}.png`;
+    const imgPath =
+        facePart === "mouth"
+            ? `${fbxSource}/fbx/${mouthTexture}/${mouthTexture}.png`
+            : `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
 
     const setIdx = event => {
         const n = event.currentTarget.dataset.value;
