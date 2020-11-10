@@ -13,7 +13,8 @@ import {
     incompatibleModels,
 } from "./consts";
 import {
-    calculateOffset,
+    calculateTextureOffset,
+    calculateIdxOffset,
     getModelPath,
     analyzeWeaponCode,
     analyzeChainCode,
@@ -493,53 +494,79 @@ class ModelViewer extends PureComponent {
         this.canvas = newCanvas;
     };
 
-    updateEye = (prev, current) => {
-        const { eyeTexture, eyeIdx } = current;
-        const textureChanged = prev.eyeTexture !== eyeTexture;
+    updateEyeTexture = (prev, current) => {
+        const currentTexture = current.eyeTexture;
+        const prevTexture = prev.eyeTexture;
         const { materialType } = current;
-        if (textureChanged) {
-            applyEyeTexture({
-                target: this.models.main,
-                materialType,
-                textureId: eyeTexture,
-            });
-        }
-        const offset = calculateOffset(
-            eyeTexture,
-            prev.eyeTexture,
-            eyeIdx,
-            prev.eyeIdx
-        );
 
-        if (offset.x !== 0 || offset.y !== 0)
-            applyEyeOffset({ target: this.models.main, offset });
+        if (currentTexture === prevTexture) return;
+        applyEyeTexture({
+            target: this.models.main,
+            materialType,
+            textureId: currentTexture,
+        });
+        const offset = calculateTextureOffset(currentTexture, prevTexture);
+        applyEyeOffset({
+            target: this.models.main,
+            offset,
+        });
     };
 
-    updateMouth = (prev, current) => {
-        const { mouthTexture, mouthIdx } = current;
-        const textureChanged = prev.mouthTexture !== mouthTexture;
-        const { materialType } = current;
-        if (textureChanged) {
-            applyMouthTexture({
-                target: this.models.main,
-                materialType,
-                textureId: mouthTexture,
-            });
-        }
-        const offset = calculateOffset(
-            mouthTexture,
-            prev.mouthTexture,
-            mouthIdx,
-            prev.mouthIdx
-        );
+    updateEyeOffset = (prev, current) => {
+        const currentIdx = current.eyeIdx;
+        const prevIdx = prev.eyeIdx;
 
-        if (offset.x !== 0 || offset.y !== 0)
-            applyMouthOffset({ target: this.models.main, offset });
+        if (currentIdx === prevIdx) return;
+        const offset = calculateIdxOffset(currentIdx, prevIdx);
+        applyEyeOffset({
+            target: this.models.main,
+            offset,
+        });
+    };
+
+    updateMouthTexture = (prev, current) => {
+        const currentTexture = current.mouthTexture;
+        const prevTexture = prev.mouthTexture;
+        const { materialType } = current;
+
+        if (currentTexture === prevTexture) return;
+        applyMouthTexture({
+            target: this.models.main,
+            materialType,
+            textureId: currentTexture,
+        });
+        const offset = calculateTextureOffset(currentTexture, prevTexture);
+        applyMouthOffset({
+            target: this.models.main,
+            offset,
+        });
+    };
+
+    updateMouthOffset = (prev, current) => {
+        const currentIdx = current.mouthIdx;
+        const prevIdx = prev.mouthIdx;
+
+        if (currentIdx === prevIdx) return;
+        const offset = calculateIdxOffset(currentIdx, prevIdx);
+        applyMouthOffset({
+            target: this.models.main,
+            offset,
+        });
+    };
+
+    updateFaceTexture = (prev, current) => {
+        this.updateEyeTexture(prev, current);
+        this.updateMouthTexture(prev, current);
+    };
+
+    updateFaceOffset = (prev, current) => {
+        this.updateEyeOffset(prev, current);
+        this.updateMouthOffset(prev, current);
     };
 
     updateFace = (prev, current) => {
-        this.updateEye(prev, current);
-        this.updateMouth(prev, current);
+        this.updateFaceTexture(prev, current);
+        this.updateFaceOffset(prev, current);
     };
 
     updateMainModel = async (prev, current) => {
@@ -577,13 +604,11 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-            const defaultFaceParams = {
-                eyeTexture: modelId,
+            const defaultFaceIdx = {
                 eyeIdx: "2",
-                mouthTexture: modelId,
                 mouthIdx: "2",
             };
-            this.updateFace(defaultFaceParams, current);
+            this.updateFaceOffset(defaultFaceIdx, current);
 
             // Attach weapons to new model
             ["Right", "Left"].forEach(side => {
@@ -908,7 +933,8 @@ class ModelViewer extends PureComponent {
         this.frameId = requestAnimationFrame(this.animate);
         const dt = this.clock.getDelta();
         // Rotate the floor
-        this.floor.rotateY((this.props.rotateSpeed * dt * Math.PI) / 2);
+        const { rotateSpeed } = this.props;
+        this.floor.rotateY((rotateSpeed * dt * Math.PI) / 2);
 
         this.mixers.forEach(mixer => mixer.update(dt));
 

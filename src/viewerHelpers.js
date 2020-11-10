@@ -268,29 +268,42 @@ export const createOutline = (object, params) => {
     return outlines;
 };
 
-export const calculateOffset = (texture, prevTexture, idx, prevIdx) => {
-    const textureChanged = texture !== prevTexture;
-    const idxChanged = idx !== prevIdx;
-
+export const calculateTextureOffset = (currentTexture, prevTexture) => {
     const offset = { x: 0, y: 0 };
-    if (textureChanged) {
-        const prevTextureOffset = textureOffsets[prevTexture] || {
+    if (currentTexture !== prevTexture) {
+        const prevOffset = textureOffsets[prevTexture] || {
             x: 0,
             y: 0,
         };
-        const textureOffset = textureOffsets[texture] || { x: 0, y: 0 };
+        const currentOffset = textureOffsets[currentTexture] || { x: 0, y: 0 };
 
-        offset.x += textureOffset.x - prevTextureOffset.x;
-        offset.y += textureOffset.y - prevTextureOffset.y;
+        offset.x = currentOffset.x - prevOffset.x;
+        offset.y = currentOffset.y - prevOffset.y;
     }
+    return offset;
+};
 
-    if (idxChanged) {
-        const prevIdxOffset = idxOffsets[`face${prevIdx}`];
-        const idxOffset = idxOffsets[`face${idx}`];
+export const calculateIdxOffset = (currentIdx, prevIdx) => {
+    const offset = { x: 0, y: 0 };
+    if (currentIdx !== prevIdx) {
+        const prevOffset = idxOffsets[`face${prevIdx}`];
+        const currentOffset = idxOffsets[`face${currentIdx}`];
 
-        offset.x += idxOffset.x - prevIdxOffset.x;
-        offset.y += idxOffset.y - prevIdxOffset.y;
+        offset.x = currentOffset.x - prevOffset.x;
+        offset.y = currentOffset.y - prevOffset.y;
     }
+    return offset;
+};
+
+export const calculateOffset = (texture, prevTexture, idx, prevIdx) => {
+    const textureOffset = calculateTextureOffset(texture, prevTexture);
+    const idxOffset = calculateIdxOffset(idx, prevIdx);
+
+    const offset = {
+        x: textureOffset.x + idxOffset.x,
+        y: textureOffset.y + idxOffset.y,
+    };
+
     return offset;
 };
 
