@@ -295,18 +295,6 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
     return offset;
 };
 
-export const calculateOffset = (texture, prevTexture, idx, prevIdx) => {
-    const textureOffset = calculateTextureOffset(texture, prevTexture);
-    const idxOffset = calculateIdxOffset(idx, prevIdx);
-
-    const offset = {
-        x: textureOffset.x + idxOffset.x,
-        y: textureOffset.y + idxOffset.y,
-    };
-
-    return offset;
-};
-
 const applyOffset = part => ({ target, offset }) => {
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
@@ -331,13 +319,7 @@ const applyOffset = part => ({ target, offset }) => {
 
 export const applyEyeOffset = applyOffset("Eye");
 export const applyMouthOffset = applyOffset("Mouth");
-export const applyBodyOffset = applyOffset("BodyAll");
-
-export const applyFaceOffset = input => {
-    if (input.offset.x === 0 && input.offset.y === 0) return;
-    applyEyeOffset(input);
-    applyMouthOffset(input);
-};
+// export const applyBodyOffset = applyOffset("BodyAll");
 
 const applyTexture = part => ({
     target,
@@ -370,12 +352,7 @@ const applyTexture = part => ({
 
 export const applyEyeTexture = applyTexture("Eye");
 export const applyMouthTexture = applyTexture("Mouth");
-export const applyBodyTexture = applyTexture("BodyAll");
-
-export const applyFaceTexture = input => {
-    applyEyeTexture(input);
-    applyMouthTexture(input);
-};
+// export const applyBodyTexture = applyTexture("BodyAll");
 
 // Chain Code is invalid if starts with the character "+"
 export const analyzeChainCode = code => {
