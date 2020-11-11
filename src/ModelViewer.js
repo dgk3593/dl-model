@@ -36,6 +36,7 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
+        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -104,6 +105,8 @@ class ModelViewer extends PureComponent {
         });
 
         // Apply face settings
+        this.currentEyeIdx = "2";
+        this.currentMouthIdx = "2";
         const defaultFaceParams = {
             mouthTexture: modelId,
             mouthIdx: "2",
@@ -367,7 +370,9 @@ class ModelViewer extends PureComponent {
     playNextAni = () => {
         const { nAni } = this;
         // if capturing and finished recording current chain, stop capturing and set capture flag back to false
-        if (this.props.capture.enable && this._aniIdx === nAni - 1) {
+        const finishedRecording =
+            this.props.capture.enable && this._aniIdx === nAni - 1;
+        if (finishedRecording) {
             this.mediaRecorder.stop();
             this.props.toggleCapture();
         }
@@ -389,10 +394,14 @@ class ModelViewer extends PureComponent {
         this._aniIdx = 0;
         object.mixer.timeScale = timeScale; // Global timeScale
         object.mixer.addEventListener("finished", this.playNextAni);
-        this.aniSettings = animationList.map(ani => ({
-            timeScale: ani.timeScale,
-            repetitions: ani.repetitions,
-        }));
+        this.aniSettings = animationList.map(ani => {
+            const settings = {
+                timeScale: ani.timeScale,
+                repetitions: ani.repetitions,
+            };
+            if (ani.faceChange) settings.faceChange = ani.faceChange;
+            return settings;
+        });
         const batchLoader = fileList.map(file => {
             const path = `${fbxSource}/fbx/${file}.fbx`;
             return loadModel(path);
@@ -424,12 +433,19 @@ class ModelViewer extends PureComponent {
         const mixer = this.models.main.mixer;
         mixer.stopAllAction();
         const action = mixer.clipAction(anim);
-        const { timeScale, repetitions } = this.aniSettings[newIdx];
+        const currentAniSettings = this.aniSettings[newIdx];
+        const { timeScale, repetitions } = currentAniSettings;
+        if (currentAniSettings.faceChange) {
+            this.faceChange = [...currentAniSettings.faceChange];
+        }
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
         action.timeScale = timeScale;
         action.time = 0;
+
+        this.clock.start();
+        this.currentClipDuration = anim.duration;
         action.play();
     }
 
@@ -512,17 +528,19 @@ class ModelViewer extends PureComponent {
         });
     };
 
-    updateEyeOffset = (prev, current) => {
-        const currentIdx = current.eyeIdx;
-        const prevIdx = prev.eyeIdx;
+    set eyeIdx(newIdx) {
+        if (!newIdx) return;
 
-        if (currentIdx === prevIdx) return;
-        const offset = calculateIdxOffset(currentIdx, prevIdx);
+        const oldIdx = this.currentEyeIdx;
+        if (newIdx === oldIdx) return;
+
+        const offset = calculateIdxOffset(newIdx, oldIdx);
         applyEyeOffset({
             target: this.models.main,
             offset,
         });
-    };
+        this.currentEyeIdx = newIdx;
+    }
 
     updateMouthTexture = (prev, current) => {
         const currentTexture = current.mouthTexture;
@@ -542,31 +560,33 @@ class ModelViewer extends PureComponent {
         });
     };
 
-    updateMouthOffset = (prev, current) => {
-        const currentIdx = current.mouthIdx;
-        const prevIdx = prev.mouthIdx;
+    set mouthIdx(newIdx) {
+        if (!newIdx) return;
 
-        if (currentIdx === prevIdx) return;
-        const offset = calculateIdxOffset(currentIdx, prevIdx);
+        const oldIdx = this.currentMouthIdx;
+        if (newIdx === oldIdx) return;
+
+        const offset = calculateIdxOffset(newIdx, oldIdx);
         applyMouthOffset({
             target: this.models.main,
             offset,
         });
-    };
+        this.currentMouthIdx = newIdx;
+    }
 
     updateFaceTexture = (prev, current) => {
         this.updateEyeTexture(prev, current);
         this.updateMouthTexture(prev, current);
     };
 
-    updateFaceOffset = (prev, current) => {
-        this.updateEyeOffset(prev, current);
-        this.updateMouthOffset(prev, current);
+    updateFaceOffset = current => {
+        this.eyeIdx = current.eyeIdx;
+        this.mouthIdx = current.mouthIdx;
     };
 
     updateFace = (prev, current) => {
         this.updateFaceTexture(prev, current);
-        this.updateFaceOffset(prev, current);
+        this.updateFaceOffset(current);
     };
 
     updateMainModel = async (prev, current) => {
@@ -604,11 +624,11 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-            const defaultFaceIdx = {
-                eyeIdx: "2",
-                mouthIdx: "2",
-            };
-            this.updateFaceOffset(defaultFaceIdx, current);
+            this.currentEyeIdx = "2";
+            this.currentMouthIdx = "2";
+            const { eyeIdx, mouthIdx } = this.props.model;
+            this.eyeIdx = eyeIdx;
+            this.mouthIdx = mouthIdx;
 
             // Attach weapons to new model
             ["Right", "Left"].forEach(side => {
@@ -937,6 +957,18 @@ class ModelViewer extends PureComponent {
         this.floor.rotateY((rotateSpeed * dt * Math.PI) / 2);
 
         this.mixers.forEach(mixer => mixer.update(dt));
+
+        if (this.faceChange && this.faceChange.length > 0) {
+            const { elapsedTime } = this.clock;
+            const nextFaceChangeTime =
+                this.faceChange[0].time * this.currentClipDuration;
+            if (elapsedTime >= nextFaceChangeTime) {
+                const currentFaceChange = this.faceChange.shift();
+                const { eyeIdx, mouthIdx } = currentFaceChange;
+                this.eyeIdx = eyeIdx;
+                this.mouthIdx = mouthIdx;
+            }
+        }
 
         this.finalRenderer.render(this.scene, this.camera);
     };

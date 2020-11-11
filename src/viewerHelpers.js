@@ -368,7 +368,8 @@ export const analyzeChainCode = code => {
             aniName = null,
             fileName = null,
             details,
-            currentAni = {};
+            currentAni = {},
+            faceChange = [];
         const currentParts = aniCodes[i].split("+");
         const fromModelFile = currentParts.length === 1;
         if (fromModelFile) {
@@ -392,6 +393,13 @@ export const analyzeChainCode = code => {
                 if (key === "r") {
                     repetitions = value === "inf" ? Infinity : parseInt(value);
                 }
+                if (key.includes("-")) {
+                    const [part, time] = key.split("-");
+                    const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
+                    const faceMod = { time: time / 100 };
+                    faceMod[indexName] = value;
+                    faceChange.push(faceMod);
+                }
             }
         } else {
             aniName = details;
@@ -402,9 +410,27 @@ export const analyzeChainCode = code => {
             timeScale,
             repetitions,
         };
+        if (faceChange.length > 0)
+            currentAni.faceChange = processFaceChange(faceChange);
+
         animationList.push(currentAni);
     }
     return [fileList, animationList];
+};
+
+const processFaceChange = faceChange => {
+    const sorted = faceChange.sort(change => change.time);
+    const timeStamps = new Set(faceChange.map(change => change.time));
+    if (faceChange.length === timeStamps.length) return sorted;
+
+    const simplified = [];
+    timeStamps.forEach(time => {
+        let output = { time };
+        const changes = sorted.filter(change => change.time === time);
+        changes.forEach(change => (output = Object.assign(output, change)));
+        simplified.push(output);
+    });
+    return simplified;
 };
 
 export const chainCodeToList = (code, name) => {
@@ -413,7 +439,7 @@ export const chainCodeToList = (code, name) => {
     const output = animationList.map((ani, i) => {
         const { fileIdx, aniName, timeScale, repetitions } = ani;
         const partName = name.concat(length > 1 ? `#${i + 1}` : "");
-        return {
+        const listItem = {
             name: partName,
             fileName: fileList[fileIdx],
             aniName,
@@ -421,6 +447,8 @@ export const chainCodeToList = (code, name) => {
             repetitions,
             id: uuid(),
         };
+        if (ani.faceChange) listItem.faceChange = ani.faceChange;
+        return listItem;
     });
     return output;
 };
