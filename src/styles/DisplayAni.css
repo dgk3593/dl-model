@@ -1,7 +1,8 @@
 .DisplayAni {
     background-color: rgba(255, 255, 255, 0.6);
     width: 100%;
-    padding: 0.15rem;
+    padding: 0;
+    border-top: 2px solid black;
 }
 
 .DisplayAni:focus-within {
@@ -16,20 +17,27 @@
     margin: 0.25rem;
 }
 
-.DisplayAni-content {
+.DisplayAni-topBtns {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto;
     width: 100%;
 }
 
-.DisplayAni-showMore {
-    text-align: center;
+.DisplayAni-timeRep {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-.DisplayAni-showLess {
+.DisplayAni-toggleExpand {
+    font-size: 0.5rem;
+    cursor: pointer;
     padding: 0;
     margin: 0;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.DisplayAni-toggleExpand:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
