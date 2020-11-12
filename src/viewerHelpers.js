@@ -179,11 +179,10 @@ const replaceMaterial = (object, newMaterial) => {
         obj.dispose();
     });
     // apply new material
-    if (Array.isArray(object.material)) {
-        object.material = new Array(object.material.length).fill(newMaterial);
-    } else {
-        object.material = newMaterial;
-    }
+    const matIsArray = Array.isArray(object.material);
+    object.material = matIsArray
+        ? new Array(object.material.length).fill(newMaterial)
+        : newMaterial;
 };
 
 // change opacity of an object
@@ -217,7 +216,8 @@ const updateOutlineShader = (material, size) => {
 
 // change size of outline
 export const changeOutlineSize = ({ material }, size) => {
-    if (Array.isArray(material)) {
+    const matIsArray = Array.isArray(material);
+    if (matIsArray) {
         const updated = new Set();
         material.forEach(m => {
             if (updated.has(m.uuid)) return;
@@ -225,14 +225,15 @@ export const changeOutlineSize = ({ material }, size) => {
             updateOutlineShader(m, size);
             updated.add(m.uuid);
         });
-    } else {
-        updateOutlineShader(material, size);
+        return;
     }
+    updateOutlineShader(material, size);
 };
 
 // Change color of outline
 export const changeOutlineColor = ({ material }, color) => {
-    if (Array.isArray(material)) {
+    const matIsArray = Array.isArray(material);
+    if (matIsArray) {
         const updated = new Set();
         material.forEach(m => {
             if (updated.has(m.uuid)) return;
@@ -240,9 +241,9 @@ export const changeOutlineColor = ({ material }, color) => {
             m.color = new THREE.Color(color);
             updated.add(m.uuid);
         });
-    } else {
-        material.color = new THREE.Color(color);
+        return;
     }
+    material.color = new THREE.Color(color);
 };
 
 // Add outline to object and return reference to outlines
@@ -396,7 +397,7 @@ export const analyzeChainCode = code => {
                 if (key.includes("-")) {
                     const [part, time] = key.split("-");
                     const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
-                    const faceMod = { time: time / 100 };
+                    const faceMod = { time };
                     faceMod[indexName] = value;
                     faceChange.push(faceMod);
                 }

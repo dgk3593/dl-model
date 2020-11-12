@@ -361,9 +361,9 @@ class ModelViewer extends PureComponent {
 
             if (Array.isArray(material)) {
                 this.materials = this.materials.concat(material);
-            } else {
-                this.materials.push(material);
+                return;
             }
+            this.materials.push(material);
         });
     };
 
@@ -647,13 +647,13 @@ class ModelViewer extends PureComponent {
             this.applyMaterialParams();
 
             this.props.setIsLoading(false);
-        } else {
-            // Update face when main model not changed
-            this.updateFace(prev, current);
-
-            this.saveMaterialReference();
-            this.applyMaterialParams();
+            return;
         }
+        // Update face when main model not changed
+        this.updateFace(prev, current);
+
+        this.saveMaterialReference();
+        this.applyMaterialParams();
     };
 
     updateWeapons = async (prev, current) => {
@@ -732,9 +732,10 @@ class ModelViewer extends PureComponent {
             }
             // Add new animation
             this.addAnimationChain(mainModel, code, timeScale);
+            return;
         }
-        //Update timeScale
-        else if (prev.timeScale !== timeScale) {
+        // Update timeScale if animation not changed
+        if (prev.timeScale !== timeScale) {
             this.mixers.forEach(mixer => (mixer.timeScale = timeScale));
         }
     };
@@ -961,7 +962,7 @@ class ModelViewer extends PureComponent {
         if (this.faceChange && this.faceChange.length > 0) {
             const { elapsedTime } = this.clock;
             const nextFaceChangeTime =
-                this.faceChange[0].time * this.currentClipDuration;
+                (this.faceChange[0].time * this.currentClipDuration) / 100;
             if (elapsedTime >= nextFaceChangeTime) {
                 const currentFaceChange = this.faceChange.shift();
                 const { eyeIdx, mouthIdx } = currentFaceChange;
