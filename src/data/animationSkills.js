@@ -1009,22 +1009,6 @@ const skills = {
     ],
     Manacaster: [
         {
-            icon: "img/advIcons/110350_02_r05.png",
-            name: "Hound Shot",
-            value: "SKL_110350_02+GUN_SKL_01_01_11035002",
-        },
-        {
-            icon: "img/advIcons/110350_02_r05.png",
-            name: "Ace Operator",
-            value: "SKL_110350_02+GUN_SKL_02_01_11035002",
-        },
-        {
-            icon: "img/advIcons/110350_02_r05.png",
-            name: "Hound Shot (Poison)",
-            value: "SKL_110350_02+GUN_SKL_03_01_11035002",
-        },
-
-        {
             icon: "img/advIcons/110367_01_r05.png",
             name: "Drive Buster",
             value: "SKL_110367_01+GUN_SKL_01_01_11036701",
@@ -1053,6 +1037,21 @@ const skills = {
             icon: "img/advIcons/110370_01_r05.png",
             name: "Graceful Bullet",
             value: "SKL_110370_01+GUN_SKL_02_01_11037001",
+        },
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Hound Shot",
+            value: "SKL_110350_02+GUN_SKL_01_01_11035002",
+        },
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Ace Operator",
+            value: "SKL_110350_02+GUN_SKL_02_01_11035002",
+        },
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Hound Shot (Poison)",
+            value: "SKL_110350_02+GUN_SKL_03_01_11035002",
         },
     ],
 };
