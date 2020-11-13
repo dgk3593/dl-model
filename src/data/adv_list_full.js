@@ -144,6 +144,22 @@ const adv = [
         weapon: "Lance",
     },
     {
+        cid: "110350_02",
+        name: "Formal Joachim",
+        title: "Resolved Hunter",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Manacaster",
+    },
+    {
+        cid: "110340_02",
+        name: "Formal Noelle",
+        title: "Bridge Builder",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Staff",
+    },
+    {
         cid: "110272_01",
         name: "Forte",
         title: "Lord of the Skies",

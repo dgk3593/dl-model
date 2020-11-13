@@ -986,6 +986,11 @@ const skills = {
             value: "SKL_110304_01+",
         },
         {
+            icon: "img/advIcons/110340_02_r05.png",
+            name: "Grim Missive",
+            value: "SKL_110340_02+",
+        },
+        {
             icon: "img/advIcons/110341_01_r05.png",
             name: "Vital Gate",
             value: "SKL_110341_01+",
@@ -1003,6 +1008,22 @@ const skills = {
         },
     ],
     Manacaster: [
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Hound Shot",
+            value: "SKL_110350_02+GUN_SKL_01_01_11035002",
+        },
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Ace Operator",
+            value: "SKL_110350_02+GUN_SKL_02_01_11035002",
+        },
+        {
+            icon: "img/advIcons/110350_02_r05.png",
+            name: "Hound Shot (Poison)",
+            value: "SKL_110350_02+GUN_SKL_03_01_11035002",
+        },
+
         {
             icon: "img/advIcons/110367_01_r05.png",
             name: "Drive Buster",

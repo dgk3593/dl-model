@@ -1,4 +1,6 @@
 const faceOffset = {
+    c110350_02: { x: 0.043, y: -0.0625 }, // Formal Joachim
+    c110340_02: { x: 0.043, y: -0.0625 }, // Formal Noelle
     c110018_02: { x: 0.043, y: -0.0625 }, // Opera Karina
     c110370_01: { x: 0.043, y: -0.0625 }, // Lapis
     c100015_04: { x: 0.05, y: -0.08 }, // Chelle
