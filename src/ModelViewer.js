@@ -36,7 +36,6 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -342,13 +341,10 @@ class ModelViewer extends PureComponent {
     };
 
     detachWeapon = side => {
-        const boneName = `jWeapon${side[0]}`;
-        this.models.main.traverse(child => {
-            if (child.name !== boneName || child.children.name !== 1) return;
-            if (child.children[0].type === "Group") {
-                child.remove(this.models[`weapon${side}`]);
-            }
-        });
+        const key = `weapon${side}`;
+        const model = this.models[key];
+        if (!model) return;
+        model.parent.remove(model);
     };
 
     saveMaterialReference = () => {
@@ -434,10 +430,8 @@ class ModelViewer extends PureComponent {
         mixer.stopAllAction();
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
-        const { timeScale, repetitions } = currentAniSettings;
-        if (currentAniSettings.faceChange) {
-            this.faceChange = [...currentAniSettings.faceChange];
-        }
+        const { timeScale, repetitions, faceChange } = currentAniSettings;
+        this.faceChange = faceChange ? [...faceChange] : "";
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
