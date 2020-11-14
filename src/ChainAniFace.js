@@ -12,7 +12,7 @@ function ChainAniFace(props) {
         updateFaceChanges(id, newChange);
     };
 
-    const details = faceChanges.map(change => (
+    const details = faceChanges?.map(change => (
         <ChainAniFaceDetails
             key={change.id}
             change={change}
