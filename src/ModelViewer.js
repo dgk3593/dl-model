@@ -36,6 +36,7 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
+        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -131,32 +132,32 @@ class ModelViewer extends PureComponent {
     async componentDidUpdate(prev) {
         const current = this.props;
 
-        // // print updated props to console
-        // console.log("Updated");
-        // Object.keys(prev).forEach(key => {
-        //     const oldValue = prev[key];
-        //     const currentValue = this.props[key];
-        //     const subkeys = Object.keys(oldValue);
-        //     if (subkeys.length === 0 || typeof oldValue === "string") {
-        //         if (oldValue !== currentValue) {
-        //             console.log(
-        //                 `${key}: ${JSON.stringify(
-        //                     oldValue
-        //                 )} to ${JSON.stringify(currentValue)}`
-        //             );
-        //         }
-        //     } else {
-        //         subkeys.forEach(subkey => {
-        //             if (oldValue[subkey] !== currentValue[subkey]) {
-        //                 console.log(
-        //                     `${key}.${subkey}: ${JSON.stringify(
-        //                         oldValue[subkey]
-        //                     )} to ${JSON.stringify(currentValue[subkey])}`
-        //                 );
-        //             }
-        //         });
-        //     }
-        // });
+        // print updated props to console
+        console.log("Updated");
+        Object.keys(prev).forEach(key => {
+            const oldValue = prev[key];
+            const currentValue = this.props[key];
+            const subkeys = Object.keys(oldValue);
+            if (subkeys.length === 0 || typeof oldValue === "string") {
+                if (oldValue !== currentValue) {
+                    console.log(
+                        `${key}: ${JSON.stringify(
+                            oldValue
+                        )} to ${JSON.stringify(currentValue)}`
+                    );
+                }
+            } else {
+                subkeys.forEach(subkey => {
+                    if (oldValue[subkey] !== currentValue[subkey]) {
+                        console.log(
+                            `${key}.${subkey}: ${JSON.stringify(
+                                oldValue[subkey]
+                            )} to ${JSON.stringify(currentValue[subkey])}`
+                        );
+                    }
+                });
+            }
+        });
 
         this.updateViewport(prev.viewport, current.viewport);
 
@@ -422,6 +423,21 @@ class ModelViewer extends PureComponent {
         this.props.setIsLoading(false);
     };
 
+    getFaceChangesArray = (faceChanges, repetitions) => {
+        if (!faceChanges) return "";
+        if (repetitions === 1) return faceChanges;
+        // [0, 100, 200,...]
+        const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
+
+        const offsetFaceChanges = offset =>
+            faceChanges.map(({ time, id, ...others }) => ({
+                ...others,
+                time: time + offset,
+            }));
+
+        return timeOffset.map(offsetFaceChanges).flat();
+    };
+
     // this.aniIdx = n => play animation with index n
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
@@ -431,14 +447,14 @@ class ModelViewer extends PureComponent {
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
         const { timeScale, repetitions, faceChanges } = currentAniSettings;
-        this.faceChanges = faceChanges ? [...faceChanges] : "";
+        this.faceChanges = this.getFaceChangesArray(faceChanges, repetitions);
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
         action.timeScale = timeScale;
         action.time = 0;
 
-        this.clock.start();
+        mixer.setTime(0);
         this.currentClipDuration = anim.duration;
         action.play();
     }
@@ -954,12 +970,12 @@ class ModelViewer extends PureComponent {
         this.mixers.forEach(mixer => mixer.update(dt));
 
         if (this.faceChanges && this.faceChanges.length > 0) {
-            const { elapsedTime } = this.clock;
-            const nextfaceChangesTime =
+            const elapsedTime = this.models.main.mixer.time;
+            const nextFaceChangeTime =
                 (this.faceChanges[0].time * this.currentClipDuration) / 100;
-            if (elapsedTime >= nextfaceChangesTime) {
-                const currentfaceChanges = this.faceChanges.shift();
-                const { eyeIdx, mouthIdx } = currentfaceChanges;
+            if (elapsedTime >= nextFaceChangeTime) {
+                const currentFaceChange = this.faceChanges.shift();
+                const { eyeIdx, mouthIdx } = currentFaceChange;
                 this.eyeIdx = eyeIdx;
                 this.mouthIdx = mouthIdx;
             }
