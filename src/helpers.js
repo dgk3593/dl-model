@@ -7,6 +7,7 @@ import {
     GENDER_CODE,
     COMBO_LENGTH,
     FS_LENGTH,
+    aniModList,
 } from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
@@ -79,18 +80,10 @@ export const setInitialSettings = params => {
 };
 
 export const generateChainCode = chain => {
-    const defaultMod = {
-        timeScale: 1,
-        repetitions: 1,
-    };
-    const modList = {
-        ts: "timeScale",
-        r: "repetitions",
-    };
     const length = chain.length;
     let output = "";
     chain.forEach((ani, i) => {
-        const { fileName, aniName } = ani;
+        const { fileName, aniName, faceChanges } = ani;
         if (fileName) {
             if (i === 0) {
                 output = output.concat(fileName);
@@ -102,15 +95,41 @@ export const generateChainCode = chain => {
             output = output.concat("+");
         }
         output = output.concat(aniName);
+
         // Add modifiers
-        Object.keys(modList).forEach(modKey => {
-            const key = modList[modKey];
-            if (ani[key] !== defaultMod[key]) {
-                output = output.concat(`&${modKey}=${ani[key]}`);
-            }
-        });
+        const modCode = generateAniModCode(ani);
+        output = output.concat(modCode);
+        const faceCode = generateFaceCode(faceChanges);
+        output = output.concat(faceCode);
+
         if (i < length - 1) {
             output = output.concat(">");
+        }
+    });
+    return output;
+};
+
+const generateAniModCode = ani => {
+    let output = "";
+    Object.keys(aniModList).forEach(modKey => {
+        const { key, defaultValue } = aniModList[modKey];
+        if (ani[key] !== defaultValue) {
+            output = output.concat(`&${modKey}=${ani[key]}`);
+        }
+    });
+    return output;
+};
+
+const generateFaceCode = faceChanges => {
+    if (!faceChanges) return "";
+    let output = "";
+    faceChanges.forEach(change => {
+        const { time, eyeIdx, mouthIdx } = change;
+        if (eyeIdx) {
+            output = output.concat(`&e-${time}=${eyeIdx}`);
+        }
+        if (mouthIdx) {
+            output = output.concat(`&m-${time}=${mouthIdx}`);
         }
     });
     return output;

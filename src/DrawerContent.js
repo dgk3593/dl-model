@@ -17,7 +17,11 @@ function DrawerContent({ openControl }) {
             content = <SettingBtns openControl={openControl} />;
             break;
         case "chainMaker":
-            content = <ChainMaker openControl={openControl} />;
+            content = (
+                <>
+                    <ChainMaker openControl={openControl} />
+                </>
+            );
             break;
         case "advanced":
             content = <AdvancedSettings openControl={openControl} />;

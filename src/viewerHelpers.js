@@ -397,7 +397,7 @@ export const analyzeChainCode = code => {
                 if (key.includes("-")) {
                     const [part, time] = key.split("-");
                     const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
-                    const faceMod = { time };
+                    const faceMod = { time: parseFloat(time) };
                     faceMod[indexName] = value;
                     faceChanges.push(faceMod);
                 }
@@ -423,13 +423,17 @@ const processFaceChanges = faceChanges => {
     const sorted = faceChanges.sort(change => change.time);
     const timeStamps = new Set(faceChanges.map(change => change.time));
     if (faceChanges.length === timeStamps.length) {
-        sorted.forEach(change => (change.id = uuid()));
+        sorted.forEach(change => {
+            change.id = uuid();
+            if (!change.eyeIdx) change.eyeIdx = "";
+            if (!change.mouthIdx) change.mouthIdx = "";
+        });
         return sorted;
     }
 
     const simplified = [];
     timeStamps.forEach(time => {
-        let output = { time, id: uuid() };
+        let output = { time, id: uuid(), eyeIdx: "", mouthIdx: "" };
         const changes = sorted.filter(change => change.time === time);
         changes.forEach(change => (output = Object.assign(output, change)));
         simplified.push(output);

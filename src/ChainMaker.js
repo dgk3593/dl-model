@@ -10,7 +10,7 @@ import { generateChainCode } from "./helpers";
 
 import "./styles/ChainMaker.css";
 
-const DisplayAniList = lazy(() => import("./DisplayAniList"));
+const ChainAniList = lazy(() => import("./ChainAniList"));
 
 function ChainMaker({ openControl }) {
     const {
@@ -18,60 +18,33 @@ function ChainMaker({ openControl }) {
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
-    const close = () => {
-        const action = {
-            type: "update",
-            key: "app",
-            value: { sideContent: "settings" },
-        };
+    const updateSettings = (key, value) => {
+        const action = { type: "update", key, value };
         dispatch(action);
     };
 
-    const handleChange = event => {
-        const { id, name, value } = event.target;
-        let newChain = [...chain];
-        const ani = newChain.find(a => a.id === id);
-        switch (name) {
-            case "repetitions":
-                ani[name] = value < 0 ? 0 : Math.round(value);
-                break;
-            default:
-                ani[name] = value;
-        }
-        const action = {
-            type: "update",
-            key: "chainMaker",
-            value: { chain: newChain },
-        };
-        dispatch(action);
+    const close = () => {
+        updateSettings("app", { sideContent: "settings" });
     };
 
     const applyCode = code => {
-        const action = {
-            type: "update",
-            key: "animation",
-            value: { code },
-        };
-        dispatch(action);
+        updateSettings("animation", { code });
     };
 
-    const singlePlay = event => {
+    const playAni = event => {
         const { id } = event.currentTarget;
-        const ani = chain.find(a => a.id === id);
 
+        const ani = chain.find(a => a.id === id);
         const code = generateChainCode([ani]);
         applyCode(code);
     };
 
-    const deleteSingle = event => {
+    const deleteAniFromList = event => {
         if (chain.length === 1) return;
+
         const { id } = event.currentTarget;
-        const action = {
-            type: "update",
-            key: "chainMaker",
-            value: { chain: chain.filter(ani => ani.id !== id) },
-        };
-        dispatch(action);
+        const newChain = chain.filter(ani => ani.id !== id);
+        updateSettings("chainMaker", { chain: newChain });
     };
 
     const playAll = () => {
@@ -79,8 +52,13 @@ function ChainMaker({ openControl }) {
         applyCode(code);
     };
 
-    const add = () => {
+    const addAniToList = () => {
         openControl("addAni");
+    };
+
+    const updateAniInChain = (id, newAni) => {
+        const newChain = chain.map(ani => (ani.id === id ? newAni : ani));
+        updateSettings("chainMaker", { chain: newChain });
     };
 
     return (
@@ -96,15 +74,15 @@ function ChainMaker({ openControl }) {
                     <Button onClick={playAll} className="ChainMaker-btn">
                         Play All
                     </Button>
-                    <Button onClick={add} className="ChainMaker-btn">
+                    <Button onClick={addAniToList} className="ChainMaker-btn">
                         Add
                     </Button>
                 </div>
                 <div className="ChainMaker-list">
-                    <DisplayAniList
-                        singlePlay={singlePlay}
-                        deleteSingle={deleteSingle}
-                        handleChange={handleChange}
+                    <ChainAniList
+                        playAni={playAni}
+                        deleteAni={deleteAniFromList}
+                        updateAni={updateAniInChain}
                         chain={chain}
                     />
                 </div>

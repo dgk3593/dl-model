@@ -390,6 +390,11 @@ export const idxOffsets = {
     face9: { x: 3, y: -1 },
 };
 
+export const aniModList = {
+    ts: { key: "timeScale", defaultValue: 1 },
+    r: { key: "repetitions", defaultValue: 1 },
+};
+
 export const videoCodecs = [
     "video/webm;codecs=h264",
     "video/webm;codecs=vp9",

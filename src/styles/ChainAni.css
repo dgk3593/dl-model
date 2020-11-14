@@ -1,15 +1,15 @@
-.DisplayAni {
+.ChainAni {
     background-color: rgba(255, 255, 255, 0.6);
     width: 100%;
     padding: 0;
     border-top: 2px solid black;
 }
 
-.DisplayAni:focus-within {
+.ChainAni:focus-within {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.DisplayAni-name {
+.ChainAni-name {
     font-weight: 700;
     display: flex;
     flex-wrap: wrap;
@@ -17,19 +17,19 @@
     margin: 0.25rem;
 }
 
-.DisplayAni-topBtns {
+.ChainAni-topBtns {
     display: grid;
     grid-template-columns: auto auto;
     width: 100%;
 }
 
-.DisplayAni-timeRep {
+.ChainAni-fields {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.DisplayAni-toggleExpand {
+.ChainAni-toggleExpand {
     font-size: 0.5rem;
     cursor: pointer;
     padding: 0;
@@ -38,6 +38,25 @@
     border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.DisplayAni-toggleExpand:hover {
+.ChainAni-toggleExpand:hover {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+.ChainAniFace-title {
+    font-weight: 500;
+    text-align: center;
+}
+
+.ChainAniFace-list {
+    width: 100%;
+    padding: 0.2rem;
+    display: grid;
+    grid-template-columns: 2rem repeat(3, 1fr);
+}
+
+.ChainAniFace-delete {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
