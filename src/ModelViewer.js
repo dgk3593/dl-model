@@ -425,7 +425,7 @@ class ModelViewer extends PureComponent {
 
     getFaceChangesArray = (faceChanges, repetitions) => {
         if (!faceChanges) return "";
-        if (repetitions === 1) return faceChanges;
+        if (repetitions === 1) return [...faceChanges];
         // [0, 100, 200,...]
         const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
 
