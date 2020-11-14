@@ -395,7 +395,7 @@ class ModelViewer extends PureComponent {
                 timeScale: ani.timeScale,
                 repetitions: ani.repetitions,
             };
-            if (ani.faceChange) settings.faceChange = ani.faceChange;
+            if (ani.faceChanges) settings.faceChanges = ani.faceChanges;
             return settings;
         });
         const batchLoader = fileList.map(file => {
@@ -430,8 +430,8 @@ class ModelViewer extends PureComponent {
         mixer.stopAllAction();
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
-        const { timeScale, repetitions, faceChange } = currentAniSettings;
-        this.faceChange = faceChange ? [...faceChange] : "";
+        const { timeScale, repetitions, faceChanges } = currentAniSettings;
+        this.faceChanges = faceChanges ? [...faceChanges] : "";
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
@@ -953,13 +953,13 @@ class ModelViewer extends PureComponent {
 
         this.mixers.forEach(mixer => mixer.update(dt));
 
-        if (this.faceChange && this.faceChange.length > 0) {
+        if (this.faceChanges && this.faceChanges.length > 0) {
             const { elapsedTime } = this.clock;
-            const nextFaceChangeTime =
-                (this.faceChange[0].time * this.currentClipDuration) / 100;
-            if (elapsedTime >= nextFaceChangeTime) {
-                const currentFaceChange = this.faceChange.shift();
-                const { eyeIdx, mouthIdx } = currentFaceChange;
+            const nextfaceChangesTime =
+                (this.faceChanges[0].time * this.currentClipDuration) / 100;
+            if (elapsedTime >= nextfaceChangesTime) {
+                const currentfaceChanges = this.faceChanges.shift();
+                const { eyeIdx, mouthIdx } = currentfaceChanges;
                 this.eyeIdx = eyeIdx;
                 this.mouthIdx = mouthIdx;
             }

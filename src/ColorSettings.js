@@ -29,16 +29,16 @@ function ColorSettings({ toggleControlOpen, mode }) {
             title = "Outline Color";
             break;
         default:
+            title = "Pick a Color";
             const [key, subkey] = mode.split("-");
             if (key === "Lights") {
                 const currentLight = settings.scene.lights.find(
                     ({ lightId }) => lightId === subkey
                 );
                 initColor = currentLight.color;
-            } else {
-                initColor = settings[key][subkey];
+                break;
             }
-            title = "Pick a Color";
+            initColor = settings[key][subkey];
     }
     const [color, setColor] = useState(initColor);
 
@@ -72,10 +72,10 @@ function ColorSettings({ toggleControlOpen, mode }) {
 
                     action.key = "scene";
                     action.value = { lights: newLights };
-                } else {
-                    action.key = key;
-                    action.value = { [subkey]: colorToSet };
+                    break;
                 }
+                action.key = key;
+                action.value = { [subkey]: colorToSet };
         }
         dispatch(action);
         toggleControlOpen();

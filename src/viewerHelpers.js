@@ -370,7 +370,7 @@ export const analyzeChainCode = code => {
             fileName = null,
             details,
             currentAni = {},
-            faceChange = [];
+            faceChanges = [];
         const currentParts = aniCodes[i].split("+");
         const fromModelFile = currentParts.length === 1;
         if (fromModelFile) {
@@ -399,7 +399,7 @@ export const analyzeChainCode = code => {
                     const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
                     const faceMod = { time };
                     faceMod[indexName] = value;
-                    faceChange.push(faceMod);
+                    faceChanges.push(faceMod);
                 }
             }
         } else {
@@ -411,22 +411,25 @@ export const analyzeChainCode = code => {
             timeScale,
             repetitions,
         };
-        if (faceChange.length > 0)
-            currentAni.faceChange = processFaceChange(faceChange);
+        if (faceChanges.length > 0)
+            currentAni.faceChanges = processFaceChanges(faceChanges);
 
         animationList.push(currentAni);
     }
     return [fileList, animationList];
 };
 
-const processFaceChange = faceChange => {
-    const sorted = faceChange.sort(change => change.time);
-    const timeStamps = new Set(faceChange.map(change => change.time));
-    if (faceChange.length === timeStamps.length) return sorted;
+const processFaceChanges = faceChanges => {
+    const sorted = faceChanges.sort(change => change.time);
+    const timeStamps = new Set(faceChanges.map(change => change.time));
+    if (faceChanges.length === timeStamps.length) {
+        sorted.forEach(change => (change.id = uuid()));
+        return sorted;
+    }
 
     const simplified = [];
     timeStamps.forEach(time => {
-        let output = { time };
+        let output = { time, id: uuid() };
         const changes = sorted.filter(change => change.time === time);
         changes.forEach(change => (output = Object.assign(output, change)));
         simplified.push(output);
@@ -448,7 +451,7 @@ export const chainCodeToList = (code, name) => {
             repetitions,
             id: uuid(),
         };
-        if (ani.faceChange) listItem.faceChange = ani.faceChange;
+        if (ani.faceChanges) listItem.faceChanges = ani.faceChanges;
         return listItem;
     });
     return output;
