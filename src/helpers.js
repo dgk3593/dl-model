@@ -125,6 +125,7 @@ const generateFaceCode = faceChanges => {
     let output = "";
     faceChanges.forEach(change => {
         const { time, eyeIdx, mouthIdx } = change;
+        if (!time) return;
         if (eyeIdx) {
             output = output.concat(`&e-${time}=${eyeIdx}`);
         }

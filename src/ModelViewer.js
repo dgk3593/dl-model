@@ -495,6 +495,9 @@ class ModelViewer extends PureComponent {
         }
         // disable user input
         this.props.setIsLoading(true);
+        // Reset facial expression
+        this.eyeIdx = this.props.model.eyeIdx;
+        this.mouthIdx = this.props.model.mouthIdx;
         // play first animation and start capturing
         this.aniIdx = 0;
         this.mediaRecorder.start();
@@ -736,6 +739,10 @@ class ModelViewer extends PureComponent {
                 const { initPos, initRot } = mainModel;
                 mainModel.position.copy(initPos);
                 mainModel.rotation.copy(initRot);
+
+                // Reset facial expression
+                this.eyeIdx = this.props.model.eyeIdx;
+                this.mouthIdx = this.props.model.mouthIdx;
 
                 this.mixers = [];
                 this.animations = [];

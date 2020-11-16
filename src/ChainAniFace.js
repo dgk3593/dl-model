@@ -26,7 +26,7 @@ function ChainAniFace(props) {
             <div className="ChainAniFace-title">Facial Expression</div>
             <div className="ChainAniFace-list">
                 <div></div>
-                <div>Time</div>
+                <div>Time (%)</div>
                 <div>Eye</div>
                 <div>Mouth</div>
                 {details}
