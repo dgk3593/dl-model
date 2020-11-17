@@ -423,16 +423,14 @@ export const analyzeChainCode = code => {
 };
 
 export const processFaceChanges = faceChanges => {
-    const blankFaceChange = { id: uuid(), time: "", eyeIdx: "", mouthIdx: "" };
     const sorted = faceChanges.sort(change => change.time);
     const timeStamps = new Set(faceChanges.map(change => change.time));
-    const hasBlank = timeStamps.has("");
 
     if (faceChanges.length === timeStamps.size) {
         sorted.forEach(change => {
             change.id = uuid();
         });
-        return hasBlank ? sorted : [...sorted, blankFaceChange];
+        return sorted;
     }
 
     const simplified = [];
@@ -442,7 +440,7 @@ export const processFaceChanges = faceChanges => {
         changes.forEach(change => (output = Object.assign(output, change)));
         simplified.push(output);
     });
-    return hasBlank ? simplified : [...simplified, blankFaceChange];
+    return simplified;
 };
 
 export const chainCodeToList = (code, name) => {

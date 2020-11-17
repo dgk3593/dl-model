@@ -1,7 +1,15 @@
 import ChainAniFaceDetails from "./ChainAniFaceDetails";
 
+import Add from "@material-ui/icons/Add";
+
 function ChainAniFace(props) {
-    const { faceChanges, deleteFaceChange, updateFaceChanges } = props;
+    const {
+        faceChanges,
+        deleteFaceChange,
+        updateFaceChanges,
+        addFaceChange,
+    } = props;
+
     const handleParamsChange = event => {
         const {
             value,
@@ -25,11 +33,18 @@ function ChainAniFace(props) {
         <>
             <div className="ChainAniFace-title">Facial Expression</div>
             <div className="ChainAniFace-list">
-                <div></div>
-                <div>Time (%)</div>
-                <div>Eye</div>
-                <div>Mouth</div>
-                {details}
+                {faceChanges?.length > 0 && (
+                    <>
+                        <div></div>
+                        <div>Time (%)</div>
+                        <div>Eye</div>
+                        <div>Mouth</div>
+                        {details}
+                    </>
+                )}
+                <div className="ChainAniFace-delete" onClick={addFaceChange}>
+                    <Add />
+                </div>
             </div>
         </>
     );

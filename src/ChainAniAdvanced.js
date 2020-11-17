@@ -2,7 +2,7 @@ import TextField from "@material-ui/core/TextField";
 
 import ChainAniFace from "./ChainAniFace";
 
-import { processFaceChanges } from "./viewerHelpers";
+import { v4 as uuid } from "uuid";
 
 function ChainAniAdvanced(props) {
     const { timeScale, repetitions, faceChanges, updateParams } = props;
@@ -24,9 +24,14 @@ function ChainAniAdvanced(props) {
         const newFaceChanges = faceChanges.map(change =>
             change.id === id ? newFaceChange : change
         );
-        const updatedFaceChanges = processFaceChanges(newFaceChanges);
-        const updateValue = { faceChanges: updatedFaceChanges };
+        const updateValue = { faceChanges: newFaceChanges };
         updateParams(updateValue);
+    };
+
+    const addFaceChange = () => {
+        const blankChange = { id: uuid(), time: "", eyeIdx: "", mouthIdx: "" };
+        const updatedValue = { faceChanges: [...faceChanges, blankChange] };
+        updateParams(updatedValue);
     };
 
     return (
@@ -62,6 +67,7 @@ function ChainAniAdvanced(props) {
                 faceChanges={faceChanges}
                 deleteFaceChange={deleteFaceChange}
                 updateFaceChanges={updateFaceChanges}
+                addFaceChange={addFaceChange}
             />
         </>
     );
