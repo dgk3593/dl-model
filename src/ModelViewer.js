@@ -30,13 +30,13 @@ import {
     changeOutlineSize,
     changeOutlineColor,
     createGradientMap,
+    getFaceChangesArray,
 } from "./viewerHelpers";
 
 import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -132,32 +132,32 @@ class ModelViewer extends PureComponent {
     async componentDidUpdate(prev) {
         const current = this.props;
 
-        // print updated props to console
-        console.log("Updated");
-        Object.keys(prev).forEach(key => {
-            const oldValue = prev[key];
-            const currentValue = this.props[key];
-            const subkeys = Object.keys(oldValue);
-            if (subkeys.length === 0 || typeof oldValue === "string") {
-                if (oldValue !== currentValue) {
-                    console.log(
-                        `${key}: ${JSON.stringify(
-                            oldValue
-                        )} to ${JSON.stringify(currentValue)}`
-                    );
-                }
-            } else {
-                subkeys.forEach(subkey => {
-                    if (oldValue[subkey] !== currentValue[subkey]) {
-                        console.log(
-                            `${key}.${subkey}: ${JSON.stringify(
-                                oldValue[subkey]
-                            )} to ${JSON.stringify(currentValue[subkey])}`
-                        );
-                    }
-                });
-            }
-        });
+        // // print updated props to console
+        // console.log("Updated");
+        // Object.keys(prev).forEach(key => {
+        //     const oldValue = prev[key];
+        //     const currentValue = this.props[key];
+        //     const subkeys = Object.keys(oldValue);
+        //     if (subkeys.length === 0 || typeof oldValue === "string") {
+        //         if (oldValue !== currentValue) {
+        //             console.log(
+        //                 `${key}: ${JSON.stringify(
+        //                     oldValue
+        //                 )} to ${JSON.stringify(currentValue)}`
+        //             );
+        //         }
+        //     } else {
+        //         subkeys.forEach(subkey => {
+        //             if (oldValue[subkey] !== currentValue[subkey]) {
+        //                 console.log(
+        //                     `${key}.${subkey}: ${JSON.stringify(
+        //                         oldValue[subkey]
+        //                     )} to ${JSON.stringify(currentValue[subkey])}`
+        //                 );
+        //             }
+        //         });
+        //     }
+        // });
 
         this.updateViewport(prev.viewport, current.viewport);
 
@@ -175,7 +175,7 @@ class ModelViewer extends PureComponent {
 
         // Update background color
         if (prev.bgColor !== current.bgColor) {
-            this.setBackground(current.bgColor);
+            this.bgColor = current.bgColor;
         }
 
         // Capture
@@ -234,10 +234,7 @@ class ModelViewer extends PureComponent {
 
         // Scene
         this.scene = new THREE.Scene();
-        this.scene.background =
-            this.props.bgColor !== "transparent"
-                ? new THREE.Color(this.props.bgColor)
-                : null;
+        this.bgColor = this.props.bgColor;
 
         // Create an invisible floor to add the models on (for auto rotate)
         const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
@@ -423,21 +420,6 @@ class ModelViewer extends PureComponent {
         this.props.setIsLoading(false);
     };
 
-    getFaceChangesArray = (faceChanges, repetitions) => {
-        if (!faceChanges) return "";
-        if (repetitions === 1) return [...faceChanges];
-        // [0, 100, 200,...]
-        const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
-
-        const offsetFaceChanges = offset =>
-            faceChanges.map(({ time, id, ...others }) => ({
-                ...others,
-                time: time + offset,
-            }));
-
-        return timeOffset.map(offsetFaceChanges).flat();
-    };
-
     // this.aniIdx = n => play animation with index n
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
@@ -447,7 +429,7 @@ class ModelViewer extends PureComponent {
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
         const { timeScale, repetitions, faceChanges } = currentAniSettings;
-        this.faceChanges = this.getFaceChangesArray(faceChanges, repetitions);
+        this.faceChanges = getFaceChangesArray(faceChanges, repetitions);
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
@@ -957,10 +939,10 @@ class ModelViewer extends PureComponent {
         this.finalRenderer = this.effect;
     };
 
-    setBackground = bgColor => {
+    set bgColor(color) {
         this.scene.background =
-            bgColor !== "transparent" ? new THREE.Color(bgColor) : null;
-    };
+            color !== "transparent" ? new THREE.Color(color) : null;
+    }
 
     replaceCanvas = (oldCanvas, newCanvas) => {
         this.mount.removeChild(oldCanvas);

@@ -443,6 +443,21 @@ export const processFaceChanges = faceChanges => {
     return simplified;
 };
 
+export const getFaceChangesArray = (faceChanges, repetitions) => {
+    if (!faceChanges) return "";
+    if (repetitions === 1) return [...faceChanges];
+    // [0, 100, 200,...]
+    const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
+
+    const offsetFaceChanges = offset =>
+        faceChanges.map(({ time, id, ...others }) => ({
+            ...others,
+            time: time + offset,
+        }));
+
+    return timeOffset.map(offsetFaceChanges).flat();
+};
+
 export const chainCodeToList = (code, name) => {
     const [fileList, animationList] = analyzeChainCode(code);
     const length = animationList.length;
