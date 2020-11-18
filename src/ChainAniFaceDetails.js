@@ -1,13 +1,49 @@
+import { useContext } from "react";
+import { SettingsContext } from "./context/SettingsContext";
+import useStyles from "./styles/FaceSelectStyles";
+
 import TextField from "@material-ui/core/TextField";
 
 import Close from "@material-ui/icons/Close";
+
+import { fbxSource } from "./App";
+import faceOffsetFix from "./data/face_offset";
 
 function ChainAniFaceDetails({
     change: { id, time, eyeIdx, mouthIdx },
     deleteFaceChange,
     handleChange,
+    handleClick,
 }) {
+    const {
+        model: { eyeTexture, mouthTexture },
+    } = useContext(SettingsContext);
+
+    const eyeImgPath = `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
+    const mouthImgPath = `${fbxSource}/fbx/${mouthTexture}/${mouthTexture}.png`;
+    const eyeOffsetFix = faceOffsetFix[eyeTexture] || { x: 0, y: 0 };
+    const mouthOffsetFix = faceOffsetFix[mouthTexture] || { x: 0, y: 0 };
+
+    const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
+
     const commonInputProps = { type: "number", step: 1, min: 1, max: 9 };
+
+    const eye = eyeIdx ? (
+        <div
+            className={`${classes[`eye${eyeIdx}`]} ${classes["eyeBox"]}`}
+            style={{ backgroundImage: `url(${eyeImgPath})` }}
+        />
+    ) : (
+        "Set"
+    );
+    const mouth = mouthIdx ? (
+        <div
+            className={`${classes[`mouth${mouthIdx}`]} ${classes["mouthBox"]}`}
+            style={{ backgroundImage: `url(${mouthImgPath})` }}
+        />
+    ) : (
+        "Set"
+    );
 
     return (
         <>
@@ -28,24 +64,12 @@ function ChainAniFaceDetails({
                 }}
                 value={time}
             />
-            <TextField
-                onChange={handleChange}
-                inputProps={{
-                    ...commonInputProps,
-                    "data-name": "eyeIdx",
-                    "data-id": id,
-                }}
-                value={eyeIdx}
-            />
-            <TextField
-                onChange={handleChange}
-                inputProps={{
-                    ...commonInputProps,
-                    "data-name": "mouthIdx",
-                    "data-id": id,
-                }}
-                value={mouthIdx}
-            />
+            <div onClick={handleClick} data-target="eye" data-id={id}>
+                {eye}
+            </div>
+            <div onClick={handleClick} data-target="mouth" data-id={id}>
+                {mouth}
+            </div>
         </>
     );
 }

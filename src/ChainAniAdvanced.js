@@ -5,7 +5,13 @@ import ChainAniFace from "./ChainAniFace";
 import { v4 as uuid } from "uuid";
 
 function ChainAniAdvanced(props) {
-    const { timeScale, repetitions, faceChanges, updateParams } = props;
+    const {
+        timeScale,
+        repetitions,
+        faceChanges,
+        updateParams,
+        openControl,
+    } = props;
 
     const handleParamChange = event => {
         const { name, value } = event.target;
@@ -64,6 +70,7 @@ function ChainAniAdvanced(props) {
                 />
             </div>
             <ChainAniFace
+                openControl={openControl}
                 faceChanges={faceChanges}
                 deleteFaceChange={deleteFaceChange}
                 updateFaceChanges={updateFaceChanges}

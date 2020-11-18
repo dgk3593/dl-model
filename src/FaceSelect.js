@@ -9,15 +9,21 @@ import faceOffsetFix from "./data/face_offset";
 import useStyles from "./styles/FaceSelectStyles";
 
 const FacePartSelector = lazy(() => import("./FacePartSelector"));
+const Button = lazy(() => import("@material-ui/core/Button"));
+const titles = {
+    face: "Select a Face",
+    eye: "Select Eyes",
+    mouth: "Select Mouth",
+};
 
 function FaceSelect(props) {
-    const { toggleControlOpen } = props;
+    const { mode, toggleControlOpen, handleSelect } = props;
     const dispatch = useContext(DispatchContext);
     const {
         model: { eyeTexture, mouthTexture, eyeIdx, mouthIdx },
     } = useContext(SettingsContext);
 
-    const [facePart, setFacePart] = useState("both");
+    const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
 
     const changeFacePart = event => {
         event.stopPropagation();
@@ -29,23 +35,25 @@ function FaceSelect(props) {
     const mouthOffsetFix = faceOffsetFix[mouthTexture] || { x: 0, y: 0 };
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
-
-    const setIdx = event => {
-        const n = event.currentTarget.dataset.value;
+    const defaultHandler = idx => {
         const action = {
             type: "update",
             key: "model",
             value: {},
         };
-
         if (["eye", "both"].includes(facePart)) {
-            action.value.eyeIdx = n;
+            action.value.eyeIdx = idx;
         }
         if (["mouth", "both"].includes(facePart)) {
-            action.value.mouthIdx = n;
+            action.value.mouthIdx = idx;
         }
         dispatch(action);
+    };
 
+    const setIdx = event => {
+        const idx = event.currentTarget.dataset.value;
+        const handler = handleSelect || defaultHandler;
+        handler(idx);
         toggleControlOpen();
     };
 
@@ -90,17 +98,24 @@ function FaceSelect(props) {
         <>
             <DialogTop>
                 <DialogTitle onClose={toggleControlOpen}>
-                    Select a Face
+                    {titles[mode]}
                 </DialogTitle>
                 <Suspense fallback={null}>
-                    <FacePartSelector
-                        value={facePart}
-                        handleClick={changeFacePart}
-                    />
+                    {mode === "face" && (
+                        <FacePartSelector
+                            value={facePart}
+                            handleClick={changeFacePart}
+                        />
+                    )}
                 </Suspense>
             </DialogTop>
             <DialogContent dividers className={classes.root}>
                 {faces}
+                {mode !== "face" && (
+                    <Button onClick={setIdx} data-value="">
+                        Remove
+                    </Button>
+                )}
             </DialogContent>
         </>
     );

@@ -10,7 +10,7 @@ const ColorSettings = lazy(() => import("./ColorSettings"));
 const Share = lazy(() => import("./Share"));
 
 function ControlPanel(props) {
-    const { open, mode, toggleControlOpen } = props;
+    const { open, mode, toggleControlOpen, handleSelect } = props;
     let content = null;
     switch (mode) {
         case "model":
@@ -39,7 +39,15 @@ function ControlPanel(props) {
             content = <WeaponSelect toggleControlOpen={toggleControlOpen} />;
             break;
         case "face":
-            content = <FaceSelect toggleControlOpen={toggleControlOpen} />;
+        case "eye":
+        case "mouth":
+            content = (
+                <FaceSelect
+                    mode={mode}
+                    toggleControlOpen={toggleControlOpen}
+                    handleSelect={handleSelect}
+                />
+            );
             break;
         case "share":
             content = <Share toggleControlOpen={toggleControlOpen} />;

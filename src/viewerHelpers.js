@@ -404,11 +404,7 @@ export const analyzeChainCode = code => {
                 }
                 if (key.includes("-")) {
                     const [part, time] = key.split("-");
-                    const faceMod = {
-                        time: parseFloat(time),
-                        eyeIdx: "",
-                        mouthIdx: "",
-                    };
+                    const faceMod = { time: parseFloat(time) };
                     const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
                     faceMod[indexName] = value;
                     faceChanges.push(faceMod);

@@ -51,7 +51,18 @@
     width: 100%;
     padding: 0.2rem;
     display: grid;
-    grid-template-columns: 2rem repeat(3, 1fr);
+    grid-template-columns: 2rem auto 64px 64px;
+}
+
+.ChainAniFace-list div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ChainAniFace-list input {
+    cursor: text;
 }
 
 .ChainAniFace-delete {

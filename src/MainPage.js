@@ -21,6 +21,8 @@ function MainPage({ location }) {
     const [controlOpen, toggleControlOpen] = useToggleState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [initLoadDone, setInitLoadDone] = useState(false);
+    // const [handleSelect, setHandleSelect] = useState(null);
+    const handleSelect = useRef(null);
     const {
         app: { showSettings },
     } = useContext(SettingsContext);
@@ -49,9 +51,10 @@ function MainPage({ location }) {
         setViewport({ width, height });
     };
 
-    const openControl = mode => {
-        toggleControlOpen();
+    const openControl = (mode, handler) => {
         setCurrentMode(mode);
+        handleSelect.current = handler;
+        toggleControlOpen();
     };
 
     return (
@@ -62,6 +65,7 @@ function MainPage({ location }) {
                     <CssBaseline />
                     <ControlPanel
                         mode={currentMode}
+                        handleSelect={handleSelect.current}
                         open={controlOpen}
                         toggleControlOpen={toggleControlOpen}
                     />

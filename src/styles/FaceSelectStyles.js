@@ -43,6 +43,7 @@ const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
         faceBox: {
             display: "flex",
             flexDirection: "column",
+            cursor: "pointer",
         },
         eyeBox: {
             width: `${faceSize}px`,

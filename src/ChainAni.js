@@ -14,7 +14,7 @@ import "./styles/ChainAni.css";
 const ChainAniAdvanced = lazy(() => import("./ChainAniAdvanced"));
 
 function ChainAni(props) {
-    const { ani, playAni, deleteAni, updateAni } = props;
+    const { ani, playAni, deleteAni, updateAni, openControl } = props;
     const { name, id, timeScale, repetitions, faceChanges } = ani;
 
     const [expand, toggleExpand] = useToggleState(false);
@@ -38,6 +38,7 @@ function ChainAni(props) {
             <Collapse in={expand} timeout="auto" unmountOnExit>
                 <Suspense fallback={<div>Loading</div>}>
                     <ChainAniAdvanced
+                        openControl={openControl}
                         timeScale={timeScale}
                         repetitions={repetitions}
                         faceChanges={faceChanges}

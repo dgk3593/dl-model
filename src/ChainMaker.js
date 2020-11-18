@@ -36,6 +36,7 @@ function ChainMaker({ openControl }) {
 
         const ani = chain.find(a => a.id === id);
         const code = generateChainCode([ani]);
+        console.log(code);
         applyCode(code);
     };
 
@@ -80,6 +81,7 @@ function ChainMaker({ openControl }) {
                 </div>
                 <div className="ChainMaker-list">
                     <ChainAniList
+                        openControl={openControl}
                         playAni={playAni}
                         deleteAni={deleteAniFromList}
                         updateAni={updateAniInChain}
