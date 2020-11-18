@@ -13,6 +13,7 @@ import {
     incompatibleModels,
 } from "./consts";
 import {
+    createInvisibleFloor,
     calculateTextureOffset,
     calculateIdxOffset,
     getModelPath,
@@ -192,7 +193,7 @@ class ModelViewer extends PureComponent {
     componentWillUnmount() {
         cancelAnimationFrame(this.frameId);
         disposeItem(this.scene);
-        this.mixers = null;
+        this.mixer = null;
         this.clock = null;
         this.camera = null;
         this.controls = null;
@@ -226,9 +227,6 @@ class ModelViewer extends PureComponent {
             height: window.innerHeight,
         };
 
-        // mixers
-        this.mixers = [];
-
         // clock
         this.clock = new THREE.Clock();
 
@@ -236,12 +234,8 @@ class ModelViewer extends PureComponent {
         this.scene = new THREE.Scene();
         this.bgColor = this.props.bgColor;
 
-        // Create an invisible floor to add the models on (for auto rotate)
-        const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
-        floorGeometry.rotateX(Math.PI / 2);
-        const floorMaterial = new THREE.MeshBasicMaterial();
-        floorMaterial.visible = false;
-        this.floor = new THREE.Mesh(floorGeometry, floorMaterial);
+        // Floor for auto rotate
+        this.floor = createInvisibleFloor();
         this.scene.add(this.floor);
 
         // Camera
@@ -383,7 +377,7 @@ class ModelViewer extends PureComponent {
         this.props.setIsLoading(true);
 
         object.mixer = new THREE.AnimationMixer(object);
-        this.mixers.push(object.mixer);
+        this.mixer = object.mixer;
 
         this._aniIdx = 0;
         object.mixer.timeScale = timeScale; // Global timeScale
@@ -423,8 +417,8 @@ class ModelViewer extends PureComponent {
     // this.aniIdx = n => play animation with index n
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
+        const { mixer } = this;
         const anim = this.animations[newIdx];
-        const mixer = this.models.main.mixer;
         mixer.stopAllAction();
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
@@ -726,7 +720,7 @@ class ModelViewer extends PureComponent {
                 this.eyeIdx = this.props.model.eyeIdx;
                 this.mouthIdx = this.props.model.mouthIdx;
 
-                this.mixers = [];
+                this.mixer = null;
                 this.animations = [];
             }
             // Add new animation
@@ -735,7 +729,7 @@ class ModelViewer extends PureComponent {
         }
         // Update timeScale if animation not changed
         if (prev.timeScale !== timeScale) {
-            this.mixers.forEach(mixer => (mixer.timeScale = timeScale));
+            this.mixer.timeScale = timeScale;
         }
     };
 
@@ -956,7 +950,7 @@ class ModelViewer extends PureComponent {
         const { rotateSpeed } = this.props;
         this.floor.rotateY((rotateSpeed * dt * Math.PI) / 2);
 
-        this.mixers.forEach(mixer => mixer.update(dt));
+        if (this.mixer) this.mixer.update(dt);
 
         if (this.faceChanges && this.faceChanges.length > 0) {
             const elapsedTime = this.models.main.mixer.time;

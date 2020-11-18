@@ -26,6 +26,14 @@ export const loadTexture = url => {
     );
 };
 
+export const createInvisibleFloor = () => {
+    const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
+    floorGeometry.rotateX(Math.PI / 2);
+    const floorMaterial = new THREE.MeshBasicMaterial();
+    floorMaterial.visible = false;
+    return new THREE.Mesh(floorGeometry, floorMaterial);
+};
+
 export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
 
 export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;
