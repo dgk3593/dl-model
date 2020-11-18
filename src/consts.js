@@ -1,6 +1,8 @@
 export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
+export const DEFAULT_FACE_IDX = "2";
+
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
 const defaultAni = "MWM_CMN+CMN_MWM_03";

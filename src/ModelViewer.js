@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { fbxSource } from "./App";
-import { CAM_PARAMS } from "./consts";
+import { CAM_PARAMS, DEFAULT_FACE_IDX } from "./consts";
 import {
     directSetMatParams,
     matColorParams,
@@ -50,10 +50,6 @@ class ModelViewer extends PureComponent {
             weaponRight,
             weaponLeft,
         };
-
-        // effects
-        this.loadedFX = new Set();
-        this.fxConstructors = new Map();
 
         // add outline to main model and save reference
         this.outlines.main = createOutline(main, this.outlineParams);
@@ -106,13 +102,13 @@ class ModelViewer extends PureComponent {
         });
 
         // Apply face settings
-        this.currentEyeIdx = "2";
-        this.currentMouthIdx = "2";
+        this._eyeIdx = DEFAULT_FACE_IDX;
+        this._mouthIdx = DEFAULT_FACE_IDX;
         const defaultFaceParams = {
             mouthTexture: modelId,
-            mouthIdx: "2",
+            mouthIdx: DEFAULT_FACE_IDX,
             eyeTexture: modelId,
-            eyeIdx: "2",
+            eyeIdx: DEFAULT_FACE_IDX,
         };
         this.updateFace(defaultFaceParams, this.props.model);
 
@@ -185,9 +181,7 @@ class ModelViewer extends PureComponent {
         }
 
         // Update Anti Aliasinng
-        if (prev.antiAliasing !== current.antiAliasing) {
-            this.updateAA();
-        }
+        this.AA = current.antiAliasing;
     }
 
     componentWillUnmount() {
@@ -259,6 +253,10 @@ class ModelViewer extends PureComponent {
         const { lights } = this.props;
         this.addLights(lights);
 
+        // effects
+        this.loadedFX = new Set();
+        this.fxConstructors = new Map();
+
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
             antialias: true,
@@ -272,9 +270,10 @@ class ModelViewer extends PureComponent {
         });
         this.rendererNoAA.outputEncoding = THREE.sRGBEncoding;
 
-        this.renderer = this.props.antiAliasing
-            ? this.rendererAA
-            : this.rendererNoAA;
+        const AAEnabled = this.props.antiAliasing;
+        this._AA = AAEnabled;
+
+        this.renderer = AAEnabled ? this.rendererAA : this.rendererNoAA;
 
         this.finalRenderer = this.renderer;
         this.canvas = this.finalRenderer.domElement;
@@ -283,6 +282,26 @@ class ModelViewer extends PureComponent {
 
         this.animate();
     };
+
+    set AA(enabled) {
+        if (enabled === this._AA) return;
+        this._AA = enabled;
+
+        const currentSize = new THREE.Vector2();
+        this.renderer.getSize(currentSize);
+        // switch renderer
+        this.renderer = enabled ? this.rendererAA : this.rendererNoAA;
+        this.renderer.setSize(currentSize.x, currentSize.y);
+
+        if (this.props.ascii.enable) return;
+
+        this.finalRenderer = this.renderer;
+
+        const { canvas } = this;
+        const newCanvas = this.renderer.domElement;
+        this.replaceCanvas(canvas, newCanvas);
+        this.canvas = newCanvas;
+    }
 
     addLights = lights => {
         this.lights = [];
@@ -479,26 +498,6 @@ class ModelViewer extends PureComponent {
         this.mediaRecorder.start();
     };
 
-    updateAA = () => {
-        // get current viewport size
-        const currentSize = new THREE.Vector2();
-        this.renderer.getSize(currentSize);
-        // switch renderer
-        this.renderer = this.props.antiAliasing
-            ? this.rendererAA
-            : this.rendererNoAA;
-        this.renderer.setSize(currentSize.x, currentSize.y);
-
-        if (this.props.ascii.enable) return;
-
-        this.finalRenderer = this.renderer;
-
-        const { canvas } = this;
-        const newCanvas = this.renderer.domElement;
-        this.replaceCanvas(canvas, newCanvas);
-        this.canvas = newCanvas;
-    };
-
     updateEyeTexture = (prev, current) => {
         const currentTexture = current.eyeTexture;
         const prevTexture = prev.eyeTexture;
@@ -520,7 +519,7 @@ class ModelViewer extends PureComponent {
     set eyeIdx(newIdx) {
         if (!newIdx) return;
 
-        const oldIdx = this.currentEyeIdx;
+        const oldIdx = this._eyeIdx;
         if (newIdx === oldIdx) return;
 
         const offset = calculateIdxOffset(newIdx, oldIdx);
@@ -528,7 +527,7 @@ class ModelViewer extends PureComponent {
             target: this.models.main,
             offset,
         });
-        this.currentEyeIdx = newIdx;
+        this._eyeIdx = newIdx;
     }
 
     updateMouthTexture = (prev, current) => {
@@ -552,7 +551,7 @@ class ModelViewer extends PureComponent {
     set mouthIdx(newIdx) {
         if (!newIdx) return;
 
-        const oldIdx = this.currentMouthIdx;
+        const oldIdx = this._mouthIdx;
         if (newIdx === oldIdx) return;
 
         const offset = calculateIdxOffset(newIdx, oldIdx);
@@ -560,7 +559,7 @@ class ModelViewer extends PureComponent {
             target: this.models.main,
             offset,
         });
-        this.currentMouthIdx = newIdx;
+        this._mouthIdx = newIdx;
     }
 
     updateFaceTexture = (prev, current) => {
@@ -613,8 +612,8 @@ class ModelViewer extends PureComponent {
             this.floor.add(model);
 
             // Apply face to new model
-            this.currentEyeIdx = "2";
-            this.currentMouthIdx = "2";
+            this._eyeIdx = DEFAULT_FACE_IDX;
+            this._mouthIdx = DEFAULT_FACE_IDX;
             const { eyeIdx, mouthIdx } = this.props.model;
             this.eyeIdx = eyeIdx;
             this.mouthIdx = mouthIdx;
