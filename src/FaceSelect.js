@@ -49,7 +49,9 @@ function FaceSelect(props) {
         toggleControlOpen();
     };
 
-    const indexes = Array.from({ length: 9 }, (_, k) => k + 1);
+    const indexes = Array(9)
+        .fill()
+        .map((_, i) => i + 1);
 
     let faces;
     const commonProps = {
@@ -97,7 +99,7 @@ function FaceSelect(props) {
                     />
                 </Suspense>
             </DialogTop>
-            <DialogContent dividers className={classes["FaceSelect"]}>
+            <DialogContent dividers className={classes.root}>
                 {faces}
             </DialogContent>
         </>

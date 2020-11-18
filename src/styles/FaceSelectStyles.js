@@ -4,18 +4,18 @@ const faceBGSize = "512px 512px";
 const faceSize = 64;
 
 const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
-    const baseOffset = Array(9)
+    const indexes = Array(9)
         .fill()
-        .map((_, i) => {
-            const faceNumber = i + 1;
-            if (faceNumber === 1) return [-280, -170];
+        .map((_, i) => i + 1);
+    const baseOffset = indexes.map(idx => {
+        if (idx === 1) return [-280, -170];
 
-            const n = (faceNumber - 2) % 4;
-            const m = Math.floor(faceNumber / 6);
-            const offsetX = -(24 + n * 128);
-            const offsetY = -(298 + m * 128);
-            return [offsetX, offsetY];
-        });
+        const n = (idx - 2) % 4;
+        const m = Math.floor(idx / 6);
+        const offsetX = -(24 + n * 128);
+        const offsetY = -(298 + m * 128);
+        return [offsetX, offsetY];
+    });
     const { x: eyeX, y: eyeY } = eyeOffsetFix;
     const eyeXFix = eyeX * 128;
     const eyeYFix = eyeY * 128;
@@ -34,7 +34,7 @@ const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
     };
 
     const styles = {
-        FaceSelect: {
+        root: {
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",
             gridGap: "0.5rem",
