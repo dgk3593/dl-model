@@ -6,7 +6,7 @@ import { idxOffsets } from "./consts";
 import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { callbackOnPotentialArray, isSheath } from "./helpers";
+import { callbackOnEach, isSheath } from "./helpers";
 
 export const loadModel = url => {
     return (
@@ -75,7 +75,7 @@ export const disposeItem = item => {
         if (!child.isMesh) return;
 
         // dispose material
-        callbackOnPotentialArray(child.material, mat => {
+        callbackOnEach(child.material, mat => {
             if (mat.map) dispose(mat.map);
             if (mat.backupMap) dispose(mat.backupMap);
 
@@ -181,7 +181,7 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
 // replace material of an object
 const replaceMaterial = (object, newMaterial) => {
     // dispose old material
-    callbackOnPotentialArray(object.material, obj => {
+    callbackOnEach(object.material, obj => {
         // obj.map?.dispose?.()
         if (obj.map) obj.map.dispose();
         obj.dispose();
@@ -195,7 +195,7 @@ const replaceMaterial = (object, newMaterial) => {
 
 // change opacity of an object
 export const changeOpacity = ({ material }, opacity) => {
-    callbackOnPotentialArray(material, obj => {
+    callbackOnEach(material, obj => {
         obj.opacity = opacity;
     });
 };

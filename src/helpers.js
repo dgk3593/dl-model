@@ -16,13 +16,12 @@ export const isBlade = code => code.startsWith("w302");
 
 export const isSheath = code => isBlade(code) && code.endsWith("02");
 
-// if object is an array, apply callback on each element of object, otherwise, apply call back on the object
-export const callbackOnPotentialArray = (object, callback) => {
-    if (Array.isArray(object)) {
-        object.forEach(child => callback(child));
+export const callbackOnEach = (list, callback) => {
+    if (Array.isArray(list)) {
+        list.forEach(child => callback(child));
         return;
     }
-    callback(object);
+    callback(list);
 };
 
 export const setInitialSettings = params => {

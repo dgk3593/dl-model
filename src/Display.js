@@ -4,6 +4,7 @@ import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";
 import "./styles/Display.css";
 
+import { getTextColor } from "./helpers";
 import { cameraPositions, controlsPositions } from "./consts";
 
 const AniControl = lazy(() => import("./AniControl"));
@@ -47,7 +48,10 @@ function Display(props) {
     return (
         <div className="Display">
             {showAniControl && (
-                <div className="Display-AniControl">
+                <div
+                    className="Display-AniControl"
+                    style={{ color: getTextColor(bgColor) }}
+                >
                     <Suspense fallback={null}>
                         <AniControl value={settings.animation.timeScale} />
                     </Suspense>

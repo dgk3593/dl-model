@@ -23,6 +23,20 @@ function LightSettings({ openControl, openAtStart }) {
         dispatch(action);
     };
 
+    const updateSceneSettings = value => {
+        const action = {
+            type: "update",
+            key: "scene",
+            value,
+        };
+        dispatch(action);
+    };
+
+    const updateLights = newLights => {
+        const updateValue = { lights: newLights };
+        updateSceneSettings(updateValue);
+    };
+
     const updateIntensity = id => (_, value) => {
         const newLights = currentLights.map(light => {
             if (light.lightId === id) {
@@ -30,24 +44,14 @@ function LightSettings({ openControl, openAtStart }) {
             }
             return light;
         });
-        const action = {
-            type: "update",
-            key: "scene",
-            value: { lights: newLights },
-        };
-        dispatch(action);
+        updateLights(newLights);
     };
 
     const updatePosition = id => position => {
         const newLights = currentLights.map(light =>
             light.lightId === id ? { ...light, position } : light
         );
-        const action = {
-            type: "update",
-            key: "scene",
-            value: { lights: newLights },
-        };
-        dispatch(action);
+        updateLights(newLights);
     };
 
     const toggleLight = event => {
@@ -60,13 +64,7 @@ function LightSettings({ openControl, openAtStart }) {
             }
             return light;
         });
-
-        const action = {
-            type: "update",
-            key: "scene",
-            value: { lights: newLights },
-        };
-        dispatch(action);
+        updateLights(newLights);
     };
 
     const colorBtnClick = event => {
