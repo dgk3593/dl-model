@@ -12,24 +12,26 @@ const ChromePicker = lazy(() =>
     import("react-color").then(module => ({ default: module.ChromePicker }))
 );
 
+const titles = {
+    background: "Background Settings",
+    outlineColor: "Outline Color",
+};
+
 function ColorSettings({ toggleControlOpen, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
+    const title = titles[mode] || "Pick a Color";
     let initColor,
-        title,
         commonColor = commonBG;
     switch (mode) {
         case "background":
             initColor = settings.scene.background;
-            title = "Background Settings";
             break;
         case "outlineColor":
             initColor = settings.outline.color;
             commonColor = {};
-            title = "Outline Color";
             break;
         default:
-            title = "Pick a Color";
             const [key, subkey] = mode.split("-");
             if (key === "Lights") {
                 const currentLight = settings.scene.lights.find(

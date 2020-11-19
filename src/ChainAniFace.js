@@ -6,7 +6,7 @@ function ChainAniFace(props) {
     const {
         faceChanges,
         deleteFaceChange,
-        updateFaceChanges,
+        updateFaceChange,
         addFaceChange,
         openControl,
     } = props;
@@ -18,7 +18,7 @@ function ChainAniFace(props) {
         } = event.currentTarget;
         const changeToUpdate = faceChanges.find(change => change.id === id);
         const newChange = { ...changeToUpdate, [name]: value };
-        updateFaceChanges(id, newChange);
+        updateFaceChange(id, newChange);
     };
 
     const handleClick = event => {
@@ -27,7 +27,7 @@ function ChainAniFace(props) {
         const handler = idx => {
             const changeToUpdate = faceChanges.find(change => change.id === id);
             const newChange = { ...changeToUpdate, [key]: idx };
-            updateFaceChanges(id, newChange);
+            updateFaceChange(id, newChange);
         };
         openControl(target, handler);
     };

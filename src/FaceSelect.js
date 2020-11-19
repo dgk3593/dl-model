@@ -26,7 +26,6 @@ function FaceSelect(props) {
     const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
 
     const changeFacePart = event => {
-        event.stopPropagation();
         const mode = event.currentTarget.dataset.value;
         setFacePart(mode);
     };

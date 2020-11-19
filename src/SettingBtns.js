@@ -42,8 +42,8 @@ function SettingBtns({ openControl }) {
 
     const removeWeapon = e => {
         const target = e.currentTarget.dataset.value;
-        const value = {};
-        value[`weapon${target}`] = "";
+        const key = `weapon${target}`;
+        const value = { [key]: "" };
         const action = {
             type: "update",
             key: "model",

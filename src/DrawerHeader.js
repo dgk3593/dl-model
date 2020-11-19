@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
-import GetApp from "@material-ui/icons/GetApp";
+import SaveIcon from "@material-ui/icons/GetApp";
 
 import Tooltip from "@material-ui/core/Tooltip";
 
@@ -65,7 +65,7 @@ function DrawerHeader({ toggleDrawerOpen }) {
                         className={classes.downloadButton}
                         onClick={toggleCapture}
                     >
-                        <GetApp />
+                        <SaveIcon />
                     </div>
                 </Tooltip>
             )}

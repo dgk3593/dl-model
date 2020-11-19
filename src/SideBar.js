@@ -18,7 +18,6 @@ function SideBar({ toggleSidebarOpen, open, openControl }) {
             }}
         >
             <DrawerHeader toggleDrawerOpen={toggleSidebarOpen} />
-
             <DrawerContent openControl={openControl} />
         </Drawer>
     );

@@ -947,7 +947,7 @@ class ModelViewer extends PureComponent {
         const dt = this.clock.getDelta();
         // Rotate the floor
         const { rotateSpeed } = this.props;
-        this.floor.rotateY((rotateSpeed * dt * Math.PI) / 2);
+        if (rotateSpeed) this.floor.rotateY((rotateSpeed * dt * Math.PI) / 2);
 
         if (this.mixer) this.mixer.update(dt);
 

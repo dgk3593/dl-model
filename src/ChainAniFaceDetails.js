@@ -26,8 +26,6 @@ function ChainAniFaceDetails({
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
 
-    const commonInputProps = { type: "number", step: 1, min: 1, max: 9 };
-
     const eye = eyeIdx ? (
         <div
             className={`${classes[`eye${eyeIdx}`]} ${classes["eyeBox"]}`}
@@ -57,8 +55,10 @@ function ChainAniFaceDetails({
             <TextField
                 onChange={handleChange}
                 inputProps={{
-                    ...commonInputProps,
+                    type: "number",
+                    min: 0,
                     max: 100,
+                    step: 1,
                     "data-name": "time",
                     "data-id": id,
                 }}

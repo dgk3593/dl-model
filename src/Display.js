@@ -31,9 +31,8 @@ function Display(props) {
 
     const type = modelId[0];
 
-    const defaultCameraPosition = cameraPositions[modelId]
-        ? cameraPositions[modelId]
-        : cameraPositions[type];
+    const defaultCameraPosition =
+        cameraPositions[modelId] || cameraPositions[type];
 
     const cameraPosition = initCameraPosition
         ? initCameraPosition.map((n, i) =>
@@ -41,9 +40,8 @@ function Display(props) {
           )
         : defaultCameraPosition;
 
-    const controlsPosition = controlsPositions[modelId]
-        ? controlsPositions[modelId]
-        : controlsPositions[type];
+    const controlsPosition =
+        controlsPositions[modelId] || controlsPositions[type];
 
     return (
         <div className="Display">

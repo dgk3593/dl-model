@@ -12,15 +12,12 @@ import { SettingsContext } from "./context/SettingsContext";
 import { defaultSettings, initKey, baseUrl, cameraPositions } from "./consts";
 
 import "./styles/ShareContent.css";
-// import QRCode from "qrcode.react";
 
 const QRCode = lazy(() => import("qrcode.react"));
 
 function ShareContent({ method }) {
     const [show, setShow] = useState({ AC: true, Settings: true });
-    const [transparentBackground, toggleTransparentBackground] = useToggleState(
-        false
-    );
+    const [transparentBG, toggleTransparentBG] = useToggleState(false);
     const [customCam, toggleCustomCam] = useToggleState(false);
     const [camPos, setCamPos] = useState([0, 0.5, 1.5]);
     const [label, setLabel] = useState("Code");
@@ -69,7 +66,7 @@ function ShareContent({ method }) {
             const defaultValue = defaultSettings[group][key];
             switch (keyCode) {
                 case "bg":
-                    if (transparentBackground) {
+                    if (transparentBG) {
                         link = link.concat(`bg=transparent/`);
                         break;
                     }
@@ -135,7 +132,7 @@ function ShareContent({ method }) {
 
     const shareLink = getShareLink();
     const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
-        transparentBackground ? "allowtransparency " : ""
+        transparentBG ? "allowtransparency " : ""
     }/></iframe>`;
 
     useEffect(() => {
@@ -195,8 +192,8 @@ function ShareContent({ method }) {
                         <FormControlLabel
                             control={
                                 <Checkbox
-                                    checked={transparentBackground}
-                                    onChange={toggleTransparentBackground}
+                                    checked={transparentBG}
+                                    onChange={toggleTransparentBG}
                                     color="primary"
                                 />
                             }

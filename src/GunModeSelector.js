@@ -1,40 +1,27 @@
 import "./styles/GunModeSelector.css";
 
+const displayTexts = {
+    A: "Short Range",
+    B: "Long Range",
+    C: "Rapid-Fire",
+};
+
 function GunModeSelector({ value, handleClick }) {
-    return (
-        <div className="GunModeSelector">
-            <div
-                data-name="gunMode"
-                data-value="A"
-                onClick={handleClick}
-                className={`GunModeSelector-GunMode ${
-                    value === "A" ? "selected" : ""
-                }`}
-            >
-                Short Range
-            </div>
-            <div
-                data-name="gunMode"
-                data-value="B"
-                onClick={handleClick}
-                className={`GunModeSelector-GunMode ${
-                    value === "B" ? "selected" : ""
-                }`}
-            >
-                Long Range
-            </div>
-            <div
-                data-name="gunMode"
-                data-value="C"
-                onClick={handleClick}
-                className={`GunModeSelector-GunMode ${
-                    value === "C" ? "selected" : ""
-                }`}
-            >
-                Rapid-Fire
-            </div>
+    const options = ["A", "B", "C"];
+    const selectors = options.map(option => (
+        <div
+            data-name="gunMode"
+            data-value={option}
+            key={option}
+            onClick={handleClick}
+            className={`GunModeSelector-GunMode ${
+                value === option ? "selected" : ""
+            }`}
+        >
+            {displayTexts[option]}
         </div>
-    );
+    ));
+    return <div className="GunModeSelector">{selectors}</div>;
 }
 
 export default GunModeSelector;

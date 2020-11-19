@@ -46,7 +46,6 @@ function CharaSelect({ toggleControlOpen, mode }) {
     };
 
     const changeFacePart = event => {
-        event.stopPropagation();
         const mode = event.currentTarget.dataset.value;
         setFacePart(mode);
     };

@@ -19,25 +19,28 @@ function ChainAniAdvanced(props) {
         updateParams(updateValue);
     };
 
-    const deleteFaceChange = event => {
-        const { id } = event.currentTarget;
-        const newFaceChanges = faceChanges.filter(change => change.id !== id);
+    const updateFaceChanges = newFaceChanges => {
         const updateValue = { faceChanges: newFaceChanges };
         updateParams(updateValue);
     };
 
-    const updateFaceChanges = (id, newFaceChange) => {
+    const deleteFaceChange = event => {
+        const { id } = event.currentTarget;
+        const newFaceChanges = faceChanges.filter(change => change.id !== id);
+        updateFaceChanges(newFaceChanges);
+    };
+
+    const updateFaceChange = (id, newFaceChange) => {
         const newFaceChanges = faceChanges.map(change =>
             change.id === id ? newFaceChange : change
         );
-        const updateValue = { faceChanges: newFaceChanges };
-        updateParams(updateValue);
+        updateFaceChanges(newFaceChanges);
     };
 
     const addFaceChange = () => {
         const blankChange = { id: uuid(), time: "", eyeIdx: "", mouthIdx: "" };
-        const updatedValue = { faceChanges: [...faceChanges, blankChange] };
-        updateParams(updatedValue);
+        const newFaceChanges = [...faceChanges, blankChange];
+        updateFaceChanges(newFaceChanges);
     };
 
     return (
@@ -73,7 +76,7 @@ function ChainAniAdvanced(props) {
                 openControl={openControl}
                 faceChanges={faceChanges}
                 deleteFaceChange={deleteFaceChange}
-                updateFaceChanges={updateFaceChanges}
+                updateFaceChange={updateFaceChange}
                 addFaceChange={addFaceChange}
             />
         </>

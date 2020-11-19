@@ -1,35 +1,24 @@
 import "./styles/Selector.css";
 
+const displayTexts = {
+    eye: "Eyes",
+    mouth: "Mouth",
+    both: "Both",
+};
+
 function FacePartSelector({ value, handleClick }) {
-    return (
-        <div className="Selector">
-            <div
-                data-value="eye"
-                onClick={handleClick}
-                className={`Selector-Item ${value === "eye" ? "selected" : ""}`}
-            >
-                Eyes
-            </div>
-            <div
-                data-value="mouth"
-                onClick={handleClick}
-                className={`Selector-Item ${
-                    value === "mouth" ? "selected" : ""
-                }`}
-            >
-                Mouth
-            </div>
-            <div
-                data-value="both"
-                onClick={handleClick}
-                className={`Selector-Item ${
-                    value === "both" ? "selected" : ""
-                }`}
-            >
-                Both
-            </div>
+    const options = ["eye", "mouth", "both"];
+    const selectors = options.map(option => (
+        <div
+            data-value={option}
+            key={option}
+            onClick={handleClick}
+            className={`Selector-Item ${value === option ? "selected" : ""}`}
+        >
+            {displayTexts[option]}
         </div>
-    );
+    ));
+    return <div className="Selector">{selectors}</div>;
 }
 
 export default FacePartSelector;
