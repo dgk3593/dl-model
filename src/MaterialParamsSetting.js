@@ -10,7 +10,7 @@ import {
     materialExtraParams as extraParams,
     matParamsDetails as paramsDetails,
 } from "./consts";
-import { complementaryColor } from "./helpers";
+import { getTextColor } from "./helpers";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
@@ -76,8 +76,7 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
                 fullWidth
                 style={{
                     backgroundColor: color,
-                    color: complementaryColor(color),
-                    textShadow: `0px 0px 3px white`,
+                    color: getTextColor(color),
                 }}
                 data-value={`materialParams-${name}`}
                 onClick={handleColorBtnClick}

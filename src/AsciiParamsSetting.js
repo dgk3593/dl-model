@@ -6,7 +6,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
-import { complementaryColor } from "./helpers";
+import { getTextColor } from "./helpers";
 
 function AsciiParamsSetting(props) {
     const { openControl } = props;
@@ -66,8 +66,7 @@ function AsciiParamsSetting(props) {
                 fullWidth
                 style={{
                     backgroundColor: color,
-                    color: complementaryColor(color),
-                    textShadow: `0px 0px 3px white`,
+                    color: getTextColor(color),
                 }}
                 data-value="ascii-color"
                 onClick={handleColorBtnClick}
@@ -79,8 +78,7 @@ function AsciiParamsSetting(props) {
                 fullWidth
                 style={{
                     backgroundColor: bgColor,
-                    color: complementaryColor(bgColor),
-                    textShadow: `0px 0px 3px white`,
+                    color: getTextColor(bgColor),
                 }}
                 data-value="ascii-bgColor"
                 onClick={handleColorBtnClick}

@@ -36,7 +36,6 @@ function ChainMaker({ openControl }) {
 
         const ani = chain.find(a => a.id === id);
         const code = generateChainCode([ani]);
-        console.log(code);
         applyCode(code);
     };
 

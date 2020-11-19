@@ -161,10 +161,29 @@ export const multiCondFilter = (input, filters) => {
     });
 };
 
-export const complementaryColor = color => {
+export const getTextColor = color => {
     const hexColor = color.replace("#", "0x");
 
     return `#${("000000" + ("0xffffff" ^ hexColor).toString(16)).slice(-6)}`;
+};
+
+const hexToRgb = hex => {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+        ? {
+              r: parseInt(result[1], 16),
+              g: parseInt(result[2], 16),
+              b: parseInt(result[3], 16),
+          }
+        : null;
+};
+
+export const getBrightness = ({ r, g, b }) =>
+    (r * 299 + g * 587 + b * 114) / 1000;
+
+export const getTextColor = color => {
+    const rgb = hexToRgb(color);
+    return getBrightness(rgb) > 128 ? "#000000" : "#ffffff";
 };
 
 export const aniButtonsFromObject = (object, handleSelect, groupName) => {

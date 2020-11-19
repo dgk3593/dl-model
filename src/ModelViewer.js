@@ -38,7 +38,6 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 

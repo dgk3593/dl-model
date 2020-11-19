@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import SettingsGroup from "./AdvancedSettingsGroup";
 
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
-import { complementaryColor } from "./helpers";
+import { getTextColor } from "./helpers";
 import "./styles/AdvancedSettingsGroup.css";
 
 function OutlineSettings({ openControl, openAtStart }) {
@@ -88,8 +88,7 @@ function OutlineSettings({ openControl, openAtStart }) {
                         fullWidth
                         style={{
                             backgroundColor: color,
-                            color: complementaryColor(color),
-                            textShadow: `0px 0px 3px white`,
+                            color: getTextColor(color),
                         }}
                         data-value="outlineColor"
                         onClick={handleBtnClick}

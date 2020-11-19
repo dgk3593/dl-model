@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 import Button from "@material-ui/core/Button";
 import Slider from "@material-ui/core/Slider";
 
-import { complementaryColor } from "./helpers";
+import { getTextColor } from "./helpers";
 
 const CoordinatePicker = lazy(() => import("./CoordinatePicker"));
 
@@ -35,8 +35,7 @@ function LightParamsSetting(props) {
                     fullWidth
                     style={{
                         backgroundColor: color,
-                        color: complementaryColor(color),
-                        textShadow: `0px 0px 3px white`,
+                        color: getTextColor(color),
                     }}
                     data-value={`Lights-${id}`}
                     onClick={colorBtnClick}

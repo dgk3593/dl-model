@@ -2,7 +2,7 @@ import { lazy, Suspense, useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
-import { complementaryColor } from "./helpers";
+import { getTextColor } from "./helpers";
 import { commonBG } from "./consts";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
@@ -91,7 +91,7 @@ function ColorSettings({ toggleControlOpen, mode }) {
             onClick={setNewColor}
             style={{
                 backgroundColor: commonBG[color],
-                color: complementaryColor(commonBG[color]),
+                color: getTextColor(commonBG[color]),
             }}
             value={commonBG[color]}
             key={color}
@@ -111,8 +111,7 @@ function ColorSettings({ toggleControlOpen, mode }) {
                         onClick={applyColor}
                         style={{
                             backgroundColor: color,
-                            color: complementaryColor(color),
-                            textShadow: `0px 0px 3px white`,
+                            color: getTextColor(color),
                         }}
                         value="picker"
                     >
