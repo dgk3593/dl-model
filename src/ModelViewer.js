@@ -60,15 +60,13 @@ class ModelViewer extends PureComponent {
                 const { texturePath } = analyzeWeaponCode(`${modelId}n`);
                 changeMaterial({ target: main, materialType, texturePath });
             }
-            this.basicMainProcessing(main);
+            this.basicMainProcessing();
             // loading finished
             this.props.setIsLoading(false);
             return;
         }
 
-        this.initMainModel(main);
-        this.initFace(modelId);
-
+        this.initMainModel();
         this.initAllWeapons();
         this.attachAllWeapons();
 
@@ -299,7 +297,8 @@ class ModelViewer extends PureComponent {
 
     addToScene = model => this.floor.add(model);
 
-    basicMainProcessing = model => {
+    basicMainProcessing = () => {
+        const model = this.models.main;
         // Add outline
         this.outlines.main = createOutline(model, this.outlineParams);
         // change material type
@@ -309,15 +308,18 @@ class ModelViewer extends PureComponent {
         this.addToScene(model);
     };
 
-    initMainModel = model => {
+    initMainModel = () => {
+        const model = this.models.main;
         // Basic processing
-        this.basicMainProcessing(model);
+        this.basicMainProcessing();
+        this.initFace();
         // Save initial position and rotation
         model.initPos = model.position.clone();
         model.initRot = model.rotation.clone();
     };
 
-    initFace = modelId => {
+    initFace = () => {
+        const modelId = this.props.model.id;
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
         const defaultFaceParams = {
             mouthTexture: modelId,
@@ -602,8 +604,7 @@ class ModelViewer extends PureComponent {
 
             this.models.main = model;
 
-            this.initMainModel(model);
-            this.initFace(modelId);
+            this.initMainModel();
 
             this.attachAllWeapons();
 
