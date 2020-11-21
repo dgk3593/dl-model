@@ -5,7 +5,7 @@ export const DEFAULT_FACE_IDX = "2";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
-const defaultAni = "MWM_CMN+CMN_MWM_03&e-55=3&e-60=2";
+const defaultAni = "MWM_CMN+CMN_MWM_03";
 
 export const matParamsDetails = {
     wireframe: {

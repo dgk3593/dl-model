@@ -217,7 +217,6 @@ export const getComboCode = weapon => {
     const comboLength = COMBO_LENGTH[weapon];
     const code = WEAPON_CODE[weapon];
     let result = `CMB_${code}`;
-    // Weapon combo has 5 animations each
     for (let i = 1; i <= comboLength; i++) {
         result = result.concat(`+${code}_CMB_0${i}>`);
     }

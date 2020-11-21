@@ -45,24 +45,9 @@ class ModelViewer extends PureComponent {
         const [main, weaponRight, weaponLeft] = await this.initLoad();
 
         // save references to models
-        this.models = {
-            main,
-            weaponRight,
-            weaponLeft,
-        };
+        this.models = { main, weaponRight, weaponLeft };
 
-        // add outline to main model and save reference
-        this.outlines.main = createOutline(main, this.outlineParams);
-
-        // Save initial position and rotation
-        main.initPos = main.position.clone();
-        main.initRot = main.rotation.clone();
-
-        // change the material
-        const { materialType } = this.props.model;
-        changeMaterial({ target: main, materialType });
-
-        // basic viewer for non-human assets
+        // basic viewer for incompatible assets
         const modelId = this.props.model.id;
         const isSimpleViewer =
             !modelId.startsWith("c") ||
@@ -71,59 +56,30 @@ class ModelViewer extends PureComponent {
 
         if (isSimpleViewer) {
             if (isBlade(modelId)) {
-                const { texturePath } = analyzeWeaponCode(modelId + "n");
+                const { materialType } = this.props.model;
+                const { texturePath } = analyzeWeaponCode(`${modelId}n`);
                 changeMaterial({ target: main, materialType, texturePath });
             }
-            this.floor.add(main);
+            this.basicMainProcessing(main);
+            // loading finished
             this.props.setIsLoading(false);
             return;
         }
 
-        // process weapons
-        ["Right", "Left"].forEach(side => {
-            const key = `weapon${side}`;
-            // if weapon not specified, return
-            if (!this.props.model[key]) return;
-            // add weapon
-            const weaponInfo = this.modelInfo[key];
-            const weaponModel = this.models[key];
-            const { texturePath } = weaponInfo;
-            changeMaterial({
-                target: weaponModel,
-                materialType,
-                texturePath,
-            });
-            // flip weapon if needed
-            weaponModel.rotation.y += weaponInfo.flipped ? Math.PI : 0;
-            // add outline to weapon and save reference
-            this.outlines[key] = createOutline(weaponModel, this.outlineParams);
-            // attach weapon to main body
-            this.attachWeapon(this.models[`weapon${side}`], side);
-        });
+        this.initMainModel(main);
+        this.initFace(modelId);
 
-        // Apply face settings
-        this._eyeIdx = DEFAULT_FACE_IDX;
-        this._mouthIdx = DEFAULT_FACE_IDX;
-        const defaultFaceParams = {
-            mouthTexture: modelId,
-            mouthIdx: DEFAULT_FACE_IDX,
-            eyeTexture: modelId,
-            eyeIdx: DEFAULT_FACE_IDX,
-        };
-        this.updateFace(defaultFaceParams, this.props.model);
+        this.initAllWeapons();
+        this.attachAllWeapons();
 
-        // Apply material settings
-        this.saveMaterialReference();
-        this.applyMaterialParams();
+        this.applyMaterialSettings();
 
-        // Add character to scene
-        this.floor.add(main);
-        // main model loading finished
+        // loading finished
         this.props.setIsLoading(false);
 
         // Add animation
         const { code: aniCode, timeScale } = this.props.animation;
-        this.addAnimationChain(main, aniCode, timeScale);
+        this.addAnimation(aniCode, timeScale);
     }
 
     async componentDidUpdate(prev) {
@@ -254,7 +210,6 @@ class ModelViewer extends PureComponent {
         this.addLights(lights);
 
         // effects
-        this.loadedFX = new Set();
         this.fxConstructors = new Map();
 
         // Renderer
@@ -342,12 +297,74 @@ class ModelViewer extends PureComponent {
         return Promise.all([loadMain, loadWeaponR, loadWeaponL]);
     };
 
+    addToScene = model => this.floor.add(model);
+
+    basicMainProcessing = model => {
+        // Add outline
+        this.outlines.main = createOutline(model, this.outlineParams);
+        // change material type
+        const { materialType } = this.props.model;
+        changeMaterial({ target: model, materialType });
+
+        this.addToScene(model);
+    };
+
+    initMainModel = model => {
+        // Basic processing
+        this.basicMainProcessing(model);
+        // Save initial position and rotation
+        model.initPos = model.position.clone();
+        model.initRot = model.rotation.clone();
+    };
+
+    initFace = modelId => {
+        this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
+        const defaultFaceParams = {
+            mouthTexture: modelId,
+            mouthIdx: DEFAULT_FACE_IDX,
+            eyeTexture: modelId,
+            eyeIdx: DEFAULT_FACE_IDX,
+        };
+        this.updateFace(defaultFaceParams, this.props.model);
+    };
+
+    initAllWeapons = () => {
+        const { materialType } = this.props.model;
+        ["Right", "Left"].forEach(side => {
+            const key = `weapon${side}`;
+            const weaponModel = this.models[key];
+            if (!weaponModel) return;
+
+            const weaponInfo = this.modelInfo[key];
+            const { texturePath, flipped } = weaponInfo;
+            changeMaterial({
+                target: weaponModel,
+                materialType,
+                texturePath,
+            });
+            // flip weapon if needed
+            if (flipped) weaponModel.rotation.y += Math.PI;
+            // add outline
+            this.outlines[key] = createOutline(weaponModel, this.outlineParams);
+        });
+    };
+
     attachWeapon = (weapon, side) => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
             if (child.name === boneName && child.children.length === 0) {
                 child.add(weapon);
             }
+        });
+    };
+
+    attachAllWeapons = () => {
+        ["Right", "Left"].forEach(side => {
+            const key = `weapon${side}`;
+            const weapon = this.models[key];
+            if (!weapon) return;
+
+            this.attachWeapon(weapon, side);
         });
     };
 
@@ -358,21 +375,8 @@ class ModelViewer extends PureComponent {
         model.parent.remove(model);
     };
 
-    saveMaterialReference = () => {
-        this.materials = [];
-        const mainModel = this.models.main;
-        mainModel.traverse(child => {
-            if (!child.isMesh || child.name === "outline") return;
-
-            const { material } = child;
-
-            if (Array.isArray(material)) {
-                this.materials = this.materials.concat(material);
-                return;
-            }
-            this.materials.push(material);
-        });
-    };
+    detachAllWeapons = () =>
+        ["Right", "Left"].forEach(side => this.detachWeapon(side));
 
     playNextAni = () => {
         const { nAni } = this;
@@ -387,37 +391,36 @@ class ModelViewer extends PureComponent {
         this.aniIdx = newIdx;
     };
 
-    addAnimationChain = async (object, animationChain, timeScale) => {
-        if (!animationChain) return;
+    addAnimation = async (aniCode, timeScale) => {
+        if (!aniCode) return;
 
-        const [fileList, animationList] = analyzeChainCode(animationChain);
+        const model = this.models.main;
+        const [fileList, animationList] = analyzeChainCode(aniCode);
         this.nAni = animationList.length;
 
         this.props.setIsLoading(true);
 
-        object.mixer = new THREE.AnimationMixer(object);
-        this.mixer = object.mixer;
+        model.mixer = new THREE.AnimationMixer(model);
+        this.mixer = model.mixer;
 
         this._aniIdx = 0;
-        object.mixer.timeScale = timeScale; // Global timeScale
-        object.mixer.addEventListener("finished", this.playNextAni);
-        this.aniSettings = animationList.map(ani => {
-            const settings = {
-                timeScale: ani.timeScale,
-                repetitions: ani.repetitions,
-            };
-            if (ani.faceChanges) settings.faceChanges = ani.faceChanges;
-            return settings;
-        });
+        model.mixer.timeScale = timeScale; // Global timeScale
+        model.mixer.addEventListener("finished", this.playNextAni);
+        this.aniSettings = animationList.map(ani => ({
+            timeScale: ani.timeScale,
+            repetitions: ani.repetitions,
+            faceChanges: ani.faceChanges,
+        }));
+
         const batchLoader = fileList.map(file => {
             const path = `${fbxSource}/fbx/${file}.fbx`;
             return loadModel(path);
         });
 
-        const animations = [];
         // load all animation files
         const animFiles = await Promise.all(batchLoader);
 
+        this.animations = [];
         animationList.forEach(anim => {
             const { fileIdx, aniName } = anim;
             const animation = aniName
@@ -425,9 +428,8 @@ class ModelViewer extends PureComponent {
                       ani => ani.name === aniName
                   )
                 : animFiles[fileIdx].animations[0];
-            animations.push(animation);
+            this.animations.push(animation);
         });
-        this.animations = animations;
         // play first animation
         this.aniIdx = 0;
         this.props.setIsLoading(false);
@@ -501,9 +503,10 @@ class ModelViewer extends PureComponent {
     updateEyeTexture = (prev, current) => {
         const currentTexture = current.eyeTexture;
         const prevTexture = prev.eyeTexture;
-        const { materialType } = current;
 
-        if (currentTexture === prevTexture) return;
+        if (currentTexture === prevTexture) return false;
+
+        const { materialType } = current;
         applyEyeTexture({
             target: this.models.main,
             materialType,
@@ -514,6 +517,7 @@ class ModelViewer extends PureComponent {
             target: this.models.main,
             offset,
         });
+        return true;
     };
 
     set eyeIdx(newIdx) {
@@ -533,9 +537,10 @@ class ModelViewer extends PureComponent {
     updateMouthTexture = (prev, current) => {
         const currentTexture = current.mouthTexture;
         const prevTexture = prev.mouthTexture;
-        const { materialType } = current;
 
-        if (currentTexture === prevTexture) return;
+        if (currentTexture === prevTexture) return false;
+
+        const { materialType } = current;
         applyMouthTexture({
             target: this.models.main,
             materialType,
@@ -546,6 +551,7 @@ class ModelViewer extends PureComponent {
             target: this.models.main,
             offset,
         });
+        return true;
     };
 
     set mouthIdx(newIdx) {
@@ -563,8 +569,11 @@ class ModelViewer extends PureComponent {
     }
 
     updateFaceTexture = (prev, current) => {
-        this.updateEyeTexture(prev, current);
-        this.updateMouthTexture(prev, current);
+        const eyeUpdate = this.updateEyeTexture(prev, current);
+        const mouthUpdate = this.updateMouthTexture(prev, current);
+        if (eyeUpdate || mouthUpdate) {
+            this.applyMaterialSettings();
+        }
     };
 
     updateFaceOffset = current => {
@@ -584,64 +593,31 @@ class ModelViewer extends PureComponent {
             const modelPath = getModelPath(modelId);
             // load new model
             const model = await loadModel(modelPath);
-            const { materialType } = current;
-            changeMaterial({ target: model, materialType });
-            // add outline
-            this.outlines.main = createOutline(model, this.outlineParams);
 
-            // detach weapons from old model if they exist
-            ["Right", "Left"].forEach(side => {
-                const key = `weapon${side}`;
-                if (prev[key]) {
-                    this.detachWeapon(side);
-                }
-            });
+            this.detachAllWeapons();
 
             // remove and dispose old model
             this.floor.remove(this.models.main);
             disposeItem(this.models.main);
 
-            // add reference
             this.models.main = model;
 
-            // Save initial position and rotation
-            model.initPos = model.position.clone();
-            model.initRot = model.rotation.clone();
+            this.initMainModel(model);
+            this.initFace(modelId);
 
-            // Add new model to scene
-            this.floor.add(model);
+            this.attachAllWeapons();
 
-            // Apply face to new model
-            this._eyeIdx = DEFAULT_FACE_IDX;
-            this._mouthIdx = DEFAULT_FACE_IDX;
-            const { eyeIdx, mouthIdx } = this.props.model;
-            this.eyeIdx = eyeIdx;
-            this.mouthIdx = mouthIdx;
-
-            // Attach weapons to new model
-            ["Right", "Left"].forEach(side => {
-                const key = `weapon${side}`;
-                const weaponModel = this.models[key];
-
-                if (!weaponModel) return;
-                this.attachWeapon(weaponModel, side);
-            });
+            this.applyMaterialSettings();
 
             // Add animation to new model
             const { code: aniCode, timeScale } = this.props.animation;
-            this.addAnimationChain(model, aniCode, timeScale);
-
-            this.saveMaterialReference();
-            this.applyMaterialParams();
+            this.addAnimation(aniCode, timeScale);
 
             this.props.setIsLoading(false);
             return;
         }
         // Update face when main model not changed
         this.updateFace(prev, current);
-
-        this.saveMaterialReference();
-        this.applyMaterialParams();
     };
 
     updateWeapons = async (prev, current) => {
@@ -686,8 +662,7 @@ class ModelViewer extends PureComponent {
             // attach new weapon to main model
             this.attachWeapon(model, side);
 
-            this.saveMaterialReference();
-            this.applyMaterialParams();
+            this.applyMaterialSettings();
 
             this.props.setIsLoading(false);
         });
@@ -723,7 +698,7 @@ class ModelViewer extends PureComponent {
                 this.animations = [];
             }
             // Add new animation
-            this.addAnimationChain(mainModel, code, timeScale);
+            this.addAnimation(code, timeScale);
             return;
         }
         // Update timeScale if animation not changed
@@ -757,6 +732,22 @@ class ModelViewer extends PureComponent {
                     changeOutlineColor(outline, color);
                 }
             });
+        });
+    };
+
+    saveMaterialReference = () => {
+        this.materials = [];
+        const mainModel = this.models.main;
+        mainModel.traverse(child => {
+            if (!child.isMesh || child.name === "outline") return;
+
+            const { material } = child;
+
+            if (Array.isArray(material)) {
+                this.materials = this.materials.concat(material);
+                return;
+            }
+            this.materials.push(material);
         });
     };
 
@@ -803,6 +794,11 @@ class ModelViewer extends PureComponent {
                 });
             }
         });
+    };
+
+    applyMaterialSettings = () => {
+        this.saveMaterialReference();
+        this.applyMaterialParams();
     };
 
     updateMaterialParams = (prev, current) => {
@@ -869,11 +865,9 @@ class ModelViewer extends PureComponent {
         // update material type
         if (prev.model.materialType !== current.model.materialType) {
             const { materialType } = current.model;
-
             changeMaterial({ target: this.models.main, materialType });
-            this.saveMaterialReference();
 
-            this.applyMaterialParams();
+            this.applyMaterialSettings();
             return;
         }
 
@@ -903,11 +897,10 @@ class ModelViewer extends PureComponent {
             return;
         }
 
-        if (!this.loadedFX.has("ascii")) {
+        if (!this.fxConstructors.has("ascii")) {
             const { AsciiEffect } = await import(
                 "three/examples/jsm/effects/AsciiEffect"
             );
-            this.loadedFX.add("ascii");
             this.fxConstructors.set("ascii", AsciiEffect);
             this.showAscii();
         } else this.showAscii();
@@ -952,7 +945,7 @@ class ModelViewer extends PureComponent {
         if (this.mixer) this.mixer.update(dt);
 
         if (this.faceChanges && this.faceChanges.length > 0) {
-            const elapsedTime = this.models.main.mixer.time;
+            const elapsedTime = this.mixer.time;
             const nextFaceChangeTime =
                 (this.faceChanges[0].time * this.currentClipDuration) / 100;
             if (elapsedTime >= nextFaceChangeTime) {
