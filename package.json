@@ -14,7 +14,7 @@
         "react-dom": "^17.0.1",
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.0",
-        "three": "^0.121.1",
+        "three": "^0.122.0",
         "uuid": "^8.3.1"
     },
     "scripts": {
