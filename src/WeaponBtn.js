@@ -6,9 +6,9 @@ import { DispatchContext } from "./context/SettingsContext";
 import { isBlade } from "./helpers";
 
 const BladeSelector = lazy(() => import("./BladeSelector"));
+const BtnIcon = { Left: "⇐", Right: "⇒" };
 
-function WeaponBtn(props) {
-    const { wid, iconName, name } = props;
+function WeaponBtn({ wid, iconName, name }) {
     const [bladeMode, setBladeMode] = useState("Blade");
     const [clicked, toggleClicked] = useToggleState(false);
     const [reverseGrip, toggleReverseGrip] = useToggleState(false);
@@ -23,17 +23,43 @@ function WeaponBtn(props) {
         const side = event.currentTarget.dataset.value;
         // change id code for sheath if needed
         const idCode = bladeMode === "Sheath" ? wid.replace("_01", "_02") : wid;
+        const gripCode = reverseGrip ? "b" : "n";
 
-        const weaponCode = `${idCode}${reverseGrip ? "b" : "n"}`;
-        let value = {};
-        value[`weapon${side}`] = weaponCode;
+        const weaponCode = `${idCode}${gripCode}`;
         const action = {
             type: "update",
             key: "model",
-            value,
+            value: { [`weapon${side}`]: weaponCode },
         };
         dispatch(action);
     };
+
+    const weaponIcon = iconName && (
+        <img
+            src={iconPath}
+            value={wid}
+            alt={wid}
+            onClick={toggleClicked}
+            className="WeaponBtn-icon"
+        />
+    );
+
+    const gripSelect = clicked && (
+        <div
+            className={`WeaponBtn-grip ${weaponIsBlade ? "blade" : ""}`}
+            onClick={e => e.stopPropagation()}
+        >
+            <div>
+                <input
+                    type="checkbox"
+                    id={`grip-${wid}`}
+                    checked={reverseGrip}
+                    onChange={toggleReverseGrip}
+                />
+                <label htmlFor={`grip-${wid}`}>Reverse Grip</label>
+            </div>
+        </div>
+    );
 
     const changeBladeMode = event => {
         event.stopPropagation();
@@ -41,60 +67,30 @@ function WeaponBtn(props) {
         setBladeMode(mode);
     };
 
+    const bladeModeSelect = weaponIsBlade && (
+        <Suspense fallback={null}>
+            <BladeSelector value={bladeMode} handleClick={changeBladeMode} />
+        </Suspense>
+    );
+
+    const SetWeaponBtn = ({ side }) => (
+        <div className="WeaponBtn-addBtn" data-value={side} onClick={setWeapon}>
+            {BtnIcon[side]}
+        </div>
+    );
+
     return (
         <div className="WeaponBtn">
-            {iconName && (
-                <img
-                    src={iconPath}
-                    value={wid}
-                    alt={wid}
-                    onClick={toggleClicked}
-                    className="WeaponBtn-icon"
-                />
-            )}
+            {weaponIcon}
             {clicked ? (
                 <div className="WeaponBtn-add" onClick={toggleClicked}>
-                    <div
-                        className={`WeaponBtn-grip ${
-                            weaponIsBlade ? "blade" : ""
-                        }`}
-                        onClick={e => e.stopPropagation()}
-                    >
-                        <div>
-                            <input
-                                type="checkbox"
-                                id={`reverseGrip-`}
-                                checked={reverseGrip}
-                                onChange={toggleReverseGrip}
-                            />
-                            <label htmlFor={`reverseGrip-`}>Reverse Grip</label>
-                        </div>
-                    </div>
+                    {gripSelect}
                     <div className="WeaponBtn-addBtnGroup">
-                        <div
-                            className="WeaponBtn-addBtn"
-                            data-value="Left"
-                            onClick={setWeapon}
-                        >
-                            &#8656;
-                        </div>
+                        <SetWeaponBtn side="Left" />
                         <div>ADD</div>
-                        <div
-                            className="WeaponBtn-addBtn"
-                            data-value="Right"
-                            onClick={setWeapon}
-                        >
-                            &#8658;
-                        </div>
+                        <SetWeaponBtn side="Right" />
                     </div>
-                    {weaponIsBlade && (
-                        <Suspense fallback={null}>
-                            <BladeSelector
-                                value={bladeMode}
-                                handleClick={changeBladeMode}
-                            />
-                        </Suspense>
-                    )}
+                    {bladeModeSelect}
                 </div>
             ) : (
                 <div className="WeaponBtn-name" onClick={toggleClicked}>
