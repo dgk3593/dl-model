@@ -26,10 +26,8 @@ import {
     applyMouthOffset,
     disposeItem,
     createOutline,
+    applyOutlineSettings,
     changeMaterial,
-    changeOpacity,
-    changeOutlineSize,
-    changeOutlineColor,
     createGradientMap,
     getFaceChangesArray,
 } from "./viewerHelpers";
@@ -38,6 +36,7 @@ import { isBlade } from "./helpers";
 
 class ModelViewer extends PureComponent {
     async componentDidMount() {
+        window.app = this;
         this.initScene();
         this.props.setIsLoading(true);
 
@@ -708,32 +707,27 @@ class ModelViewer extends PureComponent {
         }
     };
 
+    updateOutlineParams = update => {
+        const keys = Object.keys(this.outlines).filter(
+            key => this.outlines[key]
+        );
+        const outlines = keys.map(key => this.outlines[key]).flat();
+        outlines.forEach(outline => {
+            applyOutlineSettings(outline, update);
+        });
+    };
+
     updateOutline = (prev, current) => {
-        this.outlineParams = { ...current };
-        const updatedParams = Object.keys(current).filter(
+        if (prev === current) return;
+
+        this.outlineParams = current;
+        const updatedKeys = Object.keys(current).filter(
             key => prev[key] !== current[key]
         );
-        if (updatedParams.length === 0) return;
-        const { enable, size, opacity, color } = current;
-        const outlineList = Object.keys(this.outlines);
-        outlineList.forEach(outlineName => {
-            const outlineGroup = this.outlines[outlineName];
-            if (!outlineGroup) return;
-            outlineGroup.forEach(outline => {
-                if (updatedParams.includes("enable")) {
-                    outline.visible = enable;
-                }
-                if (updatedParams.includes("size")) {
-                    changeOutlineSize(outline, size);
-                }
-                if (updatedParams.includes("opacity")) {
-                    changeOpacity(outline, opacity);
-                }
-                if (updatedParams.includes("color")) {
-                    changeOutlineColor(outline, color);
-                }
-            });
-        });
+        if (updatedKeys.length === 0) return;
+
+        const update = new Map(updatedKeys.map(key => [key, current[key]]));
+        this.updateOutlineParams(update);
     };
 
     saveMaterialReference = () => {

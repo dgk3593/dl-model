@@ -8,6 +8,9 @@ import textureOffsets from "./data/face_offset";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach, isSheath } from "./helpers";
 
+import outlineFragShader from "./shader/outlineFragShader";
+import outlineVertShader from "./shader/outlineVertShader";
+
 export const loadModel = url => {
     return (
         url &&
@@ -157,103 +160,6 @@ export const changeMaterial = ({
     });
 };
 
-const createOutlineMaterial = ({ size, color, opacity }) => {
-    const newMaterial = new THREE.MeshToonMaterial({
-        color,
-        opacity,
-        side: THREE.BackSide,
-        transparent: true,
-        skinning: true,
-    });
-    newMaterial.onBeforeCompile = shader => {
-        const token = "#include <begin_vertex>";
-        const customTransform = `
-            vec3 transformed = position + objectNormal*${size * 0.0005};
-        `;
-        shader.vertexShader = shader.vertexShader.replace(
-            token,
-            customTransform
-        );
-    };
-    return newMaterial;
-};
-
-// replace material of an object
-const replaceMaterial = (object, newMaterial) => {
-    // dispose old material
-    callbackOnEach(object.material, obj => {
-        // obj.map?.dispose?.()
-        if (obj.map) obj.map.dispose();
-        obj.dispose();
-    });
-    // apply new material
-    const matIsArray = Array.isArray(object.material);
-    object.material = matIsArray
-        ? new Array(object.material.length).fill(newMaterial)
-        : newMaterial;
-};
-
-// change opacity of an object
-export const changeOpacity = ({ material }, opacity) => {
-    callbackOnEach(material, obj => {
-        obj.opacity = opacity;
-    });
-};
-
-// update outline shader to change size
-const updateOutlineShader = (material, size) => {
-    // Hacky way to force shader recompilation, needs fixing !!!!!!!!!!!!!!!!!!
-    material.fog = !material.fog;
-    material.needsUpdate = true;
-
-    material.onBeforeCompile = shader => {
-        const token = "#include <begin_vertex>";
-        const customTransform = `
-                vec3 transformed = position + objectNormal*${size * 0.0005};
-            `;
-        shader.vertexShader = shader.vertexShader.replace(
-            token,
-            customTransform
-        );
-    };
-    setTimeout(() => {
-        material.fog = !material.fog;
-        material.needsUpdate = true;
-    }, 100); // Sometimes doesn't work with 0 delay
-};
-
-// change size of outline
-export const changeOutlineSize = ({ material }, size) => {
-    const matIsArray = Array.isArray(material);
-    if (matIsArray) {
-        const updated = new Set();
-        material.forEach(m => {
-            if (updated.has(m.uuid)) return;
-
-            updateOutlineShader(m, size);
-            updated.add(m.uuid);
-        });
-        return;
-    }
-    updateOutlineShader(material, size);
-};
-
-// Change color of outline
-export const changeOutlineColor = ({ material }, color) => {
-    const matIsArray = Array.isArray(material);
-    if (matIsArray) {
-        const updated = new Set();
-        material.forEach(m => {
-            if (updated.has(m.uuid)) return;
-
-            m.color = new THREE.Color(color);
-            updated.add(m.uuid);
-        });
-        return;
-    }
-    material.color = new THREE.Color(color);
-};
-
 // Add outline to object and return reference to outlines
 export const createOutline = (object, params) => {
     if (!object) return;
@@ -262,12 +168,12 @@ export const createOutline = (object, params) => {
         if (!child.isMesh) return;
 
         const outline = child.clone();
-        outline.name = "outline";
-        outline.visible = params.enable;
-
         outlines.push(outline);
+
         const newMaterial = createOutlineMaterial(params);
         replaceMaterial(outline, newMaterial);
+        outline.visible = params.enable;
+        outline.name = "outline";
 
         if (child.isSkinnedMesh) {
             outline.bind(child.skeleton, child.bindMatrix);
@@ -275,6 +181,64 @@ export const createOutline = (object, params) => {
         child.parent.add(outline);
     });
     return outlines;
+};
+
+const createOutlineMaterial = ({ size, color, opacity }) => {
+    const uniforms = {
+        size: { type: "float", value: size },
+        color: { tyle: "vec3", value: new THREE.Color(color) },
+        opacity: { type: "float", value: opacity },
+    };
+
+    const material = new THREE.ShaderMaterial({
+        skinning: true,
+        side: THREE.BackSide,
+        transparent: true,
+        uniforms,
+        fragmentShader: outlineFragShader,
+        vertexShader: outlineVertShader,
+    });
+    return material;
+};
+
+export const applyOutlineSettings = (outline, settings) => {
+    if (!outline || !settings) return;
+
+    const { material } = outline;
+    settings.forEach((value, key) => {
+        switch (key) {
+            case "enable":
+                outline.visible = value;
+                break;
+            case "color":
+                callbackOnEach(
+                    material,
+                    mat => (mat.uniforms.color.value = new THREE.Color(value))
+                );
+                break;
+            default:
+                callbackOnEach(
+                    material,
+                    mat => (mat.uniforms[key].value = value)
+                );
+        }
+    });
+};
+
+// replace material of an object
+const replaceMaterial = (object, newMaterial) => {
+    const { material } = object;
+    // dispose old material
+    callbackOnEach(material, mat => {
+        // obj.map?.dispose?.()
+        if (mat.map) mat.map.dispose();
+        mat.dispose();
+    });
+    // apply new material
+    const matIsArray = Array.isArray(object.material);
+    object.material = matIsArray
+        ? new Array(object.material.length).fill(newMaterial)
+        : newMaterial;
 };
 
 export const calculateTextureOffset = (currentTexture, prevTexture) => {
