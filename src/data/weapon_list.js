@@ -3104,6 +3104,14 @@ const weapon_list = [
         element: "None",
     },
     {
+        wid: "w397001_01",
+        iconName: "397001_01_59901.png",
+        name: "Ascendant Edge",
+        weapon: "Sword",
+        rarity: "5",
+        element: "None",
+    },
+    {
         wid: "w302014_01",
         iconName: "302014_01_59901.png",
         name: "Dane's Favor",
