@@ -6,8 +6,8 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
 import {
-    materialCommonParams as commonParams,
-    materialExtraParams as extraParams,
+    matCommonParams as commonParams,
+    matExtraParams as extraParams,
     matParamsDetails as paramsDetails,
 } from "./consts";
 import { getTextColor } from "./helpers";

@@ -2,11 +2,11 @@ import * as THREE from "three";
 import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
-import { idxOffsets } from "./consts";
+import { idxOffsets, incompatibleModels } from "./consts";
 import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { callbackOnEach, isSheath } from "./helpers";
+import { callbackOnEach } from "./helpers";
 
 import outlineFragShader from "./shader/outlineFragShader";
 import outlineVertShader from "./shader/outlineVertShader";
@@ -48,12 +48,7 @@ export const analyzeWeaponCode = code => {
     const modelPath = getModelPath(weaponCode);
     const texturePath = getTexturePath(weaponCode);
 
-    return {
-        modelPath,
-        texturePath,
-        flipped,
-        isSheath: isSheath(weaponCode),
-    };
+    return { modelPath, texturePath, flipped };
 };
 
 export const disposeItem = item => {
@@ -69,23 +64,44 @@ export const disposeItem = item => {
         disposedList.add(object.uuid);
         object.dispose();
     };
-
     const dispose = object => {
         if (needToDispose(object)) disposeObject(object);
     };
-
-    item.traverse(child => {
-        if (!child.isMesh) return;
-
-        // dispose material
-        callbackOnEach(child.material, mat => {
-            if (mat.map) dispose(mat.map);
-            if (mat.backupMap) dispose(mat.backupMap);
-
+    const disposeMaterial = object => {
+        callbackOnEach(object.material, mat => {
+            dispose(mat.map);
+            dispose(mat.backupMap);
             dispose(mat);
         });
-        // dispose geometry
-        dispose(child.geometry);
+    };
+
+    const meshes = [];
+    item.traverse(child => child.isMesh && meshes.shift(child));
+
+    meshes.forEach(mesh => {
+        disposeMaterial(mesh);
+        dispose(mesh.geometry);
+    });
+};
+
+export const isSimpleViewer = modelId =>
+    !modelId.startsWith("c") ||
+    modelId.endsWith("_h") ||
+    incompatibleModels.has(modelId);
+
+export const isDragon = modelId =>
+    modelId.startsWith("d") || modelId === "smith";
+
+// Hide all eye and mouth that's not mEye_01 or mMouth_01
+export const initDragonFace = model => {
+    model.traverse(child => {
+        if (!child.isMesh) return;
+
+        const nameRegex = /m[A-Z].*_/m;
+        const { name } = child;
+        if (nameRegex.test(name)) {
+            child.visible = name.includes("01");
+        }
     });
 };
 
@@ -94,69 +110,43 @@ const createNewMaterial = (materialType, params) => {
     return new THREE[matType](params);
 };
 
-export const changeMaterial = ({
-    target,
-    materialType = "Basic",
-    texturePath,
-}) => {
+export const changeMaterial = (target, { materialType, texturePath }) => {
     if (!target) return;
     target.traverse(child => {
         if (!child.isMesh || child.name === "outline") return;
 
         const checkParam = `isMesh${materialType}Material`;
-        const material = child.material;
+        const materials = [child.material].flat();
+        const matIsArray = Array.isArray(child.material);
 
-        if (Array.isArray(material)) {
-            if (material.every(mat => mat[checkParam]) && !texturePath) return;
+        if (materials.every(mat => mat[checkParam]) && !texturePath) return;
 
-            material.forEach((mat, i) => {
-                const texture = texturePath
-                    ? new THREE.TextureLoader().load(texturePath)
-                    : material[i].map;
-
-                if (texturePath) texture.encoding = THREE.sRGBEncoding;
-
-                const materialParams = {
-                    map: texture,
-                    skinning: true,
-                };
-                const newMaterial = createNewMaterial(
-                    materialType,
-                    materialParams
-                );
-                newMaterial.name = mat.name;
-                if (mat.backupMap) newMaterial.backupMap = mat.backupMap;
-
-                if (texturePath && material[i].map) {
-                    material[i].map.dispose();
-                }
-                material[i].dispose();
-                child.material[i] = newMaterial;
-            });
-        } else {
-            if (material[checkParam] && !texturePath) return;
+        materials.forEach((mat, i) => {
             const texture = texturePath
                 ? new THREE.TextureLoader().load(texturePath)
-                : material.map;
+                : materials[i].map;
 
             if (texturePath) texture.encoding = THREE.sRGBEncoding;
+
             const materialParams = {
                 map: texture,
                 skinning: true,
             };
             const newMaterial = createNewMaterial(materialType, materialParams);
+            newMaterial.name = mat.name;
+            if (mat.backupMap) newMaterial.backupMap = mat.backupMap;
 
-            newMaterial.name = material.name;
-
-            if (material.backupMap) newMaterial.backupMap = material.backupMap;
-
-            if (texturePath && material.map) {
-                material.map.dispose();
+            if (texturePath && materials[i].map) {
+                materials[i].map.dispose();
             }
-            material.dispose();
+            materials[i].dispose();
 
-            child.material = newMaterial;
-        }
+            if (matIsArray) {
+                child.material[i] = newMaterial;
+            } else {
+                child.material = newMaterial;
+            }
+        });
     });
 };
 
@@ -244,10 +234,7 @@ const replaceMaterial = (object, newMaterial) => {
 export const calculateTextureOffset = (currentTexture, prevTexture) => {
     const offset = { x: 0, y: 0 };
     if (currentTexture !== prevTexture) {
-        const prevOffset = textureOffsets[prevTexture] || {
-            x: 0,
-            y: 0,
-        };
+        const prevOffset = textureOffsets[prevTexture] || { x: 0, y: 0 };
         const currentOffset = textureOffsets[currentTexture] || { x: 0, y: 0 };
 
         offset.x = currentOffset.x - prevOffset.x;
@@ -268,7 +255,7 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
     return offset;
 };
 
-const applyOffset = part => ({ target, offset }) => {
+const applyOffset = part => (target, offset) => {
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
             return;
@@ -294,11 +281,7 @@ export const applyEyeOffset = applyOffset("Eye");
 export const applyMouthOffset = applyOffset("Mouth");
 // export const applyBodyOffset = applyOffset("BodyAll");
 
-const applyTexture = part => ({
-    target,
-    materialType = "Basic",
-    textureId,
-}) => {
+const applyTexture = part => (target, { materialType, textureId }) => {
     const texturePath = getTexturePath(textureId);
     const texture = new THREE.TextureLoader().load(texturePath);
     texture.encoding = THREE.sRGBEncoding;
@@ -384,16 +367,16 @@ export const analyzeChainCode = code => {
             repetitions,
             faceChanges: processFaceChanges(faceChanges),
         };
-
         animationList.push(currentAni);
     }
     return [fileList, animationList];
 };
 
 export const processFaceChanges = faceChanges => {
+    if (!faceChanges.length) return faceChanges;
+
     const sorted = faceChanges.sort(change => change.time);
     const timeStamps = new Set(faceChanges.map(change => change.time));
-
     if (faceChanges.length === timeStamps.size) {
         sorted.forEach(change => {
             change.id = uuid();
@@ -412,7 +395,7 @@ export const processFaceChanges = faceChanges => {
 };
 
 export const getFaceChangesArray = (faceChanges, repetitions) => {
-    if (!faceChanges) return "";
+    if (!faceChanges) return [];
     if (repetitions === 1) return [...faceChanges];
     // [0, 100, 200,...]
     const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
@@ -438,11 +421,9 @@ export const chainCodeToList = (code, name) => {
             aniName,
             timeScale,
             repetitions,
+            faceChanges,
             id: uuid(),
         };
-        if (faceChanges) {
-            listItem.faceChanges = faceChanges;
-        }
         return listItem;
     });
     return output;

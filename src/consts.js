@@ -91,7 +91,7 @@ export const matParamsDetails = {
     },
 };
 
-export const directSetMatParams = [
+export const matDirectSetParams = [
     "transparent",
     "opacity",
     "wireframe",
@@ -201,7 +201,7 @@ export const initKey = {
 
 export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];
 
-export const materialCommonParams = [
+export const matCommonParams = [
     "transparent",
     "opacity",
     "wireframe",
@@ -209,7 +209,7 @@ export const materialCommonParams = [
     "color",
 ];
 
-export const materialExtraParams = {
+export const matExtraParams = {
     Basic: [],
     Toon: ["emissive", "emissiveIntensity", "gradientMap"],
     Lambert: ["emissive", "emissiveIntensity"],
