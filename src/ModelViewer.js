@@ -5,12 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { fbxSource } from "./App";
 import { CAM_PARAMS, DEFAULT_FACE_IDX } from "./consts";
-import {
-    matDirectSetParams,
-    matColorParams,
-    matCommonParams,
-    matExtraParams,
-} from "./consts";
+import { matDirectSetParams, matColorParams } from "./consts";
 import {
     createInvisibleFloor,
     isSimpleViewer,
@@ -29,6 +24,7 @@ import {
     disposeItem,
     createOutline,
     applyOutlineSettings,
+    getParamsList,
     changeMaterial,
     createGradientMap,
     getFaceChangesArray,
@@ -151,9 +147,8 @@ class ModelViewer extends PureComponent {
         };
         this.materials = [];
 
-        // save reference and specifications for outlines
+        // save reference for outlines
         this.outlines = {};
-        this.outlineParams = { ...this.props.outline };
 
         // viewport
         this.viewport = this.props.viewport || {
@@ -283,10 +278,11 @@ class ModelViewer extends PureComponent {
     basicMainProcessing = () => {
         const model = this.models.main;
 
-        this.outlines.main = createOutline(model, this.outlineParams);
+        const outlineParams = this.props.outline;
+        this.outlines.main = createOutline(model, outlineParams);
 
         const { materialType } = this.props.model;
-        changeMaterial(model, { materialType });
+        changeMaterial(model, { materialType, forced: true });
 
         this.addToScene(model);
     };
@@ -331,7 +327,8 @@ class ModelViewer extends PureComponent {
             changeMaterial(weapon, { materialType, texturePath });
             if (flipped) weapon.rotation.y += Math.PI;
 
-            this.outlines[key] = createOutline(weapon, this.outlineParams);
+            const outlineParams = this.props.outline;
+            this.outlines[key] = createOutline(weapon, outlineParams);
         });
     };
 
@@ -381,11 +378,11 @@ class ModelViewer extends PureComponent {
         const { code: aniCode, timeScale } = this.props.animation;
         if (!aniCode) return;
 
+        this.props.setIsLoading(true);
+
         const model = this.models.main;
         const [fileList, animationList] = analyzeChainCode(aniCode);
         this.nAni = animationList.length;
-
-        this.props.setIsLoading(true);
 
         model.mixer = new THREE.AnimationMixer(model);
         this.mixer = model.mixer;
@@ -442,21 +439,24 @@ class ModelViewer extends PureComponent {
     // this.aniIdx = n => play animation with index n
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
+
         const { mixer } = this;
-        const anim = this.animations[newIdx];
         mixer.stopAllAction();
+
+        const anim = this.animations[newIdx];
         const action = mixer.clipAction(anim);
         const currentAniSettings = this.aniSettings[newIdx];
         const { timeScale, repetitions, faceChanges } = currentAniSettings;
-        this.faceChanges = getFaceChangesArray(faceChanges, repetitions);
-        this.faceChangeTime = this.faceChanges.map(
-            change => (this.currentClipDuration * change.time) / 100
-        );
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
         action.timeScale = timeScale;
         action.time = 0;
+
+        this.faceChanges = getFaceChangesArray(faceChanges, repetitions);
+        this.faceChangeTime = this.faceChanges.map(
+            change => (this.currentClipDuration * change.time) / 100
+        );
 
         mixer.setTime(0);
         this.currentClipDuration = anim.duration;
@@ -501,8 +501,9 @@ class ModelViewer extends PureComponent {
         // disable user input
         this.props.setIsLoading(true);
         // Reset facial expression
-        this.eyeIdx = this.props.model.eyeIdx;
-        this.mouthIdx = this.props.model.mouthIdx;
+        const { eyeIdx, mouthIdx } = this.props.model;
+        this.eyeIdx = eyeIdx;
+        this.mouthIdx = mouthIdx;
         // play first animation and start capturing
         this.aniIdx = 0;
         this.mediaRecorder.start();
@@ -636,7 +637,7 @@ class ModelViewer extends PureComponent {
 
             // load new weapon
             this.modelInfo[key] = analyzeWeaponCode(this.props.model[key]);
-            const { modelPath, texturePath } = this.modelInfo[key];
+            const { modelPath, texturePath, flipped } = this.modelInfo[key];
 
             // load new model
             const model = await loadModel(modelPath);
@@ -645,13 +646,16 @@ class ModelViewer extends PureComponent {
             // process new weapon
             const { materialType } = current;
             changeMaterial(model, { materialType, texturePath });
+            this.applyMaterialSettings();
 
-            if (this.modelInfo[key].flipped) {
+            if (flipped) {
                 model.rotation.y += Math.PI;
             }
-            this.outlines[key] = createOutline(model, this.outlineParams);
+
+            const outlineParams = this.props.outline;
+            this.outlines[key] = createOutline(model, outlineParams);
+
             this.attachWeapon(model, side);
-            this.applyMaterialSettings();
         });
         this.props.setIsLoading(false);
     };
@@ -680,10 +684,7 @@ class ModelViewer extends PureComponent {
     };
 
     updateOutlineParams = update => {
-        const keys = Object.keys(this.outlines).filter(
-            key => this.outlines[key]
-        );
-        const outlines = keys.map(key => this.outlines[key]).flat();
+        const outlines = Object.values(this.outlines).flat();
         outlines.forEach(outline => {
             applyOutlineSettings(outline, update);
         });
@@ -692,7 +693,6 @@ class ModelViewer extends PureComponent {
     updateOutline = (prev, current) => {
         if (prev === current) return;
 
-        this.outlineParams = current;
         const updatedKeys = Object.keys(current).filter(
             key => prev[key] !== current[key]
         );
@@ -716,41 +716,39 @@ class ModelViewer extends PureComponent {
     applyMaterialParams = () => {
         const { materialType } = this.props.model;
         const current = this.props.materialParams;
-        const paramsList = [
-            ...matCommonParams,
-            ...matExtraParams[materialType],
-        ];
-        const hasGradientMap =
-            materialType === "Toon" && current.gradientMap !== "none";
+        const { useTexture, flatShading, gradientMap } = current;
+        const paramsList = getParamsList(materialType);
 
-        const nTones = hasGradientMap && parseInt(current.gradientMap);
-        const gradientMap = hasGradientMap && createGradientMap(nTones);
+        const paramFilter = param => paramsList.includes(param);
+        const directSetParams = matDirectSetParams.filter(paramFilter);
+        const colorParams = matColorParams.filter(paramFilter);
+
+        const hasGradientMap =
+            materialType === "Toon" && gradientMap !== "none";
+
+        if (hasGradientMap) {
+            const nTones = parseInt(gradientMap);
+            const newMap = createGradientMap(nTones);
+            this.forEachMaterial(mat => {
+                mat.gradientMap = newMap;
+                mat.needsUpdate = true;
+            });
+        }
 
         this.forEachMaterial(mat => {
-            matDirectSetParams.forEach(param => {
-                if (paramsList.includes(param)) {
-                    mat[param] = current[param];
-                }
-            });
-
-            matColorParams.forEach(param => {
-                if (!paramsList.includes(param)) return;
+            directSetParams.forEach(param => (mat[param] = current[param]));
+            colorParams.forEach(param => {
                 const currentColor = current[param];
                 mat[param] = new THREE.Color(currentColor);
             });
-
-            if (!current.useTexture) {
-                if (mat.map) mat.backupMap = mat.map;
+            if (!useTexture) {
+                if (mat.map && !mat.backupMap) {
+                    mat.backupMap = mat.map;
+                }
                 mat.map = null;
             }
-
-            if (current.flatShading) {
+            if (flatShading) {
                 mat.flatShading = current.flatShading;
-                mat.needsUpdate = true;
-            }
-
-            if (hasGradientMap) {
-                mat.gradientMap = gradientMap;
                 mat.needsUpdate = true;
             }
         });
@@ -764,10 +762,8 @@ class ModelViewer extends PureComponent {
     updateMaterialParams = (prev, current) => {
         const { materialType } = this.props.model;
         const { useTexture, flatShading, gradientMap } = current;
-        const paramsList = [
-            ...matCommonParams,
-            ...matExtraParams[materialType],
-        ];
+        const paramsList = getParamsList(materialType);
+
         const updatedParams = paramsList.filter(
             param => prev[param] !== current[param]
         );

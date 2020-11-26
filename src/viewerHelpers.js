@@ -7,6 +7,7 @@ import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach } from "./helpers";
+import { matCommonParams, matExtraParams } from "./consts";
 
 import outlineFragShader from "./shader/outlineFragShader";
 import outlineVertShader from "./shader/outlineVertShader";
@@ -84,6 +85,11 @@ export const disposeItem = item => {
     });
 };
 
+export const getParamsList = matType => [
+    ...matCommonParams,
+    ...matExtraParams[matType],
+];
+
 export const isSimpleViewer = modelId =>
     !modelId.startsWith("c") ||
     modelId.endsWith("_h") ||
@@ -110,16 +116,21 @@ const createNewMaterial = (materialType, params) => {
     return new THREE[matType](params);
 };
 
-export const changeMaterial = (target, { materialType, texturePath }) => {
+export const changeMaterial = (
+    target,
+    { materialType, texturePath, forced = false }
+) => {
     if (!target) return;
     target.traverse(child => {
         if (!child.isMesh || child.name === "outline") return;
 
-        const checkParam = `isMesh${materialType}Material`;
         const materials = [child.material].flat();
         const matIsArray = Array.isArray(child.material);
 
-        if (materials.every(mat => mat[checkParam]) && !texturePath) return;
+        if (!forced) {
+            const checkParam = `isMesh${materialType}Material`;
+            if (materials.every(mat => mat[checkParam]) && !texturePath) return;
+        }
 
         materials.forEach((mat, i) => {
             const texture = texturePath
