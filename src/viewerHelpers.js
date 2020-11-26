@@ -100,10 +100,10 @@ export const isDragon = modelId =>
 
 // Hide all eye and mouth that's not mEye_01 or mMouth_01
 export const initDragonFace = model => {
+    const nameRegex = /m[A-Z].*_[0-9]/m;
     model.traverse(child => {
         if (!child.isMesh) return;
 
-        const nameRegex = /m[A-Z].*_/m;
         const { name } = child;
         if (nameRegex.test(name)) {
             child.visible = name.includes("01");

@@ -746,6 +746,11 @@ class ModelViewer extends PureComponent {
                     mat.backupMap = mat.map;
                 }
                 mat.map = null;
+            } else {
+                if (mat.backupMap) {
+                    mat.map = mat.backupMap;
+                    delete mat.backupMap;
+                }
             }
             if (flatShading) {
                 mat.flatShading = current.flatShading;
