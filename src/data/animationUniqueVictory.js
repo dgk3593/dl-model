@@ -144,6 +144,11 @@ const uniqueVictory = {
             name: "Ilia",
             value: "WIN_110367_01+GUN_WIN_01_11036701>+GUN_WIN_02_11036701",
         },
+        {
+            icon: "img/advIcons/100013_04_r05.png",
+            name: "Gala Leonidas",
+            value: "WIN_100013_04+GUN_WIN_01_10001304>+GUN_WIN_02_10001304",
+        },
     ],
 };
 

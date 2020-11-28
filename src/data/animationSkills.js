@@ -1009,6 +1009,17 @@ const skills = {
     ],
     Manacaster: [
         {
+            icon: "img/advIcons/100013_04_r05.png",
+            name: "Sovereign Barrage",
+            value: "SKL_100013_04+GUN_SKL_01_01_10001304",
+        },
+        {
+            icon: "img/advIcons/100013_04_r05.png",
+            name: "Absolute Dominion",
+            value:
+                "SKL_100013_04+GUN_SKL_02_01_10001304>+GUN_SKL_02_02_10001304>+GUN_SKL_02_03_10001304",
+        },
+        {
             icon: "img/advIcons/110367_01_r05.png",
             name: "Drive Buster",
             value: "SKL_110367_01+GUN_SKL_01_01_11036701",

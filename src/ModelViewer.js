@@ -17,6 +17,7 @@ import {
     analyzeWeaponCode,
     analyzeChainCode,
     loadModel,
+    getMaterial,
     applyEyeTexture,
     applyMouthTexture,
     applyEyeOffset,
@@ -35,39 +36,8 @@ import { isBlade } from "./helpers";
 const SIDES = ["Right", "Left"];
 
 class ModelViewer extends PureComponent {
-    async componentDidMount() {
-        window.app = this;
-        this.initScene();
-        this.props.setIsLoading(true);
-
-        // Load the models
-        const [main, weaponRight, weaponLeft] = await this.initLoad();
-
-        // save references to models
-        this.models = { main, weaponRight, weaponLeft };
-
-        // basic viewer for incompatible assets
-        const modelId = this.props.model.id;
-        if (isSimpleViewer(modelId)) {
-            if (isBlade(modelId)) {
-                const { materialType } = this.props.model;
-                const { texturePath } = analyzeWeaponCode(`${modelId}n`);
-                changeMaterial(main, { materialType, texturePath });
-            }
-
-            this.basicMainProcessing();
-
-            isDragon(modelId) && initDragonFace(main);
-
-            // loading finished
-            this.props.setIsLoading(false);
-            return;
-        }
-        this.initModels();
-
-        this.props.setIsLoading(false);
-
-        this.addAnimation();
+    componentDidMount() {
+        this.initialize();
     }
 
     async componentDidUpdate(prev) {
@@ -138,18 +108,18 @@ class ModelViewer extends PureComponent {
         this.rendererNoAA = null;
     }
 
+    initialize = async () => {
+        this.props.setIsLoading(true);
+
+        this.initScene();
+        await this.loadModels();
+
+        this.props.setIsLoading(false);
+
+        this.initAnimation();
+    };
+
     initScene = () => {
-        this.models = {};
-        this.modelInfo = {
-            main: this.props.model.id,
-            weaponLeft: analyzeWeaponCode(this.props.model.weaponLeft),
-            weaponRight: analyzeWeaponCode(this.props.model.weaponRight),
-        };
-        this.materials = [];
-
-        // save reference for outlines
-        this.outlines = {};
-
         // viewport
         this.viewport = this.props.viewport || {
             width: window.innerWidth,
@@ -217,6 +187,48 @@ class ModelViewer extends PureComponent {
         this.animate();
     };
 
+    loadModels = async () => {
+        this.models = {};
+        this.modelInfo = {
+            main: this.props.model.id,
+            weaponLeft: analyzeWeaponCode(this.props.model.weaponLeft),
+            weaponRight: analyzeWeaponCode(this.props.model.weaponRight),
+        };
+        this.materials = [];
+
+        // save reference for outlines
+        this.outlines = {};
+
+        // Load the models
+        const [main, weaponRight, weaponLeft] = await this.initModelsLoad();
+
+        // save references to models
+        this.models = { main, weaponRight, weaponLeft };
+
+        // basic viewer for incompatible assets
+        const modelId = this.props.model.id;
+        if (isSimpleViewer(modelId)) {
+            if (isBlade(modelId)) {
+                const { materialType } = this.props.model;
+                const { texturePath } = analyzeWeaponCode(`${modelId}n`);
+                changeMaterial(main, { materialType, texturePath });
+            }
+
+            this.basicMainProcessing();
+
+            isDragon(modelId) && initDragonFace(main);
+            return;
+        }
+        this.initAllModels();
+    };
+
+    initAnimation = () => {
+        const modelId = this.props.model.id;
+        if (isSimpleViewer(modelId)) return;
+
+        this.addAnimation();
+    };
+
     set AA(enabled) {
         if (enabled === this._AA) return;
 
@@ -259,7 +271,7 @@ class ModelViewer extends PureComponent {
     removeLights = () => this.lights.forEach(light => this.scene.remove(light));
 
     // Promise to load all models at initialize
-    initLoad = () => {
+    initModelsLoad = () => {
         const modelId = this.modelInfo.main;
         const modelPath = getModelPath(modelId);
         const loadMain = loadModel(modelPath);
@@ -308,7 +320,7 @@ class ModelViewer extends PureComponent {
         model.initRot = model.rotation.clone();
     };
 
-    initModels = () => {
+    initAllModels = () => {
         this.initMainModel();
         this.initAllWeapons();
         this.attachAllWeapons();
@@ -427,13 +439,14 @@ class ModelViewer extends PureComponent {
         mainModel.position.copy(initPos);
         mainModel.rotation.copy(initRot);
 
-        // Reset facial expression
+        this.mixer = null;
+        this.animations = [];
+    };
+
+    resetFace = () => {
         const { eyeIdx, mouthIdx } = this.props.model;
         this.eyeIdx = eyeIdx;
         this.mouthIdx = mouthIdx;
-
-        this.mixer = null;
-        this.animations = [];
     };
 
     // this.aniIdx = n => play animation with index n
@@ -595,6 +608,7 @@ class ModelViewer extends PureComponent {
         const modelId = current.id;
         if (prev.id !== modelId) {
             this.props.setIsLoading(true);
+            this.modelInfo.main = modelId;
             const modelPath = getModelPath(modelId);
             const model = await loadModel(modelPath);
 
@@ -673,7 +687,10 @@ class ModelViewer extends PureComponent {
     updateAnimation = (prev, current) => {
         const { code, timeScale } = current;
         if (prev.code !== code) {
-            prev.code && this.removeAnimation();
+            if (prev.code) {
+                this.removeAnimation();
+                this.resetFace();
+            }
             this.addAnimation();
             return;
         }
@@ -704,11 +721,7 @@ class ModelViewer extends PureComponent {
 
     saveMaterialReference = () => {
         const mainModel = this.models.main;
-        const meshes = [];
-        mainModel.traverse(child => {
-            if (child.isMesh && child.name !== "outline") meshes.push(child);
-        });
-        this.materials = meshes.map(mesh => mesh.material).flat();
+        this.materials = getMaterial(mainModel);
     };
 
     forEachMaterial = callback => this.materials.forEach(mat => callback(mat));

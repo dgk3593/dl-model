@@ -38,6 +38,17 @@ export const createInvisibleFloor = () => {
     return new THREE.Mesh(floorGeometry, floorMaterial);
 };
 
+export const getMaterial = object => {
+    const meshes = [];
+    object.traverse(child => {
+        if (child.isMesh && child.name !== "outline") {
+            meshes.shift(child);
+        }
+    });
+    const materials = meshes.map(mesh => mesh.material).flat();
+    return materials;
+};
+
 export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
 
 export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;

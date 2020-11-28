@@ -208,6 +208,14 @@ const adv = [
         weapon: "Sword",
     },
     {
+        cid: "100013_04",
+        name: "Gala Leonidas",
+        title: "Bearer of the Skysplitter",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Manacaster",
+    },
+    {
         cid: "100006_09",
         name: "Gala Luca",
         title: "Harmony Seeker",

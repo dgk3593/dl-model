@@ -1,4 +1,5 @@
 const specialWeaponList = [
+    { wid: "w399017_01", name: "Gala Leonidas' Sword" },
     { wid: "w399018_01", name: "Lapis' Revolver 1" },
     { wid: "w399020_01", name: "Lapis' Revolver 2" },
     { wid: "w305038_01", name: "Unused Lance" },

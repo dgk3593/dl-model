@@ -2,6 +2,7 @@ import { lazy, Suspense, useContext, useCallback } from "react";
 
 import { SettingsContext, DispatchContext } from "./context/SettingsContext";
 import ModelViewer from "./ModelViewer";
+// import BaseViewer from "./BaseViewer";
 import "./styles/Display.css";
 
 import { getTextColor } from "./helpers";
