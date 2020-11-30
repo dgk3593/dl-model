@@ -1,4 +1,7 @@
 const faceOffset = {
+    c110296_02: { x: 0.043, y: -0.0625 }, // Forager Mitsuba
+    c100004_17: { x: 0.043, y: -0.0625 }, // Forager Cleo
+    c110371_01: { x: 0.043, y: -0.0625 }, // Pecorine
     c110350_02: { x: 0.043, y: -0.0625 }, // Formal Joachim
     c110340_02: { x: 0.043, y: -0.0625 }, // Formal Noelle
     c110018_02: { x: 0.043, y: -0.0625 }, // Opera Karina
