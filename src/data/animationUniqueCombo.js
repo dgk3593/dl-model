@@ -20,6 +20,12 @@ const uniqueCombo = {
             value:
                 "CMB_100005_02+SWD_CMB_01_10000502>+SWD_CMB_02_10000502>+SWD_CMB_03_10000502>+SWD_CMB_04_10000502>+SWD_CMB_05_10000502",
         },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Pecorine",
+            value:
+                "CMB_110371_01+SWD_CMB_01_11037101>+SWD_CMB_02_11037101>+SWD_CMB_03_11037101>+SWD_CMB_04_11037101>+SWD_CMB_05_11037101",
+        },
     ],
     Bow: [
         {
@@ -132,6 +138,12 @@ const uniqueCombo = {
             name: "Mega Man",
             value:
                 "CMB_110354_01+ROD_CMB_01_01_11035401>+ROD_CMB_01_02_11035401>+ROD_CMB_01_03_11035401",
+        },
+        {
+            icon: "img/advIcons/110361_01_r05.png",
+            name: "Peony",
+            value:
+                "CMB_110361_01+ROD_CMB_01_11036101>+ROD_CMB_02_11036101>+ROD_CMB_03_11036101>+ROD_CMB_04_11036101>+ROD_CMB_05_11036101",
         },
     ],
 };

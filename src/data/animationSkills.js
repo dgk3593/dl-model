@@ -121,11 +121,25 @@ const skills = {
             name: "Festival Rush",
             value: "SKL_110325_01+",
         },
-
         {
             icon: "img/advIcons/110363_01_r05.png",
             name: "Signature Tactics",
             value: "SKL_110363_01+",
+        },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Princess Strike",
+            value: "SKL_110371_01+SWD_SKL_01_01_11037101",
+        },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Lunchtime",
+            value: "SKL_110371_01+SWD_SKL_02_01_11037101",
+        },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Princess Valiance",
+            value: "SKL_110371_01+SWD_SKL_03_01_11037101",
         },
     ],
     Blade: [
@@ -272,6 +286,16 @@ const skills = {
             icon: "img/advIcons/110341_03_r05.png",
             name: "Coffin of Madness",
             value: "SKL_110341_03+KAT_SKL_02_01_11034103",
+        },
+        {
+            icon: "img/advIcons/110296_02_r05.png",
+            name: "Fiend Ikejime",
+            value: "SKL_110296_02+KAT_SKL_01_01_11029602",
+        },
+        {
+            icon: "img/advIcons/110296_02_r05.png",
+            name: "Fiend Banquet",
+            value: "SKL_110296_02+KAT_SKL_02_01_11029602",
         },
     ],
     Dagger: [
@@ -823,6 +847,26 @@ const skills = {
             icon: "img/advIcons/100004_10_r05.png",
             name: "Faith of the Elders",
             value: "SKL_100004_10+ROD_SKL_02_01_10000410",
+        },
+        {
+            icon: "img/advIcons/100004_17_r05.png",
+            name: "Starry Veil",
+            value: "SKL_100004_17+ROD_SKL_01_01_10000417",
+        },
+        {
+            icon: "img/advIcons/100004_17_r05.png",
+            name: "Camping Memories",
+            value: "SKL_100004_17+ROD_SKL_02_01_10000417",
+        },
+        {
+            icon: "img/advIcons/100004_17_r05.png",
+            name: "Camping Memories II",
+            value: "SKL_100004_17+ROD_SKL_03_01_10000417",
+        },
+        {
+            icon: "img/advIcons/100004_17_r05.png",
+            name: "Camping Memories III",
+            value: "SKL_100004_17+ROD_SKL_04_01_10000417",
         },
         {
             icon: "img/advIcons/100009_07_r05.png",

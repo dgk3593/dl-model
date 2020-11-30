@@ -9,7 +9,7 @@ import { WEAPON_LIST } from "./consts";
 import "./styles/OtherUnique.css";
 
 function OtherUnique({ handleSelect }) {
-    const [weapon, setWeapon] = useState("Dagger");
+    const [weapon, setWeapon] = useState("Sword");
 
     const handleClick = event => {
         setWeapon(event.currentTarget.dataset.value);

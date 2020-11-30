@@ -3152,6 +3152,14 @@ const weapon_list = [
         element: "None",
     },
     {
+        wid: "w399016_01",
+        iconName: "399016_01_59901.png",
+        name: "Princess Sword",
+        weapon: "Sword",
+        rarity: "5",
+        element: "None",
+    },
+    {
         wid: "w302014_01",
         iconName: "302014_01_59901.png",
         name: "Dane's Favor",

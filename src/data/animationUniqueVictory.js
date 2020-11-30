@@ -41,6 +41,11 @@ const uniqueVictory = {
             value:
                 "WIN_110050_02+SWD_WIN_03_11005002>+SWD_WIN_01_11005002>+SWD_WIN_02_11005002",
         },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Pecorine",
+            value: "WIN_110371_01+SWD_WIN_01_11037101>+SWD_WIN_02_11037101",
+        },
     ],
     Blade: [
         {

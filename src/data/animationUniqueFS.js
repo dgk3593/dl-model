@@ -18,6 +18,19 @@ const uniqueFS = {
             value:
                 "FS_110050_02+SWD_CHR_01_11005002>+SWD_CHR_02_11005002>+SWD_CHR_03_11005002",
         },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Pecorine",
+            value:
+                "FS_110371_01+SWD_CHR_01_11037101>+SWD_CHR_02_11037101>+SWD_CHR_03_11037101",
+        },
+        {
+            icon: "img/advIcons/110371_01_r05.png",
+            name: "Pecorine",
+            subtitle: "Enhanced",
+            value:
+                "FS_110371_01+SWD_CHR_A_01_11037101>+SWD_CHR_A_02_11037101>+SWD_CHR_A_03_11037101",
+        },
     ],
     Blade: [
         {
@@ -33,6 +46,13 @@ const uniqueFS = {
             subtitle: "Cluster Amaryllis",
             value:
                 "FS_110271_01+KAT_CHR_A_01_11027101>+KAT_CHR_A_02_11027101>+KAT_CHR_A_03_11027101",
+        },
+        {
+            icon: "img/advIcons/110296_02_r05.png",
+            name: "Forager Mitsuba",
+            subtitle: "Plucked Mandradish",
+            value:
+                "FS_110296_02+KAT_CHR_A_01_11029602>+KAT_CHR_A_02_11029602>+KAT_CHR_A_03_11029602",
         },
     ],
     Dagger: [

@@ -144,6 +144,22 @@ const adv = [
         weapon: "Lance",
     },
     {
+        cid: "100004_17",
+        name: "Forager Cleo",
+        title: "Belle Forager",
+        rarity: "5",
+        element: "Water",
+        weapon: "Wand",
+    },
+    {
+        cid: "110296_02",
+        name: "Forager Mitsuba",
+        title: "Foraging Chef",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Blade",
+    },
+    {
         cid: "110350_02",
         name: "Formal Joachim",
         title: "Resolved Hunter",
@@ -598,6 +614,14 @@ const adv = [
         rarity: "5",
         element: "Shadow",
         weapon: "Bow",
+    },
+    {
+        cid: "110371_01",
+        name: "Pecorine",
+        title: "Peckish Princess",
+        rarity: "5",
+        element: "Light",
+        weapon: "Sword",
     },
     {
         cid: "110361_01",

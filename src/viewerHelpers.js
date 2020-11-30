@@ -7,7 +7,12 @@ import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach } from "./helpers";
-import { matCommonParams, matExtraParams } from "./consts";
+import {
+    matCommonParams,
+    matExtraParams,
+    matColorParams,
+    needsUpdateParams,
+} from "./consts";
 
 import outlineFragShader from "./shader/outlineFragShader";
 import outlineVertShader from "./shader/outlineVertShader";
@@ -38,13 +43,23 @@ export const createInvisibleFloor = () => {
     return new THREE.Mesh(floorGeometry, floorMaterial);
 };
 
-export const getMaterial = object => {
+const getMeshes = (object, getOutline = false) => {
+    if (!object) return [];
+
     const meshes = [];
     object.traverse(child => {
-        if (child.isMesh && child.name !== "outline") {
-            meshes.shift(child);
-        }
+        if (!child.isMesh) return;
+        if (!getOutline && child.name === "outline") return;
+
+        meshes.unshift(child);
     });
+    return meshes;
+};
+
+export const getMaterial = object => {
+    if (!object) return [];
+
+    const meshes = getMeshes(object);
     const materials = meshes.map(mesh => mesh.material).flat();
     return materials;
 };
@@ -87,9 +102,7 @@ export const disposeItem = item => {
         });
     };
 
-    const meshes = [];
-    item.traverse(child => child.isMesh && meshes.shift(child));
-
+    const meshes = getMeshes(item, true);
     meshes.forEach(mesh => {
         disposeMaterial(mesh);
         dispose(mesh.geometry);
@@ -132,15 +145,16 @@ export const changeMaterial = (
     { materialType, texturePath, forced = false }
 ) => {
     if (!target) return;
-    target.traverse(child => {
-        if (!child.isMesh || child.name === "outline") return;
 
-        const materials = [child.material].flat();
-        const matIsArray = Array.isArray(child.material);
+    const meshes = getMeshes(target);
+    meshes.forEach(mesh => {
+        const materials = [mesh.material].flat();
+        const matIsArray = Array.isArray(mesh.material);
 
-        if (!forced) {
+        if (!forced && !texturePath) {
             const checkParam = `isMesh${materialType}Material`;
-            if (materials.every(mat => mat[checkParam]) && !texturePath) return;
+            const needToChange = materials.some(mat => !mat[checkParam]);
+            if (!needToChange) return;
         }
 
         materials.forEach((mat, i) => {
@@ -150,23 +164,24 @@ export const changeMaterial = (
 
             if (texturePath) texture.encoding = THREE.sRGBEncoding;
 
-            const materialParams = {
+            const initParams = {
                 map: texture,
                 skinning: true,
             };
-            const newMaterial = createNewMaterial(materialType, materialParams);
+            const newMaterial = createNewMaterial(materialType, initParams);
             newMaterial.name = mat.name;
             if (mat.backupMap) newMaterial.backupMap = mat.backupMap;
 
-            if (texturePath && materials[i].map) {
-                materials[i].map.dispose();
+            if (texturePath) {
+                mat.map?.dispose?.();
+                mat.backupMap?.dispose?.();
             }
-            materials[i].dispose();
+            mat.dispose();
 
             if (matIsArray) {
-                child.material[i] = newMaterial;
+                mesh.material[i] = newMaterial;
             } else {
-                child.material = newMaterial;
+                mesh.material = newMaterial;
             }
         });
     });
@@ -176,10 +191,9 @@ export const changeMaterial = (
 export const createOutline = (object, params) => {
     if (!object) return;
     const outlines = []; // return value
-    object.traverse(child => {
-        if (!child.isMesh) return;
-
-        const outline = child.clone();
+    const meshes = getMeshes(object);
+    meshes.forEach(mesh => {
+        const outline = mesh.clone();
         outlines.push(outline);
 
         const newMaterial = createOutlineMaterial(params);
@@ -187,10 +201,10 @@ export const createOutline = (object, params) => {
         outline.visible = params.enable;
         outline.name = "outline";
 
-        if (child.isSkinnedMesh) {
-            outline.bind(child.skeleton, child.bindMatrix);
+        if (mesh.isSkinnedMesh) {
+            outline.bind(mesh.skeleton, mesh.bindMatrix);
         }
-        child.parent.add(outline);
+        mesh.parent.add(outline);
     });
     return outlines;
 };
@@ -242,8 +256,8 @@ const replaceMaterial = (object, newMaterial) => {
     const { material } = object;
     // dispose old material
     callbackOnEach(material, mat => {
-        // obj.map?.dispose?.()
-        if (mat.map) mat.map.dispose();
+        mat.map.dispose?.();
+        mat.backupMap?.dispose?.();
         mat.dispose();
     });
     // apply new material
@@ -459,4 +473,43 @@ export const createGradientMap = nTones => {
     map.generateMipmaps = false;
 
     return map;
+};
+
+export const getUpdated = (prev, current) => {
+    const updated = Object.entries(current).filter(
+        ([key, value]) => value !== prev[key]
+    );
+    return updated;
+};
+
+export const applyMaterialParam = (materials, [key, value]) => {
+    let handler;
+    const needsUpdate = needsUpdateParams.includes(key);
+    switch (key) {
+        case "gradientMap":
+            const nTones = parseInt(value);
+            const newMap = createGradientMap(nTones);
+            handler = mat => (mat.gradientMap = newMap);
+            break;
+        case "useTexture":
+            handler = value
+                ? mat => {
+                      mat.map = mat.backupMap;
+                      delete mat.backupMap;
+                  }
+                : mat => {
+                      mat.backupMap = mat.map;
+                      mat.map = null;
+                  };
+            break;
+        default:
+            const isColor = matColorParams.includes(key);
+            handler = mat =>
+                (mat[key] = isColor ? new THREE.Color(value) : value);
+    }
+
+    materials.forEach(mat => {
+        handler(mat);
+        mat.needsUpdate = needsUpdate;
+    });
 };

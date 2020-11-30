@@ -1,4 +1,91 @@
 const otherUnique = {
+    Sword: {
+        Pecorine: {
+            icon: "img/advIcons/110371_01_r05.png",
+            animations: [
+                {
+                    name: "Slow Run",
+                    value: "RUN_110371_01+CMN_RUN_01_11037101",
+                },
+                {
+                    name: "Fast Run",
+                    value: "RUN_110371_01+CMN_RUN_02_11037101",
+                },
+                {
+                    name: "Join Room",
+                    value:
+                        "LOB_110371_01+SWD_ONT_06_11037101&ts=-0.5>+SWD_ONT_04_11037101>+SWD_ONT_09_11037101>+SWD_ONT_10_11037101>+SWD_ONT_23_11037101",
+                },
+                {
+                    name: "Standby",
+                    value: "LOB_110371_01+SWD_ONT_23_11037101",
+                },
+                {
+                    name: "Idle",
+                    value: "INT_110371_01+",
+                },
+                {
+                    name: "Roll",
+                    value: "CMN_110371_01+SWD_ROL_01_11037101",
+                },
+                {
+                    name: "Dash Attack",
+                    value: "CMN_110371_01+SWD_DAS_02_11037101",
+                },
+                {
+                    name: "Quick Turn",
+                    value: "CMN_110371_01+CMN_QTN_01_11037101&ts=0.5",
+                },
+                {
+                    name: "Knocked Away",
+                    value:
+                        "BST_110371_01+CMN_BST_01_11037101>+CMN_BST_04_11037101",
+                },
+                {
+                    name: "Fall to Ground",
+                    value: "BST_110371_01+CMN_BST_05_11037101",
+                },
+                {
+                    name: "Stand back up",
+                    value: "BST_110371_01+CMN_BST_06_11037101",
+                },
+                {
+                    name: "Ukemi",
+                    value:
+                        "UKM_110371_01+CMN_UKM_01_11037101&ts=0.5>+CMN_UKM_03_11037101",
+                },
+                {
+                    name: "Ukemi 2",
+                    value:
+                        "UKM_110371_01+CMN_UKM_11_11037101&ts=0.5>+CMN_UKM_03_11037101",
+                },
+                {
+                    name: "Landing",
+                    value: "CMN_110371_01+CMN_LND_01_11037101&ts=0.5",
+                },
+                {
+                    name: "Stun",
+                    value: "CMN_110371_01+CMN_SWN_01_11037101",
+                },
+                {
+                    name: "Frozen",
+                    value: "CMN_110371_01+CMN_FRZ_01_11037101",
+                },
+                {
+                    name: "Take Damage",
+                    value: "CMN_110371_01+CMN_KNB_01_11037101",
+                },
+                {
+                    name: "Die",
+                    value: "CMN_110371_01+CMN_DIE_02_11037101",
+                },
+                {
+                    name: "Transform",
+                    value: "CTD_110371_01+",
+                },
+            ],
+        },
+    },
     Wand: {
         Yurius: {
             icon: "img/advIcons/110362_01_r05.png",
@@ -88,11 +175,6 @@ const otherUnique = {
                 {
                     name: "Idle",
                     value: "INT_110361_01+",
-                },
-                {
-                    name: "Combo",
-                    value:
-                        "CMB_110361_01+ROD_CMB_01_11036101>+ROD_CMB_02_11036101>+ROD_CMB_03_11036101>+ROD_CMB_04_11036101>+ROD_CMB_05_11036101",
                 },
                 {
                     name: "Roll",

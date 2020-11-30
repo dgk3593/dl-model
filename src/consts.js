@@ -108,6 +108,8 @@ Object.keys(matParamsDetails).forEach(key => {
     defaultMatParams[key] = matParamsDetails[key].default;
 });
 
+export const needsUpdateParams = ["gradientMap", "flatShading", "useTexture"];
+
 const defaultLights = [
     {
         lightId: "0",

@@ -37,6 +37,7 @@ const SIDES = ["Right", "Left"];
 
 class ModelViewer extends PureComponent {
     componentDidMount() {
+        window.app = this;
         this.initialize();
     }
 
@@ -347,7 +348,7 @@ class ModelViewer extends PureComponent {
     attachWeapon = (weapon, side) => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
-            if (child.name === boneName && child.children.length === 0) {
+            if (child.name.includes(boneName) && child.children.length === 0) {
                 child.add(weapon);
             }
         });
