@@ -37,7 +37,6 @@ const SIDES = ["Right", "Left"];
 
 class ModelViewer extends PureComponent {
     componentDidMount() {
-        window.app = this;
         this.initialize();
     }
 
@@ -917,7 +916,7 @@ class ModelViewer extends PureComponent {
 
         const dt = this.clock.getDelta();
         this.rotateFloor(dt);
-        this.mixer && this.mixer.update(dt);
+        this.mixer?.update(dt);
 
         if (this.faceChanges && this.faceChanges.length) {
             const elapsedTime = this.mixer.time;

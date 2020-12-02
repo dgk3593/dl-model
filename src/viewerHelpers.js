@@ -60,8 +60,14 @@ export const getMaterial = object => {
     if (!object) return [];
 
     const meshes = getMeshes(object);
-    const materials = meshes.map(mesh => mesh.material).flat();
+    const materials = meshes.flatMap(mesh => mesh.material);
     return materials;
+};
+
+export const filterObject = (object, keys) => {
+    const entries = Object.entries(object);
+    const filtered = entries.filter(([key, _]) => keys.includes(key));
+    return Object.fromEntries(filtered);
 };
 
 export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
@@ -135,6 +141,34 @@ export const initDragonFace = model => {
     });
 };
 
+export const getDragonEye = model => {
+    const eyes = [];
+    const nameRegex = /mEye_[0-9]/m;
+    model.traverse(child => {
+        if (!child.isMesh) return;
+
+        const { name } = child;
+        if (nameRegex.test(name)) {
+            eyes.push(child);
+        }
+    });
+    return eyes;
+};
+
+export const getDragonMouth = model => {
+    const mouths = [];
+    const nameRegex = /mMouth_[0-9]/m;
+    model.traverse(child => {
+        if (!child.isMesh) return;
+
+        const { name } = child;
+        if (nameRegex.test(name)) {
+            mouths.push(child);
+        }
+    });
+    return mouths;
+};
+
 const createNewMaterial = (materialType, params) => {
     const matType = `Mesh${materialType}Material`;
     return new THREE[matType](params);
@@ -193,6 +227,9 @@ export const createOutline = (object, params) => {
     const outlines = []; // return value
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
+        const { name } = mesh;
+        if (name.includes("Eye") || name.includes("Mouth")) return;
+
         const outline = mesh.clone();
         outlines.push(outline);
 
@@ -442,7 +479,7 @@ export const getFaceChangesArray = (faceChanges, repetitions) => {
             time: time + offset,
         }));
 
-    return timeOffset.map(offsetFaceChanges).flat();
+    return timeOffset.flatMap(offsetFaceChanges);
 };
 
 export const chainCodeToList = (code, name) => {
@@ -495,7 +532,7 @@ export const applyMaterialParam = (materials, [key, value]) => {
             handler = value
                 ? mat => {
                       mat.map = mat.backupMap;
-                      delete mat.backupMap;
+                      mat.backupMap = null;
                   }
                 : mat => {
                       mat.backupMap = mat.map;
@@ -511,5 +548,13 @@ export const applyMaterialParam = (materials, [key, value]) => {
     materials.forEach(mat => {
         handler(mat);
         mat.needsUpdate = needsUpdate;
+    });
+};
+
+export const updateMatParams = (model, { prevParams = {}, params }) => {
+    const materials = getMaterial(model);
+    const updated = getUpdated(prevParams, params);
+    updated.forEach(update => {
+        applyMaterialParam(materials, update);
     });
 };
