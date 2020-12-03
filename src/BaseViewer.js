@@ -18,8 +18,10 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { CAM_PARAMS } from "./consts";
+import { isBlade } from "./helpers";
 import {
     createInvisibleFloor,
+    analyzeWeaponCode,
     getUpdated,
     filterObject,
     getModelPath,
@@ -31,6 +33,7 @@ import {
     getParamsList,
     changeMaterial,
     updateMatParams,
+    removeEffects,
 } from "./viewerHelpers";
 
 class BaseViewer extends PureComponent {
@@ -234,11 +237,19 @@ class BaseViewer extends PureComponent {
     basicMainProcessing = () => {
         const model = this.models.main;
 
+        removeEffects(model);
+
         const outlineParams = this.props.outline;
         this.outlines.main = createOutline(model, outlineParams);
 
         const { materialType } = this.props.model;
-        changeMaterial(model, { materialType, forced: true });
+        const modelId = this.props.model.id;
+        if (isBlade(modelId)) {
+            const { texturePath } = analyzeWeaponCode(`${modelId}n`);
+            changeMaterial(model, { materialType, texturePath });
+        } else {
+            changeMaterial(model, { materialType, forced: true });
+        }
 
         this.addToScene(model);
     };

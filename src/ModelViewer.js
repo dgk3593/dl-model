@@ -8,7 +8,7 @@ import { CAM_PARAMS, DEFAULT_FACE_IDX } from "./consts";
 import { matDirectSetParams, matColorParams } from "./consts";
 import {
     createInvisibleFloor,
-    isSimpleViewer,
+    isIncompatible,
     isDragon,
     initDragonFace,
     calculateTextureOffset,
@@ -29,6 +29,7 @@ import {
     changeMaterial,
     createGradientMap,
     getFaceChangesArray,
+    removeEffects,
 } from "./viewerHelpers";
 
 import { isBlade } from "./helpers";
@@ -207,7 +208,7 @@ class ModelViewer extends PureComponent {
 
         // basic viewer for incompatible assets
         const modelId = this.props.model.id;
-        if (isSimpleViewer(modelId)) {
+        if (isIncompatible(modelId)) {
             if (isBlade(modelId)) {
                 const { materialType } = this.props.model;
                 const { texturePath } = analyzeWeaponCode(`${modelId}n`);
@@ -224,7 +225,7 @@ class ModelViewer extends PureComponent {
 
     initAnimation = () => {
         const modelId = this.props.model.id;
-        if (isSimpleViewer(modelId)) return;
+        if (isIncompatible(modelId)) return;
 
         this.addAnimation();
     };
@@ -289,6 +290,8 @@ class ModelViewer extends PureComponent {
 
     basicMainProcessing = () => {
         const model = this.models.main;
+
+        removeEffects(model);
 
         const outlineParams = this.props.outline;
         this.outlines.main = createOutline(model, outlineParams);

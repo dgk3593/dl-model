@@ -120,7 +120,7 @@ export const getParamsList = matType => [
     ...matExtraParams[matType],
 ];
 
-export const isSimpleViewer = modelId =>
+export const isIncompatible = modelId =>
     !modelId.startsWith("c") ||
     modelId.endsWith("_h") ||
     incompatibleModels.has(modelId);
@@ -167,6 +167,11 @@ export const getDragonMouth = model => {
         }
     });
     return mouths;
+};
+
+export const removeEffects = model => {
+    const meshes = getMeshes(model);
+    meshes.forEach(mesh => (mesh.visible = !mesh.name.includes("Effect")));
 };
 
 const createNewMaterial = (materialType, params) => {
@@ -224,11 +229,14 @@ export const changeMaterial = (
 // Add outline to object and return reference to outlines
 export const createOutline = (object, params) => {
     if (!object) return;
+
     const outlines = []; // return value
+
+    const skip = ["Eye", "Mouth", "Effect"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
         const { name } = mesh;
-        if (name.includes("Eye") || name.includes("Mouth")) return;
+        if (skip.some(word => name.includes(word))) return;
 
         const outline = mesh.clone();
         outlines.push(outline);
