@@ -98,7 +98,6 @@ class BaseViewer extends PureComponent {
         this.disableInput();
 
         this.initScene();
-        this.updateMatParamList();
 
         this.materials = [];
         this.outlines = {};
@@ -332,24 +331,20 @@ class BaseViewer extends PureComponent {
         this.updateOutlineParams(update);
     };
 
-    updateMatParamList = () => {
-        const { materialType } = this.props.model;
-        this.matParamsList = getParamsList(materialType);
-    };
-
     saveMaterialReference = () => {
         const mainModel = this.models.main;
         this.materials = getMaterial(mainModel);
     };
 
-    getRelevantMatParams = () => {
-        const currentParams = this.props.materialParams;
-        const { matParamsList: paramList } = this;
-        return filterObject(currentParams, paramList);
-    };
+    get matParams() {
+        const allParams = this.props.materialParams;
+        const { materialType } = this.props.model;
+        const paramList = getParamsList(materialType);
+        return filterObject(allParams, paramList);
+    }
 
     applyNewModelMat = model => {
-        const params = this.getRelevantMatParams();
+        const params = this.matParams;
         const defaultParams = { useTexture: true };
         updateMatParams(model, { prevParams: defaultParams, params });
     };
@@ -362,9 +357,8 @@ class BaseViewer extends PureComponent {
         const prevParams = prev.materialParams;
         if (prev.model.materialType !== materialType) {
             changeMaterial(this.models.main, { materialType });
-            this.updateMatParamList();
         }
-        const params = this.getRelevantMatParams();
+        const params = this.matParams;
         updateMatParams(mainModel, { prevParams, params });
     };
 
