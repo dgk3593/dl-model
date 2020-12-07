@@ -31,6 +31,7 @@ export class CharaViewer extends AniViewer {
     constructor() {
         super();
         this.aniSource = `${fbxSource}/fbx`;
+        this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
     }
 
     afterMainModelLoad = () => {
@@ -46,23 +47,27 @@ export class CharaViewer extends AniViewer {
 
     afterMainModelUpdate = () => {
         this.saveMainModelInitState();
+        this.initFace();
         this.attachAllWeapons();
         this.addAnimation();
     };
 
-    updateViewerExtra = (prev, current) => {
-        this.updateAnimation(prev.animation, current.animation);
-        this.updateWeapons(prev.model, current.model);
+    updateModel = async (prev, current) => {
+        if (prev === current) return;
 
-        // Capture
-        if (current.capture.enable && !prev.capture.enable) {
-            this.captureAnimation();
+        const prevModel = prev.model;
+        const { model } = current;
+        if (prevModel.id !== model.id) {
+            await this.updateMainModel(prevModel, model);
+        } else {
+            this.updateFace(prevModel, model);
         }
+        this.updateWeapons(prevModel, model);
+        this.updateAnimation(prev.animation, current.animation);
     };
 
     initFace = () => {
         const modelId = this.props.model.id;
-        this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
         const defaultFaceParams = {
             mouthTexture: modelId,
             mouthIdx: DEFAULT_FACE_IDX,

@@ -2,6 +2,7 @@ export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
 export const DEFAULT_FACE_IDX = "2";
+export const DEFAULT_DRAGON_FACE_IDX = "1";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
@@ -139,9 +140,9 @@ export const defaultSettings = {
         id: "c100001_01",
         texture: "c100001_01",
         eyeTexture: "c100001_01",
-        eyeIdx: "2",
+        eyeIdx: 2,
         mouthTexture: "c100001_01",
-        mouthIdx: "2",
+        mouthIdx: 2,
         weaponRight: "",
         weaponLeft: "",
     },
@@ -343,7 +344,7 @@ export const CAM_PARAMS = {
 
 export const cameraPositions = {
     c: [0, 0.5, 1.5],
-    d: [3, 0.5, 6],
+    d: [0, 1.5, 6],
     w: [2, 0, 0],
     b: [1, 0.5, 6],
     e: [1, 1, 4],
@@ -353,6 +354,7 @@ export const cameraPositions = {
 
     c100034_01: [0, 0.5, 1.75],
     d210078_01: [3, 3, 20],
+    d210128_01: [0.7, 0.7, 1.5], // Puppy
     d210114_01: [3, 3, 20],
     h0010001: [6, 0.5, 8],
     h0010001_02: [2, 0, 0],
@@ -365,7 +367,7 @@ export const cameraPositions = {
 
 export const controlsPositions = {
     c: [0, 0.5, 0],
-    d: [0, 1, 0],
+    d: [0, 1.5, 0],
     w: [0, 0, 0],
     b: [0, 1, 0],
     e: [0, 0.5, 0],
@@ -374,6 +376,7 @@ export const controlsPositions = {
     r: [0, 3, 0],
 
     d210078_01: [0, 3, 0],
+    d210128_01: [0, 0.5, 0], // Puppy
     d210114_01: [0, 3, 0],
     h0010001_02: [0, 3, 0],
     r0070401: [0, 20, 0],

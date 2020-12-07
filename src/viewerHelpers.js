@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { fbxSource } from "./App";
 import { v4 as uuid } from "uuid";
 
-import { idxOffsets, incompatibleModels } from "./consts";
+import { idxOffsets } from "./consts";
 import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
@@ -119,11 +119,6 @@ export const getParamsList = matType => [
     ...matCommonParams,
     ...matExtraParams[matType],
 ];
-
-export const isIncompatible = modelId =>
-    !modelId.startsWith("c") ||
-    modelId.endsWith("_h") ||
-    incompatibleModels.has(modelId);
 
 export const isDragon = modelId =>
     modelId.startsWith("d") || modelId === "smith";
@@ -533,7 +528,7 @@ export const applyMaterialParam = (materials, [key, value]) => {
     switch (key) {
         case "gradientMap":
             const nTones = parseInt(value);
-            const newMap = createGradientMap(nTones);
+            const newMap = nTones ? createGradientMap(nTones) : null;
             handler = mat => (mat.gradientMap = newMap);
             break;
         case "useTexture":

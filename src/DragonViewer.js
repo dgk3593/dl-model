@@ -5,12 +5,13 @@
 ################################################  
 */
 
-import DragonViewer from "./AniViewer";
+import AniViewer from "./AniViewer";
 
 import { fbxSource } from "./App";
 import { getDragonEye, getDragonMouth } from "./viewerHelpers";
+import { DEFAULT_DRAGON_FACE_IDX } from "./consts";
 
-export class CharaViewer extends DragonViewer {
+export class DragonViewer extends AniViewer {
     constructor() {
         super();
         this.aniSource = `${fbxSource}/fbx/dragonAni`;
@@ -35,8 +36,8 @@ export class CharaViewer extends DragonViewer {
         this.eyes = getDragonEye(mainModel);
         this.mouths = getDragonMouth(mainModel);
 
-        this.eyeIdx = 1;
-        this.mouthIdx = 1;
+        this.eyeIdx = DEFAULT_DRAGON_FACE_IDX;
+        this.mouthIdx = DEFAULT_DRAGON_FACE_IDX;
     };
 
     set eyeIdx(newIdx) {
@@ -68,4 +69,4 @@ export class CharaViewer extends DragonViewer {
     }
 }
 
-export default CharaViewer;
+export default DragonViewer;

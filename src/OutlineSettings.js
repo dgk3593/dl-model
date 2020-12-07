@@ -66,7 +66,7 @@ function OutlineSettings({ openControl, openAtStart }) {
                     <Slider
                         value={size}
                         min={1}
-                        max={10}
+                        max={20}
                         onChange={handleValueChange("size")}
                     />
                 </div>

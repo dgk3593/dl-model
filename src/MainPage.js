@@ -21,7 +21,6 @@ function MainPage({ location }) {
     const [controlOpen, toggleControlOpen] = useToggleState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [initLoadDone, setInitLoadDone] = useState(false);
-    // const [handleSelect, setHandleSelect] = useState(null);
     const handleSelect = useRef(null);
     const {
         app: { showSettings },

@@ -8,13 +8,49 @@ import {
     COMBO_LENGTH,
     FS_LENGTH,
     aniModList,
+    incompatibleModels,
 } from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
+import dragonAni from "./data/animationDragon";
 
 export const isBlade = code => code.startsWith("w302");
 
 export const isSheath = code => isBlade(code) && code.endsWith("02");
+
+export const isIncompatible = modelId =>
+    !modelId.startsWith("c") ||
+    modelId.endsWith("_h") ||
+    incompatibleModels.has(modelId);
+
+const isCharaWithAni = modelId =>
+    modelId.startsWith("c") &&
+    !modelId.endsWith("_h") &&
+    !incompatibleModels.has(modelId);
+
+const isDragon = modelId => modelId.startsWith("d") || modelId === "smith";
+
+export const getViewerType = modelId => {
+    if (isDragon(modelId)) return "dragon";
+
+    if (isCharaWithAni(modelId)) return "chara";
+
+    return "base";
+};
+
+export const getDefaultAni = modelId => {
+    if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
+
+    if (isCharaWithAni(modelId)) return "MWM_CMN+CMN_MWM_03";
+
+    return "";
+};
+
+const getDefaultFace = modelId => {
+    if (isDragon(modelId)) return 1;
+
+    return 2;
+};
 
 export const callbackOnEach = (list, callback) => {
     if (Array.isArray(list)) {
@@ -26,8 +62,7 @@ export const callbackOnEach = (list, callback) => {
 
 export const setInitialSettings = params => {
     if (params.length === 0) return;
-    let eyeTextureDefined = false;
-    let mouthTextureDefined = false;
+    const defined = new Set();
     params.forEach(param => {
         if (!param) return;
 
@@ -39,12 +74,19 @@ export const setInitialSettings = params => {
 
         switch (keycode) {
             case "et":
-                eyeTextureDefined = true;
+                defined.add("eyeTexture");
                 break;
             case "mt":
-                mouthTextureDefined = true;
+                defined.add("mouthTexture");
+                break;
+            case "ei":
+                defined.add("eyeIdx");
+                break;
+            case "mi":
+                defined.add("mouthIdx");
                 break;
             case "cc":
+                defined.add("animation");
                 // initialize chain maker chain
                 const chainList = chainCodeToList(setValue, "Animation");
                 initSettings["chainMaker"]["chain"] = chainList;
@@ -68,13 +110,23 @@ export const setInitialSettings = params => {
             : setValue;
     });
 
-    initSettings["model"]["texture"] = initSettings["model"]["id"];
+    const modelId = initSettings["model"]["id"];
+    initSettings["model"]["texture"] = modelId;
 
-    if (!eyeTextureDefined) {
-        initSettings["model"]["eyeTexture"] = initSettings["model"]["id"];
+    if (!defined.has("eyeTexture")) {
+        initSettings["model"]["eyeTexture"] = modelId;
     }
-    if (!mouthTextureDefined) {
-        initSettings["model"]["mouthTexture"] = initSettings["model"]["id"];
+    if (!defined.has("mouthTexture")) {
+        initSettings["model"]["mouthTexture"] = modelId;
+    }
+    if (!defined.has("eyeIdx")) {
+        initSettings["model"]["eyeIdx"] = getDefaultFace(modelId);
+    }
+    if (!defined.has("mouthIdx")) {
+        initSettings["model"]["mouthIdx"] = getDefaultFace(modelId);
+    }
+    if (!defined.has("animation")) {
+        initSettings["animation"]["code"] = getDefaultAni(modelId);
     }
 };
 

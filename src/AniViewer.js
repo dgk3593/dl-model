@@ -32,9 +32,12 @@ export class AniViewer extends BaseViewer {
         this.addAnimation();
     };
 
-    updateViewerExtra = (prev, current) => {
+    updateModel = async (prev, current) => {
+        await this.updateMainModel(prev.model, current.model);
         this.updateAnimation(prev.animation, current.animation);
+    };
 
+    otherUpdate = (prev, current) => {
         // Capture
         if (current.capture.enable && !prev.capture.enable) {
             this.captureAnimation();

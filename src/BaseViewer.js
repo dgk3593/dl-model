@@ -37,12 +37,14 @@ import {
 } from "./viewerHelpers";
 
 class BaseViewer extends PureComponent {
-    componentDidMount() {
+    async componentDidMount() {
         window.app = this;
-        this.initialize();
+        await this.initialize();
+        this.finishedInit = true;
     }
 
-    async componentDidUpdate(prev) {
+    componentDidUpdate(prev) {
+        if (!this.finishedInit) return;
         const current = this.props;
 
         // print updated props to console
@@ -104,7 +106,7 @@ class BaseViewer extends PureComponent {
         this.models = {};
         this.modelInfo = {};
         await this.loadMainModel();
-        this.afterMainModelLoad?.();
+        await this.afterMainModelLoad?.();
 
         this.enableInput();
     };
@@ -237,10 +239,6 @@ class BaseViewer extends PureComponent {
         const model = this.models.main;
 
         removeEffects(model);
-
-        const outlineParams = this.props.outline;
-        this.outlines.main = createOutline(model, outlineParams);
-
         const { materialType } = this.props.model;
         const modelId = this.props.model.id;
         if (isBlade(modelId)) {
@@ -250,17 +248,22 @@ class BaseViewer extends PureComponent {
             changeMaterial(model, { materialType, forced: true });
         }
 
+        this.applyNewModelMat(model);
+
+        const outlineParams = this.props.outline;
+        this.outlines.main = createOutline(model, outlineParams);
+
         this.addToScene(model);
     };
 
     updateViewer = (prev, current) => {
-        this.updateViewerCommon(prev, current);
-        this.updateViewerExtra?.(prev, current);
+        this.updateEnvironment(prev, current);
+        this.updateModel(prev, current);
+        this.otherUpdate?.(prev, current);
     };
 
-    updateViewerCommon = (prev, current) => {
+    updateEnvironment = (prev, current) => {
         this.updateViewport(prev.viewport, current.viewport);
-        this.updateMainModel(prev.model, current.model);
         this.updateOutline(prev.outline, current.outline);
         this.updateMaterial(prev, current);
         this.updateLights(prev.lights, current.lights);
@@ -272,6 +275,10 @@ class BaseViewer extends PureComponent {
         }
 
         this.AA = current.antiAliasing;
+    };
+
+    updateModel = (prev, current) => {
+        this.updateMainModel(prev.model, current.model);
     };
 
     updateViewport = (prev, current) => {
@@ -421,6 +428,10 @@ class BaseViewer extends PureComponent {
         oldCanvas && this.mount.removeChild(oldCanvas);
         this.mount.appendChild(canvas);
         this._canvas = canvas;
+    }
+
+    get canvas() {
+        return this._canvas;
     }
 
     rotateFloor = dt => {

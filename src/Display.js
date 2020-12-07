@@ -1,16 +1,36 @@
-import { lazy, Suspense, useContext, useCallback } from "react";
+import {
+    lazy,
+    Suspense,
+    useRef,
+    useEffect,
+    useContext,
+    useCallback,
+} from "react";
 
 import { SettingsContext, DispatchContext } from "./context/SettingsContext";
-import ModelViewer from "./ModelViewer";
-// import BaseViewer from "./BaseViewer";
 import "./styles/Display.css";
 
-import { getTextColor } from "./helpers";
-import { cameraPositions, controlsPositions } from "./consts";
+import { getTextColor, getViewerType, getDefaultAni } from "./helpers";
+import {
+    cameraPositions,
+    controlsPositions,
+    DEFAULT_FACE_IDX,
+    DEFAULT_DRAGON_FACE_IDX,
+} from "./consts";
 
 const AniControl = lazy(() => import("./AniControl"));
+const BaseViewer = lazy(() => import("./BaseViewer"));
+const CharaViewer = lazy(() => import("./CharaViewer"));
+const DragonViewer = lazy(() => import("./DragonViewer"));
+
+const viewers = { base: BaseViewer, chara: CharaViewer, dragon: DragonViewer };
+const defaultFace = {
+    chara: DEFAULT_FACE_IDX,
+    dragon: DEFAULT_DRAGON_FACE_IDX,
+};
 
 function Display(props) {
+    const activeViewer = useRef("");
     const { viewport } = props;
 
     const settings = useContext(SettingsContext);
@@ -30,10 +50,10 @@ function Display(props) {
         dispatch(action);
     }, [dispatch]);
 
-    const type = modelId[0];
+    const modelType = modelId[0];
 
     const defaultCameraPosition =
-        cameraPositions[modelId] || cameraPositions[type];
+        cameraPositions[modelId] || cameraPositions[modelType];
 
     const cameraPosition = initCameraPosition
         ? initCameraPosition.map((n, i) =>
@@ -42,7 +62,47 @@ function Display(props) {
         : defaultCameraPosition;
 
     const controlsPosition =
-        controlsPositions[modelId] || controlsPositions[type];
+        controlsPositions[modelId] || controlsPositions[modelType];
+
+    const resetAni = useCallback(
+        id => {
+            const defaultAni = getDefaultAni(id);
+            const action = {
+                type: "update",
+                key: "animation",
+                value: { code: defaultAni },
+            };
+            dispatch(action);
+        },
+        [dispatch]
+    );
+
+    const resetFace = useCallback(
+        type => {
+            const defaultIdx = defaultFace[type] || 1;
+            const action = {
+                type: "update",
+                key: "model",
+                value: { eyeIdx: defaultIdx, mouthIdx: defaultIdx },
+            };
+            dispatch(action);
+        },
+        [dispatch]
+    );
+
+    useEffect(() => {
+        const newViewerType = getViewerType(modelId);
+        if (activeViewer.current === newViewerType) return;
+
+        if (activeViewer.current) {
+            resetFace(newViewerType);
+            resetAni(modelId);
+        }
+        activeViewer.current = newViewerType;
+    }, [modelId, resetAni, resetFace]);
+
+    const viewerType = getViewerType(modelId);
+    const ModelViewer = viewers[viewerType];
 
     return (
         <div className="Display">
@@ -56,23 +116,25 @@ function Display(props) {
                     </Suspense>
                 </div>
             )}
-            <ModelViewer
-                setIsLoading={props.setIsLoading}
-                capture={settings.capture}
-                toggleCapture={toggleCapture}
-                viewport={viewport}
-                cameraPosition={cameraPosition}
-                controlsPosition={controlsPosition}
-                model={settings.model}
-                materialParams={settings.materialParams}
-                outline={settings.outline}
-                animation={settings.animation}
-                rotateSpeed={rotateSpeed}
-                lights={lights}
-                bgColor={bgColor}
-                antiAliasing={antiAliasing}
-                ascii={settings.ascii}
-            />
+            <Suspense fallback={null}>
+                <ModelViewer
+                    setIsLoading={props.setIsLoading}
+                    capture={settings.capture}
+                    toggleCapture={toggleCapture}
+                    viewport={viewport}
+                    cameraPosition={cameraPosition}
+                    controlsPosition={controlsPosition}
+                    model={settings.model}
+                    materialParams={settings.materialParams}
+                    outline={settings.outline}
+                    animation={settings.animation}
+                    rotateSpeed={rotateSpeed}
+                    lights={lights}
+                    bgColor={bgColor}
+                    antiAliasing={antiAliasing}
+                    ascii={settings.ascii}
+                />
+            </Suspense>
         </div>
     );
 }
