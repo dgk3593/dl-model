@@ -1,2 +1,0 @@
-(this["webpackJsonpdl-model"]=this["webpackJsonpdl-model"]||[]).push([[38],{391:function(e,a,c){"use strict";c.r(a);var l=c(11);c(174);a.default=function(e){var a=e.value,c=e.handleClick;return Object(l.jsxs)("div",{className:"Selector",children:[Object(l.jsx)("div",{"data-value":"Blade",onClick:c,className:"Selector-Item ".concat("Blade"===a?"selected":""),children:"Blade"}),Object(l.jsx)("div",{"data-value":"Sheath",onClick:c,className:"Selector-Item ".concat("Sheath"===a?"selected":""),children:"Sheath"})]})}}}]);
-//# sourceMappingURL=38.05192172.chunk.js.map
