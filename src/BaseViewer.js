@@ -48,6 +48,7 @@ class BaseViewer extends PureComponent {
     }
 
     componentDidUpdate(prev) {
+        if (!this.finishedInit) return;
         const current = this.props;
 
         // print updated props to console
@@ -261,9 +262,6 @@ class BaseViewer extends PureComponent {
 
     updateViewer = (prev, current) => {
         this.updateEnvironment(prev, current);
-
-        if (!this.finishedInit) return;
-
         this.updateModel(prev, current);
         this.otherUpdate?.(prev, current);
     };

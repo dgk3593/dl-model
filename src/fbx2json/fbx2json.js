@@ -47,8 +47,6 @@ const handleFile = async fileName => {
 };
 
 export const fbx2json = async () => {
-    // // handleFile("SKL_100001_01.fbx");
-    // await handleFile(fbxList[1]);
     for (const fileName of fbxList) {
         await handleFile(fileName);
     }
