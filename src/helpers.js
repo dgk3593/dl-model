@@ -41,7 +41,7 @@ export const getViewerType = modelId => {
 export const getDefaultAni = modelId => {
     if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
 
-    if (isCharaWithAni(modelId)) return "MWM_CMN+CMN_MWM_03";
+    if (isCharaWithAni(modelId)) return "CMN_MWM_03";
 
     return "";
 };
@@ -131,6 +131,7 @@ export const setInitialSettings = params => {
 };
 
 export const generateChainCode = chain => {
+    console.log(chain);
     const length = chain.length;
     let output = "";
     chain.forEach((ani, i) => {
@@ -256,44 +257,42 @@ export const aniButtonsFromObject = (object, handleSelect, groupName) => {
 
 // Animation chain code generator
 export const getStandbyCode = (weapon, gender) =>
-    `LOB_${WEAPON_CODE[weapon]}+${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
+    `${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
 
 export const getVictoryCode = weapon =>
-    `WIN_${WEAPON_CODE[weapon]}+${WEAPON_CODE[weapon]}_WIN_01>+${WEAPON_CODE[weapon]}_WIN_02`;
+    `${WEAPON_CODE[weapon]}_WIN_01>${WEAPON_CODE[weapon]}_WIN_02`;
 
-export const getDashAtkCode = weapon => `DAS+${WEAPON_CODE[weapon]}_DAS_02`;
+export const getDashAtkCode = weapon => `${WEAPON_CODE[weapon]}_DAS_02`;
 
-export const getRollCode = weapon => `ROL+${WEAPON_CODE[weapon]}_ROL_01`;
+export const getRollCode = weapon => `${WEAPON_CODE[weapon]}_ROL_01`;
 
 export const getComboCode = weapon => {
     const comboLength = COMBO_LENGTH[weapon];
     const code = WEAPON_CODE[weapon];
-    let result = `CMB_${code}`;
-    for (let i = 1; i <= comboLength; i++) {
-        result = result.concat(`+${code}_CMB_0${i}>`);
-    }
-    result = result.slice(0, -1); // Remove last '>' character
-    return result;
+
+    const parts = Array(comboLength)
+        .fill()
+        .map((_, i) => `${code}_CMB_0${i + 1}`);
+
+    return parts.join(">");
 };
 
 // Force Strike chain code
 export const getFSCode = weapon => {
     const fsAniLength = FS_LENGTH[weapon];
     const code = WEAPON_CODE[weapon];
-    let result = `FS_${code}`;
-    // Weapon combo has 5 animations each
-    for (let i = 1; i <= fsAniLength; i++) {
-        result = result.concat(`+${code}_CHR_0${i}>`);
-    }
-    result = result.slice(0, -1); // Remove last '>' character
-    return result;
+    const parts = Array(fsAniLength)
+        .fill()
+        .map((_, i) => `${code}_CHR_0${i + 1}`);
+
+    return parts.join(">");
 };
 
 // Join Lobby chain code
 export const getLobbyCode = (weapon, gender) => {
     const code = WEAPON_CODE[weapon];
     if (gender === "Male")
-        return `LOB_${code}+${code}_ONT_05&ts=-0.5>+${code}_ONT_02>+${code}_ONT_07>+${code}_ONT_08>+${code}_ONT_21`;
+        return `${code}_ONT_05&ts=-0.5>${code}_ONT_02>${code}_ONT_07>${code}_ONT_08>${code}_ONT_21`;
     // Female
-    return `LOB_${code}+${code}_ONT_06&ts=-0.5>+${code}_ONT_04>+${code}_ONT_09>+${code}_ONT_10>+${code}_ONT_23`;
+    return `${code}_ONT_06&ts=-0.5>${code}_ONT_04>${code}_ONT_09>${code}_ONT_10>${code}_ONT_23`;
 };

@@ -12,7 +12,7 @@ import * as THREE from "three";
 import { fbxSource } from "./App";
 import {
     analyzeChainCode,
-    loadModel,
+    loadAnimations,
     getFaceChangesArray,
 } from "./viewerHelpers";
 
@@ -95,8 +95,8 @@ export class AniViewer extends BaseViewer {
         this.disableInput();
 
         const mainModel = this.models.main;
-        const [fileList, animationList] = analyzeChainCode(aniCode);
-        this.nAni = animationList.length;
+        const aniList = analyzeChainCode(aniCode);
+        this.nAni = aniList.length;
 
         mainModel.mixer = new THREE.AnimationMixer(mainModel);
         this.mixer = mainModel.mixer;
@@ -104,29 +104,10 @@ export class AniViewer extends BaseViewer {
         this._aniIdx = 0;
         mainModel.mixer.timeScale = timeScale; // Global timeScale
         mainModel.mixer.addEventListener("finished", this.playNextAni);
-        this.aniSettings = animationList.map(ani => ({
-            timeScale: ani.timeScale,
-            repetitions: ani.repetitions,
-            faceChanges: ani.faceChanges,
-        }));
+        this.aniSettings = aniList;
 
-        // load all animation files
-        const batchLoader = fileList.map(file => {
-            const path = `${this.aniSource}/${file}.fbx`;
-            return loadModel(path);
-        });
-        const animFiles = await Promise.all(batchLoader);
+        this.animations = await loadAnimations(aniList);
 
-        this.animations = [];
-        animationList.forEach(anim => {
-            const { fileIdx, aniName } = anim;
-            const animation = aniName
-                ? animFiles[fileIdx].animations.find(
-                      ani => ani.name === aniName
-                  )
-                : animFiles[fileIdx].animations[0];
-            this.animations.push(animation);
-        });
         // play first animation
         this.aniIdx = 0;
         this.enableInput();

@@ -6,7 +6,7 @@ export const DEFAULT_DRAGON_FACE_IDX = "1";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
 
-const defaultAni = "MWM_CMN+CMN_MWM_03";
+const defaultAni = "CMN_MWM_03";
 
 export const matParamsDetails = {
     wireframe: {

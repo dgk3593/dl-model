@@ -26,14 +26,29 @@ export const loadModel = url => {
     );
 };
 
-export const loadTexture = url => {
-    return (
-        url &&
-        new Promise(resolve => {
-            new THREE.TextureLoader().load(url, resolve);
-        })
+// export const loadTexture = url => {
+//     return (
+//         url &&
+//         new Promise(resolve => {
+//             new THREE.TextureLoader().load(url, resolve);
+//         })
+//     );
+// };
+
+const getAniPath = name => `${fbxSource}/animations/${name}.json`;
+
+const loadSingleAni = ({ name }) => {
+    const path = getAniPath(name);
+    return new Promise(resolve =>
+        fetch(path)
+            .then(response => response.json())
+            .then(json => THREE.AnimationClip.parse(json))
+            .then(resolve)
     );
 };
+
+export const loadAnimations = aniList =>
+    Promise.all(aniList.map(loadSingleAni));
 
 export const createInvisibleFloor = () => {
     const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
@@ -386,66 +401,48 @@ export const applyEyeTexture = applyTexture("Eye");
 export const applyMouthTexture = applyTexture("Mouth");
 // export const applyBodyTexture = applyTexture("BodyAll");
 
-// Chain Code is invalid if starts with the character "+"
+const getAniModifiers = modList => {
+    const faceChanges = [];
+    let timeScale = 1,
+        repetitions = 1;
+
+    modList.forEach(mod => {
+        const [key, value] = mod.split("=");
+        if (key === "ts") {
+            timeScale = parseFloat(value);
+        }
+        if (key === "r") {
+            repetitions = parseInt(value);
+        }
+        if (key.includes("-")) {
+            const [part, time] = key.split("-");
+            const faceMod = { time: parseFloat(time) };
+            const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
+            faceMod[indexName] = value;
+            faceChanges.push(faceMod);
+        }
+    });
+
+    return {
+        timeScale,
+        repetitions,
+        faceChanges: processFaceChanges(faceChanges),
+    };
+};
+
+const getAniData = code => {
+    const [name, ...modList] = code.split("&");
+    const modifiers = getAniModifiers(modList);
+    return { name, ...modifiers };
+};
+
 export const analyzeChainCode = code => {
-    if (!code) return ["", ""];
+    if (!code) return [];
+
     const aniCodes = code.split(">");
-    const nAni = aniCodes.length;
-    const fileList = [];
-    const animationList = [];
-    for (let i = 0; i < nAni; i++) {
-        let timeScale = 1,
-            repetitions = 1,
-            fileIdx = null,
-            aniName = null,
-            fileName = null,
-            details,
-            currentAni = {},
-            faceChanges = [];
-        const currentParts = aniCodes[i].split("+");
-        const fromModelFile = currentParts.length === 1;
-        if (fromModelFile) {
-            details = currentParts[0];
-        } else {
-            [fileName, details] = currentParts;
-            fileIdx = fileList.length - 1;
-        }
-        if (fileName) {
-            fileIdx = fileList.length;
-            fileList.push(fileName);
-        }
-        if (details.includes("&")) {
-            const [name, ...settings] = details.split("&");
-            aniName = name;
-            for (let setting of settings) {
-                const [key, value] = setting.split("=");
-                if (key === "ts") {
-                    timeScale = parseFloat(value);
-                }
-                if (key === "r") {
-                    repetitions = value === "inf" ? Infinity : parseInt(value);
-                }
-                if (key.includes("-")) {
-                    const [part, time] = key.split("-");
-                    const faceMod = { time: parseFloat(time) };
-                    const indexName = `${part === "e" ? "eye" : "mouth"}Idx`;
-                    faceMod[indexName] = value;
-                    faceChanges.push(faceMod);
-                }
-            }
-        } else {
-            aniName = details;
-        }
-        currentAni = {
-            fileIdx,
-            aniName,
-            timeScale,
-            repetitions,
-            faceChanges: processFaceChanges(faceChanges),
-        };
-        animationList.push(currentAni);
-    }
-    return [fileList, animationList];
+    const aniList = aniCodes.map(getAniData);
+
+    return aniList;
 };
 
 export const processFaceChanges = faceChanges => {
@@ -486,14 +483,13 @@ export const getFaceChangesArray = (faceChanges, repetitions) => {
 };
 
 export const chainCodeToList = (code, name) => {
-    const [fileList, animationList] = analyzeChainCode(code);
-    const length = animationList.length;
-    const output = animationList.map((ani, i) => {
-        const { fileIdx, aniName, timeScale, repetitions, faceChanges } = ani;
+    const aniList = analyzeChainCode(code);
+    const length = aniList.length;
+    const output = aniList.map((ani, i) => {
+        const { name: aniName, timeScale, repetitions, faceChanges } = ani;
         const partName = name.concat(length > 1 ? `#${i + 1}` : "");
         const listItem = {
             name: partName,
-            fileName: fileList[fileIdx],
             aniName,
             timeScale,
             repetitions,
