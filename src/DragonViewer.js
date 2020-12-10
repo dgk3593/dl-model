@@ -7,14 +7,13 @@
 
 import AniViewer from "./AniViewer";
 
-import { fbxSource } from "./App";
 import { getDragonEye, getDragonMouth } from "./viewerHelpers";
 import { DEFAULT_DRAGON_FACE_IDX } from "./consts";
 
 export class DragonViewer extends AniViewer {
     constructor() {
         super();
-        this.aniSource = `${fbxSource}/fbx/dragonAni`;
+        this._eyeIdx = this._mouthIdx = DEFAULT_DRAGON_FACE_IDX;
     }
 
     initNewModel = () => {

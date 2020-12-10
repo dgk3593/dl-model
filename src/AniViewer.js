@@ -9,7 +9,6 @@
 import BaseViewer from "./BaseViewer";
 
 import * as THREE from "three";
-import { fbxSource } from "./App";
 import {
     analyzeChainCode,
     loadAnimations,
@@ -17,11 +16,6 @@ import {
 } from "./viewerHelpers";
 
 export class AniViewer extends BaseViewer {
-    constructor() {
-        super();
-        this.aniSource = `${fbxSource}/fbx`;
-    }
-
     afterMainModelLoad = () => {
         this.saveMainModelInitState();
         this.addAnimation();

@@ -9,7 +9,6 @@
 
 import AniViewer from "./AniViewer";
 
-import { fbxSource } from "./App";
 import { DEFAULT_FACE_IDX } from "./consts";
 import {
     calculateTextureOffset,
@@ -30,7 +29,6 @@ const SIDES = ["Right", "Left"];
 export class CharaViewer extends AniViewer {
     constructor() {
         super();
-        this.aniSource = `${fbxSource}/fbx`;
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
     }
 
