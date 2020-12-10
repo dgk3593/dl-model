@@ -227,7 +227,7 @@ export const createOutline = (object, params) => {
 
     const outlines = []; // return value
 
-    const skip = ["Eye", "Mouth", "Effect"];
+    const skip = ["Effect"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
         const { name } = mesh;
