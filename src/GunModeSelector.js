@@ -1,8 +1,8 @@
 import "./styles/GunModeSelector.css";
 
 const displayTexts = {
-    A: "Short Range",
-    B: "Long Range",
+    A: "Long Range",
+    B: "Short Range",
     C: "Rapid-Fire",
 };
 
