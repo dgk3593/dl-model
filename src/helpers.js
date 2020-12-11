@@ -131,61 +131,40 @@ export const setInitialSettings = params => {
 };
 
 export const generateChainCode = chain => {
-    console.log(chain);
-    const length = chain.length;
-    let output = "";
-    chain.forEach((ani, i) => {
-        const { fileName, aniName, faceChanges } = ani;
-        if (fileName) {
-            if (i === 0) {
-                output = output.concat(fileName);
-            } else {
-                output = output.concat(
-                    fileName !== chain[i - 1].fileName ? fileName : ""
-                );
-            }
-            output = output.concat("+");
-        }
-        output = output.concat(aniName);
+    const aniCode = chain.map(aniToCode);
+    return aniCode.join(">");
+};
 
-        // Add modifiers
-        const modCode = generateAniModCode(ani);
-        output = output.concat(modCode);
-        const faceCode = generateFaceCode(faceChanges);
-        output = output.concat(faceCode);
-
-        if (i < length - 1) {
-            output = output.concat(">");
-        }
-    });
-    return output;
+const aniToCode = ani => {
+    const { aniName, faceChanges } = ani;
+    const modCode = generateAniModCode(ani);
+    const faceCode = generateFaceCode(faceChanges);
+    return `${aniName}${modCode}${faceCode}`;
 };
 
 const generateAniModCode = ani => {
-    let output = "";
+    const modCodes = [];
     Object.keys(aniModList).forEach(modKey => {
         const { key, defaultValue } = aniModList[modKey];
         if (ani[key] !== defaultValue) {
-            output = output.concat(`&${modKey}=${ani[key]}`);
+            modCodes.push(`&${modKey}=${ani[key]}`);
         }
     });
-    return output;
+    return modCodes.join("");
 };
 
 const generateFaceCode = faceChanges => {
     if (!faceChanges) return "";
-    let output = "";
+    const faceCodes = [];
     faceChanges.forEach(change => {
         const { time, eyeIdx, mouthIdx } = change;
         if (!time) return;
-        if (eyeIdx) {
-            output = output.concat(`&e-${time}=${eyeIdx}`);
-        }
-        if (mouthIdx) {
-            output = output.concat(`&m-${time}=${mouthIdx}`);
-        }
+
+        eyeIdx && faceCodes.push(`&e-${time}=${eyeIdx}`);
+
+        mouthIdx && faceCodes.push(`&m-${time}=${mouthIdx}`);
     });
-    return output;
+    return faceCodes.join("");
 };
 
 export const collectFilter = toggleState => {
