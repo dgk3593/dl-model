@@ -38,7 +38,7 @@ const otherUnique = {
                 },
                 {
                     name: "Knocked Away",
-                    value: "CMN_BST_01_11037101>+CMN_BST_04_11037101",
+                    value: "CMN_BST_01_11037101>CMN_BST_04_11037101",
                 },
                 {
                     name: "Fall to Ground",
@@ -197,7 +197,7 @@ const otherUnique = {
                 },
                 {
                     name: "Stand back up",
-                    value: "CMN_BST_07_11036101",
+                    value: "CMN_BST_06_11036101",
                 },
                 {
                     name: "Ukemi",
@@ -338,11 +338,6 @@ const otherUnique = {
                 {
                     name: "Fly Fast",
                     value: "CMN_RUN_02_11036801",
-                },
-                {
-                    name: "Combo",
-                    value:
-                        "BOW_CMB_01_11036801>BOW_CMB_02_11036801>BOW_CMB_03_11036801>BOW_CMB_04_11036801>BOW_CMB_05_11036801",
                 },
                 {
                     name: "Roll",
