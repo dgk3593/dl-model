@@ -27,6 +27,10 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d200018_01_90_01" },
         { name: "Receive Gift", code: "DC_d200018_01_90_04" },
     ],
+    d210010_01: [
+        { name: "Dragon's Roost", code: "DC_d210010_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210010_01_90_04" },
+    ],
     d210016_01: [
         { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
         { name: "Receive Gift", code: "DC_d210016_01_90_04" },
@@ -194,6 +198,10 @@ const dragonAni = {
     d210088_01: [
         { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
         { name: "Receive Gift", code: "DC_d210018_01_90_04" },
+    ],
+    d210091_01: [
+        { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210022_01_90_04" },
     ],
     d210094_01: [
         { name: "Dragon's Roost", code: "DC_d210094_01_90_01" },
