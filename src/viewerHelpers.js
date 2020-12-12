@@ -53,8 +53,10 @@ export const loadAnimations = aniList =>
 export const createInvisibleFloor = () => {
     const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
     floorGeometry.rotateX(Math.PI / 2);
+
     const floorMaterial = new THREE.MeshBasicMaterial();
     floorMaterial.visible = false;
+
     return new THREE.Mesh(floorGeometry, floorMaterial);
 };
 
@@ -112,9 +114,11 @@ export const disposeItem = item => {
         disposedList.add(object.uuid);
         object.dispose();
     };
+
     const dispose = object => {
         if (needToDispose(object)) disposeObject(object);
     };
+
     const disposeMaterial = object => {
         callbackOnEach(object.material, mat => {
             dispose(mat.map);

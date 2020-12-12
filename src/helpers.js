@@ -46,11 +46,7 @@ export const getDefaultAni = modelId => {
     return "";
 };
 
-const getDefaultFace = modelId => {
-    if (isDragon(modelId)) return 1;
-
-    return 2;
-};
+const getDefaultFace = modelId => (isDragon(modelId) ? 1 : 2);
 
 export const callbackOnEach = (list, callback) => {
     if (Array.isArray(list)) {
@@ -168,9 +164,9 @@ const generateFaceCode = faceChanges => {
 };
 
 export const collectFilter = toggleState => {
-    let collected = {};
+    const collected = {};
     Object.keys(toggleState).forEach(key => {
-        let tmp = [];
+        const tmp = [];
         Object.keys(toggleState[key]).forEach(k => {
             if (toggleState[key][k]) {
                 tmp.push(k);
@@ -199,7 +195,7 @@ export const complementaryColor = color => {
 };
 
 const hexToRgb = hex => {
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
         ? {
               r: parseInt(result[1], 16),
