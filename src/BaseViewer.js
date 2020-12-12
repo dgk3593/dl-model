@@ -366,7 +366,7 @@ class BaseViewer extends PureComponent {
     updateMaterial = (prev, current) => {
         if (prev === current) return;
 
-        const { type: materialType } = current;
+        const materialType = this.matType;
         const mainModel = this.models.main;
 
         const matTypeChanged = prev.type !== materialType;
