@@ -14,7 +14,7 @@ const AsciiSettings = lazy(() => import("./AsciiSettings"));
 function AdvancedSettings({ openControl }) {
     const dispatch = useContext(DispatchContext);
     const {
-        model: { materialType },
+        material: { type: materialType },
     } = useContext(SettingsContext);
 
     const close = () => {

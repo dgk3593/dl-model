@@ -125,7 +125,7 @@ function Display(props) {
                     cameraPosition={cameraPosition}
                     controlsPosition={controlsPosition}
                     model={settings.model}
-                    materialParams={settings.materialParams}
+                    material={settings.material}
                     outline={settings.outline}
                     animation={settings.animation}
                     rotateSpeed={rotateSpeed}

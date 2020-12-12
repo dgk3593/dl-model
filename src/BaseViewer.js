@@ -243,7 +243,7 @@ class BaseViewer extends PureComponent {
         const model = this.models.main;
 
         removeEffects(model);
-        const { materialType } = this.props.model;
+        const materialType = this.matType;
         const modelId = this.props.model.id;
         if (isBlade(modelId)) {
             const { texturePath } = analyzeWeaponCode(`${modelId}n`);
@@ -269,7 +269,7 @@ class BaseViewer extends PureComponent {
     updateEnvironment = (prev, current) => {
         this.updateViewport(prev.viewport, current.viewport);
         this.updateOutline(prev.outline, current.outline);
-        this.updateMaterial(prev, current);
+        this.updateMaterial(prev.material, current.material);
         this.updateLights(prev.lights, current.lights);
         this.updateAscii(prev.ascii, current.ascii);
 
@@ -348,10 +348,13 @@ class BaseViewer extends PureComponent {
     };
 
     get matParams() {
-        const allParams = this.props.materialParams;
-        const { materialType } = this.props.model;
+        const { type: materialType, ...allParams } = this.props.material;
         const paramList = getParamsList(materialType);
         return filterObject(allParams, paramList);
+    }
+
+    get matType() {
+        return this.props.material.type;
     }
 
     applyNewModelMat = model => {
@@ -362,13 +365,18 @@ class BaseViewer extends PureComponent {
 
     updateMaterial = (prev, current) => {
         if (prev === current) return;
-        // update material type
-        const { materialType } = current.model;
+
+        const { type: materialType } = current;
         const mainModel = this.models.main;
-        const prevParams = prev.materialParams;
-        if (prev.model.materialType !== materialType) {
+
+        const matTypeChanged = prev.type !== materialType;
+        if (matTypeChanged) {
             changeMaterial(this.models.main, { materialType });
         }
+
+        const prevParams = matTypeChanged
+            ? { useTexture: prev.useTexture }
+            : prev;
         const params = this.matParams;
         updateMatParams(mainModel, { prevParams, params });
     };

@@ -18,14 +18,14 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
     const settings = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
-    const currentSettings = settings.materialParams;
+    const currentSettings = settings.material;
 
     const paramsList = [...commonParams, ...extraParams[matType]];
 
     const updateMatParam = (name, value) => {
         const action = {
             type: "update",
-            key: "materialParams",
+            key: "material",
             value: { [name]: value },
         };
         dispatch(action);
@@ -35,7 +35,7 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
         const paramName = event.currentTarget.value;
         const action = {
             type: "toggle",
-            key: "materialParams",
+            key: "material",
             value: paramName,
         };
         dispatch(action);
@@ -78,7 +78,7 @@ function MaterialParamsSetting({ materialType: matType, openControl }) {
                     backgroundColor: color,
                     color: getTextColor(color),
                 }}
-                data-value={`materialParams-${name}`}
+                data-value={`material-${name}`}
                 onClick={handleColorBtnClick}
             >
                 {color}

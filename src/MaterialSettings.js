@@ -13,7 +13,7 @@ const MaterialParamsSetting = lazy(() => import("./MaterialParamsSetting"));
 
 function MaterialSettings({ openControl, openAtStart }) {
     const {
-        model: { materialType },
+        material: { type: materialType },
     } = useContext(SettingsContext);
 
     const dispatch = useContext(DispatchContext);
@@ -22,21 +22,17 @@ function MaterialSettings({ openControl, openAtStart }) {
         event.stopPropagation();
         const action = {
             type: "reset",
-            key: "model",
-            value: ["materialType"],
+            key: "material",
         };
-        dispatch(action);
-        action.key = "materialParams";
-        action.value = "";
         dispatch(action);
     };
 
     const handleChange = event => {
-        const { value: materialType } = event.target;
+        const { value: matType } = event.target;
         const action = {
             type: "update",
-            key: "model",
-            value: { materialType },
+            key: "material",
+            value: { type: matType },
         };
         dispatch(action);
     };

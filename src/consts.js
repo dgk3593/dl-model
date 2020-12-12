@@ -136,7 +136,6 @@ export const asciiSet = [
 
 export const defaultSettings = {
     model: {
-        materialType: "Basic",
         id: "c100001_01",
         texture: "c100001_01",
         eyeTexture: "c100001_01",
@@ -146,7 +145,7 @@ export const defaultSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    materialParams: { ...defaultMatParams },
+    material: { type: "Basic", ...defaultMatParams },
     scene: {
         rotateSpeed: 0,
         background: "#cccccc",

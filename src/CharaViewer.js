@@ -105,7 +105,7 @@ export class CharaViewer extends AniViewer {
     };
 
     initAllWeapons = async () => {
-        const { materialType } = this.props.model;
+        const materialType = this.matType;
         SIDES.forEach(side => {
             const key = `weapon${side}`;
             const weapon = this.models[key];
@@ -156,7 +156,7 @@ export class CharaViewer extends AniViewer {
 
         if (currentTexture === prevTexture) return false;
 
-        const { materialType } = current;
+        const materialType = this.matType;
         applyEyeTexture(this.models.main, {
             materialType,
             textureId: currentTexture,
@@ -185,7 +185,7 @@ export class CharaViewer extends AniViewer {
 
         if (currentTexture === prevTexture) return false;
 
-        const { materialType } = current;
+        const materialType = this.matType;
         applyMouthTexture(this.models.main, {
             materialType,
             textureId: currentTexture,
@@ -255,9 +255,9 @@ export class CharaViewer extends AniViewer {
             this.models[key] = model;
 
             // process new weapon
-            const { materialType } = current;
+            const materialType = this.matType;
             changeMaterial(model, { materialType, texturePath });
-            // this.applyNewMatParams(model);
+            this.applyNewModelMat(model);
 
             if (flipped) {
                 model.rotation.y += Math.PI;
