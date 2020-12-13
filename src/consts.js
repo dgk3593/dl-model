@@ -145,7 +145,10 @@ export const defaultSettings = {
         weaponRight: "",
         weaponLeft: "",
     },
-    material: { type: "Basic", ...defaultMatParams },
+    material: {
+        type: "Basic",
+        ...defaultMatParams,
+    },
     scene: {
         rotateSpeed: 0,
         background: "#cccccc",
@@ -164,9 +167,9 @@ export const defaultSettings = {
     },
     outline: {
         enable: true,
-        size: 5, // 1 -> 10
+        size: 5,
         color: "#000000",
-        opacity: 1, // 0.1 -> 10%, 1-> 100%
+        opacity: 1,
     },
     capture: {
         enable: false,

@@ -36,7 +36,7 @@ function Display(props) {
     const settings = useContext(SettingsContext);
     const {
         model: { id: modelId },
-        scene: { rotateSpeed, background: bgColor, initCameraPosition, lights },
+        scene: { rotateSpeed, background: bgColor, initCameraPosition },
         app: { showAniControl, antiAliasing },
     } = settings;
 
@@ -119,20 +119,20 @@ function Display(props) {
             <Suspense fallback={null}>
                 <ModelViewer
                     setIsLoading={props.setIsLoading}
-                    capture={settings.capture}
                     toggleCapture={toggleCapture}
-                    viewport={viewport}
-                    cameraPosition={cameraPosition}
-                    controlsPosition={controlsPosition}
+                    capture={settings.capture}
                     model={settings.model}
                     material={settings.material}
                     outline={settings.outline}
                     animation={settings.animation}
-                    rotateSpeed={rotateSpeed}
-                    lights={lights}
-                    bgColor={bgColor}
-                    antiAliasing={antiAliasing}
+                    lights={settings.scene.lights}
                     ascii={settings.ascii}
+                    antiAliasing={antiAliasing}
+                    bgColor={bgColor}
+                    viewport={viewport}
+                    cameraPosition={cameraPosition}
+                    controlsPosition={controlsPosition}
+                    rotateSpeed={rotateSpeed}
                 />
             </Suspense>
         </div>

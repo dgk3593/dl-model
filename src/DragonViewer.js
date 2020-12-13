@@ -8,12 +8,11 @@
 import AniViewer from "./AniViewer";
 
 import { getDragonEye, getDragonMouth } from "./viewerHelpers";
-import { DEFAULT_DRAGON_FACE_IDX } from "./consts";
 
 export class DragonViewer extends AniViewer {
     constructor() {
         super();
-        this._eyeIdx = this._mouthIdx = DEFAULT_DRAGON_FACE_IDX;
+        this._eyeIdx = this._mouthIdx = 0;
     }
 
     initNewModel = () => {
@@ -38,8 +37,9 @@ export class DragonViewer extends AniViewer {
         this.mouths = getDragonMouth(mainModel);
         this.mouths.forEach(mouth => (mouth.frustumCulled = false));
 
-        this.eyeIdx = DEFAULT_DRAGON_FACE_IDX;
-        this.mouthIdx = DEFAULT_DRAGON_FACE_IDX;
+        const { eyeIdx, mouthIdx } = this.props.model;
+        this.eyeIdx = eyeIdx;
+        this.mouthIdx = mouthIdx;
     };
 
     set eyeIdx(newIdx) {
