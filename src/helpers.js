@@ -14,6 +14,12 @@ import {
 import { chainCodeToList } from "./viewerHelpers";
 import dragonAni from "./data/animationDragon";
 
+export const filterObject = (object, keys) => {
+    const entries = Object.entries(object);
+    const filtered = entries.filter(([key, _]) => keys.includes(key));
+    return Object.fromEntries(filtered);
+};
+
 export const isBlade = code => code.startsWith("w302");
 
 export const isSheath = code => isBlade(code) && code.endsWith("02");

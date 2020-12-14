@@ -81,12 +81,6 @@ export const getMaterial = object => {
     return materials;
 };
 
-export const filterObject = (object, keys) => {
-    const entries = Object.entries(object);
-    const filtered = entries.filter(([key, _]) => keys.includes(key));
-    return Object.fromEntries(filtered);
-};
-
 export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
 
 export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;

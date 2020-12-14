@@ -34,8 +34,8 @@ function ColorSettings({ toggleControlOpen, mode }) {
         default:
             const [key, subkey] = mode.split("-");
             if (key === "Lights") {
-                const currentLight = settings.scene.lights.find(
-                    ({ lightId }) => lightId === subkey
+                const currentLight = settings.lights.find(
+                    ({ id }) => id === subkey
                 );
                 initColor = currentLight.color;
                 break;
@@ -64,16 +64,17 @@ function ColorSettings({ toggleControlOpen, mode }) {
             default:
                 const [key, subkey] = mode.split("-");
                 if (key === "Lights") {
-                    const { lights } = settings.scene;
+                    const { lights } = settings;
                     const newLights = lights.map(light => {
-                        if (light.lightId === subkey) {
+                        if (light.id === subkey) {
                             return { ...light, color: colorToSet };
                         }
                         return light;
                     });
 
-                    action.key = "scene";
-                    action.value = { lights: newLights };
+                    action.type = "overwrite";
+                    action.key = "lights";
+                    action.value = newLights;
                     break;
                 }
                 action.key = key;

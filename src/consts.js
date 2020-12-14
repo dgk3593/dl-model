@@ -111,16 +111,16 @@ Object.keys(matParamsDetails).forEach(key => {
 
 export const needsUpdateParams = ["gradientMap", "flatShading", "useTexture"];
 
-const defaultLights = [
+export const defaultLights = [
     {
-        lightId: "0",
+        id: "0",
         type: "Ambient",
         color: "#444444",
         enable: true,
         intensity: 1,
     },
     {
-        lightId: "1",
+        id: "1",
         type: "Directional",
         color: "#ffffff",
         enable: true,
@@ -153,8 +153,8 @@ export const defaultSettings = {
         rotateSpeed: 0,
         background: "#cccccc",
         initCameraPosition: null,
-        lights: defaultLights,
     },
+    lights: defaultLights,
     animation: {
         code: defaultAni,
         timeScale: 1,

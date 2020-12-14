@@ -125,7 +125,7 @@ function Display(props) {
                     material={settings.material}
                     outline={settings.outline}
                     animation={settings.animation}
-                    lights={settings.scene.lights}
+                    lights={settings.lights}
                     ascii={settings.ascii}
                     antiAliasing={antiAliasing}
                     bgColor={bgColor}

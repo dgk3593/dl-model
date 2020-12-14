@@ -12,7 +12,7 @@ const initSettings = { chainMaker: { chain: initAniChain } };
 Object.keys(defaultSettings).forEach(
     key => (initSettings[key] = { ...defaultSettings[key] })
 );
-initSettings.scene.lights = defaultSettings.scene.lights.map(light => ({
+initSettings.lights = defaultSettings.lights.map(light => ({
     ...light,
 }));
 

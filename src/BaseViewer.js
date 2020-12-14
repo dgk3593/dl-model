@@ -18,12 +18,11 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { CAM_PARAMS } from "./consts";
-import { isBlade } from "./helpers";
+import { isBlade, filterObject } from "./helpers";
 import {
     createInvisibleFloor,
     analyzeWeaponCode,
     getUpdated,
-    filterObject,
     getModelPath,
     loadModel,
     getMaterial,
@@ -215,7 +214,7 @@ class BaseViewer extends PureComponent {
 
     addLights = lights => {
         this.lights = [];
-        lights.forEach(({ enable, type, color, intensity, ...params }) => {
+        lights.forEach(({ id, enable, type, color, intensity, ...params }) => {
             if (!enable) return;
             const constructor = `${type}Light`;
             const light = new THREE[constructor](color, intensity);

@@ -3,68 +3,58 @@ import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import Button from "@material-ui/core/Button";
 
+import { defaultLights } from "./consts";
+
 import SettingsGroup from "./AdvancedSettingsGroup";
 const LightParamsSetting = lazy(() => import("./LightParamsSetting"));
 
 function LightSettings({ openControl, openAtStart }) {
-    const {
-        scene: { lights: currentLights },
-    } = useContext(SettingsContext);
+    const { lights: currentLights } = useContext(SettingsContext);
 
     const dispatch = useContext(DispatchContext);
 
     const resetSettings = event => {
         event.stopPropagation();
-        const action = {
-            type: "reset",
-            key: "scene",
-            value: ["lights"],
-        };
-        dispatch(action);
+        overwriteLights(defaultLights);
     };
 
-    const updateSceneSettings = value => {
+    const overwriteLights = newLights => {
         const action = {
-            type: "update",
-            key: "scene",
-            value,
+            type: "overwrite",
+            key: "lights",
+            value: newLights,
         };
         dispatch(action);
-    };
-
-    const updateLights = newLights => {
-        const updateValue = { lights: newLights };
-        updateSceneSettings(updateValue);
     };
 
     const updateIntensity = id => (_, value) => {
         const newLights = currentLights.map(light => {
-            if (light.lightId === id) {
+            if (light.id === id) {
                 return { ...light, intensity: value };
             }
             return light;
         });
-        updateLights(newLights);
+        overwriteLights(newLights);
     };
 
     const updatePosition = id => position => {
         const newLights = currentLights.map(light =>
-            light.lightId === id ? { ...light, position } : light
+            light.id === id ? { ...light, position } : light
         );
-        updateLights(newLights);
+        overwriteLights(newLights);
     };
 
     const toggleLight = event => {
-        const { id } = event.currentTarget.dataset;
-        const targetLight = currentLights.find(({ lightId }) => lightId === id);
+        const { id: targetId } = event.currentTarget.dataset;
+        const targetLight = currentLights.find(({ id }) => id === targetId);
         const currentState = targetLight.enable;
         const newLights = currentLights.map(light => {
-            if (light.lightId === id) {
+            if (light.id === targetId) {
                 return { ...light, enable: !currentState };
             }
             return light;
         });
-        updateLights(newLights);
+        overwriteLights(newLights);
     };
 
     const colorBtnClick = event => {
@@ -84,7 +74,7 @@ function LightSettings({ openControl, openAtStart }) {
             titleButton={titleButton}
             openAtStart={openAtStart}
         >
-            {currentLights.map(({ lightId: id, ...params }) => {
+            {currentLights.map(({ id, ...params }) => {
                 return (
                     <Suspense key={id} fallback={<div>Loading</div>}>
                         <LightParamsSetting
