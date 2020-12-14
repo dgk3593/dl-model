@@ -18,11 +18,11 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { CAM_PARAMS } from "./consts";
-import { isBlade, filterObject } from "./helpers";
+import { isBlade, filterObject, getUpdated } from "./helpers";
 import {
     createInvisibleFloor,
+    createLight,
     analyzeWeaponCode,
-    getUpdated,
     getModelPath,
     loadModel,
     getMaterial,
@@ -37,7 +37,7 @@ import {
 
 class BaseViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
+        // window.app = this;
 
         // const { fbx2json } = await import("./fbx2json/fbx2json.js");
         // await fbx2json();
@@ -151,7 +151,7 @@ class BaseViewer extends PureComponent {
 
         // Light
         const { lights } = this.props;
-        this.addLights(lights);
+        this.addAllLights(lights);
 
         // effects
         this.loadedFX = new Map();
@@ -212,29 +212,24 @@ class BaseViewer extends PureComponent {
         this.canvas = newCanvas;
     }
 
-    addLights = lights => {
-        this.lights = [];
-        lights.forEach(({ id, enable, type, color, intensity, ...params }) => {
-            if (!enable) return;
-            const constructor = `${type}Light`;
-            const light = new THREE[constructor](color, intensity);
+    addLight = light => {
+        const { id, enable, ...params } = light;
+        if (!enable) return;
 
-            for (const [key, value] of Object.entries(params)) {
-                switch (key) {
-                    case "position":
-                        const setValue = value.map(v => v || 0);
-                        light.position.set(...setValue);
-                        break;
-                    default:
-                        light[key] = value;
-                }
-            }
-            this.scene.add(light);
-            this.lights.push(light);
-        });
+        const newLight = createLight(params);
+
+        this.scene.add(newLight);
+        this.lights.push(newLight);
     };
 
-    removeLights = () => this.lights.forEach(light => this.scene.remove(light));
+    addAllLights = lights => {
+        this.lights = [];
+        lights.forEach(this.addLight);
+    };
+
+    removeLight = light => this.scene.remove(light);
+
+    removeAllLights = () => this.lights.forEach(this.removeLight);
 
     addToScene = model => this.floor.add(model);
 
@@ -382,8 +377,8 @@ class BaseViewer extends PureComponent {
 
     updateLights = (prev, current) => {
         if (prev !== current) {
-            this.removeLights();
-            this.addLights(current);
+            this.removeAllLights();
+            this.addAllLights(current);
         }
     };
 

@@ -20,6 +20,13 @@ export const filterObject = (object, keys) => {
     return Object.fromEntries(filtered);
 };
 
+export const getUpdated = (prev, current) => {
+    const updated = Object.entries(current).filter(
+        ([key, value]) => value !== prev[key]
+    );
+    return updated;
+};
+
 export const isBlade = code => code.startsWith("w302");
 
 export const isSheath = code => isBlade(code) && code.endsWith("02");
@@ -64,12 +71,13 @@ export const callbackOnEach = (list, callback) => {
 
 export const setInitialSettings = params => {
     if (params.length === 0) return;
+
     const defined = new Set();
     params.forEach(param => {
         if (!param) return;
 
         const [keycode, ...value] = param.split("="); // animation code can have "=" inside
-        // if no value given, skip
+        // skip if no value given
         if (!value[0]) return;
 
         let setValue = value.length === 1 ? value[0] : value.join("=");

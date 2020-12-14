@@ -6,7 +6,7 @@ import { idxOffsets } from "./consts";
 import textureOffsets from "./data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { callbackOnEach } from "./helpers";
+import { callbackOnEach, getUpdated } from "./helpers";
 import {
     matCommonParams,
     matExtraParams,
@@ -87,6 +87,7 @@ export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;
 
 export const analyzeWeaponCode = code => {
     if (!code) return "";
+
     const flipped = code.endsWith("b");
     const weaponCode = code.substring(0, code.length - 1);
     const modelPath = getModelPath(weaponCode);
@@ -121,11 +122,13 @@ export const disposeItem = item => {
         });
     };
 
-    const meshes = getMeshes(item, true);
-    meshes.forEach(mesh => {
+    const disposeMesh = mesh => {
         disposeMaterial(mesh);
         dispose(mesh.geometry);
-    });
+    };
+
+    const meshes = getMeshes(item, true);
+    meshes.forEach(disposeMesh);
 };
 
 export const getParamsList = matType => [
@@ -179,7 +182,7 @@ export const getDragonMouth = model => {
 
 export const removeEffects = model => {
     const meshes = getMeshes(model);
-    meshes.forEach(mesh => (mesh.visible = !mesh.name.includes("Effect")));
+    meshes.forEach(mesh => (mesh.visible = !mesh.name.includes("Eff")));
 };
 
 const createNewMaterial = (materialType, params) => {
@@ -240,7 +243,7 @@ export const createOutline = (object, params) => {
 
     const outlines = []; // return value
 
-    const skip = ["Effect"];
+    const skip = ["Eff"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
         const { name } = mesh;
@@ -383,13 +386,15 @@ const applyTexture = part => (target, { materialType, textureId }) => {
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
             return;
+
         const targetGroup = child.geometry.groups.find(
             group => child.material[group.materialIndex].name === `mt${part}CH`
         );
         if (!targetGroup) return;
 
         const { materialIndex } = targetGroup;
-        newMaterial.name = child.material[materialIndex].name;
+        const oldMaterial = child.material[materialIndex];
+        newMaterial.name = oldMaterial.name;
 
         child.material[materialIndex] = newMaterial;
     });
@@ -509,13 +514,6 @@ export const createGradientMap = nTones => {
     return map;
 };
 
-export const getUpdated = (prev, current) => {
-    const updated = Object.entries(current).filter(
-        ([key, value]) => value !== prev[key]
-    );
-    return updated;
-};
-
 export const applyMaterialParam = (materials, [key, value]) => {
     let handler;
     const needsUpdate = needsUpdateParams.includes(key);
@@ -551,7 +549,23 @@ export const applyMaterialParam = (materials, [key, value]) => {
 export const updateMatParams = (model, { prevParams = {}, params }) => {
     const materials = getMaterial(model);
     const updated = getUpdated(prevParams, params);
-    updated.forEach(update => {
-        applyMaterialParam(materials, update);
-    });
+    updated.forEach(update => applyMaterialParam(materials, update));
+};
+
+export const createLight = params => {
+    const { type, color, intensity, ...others } = params;
+
+    const constructor = `${type}Light`;
+    const light = new THREE[constructor](color, intensity);
+
+    for (const [key, value] of Object.entries(others)) {
+        if (key === "position") {
+            const setValue = value.map(v => v || 0);
+            light.position.set(...setValue);
+            continue;
+        }
+        light[key] = value;
+    }
+
+    return light;
 };
