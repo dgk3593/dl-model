@@ -89,6 +89,12 @@ const uniqueFS = {
             value:
                 "AXE_CHR_01_11033502>AXE_CHR_02_11033502>AXE_CHR_03_11033502",
         },
+        {
+            icon: "img/advIcons/110307_02_r05.png",
+            name: "Dragonyule Victor",
+            subtitle: "Merry Mobilizer",
+            value: "AXE_CHR_01>AXE_CHR_02>AXE_CHR_A_03_11030702",
+        },
     ],
     Lance: [
         {
@@ -172,6 +178,13 @@ const uniqueFS = {
             subtitle: "Twilight Moon",
             value:
                 "CAN_CHR_A_01_10000908>CAN_CHR_A_02_10000908>CAN_CHR_A_03_10000908",
+        },
+        {
+            icon: "img/advIcons/110252_02_r05.png",
+            name: "Dragonyule Lily",
+            subtitle: "Saint Starfall Lily",
+            value:
+                "CAN_CHR_A_01_11025202>CAN_CHR_A_02_11025202>CAN_CHR_A_03_11025202",
         },
     ],
     Manacaster: [

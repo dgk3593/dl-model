@@ -572,6 +572,11 @@ const skills = {
             name: "Bursting Fury",
             value: "AXE_SKL_01_01_11032201",
         },
+        {
+            icon: "img/advIcons/110307_02_r05.png",
+            name: "Chuting Stars",
+            value: "AXE_SKL_02_01_11030702",
+        },
     ],
     Lance: [
         {
@@ -1049,6 +1054,22 @@ const skills = {
             name: "Goldfish of the Hereafter",
             value:
                 "CAN_SKL_01_01_11033703>CAN_SKL_01_02_11033703>CAN_SKL_01_03_11033703",
+        },
+        {
+            icon: "img/advIcons/110252_02_r05.png",
+            name: "Crystalline Magic",
+            value: "CAN_SKL_01_01_11025202",
+        },
+        {
+            icon: "img/advIcons/110252_02_r05.png",
+            name: "Surprise Gift",
+            value: "CAN_SKL_02_01_11025202",
+        },
+        {
+            icon: "img/advIcons/110252_02_r05.png",
+            name: "Surprise Gift",
+            subtitle: "3 Starfall Strength",
+            value: "CAN_SKL_03_01_11025202",
         },
     ],
     Manacaster: [

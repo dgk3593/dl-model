@@ -433,6 +433,15 @@ const otherUnique = {
                 },
             ],
         },
+        "Dragonyule Lily": {
+            icon: "img/advIcons/110252_02_r05.png",
+            animations: [
+                {
+                    name: "Force Strike Run",
+                    value: "CAN_RUN_A_05_11025202",
+                },
+            ],
+        },
     },
     Manacaster: {
         Ilia: {

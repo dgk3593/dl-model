@@ -112,11 +112,27 @@ const adv = [
         weapon: "Dagger",
     },
     {
+        cid: "110252_02",
+        name: "Dragonyule Lily",
+        title: "Princess Starfall",
+        rarity: "5",
+        element: "Water",
+        weapon: "Wand",
+    },
+    {
         cid: "110036_03",
         name: "Dragonyule Malora",
         title: "Lady Starfall",
         rarity: "5",
         element: "Light",
+        weapon: "Axe",
+    },
+    {
+        cid: "110307_02",
+        name: "Dragonyule Victor",
+        title: "Festive Commander",
+        rarity: "5",
+        element: "Shadow",
         weapon: "Axe",
     },
     {
