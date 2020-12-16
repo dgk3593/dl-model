@@ -3,10 +3,9 @@ import useToggleGroups from "./hooks/useToggleGroups";
 import { DispatchContext, SettingsContext } from "./context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
-import SimpleOptionList from "./SimpleOptionList";
 
-import { FILTERS } from "./consts";
-import adv from "./data/adv_list_full";
+import { ADV_FILTERS } from "./consts";
+import adv from "./data/adv_list";
 import allies from "./data/allies";
 import enemies from "./data/enemies";
 import { spFaceTextures } from "./consts";
@@ -17,9 +16,10 @@ import "./styles/CharaSelect.css";
 const SetSelect = lazy(() => import("./SetSelect"));
 const Filters = lazy(() => import("./Filters"));
 const CardGallery = lazy(() => import("./CardGallery"));
+const SimpleOptionList = lazy(() => import("./SimpleOptionList"));
 const FacePartSelector = lazy(() => import("./FacePartSelector"));
 
-const options = ["Regular Adventurers", "Allies", "Enemies"];
+const options = ["Adventurers", "Allies", "Enemies"];
 
 function CharaSelect({ toggleControlOpen, mode }) {
     const {
@@ -27,11 +27,11 @@ function CharaSelect({ toggleControlOpen, mode }) {
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
-    const title = mode === "model" ? "Select a Character" : "Override Texture";
+    const title = mode === "model" ? "Select a Model" : "Override Texture";
 
     const [charaSet, setCharaSet] = useState(0);
     const [facePart, setFacePart] = useState("both");
-    const [groupState, groupToggle, setAll] = useToggleGroups(FILTERS);
+    const [groupState, groupToggle, setAll] = useToggleGroups(ADV_FILTERS);
 
     const filters = useMemo(() => collectFilter(groupState), [groupState]);
     const advList = useMemo(() => multiCondFilter(adv, filters), [filters]);
@@ -102,7 +102,7 @@ function CharaSelect({ toggleControlOpen, mode }) {
                 {charaSet === 0 && (
                     <Suspense fallback={null}>
                         <Filters
-                            filterList={FILTERS}
+                            filterList={ADV_FILTERS}
                             groupState={groupState}
                             handleToggle={handleToggle}
                             resetFilters={resetFilters}

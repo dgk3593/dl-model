@@ -285,7 +285,7 @@ export const FS_LENGTH = {
     Sword: 3,
 };
 
-export const FILTERS = {
+export const ADV_FILTERS = {
     rarity: ["3", "4", "5"],
     element: ["Flame", "Water", "Wind", "Light", "Shadow"],
     weapon: [
@@ -299,6 +299,11 @@ export const FILTERS = {
         "Staff",
         "Manacaster",
     ],
+};
+
+export const DRAGON_FILTERS = {
+    rarity: ["3", "4", "5"],
+    element: ["Flame", "Water", "Wind", "Light", "Shadow", "None"],
 };
 
 export const WEAPON_FILTERS = {
