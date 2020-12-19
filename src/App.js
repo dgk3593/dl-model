@@ -1,7 +1,7 @@
-import { SettingsProvider } from "./context/SettingsContext";
+import { SettingsProvider } from "context/SettingsContext";
 
 import { Route, HashRouter } from "react-router-dom";
-import MainPage from "./MainPage";
+import MainPage from "./MainPage/MainPage";
 
 import "./styles/App.css";
 
