@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 
 import Dialog from "@material-ui/core/Dialog";
 import WeaponSelect from "./WeaponSelect";
-import CharaSelect from "./CharaSelect";
+import CharaSelect from "./MainPage/Sidebar/Modal/CharaSelect/CharaSelect";
 import AnimationSelect from "./AnimationSelect";
 import FaceSelect from "./FaceSelect";
 

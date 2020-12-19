@@ -1,17 +1,23 @@
 import { useState, useRef } from "react";
+
 import Drawer from "@material-ui/core/Drawer";
 
 import SidebarHeader from "./SidebarHeader";
-import SidebarBody from "./SidebarBody/SidebarBody";
-import Modal from "./Modal/Modal";
+import SidebarBody from "./SidebarBody";
+import Modal from "./Modal";
 
 import useStyles from "./styles/SidebarStyles";
 
-function SideBar({ toggleSidebarOpen, open }) {
+function Sidebar({ open, toggleSidebar }) {
     const classes = useStyles();
 
     const [modalMode, setModalMode] = useState("");
-    const handleSelect = useRef(null);
+    const handler = useRef(null);
+
+    const openModal = (mode, handleSelect = null) => {
+        handler.current = handleSelect;
+        setModalMode(mode);
+    };
 
     const closeModal = () => setModalMode("");
 
@@ -25,15 +31,15 @@ function SideBar({ toggleSidebarOpen, open }) {
                 paper: classes.drawerPaper,
             }}
         >
-            <SidebarHeader toggleSidebarOpen={toggleSidebarOpen} />
-            <SidebarBody setModalMode={setModalMode} />
+            <SidebarHeader toggleSidebar={toggleSidebar} />
+            <SidebarBody openModal={openModal} />
             <Modal
                 mode={modalMode}
                 closeModal={closeModal}
-                handleSelect={handleSelect}
+                handleSelect={handler.current}
             />
         </Drawer>
     );
 }
 
-export default SideBar;
+export default Sidebar;

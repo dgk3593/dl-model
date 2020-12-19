@@ -6,7 +6,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 
-export default function SetSelect(props) {
+function SetSelect(props) {
     const { options, selectedIndex, handleSelect } = props;
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -53,3 +53,5 @@ export default function SetSelect(props) {
         </>
     );
 }
+
+export default SetSelect;

@@ -11,7 +11,7 @@ import useStyles from "./styles/SidebarHeaderStyles";
 
 import { videoCodecs } from "helpers/consts";
 
-function DrawerHeader({ toggleSidebarOpen }) {
+function DrawerHeader({ toggleSidebar }) {
     const classes = useStyles();
     const dispatch = useContext(DispatchContext);
     const {
@@ -50,10 +50,7 @@ function DrawerHeader({ toggleSidebarOpen }) {
     return (
         <div className={classes.root}>
             <span>Settings</span>
-            <div
-                className={classes.closeDrawerButton}
-                onClick={toggleSidebarOpen}
-            >
+            <div className={classes.closeDrawerButton} onClick={toggleSidebar}>
                 <ArrowLeft />
             </div>
             {currentCodec && !asciiOn && (

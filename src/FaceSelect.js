@@ -1,6 +1,6 @@
 import { useState, useContext, lazy, Suspense } from "react";
 
-import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import FaceBox from "./FaceBox";
 import { SettingsContext } from "./context/SettingsContext";
 import { DispatchContext } from "./context/SettingsContext";

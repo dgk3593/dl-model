@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState, useMemo } from "react";
 import useToggleGroups from "./hooks/useToggleGroups";
 
-import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
 import weapon_list from "./data/weapon_list";
 import specialWeaponList from "./data/specialWeaponList";
@@ -13,7 +13,7 @@ import { WEAPON_FILTERS } from "./consts";
 
 const WeaponBtn = lazy(() => import("./WeaponBtn"));
 const SetSelect = lazy(() => import("./SetSelect"));
-const Filters = lazy(() => import("./Filters"));
+const Filters = lazy(() => import("components/Filters"));
 
 const options = ["Regular Weapons", "Unobtainable Weapons", "Extra Weapons"];
 

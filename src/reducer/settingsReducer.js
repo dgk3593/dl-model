@@ -1,5 +1,5 @@
-import { defaultSettings } from "../consts";
-import { filterObject } from "../helpers";
+import { defaultSettings } from "helpers/consts";
+import { filterObject } from "helpers/helpers";
 
 export const settingsReducer = (state, action) => {
     const { key, value } = action;

@@ -15,19 +15,19 @@ const Sidebar = lazy(() => import("./Sidebar"));
 function MainPage({ location }) {
     const classes = useStyles();
 
-    const [sidebarOpen, toggleSidebarOpen] = useToggleState(true);
+    const [sidebar, toggleSidebar] = useToggleState(true);
     const [loadingMsg, setLoadingMsg] = useState("");
     const [initLoadDone, setInitLoadDone] = useState(false);
+    const [viewport, setViewport] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
 
     const {
         app: { showSettings },
     } = useContext(SettingsContext);
 
     const viewerRef = useRef();
-    const [viewport, setViewport] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-    });
 
     useEffect(() => {
         const params = location.pathname.split("/");
@@ -52,34 +52,31 @@ function MainPage({ location }) {
             {loadingMsg && (
                 <div className={classes.loadingMsg}>{loadingMsg}</div>
             )}
-            <div className={classes.root}>
-                <Suspense fallback={null}>
-                    <CssBaseline />
-                    {initLoadDone && showSettings && (
-                        <>
+            {initLoadDone && (
+                <div className={classes.root}>
+                    {showSettings && (
+                        <Suspense fallback={null}>
+                            <CssBaseline />
                             <button
-                                onClick={toggleSidebarOpen}
+                                onClick={toggleSidebar}
                                 className={classes.openSidebarButton}
                             >
                                 <Menu />
                             </button>
-
                             <Sidebar
-                                toggleSidebarOpen={toggleSidebarOpen}
-                                open={sidebarOpen}
+                                toggleSidebar={toggleSidebar}
+                                open={sidebar}
                             />
-                        </>
+                        </Suspense>
                     )}
-                </Suspense>
-                {initLoadDone && (
                     <main ref={viewerRef} className={classes.content}>
                         <Display
                             setLoadingMsg={setLoadingMsg}
                             viewport={viewport}
                         />
                     </main>
-                )}
-            </div>
+                </div>
+            )}
         </>
     );
 }

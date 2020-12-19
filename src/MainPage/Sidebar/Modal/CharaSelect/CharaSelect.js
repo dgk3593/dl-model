@@ -1,27 +1,29 @@
 import { lazy, Suspense, useContext, useMemo, useState } from "react";
-import useToggleGroups from "./hooks/useToggleGroups";
-import { DispatchContext, SettingsContext } from "./context/SettingsContext";
+import useToggleGroups from "hooks/useToggleGroups";
+import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
-import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
-import { ADV_FILTERS } from "./consts";
-import adv from "./data/adv_list";
-import allies from "./data/allies";
-import enemies from "./data/enemies";
-import { spFaceTextures } from "./consts";
+import { ADV_FILTERS } from "helpers/consts";
+import adv from "data/adv_list";
+import allies from "data/allies";
+import enemies from "data/enemies";
+import { spFaceTextures } from "helpers/consts";
 
-import { collectFilter, multiCondFilter } from "./helpers";
+import { collectFilter, multiCondFilter } from "helpers/helpers";
 import "./styles/CharaSelect.css";
 
-const SetSelect = lazy(() => import("./SetSelect"));
-const Filters = lazy(() => import("./Filters"));
-const CardGallery = lazy(() => import("./CardGallery"));
-const SimpleOptionList = lazy(() => import("./SimpleOptionList"));
-const FacePartSelector = lazy(() => import("./FacePartSelector"));
+const SetSelect = lazy(() => import("components/SetSelect"));
+const Filters = lazy(() => import("components/Filters"));
+const CardGallery = lazy(() => import("components/CardGallery"));
+const SimpleOptionList = lazy(() => import("components/SimpleOptionList"));
+const FacePartSelector = lazy(() =>
+    import("components/selectors/FacePartSelector")
+);
 
 const options = ["Adventurers", "Allies", "Enemies"];
 
-function CharaSelect({ toggleControlOpen, mode }) {
+function CharaSelect({ closeModal, mode }) {
     const {
         model: { id: currentId },
     } = useContext(SettingsContext);
@@ -81,13 +83,13 @@ function CharaSelect({ toggleControlOpen, mode }) {
                 break;
             default:
         }
-        toggleControlOpen();
+        closeModal();
     };
 
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={toggleControlOpen}>
+                <DialogTitle onClose={closeModal}>
                     {title}
                     <div className="CharaSelect-CharaSetSelect">
                         <Suspense fallback={null}>
@@ -110,6 +112,7 @@ function CharaSelect({ toggleControlOpen, mode }) {
                     </Suspense>
                 )}
             </DialogTop>
+
             <DialogContent dividers>
                 {mode === "texture" && (
                     <Suspense fallback={null}>

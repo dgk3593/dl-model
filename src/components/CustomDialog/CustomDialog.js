@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 
 import Close from "@material-ui/icons/Close";
 
-import styles from "./styles/CustomDialogStyles";
+import styles from "./CustomDialogStyles";
 
 export const DialogTop = withStyles(styles)(props => {
     const { children, classes, onClose, ...other } = props;

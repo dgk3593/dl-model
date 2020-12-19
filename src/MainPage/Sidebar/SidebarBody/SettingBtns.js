@@ -27,7 +27,7 @@ const mainBtns = [
     { value: "weapon", text: "Add Weapons" },
 ];
 
-function SettingBtns({ setModalMode }) {
+function SettingBtns({ openModal }) {
     const settings = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
     const {
@@ -37,7 +37,7 @@ function SettingBtns({ setModalMode }) {
     } = settings;
 
     const handleBtnClick = e => {
-        setModalMode(e.currentTarget.dataset.value);
+        openModal(e.currentTarget.dataset.value);
     };
 
     const removeWeapon = e => {

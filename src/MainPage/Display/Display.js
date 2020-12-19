@@ -19,9 +19,9 @@ import {
 } from "helpers/consts";
 
 const AniControl = lazy(() => import("./AniControl"));
-const BaseViewer = lazy(() => import("./BaseViewer"));
-const CharaViewer = lazy(() => import("./CharaViewer"));
-const DragonViewer = lazy(() => import("./DragonViewer"));
+const BaseViewer = lazy(() => import("./viewers/BaseViewer"));
+const CharaViewer = lazy(() => import("./viewers/CharaViewer"));
+const DragonViewer = lazy(() => import("./viewers/DragonViewer"));
 
 const viewers = { base: BaseViewer, chara: CharaViewer, dragon: DragonViewer };
 const defaultFace = {

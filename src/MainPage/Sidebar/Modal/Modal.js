@@ -1,15 +1,10 @@
-import { lazy, Suspense } from "react";
 import { createPortal } from "react-dom";
 
 import Dialog from "@material-ui/core/Dialog";
 
-const WeaponSelect = lazy(() => import("WeaponSelect"));
-const CharaSelect = lazy(() => import("CharaSelect"));
-const AnimationSelect = lazy(() => import("AnimationSelect"));
-const FaceSelect = lazy(() => import("FaceSelect"));
+import ModalBody from "./ModalBody";
 
 function Modal({ mode, closeModal, handleSelect }) {
-    const content = "modal content";
     return mode
         ? createPortal(
               <Dialog
@@ -19,7 +14,11 @@ function Modal({ mode, closeModal, handleSelect }) {
                   scroll="paper"
                   PaperProps={{ classes: { root: "Modal" } }}
               >
-                  <Suspense fallback={<div>Loading</div>}>{content}</Suspense>
+                  <ModalBody
+                      mode={mode}
+                      closeModal={closeModal}
+                      handleSelect={handleSelect}
+                  />
               </Dialog>,
               document.getElementById("modal-root")
           )

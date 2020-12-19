@@ -6,7 +6,7 @@ const SettingBtns = lazy(() => import("./SettingBtns"));
 const ChainMaker = lazy(() => import("ChainMaker"));
 const AdvancedSettings = lazy(() => import("AdvancedSettings"));
 
-function SidebarBody({ setModalMode }) {
+function SidebarBody({ openModal }) {
     const {
         app: { sideContent },
     } = useContext(SettingsContext);
@@ -14,13 +14,13 @@ function SidebarBody({ setModalMode }) {
     let content;
     switch (sideContent) {
         case "settings":
-            content = <SettingBtns setModalMode={setModalMode} />;
+            content = <SettingBtns openModal={openModal} />;
             break;
         case "chainMaker":
-            content = <ChainMaker setModalMode={setModalMode} />;
+            content = <ChainMaker openModal={openModal} />;
             break;
         case "advanced":
-            content = <AdvancedSettings setModalMode={setModalMode} />;
+            content = <AdvancedSettings openModal={openModal} />;
             break;
         default:
     }

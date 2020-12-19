@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import ShareContent from "./ShareContent";
 
 import AppBar from "@material-ui/core/AppBar";

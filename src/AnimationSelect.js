@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState, useContext } from "react";
 
-import { DialogContent, DialogTitle, DialogTop } from "./CustomDialog";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import TabPanel from "./TabPanel";
 
 import AppBar from "@material-ui/core/AppBar";
