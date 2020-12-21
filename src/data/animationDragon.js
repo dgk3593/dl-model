@@ -360,6 +360,11 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210001_01_90_01" },
         { name: "Receive Gift", code: "DC_d210001_01_90_04" },
     ],
+    d210104_01: [
+        { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210002_01_90_04" },
+        { name: "Infernal Ray", code: "D21010401_60_01" },
+    ],
     d210002_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
         { name: "Receive Gift", code: "DC_d210002_01_90_04" },
