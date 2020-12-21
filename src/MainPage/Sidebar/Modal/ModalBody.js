@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 
 const CharaSelect = lazy(() => import("./CharaSelect"));
-// const WeaponSelect = lazy(() => import("WeaponSelect"));
-// const AnimationSelect = lazy(() => import("AnimationSelect"));
 // const FaceSelect = lazy(() => import("FaceSelect"));
+// const AnimationSelect = lazy(() => import("AnimationSelect"));
+// const WeaponSelect = lazy(() => import("WeaponSelect"));
 
 function ModalBody({ mode, closeModal, handleSelect }) {
     let Body = null;
