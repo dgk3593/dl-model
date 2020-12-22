@@ -42,8 +42,8 @@ function MainPage({ location }) {
     }, [location.pathname]);
 
     const updateViewportSize = () => {
-        const height = viewerRef.current.clientHeight;
         const width = viewerRef.current.clientWidth;
+        const height = viewerRef.current.clientHeight;
         setViewport({ width, height });
     };
 

@@ -2,8 +2,8 @@ import { defaultSettings } from "helpers/consts";
 import { filterObject } from "helpers/helpers";
 
 export const settingsReducer = (state, action) => {
-    const { key, value } = action;
-    switch (action.type) {
+    const { type, key, value } = action;
+    switch (type) {
         case "toggle":
             const currentValue = state[key][value];
             return {
@@ -18,11 +18,14 @@ export const settingsReducer = (state, action) => {
                 : { ...defaultSetting };
 
             return { ...state, [key]: { ...state[key], ...changes } };
+
         case "update":
             // update state[key] with values from value
             return { ...state, [key]: { ...state[key], ...value } };
+
         case "overwrite":
             return { ...state, [key]: value };
+
         default:
             return state;
     }

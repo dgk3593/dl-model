@@ -174,7 +174,7 @@ export class AniViewer extends BaseViewer {
                 document.body.removeChild(a);
             };
         }
-        this.disableInput();
+        this.disableInput("Recording");
         this.beforeCaptureAnimation?.();
         // play first animation and start capturing
         this.aniIdx = 0;

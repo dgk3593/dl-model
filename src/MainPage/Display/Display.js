@@ -31,7 +31,7 @@ const defaultFace = {
 
 function Display(props) {
     const activeViewer = useRef("");
-    const { viewport, setLoadingMsg } = props;
+    const { viewport } = props;
 
     const settings = useContext(SettingsContext);
     const {
@@ -90,13 +90,6 @@ function Display(props) {
         [dispatch]
     );
 
-    const setIsLoading = useCallback(
-        state => {
-            setLoadingMsg(state ? "Loading" : "");
-        },
-        [setLoadingMsg]
-    );
-
     useEffect(() => {
         const newViewerType = getViewerType(modelId);
         if (activeViewer.current === newViewerType) return;
@@ -125,7 +118,7 @@ function Display(props) {
             )}
             <Suspense fallback={null}>
                 <ModelViewer
-                    setIsLoading={setIsLoading}
+                    setLoadingMsg={props.setLoadingMsg}
                     toggleCapture={toggleCapture}
                     capture={settings.capture}
                     model={settings.model}

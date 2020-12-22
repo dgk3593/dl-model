@@ -95,9 +95,9 @@ class BaseViewer extends PureComponent {
         this.rendererNoAA = null;
     }
 
-    disableInput = () => this.props.setIsLoading(true);
+    disableInput = msg => this.props.setLoadingMsg(msg || "Loading");
 
-    enableInput = () => this.props.setIsLoading(false);
+    enableInput = () => this.props.setLoadingMsg("");
 
     initialize = async () => {
         this.disableInput();
