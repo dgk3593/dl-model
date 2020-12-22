@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-.MuiDialog-paper.ControlPanel {
+.MuiDialog-paper.Modal {
     margin: 1rem 0.5rem;
     min-width: 16rem;
 }
