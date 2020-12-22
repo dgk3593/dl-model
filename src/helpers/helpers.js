@@ -9,7 +9,7 @@ import {
     FS_LENGTH,
     aniModList,
     incompatibleModels,
-} from "consts";
+} from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
 import dragonAni from "data/animationDragon";

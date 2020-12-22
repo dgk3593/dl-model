@@ -3,8 +3,8 @@ import { lazy, Suspense, useContext } from "react";
 import { SettingsContext } from "context/SettingsContext";
 
 const SettingBtns = lazy(() => import("./SettingBtns"));
-const ChainMaker = lazy(() => import("ChainMaker"));
-const AdvancedSettings = lazy(() => import("AdvancedSettings"));
+const ChainMaker = lazy(() => import("./ChainMaker"));
+const AdvancedSettings = lazy(() => import("./AdvancedSettings"));
 
 function SidebarBody({ openModal }) {
     const {

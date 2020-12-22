@@ -1,6 +1,6 @@
 import Button from "@material-ui/core/Button";
 
-import "./styles/SimpleOptionList.css";
+import "./SimpleOptionList.css";
 
 function SimpleOptionList(props) {
     const { options, handleSelect } = props;

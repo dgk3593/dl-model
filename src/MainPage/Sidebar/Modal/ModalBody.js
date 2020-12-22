@@ -1,9 +1,11 @@
 import { lazy, Suspense } from "react";
 
 const CharaSelect = lazy(() => import("./CharaSelect"));
-// const FaceSelect = lazy(() => import("FaceSelect"));
-// const AnimationSelect = lazy(() => import("AnimationSelect"));
-// const WeaponSelect = lazy(() => import("WeaponSelect"));
+const FaceSelect = lazy(() => import("./FaceSelect"));
+const WeaponSelect = lazy(() => import("./WeaponSelect"));
+const AnimationSelect = lazy(() => import("./AnimationSelect"));
+const ColorSelect = lazy(() => import("./ColorSelect"));
+const Share = lazy(() => import("./Share"));
 
 function ModalBody({ mode, closeModal, handleSelect }) {
     let Body = null;
@@ -12,7 +14,27 @@ function ModalBody({ mode, closeModal, handleSelect }) {
         case "texture":
             Body = CharaSelect;
             break;
+        case "face":
+        case "eye":
+        case "mouth":
+            Body = FaceSelect;
+            break;
+        case "weapon":
+            Body = WeaponSelect;
+            break;
+        case "animation":
+        case "addAni":
+            Body = AnimationSelect;
+            break;
+        case "background":
+        case "outlineColor":
+            Body = ColorSelect;
+            break;
+        case "share":
+            Body = Share;
+            break;
         default:
+            Body = mode.includes("-") ? ColorSelect : null;
     }
 
     return (

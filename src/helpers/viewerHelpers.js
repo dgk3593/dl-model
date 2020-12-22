@@ -2,17 +2,17 @@ import * as THREE from "three";
 import { fbxSource } from "App";
 import { v4 as uuid } from "uuid";
 
-import { idxOffsets } from "./consts";
+import { idxOffsets } from "helpers/consts";
 import textureOffsets from "data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { callbackOnEach, getUpdated } from "./helpers";
+import { callbackOnEach, getUpdated } from "helpers/helpers";
 import {
     matCommonParams,
     matExtraParams,
     matColorParams,
     needsUpdateParams,
-} from "./consts";
+} from "helpers/consts";
 
 import outlineFragShader from "shader/outlineFragShader";
 import outlineVertShader from "shader/outlineVertShader";
