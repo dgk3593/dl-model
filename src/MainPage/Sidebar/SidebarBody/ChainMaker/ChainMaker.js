@@ -24,7 +24,7 @@ function ChainMaker({ openModal }) {
     };
 
     const close = () => {
-        updateSettings("app", { sideContent: "settings" });
+        updateSettings("app", { sidebarContent: "settings" });
     };
 
     const applyCode = code => {

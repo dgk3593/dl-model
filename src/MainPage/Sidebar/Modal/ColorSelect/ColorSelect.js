@@ -14,22 +14,17 @@ const ChromePicker = lazy(() =>
 
 const titles = {
     background: "Background Settings",
-    outlineColor: "Outline Color",
+    "outline-color": "Outline Color",
 };
 
 function ColorSelect({ closeModal, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
     const title = titles[mode] || "Pick a Color";
-    let initColor,
-        commonColor = commonBG;
+    let initColor;
     switch (mode) {
         case "background":
             initColor = settings.scene.background;
-            break;
-        case "outlineColor":
-            initColor = settings.outline.color;
-            commonColor = {};
             break;
         default:
             const [key, subkey] = mode.split("-");
@@ -56,10 +51,6 @@ function ColorSelect({ closeModal, mode }) {
             case "background":
                 action.key = "scene";
                 action.value = { background: colorToSet };
-                break;
-            case "outlineColor":
-                action.key = "outline";
-                action.value = { color: colorToSet };
                 break;
             default:
                 const [key, subkey] = mode.split("-");
@@ -89,7 +80,7 @@ function ColorSelect({ closeModal, mode }) {
         setColor(value);
     };
 
-    const commonBGBtn = Object.keys(commonColor).map(color => (
+    const commonBGBtn = Object.keys(commonBG).map(color => (
         <Button
             onClick={setNewColor}
             style={{

@@ -90,7 +90,7 @@ function OutlineSettings({ openModal, openAtStart }) {
                             backgroundColor: color,
                             color: getTextColor(color),
                         }}
-                        data-value="outlineColor"
+                        data-value="outline-color"
                         onClick={handleBtnClick}
                     >
                         {color}

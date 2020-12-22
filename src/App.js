@@ -1,9 +1,9 @@
 import { SettingsProvider } from "context/SettingsContext";
 
 import { Route, HashRouter } from "react-router-dom";
-import MainPage from "./MainPage/MainPage";
+import MainPage from "MainPage";
 
-import "./styles/App.css";
+import "styles/App.css";
 
 function App() {
     return (

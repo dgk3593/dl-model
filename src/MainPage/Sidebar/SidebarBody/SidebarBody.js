@@ -6,26 +6,24 @@ const SettingBtns = lazy(() => import("./SettingBtns"));
 const ChainMaker = lazy(() => import("./ChainMaker"));
 const AdvancedSettings = lazy(() => import("./AdvancedSettings"));
 
+const contentMap = {
+    settings: SettingBtns,
+    chainMaker: ChainMaker,
+    advanced: AdvancedSettings,
+};
+
 function SidebarBody({ openModal }) {
     const {
-        app: { sideContent },
+        app: { sidebarContent },
     } = useContext(SettingsContext);
 
-    let content;
-    switch (sideContent) {
-        case "settings":
-            content = <SettingBtns openModal={openModal} />;
-            break;
-        case "chainMaker":
-            content = <ChainMaker openModal={openModal} />;
-            break;
-        case "advanced":
-            content = <AdvancedSettings openModal={openModal} />;
-            break;
-        default:
-    }
+    const Body = contentMap[sidebarContent];
 
-    return <Suspense fallback={<div>Loading</div>}>{content}</Suspense>;
+    return (
+        <Suspense fallback={<div>Loading</div>}>
+            <Body openModal={openModal} />;
+        </Suspense>
+    );
 }
 
 export default SidebarBody;

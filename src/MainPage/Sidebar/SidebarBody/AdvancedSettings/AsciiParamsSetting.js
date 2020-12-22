@@ -9,7 +9,7 @@ import { DispatchContext, SettingsContext } from "context/SettingsContext";
 import { getTextColor } from "helpers/helpers";
 
 function AsciiParamsSetting(props) {
-    const { openControl } = props;
+    const { openModal } = props;
 
     const {
         ascii: { invert, color, bgColor, charSet },
@@ -38,7 +38,7 @@ function AsciiParamsSetting(props) {
     };
 
     const handleColorBtnClick = e => {
-        openControl(e.currentTarget.dataset.value);
+        openModal(e.currentTarget.dataset.value);
     };
 
     const options = asciiSet.map((_, i) => (

@@ -21,7 +21,7 @@ function AdvancedSettings({ openModal }) {
         const action = {
             type: "update",
             key: "app",
-            value: { sideContent: "settings" },
+            value: { sidebarContent: "settings" },
         };
         dispatch(action);
     };

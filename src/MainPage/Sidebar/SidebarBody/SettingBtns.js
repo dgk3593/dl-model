@@ -67,7 +67,7 @@ function SettingBtns({ openModal }) {
         const action = {
             type: "update",
             key: "app",
-            value: { sideContent: value },
+            value: { sidebarContent: value },
         };
         dispatch(action);
     };

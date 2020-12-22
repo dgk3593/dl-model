@@ -160,7 +160,7 @@ export const defaultSettings = {
         timeScale: 1,
     },
     app: {
-        sideContent: "settings",
+        sidebarContent: "settings",
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,

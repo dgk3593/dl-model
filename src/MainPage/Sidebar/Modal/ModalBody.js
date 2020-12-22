@@ -27,7 +27,6 @@ function ModalBody({ mode, closeModal, handleSelect }) {
             Body = AnimationSelect;
             break;
         case "background":
-        case "outlineColor":
             Body = ColorSelect;
             break;
         case "share":
