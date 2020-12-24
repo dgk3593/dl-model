@@ -3,8 +3,7 @@ import { lazy, Suspense } from "react";
 import Button from "@material-ui/core/Button";
 import Slider from "@material-ui/core/Slider";
 
-import { getTextColor } from "helpers/helpers";
-
+import ColorButton from "components/ColorButton";
 const CoordinatePicker = lazy(() => import("components/CoordinatePicker"));
 
 function LightParamsSetting(props) {
@@ -30,18 +29,15 @@ function LightParamsSetting(props) {
                 >
                     {enable ? "ON" : "OFF"}
                 </Button>
+
                 <div className="AdvancedSettingsGroup-optionName">Color</div>
-                <Button
+                <ColorButton
                     fullWidth
-                    style={{
-                        backgroundColor: color,
-                        color: getTextColor(color),
-                    }}
-                    data-value={`Lights-${id}`}
+                    value={id}
                     onClick={colorBtnClick}
-                >
-                    {color}
-                </Button>
+                    color={color}
+                />
+
                 <div className="AdvancedSettingsGroup-optionName">{`Intensity: ${intensity}`}</div>
                 <div className="AdvancedSettingsGroup-slider">
                     <Slider
@@ -54,6 +50,7 @@ function LightParamsSetting(props) {
                     />
                 </div>
             </div>
+
             {type !== "Ambient" && (
                 <div style={{ width: "100%" }}>
                     <Suspense fallback={null}>

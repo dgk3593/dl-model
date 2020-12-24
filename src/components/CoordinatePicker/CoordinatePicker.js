@@ -13,9 +13,9 @@ function CoordinatePicker({ value, updateCoordinate }) {
         <div className="CoordinatePicker">
             {["x", "y", "z"].map((axis, i) => (
                 <TextField
-                    onChange={handleChange}
-                    label={axis}
                     key={axis}
+                    label={axis}
+                    onChange={handleChange}
                     size="small"
                     margin="dense"
                     variant="outlined"

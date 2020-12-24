@@ -3,10 +3,11 @@ import { useContext } from "react";
 import Slider from "@material-ui/core/Slider";
 import Button from "@material-ui/core/Button";
 
+import ColorButton from "components/ColorButton";
+
 import SettingsGroup from "./AdvancedSettingsGroup";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
-import { getTextColor } from "helpers/helpers";
 import "./styles/AdvancedSettingsGroup.css";
 
 function OutlineSettings({ openModal, openAtStart }) {
@@ -29,10 +30,6 @@ function OutlineSettings({ openModal, openAtStart }) {
             value: { [key]: newValue },
         };
         dispatch(action);
-    };
-
-    const handleBtnClick = e => {
-        openModal(e.currentTarget.dataset.value);
     };
 
     const resetSettings = () => {
@@ -71,6 +68,7 @@ function OutlineSettings({ openModal, openAtStart }) {
                         onChange={handleValueChange("size")}
                     />
                 </div>
+
                 <div className="AdvancedSettingsGroup-optionName">
                     Opacity: {opacity * 100}%
                 </div>
@@ -83,19 +81,15 @@ function OutlineSettings({ openModal, openAtStart }) {
                         onChange={handleValueChange("opacity")}
                     />
                 </div>
+
                 <div className="AdvancedSettingsGroup-optionName">Color</div>
                 <div>
-                    <Button
+                    <ColorButton
                         fullWidth
-                        style={{
-                            backgroundColor: color,
-                            color: getTextColor(color),
-                        }}
-                        data-value="outline-color"
-                        onClick={handleBtnClick}
-                    >
-                        {color}
-                    </Button>
+                        color={color}
+                        value="outline-color"
+                        onClick={openModal}
+                    />
                 </div>
             </div>
             <div className="AdvancedSettingsGroup-reset">

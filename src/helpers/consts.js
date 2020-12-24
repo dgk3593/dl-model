@@ -336,7 +336,7 @@ export const incompatibleModels = new Set([
     "c100041_01",
 ]);
 
-export const commonBG = {
+export const commonColors = {
     green: "#00ff00",
     black: "#000000",
     grey: "#cccccc",

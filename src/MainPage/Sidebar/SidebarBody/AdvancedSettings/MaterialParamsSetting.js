@@ -5,12 +5,13 @@ import Slider from "@material-ui/core/Slider";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
+import ColorButton from "components/ColorButton";
+
 import {
     matCommonParams as commonParams,
     matExtraParams as extraParams,
     matParamsDetails as paramsDetails,
 } from "helpers/consts";
-import { getTextColor } from "helpers/helpers";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
@@ -45,10 +46,6 @@ function MaterialParamsSetting({ materialType: matType, openModal }) {
         updateMatParam(key, newValue);
     };
 
-    const handleColorBtnClick = e => {
-        openModal(e.currentTarget.dataset.value);
-    };
-
     const handleSelectChange = key => e => {
         updateMatParam(key, e.target.value);
     };
@@ -56,33 +53,26 @@ function MaterialParamsSetting({ materialType: matType, openModal }) {
     const createToggleButton = name => {
         const currentValue = currentSettings[name];
         return (
-            <div>
-                <Button
-                    value={name}
-                    fullWidth
-                    variant="contained"
-                    onClick={toggleSetting}
-                >
-                    {currentValue ? "ON" : "OFF"}
-                </Button>
-            </div>
+            <Button
+                value={name}
+                fullWidth
+                variant="contained"
+                onClick={toggleSetting}
+            >
+                {currentValue ? "ON" : "OFF"}
+            </Button>
         );
     };
 
     const createColorButton = name => {
         const color = currentSettings[name];
         return (
-            <Button
+            <ColorButton
                 fullWidth
-                style={{
-                    backgroundColor: color,
-                    color: getTextColor(color),
-                }}
-                data-value={`material-${name}`}
-                onClick={handleColorBtnClick}
-            >
-                {color}
-            </Button>
+                color={color}
+                value={`material-${name}`}
+                onClick={openModal}
+            />
         );
     };
 
@@ -124,7 +114,7 @@ function MaterialParamsSetting({ materialType: matType, openModal }) {
     };
 
     const generateControl = paramName => {
-        const type = paramsDetails[paramName].type;
+        const { type } = paramsDetails[paramName];
         switch (type) {
             case "boolean":
                 return createToggleButton(paramName);
@@ -141,16 +131,14 @@ function MaterialParamsSetting({ materialType: matType, openModal }) {
     };
 
     const generateParamText = param => {
-        const type = paramsDetails[param].type;
+        const { type, name } = paramsDetails[param];
         switch (type) {
             case "number":
-                return `${paramsDetails[param].name}: ${currentSettings[param]}`;
+                return `${name}: ${currentSettings[param]}`;
             case "percentage":
-                return `${paramsDetails[param].name}: ${~~(
-                    currentSettings[param] * 100
-                )}%`;
+                return `${name}: ${~~(currentSettings[param] * 100)}%`;
             default:
-                return paramsDetails[param].name;
+                return name;
         }
     };
 

@@ -28,12 +28,9 @@ function LightSettings({ openModal, openAtStart }) {
     };
 
     const updateIntensity = id => (_, value) => {
-        const newLights = currentLights.map(light => {
-            if (light.id === id) {
-                return { ...light, intensity: value };
-            }
-            return light;
-        });
+        const newLights = currentLights.map(light =>
+            light.id === id ? { ...light, intensity: value } : light
+        );
         overwriteLights(newLights);
     };
 
@@ -48,18 +45,21 @@ function LightSettings({ openModal, openAtStart }) {
         const { id: targetId } = event.currentTarget.dataset;
         const targetLight = currentLights.find(({ id }) => id === targetId);
         const currentState = targetLight.enable;
-        const newLights = currentLights.map(light => {
-            if (light.id === targetId) {
-                return { ...light, enable: !currentState };
-            }
-            return light;
-        });
+        const newLights = currentLights.map(light =>
+            light.id === targetId ? { ...light, enable: !currentState } : light
+        );
         overwriteLights(newLights);
     };
 
-    const colorBtnClick = event => {
-        const { value: mode } = event.currentTarget.dataset;
-        openModal(mode);
+    const colorBtnClick = id => {
+        const mode = `Lights-${id}`;
+        const handleSelect = color => {
+            const newLights = currentLights.map(light =>
+                light.id === id ? { ...light, color } : light
+            );
+            overwriteLights(newLights);
+        };
+        openModal(mode, handleSelect);
     };
 
     const titleButton = (
@@ -74,24 +74,18 @@ function LightSettings({ openModal, openAtStart }) {
             titleButton={titleButton}
             openAtStart={openAtStart}
         >
-            {currentLights.map(({ id, ...params }) => {
-                return (
-                    <Suspense key={id} fallback={<div>Loading</div>}>
-                        <LightParamsSetting
-                            id={id}
-                            toggleLight={toggleLight}
-                            colorBtnClick={colorBtnClick}
-                            updatePosition={
-                                params.type !== "Ambient"
-                                    ? updatePosition(id)
-                                    : null
-                            }
-                            updateIntensity={updateIntensity(id)}
-                            {...params}
-                        />
-                    </Suspense>
-                );
-            })}
+            {currentLights.map(({ id, ...params }) => (
+                <Suspense key={id} fallback={<div>Loading</div>}>
+                    <LightParamsSetting
+                        id={id}
+                        toggleLight={toggleLight}
+                        colorBtnClick={colorBtnClick}
+                        updatePosition={updatePosition(id)}
+                        updateIntensity={updateIntensity(id)}
+                        {...params}
+                    />
+                </Suspense>
+            ))}
         </SettingsGroup>
     );
 }

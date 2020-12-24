@@ -1,16 +1,15 @@
 import { useContext } from "react";
+
+import { DispatchContext, SettingsContext } from "context/SettingsContext";
 import { asciiSet } from "helpers/consts";
 
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
-import { getTextColor } from "helpers/helpers";
+import ColorButton from "components/ColorButton";
 
-function AsciiParamsSetting(props) {
-    const { openModal } = props;
-
+function AsciiParamsSetting({ openModal }) {
     const {
         ascii: { invert, color, bgColor, charSet },
     } = useContext(SettingsContext);
@@ -37,10 +36,6 @@ function AsciiParamsSetting(props) {
         dispatch(action);
     };
 
-    const handleColorBtnClick = e => {
-        openModal(e.currentTarget.dataset.value);
-    };
-
     const options = asciiSet.map((_, i) => (
         <MenuItem value={i} key={i}>
             {`Set ${i}`}
@@ -53,6 +48,7 @@ function AsciiParamsSetting(props) {
             <Button fullWidth variant="contained" onClick={toggleInvert}>
                 {invert ? "ON" : "OFF"}
             </Button>
+
             <div className="AdvancedSettingsGroup-optionName">
                 Character Set
             </div>
@@ -61,30 +57,22 @@ function AsciiParamsSetting(props) {
                     {options}
                 </Select>
             </div>
+
             <div className="AdvancedSettingsGroup-optionName">Color</div>
-            <Button
+            <ColorButton
                 fullWidth
-                style={{
-                    backgroundColor: color,
-                    color: getTextColor(color),
-                }}
-                data-value="ascii-color"
-                onClick={handleColorBtnClick}
-            >
-                {color}
-            </Button>
+                color={color}
+                value="ascii-color"
+                onClick={openModal}
+            />
+
             <div className="AdvancedSettingsGroup-optionName">Background</div>
-            <Button
+            <ColorButton
                 fullWidth
-                style={{
-                    backgroundColor: bgColor,
-                    color: getTextColor(bgColor),
-                }}
-                data-value="ascii-bgColor"
-                onClick={handleColorBtnClick}
-            >
-                {bgColor}
-            </Button>
+                color={bgColor}
+                value="ascii-bgColor"
+                onClick={openModal}
+            />
         </>
     );
 }
