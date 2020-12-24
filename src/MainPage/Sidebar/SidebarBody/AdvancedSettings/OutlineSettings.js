@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import Slider from "@material-ui/core/Slider";
 import Button from "@material-ui/core/Button";
+
 import SettingsGroup from "./AdvancedSettingsGroup";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";

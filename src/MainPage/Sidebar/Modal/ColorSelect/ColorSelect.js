@@ -21,6 +21,7 @@ function ColorSelect({ closeModal, mode }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
     const title = titles[mode] || "Pick a Color";
+
     let initColor;
     switch (mode) {
         case "background":
@@ -29,8 +30,9 @@ function ColorSelect({ closeModal, mode }) {
         default:
             const [key, subkey] = mode.split("-");
             if (key === "Lights") {
+                const lightId = subkey;
                 const currentLight = settings.lights.find(
-                    ({ id }) => id === subkey
+                    ({ id }) => id === lightId
                 );
                 initColor = currentLight.color;
                 break;

@@ -9,12 +9,14 @@ import Close from "@material-ui/icons/Close";
 import { fbxSource } from "App";
 import faceOffsetFix from "data/face_offset";
 
-function ChainAniFaceDetails({
-    change: { id, time, eyeIdx, mouthIdx },
-    deleteFaceChange,
-    handleChange,
-    handleClick,
-}) {
+function ChainAniFaceDetails(props) {
+    const {
+        change: { id, time, eyeIdx, mouthIdx },
+        deleteFaceChange,
+        handleChange,
+        handleClick,
+    } = props;
+
     const {
         model: { eyeTexture, mouthTexture },
     } = useContext(SettingsContext);

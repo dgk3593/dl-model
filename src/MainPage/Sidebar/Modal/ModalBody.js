@@ -11,7 +11,6 @@ function ModalBody({ mode, closeModal, handleSelect }) {
     let Body = null;
     switch (mode) {
         case "model":
-        case "texture":
             Body = CharaSelect;
             break;
         case "face":
@@ -23,7 +22,6 @@ function ModalBody({ mode, closeModal, handleSelect }) {
             Body = WeaponSelect;
             break;
         case "animation":
-        case "addAni":
             Body = AnimationSelect;
             break;
         case "background":

@@ -14,45 +14,33 @@ import GameAni from "./GameAni";
 const ExtraAni = lazy(() => import("./ExtraAni"));
 
 function AnimationSelect(props) {
-    const { closeModal } = props;
+    const { closeModal, handleSelect } = props;
     const [aniSet, setAniSet] = useState(0);
     const dispatch = useContext(DispatchContext);
     const {
-        chainMaker: { chain: currentChain },
         app: { sidebarContent },
     } = useContext(SettingsContext);
     const chainMode = sidebarContent === "chainMaker";
 
-    const handleSelect = event => {
+    const updateSettings = (key, value) => {
+        dispatch({ type: "update", key, value });
+    };
+
+    const defaultAniHandler = (aniCode, name) => {
+        // Set Animation
+        updateSettings("animation", { code: aniCode });
+        // Reinitialize Chain Maker's chain
+        const chainList = chainCodeToList(aniCode, name);
+        updateSettings("chainMaker", { chain: chainList });
+    };
+
+    const aniHandler = handleSelect || defaultAniHandler;
+
+    const handleAniSelect = event => {
         const aniCode = event.currentTarget.dataset.value;
         const name = event.currentTarget.dataset.name;
-        if (!chainMode) {
-            // Set Animation
-            let action = {
-                type: "update",
-                key: "animation",
-                value: { code: aniCode },
-            };
-            dispatch(action);
-            // Reinitialize Chain Maker's chain
-            const chainList = chainCodeToList(aniCode, name);
-            action.key = "chainMaker";
-            action.value = { chain: chainList };
-            dispatch(action);
 
-            // Close Animation Select
-            closeModal();
-            return;
-        }
-        // Add to chain
-        const chainList = chainCodeToList(aniCode, name);
-        const chain = [...currentChain, ...chainList];
-        const action = {
-            type: "update",
-            key: "chainMaker",
-            value: { chain },
-        };
-        dispatch(action);
+        aniHandler(aniCode, name);
         closeModal();
     };
 
@@ -76,10 +64,10 @@ function AnimationSelect(props) {
             <DialogContent dividers className="AnimationSelect-content">
                 <Suspense fallback={<div>Loading</div>}>
                     <TabPanel value={aniSet} index={0}>
-                        <GameAni handleSelect={handleSelect} />
+                        <GameAni handleSelect={handleAniSelect} />
                     </TabPanel>
                     <TabPanel value={aniSet} index={1}>
-                        <ExtraAni handleSelect={handleSelect} />
+                        <ExtraAni handleSelect={handleAniSelect} />
                     </TabPanel>
                 </Suspense>
             </DialogContent>

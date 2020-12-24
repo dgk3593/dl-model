@@ -7,6 +7,7 @@ import Close from "@material-ui/icons/Close";
 import Button from "@material-ui/core/Button";
 
 import { generateChainCode } from "helpers/helpers";
+import { chainCodeToList } from "helpers/viewerHelpers";
 
 import "./styles/ChainMaker.css";
 
@@ -22,6 +23,8 @@ function ChainMaker({ openModal }) {
         const action = { type: "update", key, value };
         dispatch(action);
     };
+
+    const setChain = chain => updateSettings("chainMaker", { chain });
 
     const close = () => {
         updateSettings("app", { sidebarContent: "settings" });
@@ -44,7 +47,7 @@ function ChainMaker({ openModal }) {
 
         const { id } = event.currentTarget;
         const newChain = chain.filter(ani => ani.id !== id);
-        updateSettings("chainMaker", { chain: newChain });
+        setChain(newChain);
     };
 
     const playAll = () => {
@@ -53,12 +56,17 @@ function ChainMaker({ openModal }) {
     };
 
     const addAniToList = () => {
-        openModal("addAni");
+        const handler = (aniCode, name) => {
+            const chainList = chainCodeToList(aniCode, name);
+            const newChain = [...chain, ...chainList];
+            setChain(newChain);
+        };
+        openModal("animation", handler);
     };
 
     const updateAniInChain = (id, newAni) => {
         const newChain = chain.map(ani => (ani.id === id ? newAni : ani));
-        updateSettings("chainMaker", { chain: newChain });
+        setChain(newChain);
     };
 
     return (

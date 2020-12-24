@@ -21,7 +21,7 @@ function SidebarBody({ openModal }) {
 
     return (
         <Suspense fallback={<div>Loading</div>}>
-            <Body openModal={openModal} />;
+            <Body openModal={openModal} />
         </Suspense>
     );
 }
