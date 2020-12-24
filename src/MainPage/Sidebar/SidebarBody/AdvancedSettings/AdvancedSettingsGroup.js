@@ -8,12 +8,7 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 import "./styles/AdvancedSettingsGroup.css";
 
-function OutlineSettings({
-    children,
-    openAtStart = false,
-    title,
-    titleButton,
-}) {
+function SettingsGroup({ children, openAtStart = false, title, titleButton }) {
     const [expand, toggleExpand] = useToggleState(openAtStart);
 
     return (
@@ -43,4 +38,4 @@ function OutlineSettings({
     );
 }
 
-export default OutlineSettings;
+export default SettingsGroup;
