@@ -11,6 +11,7 @@ function ModalBody({ mode, closeModal, handleSelect }) {
     let Body = null;
     switch (mode) {
         case "model":
+        case "texture":
             Body = CharaSelect;
             break;
         case "face":
