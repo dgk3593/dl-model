@@ -197,12 +197,6 @@ export const multiCondFilter = (input, filters) => {
     });
 };
 
-export const complementaryColor = color => {
-    const hexColor = color.replace("#", "0x");
-
-    return `#${("000000" + ("0xffffff" ^ hexColor).toString(16)).slice(-6)}`;
-};
-
 const hexToRgb = hex => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
