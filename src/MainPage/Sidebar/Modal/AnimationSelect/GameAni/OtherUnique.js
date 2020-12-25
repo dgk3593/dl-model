@@ -11,10 +11,6 @@ import "./styles/OtherUnique.css";
 function OtherUnique({ handleSelect }) {
     const [weapon, setWeapon] = useState("Sword");
 
-    const handleClick = event => {
-        setWeapon(event.currentTarget.dataset.value);
-    };
-
     const disabled = WEAPON_LIST.filter(weapon => !otherUnique[weapon]);
 
     const charaList = Object.keys(otherUnique[weapon]);
@@ -55,7 +51,7 @@ function OtherUnique({ handleSelect }) {
                 <WeaponSelector
                     disabled={disabled}
                     value={weapon}
-                    handleClick={handleClick}
+                    onClick={setWeapon}
                 />
             </div>
             <div className="OtherUnique-content">{content}</div>

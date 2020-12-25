@@ -1,27 +1,10 @@
-import "./styles/GunModeSelector.css";
+import Selector from "./Selector";
 
-const displayTexts = {
-    A: "Long Range",
-    B: "Short Range",
-    C: "Rapid-Fire",
-};
+import { gunModeExtra } from "data/animationWeaponExtra";
 
-function GunModeSelector({ value, handleClick }) {
-    const options = ["A", "B", "C"];
-    const selectors = options.map(option => (
-        <div
-            data-name="gunMode"
-            data-value={option}
-            key={option}
-            onClick={handleClick}
-            className={`GunModeSelector-GunMode ${
-                value === option ? "selected" : ""
-            }`}
-        >
-            {displayTexts[option]}
-        </div>
-    ));
-    return <div className="GunModeSelector">{selectors}</div>;
+function GunModeSelector({ value, onClick }) {
+    const options = Object.keys(gunModeExtra);
+    return <Selector value={value} options={options} onClick={onClick} />;
 }
 
 export default GunModeSelector;

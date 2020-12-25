@@ -1,19 +1,8 @@
-import "./styles/Selector.css";
+import Selector from "./Selector";
 
-function GenderSelector({ value, handleClick }) {
+function GenderSelector({ value, onClick }) {
     const options = ["Male", "Female"];
-    const selectors = options.map(option => (
-        <div
-            data-name="gender"
-            data-value={option}
-            key={option}
-            onClick={handleClick}
-            className={`Selector-Item ${value === option ? "selected" : ""}`}
-        >
-            {option}
-        </div>
-    ));
-    return <div className="Selector">{selectors}</div>;
+    return <Selector value={value} options={options} onClick={onClick} />;
 }
 
 export default GenderSelector;

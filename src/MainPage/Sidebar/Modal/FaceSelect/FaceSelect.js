@@ -12,7 +12,7 @@ const FacePartSelector = lazy(() =>
 );
 const Button = lazy(() => import("@material-ui/core/Button"));
 const titles = {
-    face: "Select a Face",
+    face: "Select Face",
     eye: "Select Eyes",
     mouth: "Select Mouth",
 };
@@ -25,11 +25,6 @@ function FaceSelect(props) {
     } = useContext(SettingsContext);
 
     const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
-
-    const changeFacePart = event => {
-        const mode = event.currentTarget.dataset.value;
-        setFacePart(mode);
-    };
 
     const eyeOffsetFix = faceOffsetFix[eyeTexture] || { x: 0, y: 0 };
     const mouthOffsetFix = faceOffsetFix[mouthTexture] || { x: 0, y: 0 };
@@ -102,7 +97,7 @@ function FaceSelect(props) {
                     {mode === "face" && (
                         <FacePartSelector
                             value={facePart}
-                            handleClick={changeFacePart}
+                            onClick={setFacePart}
                         />
                     )}
                 </Suspense>

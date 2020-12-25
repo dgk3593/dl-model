@@ -11,9 +11,6 @@ import "./styles/UniqueByWeapon.css";
 function GenericSkills({ handleSelect }) {
     const [weapon, setWeapon] = useState("Sword");
 
-    const handleClick = event => {
-        setWeapon(event.currentTarget.dataset.value);
-    };
     const disabled = WEAPON_LIST.filter(weapon => !genericSkills[weapon]);
 
     return (
@@ -22,7 +19,7 @@ function GenericSkills({ handleSelect }) {
                 <WeaponSelector
                     disabled={disabled}
                     value={weapon}
-                    handleClick={handleClick}
+                    onClick={setWeapon}
                 />
             </div>
             <div className="WeaponAni-Btns">

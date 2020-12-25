@@ -33,7 +33,7 @@ function CharaSelect({ closeModal, mode }) {
 
     const [charaSet, setCharaSet] = useState(0);
     const [facePart, setFacePart] = useState("both");
-    const [filterState, toggleFilter, resetFilter] = useFilterGroups(
+    const [filterState, toggleFilter, resetFilters] = useFilterGroups(
         ADV_FILTERS
     );
 
@@ -43,11 +43,6 @@ function CharaSelect({ closeModal, mode }) {
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;
         toggleFilter(group, name);
-    };
-
-    const changeFacePart = event => {
-        const mode = event.currentTarget.dataset.value;
-        setFacePart(mode);
     };
 
     const handleSelect = event => {
@@ -105,7 +100,7 @@ function CharaSelect({ closeModal, mode }) {
                             filterList={ADV_FILTERS}
                             groupState={filterState}
                             handleToggle={handleToggle}
-                            resetFilters={resetFilter}
+                            resetFilters={resetFilters}
                         />
                     </Suspense>
                 )}
@@ -116,7 +111,7 @@ function CharaSelect({ closeModal, mode }) {
                     <Suspense fallback={null}>
                         <FacePartSelector
                             value={facePart}
-                            handleClick={changeFacePart}
+                            onClick={setFacePart}
                         />
                     </Suspense>
                 )}

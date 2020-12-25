@@ -24,22 +24,19 @@ function WeaponAni({ handleSelect }) {
     const [params, setParams] = useState({
         weapon: "Sword",
         gender: "Male",
-        gunMode: "A",
+        gunMode: "Long Range",
     });
-    const { weapon, gender } = params;
+    const { weapon, gender, gunMode } = params;
 
-    const handleClick = event => {
-        const { name, value } = event.currentTarget.dataset;
-        setParams(oldParams => {
-            return { ...oldParams, [name]: value };
-        });
+    const set = key => value => {
+        setParams(oldParams => ({ ...oldParams, [key]: value }));
     };
 
     return (
         <div className="WeaponAni">
             <div className="WeaponAni-Selectors">
-                <WeaponSelector value={weapon} handleClick={handleClick} />
-                <GenderSelector value={gender} handleClick={handleClick} />
+                <WeaponSelector value={weapon} onClick={set("weapon")} />
+                <GenderSelector value={gender} onClick={set("gender")} />
             </div>
             <hr />
             <div className="WeaponAni-Btns">
@@ -112,8 +109,8 @@ function WeaponAni({ handleSelect }) {
                 <>
                     <div className="WeaponAni-Selectors">
                         <GunModeSelector
-                            value={params.gunMode}
-                            handleClick={handleClick}
+                            value={gunMode}
+                            onClick={set("gunMode")}
                         />
                     </div>
                     <div className="WeaponAni-Btns">

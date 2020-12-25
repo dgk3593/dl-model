@@ -10,10 +10,6 @@ import "./styles/UniqueByWeapon.css";
 function UniqueByWeapon({ data, groupName, handleSelect }) {
     const [weapon, setWeapon] = useState("Sword");
 
-    const handleClick = event => {
-        setWeapon(event.currentTarget.dataset.value);
-    };
-
     useEffect(() => {
         const initWeapon = Object.keys(data)[0];
         setWeapon(initWeapon);
@@ -40,7 +36,7 @@ function UniqueByWeapon({ data, groupName, handleSelect }) {
                 <WeaponSelector
                     disabled={disabled}
                     value={weapon}
-                    handleClick={handleClick}
+                    onClick={setWeapon}
                 />
             </div>
             <hr />

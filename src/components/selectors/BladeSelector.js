@@ -1,28 +1,8 @@
-import "./styles/Selector.css";
+import Selector from "./Selector";
 
-const BladeSelector = ({ value, handleClick }) => {
-    return (
-        <div className="Selector">
-            <div
-                data-value="Blade"
-                onClick={handleClick}
-                className={`Selector-Item ${
-                    value === "Blade" ? "selected" : ""
-                }`}
-            >
-                Blade
-            </div>
-            <div
-                data-value="Sheath"
-                onClick={handleClick}
-                className={`Selector-Item ${
-                    value === "Sheath" ? "selected" : ""
-                }`}
-            >
-                Sheath
-            </div>
-        </div>
-    );
-};
+function BladeSelector({ value, onClick }) {
+    const options = ["Blade", "Sheath"];
+    return <Selector value={value} options={options} onClick={onClick} />;
+}
 
 export default BladeSelector;

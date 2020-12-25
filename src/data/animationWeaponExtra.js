@@ -46,18 +46,15 @@ const weaponExtra = {
 };
 
 export const gunModeExtra = {
-    A: {
-        // Long Range
+    "Long Range": {
         Combo: "GUN_CMB_A_01",
         "Force Strike": "GUN_CHR_A_01>GUN_CHR_A_02>GUN_CHR_A_03",
     },
-    B: {
-        // Short Range
+    "Short Range": {
         Combo: "GUN_CMB_B_01",
         "Force Strike": "GUN_CHR_B_01>GUN_CHR_B_02>GUN_CHR_B_03",
     },
-    C: {
-        // Burst
+    "Rapid-Fire": {
         Combo: "GUN_CMB_C_01>GUN_CMB_C_02>GUN_CMB_C_03",
         "Force Strike": "GUN_CHR_C_01>GUN_CHR_C_02>GUN_CHR_C_03",
     },

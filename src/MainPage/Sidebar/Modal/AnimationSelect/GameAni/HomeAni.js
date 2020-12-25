@@ -9,9 +9,6 @@ import "./styles/HomeAni.css";
 
 function HomeAni({ handleSelect }) {
     const [gender, setGender] = useState("Male");
-    const handleClick = event => {
-        setGender(event.currentTarget.dataset.value);
-    };
     return (
         <div className="HomeAni">
             <h3 className="HomeAni-groupTitle">Common Animation</h3>
@@ -20,7 +17,7 @@ function HomeAni({ handleSelect }) {
             </div>
             <hr />
             <h3 className="HomeAni-groupTitle">Gender Specific</h3>
-            <GenderSelector value={gender} handleClick={handleClick} />
+            <GenderSelector value={gender} onClick={setGender} />
             <div className="HomeAni-Btns">
                 {aniButtonsFromObject(
                     homeAnimation[gender],

@@ -61,15 +61,9 @@ function WeaponBtn({ wid, iconName, name }) {
         </div>
     );
 
-    const changeBladeMode = event => {
-        event.stopPropagation();
-        const mode = event.currentTarget.dataset.value;
-        setBladeMode(mode);
-    };
-
     const bladeModeSelect = weaponIsBlade && (
         <Suspense fallback={null}>
-            <BladeSelector value={bladeMode} handleClick={changeBladeMode} />
+            <BladeSelector value={bladeMode} onClick={setBladeMode} />
         </Suspense>
     );
 

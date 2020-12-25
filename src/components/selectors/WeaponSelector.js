@@ -2,7 +2,12 @@ import { WEAPON_LIST } from "helpers/consts";
 
 import "./styles/WeaponSelector.css";
 
-function WeaponSelector({ value, disabled, handleClick }) {
+function WeaponSelector({ value, disabled, onClick }) {
+    const handleClick = event => {
+        const { value } = event.currentTarget.dataset;
+        onClick(value);
+    };
+
     const weapons = WEAPON_LIST;
     const buttons = weapons.map(weapon => {
         const isDisabled = disabled && disabled.includes(weapon);
@@ -12,7 +17,6 @@ function WeaponSelector({ value, disabled, handleClick }) {
                 className={`WeaponSelector-GlowRadio ${
                     isDisabled && "disabled"
                 }`}
-                data-name="weapon"
                 data-value={weapon}
                 key={weapon}
                 onClick={!isDisabled ? handleClick : null}

@@ -18,7 +18,7 @@ function useFilterGroups(groups) {
     const [filterState, setFilterState] = useState(initState);
 
     // reset everything to initial values
-    const resetFilter = () => setFilterState(initState);
+    const resetFilters = () => setFilterState(initState);
 
     // toggle value of groupState[groupName][eleName]
     const toggleFilter = (groupName, eleName) => {
@@ -37,7 +37,7 @@ function useFilterGroups(groups) {
         });
     };
 
-    return [filterState, toggleFilter, resetFilter];
+    return [filterState, toggleFilter, resetFilters];
 }
 
 export default useFilterGroups;

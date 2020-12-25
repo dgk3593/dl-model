@@ -44,9 +44,7 @@ function WeaponSelect(props) {
     }
 
     const buttons = list.map(weapon => (
-        <Suspense fallback={null}>
-            <WeaponBtn key={weapon.iconName || weapon.wid} {...weapon} />
-        </Suspense>
+        <WeaponBtn key={weapon.iconName || weapon.wid} {...weapon} />
     ));
 
     const handleToggle = event => {
