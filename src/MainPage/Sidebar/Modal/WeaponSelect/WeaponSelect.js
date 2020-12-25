@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState, useMemo } from "react";
-import useToggleGroups from "hooks/useToggleGroups";
+import useFilterGroups from "hooks/useFilterGroups";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
@@ -20,9 +20,11 @@ const options = ["Regular Weapons", "Unobtainable Weapons", "Extra Weapons"];
 function WeaponSelect(props) {
     const { closeModal } = props;
     const [weaponSet, setWeaponSet] = useState(0);
-    const [groupState, groupToggle, setAll] = useToggleGroups(WEAPON_FILTERS);
+    const [filterState, toggleFilter, resetFilter] = useFilterGroups(
+        WEAPON_FILTERS
+    );
 
-    const filters = useMemo(() => collectFilter(groupState), [groupState]);
+    const filters = useMemo(() => collectFilter(filterState), [filterState]);
     const weaponList = useMemo(() => multiCondFilter(weapon_list, filters), [
         filters,
     ]);
@@ -42,16 +44,14 @@ function WeaponSelect(props) {
     }
 
     const buttons = list.map(weapon => (
-        <WeaponBtn key={weapon.iconName || weapon.wid} {...weapon} />
+        <Suspense fallback={null}>
+            <WeaponBtn key={weapon.iconName || weapon.wid} {...weapon} />
+        </Suspense>
     ));
 
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;
-        groupToggle(group, name);
-    };
-
-    const resetFilters = () => {
-        setAll(false);
+        toggleFilter(group, name);
     };
 
     return (
@@ -73,9 +73,9 @@ function WeaponSelect(props) {
                     <Suspense fallback={null}>
                         <Filters
                             filterList={WEAPON_FILTERS}
-                            groupState={groupState}
+                            groupState={filterState}
                             handleToggle={handleToggle}
-                            resetFilters={resetFilters}
+                            resetFilters={resetFilter}
                         />
                     </Suspense>
                 )}

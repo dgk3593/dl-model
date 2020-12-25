@@ -1,5 +1,5 @@
 import { lazy, Suspense, useContext, useMemo, useState } from "react";
-import useToggleGroups from "hooks/useToggleGroups";
+import useFilterGroups from "hooks/useFilterGroups";
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
@@ -33,18 +33,16 @@ function CharaSelect({ closeModal, mode }) {
 
     const [charaSet, setCharaSet] = useState(0);
     const [facePart, setFacePart] = useState("both");
-    const [groupState, groupToggle, setAll] = useToggleGroups(ADV_FILTERS);
+    const [filterState, toggleFilter, resetFilter] = useFilterGroups(
+        ADV_FILTERS
+    );
 
-    const filters = useMemo(() => collectFilter(groupState), [groupState]);
+    const filters = useMemo(() => collectFilter(filterState), [filterState]);
     const advList = useMemo(() => multiCondFilter(adv, filters), [filters]);
 
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;
-        groupToggle(group, name);
-    };
-
-    const resetFilters = () => {
-        setAll(false);
+        toggleFilter(group, name);
     };
 
     const changeFacePart = event => {
@@ -105,9 +103,9 @@ function CharaSelect({ closeModal, mode }) {
                     <Suspense fallback={null}>
                         <Filters
                             filterList={ADV_FILTERS}
-                            groupState={groupState}
+                            groupState={filterState}
                             handleToggle={handleToggle}
-                            resetFilters={resetFilters}
+                            resetFilters={resetFilter}
                         />
                     </Suspense>
                 )}

@@ -177,16 +177,10 @@ const generateFaceCode = faceChanges => {
     return faceCodes.join("");
 };
 
-export const collectFilter = toggleState => {
+export const collectFilter = filterState => {
     const collected = {};
-    Object.keys(toggleState).forEach(key => {
-        const tmp = [];
-        Object.keys(toggleState[key]).forEach(k => {
-            if (toggleState[key][k]) {
-                tmp.push(k);
-            }
-        });
-        collected[key] = tmp;
+    Object.entries(filterState).forEach(([group, groupData]) => {
+        collected[group] = Object.keys(groupData).filter(key => groupData[key]);
     });
     return collected;
 };
@@ -197,6 +191,7 @@ export const multiCondFilter = (input, filters) => {
     return input.filter(el => {
         return filterKeys.every(key => {
             if (!filters[key].length) return true;
+
             return filters[key].includes(el[key]);
         });
     });
