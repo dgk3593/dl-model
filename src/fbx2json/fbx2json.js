@@ -1,6 +1,6 @@
 import fbxList from "./fileList";
-import { loadModel } from "../viewerHelpers";
-import { fbxSource } from "../App";
+import { loadModel } from "helpers/viewerHelpers";
+import { fbxSource } from "App";
 
 const getModel = async fileName => {
     const filePath = `${fbxSource}/fbx/${fileName}`;
