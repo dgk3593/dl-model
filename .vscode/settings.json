@@ -1,5 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
     "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "workbench.tree.renderIndentGuides": "always"
 }
