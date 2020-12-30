@@ -8,9 +8,11 @@ import { ADV_FILTERS } from "helpers/consts";
 import adv from "data/adv_list";
 import allies from "data/allies";
 import enemies from "data/enemies";
-import { spFaceTextures } from "helpers/consts";
+import { defaultAdvAni, spFaceTextures } from "helpers/consts";
 
 import { collectFilter, multiCondFilter } from "helpers/helpers";
+import { chainCodeToList } from "helpers/viewerHelpers";
+
 import "./styles/AdvSelect.css";
 
 const SetSelect = lazy(() => import("components/SetSelect"));
@@ -26,6 +28,7 @@ const options = ["Adventurers", "Allies", "Enemies"];
 function AdvSelect({ closeModal, mode, handleSelect }) {
     const {
         model: { id: currentId },
+        app: { viewerType },
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
@@ -45,10 +48,10 @@ function AdvSelect({ closeModal, mode, handleSelect }) {
         toggleFilter(group, name);
     };
 
-    const updateSetings = key => value =>
+    const updateSettings = key => value =>
         dispatch({ type: "update", key, value });
 
-    const updateModel = updateSetings("model");
+    const updateModel = updateSettings("model");
 
     const setNewModel = cid => {
         updateModel({
@@ -57,6 +60,14 @@ function AdvSelect({ closeModal, mode, handleSelect }) {
             eyeTexture: cid,
             mouthTexture: cid,
         });
+        if (viewerType !== "adv") {
+            updateModel({ eyeIdx: "2", mouthIdx: "2" });
+            updateSettings("animation")({ code: defaultAdvAni });
+            updateSettings("chainMaker")({
+                chain: chainCodeToList(defaultAdvAni, "init"),
+            });
+            updateSettings("app")({ viewerType: "adv" });
+        }
     };
 
     const setTexture = cid => {
@@ -73,6 +84,7 @@ function AdvSelect({ closeModal, mode, handleSelect }) {
         if (["mouth", "both"].includes(facePart)) {
             value["mouthTexture"] = outputTexture;
         }
+
         updateModel(value);
     };
 

@@ -2,7 +2,7 @@ import Button from "@material-ui/core/Button";
 
 import { initSettings } from "context/SettingsContext";
 import {
-    initKey,
+    initKeyMap,
     WEAPON_CODE,
     GENDER_CODE,
     COMBO_LENGTH,
@@ -46,7 +46,7 @@ const isDragon = modelId => modelId.startsWith("d") || modelId === "smith";
 export const getViewerType = modelId => {
     if (isDragon(modelId)) return "dragon";
 
-    if (isCharaWithAni(modelId)) return "chara";
+    if (isCharaWithAni(modelId)) return "adv";
 
     return "base";
 };
@@ -59,7 +59,7 @@ export const getDefaultAni = modelId => {
     return "";
 };
 
-const getDefaultFace = modelId => (isDragon(modelId) ? 1 : 2);
+const getDefaultFace = modelId => (isDragon(modelId) ? "1" : "2");
 
 export const callbackOnEach = (list, callback) => {
     if (Array.isArray(list)) {
@@ -72,7 +72,7 @@ export const callbackOnEach = (list, callback) => {
 export const setInitialSettings = params => {
     if (params.length === 0) return;
 
-    const defined = new Set();
+    const definedParams = new Set();
     params.forEach(param => {
         if (!param) return;
 
@@ -84,19 +84,19 @@ export const setInitialSettings = params => {
 
         switch (keycode) {
             case "et":
-                defined.add("eyeTexture");
+                definedParams.add("eyeTexture");
                 break;
             case "mt":
-                defined.add("mouthTexture");
+                definedParams.add("mouthTexture");
                 break;
             case "ei":
-                defined.add("eyeIdx");
+                definedParams.add("eyeIdx");
                 break;
             case "mi":
-                defined.add("mouthIdx");
+                definedParams.add("mouthIdx");
                 break;
             case "cc":
-                defined.add("animation");
+                definedParams.add("animation");
                 // initialize chain maker chain
                 const chainList = chainCodeToList(setValue, "Animation");
                 initSettings["chainMaker"]["chain"] = chainList;
@@ -111,7 +111,7 @@ export const setInitialSettings = params => {
                 break;
             default:
         }
-        const { group, key } = initKey[keycode];
+        const { group, key } = initKeyMap[keycode];
 
         const isBooleanValue = setValue === "true" || setValue === "false";
 
@@ -120,22 +120,25 @@ export const setInitialSettings = params => {
             : setValue;
     });
 
+    const notDefined = param => !definedParams.has(param);
+
     const modelId = initSettings["model"]["id"];
     initSettings["model"]["texture"] = modelId;
+    initSettings["app"]["viewerType"] = getViewerType(modelId);
 
-    if (!defined.has("eyeTexture")) {
+    if (notDefined("eyeTexture")) {
         initSettings["model"]["eyeTexture"] = modelId;
     }
-    if (!defined.has("mouthTexture")) {
+    if (notDefined("mouthTexture")) {
         initSettings["model"]["mouthTexture"] = modelId;
     }
-    if (!defined.has("eyeIdx")) {
+    if (notDefined("eyeIdx")) {
         initSettings["model"]["eyeIdx"] = getDefaultFace(modelId);
     }
-    if (!defined.has("mouthIdx")) {
+    if (notDefined("mouthIdx")) {
         initSettings["model"]["mouthIdx"] = getDefaultFace(modelId);
     }
-    if (!defined.has("animation")) {
+    if (notDefined("animation")) {
         initSettings["animation"]["code"] = getDefaultAni(modelId);
     }
 };

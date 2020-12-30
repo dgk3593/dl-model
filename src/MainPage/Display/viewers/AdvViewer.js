@@ -26,7 +26,7 @@ import {
 
 const SIDES = ["Right", "Left"];
 
-export class CharaViewer extends AniViewer {
+export class AdvViewer extends AniViewer {
     constructor() {
         super();
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
@@ -272,4 +272,4 @@ export class CharaViewer extends AniViewer {
     };
 }
 
-export default CharaViewer;
+export default AdvViewer;

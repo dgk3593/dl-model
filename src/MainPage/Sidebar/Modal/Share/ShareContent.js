@@ -11,7 +11,8 @@ import TextField from "@material-ui/core/TextField";
 import { SettingsContext } from "context/SettingsContext";
 import {
     defaultSettings,
-    initKey,
+    initKeyMap,
+    initKeys,
     baseUrl,
     cameraPositions,
 } from "helpers/consts";
@@ -26,7 +27,9 @@ function ShareContent({ method }) {
     const [customCam, toggleCustomCam] = useToggleState(false);
     const [camPos, setCamPos] = useState([0, 0.5, 1.5]);
     const [label, setLabel] = useState("Code");
+
     const currentSettings = useContext(SettingsContext);
+    const { viewerType } = currentSettings.app;
 
     const CopyButton = () => (
         <IconButton onClick={copyText}>
@@ -58,81 +61,71 @@ function ShareContent({ method }) {
     };
 
     const getShareLink = () => {
-        const keyCodes = Object.keys(initKey).filter(
-            key => initKey[key].group !== "app"
-        );
-        keyCodes.push("AA");
+        const keyCodes = initKeys[viewerType];
 
-        let link = baseUrl;
+        const linkParts = [baseUrl];
 
         keyCodes.forEach(keyCode => {
-            const { group, key } = initKey[keyCode];
+            const { group, key } = initKeyMap[keyCode];
             const currentValue = currentSettings[group][key];
             const defaultValue = defaultSettings[group][key];
             switch (keyCode) {
                 case "bg":
                     if (transparentBG) {
-                        link = link.concat(`bg=transparent/`);
+                        linkParts.push(`bg=transparent`);
                         break;
                     }
                     if (currentValue !== defaultValue) {
-                        link = link.concat(
-                            `${keyCode}=${currentValue.replace("#", "")}/`
+                        linkParts.push(
+                            `${keyCode}=${currentValue.replace("#", "")}`
                         );
                     }
                     break;
                 case "et":
                     if (
-                        currentSettings["model"]["eyeTexture"] !==
+                        currentSettings["model"]["eyeTexture"] ===
                         currentSettings["model"]["id"]
-                    ) {
-                        link = link.concat(`${keyCode}=${currentValue}/`);
-                    }
+                    )
+                        break;
+                    linkParts.push(`${keyCode}=${currentValue}`);
+
                     break;
                 case "mt":
                     if (
-                        currentSettings["model"]["mouthTexture"] !==
+                        currentSettings["model"]["mouthTexture"] ===
                         currentSettings["model"]["id"]
-                    ) {
-                        link = link.concat(`${keyCode}=${currentValue}/`);
-                    }
+                    )
+                        break;
+                    linkParts.push(`${keyCode}=${currentValue}`);
+
                     break;
                 case "cam":
                     if (!customCam) break;
                     const modelId = currentSettings["model"]["id"];
                     const type = modelId[0];
-                    const defaultCameraPosition = cameraPositions[modelId]
+                    const defaultCamPos = cameraPositions[modelId]
                         ? cameraPositions[modelId]
                         : cameraPositions[type];
-                    if (
-                        camPos.some(
-                            (_, i) => camPos[i] !== defaultCameraPosition[i]
-                        )
-                    ) {
-                        link = link.concat("cam=");
-                        camPos.forEach((_, i) => {
-                            const value =
-                                camPos[i] !== defaultCameraPosition[i]
-                                    ? camPos[i]
-                                    : "";
-                            link = link.concat(`${value}${i < 2 ? "," : ""}`);
-                        });
-                        link = link.concat("/");
+                    if (camPos.some((p, i) => p !== defaultCamPos[i])) {
+                        const camParams = camPos.map((p, i) =>
+                            p !== defaultCamPos[i] ? p : ""
+                        );
+                        linkParts.push(`cam=${camParams.join(",")}`);
                     }
                     break;
                 default:
                     if (currentValue !== defaultValue) {
-                        link = link.concat(`${keyCode}=${currentValue}/`);
+                        linkParts.push(`${keyCode}=${currentValue}`);
                     }
             }
         });
 
         Object.keys(show).forEach(key => {
             if (!show[key]) {
-                link = link.concat(`show${key}=false/`);
+                linkParts.push(`show${key}=false`);
             }
         });
-        return link;
+        return linkParts.join("/");
     };
 
     const shareLink = getShareLink();

@@ -44,9 +44,10 @@ function DragonSelect({ closeModal, handleSelect }) {
     const updateSetings = key => value =>
         dispatch({ type: "update", key, value });
 
-    const setNewModel = cid => {
-        updateSetings("model")({ id: cid, eyeIdx: "1", mouthIdx: "1" });
-        updateSetings("animation")({ code: getDefaultAni(cid) });
+    const setNewModel = id => {
+        updateSetings("model")({ id, eyeIdx: "1", mouthIdx: "1" });
+        updateSetings("animation")({ code: getDefaultAni(id) });
+        updateSetings("app")({ viewerType: "dragon" });
     };
 
     const handler = handleSelect || setNewModel;

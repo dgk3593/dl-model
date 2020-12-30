@@ -4,9 +4,9 @@ export const DRAWER_BGCOLOR = "#330000";
 export const DEFAULT_FACE_IDX = "2";
 export const DEFAULT_DRAGON_FACE_IDX = "1";
 
-export const baseUrl = "https://dgk3593.github.io/dl-model/#/";
+export const baseUrl = "https://dgk3593.github.io/dl-model/#";
 
-const defaultAni = "CMN_MWM_03";
+export const defaultAdvAni = "CMN_MWM_03";
 
 export const matParamsDetails = {
     wireframe: {
@@ -139,9 +139,9 @@ export const defaultSettings = {
         id: "c100001_01",
         texture: "c100001_01",
         eyeTexture: "c100001_01",
-        eyeIdx: 2,
+        eyeIdx: "2",
         mouthTexture: "c100001_01",
-        mouthIdx: 2,
+        mouthIdx: "2",
         weaponRight: "",
         weaponLeft: "",
     },
@@ -156,7 +156,7 @@ export const defaultSettings = {
     },
     lights: defaultLights,
     animation: {
-        code: defaultAni,
+        code: defaultAdvAni,
         timeScale: 1,
     },
     app: {
@@ -164,6 +164,7 @@ export const defaultSettings = {
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
+        viewerType: "adv",
     },
     outline: {
         enable: true,
@@ -185,7 +186,7 @@ export const defaultSettings = {
     },
 };
 
-export const initKey = {
+export const initKeyMap = {
     id: { group: "model", key: "id" },
     et: { group: "model", key: "eyeTexture" },
     ei: { group: "model", key: "eyeIdx" },
@@ -195,13 +196,33 @@ export const initKey = {
     wl: { group: "model", key: "weaponLeft" },
     bg: { group: "scene", key: "background" },
     cam: { group: "scene", key: "initCameraPosition" },
-    ts: { group: "animation", key: "timeScale" },
     showAC: { group: "app", key: "showAniControl" },
     showSettings: { group: "app", key: "showSettings" },
     showOutline: { group: "outline", key: "enable" },
     AA: { group: "app", key: "antiAliasing" },
     rot: { group: "scene", key: "rotateSpeed" },
+    ts: { group: "animation", key: "timeScale" },
     cc: { group: "animation", key: "code" },
+};
+
+const commonInitKeys = ["bg", "cam", "showOutline", "AA", "rot"];
+
+const aniInitKeys = ["ts", "cc"];
+
+export const initKeys = {
+    adv: [
+        "id",
+        "et",
+        "ei",
+        "mt",
+        "mi",
+        "wr",
+        "wl",
+        ...commonInitKeys,
+        ...aniInitKeys,
+    ],
+    dragon: ["id", "ei", "mi", ...commonInitKeys, ...aniInitKeys],
+    base: ["id", ...commonInitKeys],
 };
 
 export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];

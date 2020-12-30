@@ -1,43 +1,26 @@
-import {
-    lazy,
-    Suspense,
-    useRef,
-    useEffect,
-    useContext,
-    useCallback,
-} from "react";
+import { lazy, Suspense, useContext, useCallback } from "react";
 
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
 import "./styles/Display.css";
 
-import { getTextColor, getViewerType, getDefaultAni } from "helpers/helpers";
-import {
-    cameraPositions,
-    controlsPositions,
-    DEFAULT_FACE_IDX,
-    DEFAULT_DRAGON_FACE_IDX,
-} from "helpers/consts";
+import { getTextColor } from "helpers/helpers";
+import { cameraPositions, controlsPositions } from "helpers/consts";
 
 const AniControl = lazy(() => import("./AniControl"));
 const BaseViewer = lazy(() => import("./viewers/BaseViewer"));
-const CharaViewer = lazy(() => import("./viewers/CharaViewer"));
+const AdvViewer = lazy(() => import("./viewers/AdvViewer"));
 const DragonViewer = lazy(() => import("./viewers/DragonViewer"));
 
-const viewers = { base: BaseViewer, chara: CharaViewer, dragon: DragonViewer };
-const defaultFace = {
-    chara: DEFAULT_FACE_IDX,
-    dragon: DEFAULT_DRAGON_FACE_IDX,
-};
+const viewers = { base: BaseViewer, adv: AdvViewer, dragon: DragonViewer };
 
 function Display(props) {
-    const activeViewer = useRef("");
     const { viewport } = props;
 
     const settings = useContext(SettingsContext);
     const {
         model: { id: modelId },
         scene: { rotateSpeed, background: bgColor, initCameraPosition },
-        app: { showAniControl, antiAliasing },
+        app: { showAniControl, antiAliasing, viewerType },
     } = settings;
 
     const dispatch = useContext(DispatchContext);
@@ -64,46 +47,6 @@ function Display(props) {
     const controlsPosition =
         controlsPositions[modelId] || controlsPositions[modelType];
 
-    const resetAni = useCallback(
-        id => {
-            const defaultAni = getDefaultAni(id);
-            const action = {
-                type: "update",
-                key: "animation",
-                value: { code: defaultAni },
-            };
-            dispatch(action);
-        },
-        [dispatch]
-    );
-
-    const resetFace = useCallback(
-        type => {
-            const defaultIdx = defaultFace[type] || 1;
-            const action = {
-                type: "update",
-                key: "model",
-                value: { eyeIdx: defaultIdx, mouthIdx: defaultIdx },
-            };
-            dispatch(action);
-        },
-        [dispatch]
-    );
-
-    useEffect(() => {
-        const newViewerType = getViewerType(modelId);
-        if (
-            newViewerType === "dragon" ||
-            newViewerType !== activeViewer.current
-        ) {
-            resetFace(newViewerType);
-            resetAni(modelId);
-        }
-
-        activeViewer.current = newViewerType;
-    }, [modelId, resetAni, resetFace]);
-
-    const viewerType = getViewerType(modelId);
     const ModelViewer = viewers[viewerType];
 
     return (
