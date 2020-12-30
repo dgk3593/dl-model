@@ -11,11 +11,15 @@ import ModelSelectBtns from "./ModelSelectBtns";
 
 import { listStyle, typographyProps } from "./commonProps";
 
-const mainBtns = [
-    { value: "texture", text: "Face Override" },
-    { value: "face", text: "Choose Face" },
-    { value: "weapon", text: "Add Weapons" },
-];
+const mainBtns = {
+    adv: [
+        { value: "texture", text: "Face Override" },
+        { value: "face", text: "Choose Face" },
+        { value: "weapon", text: "Add Weapons" },
+    ],
+    dragon: [{ value: "", text: "Under Construction" }],
+    base: [],
+};
 
 function SettingBtns({ openModal }) {
     const settings = useContext(SettingsContext);
@@ -23,7 +27,7 @@ function SettingBtns({ openModal }) {
 
     const {
         model,
-        app: { showAniControl, antiAliasing },
+        app: { showAniControl, antiAliasing, viewerType },
         outline: { enable: outlineEnabled },
     } = settings;
 
@@ -111,7 +115,7 @@ function SettingBtns({ openModal }) {
         <>
             <ModelSelectBtns handleClick={handleBtnClick} />
             <List dense disablePadding style={listStyle} component="div">
-                {mainBtns.map(btn => (
+                {mainBtns[viewerType].map(btn => (
                     <ListItem
                         key={btn.value}
                         button
@@ -129,7 +133,7 @@ function SettingBtns({ openModal }) {
                 {removeWeaponBtn("Right")}
             </List>
 
-            {animationBtns}
+            {viewerType === "adv" ? animationBtns : null}
 
             <List dense disablePadding style={listStyle} component="div">
                 <ListItem
