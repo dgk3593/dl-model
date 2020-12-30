@@ -1,0 +1,19 @@
+.ModelSelectBtns {
+    display: flex;
+    width: 100%;
+}
+
+.ModelSelectBtns-Btn {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    border: 5px;
+}
+
+.ModelSelectBtns-Btn:not(:last-child) {
+    border-right: 1px;
+}
+
+.ModelSelectBtns-Btn img {
+    height: 2rem;
+}

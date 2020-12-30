@@ -1,11 +1,21 @@
-import AdvCard from "./AdvCard";
+import CharaCard from "./CharaCard";
 import "./styles/CardGallery.css";
 
 function CardGallery(props) {
-    const { list, handleSelect } = props;
+    const { list, onSelect, portraitDir } = props;
+
+    const onCardClick = event => {
+        const { value } = event.currentTarget.dataset;
+        onSelect(value);
+    };
 
     const cards = list.map(chara => (
-        <AdvCard {...chara} key={chara.cid} handleSelect={handleSelect} />
+        <CharaCard
+            {...chara}
+            key={chara.cid}
+            onClick={onCardClick}
+            portraitDir={portraitDir}
+        />
     ));
 
     return <div className="CardGallery">{cards}</div>;

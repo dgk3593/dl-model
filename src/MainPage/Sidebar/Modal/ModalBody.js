@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 
-const CharaSelect = lazy(() => import("./CharaSelect"));
+const AdvSelect = lazy(() => import("./AdvSelect"));
+const DragonSelect = lazy(() => import("./DragonSelect"));
 const FaceSelect = lazy(() => import("./FaceSelect"));
 const WeaponSelect = lazy(() => import("./WeaponSelect"));
 const AnimationSelect = lazy(() => import("./AnimationSelect"));
@@ -10,9 +11,12 @@ const Share = lazy(() => import("./Share"));
 function ModalBody({ mode, closeModal, handleSelect }) {
     let Body = null;
     switch (mode) {
-        case "model":
+        case "adv":
         case "texture":
-            Body = CharaSelect;
+            Body = AdvSelect;
+            break;
+        case "dragon":
+            Body = DragonSelect;
             break;
         case "face":
         case "eye":

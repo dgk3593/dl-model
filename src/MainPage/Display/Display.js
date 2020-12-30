@@ -92,12 +92,14 @@ function Display(props) {
 
     useEffect(() => {
         const newViewerType = getViewerType(modelId);
-        if (activeViewer.current === newViewerType) return;
-
-        if (activeViewer.current) {
+        if (
+            newViewerType === "dragon" ||
+            newViewerType !== activeViewer.current
+        ) {
             resetFace(newViewerType);
             resetAni(modelId);
         }
+
         activeViewer.current = newViewerType;
     }, [modelId, resetAni, resetFace]);
 

@@ -11,7 +11,7 @@ import enemies from "data/enemies";
 import { spFaceTextures } from "helpers/consts";
 
 import { collectFilter, multiCondFilter } from "helpers/helpers";
-import "./styles/CharaSelect.css";
+import "./styles/AdvSelect.css";
 
 const SetSelect = lazy(() => import("components/SetSelect"));
 const Filters = lazy(() => import("components/Filters"));
@@ -23,13 +23,13 @@ const FacePartSelector = lazy(() =>
 
 const options = ["Adventurers", "Allies", "Enemies"];
 
-function CharaSelect({ closeModal, mode }) {
+function AdvSelect({ closeModal, mode, handleSelect }) {
     const {
         model: { id: currentId },
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
-    const title = mode === "model" ? "Select a Model" : "Override Texture";
+    const title = mode === "adv" ? "Select a Model" : "Override Texture";
 
     const [charaSet, setCharaSet] = useState(0);
     const [facePart, setFacePart] = useState("both");
@@ -45,37 +45,45 @@ function CharaSelect({ closeModal, mode }) {
         toggleFilter(group, name);
     };
 
-    const handleSelect = event => {
-        const cid = event.currentTarget.dataset.value;
-        const action = { type: "update", key: "model" };
-        switch (mode) {
-            case "model":
-                action.value = {
-                    id: cid,
-                    texture: cid,
-                    eyeTexture: cid,
-                    mouthTexture: cid,
-                };
-                dispatch(action);
-                break;
-            case "texture":
-                const outputTexture =
-                    spFaceTextures[cid] && cid !== currentId
-                        ? spFaceTextures[cid]
-                        : cid;
+    const updateSetings = key => value =>
+        dispatch({ type: "update", key, value });
 
-                if (["eye", "both"].includes(facePart)) {
-                    action.value = { eyeTexture: outputTexture };
-                    dispatch(action);
-                }
+    const updateModel = updateSetings("model");
 
-                if (["mouth", "both"].includes(facePart)) {
-                    action.value = { mouthTexture: outputTexture };
-                    dispatch(action);
-                }
-                break;
-            default:
+    const setNewModel = cid => {
+        updateModel({
+            id: cid,
+            texture: cid,
+            eyeTexture: cid,
+            mouthTexture: cid,
+        });
+    };
+
+    const setTexture = cid => {
+        const value = {};
+        const outputTexture =
+            spFaceTextures[cid] && cid !== currentId
+                ? spFaceTextures[cid]
+                : cid;
+
+        if (["eye", "both"].includes(facePart)) {
+            value["eyeTexture"] = outputTexture;
         }
+
+        if (["mouth", "both"].includes(facePart)) {
+            value["mouthTexture"] = outputTexture;
+        }
+        updateModel(value);
+    };
+
+    const defaultHandler = mode === "adv" ? setNewModel : setTexture;
+
+    const handler = handleSelect || defaultHandler;
+
+    const onSelect = id => {
+        const cid = `c${id}`;
+        handler(cid);
+
         closeModal();
     };
 
@@ -119,12 +127,13 @@ function CharaSelect({ closeModal, mode }) {
                     {charaSet === 0 ? (
                         <CardGallery
                             list={advList}
-                            handleSelect={handleSelect}
+                            onSelect={onSelect}
+                            portraitDir="advPortraits"
                         />
                     ) : (
                         <SimpleOptionList
                             options={charaSet === 1 ? allies : enemies}
-                            handleSelect={handleSelect}
+                            onSelect={onSelect}
                         />
                     )}
                 </Suspense>
@@ -133,4 +142,4 @@ function CharaSelect({ closeModal, mode }) {
     );
 }
 
-export default CharaSelect;
+export default AdvSelect;

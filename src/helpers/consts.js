@@ -303,7 +303,7 @@ export const ADV_FILTERS = {
 
 export const DRAGON_FILTERS = {
     rarity: ["3", "4", "5"],
-    element: ["Flame", "Water", "Wind", "Light", "Shadow", "None"],
+    element: ["Flame", "Water", "Wind", "Light", "Shadow"],
 };
 
 export const WEAPON_FILTERS = {
