@@ -7,7 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-function Share({ closeModal }) {
+function Share({ close }) {
     const [method, setMethod] = useState(0);
 
     const handleChange = (_, newValue) => {
@@ -17,7 +17,7 @@ function Share({ closeModal }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>Share</DialogTitle>
+                <DialogTitle onClose={close}>Share</DialogTitle>
                 <AppBar position="static">
                     <Tabs centered value={method} onChange={handleChange}>
                         <Tab label="Link" />
