@@ -1139,6 +1139,23 @@ const skills = {
             name: "Hound Shot (Poison)",
             value: "GUN_SKL_03_01_11035002",
         },
+        {
+            icon: "img/advIcons/110376_01_r05.png",
+            name: "S1",
+            value:
+                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_03_11037601",
+        },
+        {
+            icon: "img/advIcons/110376_01_r05.png",
+            name: "S1 (modified)",
+            value:
+                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_04_11037601",
+        },
+        {
+            icon: "img/advIcons/110376_01_r05.png",
+            name: "S2",
+            value: "GUN_SKL_02_01_11037601>GUN_SKL_02_02_11037601",
+        },
     ],
 };
 
