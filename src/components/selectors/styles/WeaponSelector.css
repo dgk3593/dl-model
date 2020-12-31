@@ -16,7 +16,7 @@
 }
 
 .WeaponSelector-GlowRadio.disabled {
-    opacity: 0.2;
+    filter: opacity(0.2);
     cursor: not-allowed;
 }
 

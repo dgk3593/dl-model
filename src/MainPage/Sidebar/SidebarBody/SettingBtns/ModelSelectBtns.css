@@ -6,12 +6,12 @@
 .ModelSelectBtns-Btn {
     border-radius: 0;
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 2rem;
     justify-content: center;
 }
 
 .ModelSelectBtns-Btn:not(:last-child) {
-    border-right: 1px solid black;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 button.ModelSelectBtns-Btn {
