@@ -41,11 +41,7 @@ function ModalBody({ mode, closeModal, handleSelect }) {
 
     return (
         <Suspense fallback={<div>Loading</div>}>
-            <Body
-                mode={mode}
-                closeModal={closeModal}
-                handleSelect={handleSelect}
-            />
+            <Body mode={mode} close={closeModal} handleSelect={handleSelect} />
         </Suspense>
     );
 }

@@ -17,7 +17,7 @@ const CardGallery = lazy(() => import("components/CardGallery"));
 
 const options = ["Dragons", "Others"];
 
-function DragonSelect({ closeModal, handleSelect }) {
+function DragonSelect({ close, handleSelect, docked }) {
     const dispatch = useContext(DispatchContext);
 
     const title = "Select a Model";
@@ -56,13 +56,13 @@ function DragonSelect({ closeModal, handleSelect }) {
         const cid = `d${id}`;
         handler(cid);
 
-        closeModal();
+        !docked && close();
     };
 
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>
+                <DialogTitle onClose={close}>
                     {title}
                     <div className="DragonSelect-DragonSetSelect">
                         <Suspense fallback={null}>

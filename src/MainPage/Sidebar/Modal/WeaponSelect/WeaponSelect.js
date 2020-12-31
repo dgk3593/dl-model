@@ -17,8 +17,7 @@ const Filters = lazy(() => import("components/Filters"));
 
 const options = ["Regular Weapons", "Unobtainable Weapons", "Extra Weapons"];
 
-function WeaponSelect(props) {
-    const { closeModal } = props;
+function WeaponSelect({ close }) {
     const [weaponSet, setWeaponSet] = useState(0);
     const [filterState, toggleFilter, resetFilter] = useFilterGroups(
         WEAPON_FILTERS
@@ -55,7 +54,7 @@ function WeaponSelect(props) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>
+                <DialogTitle onClose={close}>
                     Select a Weapon
                     <div className="WeaponSelect-WeaponSetSelect">
                         <Suspense fallback={null}>

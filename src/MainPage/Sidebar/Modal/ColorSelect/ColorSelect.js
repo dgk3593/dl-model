@@ -17,7 +17,7 @@ const titles = {
     "outline-color": "Outline Color",
 };
 
-function ColorSelect({ closeModal, mode, handleSelect }) {
+function ColorSelect({ close, mode, handleSelect, docked }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
     const title = titles[mode] || "Pick a Color";
@@ -64,7 +64,7 @@ function ColorSelect({ closeModal, mode, handleSelect }) {
 
     const applyColor = () => {
         handler(color);
-        closeModal();
+        !docked && close();
     };
 
     const commonBtn = Object.entries(commonColors).map(([name, code]) => (
@@ -76,7 +76,7 @@ function ColorSelect({ closeModal, mode, handleSelect }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>{title}</DialogTitle>
+                <DialogTitle onClose={close}>{title}</DialogTitle>
             </DialogTop>
             <DialogContent dividers className="ColorSelect">
                 <div className="ColorSelect-btn">

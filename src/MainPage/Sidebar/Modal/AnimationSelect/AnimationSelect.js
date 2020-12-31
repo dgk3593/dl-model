@@ -13,8 +13,7 @@ import { chainCodeToList } from "helpers/viewerHelpers";
 import GameAni from "./GameAni";
 const ExtraAni = lazy(() => import("./ExtraAni"));
 
-function AnimationSelect(props) {
-    const { closeModal, handleSelect } = props;
+function AnimationSelect({ close, handleSelect, docked }) {
     const [aniSet, setAniSet] = useState(0);
     const dispatch = useContext(DispatchContext);
     const {
@@ -41,7 +40,7 @@ function AnimationSelect(props) {
         const name = event.currentTarget.dataset.name;
 
         aniHandler(aniCode, name);
-        closeModal();
+        !docked && close();
     };
 
     const handleChange = (_, newValue) => {
@@ -51,7 +50,7 @@ function AnimationSelect(props) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>
+                <DialogTitle onClose={close}>
                     {chainMode ? "Add Animation" : "Select an Animation"}
                 </DialogTitle>
                 <AppBar position="static">

@@ -17,8 +17,7 @@ const titles = {
     mouth: "Select Mouth",
 };
 
-function FaceSelect(props) {
-    const { mode, closeModal, handleSelect } = props;
+function FaceSelect({ mode, close, handleSelect, docked }) {
     const dispatch = useContext(DispatchContext);
     const {
         model: { eyeTexture, mouthTexture, eyeIdx, mouthIdx },
@@ -49,7 +48,8 @@ function FaceSelect(props) {
         const idx = event.currentTarget.dataset.value;
         const handler = handleSelect || defaultHandler;
         handler(idx);
-        closeModal();
+
+        !docked && close();
     };
 
     const indexes = Array(9)
@@ -92,7 +92,7 @@ function FaceSelect(props) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={closeModal}>{titles[mode]}</DialogTitle>
+                <DialogTitle onClose={close}>{titles[mode]}</DialogTitle>
                 <Suspense fallback={null}>
                     {mode === "face" && (
                         <FacePartSelector
