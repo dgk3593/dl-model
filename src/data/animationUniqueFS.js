@@ -173,6 +173,7 @@ const uniqueFS = {
         {
             icon: "img/advIcons/110375_01_r05.png",
             name: "Seimei",
+            subtitle: "Banishing Strike",
             value:
                 "ROD_CHR_01_11037501>ROD_CHR_02_11037501>ROD_CHR_03_11037501",
         },

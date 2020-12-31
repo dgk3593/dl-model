@@ -323,6 +323,7 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210128_01_90_01" },
         { name: "Give Back Gifts", code: "DC_d210128_01_90_03" },
         { name: "Receive Gift", code: "DC_d210128_01_90_04" },
+        { name: "Home Screen", code: "CMN_MWM_06_21012801" },
     ],
     d210130_01: [
         { name: "Dragon's Roost", code: "DC_d210130_01_90_01" },
