@@ -5,7 +5,13 @@ const styles = {
     },
     closeButton: {
         position: "absolute",
-        right: "0.5rem",
+        right: "0.25rem",
+        top: "0.5rem",
+        color: "rgba(0,0,0,0.8)",
+    },
+    dockButton: {
+        position: "absolute",
+        right: "2.3rem",
         top: "0.5rem",
         color: "rgba(0,0,0,0.8)",
     },

@@ -25,7 +25,7 @@ const FacePartSelector = lazy(() =>
 
 const options = ["Adventurers", "Allies", "Enemies"];
 
-function AdvSelect({ close, mode, handleSelect, docked }) {
+function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const {
         model: { id: currentId },
         app: { viewerType },
@@ -102,7 +102,11 @@ function AdvSelect({ close, mode, handleSelect, docked }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={close}>
+                <DialogTitle
+                    showDockBtn={!docked}
+                    onDock={moveToDock}
+                    onClose={close}
+                >
                     {title}
                     <div className="CharaSelect-CharaSetSelect">
                         <Suspense fallback={null}>

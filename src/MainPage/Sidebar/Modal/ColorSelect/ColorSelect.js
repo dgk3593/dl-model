@@ -17,7 +17,7 @@ const titles = {
     "outline-color": "Outline Color",
 };
 
-function ColorSelect({ close, mode, handleSelect, docked }) {
+function ColorSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const dispatch = useContext(DispatchContext);
     const settings = useContext(SettingsContext);
     const title = titles[mode] || "Pick a Color";
@@ -74,9 +74,15 @@ function ColorSelect({ close, mode, handleSelect, docked }) {
     ));
 
     return (
-        <>
+        <div>
             <DialogTop>
-                <DialogTitle onClose={close}>{title}</DialogTitle>
+                <DialogTitle
+                    showDockBtn={!docked}
+                    onDock={moveToDock}
+                    onClose={close}
+                >
+                    {title}
+                </DialogTitle>
             </DialogTop>
             <DialogContent dividers className="ColorSelect">
                 <div className="ColorSelect-btn">
@@ -92,7 +98,7 @@ function ColorSelect({ close, mode, handleSelect, docked }) {
                     />
                 </Suspense>
             </DialogContent>
-        </>
+        </div>
     );
 }
 

@@ -11,6 +11,7 @@ import { SettingsContext } from "context/SettingsContext";
 import { setInitialSettings } from "helpers/helpers";
 
 const Sidebar = lazy(() => import("./Sidebar"));
+const Dock = lazy(() => import("./Dock"));
 
 function MainPage({ location }) {
     const classes = useStyles();
@@ -22,6 +23,9 @@ function MainPage({ location }) {
         width: window.innerWidth,
         height: window.innerHeight,
     });
+
+    const [dockMode, setDockMode] = useState("");
+    const dockHandle = useRef();
 
     const {
         app: { showSettings },
@@ -47,6 +51,13 @@ function MainPage({ location }) {
         setViewport({ width, height });
     };
 
+    const setDock = (mode, handleSelect) => {
+        setDockMode(mode);
+        dockHandle.current = handleSelect;
+    };
+
+    const closeDock = () => setDockMode("");
+
     return (
         <>
             {loadingMsg && (
@@ -66,6 +77,7 @@ function MainPage({ location }) {
                             <Sidebar
                                 toggleSidebar={toggleSidebar}
                                 open={sidebar}
+                                setDock={setDock}
                             />
                         </Suspense>
                     )}
@@ -75,6 +87,15 @@ function MainPage({ location }) {
                             viewport={viewport}
                         />
                     </main>
+                    {dockMode && (
+                        <Suspense fallback={null}>
+                            <Dock
+                                mode={dockMode}
+                                handleSelect={dockHandle.current}
+                                close={closeDock}
+                            />
+                        </Suspense>
+                    )}
                 </div>
             )}
         </>

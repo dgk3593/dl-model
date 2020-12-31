@@ -6,6 +6,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 
 import Close from "@material-ui/icons/Close";
+import Dock from "@material-ui/icons/ArrowForwardIos";
 
 import styles from "./CustomDialogStyles";
 
@@ -23,7 +24,14 @@ export const DialogTop = withStyles(styles)(props => {
 });
 
 export const DialogTitle = withStyles(styles)(props => {
-    const { children, classes, onClose, ...other } = props;
+    const {
+        children,
+        classes,
+        onClose,
+        showDockBtn = false,
+        onDock,
+        ...other
+    } = props;
     return (
         <MuiDialogTitle
             disableTypography
@@ -33,6 +41,15 @@ export const DialogTitle = withStyles(styles)(props => {
             <Typography variant="h6" className={classes.titleText}>
                 {children}
             </Typography>
+            {showDockBtn && (
+                <IconButton
+                    aria-label="dock"
+                    className={classes.dockButton}
+                    onClick={onDock}
+                >
+                    <Dock />
+                </IconButton>
+            )}
             <IconButton
                 aria-label="close"
                 className={classes.closeButton}

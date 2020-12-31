@@ -8,7 +8,7 @@ const AnimationSelect = lazy(() => import("./AnimationSelect"));
 const ColorSelect = lazy(() => import("./ColorSelect"));
 const Share = lazy(() => import("./Share"));
 
-function ModalBody({ mode, closeModal, handleSelect }) {
+function ModalBody({ mode, closeModal, handleSelect, docked, setDock }) {
     let Body = null;
     switch (mode) {
         case "adv":
@@ -39,9 +39,20 @@ function ModalBody({ mode, closeModal, handleSelect }) {
             Body = mode.includes("-") ? ColorSelect : null;
     }
 
+    const moveToDock = () => {
+        setDock(mode, handleSelect);
+        closeModal();
+    };
+
     return (
         <Suspense fallback={<div>Loading</div>}>
-            <Body mode={mode} close={closeModal} handleSelect={handleSelect} />
+            <Body
+                mode={mode}
+                docked={docked}
+                close={closeModal}
+                handleSelect={handleSelect}
+                moveToDock={moveToDock}
+            />
         </Suspense>
     );
 }

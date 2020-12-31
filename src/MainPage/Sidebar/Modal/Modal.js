@@ -4,7 +4,7 @@ import Dialog from "@material-ui/core/Dialog";
 
 import ModalBody from "./ModalBody";
 
-function Modal({ mode, closeModal, handleSelect }) {
+function Modal({ mode, closeModal, handleSelect, setDock }) {
     return mode
         ? createPortal(
               <Dialog
@@ -18,6 +18,7 @@ function Modal({ mode, closeModal, handleSelect }) {
                       mode={mode}
                       closeModal={closeModal}
                       handleSelect={handleSelect}
+                      setDock={setDock}
                   />
               </Dialog>,
               document.getElementById("modal-root")

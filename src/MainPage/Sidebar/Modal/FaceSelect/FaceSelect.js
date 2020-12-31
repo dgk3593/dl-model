@@ -17,7 +17,7 @@ const titles = {
     mouth: "Select Mouth",
 };
 
-function FaceSelect({ mode, close, handleSelect, docked }) {
+function FaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
     const dispatch = useContext(DispatchContext);
     const {
         model: { eyeTexture, mouthTexture, eyeIdx, mouthIdx },
@@ -90,9 +90,15 @@ function FaceSelect({ mode, close, handleSelect, docked }) {
     }
 
     return (
-        <>
+        <div>
             <DialogTop>
-                <DialogTitle onClose={close}>{titles[mode]}</DialogTitle>
+                <DialogTitle
+                    showDockBtn={!docked}
+                    onDock={moveToDock}
+                    onClose={close}
+                >
+                    {titles[mode]}
+                </DialogTitle>
                 <Suspense fallback={null}>
                     {mode === "face" && (
                         <FacePartSelector
@@ -110,7 +116,7 @@ function FaceSelect({ mode, close, handleSelect, docked }) {
                     </Button>
                 )}
             </DialogContent>
-        </>
+        </div>
     );
 }
 

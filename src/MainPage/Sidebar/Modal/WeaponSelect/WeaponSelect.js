@@ -15,9 +15,9 @@ const WeaponBtn = lazy(() => import("./WeaponBtn"));
 const SetSelect = lazy(() => import("components/SetSelect"));
 const Filters = lazy(() => import("components/Filters"));
 
-const options = ["Regular Weapons", "Unobtainable Weapons", "Extra Weapons"];
+const options = ["Regular", "Unobtainable", "Extra"];
 
-function WeaponSelect({ close }) {
+function WeaponSelect({ close, docked, moveToDock }) {
     const [weaponSet, setWeaponSet] = useState(0);
     const [filterState, toggleFilter, resetFilter] = useFilterGroups(
         WEAPON_FILTERS
@@ -54,7 +54,11 @@ function WeaponSelect({ close }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={close}>
+                <DialogTitle
+                    showDockBtn={!docked}
+                    onDock={moveToDock}
+                    onClose={close}
+                >
                     Select a Weapon
                     <div className="WeaponSelect-WeaponSetSelect">
                         <Suspense fallback={null}>

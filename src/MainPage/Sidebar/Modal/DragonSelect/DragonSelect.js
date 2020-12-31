@@ -17,7 +17,7 @@ const CardGallery = lazy(() => import("components/CardGallery"));
 
 const options = ["Dragons", "Others"];
 
-function DragonSelect({ close, handleSelect, docked }) {
+function DragonSelect({ close, handleSelect, docked, moveToDock }) {
     const dispatch = useContext(DispatchContext);
 
     const title = "Select a Model";
@@ -62,7 +62,11 @@ function DragonSelect({ close, handleSelect, docked }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={close}>
+                <DialogTitle
+                    showDockBtn={!docked}
+                    onDock={moveToDock}
+                    onClose={close}
+                >
                     {title}
                     <div className="DragonSelect-DragonSetSelect">
                         <Suspense fallback={null}>

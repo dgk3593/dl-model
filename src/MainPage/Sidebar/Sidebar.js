@@ -8,7 +8,7 @@ import Modal from "./Modal";
 
 import useStyles from "./styles/SidebarStyles";
 
-function Sidebar({ open, toggleSidebar }) {
+function Sidebar({ open, toggleSidebar, setDock }) {
     const classes = useStyles();
 
     const [modalMode, setModalMode] = useState("");
@@ -37,6 +37,7 @@ function Sidebar({ open, toggleSidebar }) {
                 mode={modalMode}
                 closeModal={closeModal}
                 handleSelect={handler.current}
+                setDock={setDock}
             />
         </Drawer>
     );
