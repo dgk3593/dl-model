@@ -1,4 +1,7 @@
 const faceOffset = {
+    c110376_01: { x: 0.043, y: -0.0625 }, // Yoshitsune
+    c110375_01: { x: 0.043, y: -0.0625 }, // Seimei
+    c110374_01: { x: 0.043, y: -0.0625 }, // Kuzunoha
     c110307_02: { x: 0.043, y: 0 }, // Dragonyule Victor
     c110252_02: { x: 0.043, y: -0.0625 }, // Dragonyule Lily
     c110296_02: { x: 0.043, y: -0.0625 }, // Forager Mitsuba

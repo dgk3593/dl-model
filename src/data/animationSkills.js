@@ -987,6 +987,16 @@ const skills = {
             name: "Unknown Order",
             value: "ROD_SKL_01_01_11036201",
         },
+        {
+            icon: "img/advIcons/110375_01_r05.png",
+            name: "Onmyoji Incantation",
+            value: "ROD_SKL_01_01_11037501",
+        },
+        {
+            icon: "img/advIcons/110375_01_r05.png",
+            name: "Onmyoji Exorcism",
+            value: "ROD_SKL_02_01_11037501",
+        },
     ],
     Staff: [
         {

@@ -217,6 +217,13 @@ const dragons = [
         element: "Shadow",
     },
     {
+        cid: "210136_01",
+        name: "Gozu Tenno",
+        title: "Hard-Faced Softy",
+        rarity: "5",
+        element: "Flame",
+    },
+    {
         cid: "210097_01",
         name: "Halloween Maritimus",
         title: "The People's Magician",

@@ -170,6 +170,12 @@ const uniqueFS = {
             value:
                 "ROD_CHR_01_11036101>ROD_CHR_02_11036101>ROD_CHR_03_11036101",
         },
+        {
+            icon: "img/advIcons/110375_01_r05.png",
+            name: "Seimei",
+            value:
+                "ROD_CHR_01_11037501>ROD_CHR_02_11037501>ROD_CHR_03_11037501",
+        },
     ],
     Staff: [
         {

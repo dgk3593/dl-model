@@ -432,6 +432,14 @@ const adv = [
         weapon: "Lance",
     },
     {
+        cid: "110374_01",
+        name: "Kuzunoha",
+        title: "Outfoxed Fox",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Staff",
+    },
+    {
         cid: "110370_01",
         name: "Lapis",
         title: "The Blue Rose",
@@ -680,9 +688,17 @@ const adv = [
         weapon: "Blade",
     },
     {
+        cid: "110375_01",
+        name: "Seimei",
+        title: "Leader of the Ox Clan",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Wand",
+    },
+    {
         cid: "110358_01",
         name: "Sharena",
-        title: "Princess of Askr ",
+        title: "Princess of Askr",
         rarity: "5",
         element: "Light",
         weapon: "Lance",
@@ -894,6 +910,14 @@ const adv = [
         rarity: "5",
         element: "Shadow",
         weapon: "Sword",
+    },
+    {
+        cid: "110376_01",
+        name: "Yoshitsune",
+        title: "Leader of the Rooster Clan",
+        rarity: "5",
+        element: "Water",
+        weapon: "Manacaster",
     },
     {
         cid: "110337_03",

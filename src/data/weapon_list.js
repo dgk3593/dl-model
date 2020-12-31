@@ -3216,6 +3216,14 @@ const weapon_list = [
         element: "None",
     },
     {
+        wid: "w302040_01",
+        iconName: "302040_01_59901.png",
+        name: "Sohaya no Tsurugi",
+        weapon: "Blade",
+        rarity: "5",
+        element: "None",
+    },
+    {
         wid: "w303035_01",
         iconName: "303035_01_59901.png",
         name: "Kris Naga",

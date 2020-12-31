@@ -17,7 +17,6 @@ const specialWeaponList = [
     { wid: "w304021_01", name: "Valyx's Axe" },
     { wid: "w308016_01", name: "Zethia's Wand" },
     { wid: "w308017_01", name: "Zena's Wand" },
-    { wid: "w302040_01", name: "Ieyasu's Blade" },
     { wid: "w301147_01", name: "Hunter Berserker's Greatsword" },
     { wid: "w305142_01", name: "Hunter Vanessa's Lance" },
     { wid: "w305142_02", name: "Hunter Vanessa's Shield" },

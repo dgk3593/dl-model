@@ -372,6 +372,24 @@ const dragonAni = {
         },
         { name: "Howling Fury", code: "D21014301_060_01>D21014301_060_02" },
     ],
+    d210136_01: [
+        { name: "Dragon's Roost", code: "DC_d210136_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210136_01_90_04" },
+        { name: "Idle", code: "D21013601_000_01" },
+        { name: "Walk", code: "D21013601_002_01" },
+        { name: "Run", code: "D21013601_003_01" },
+        { name: "Move Backward", code: "D21013601_003_01" },
+        { name: "Dash Forward", code: "D21013601_020_01" },
+        { name: "Transform", code: "D21013601_030_01" },
+        {
+            name: "Combo",
+            code: "D21013601_040_01>D21013601_041_01>D21013601_042_01",
+        },
+        {
+            name: "Infernal Charge",
+            code: "D21013601_060_01>D21013601_060_02>D21013601_060_03",
+        },
+    ],
     d210001_01: [
         { name: "Dragon's Roost", code: "DC_d210001_01_90_01" },
         { name: "Receive Gift", code: "DC_d210001_01_90_04" },
