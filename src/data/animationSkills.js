@@ -1141,19 +1141,19 @@ const skills = {
         },
         {
             icon: "img/advIcons/110376_01_r05.png",
-            name: "S1",
+            name: "Kumasaka Flash",
             value:
                 "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_03_11037601",
         },
         {
             icon: "img/advIcons/110376_01_r05.png",
-            name: "S1 (modified)",
+            name: "Kumasaka Flash (interupted)",
             value:
                 "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_04_11037601",
         },
         {
             icon: "img/advIcons/110376_01_r05.png",
-            name: "S2",
+            name: "Shanao Strike",
             value: "GUN_SKL_02_01_11037601>GUN_SKL_02_02_11037601",
         },
     ],

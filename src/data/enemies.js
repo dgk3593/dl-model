@@ -13,11 +13,23 @@ const enemies = [
     },
     {
         id: "100034_01",
-        name: "Kai Yan*",
+        name: "Kai Yan",
     },
     {
         id: "100035_01",
         name: "Ciella",
+    },
+    {
+        id: "100037_01",
+        name: "Ayaha",
+    },
+    {
+        id: "100036_01",
+        name: "Otoha",
+    },
+    {
+        id: "100041_01",
+        name: "Tartarus",
     },
     {
         id: "130018_01",
@@ -43,9 +55,5 @@ const enemies = [
         id: "130020_02",
         name: "Zombie Mage (Water)",
     },
-    // {
-    //     id: "100041_01",
-    //     name: "Tartaros*",
-    // },
 ];
 export default enemies;

@@ -4,6 +4,14 @@ const allies = [
         name: "Zethia",
     },
     {
+        id: "100009_02_h",
+        name: "Otherworld Zethia",
+    },
+    {
+        id: "100012_01_h",
+        name: "Aurelius",
+    },
+    {
         id: "100018_01",
         name: "Leif",
     },
@@ -13,7 +21,7 @@ const allies = [
     },
     {
         id: "100027_01",
-        name: "Summon Lady",
+        name: "Summoner",
     },
     {
         id: "100029_01",
@@ -21,15 +29,15 @@ const allies = [
     },
     {
         id: "100007_01",
-        name: "Notte*",
+        name: "Notte",
     },
     {
         id: "100007_05",
-        name: "Anniversary Notte*",
+        name: "Anniversary Notte",
     },
     {
         id: "100007_09",
-        name: "2nd Anniversary Notte*",
+        name: "2nd Anniversary Notte",
     },
 ];
 

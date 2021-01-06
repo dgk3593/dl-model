@@ -10,7 +10,11 @@ import allies from "data/allies";
 import enemies from "data/enemies";
 import { defaultAdvAni, spFaceTextures } from "helpers/consts";
 
-import { collectFilter, multiCondFilter } from "helpers/helpers";
+import {
+    collectFilter,
+    multiCondFilter,
+    isIncompatible,
+} from "helpers/helpers";
 import { chainCodeToList } from "helpers/viewerHelpers";
 
 import "./styles/AdvSelect.css";
@@ -63,11 +67,14 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
         if (viewerType !== "adv") {
             updateModel({ eyeIdx: "2", mouthIdx: "2" });
             updateSettings("animation")({ code: defaultAdvAni });
+
             updateSettings("chainMaker")({
                 chain: chainCodeToList(defaultAdvAni, "init"),
             });
-            updateSettings("app")({ viewerType: "adv" });
         }
+        updateSettings("app")({
+            viewerType: isIncompatible(cid) ? "base" : "adv",
+        });
     };
 
     const setTexture = cid => {
