@@ -9,6 +9,7 @@ import dragonAni from "data/animationDragon";
 import Modal from "../../Modal";
 
 import { chainCodeToList } from "helpers/viewerHelpers";
+import { getViewerType } from "helpers/helpers";
 
 import "./styles/NonHumanAni.css";
 
@@ -23,8 +24,13 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const [modalMode, setModalMode] = useState("");
 
     useEffect(() => {
+        if (getViewerType(modelId) !== "dragon") {
+            close();
+            return;
+        }
+
         setSourceId(modelId);
-    }, [modelId]);
+    }, [modelId, close]);
 
     const portraitDir = "dragonPortraits";
 
@@ -63,17 +69,21 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         !docked && close();
     };
 
-    const aniButtons = animations.map(({ name, code }) => (
-        <Button
-            key={name}
-            data-value={code}
-            data-name={name}
-            variant="contained"
-            onClick={handleAniSelect}
-        >
-            {name}
-        </Button>
-    ));
+    const aniButtons = animations ? (
+        animations.map(({ name, code }) => (
+            <Button
+                key={name}
+                data-value={code}
+                data-name={name}
+                variant="contained"
+                onClick={handleAniSelect}
+            >
+                {name}
+            </Button>
+        ))
+    ) : (
+        <div>No Animation</div>
+    );
 
     return (
         <>
