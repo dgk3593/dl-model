@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
@@ -21,6 +21,10 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
 
     const [sourceId, setSourceId] = useState(modelId);
     const [modalMode, setModalMode] = useState("");
+
+    useEffect(() => {
+        setSourceId(modelId);
+    }, [modelId]);
 
     const portraitDir = "dragonPortraits";
 
@@ -54,8 +58,6 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const handleAniSelect = event => {
         const aniCode = event.currentTarget.dataset.value;
         const name = event.currentTarget.dataset.name;
-
-        console.log(aniCode, name);
 
         aniHandler(aniCode, name);
         !docked && close();
