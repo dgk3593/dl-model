@@ -266,6 +266,8 @@ class BaseViewer extends PureComponent {
         this.updateMaterial(prev.material, current.material);
         this.updateLights(prev.lights, current.lights);
         this.updateAscii(prev.ascii, current.ascii);
+        this.updateCamera(prev.cameraPosition, current.cameraPosition);
+        this.updateControl(prev.controlsPosition, current.controlsPosition);
 
         // Update background color
         if (prev.bgColor !== current.bgColor) {
@@ -422,6 +424,20 @@ class BaseViewer extends PureComponent {
         this.canvas = newCanvas;
 
         this.finalRenderer = this.effect;
+    };
+
+    updateCamera = (prev, current) => {
+        if (prev === current) return;
+
+        this.camera.position.set(...current);
+        this.camera.updateProjectionMatrix();
+    };
+
+    updateControl = (prev, current) => {
+        if (prev === current) return;
+
+        this.controls.target.set(...current);
+        this.controls.update();
     };
 
     set bgColor(color) {
