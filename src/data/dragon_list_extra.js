@@ -4,6 +4,10 @@ const extraDragons = [
         name: "Elysium",
     },
     {
+        cid: "200008_01",
+        name: "Fafnir Roy III",
+    },
+    {
         cid: "210113_01",
         name: "Brunhilda",
         title: "Halloween Mym",
