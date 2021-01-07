@@ -82,7 +82,7 @@ function SettingBtns({ openModal }) {
             <ListItem
                 button
                 divider
-                data-value="animation"
+                data-value={viewerType === "adv" ? "animation" : "nonHumanAni"}
                 onClick={handleBtnClick}
             >
                 <ListItemText
@@ -133,7 +133,7 @@ function SettingBtns({ openModal }) {
                 {removeWeaponBtn("Right")}
             </List>
 
-            {viewerType === "adv" ? animationBtns : null}
+            {["adv", "dragon"].includes(viewerType) ? animationBtns : null}
 
             <List dense disablePadding style={listStyle} component="div">
                 <ListItem

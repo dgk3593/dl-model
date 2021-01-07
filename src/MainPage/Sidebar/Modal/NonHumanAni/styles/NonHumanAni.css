@@ -1,0 +1,25 @@
+.NonHumanAni-source {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.NonHumanAni-source img {
+    margin: 0 1rem;
+    max-height: 10rem;
+    filter: drop-shadow(1, 1, 3, black);
+}
+
+.NonHumanAni-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 30rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.NonHumanAni-content button {
+    margin: 0.5rem;
+}

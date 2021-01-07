@@ -46,7 +46,9 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
 
     const setNewModel = id => {
         updateSetings("model")({ id, eyeIdx: "1", mouthIdx: "1" });
+
         updateSetings("animation")({ code: getDefaultAni(id) });
+
         updateSetings("app")({ viewerType: "dragon" });
     };
 
@@ -63,7 +65,7 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
         <>
             <DialogTop>
                 <DialogTitle
-                    showDockBtn={!docked}
+                    showDockBtn={moveToDock && !docked}
                     onDock={moveToDock}
                     onClose={close}
                 >

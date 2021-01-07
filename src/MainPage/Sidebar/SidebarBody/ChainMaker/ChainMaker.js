@@ -13,9 +13,12 @@ import "./styles/ChainMaker.css";
 
 const ChainAniList = lazy(() => import("./ChainAniList"));
 
+const aniSelectMode = { adv: "animation", dragon: "nonHumanAni" };
+
 function ChainMaker({ openModal }) {
     const {
         chainMaker: { chain },
+        app: { viewerType },
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
@@ -61,7 +64,7 @@ function ChainMaker({ openModal }) {
             const newChain = [...chain, ...chainList];
             setChain(newChain);
         };
-        openModal("animation", handler);
+        openModal(aniSelectMode[viewerType], handler);
     };
 
     const updateAniInChain = (id, newAni) => {

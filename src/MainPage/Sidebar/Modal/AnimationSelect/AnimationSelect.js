@@ -19,6 +19,7 @@ function AnimationSelect({ close, handleSelect, docked, moveToDock }) {
     const {
         app: { sidebarContent },
     } = useContext(SettingsContext);
+
     const chainMode = sidebarContent === "chainMaker";
 
     const updateSettings = (key, value) => {
