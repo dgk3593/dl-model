@@ -1136,20 +1136,22 @@ const skills = {
         },
         {
             icon: "img/advIcons/110350_02_r05.png",
-            name: "Hound Shot (Poison)",
+            name: "Hound Shot",
+            subtitle: "Poison",
             value: "GUN_SKL_03_01_11035002",
         },
         {
             icon: "img/advIcons/110376_01_r05.png",
             name: "Kumasaka Flash",
             value:
-                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_03_11037601",
+                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_04_11037601",
         },
         {
             icon: "img/advIcons/110376_01_r05.png",
-            name: "Kumasaka Flash (interupted)",
+            name: "Kumasaka Flash",
+            subtitle: "Interrupted",
             value:
-                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_04_11037601",
+                "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_03_11037601",
         },
         {
             icon: "img/advIcons/110376_01_r05.png",

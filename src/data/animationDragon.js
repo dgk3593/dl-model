@@ -379,7 +379,7 @@ const dragonAni = {
         { name: "Idle", code: "D21013601_000_01" },
         { name: "Walk", code: "D21013601_002_01" },
         { name: "Run", code: "D21013601_003_01" },
-        { name: "Move Backward", code: "D21013601_003_01" },
+        { name: "Move Backward", code: "D21013601_004_01" },
         { name: "Dash Forward", code: "D21013601_020_01" },
         { name: "Transform", code: "D21013601_030_01" },
         {
