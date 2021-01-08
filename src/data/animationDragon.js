@@ -247,6 +247,20 @@ const dragonAni = {
     d210052_01: [
         { name: "Dragon's Roost", code: "DC_d210052_01_90_01" },
         { name: "Receive Gift", code: "DC_d210052_01_90_04" },
+        { name: "Idle", code: "D21005201_000_01" },
+        { name: "Move Forward", code: "D21005201_002_01" },
+        { name: "Move Forward (Fast)", code: "D21005201_003_01" },
+        { name: "Move Backward", code: "D21005201_004_01" },
+        { name: "Dash Forward", code: "D21005201_020_01" },
+        { name: "Transform", code: "D21005201_030_01" },
+        {
+            name: "Combo",
+            code: "D21005201_040_01>D21005201_041_01>D21005201_042_01",
+        },
+        {
+            name: "Promethean Flame",
+            code: "D21005201_060_01",
+        },
     ],
     d210053_01: [
         { name: "Dragon's Roost", code: "DC_d210053_01_90_01" },
@@ -437,6 +451,20 @@ const dragonAni = {
     d210112_01: [
         { name: "Dragon's Roost", code: "DC_d210112_01_90_01" },
         { name: "Receive Gift", code: "DC_d210112_01_90_04" },
+        { name: "Idle", code: "D21005201_000_01" },
+        { name: "Move Forward", code: "D21005201_002_01" },
+        { name: "Move Forward (Fast)", code: "D21005201_003_01" },
+        { name: "Move Backward", code: "D21005201_004_01" },
+        { name: "Dash Forward", code: "D21005201_020_01" },
+        { name: "Transform", code: "D21005201_030_01" },
+        {
+            name: "Combo",
+            code: "D21005201_040_01>D21005201_041_01>D21005201_042_01",
+        },
+        {
+            name: "Toxic Solitude",
+            code: "D21011201_060_01",
+        },
     ],
     d210113_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
