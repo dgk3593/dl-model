@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
@@ -23,13 +23,17 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const [sourceId, setSourceId] = useState(modelId);
     const [modalMode, setModalMode] = useState("");
 
+    const source = useRef(modelId);
+
     useEffect(() => {
         if (getViewerType(modelId) !== "dragon") {
             close();
             return;
         }
-
-        setSourceId(modelId);
+        if (modelId !== source.current) {
+            source.current = modelId;
+            setSourceId(modelId);
+        }
     }, [modelId, close]);
 
     const portraitDir = "dragonPortraits";
