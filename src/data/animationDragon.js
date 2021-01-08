@@ -44,7 +44,11 @@ const dragonAni = {
         {
             name: "Broken",
             code:
-                "D20000901_082_01>D20000901_082_02>D20000901_082_03>D20000901_082_04>D20000901_082_05",
+                "D20000901_082_01>D20000901_082_02>D20000901_082_03>D20000901_082_04",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D20000901_082_05",
         },
         { name: "Tail Whip", code: "D20000901_100_01" },
         { name: "Front Attack", code: "D20000901_101_01" },
@@ -309,6 +313,20 @@ const dragonAni = {
     d210056_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
         { name: "Receive Gift", code: "DC_d210006_01_90_04" },
+        { name: "Idle", code: "D21000601_000_01" },
+        { name: "Move Forward", code: "D21000601_002_01" },
+        { name: "Move Forward (Fast)", code: "D21000601_003_01" },
+        { name: "Move Backward", code: "D21000601_004_01" },
+        { name: "Dash Forward", code: "D21000601_021_01" },
+        { name: "Transform", code: "D21000601_030_01" },
+        {
+            name: "Combo",
+            code: "D21000601_040_01>D21000601_041_01>D21000601_042_01",
+        },
+        {
+            name: "Refreshing Flare",
+            code: "D21000601_061_01",
+        },
     ],
     d210057_01: [
         { name: "Dragon's Roost", code: "DC_d210008_01_90_01" },
@@ -438,7 +456,7 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210103_01_90_01" },
         { name: "Receive Gift", code: "DC_d210103_01_90_04" },
     ],
-    d2113_01: [
+    d210113_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
         { name: "Receive Gift", code: "DC_d210002_01_90_04" },
     ],
@@ -483,10 +501,6 @@ const dragonAni = {
             name: "Toxic Solitude",
             code: "D21011201_060_01",
         },
-    ],
-    d210113_01: [
-        { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210002_01_90_04" },
     ],
     d210114_01: [
         { name: "Dragon's Roost", code: "DC_d210114_01_90_01" },
@@ -875,6 +889,108 @@ const dragonAni = {
     d210002_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
         { name: "Receive Gift", code: "DC_d210002_01_90_04" },
+        { name: "Infernal Ray", code: "D21010401_60_01" },
+        { name: "Idle", code: "D21000201_000_01" },
+        { name: "Lean Forward", code: "D21000201_001_01" },
+        { name: "Move Forward", code: "D21000201_002_01" },
+        { name: "Move Forward (Fast)", code: "D21000201_003_01" },
+        { name: "Move Backward", code: "D21000201_004_01" },
+        { name: "Dash Forward", code: "D21000201_020_01" },
+        { name: "Jump Backward", code: "D21000201_021_01" },
+        { name: "Transform", code: "D21000201_030_01" },
+        {
+            name: "Combo",
+            code: "D21000201_040_01>D21000201_041_01>D21000201_042_01",
+        },
+        {
+            name: "Muspelheim",
+            code: "D21000201_060_01",
+        },
+        {
+            name: "Crimson Inferno",
+            code: "D21000201_061_01",
+        },
+        {
+            name: "Summon Help",
+            code: "D21000201_062_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000201_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000201_011_01>D21000201_011_02",
+        },
+        {
+            name: "Frozen",
+            code: "D21000201_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000201_015_01>D21000201_015_02",
+        },
+        {
+            name: "Weakened 2",
+            code: "D21000201_081_01>D21000201_081_02>D21000201_081_03",
+        },
+        {
+            name: "Stagger Midair",
+            code: "D21000201_017_01>D21000201_017_02>D21000201_017_03",
+        },
+        {
+            name: "Broken",
+            code:
+                "D21000201_082_01>D21000201_082_02>D21000201_082_03>D21000201_082_04",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000201_082_05",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000201_090_01>D21000201_090_02",
+        },
+        {
+            name: "Claw Attack",
+            code: "D21000201_100_01",
+        },
+        {
+            name: "Flame Breath",
+            code: "D21000201_101_01>D21000201_101_02>D21000201_101_03",
+        },
+        {
+            name: "Take Flight",
+            code: "D21000201_102_01",
+        },
+        {
+            name: "Take Flight 2",
+            code: "D21000201_104_01>D21000201_104_02>D21000201_104_03",
+        },
+        {
+            name: "Fly Straight",
+            code: "D21000201_102_02",
+        },
+        {
+            name: "Fly Up",
+            code: "D21000201_102_04",
+        },
+        {
+            name: "Land",
+            code: "D21000201_102_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000201_107_01",
+        },
+        {
+            name: "Meteor Attack",
+            code: "D21000201_103_01",
+        },
+        {
+            name: "Front Attack",
+            code: "D21000201_104_04",
+        },
     ],
     d210003_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
@@ -891,6 +1007,20 @@ const dragonAni = {
     d210006_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
         { name: "Receive Gift", code: "DC_d210006_01_90_04" },
+        { name: "Idle", code: "D21000601_000_01" },
+        { name: "Move Forward", code: "D21000601_002_01" },
+        { name: "Move Forward (Fast)", code: "D21000601_003_01" },
+        { name: "Move Backward", code: "D21000601_004_01" },
+        { name: "Dash Forward", code: "D21000601_020_01" },
+        { name: "Transform", code: "D21000601_030_01" },
+        {
+            name: "Combo",
+            code: "D21000601_040_01>D21000601_041_01>D21000601_042_01",
+        },
+        {
+            name: "Regeneration Flame",
+            code: "D21000601_060_01",
+        },
     ],
     d210007_01: [
         { name: "Dragon's Roost", code: "DC_d210007_01_90_01" },
