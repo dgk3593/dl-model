@@ -416,6 +416,22 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210117_01_90_01" },
         { name: "Receive Gift", code: "DC_d210117_01_90_04" },
     ],
+    d210118_01: [
+        { name: "Idle", code: "D21011801_000_01" },
+        { name: "Move Forward", code: "D21011801_002_01" },
+        { name: "Move Forward (Fast)", code: "D21011801_003_01" },
+        { name: "Move Backward", code: "D21011801_004_01" },
+        { name: "Dash", code: "D21011801_020_01" },
+        { name: "Jump on Rush", code: "D21011801_030_01" },
+        {
+            name: "Combo",
+            code: "D21011801_040_01>D21011801_041_01>D21011801_042_01",
+        },
+        {
+            name: "Rush Buster",
+            code: "D21011801_060_01>D21011801_060_02>D21011801_060_03",
+        },
+    ],
     d210120_01: [
         { name: "Dragon's Roost", code: "DC_d210120_01_90_01" },
         { name: "Receive Gift", code: "DC_d210120_01_90_04" },
