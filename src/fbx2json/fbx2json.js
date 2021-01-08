@@ -27,14 +27,23 @@ const exportAni = async ani => {
     document.body.removeChild(a);
 };
 
+const pause = async msec => {
+    return new Promise(resolve => setTimeout(resolve, msec));
+};
+
 const exportAllAni = async animations => {
+    let counter = 0;
     for (const ani of animations) {
         await exportAni(ani);
+
+        counter = ++counter % 10;
+        if (!counter) await pause(1000);
     }
 };
 
 const handleFile = async fileName => {
-    const { animations } = await getModel(fileName);
+    let fileToLoad = fileName.concat(fileName.includes("fbx") ? "" : ".fbx");
+    const { animations } = await getModel(fileToLoad);
 
     const fromMixamo =
         animations.length === 1 && animations[0].name === "mixamo.com";
