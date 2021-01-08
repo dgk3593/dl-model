@@ -162,6 +162,24 @@ const dragonAni = {
     d210016_01: [
         { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
         { name: "Receive Gift", code: "DC_d210016_01_90_04" },
+        { name: "Idle", code: "D21001601_000_01" },
+        { name: "Move Forward", code: "D21001601_002_01" },
+        { name: "Move Forward (Fast)", code: "D21001601_003_01" },
+        { name: "Move Backward", code: "D21001601_004_01" },
+        { name: "Dash Forward", code: "D21001601_020_01" },
+        { name: "Transform", code: "D21001601_030_01" },
+        {
+            name: "Combo",
+            code: "D21001601_040_01>D21001601_041_01>D21001601_042_01",
+        },
+        {
+            name: "Rapid Attack",
+            code: "D21001601_060_01",
+        },
+        {
+            name: "Devastation",
+            code: "D21001601_061_01",
+        },
     ],
     d210017_01: [
         { name: "Dragon's Roost", code: "DC_d210017_01_90_01" },
@@ -877,6 +895,25 @@ const dragonAni = {
     d210007_01: [
         { name: "Dragon's Roost", code: "DC_d210007_01_90_01" },
         { name: "Receive Gift", code: "DC_d210007_01_90_04" },
+        { name: "Idle", code: "D21000701_000_01" },
+        { name: "Move Forward", code: "D21000701_002_01" },
+        { name: "Move Forward (Fast)", code: "D21000701_003_01" },
+        { name: "Move Backward", code: "D21000701_004_01" },
+        { name: "Dash Forward", code: "D21000701_020_01" },
+        { name: "Transform", code: "D21000701_030_01" },
+        {
+            name: "Combo",
+            code: "D21000701_040_01>D21000701_041_01>D21000701_042_01",
+        },
+        {
+            name: "Charge",
+            code:
+                "D21000701_060_01>D21000701_060_02>D21000701_060_03>D21000701_060_04",
+        },
+        {
+            name: "Lava Cascade",
+            code: "D21000701_061_01",
+        },
     ],
     d210008_01: [
         { name: "Dragon's Roost", code: "DC_d210008_01_90_01" },
