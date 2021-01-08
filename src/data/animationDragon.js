@@ -551,14 +551,56 @@ const dragonAni = {
     d210121_01: [
         { name: "Dragon's Roost", code: "DC_d210121_01_90_01" },
         { name: "Receive Gift", code: "DC_d210121_01_90_04" },
+        { name: "Idle", code: "D21012101_000_01" },
+        { name: "Move Forward", code: "D21012101_002_01" },
+        { name: "Move Forward (Fast)", code: "D21012101_003_01" },
+        { name: "Move Backward", code: "D21012101_004_01" },
+        { name: "Dash Forward", code: "D21012101_020_01" },
+        { name: "Transform", code: "D21012101_030_01" },
+        {
+            name: "Combo",
+            code: "D21012101_040_01>D21012101_041_01>D21012101_042_01",
+        },
+        {
+            name: "Firestorm",
+            code: "D21012101_060_01",
+        },
     ],
     d210122_01: [
         { name: "Dragon's Roost", code: "DC_d210122_01_90_01" },
         { name: "Receive Gift", code: "DC_d210122_01_90_04" },
+        { name: "Idle", code: "D21012101_000_01" },
+        { name: "Move Forward", code: "D21012101_002_01" },
+        { name: "Move Forward (Fast)", code: "D21012101_003_01" },
+        { name: "Move Backward", code: "D21012101_004_01" },
+        { name: "Dash Forward", code: "D21012101_020_01" },
+        { name: "Transform", code: "D21012101_030_01" },
+        {
+            name: "Combo",
+            code: "D21012101_040_01>D21012101_041_01>D21012101_042_01",
+        },
+        {
+            name: "Ignition Breath",
+            code: "D21012201_060_01",
+        },
     ],
     d210123_01: [
         { name: "Dragon's Roost", code: "DC_d210123_01_90_01" },
         { name: "Receive Gift", code: "DC_d210123_01_90_04" },
+        { name: "Idle", code: "D21012301_000_01" },
+        { name: "Move Forward", code: "D21012301_002_01" },
+        { name: "Move Forward (Fast)", code: "D21012301_003_01" },
+        { name: "Move Backward", code: "D21012301_004_01" },
+        { name: "Dash Forward", code: "D21012301_020_01" },
+        { name: "Transform", code: "D21012301_030_01" },
+        {
+            name: "Combo",
+            code: "D21012301_040_01>D21012301_041_01>D21012301_042_01",
+        },
+        {
+            name: "Dust Explosion",
+            code: "D21012301_060_01",
+        },
     ],
     d210124_01: [
         { name: "Dragon's Roost", code: "DC_d210124_01_90_01" },
