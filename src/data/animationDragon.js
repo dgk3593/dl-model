@@ -14,6 +14,64 @@ const dragonAni = {
     d200009_01: [
         { name: "Dragon's Roost", code: "DC_d200009_01_90_01" },
         { name: "Receive Gift", code: "DC_d200009_01_90_04" },
+        { name: "Idle", code: "D20000901_000_01" },
+        { name: "Lean forward", code: "D20000901_001_01" },
+        { name: "Walk", code: "D20000901_002_01" },
+        { name: "Run", code: "D20000901_003_01" },
+        { name: "Move Backward", code: "D20000901_004_01" },
+        { name: "Jump Backward", code: "D20000901_021_01" },
+        { name: "Dash", code: "D20000901_020_01" },
+        { name: "Transform", code: "D20000901_030_01" },
+        {
+            name: "Combo",
+            code: "D20000901_040_01>D20000901_041_01>D20000901_042_01",
+        },
+        { name: "Alchemical Hellfire", code: "D20000901_060_01" },
+        { name: "Take Damage", code: "D20000901_010_01" },
+        { name: "Power Up", code: "D20000901_022_01" },
+        { name: "Defeated", code: "D20000901_011_01" },
+        { name: "Frozen", code: "D20000901_013_01" },
+        { name: "Idle 2", code: "D20000901_014_01" },
+        { name: "Weakened", code: "D20000901_015_01>D20000901_015_02" },
+        {
+            name: "Weakened 2",
+            code: "D20000901_081_01>D20000901_081_02>D20000901_081_03",
+        },
+        {
+            name: "Knocked Away",
+            code: "D20000901_016_01>D20000901_016_02>D20000901_016_03",
+        },
+        {
+            name: "Broken",
+            code:
+                "D20000901_082_01>D20000901_082_02>D20000901_082_03>D20000901_082_04>D20000901_082_05",
+        },
+        { name: "Tail Whip", code: "D20000901_100_01" },
+        { name: "Front Attack", code: "D20000901_101_01" },
+        {
+            name: "Spin Attack",
+            code: "D20000901_102_01>D20000901_102_02>D20000901_102_03",
+        },
+        {
+            name: "Attack From Above",
+            code: "D20000901_103_01>D20000901_103_02>D20000901_103_03",
+        },
+        { name: "Buff", code: "D20000901_104_01" },
+        {
+            name: "Blast",
+            code: "D20000901_105_01>D20000901_105_02>D20000901_105_03",
+        },
+        {
+            name: "Roar",
+            code: "D20000901_106_01>D20000901_106_02>D20000901_106_03",
+        },
+        { name: "Fire Breath", code: "D20000901_107_01" },
+        {
+            name: "Charged Fire Breath",
+            code:
+                "D20000901_108_01>D20000901_108_02>D20000901_108_03>D20000901_108_04>D20000901_108_05",
+        },
+        { name: "Double Claw Attack", code: "D20000901_109_01" },
     ],
     d200010_01: [
         { name: "Dragon's Roost", code: "DC_d200010_01_90_01" },
@@ -78,6 +136,7 @@ const dragonAni = {
     d210039_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
         { name: "Receive Gift", code: "DC_d210002_01_90_04" },
+        { name: "Infernal Ray", code: "D21010401_60_01" },
     ],
     d210040_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
