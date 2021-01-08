@@ -80,10 +80,80 @@ const dragonAni = {
     d200017_01: [
         { name: "Dragon's Roost", code: "DC_d200017_01_90_01" },
         { name: "Receive Gift", code: "DC_d200017_01_90_04" },
+        { name: "Idle", code: "D20001701_000_01" },
+        { name: "Walk", code: "D20001701_002_01" },
+        { name: "Run", code: "D20001701_003_01" },
+        { name: "Move Backward", code: "D20001701_004_01" },
+        { name: "Dash Forward", code: "D20001701_020_01" },
+        { name: "Transform", code: "D20001701_030_01" },
+        {
+            name: "Combo",
+            code: "D20001701_040_01>D20001701_041_01>D20001701_042_01",
+        },
+        {
+            name: "Elegant Artifice",
+            code: "D20001701_060_01",
+        },
     ],
     d200018_01: [
         { name: "Dragon's Roost", code: "DC_d200018_01_90_01" },
         { name: "Receive Gift", code: "DC_d200018_01_90_04" },
+        { name: "Idle", code: "D20001801_000_01" },
+        { name: "Move Forward", code: "D20001801_002_01" },
+        { name: "Move Forward (Fast)", code: "D20001801_003_01" },
+        { name: "Move Backward", code: "D20001801_004_01" },
+        { name: "Dash Forward", code: "D20001801_020_01" },
+        { name: "Transform", code: "D20001801_030_01" },
+        {
+            name: "Combo",
+            code:
+                "D20001801_040_01>D20001801_041_01>D20001801_042_01>D20001801_043_01>D20001801_044_01",
+        },
+        {
+            name: "Thor's Hammer",
+            code: "D20001801_060_01>D20001801_060_02>D20001801_060_03",
+        },
+        { name: "Take Damage", code: "D20001801_010_01" },
+        { name: "Defeated", code: "D20001801_011_01>D20001801_011_02" },
+        { name: "Frozen", code: "D20001801_013_01" },
+        { name: "Idle 2", code: "D20001801_014_01" },
+        {
+            name: "Weakened",
+            code: "D20001801_081_01>D20001801_081_02>D20001801_081_03",
+        },
+        {
+            name: "Battle Stance",
+            code: "D20001801_090_01>D20001801_090_02",
+        },
+        {
+            name: "Boss Skill",
+            code:
+                "D20001801_100_01>D20001801_100_02>D20001801_100_03>D20001801_100_04>D20001801_100_05",
+        },
+        {
+            name: "Charge Up",
+            code:
+                "D20001801_101_01>D20001801_101_02>D20001801_101_03>D20001801_101_04>D20001801_101_05",
+        },
+        {
+            name: "Double Punch",
+            code:
+                "D20001801_102_01>D20001801_102_02>D20001801_102_03>D20001801_102_04>D20001801_102_05",
+        },
+        {
+            name: "Rapid Punch",
+            code:
+                "D20001801_103_01>D20001801_103_02>D20001801_103_03>D20001801_103_04",
+        },
+        {
+            name: "Spin Attack",
+            code:
+                "D20001801_104_01>D20001801_104_02>D20001801_104_03>D20001801_104_04>D20001801_104_05",
+        },
+        {
+            name: "Uppercut",
+            code: "D20001801_105_01>D20001801_105_02>D20001801_105_03",
+        },
     ],
     d210010_01: [
         { name: "Dragon's Roost", code: "DC_d210010_01_90_01" },
@@ -407,6 +477,20 @@ const dragonAni = {
     d210134_01: [
         { name: "Dragon's Roost", code: "DC_d210134_01_90_01" },
         { name: "Receive Gift", code: "DC_d210134_01_90_04" },
+        { name: "Idle", code: "D21013401_000_01" },
+        { name: "Move Forward", code: "D21013401_002_01" },
+        { name: "Move Forward (Fast)", code: "D21013401_003_01" },
+        { name: "Move Backward", code: "D21013401_004_01" },
+        { name: "Dash Forward", code: "D21013401_020_01" },
+        { name: "Transform", code: "D21013401_030_01" },
+        {
+            name: "Combo",
+            code: "D21013401_040_01>D21013401_041_01>D21013401_042_01",
+        },
+        {
+            name: "Atlantean Flood",
+            code: "D21013401_060_01",
+        },
     ],
     d210135_01: [
         { name: "Dragon's Roost", code: "DC_d210135_01_90_01" },
