@@ -208,6 +208,24 @@ const dragonAni = {
     d210025_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
         { name: "Receive Gift", code: "DC_d210025_01_90_04" },
+        { name: "Idle", code: "D21002501_000_01" },
+        { name: "Move Forward", code: "D21002501_002_01" },
+        { name: "Move Forward (Fast)", code: "D21002501_003_01" },
+        { name: "Brake", code: "D21002501_004_01" },
+        { name: "Dash Forward", code: "D21002501_020_01" },
+        { name: "Transform", code: "D21002501_030_01" },
+        {
+            name: "Combo",
+            code: "D21002501_040_01>D21002501_041_01>D21002501_042_01",
+        },
+        {
+            name: "Poseidon's Trident",
+            code: "D21002501_060_01>D21002501_060_02>D21002501_060_03",
+        },
+        {
+            name: "Ground Stab",
+            code: "D21002501_061_01",
+        },
     ],
     d210026_01: [
         { name: "Dragon's Roost", code: "DC_d210026_01_90_01" },
@@ -1052,6 +1070,25 @@ const dragonAni = {
     d210011_01: [
         { name: "Dragon's Roost", code: "DC_d210011_01_90_01" },
         { name: "Receive Gift", code: "DC_d210011_01_90_04" },
+        { name: "Idle", code: "D21001101_000_01" },
+        { name: "Move Forward", code: "D21001101_002_01" },
+        { name: "Move Forward (Fast)", code: "D21001101_003_01" },
+        { name: "Brake", code: "D21001101_004_01" },
+        { name: "Dash Forward", code: "D21001101_020_01" },
+        { name: "Jump Backward", code: "D21001101_021_01" },
+        { name: "Transform", code: "D21001101_030_01" },
+        {
+            name: "Combo",
+            code: "D21001101_040_01>D21001101_041_01>D21001101_042_01",
+        },
+        {
+            name: "Body Slam",
+            code: "D21001101_061_01",
+        },
+        {
+            name: "Test of Integrity",
+            code: "D21001101_062_01",
+        },
     ],
     d210012_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
@@ -1145,6 +1182,25 @@ const dragonAni = {
     d210058_01: [
         { name: "Dragon's Roost", code: "DC_d210011_01_90_01" },
         { name: "Receive Gift", code: "DC_d210011_01_90_04" },
+        { name: "Idle", code: "D21001101_000_01" },
+        { name: "Move Forward", code: "D21001101_002_01" },
+        { name: "Move Forward (Fast)", code: "D21001101_003_01" },
+        { name: "Brake", code: "D21001101_004_01" },
+        { name: "Dash Forward", code: "D21001101_020_01" },
+        { name: "Jump Backward", code: "D21001101_021_01" },
+        { name: "Transform", code: "D21001101_030_01" },
+        {
+            name: "Combo",
+            code: "D21001101_040_01>D21001101_041_01>D21001101_042_01",
+        },
+        {
+            name: "Relentless Torrent",
+            code: "D21001101_060_01",
+        },
+        {
+            name: "Body Slam",
+            code: "D21001101_061_01",
+        },
     ],
     d210059_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
