@@ -72,7 +72,7 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const aniButtons = animations ? (
         animations.map(({ name, code }) => (
             <Button
-                key={name}
+                key={code}
                 data-value={code}
                 data-name={name}
                 variant="contained"
