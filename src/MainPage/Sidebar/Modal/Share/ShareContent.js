@@ -114,7 +114,7 @@ function ShareContent({ method }) {
                     }
                     break;
                 default:
-                    if (currentValue !== defaultValue) {
+                    if (currentValue !== defaultValue && currentValue) {
                         linkParts.push(`${keyCode}=${currentValue}`);
                     }
             }
