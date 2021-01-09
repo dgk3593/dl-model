@@ -386,8 +386,8 @@ const dragonAni = {
             code: "D21001201_040_01>D21001201_041_01>D21001201_042_01",
         },
         {
-            name: "Charge",
-            code: "D21001201_060_01",
+            name: "Stand on Hind Legs",
+            code: "D21007401_060_01",
         },
         {
             name: "Subjugating Storm",
@@ -1187,6 +1187,25 @@ const dragonAni = {
     d210015_01: [
         { name: "Dragon's Roost", code: "DC_d210015_01_90_01" },
         { name: "Receive Gift", code: "DC_d210015_01_90_04" },
+        { name: "Idle", code: "D21001501_000_01" },
+        { name: "Move Forward", code: "D21001501_002_01" },
+        { name: "Move Forward (Fast)", code: "D21001501_003_01" },
+        { name: "Brake", code: "D21001501_004_01" },
+        { name: "Dash Forward", code: "D21001501_020_01" },
+        { name: "Jump Backward", code: "D21001501_021_01" },
+        { name: "Transform", code: "D21001501_030_01" },
+        {
+            name: "Combo",
+            code: "D21001501_040_01>D21001501_041_01>D21001501_042_01",
+        },
+        {
+            name: "Throw Upward",
+            code: "D21001501_060_01",
+        },
+        {
+            name: "Terror Sphere",
+            code: "D21001501_061_01",
+        },
     ],
     d210021_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
@@ -1252,6 +1271,25 @@ const dragonAni = {
     d210075_01: [
         { name: "Dragon's Roost", code: "DC_d210075_01_90_01" },
         { name: "Receive Gift", code: "DC_d210075_01_90_04" },
+        { name: "Idle", code: "D21007501_000_01" },
+        { name: "Move Forward", code: "D21007501_002_01" },
+        { name: "Move Forward (Fast)", code: "D21007501_003_01" },
+        { name: "Brake", code: "D21007501_004_01" },
+        { name: "Dash Forward", code: "D21007501_020_01" },
+        { name: "Jump Backward", code: "D21007501_021_01" },
+        { name: "Transform", code: "D21007501_030_01" },
+        {
+            name: "Combo",
+            code: "D21007501_040_01>D21007501_041_01>D21007501_042_01",
+        },
+        {
+            name: "Pumpkin Prank",
+            code: "D21007501_060_01",
+        },
+        {
+            name: "Throw Downward",
+            code: "D21007501_061_01",
+        },
     ],
     d210089_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
