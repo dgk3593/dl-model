@@ -263,10 +263,38 @@ const dragonAni = {
     d210043_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        { name: "Idle", code: "D21001401_000_01" },
+        { name: "Walk", code: "D21001401_002_01" },
+        { name: "Run", code: "D21001401_003_01" },
+        { name: "Brake", code: "D21001401_004_01" },
+        { name: "Dash Forward", code: "D21001401_020_01" },
+        { name: "Transform", code: "D21001401_030_01" },
+        {
+            name: "Combo",
+            code: "D21001401_040_01>D21001401_041_01>D21001401_042_01",
+        },
+        {
+            name: "Lightning Blitz",
+            code: "D21001401_062_01>D21001401_062_02>D21001401_062_03",
+        },
     ],
     d210045_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        { name: "Idle", code: "D21001401_000_01" },
+        { name: "Walk", code: "D21001401_002_01" },
+        { name: "Run", code: "D21001401_003_01" },
+        { name: "Brake", code: "D21001401_004_01" },
+        { name: "Dash Forward", code: "D21001401_020_01" },
+        { name: "Transform", code: "D21001401_030_01" },
+        {
+            name: "Combo",
+            code: "D21001401_040_01>D21001401_041_01>D21001401_042_01",
+        },
+        {
+            name: "Thorny Spiral",
+            code: "D21001401_060_01",
+        },
     ],
     d210046_01: [
         { name: "Dragon's Roost", code: "DC_d210046_01_90_01" },
@@ -1183,6 +1211,20 @@ const dragonAni = {
     d210014_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        { name: "Idle", code: "D21001401_000_01" },
+        { name: "Walk", code: "D21001401_002_01" },
+        { name: "Run", code: "D21001401_003_01" },
+        { name: "Brake", code: "D21001401_004_01" },
+        { name: "Dash Forward", code: "D21001401_020_01" },
+        { name: "Transform", code: "D21001401_030_01" },
+        {
+            name: "Combo",
+            code: "D21001401_040_01>D21001401_041_01>D21001401_042_01",
+        },
+        {
+            name: "Shadow Carnage",
+            code: "D21001401_061_01",
+        },
     ],
     d210015_01: [
         { name: "Dragon's Roost", code: "DC_d210015_01_90_01" },
