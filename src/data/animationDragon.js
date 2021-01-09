@@ -943,6 +943,20 @@ const dragonAni = {
     d210097_01: [
         { name: "Dragon's Roost", code: "DC_d210072_01_90_01" },
         { name: "Receive Gift", code: "DC_d210072_01_90_04" },
+        { name: "Idle", code: "D21007201_000_01" },
+        { name: "Run", code: "D21009701_002_01" },
+        { name: "Run Fast", code: "D21009701_003_01" },
+        { name: "Brake", code: "D21007201_004_01" },
+        { name: "Dash Forward", code: "D21007201_020_01" },
+        { name: "Transform", code: "D21007201_030_01" },
+        {
+            name: "Combo",
+            code: "D21007201_040_01>D21007201_041_01>D21007201_042_01",
+        },
+        {
+            name: "Hocus Pocus!",
+            code: "D21009701_060_01",
+        },
     ],
     d210098_01: [
         { name: "Dragon's Roost", code: "DC_d210098_01_90_01" },
@@ -999,6 +1013,24 @@ const dragonAni = {
     d210105_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
         { name: "Receive Gift", code: "DC_d210025_01_90_04" },
+        { name: "Idle", code: "D21002501_000_01" },
+        { name: "Move Forward", code: "D21002501_002_01" },
+        { name: "Move Forward (Fast)", code: "D21002501_003_01" },
+        { name: "Brake", code: "D21002501_004_01" },
+        { name: "Dash Forward", code: "D21002501_020_01" },
+        { name: "Transform", code: "D21002501_030_01" },
+        {
+            name: "Combo",
+            code: "D21002501_040_01>D21002501_041_01>D21002501_042_01",
+        },
+        {
+            name: "Void Volley",
+            code: "D21010501_060_01",
+        },
+        {
+            name: "Ground Stab",
+            code: "D21002501_061_01",
+        },
     ],
     d210106_01: [
         { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
@@ -1007,10 +1039,42 @@ const dragonAni = {
     d210107_01: [
         { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
         { name: "Receive Gift", code: "DC_d210019_01_90_04" },
+        { name: "Idle", code: "D21001901_000_01" },
+        { name: "Walk", code: "D21001901_002_01" },
+        { name: "Run", code: "D21001901_003_01" },
+        { name: "Brake", code: "D21001901_004_01" },
+        { name: "Dash Forward", code: "D21001901_020_01" },
+        { name: "Transform", code: "D21001901_030_01" },
+        {
+            name: "Combo",
+            code: "D21001901_040_01>D21001901_041_01>D21001901_042_01",
+        },
+        {
+            name: "Stomp",
+            code: "D21001901_060_01",
+        },
+        {
+            name: "Coruscating Flames",
+            code: "D21010701_060_01",
+        },
     ],
     d210109_01: [
         { name: "Dragon's Roost", code: "DC_d210109_01_90_01" },
         { name: "Receive Gift", code: "DC_d210109_01_90_04" },
+        { name: "Idle", code: "D21010901_000_01" },
+        { name: "Walk", code: "D21010901_002_01" },
+        { name: "Run", code: "D21010901_003_01" },
+        { name: "Brake", code: "D21010901_004_01" },
+        { name: "Dash Forward", code: "D21010901_020_01" },
+        { name: "Transform", code: "D21010901_030_01" },
+        {
+            name: "Combo",
+            code: "D21010901_040_01>D21010901_041_01>D21010901_042_01",
+        },
+        {
+            name: "White Land",
+            code: "D21010901_060_01",
+        },
     ],
     d210110_01: [
         { name: "Dragon's Roost", code: "DC_d210110_01_90_01" },
