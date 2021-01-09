@@ -39,8 +39,8 @@ class BaseViewer extends PureComponent {
     async componentDidMount() {
         // window.app = this;
 
-        const { fbx2json } = await import("fbx2json/fbx2json.js");
-        await fbx2json();
+        // const { fbx2json } = await import("fbx2json/fbx2json.js");
+        // await fbx2json();
 
         await this.initialize();
         this.finishedInit = true;
