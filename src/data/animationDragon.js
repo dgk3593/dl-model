@@ -236,6 +236,25 @@ const dragonAni = {
     d210020_01: [
         { name: "Dragon's Roost", code: "DC_d210020_01_90_01" },
         { name: "Receive Gift", code: "DC_d210020_01_90_04" },
+        { name: "Idle", code: "D21002001_000_01" },
+        { name: "Move Forward", code: "D21002001_002_01" },
+        { name: "Move Forward (Fast)", code: "D21002001_003_01" },
+        { name: "Brake", code: "D21002001_004_01" },
+        { name: "Dash Forward", code: "D21002001_020_01" },
+        { name: "Jump Backward", code: "D21002001_021_01" },
+        { name: "Transform", code: "D21002001_030_01" },
+        {
+            name: "Combo",
+            code: "D21002001_040_01>D21002001_041_01>D21002001_042_01",
+        },
+        {
+            name: "Thrust",
+            code: "D21002001_060_01",
+        },
+        {
+            name: "Saint's Banner",
+            code: "D21002001_061_01",
+        },
     ],
     d210024_01: [
         { name: "Dragon's Roost", code: "DC_d210024_01_90_01" },
@@ -481,6 +500,20 @@ const dragonAni = {
     d210072_01: [
         { name: "Dragon's Roost", code: "DC_d210072_01_90_01" },
         { name: "Receive Gift", code: "DC_d210072_01_90_04" },
+        { name: "Idle", code: "D21007201_000_01" },
+        { name: "Run", code: "D21007201_002_01" },
+        { name: "Run Fast", code: "D21007201_003_01" },
+        { name: "Brake", code: "D21007201_004_01" },
+        { name: "Dash Forward", code: "D21007201_020_01" },
+        { name: "Transform", code: "D21007201_030_01" },
+        {
+            name: "Combo",
+            code: "D21007201_040_01>D21007201_041_01>D21007201_042_01",
+        },
+        {
+            name: "Polar Roller",
+            code: "D21007201_060_01>D21007201_060_02>D21007201_060_03",
+        },
     ],
     d210074_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
@@ -507,6 +540,25 @@ const dragonAni = {
     d210076_01: [
         { name: "Dragon's Roost", code: "DC_d210076_01_90_01" },
         { name: "Receive Gift", code: "DC_d210076_01_90_04" },
+        { name: "Idle", code: "D21007601_000_01" },
+        { name: "Move Forward", code: "D21007601_002_01" },
+        { name: "Move Forward (Fast)", code: "D21007601_003_01" },
+        { name: "Brake", code: "D21007601_004_01" },
+        { name: "Dash Forward", code: "D21007601_020_01" },
+        { name: "Jump Backward", code: "D21007601_021_01" },
+        { name: "Transform", code: "D21007601_030_01" },
+        {
+            name: "Combo",
+            code: "D21007601_040_01>D21007601_041_01>D21007601_042_01",
+        },
+        {
+            name: "Frost Beam",
+            code: "D21007601_060_01",
+        },
+        {
+            name: "Ground Stab",
+            code: "D21007601_061_01",
+        },
     ],
     d210077_01: [
         { name: "Dragon's Roost", code: "DC_d210077_01_90_01" },
