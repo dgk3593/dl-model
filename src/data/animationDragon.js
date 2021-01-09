@@ -185,8 +185,8 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
         { name: "Receive Gift", code: "DC_d210016_01_90_04" },
         { name: "Idle", code: "D21001601_000_01" },
-        { name: "Move Forward", code: "D21001601_002_01" },
-        { name: "Move Forward (Fast)", code: "D21001601_003_01" },
+        { name: "Walk", code: "D21001601_002_01" },
+        { name: "Run", code: "D21001601_003_01" },
         { name: "Brake", code: "D21001601_004_01" },
         { name: "Dash Forward", code: "D21001601_020_01" },
         { name: "Transform", code: "D21001601_030_01" },
@@ -567,6 +567,20 @@ const dragonAni = {
     d210054_01: [
         { name: "Dragon's Roost", code: "DC_d210054_01_90_01" },
         { name: "Receive Gift", code: "DC_d210054_01_90_04" },
+        { name: "Idle", code: "D21005401_000_01" },
+        { name: "Move Forward", code: "D21005401_002_01" },
+        { name: "Move Forward (Fast)", code: "D21005401_003_01" },
+        { name: "Brake", code: "D21005401_004_01" },
+        { name: "Dash Forward", code: "D21005401_020_01" },
+        { name: "Transform", code: "D21005401_030_01" },
+        {
+            name: "Combo",
+            code: "D21005401_040_01>D21005401_041_01>D21005401_042_01",
+        },
+        {
+            name: "Aquatic Melody",
+            code: "D21005401_060_01",
+        },
     ],
     d210055_01: [
         { name: "Dragon's Roost", code: "DC_d210055_01_90_01" },
@@ -889,6 +903,20 @@ const dragonAni = {
     d210094_01: [
         { name: "Dragon's Roost", code: "DC_d210094_01_90_01" },
         { name: "Receive Gift", code: "DC_d210094_01_90_04" },
+        { name: "Idle", code: "D21005401_000_01" },
+        { name: "Move Forward", code: "D21005401_002_01" },
+        { name: "Move Forward (Fast)", code: "D21005401_003_01" },
+        { name: "Brake", code: "D21005401_004_01" },
+        { name: "Dash Forward", code: "D21005401_020_01" },
+        { name: "Transform", code: "D21005401_030_01" },
+        {
+            name: "Combo",
+            code: "D21009401_040_01>D21009401_041_01>D21009401_042_01",
+        },
+        {
+            name: "Aquatic Melody",
+            code: "D21009401_060_01",
+        },
     ],
     d210095_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
@@ -905,6 +933,24 @@ const dragonAni = {
     d210098_01: [
         { name: "Dragon's Roost", code: "DC_d210098_01_90_01" },
         { name: "Receive Gift", code: "DC_d210098_01_90_04" },
+        { name: "Idle", code: "D21001601_000_01" },
+        { name: "Walk", code: "D21001601_002_01" },
+        { name: "Run", code: "D21001601_003_01" },
+        { name: "Brake", code: "D21001601_004_01" },
+        { name: "Dash Forward", code: "D21001601_020_01" },
+        { name: "Transform", code: "D21001601_030_01" },
+        {
+            name: "Combo",
+            code: "D21001601_040_01>D21001601_041_01>D21001601_042_01",
+        },
+        {
+            name: "Rapid Attack",
+            code: "D21001601_060_01",
+        },
+        {
+            name: "Purusha Prana",
+            code: "D21009801_060_01",
+        },
     ],
     d210101_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
@@ -917,6 +963,20 @@ const dragonAni = {
     d210103_01: [
         { name: "Dragon's Roost", code: "DC_d210103_01_90_01" },
         { name: "Receive Gift", code: "DC_d210103_01_90_04" },
+        { name: "Idle", code: "D21010301_000_01" },
+        { name: "Move Forward", code: "D21010301_002_01" },
+        { name: "Move Forward (Fast)", code: "D21010301_003_01" },
+        { name: "Brake", code: "D21010301_004_01" },
+        { name: "Dash Forward", code: "D21010301_020_01" },
+        { name: "Transform", code: "D21010301_030_01" },
+        {
+            name: "Combo",
+            code: "D21010301_040_01>D21010301_041_01>D21010301_042_01",
+        },
+        {
+            name: "Arrow of Glory",
+            code: "D21010301_060_01",
+        },
     ],
     d210113_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
