@@ -375,6 +375,24 @@ const dragonAni = {
     d210074_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
         { name: "Receive Gift", code: "DC_d210012_01_90_04" },
+        { name: "Idle", code: "D21001201_000_01" },
+        { name: "Walk", code: "D21001201_002_01" },
+        { name: "Run", code: "D21001201_003_01" },
+        { name: "Brake", code: "D21001201_004_01" },
+        { name: "Dash Forward", code: "D21001201_020_01" },
+        { name: "Transform", code: "D21001201_030_01" },
+        {
+            name: "Combo",
+            code: "D21001201_040_01>D21001201_041_01>D21001201_042_01",
+        },
+        {
+            name: "Charge",
+            code: "D21001201_060_01",
+        },
+        {
+            name: "Subjugating Storm",
+            code: "D21001201_061_01",
+        },
     ],
     d210076_01: [
         { name: "Dragon's Roost", code: "DC_d210076_01_90_01" },
@@ -1121,10 +1139,46 @@ const dragonAni = {
     d210012_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
         { name: "Receive Gift", code: "DC_d210012_01_90_04" },
+        { name: "Idle", code: "D21001201_000_01" },
+        { name: "Walk", code: "D21001201_002_01" },
+        { name: "Run", code: "D21001201_003_01" },
+        { name: "Brake", code: "D21001201_004_01" },
+        { name: "Dash Forward", code: "D21001201_020_01" },
+        { name: "Transform", code: "D21001201_030_01" },
+        {
+            name: "Combo",
+            code: "D21001201_040_01>D21001201_041_01>D21001201_042_01",
+        },
+        {
+            name: "Horn Charge",
+            code: "D21001201_060_01",
+        },
+        {
+            name: "Immaculate Light",
+            code: "D21001201_062_01",
+        },
     ],
     d210013_01: [
         { name: "Dragon's Roost", code: "DC_d210013_01_90_01" },
         { name: "Receive Gift", code: "DC_d210013_01_90_04" },
+        { name: "Idle", code: "D21001301_000_01" },
+        { name: "Walk", code: "D21001301_002_01" },
+        { name: "Run", code: "D21001301_003_01" },
+        { name: "Brake", code: "D21001301_004_01" },
+        { name: "Dash Forward", code: "D21001301_020_01" },
+        { name: "Transform", code: "D21001301_030_01" },
+        {
+            name: "Combo",
+            code: "D21001301_040_01>D21001301_041_01>D21001301_042_01",
+        },
+        {
+            name: "Tackle",
+            code: "D21001301_060_01",
+        },
+        {
+            name: "Ethereal Gleam",
+            code: "D21001301_061_01",
+        },
     ],
     d210014_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
