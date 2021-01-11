@@ -409,6 +409,99 @@ const dragonAni = {
     d210038_01: [
         { name: "Dragon's Roost", code: "DC_d210001_01_90_01" },
         { name: "Receive Gift", code: "DC_d210001_01_90_04" },
+        { name: "Idle", code: "D21000101_000_01" },
+        { name: "Lean Forward", code: "D21000101_001_01" },
+        { name: "Walk", code: "D21000101_002_01" },
+        { name: "Run", code: "D21000101_003_01" },
+        { name: "Brake", code: "D21000101_004_01" },
+        { name: "Dash Forward", code: "D21000101_020_01" },
+        { name: "Jump Backward", code: "D21000101_021_01>D21000101_021_02" },
+        { name: "Transform", code: "D21000101_030_01" },
+        {
+            name: "Combo",
+            code: "D21000101_040_01>D21000101_041_01>D21000101_042_01",
+        },
+        {
+            name: "Grand Tempest",
+            code: "D21000101_062_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000101_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000101_011_01>D21000101_011_02",
+        },
+        {
+            name: "Frozen",
+            code: "D21000101_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000101_015_01>D21000101_015_02",
+        },
+        {
+            name: "Stagger Midair",
+            code: "D21000101_017_01>D21000101_017_02>D21000101_017_03",
+        },
+        {
+            name: "Broken",
+            code: "D21000101_081_01>D21000101_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000101_081_03",
+        },
+        {
+            name: "Broken Midair",
+            code:
+                "D21000101_082_01>D21000101_082_02>D21000101_082_03>D21000101_082_04>D21000101_082_05",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000101_090_01>D21000101_090_02",
+        },
+        {
+            name: "Quick Attack",
+            code: "D21000101_100_01",
+        },
+        {
+            name: "Small Back Jump",
+            code: "D21000101_101_01",
+        },
+        {
+            name: "Spin Attack",
+            code: "D21000101_102_01>D21000101_102_02>D21000101_102_03",
+        },
+        {
+            name: "Trident Tempest",
+            code: "D21000101_103_01>D21000101_103_02>D21000101_103_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000101_104_01",
+        },
+        {
+            name: "Summon Help",
+            code: "D21000101_108_01",
+        },
+        {
+            name: "Land",
+            code: "D21000101_109_01>D21000101_109_02",
+        },
+        {
+            name: "Calamitous Storm",
+            code: "D21003801_105_01>D21003801_105_02>D21003801_105_03",
+        },
+        {
+            name: "Tattered Sky",
+            code: "D21003801_106_01>D21003801_106_02>D21003801_106_03",
+        },
+        {
+            name: "Storm Chaser",
+            code: "D21003801_107_01",
+        },
     ],
     d210039_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
@@ -1803,6 +1896,87 @@ const dragonAni = {
     d210001_01: [
         { name: "Dragon's Roost", code: "DC_d210001_01_90_01" },
         { name: "Receive Gift", code: "DC_d210001_01_90_04" },
+        { name: "Idle", code: "D21000101_000_01" },
+        { name: "Lean Forward", code: "D21000101_001_01" },
+        { name: "Walk", code: "D21000101_002_01" },
+        { name: "Run", code: "D21000101_003_01" },
+        { name: "Brake", code: "D21000101_004_01" },
+        { name: "Dash Forward", code: "D21000101_020_01" },
+        { name: "Jump Backward", code: "D21000101_021_01>D21000101_021_02" },
+        { name: "Transform", code: "D21000101_030_01" },
+        {
+            name: "Combo",
+            code: "D21000101_040_01>D21000101_041_01>D21000101_042_01",
+        },
+        {
+            name: "Tornado Tail",
+            code: "D21000101_061_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000101_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000101_011_01>D21000101_011_02",
+        },
+        {
+            name: "Frozen",
+            code: "D21000101_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000101_015_01>D21000101_015_02",
+        },
+        {
+            name: "Stagger Midair",
+            code: "D21000101_017_01>D21000101_017_02>D21000101_017_03",
+        },
+        {
+            name: "Broken",
+            code: "D21000101_081_01>D21000101_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000101_081_03",
+        },
+        {
+            name: "Broken Midair",
+            code:
+                "D21000101_082_01>D21000101_082_02>D21000101_082_03>D21000101_082_04>D21000101_082_05",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000101_090_01>D21000101_090_02",
+        },
+        {
+            name: "Quick Attack",
+            code: "D21000101_100_01",
+        },
+        {
+            name: "Small Back Jump",
+            code: "D21000101_101_01",
+        },
+        {
+            name: "Spin Attack",
+            code: "D21000101_102_01>D21000101_102_02>D21000101_102_03",
+        },
+        {
+            name: "Trident Tempest",
+            code: "D21000101_103_01>D21000101_103_02>D21000101_103_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000101_104_01",
+        },
+        {
+            name: "Summon Help",
+            code: "D21000101_108_01",
+        },
+        {
+            name: "Land",
+            code: "D21000101_109_01>D21000101_109_02",
+        },
     ],
     d210104_01: [
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
