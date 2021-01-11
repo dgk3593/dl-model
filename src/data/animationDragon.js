@@ -527,6 +527,93 @@ const dragonAni = {
     d210040_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
         { name: "Receive Gift", code: "DC_d210003_01_90_04" },
+        { name: "Idle", code: "D21000301_000_01" },
+        { name: "Lean Forward", code: "D21000301_001_01" },
+        { name: "Walk", code: "D21000301_002_01" },
+        { name: "Run", code: "D21000301_003_01" },
+        { name: "Brake", code: "D21000301_004_01" },
+        { name: "Dash Forward", code: "D21000301_020_01" },
+        { name: "Transform", code: "D21000301_030_01" },
+        {
+            name: "Combo",
+            code: "D21000301_040_01>D21000301_041_01>D21000301_042_01",
+        },
+        {
+            name: "Aqua Spiral",
+            code: "D21004001_107_01>D21004001_107_02>D21004001_107_03",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000301_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000301_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000301_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000301_015_01>D21000301_015_02",
+        },
+        {
+            name: "Broken",
+            code: "D21000301_081_01>D21000301_081_02",
+        },
+        {
+            name: "Recover From Broken",
+            code: "D21000301_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000301_090_01>D21000301_090_02",
+        },
+        {
+            name: "Stomp",
+            code: "D21000301_100_01",
+        },
+        {
+            name: "Tail Slap",
+            code: "D21000301_101_01",
+        },
+        {
+            name: "Water Balls",
+            code: "D21000301_102_01>D21000301_102_02>D21000301_102_03",
+        },
+        {
+            name: "Spit Water",
+            code: "D21000301_103_01",
+        },
+        {
+            name: "Tidal Call",
+            code: "D21000301_104_01>D21000301_104_02>D21000301_104_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000301_110_01",
+        },
+        {
+            name: "Launch Forward",
+            code: "D21000301_111_01>D21000301_111_02>D21000301_111_03",
+        },
+        {
+            name: "Tidal Explosion",
+            code: "D21004001_105_01>D21004001_105_02>D21004001_105_03",
+        },
+        {
+            name: "Waterfall",
+            code: "D21004001_106_01>D21004001_106_02>D21004001_106_03",
+        },
+        {
+            name: "Stand on Hind Legs",
+            code: "D21004001_108_01",
+        },
+        {
+            name: "Homing Bubble",
+            code: "D21004001_109_01>D21004001_109_02>D21004001_109_03",
+        },
     ],
     d210041_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
@@ -1746,6 +1833,78 @@ const dragonAni = {
     d210003_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
         { name: "Receive Gift", code: "DC_d210003_01_90_04" },
+        { name: "Idle", code: "D21000301_000_01" },
+        { name: "Lean Forward", code: "D21000301_001_01" },
+        { name: "Walk", code: "D21000301_002_01" },
+        { name: "Run", code: "D21000301_003_01" },
+        { name: "Brake", code: "D21000301_004_01" },
+        { name: "Dash Forward", code: "D21000301_020_01" },
+        { name: "Transform", code: "D21000301_030_01" },
+        {
+            name: "Combo",
+            code: "D21000301_040_01>D21000301_041_01>D21000301_042_01",
+        },
+        {
+            name: "Hydrocannon",
+            code:
+                "D21000301_060_01>D21000301_061_01>D21000301_062_01>D21000301_063_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000301_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000301_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000301_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000301_015_01>D21000301_015_02",
+        },
+        {
+            name: "Broken",
+            code: "D21000301_081_01>D21000301_081_02",
+        },
+        {
+            name: "Recover From Broken",
+            code: "D21000301_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000301_090_01>D21000301_090_02",
+        },
+        {
+            name: "Stomp",
+            code: "D21000301_100_01",
+        },
+        {
+            name: "Tail Slap",
+            code: "D21000301_101_01",
+        },
+        {
+            name: "Water Balls",
+            code: "D21000301_102_01>D21000301_102_02>D21000301_102_03",
+        },
+        {
+            name: "Spit Water",
+            code: "D21000301_103_01",
+        },
+        {
+            name: "Tidal Call",
+            code: "D21000301_104_01>D21000301_104_02>D21000301_104_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000301_110_01",
+        },
+        {
+            name: "Launch Forward",
+            code: "D21000301_111_01>D21000301_111_02>D21000301_111_03",
+        },
     ],
     d210004_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
