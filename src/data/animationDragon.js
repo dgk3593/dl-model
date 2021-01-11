@@ -800,6 +800,88 @@ const dragonAni = {
     d210042_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
         { name: "Receive Gift", code: "DC_d210005_01_90_04" },
+        { name: "Idle", code: "D21000501_000_01" },
+        { name: "Howl", code: "D21000501_001_01" },
+        { name: "Walk", code: "D21000501_002_01" },
+        { name: "Run", code: "D21000501_003_01" },
+        { name: "Brake", code: "D21000501_004_01" },
+        { name: "Dash Forward", code: "D21000501_020_01" },
+        { name: "Transform", code: "D21000501_030_01" },
+        {
+            name: "Combo",
+            code: "D21000501_040_01>D21000501_041_01>D21000501_042_01",
+        },
+        { name: "Obsidian Ray", code: "D21000501_060_01" },
+        { name: "Dash Attack", code: "D21000501_061_01" },
+        { name: "Accursed Venom", code: "D21000501_062_01" },
+        {
+            name: "Take Damage",
+            code: "D21000501_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000501_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000501_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000501_015_01>D21000501_015_02",
+        },
+        {
+            name: "Broken",
+            code: "D21000501_081_01>D21000501_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000501_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000501_090_01>D21000501_090_02",
+        },
+        {
+            name: "Quick Attack",
+            code: "D21000501_100_01",
+        },
+        {
+            name: "Tail Slam",
+            code: "D21000501_101_01",
+        },
+        {
+            name: "Roar and Stomp",
+            code: "D21000501_102_01>D21000501_102_02>D21000501_102_03",
+        },
+        {
+            name: "Wide Breath",
+            code: "D21000501_103_01>D21000501_103_02>D21000501_103_03",
+        },
+        {
+            name: "Dash Forward",
+            code: "D21000501_104_01>D21000501_104_02>D21000501_104_03",
+        },
+        {
+            name: "Spit Poison",
+            code: "D21000501_105_01",
+        },
+        {
+            name: "Roar",
+            code: "D21000501_106_01",
+        },
+        {
+            name: "Cursed Catastrophe",
+            code: "D21004201_107_01>D21004201_107_02>D21004201_107_03",
+        },
+        {
+            name: "CW Breath",
+            code: "D21004201_108_01>D21004201_108_02",
+        },
+        {
+            name: "CCW Breath",
+            code: "D21004201_108_01>D21004201_109_02",
+        },
     ],
     d210043_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
@@ -1309,6 +1391,18 @@ const dragonAni = {
     d210095_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
         { name: "Receive Gift", code: "DC_d210005_01_90_04" },
+        { name: "Idle", code: "D21000501_000_01" },
+        { name: "Howl", code: "D21000501_001_01" },
+        { name: "Walk", code: "D21000501_002_01" },
+        { name: "Run", code: "D21000501_003_01" },
+        { name: "Brake", code: "D21000501_004_01" },
+        { name: "Dash Forward", code: "D21000501_020_01" },
+        { name: "Transform", code: "D21000501_030_01" },
+        {
+            name: "Combo",
+            code: "D21000501_040_01>D21000501_041_01>D21000501_042_01",
+        },
+        { name: "Malevolent Venom", code: "D21000501_062_01" },
     ],
     d210096_01: [
         { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
@@ -2170,7 +2264,7 @@ const dragonAni = {
         { name: "Receive Gift", code: "DC_d210004_01_90_04" },
         { name: "Idle", code: "D21000401_000_01" },
         { name: "Run", code: "D21000401_002_01" },
-        { name: "Run Fast", code: "D21005001_003_01" },
+        { name: "Run Fast", code: "D21000401_003_01" },
         { name: "Brake", code: "D21000401_004_01" },
         { name: "Dash Forward", code: "D21000401_020_01" },
         { name: "Transform", code: "D21000401_030_01" },
@@ -2253,6 +2347,76 @@ const dragonAni = {
     d210005_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
         { name: "Receive Gift", code: "DC_d210005_01_90_04" },
+        { name: "Idle", code: "D21000501_000_01" },
+        { name: "Howl", code: "D21000501_001_01" },
+        { name: "Walk", code: "D21000501_002_01" },
+        { name: "Run", code: "D21000501_003_01" },
+        { name: "Brake", code: "D21000501_004_01" },
+        { name: "Dash Forward", code: "D21000501_020_01" },
+        { name: "Transform", code: "D21000501_030_01" },
+        {
+            name: "Combo",
+            code: "D21000501_040_01>D21000501_041_01>D21000501_042_01",
+        },
+        { name: "Breath", code: "D21000501_060_01" },
+        { name: "Dash Attack", code: "D21000501_061_01" },
+        { name: "Accursed Venom", code: "D21000501_062_01" },
+        {
+            name: "Take Damage",
+            code: "D21000501_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000501_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000501_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000501_015_01>D21000501_015_02",
+        },
+        {
+            name: "Broken",
+            code: "D21000501_081_01>D21000501_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000501_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000501_090_01>D21000501_090_02",
+        },
+        {
+            name: "Quick Attack",
+            code: "D21000501_100_01",
+        },
+        {
+            name: "Tail Slam",
+            code: "D21000501_101_01",
+        },
+        {
+            name: "Roar and Stomp",
+            code: "D21000501_102_01>D21000501_102_02>D21000501_102_03",
+        },
+        {
+            name: "Wide Breath",
+            code: "D21000501_103_01>D21000501_103_02>D21000501_103_03",
+        },
+        {
+            name: "Dash Forward",
+            code: "D21000501_104_01>D21000501_104_02>D21000501_104_03",
+        },
+        {
+            name: "Spit Poison",
+            code: "D21000501_105_01",
+        },
+        {
+            name: "Roar",
+            code: "D21000501_106_01",
+        },
     ],
     d210006_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
