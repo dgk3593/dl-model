@@ -414,6 +414,115 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
         { name: "Receive Gift", code: "DC_d210002_01_90_04" },
         { name: "Infernal Ray", code: "D21010401_60_01" },
+        { name: "Idle", code: "D21000201_000_01" },
+        { name: "Lean Forward", code: "D21000201_001_01" },
+        { name: "Walk", code: "D21000201_002_01" },
+        { name: "Run", code: "D21000201_003_01" },
+        { name: "Brake", code: "D21000201_004_01" },
+        { name: "Dash Forward", code: "D21000201_020_01" },
+        { name: "Jump Backward", code: "D21000201_021_01" },
+        { name: "Transform", code: "D21000201_030_01" },
+        {
+            name: "Combo",
+            code: "D21000201_040_01>D21000201_041_01>D21000201_042_01",
+        },
+        {
+            name: "Muspelheim",
+            code: "D21000201_060_01",
+        },
+        {
+            name: "Crimson Inferno",
+            code: "D21000201_061_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000201_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000201_011_01>D21000201_011_02",
+        },
+        {
+            name: "Frozen",
+            code: "D21000201_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000201_015_01>D21000201_015_02",
+        },
+        {
+            name: "Weakened 2",
+            code: "D21000201_081_01>D21000201_081_02>D21000201_081_03",
+        },
+        {
+            name: "Staggered Midair",
+            code: "D21000201_017_01>D21000201_017_02>D21000201_017_03",
+        },
+        {
+            name: "Broken",
+            code:
+                "D21000201_082_01>D21000201_082_02>D21000201_082_03>D21000201_082_04",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000201_082_05",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000201_090_01>D21000201_090_02",
+        },
+        {
+            name: "Claw Attack",
+            code: "D21000201_100_01",
+        },
+        {
+            name: "Flame Breath",
+            code: "D21000201_101_01>D21000201_101_02>D21000201_101_03",
+        },
+        {
+            name: "Take Flight",
+            code: "D21000201_102_01",
+        },
+        {
+            name: "Take Flight 2",
+            code: "D21000201_104_01>D21000201_104_02>D21000201_104_03",
+        },
+        {
+            name: "Fly Straight",
+            code: "D21000201_102_02",
+        },
+        {
+            name: "Fly Up",
+            code: "D21000201_102_04",
+        },
+        {
+            name: "Land",
+            code: "D21000201_102_03",
+        },
+        {
+            name: "Roar",
+            code: "D21000201_107_01",
+        },
+        {
+            name: "Roar 2",
+            code: "D21000201_062_01",
+        },
+        {
+            name: "Meteors",
+            code: "D21000201_103_01",
+        },
+        {
+            name: "Front Attack",
+            code: "D21000201_104_04",
+        },
+        {
+            name: "Scorching Blast",
+            code: "D21003901_105_01>D21003901_105_02>D21003901_105_03",
+        },
+        {
+            name: "Before Muspelheim",
+            code: "D21003901_106_01>D21003901_106_02",
+        },
     ],
     d210040_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
@@ -1534,8 +1643,8 @@ const dragonAni = {
         { name: "Infernal Ray", code: "D21010401_60_01" },
         { name: "Idle", code: "D21000201_000_01" },
         { name: "Lean Forward", code: "D21000201_001_01" },
-        { name: "Move Forward", code: "D21000201_002_01" },
-        { name: "Move Forward (Fast)", code: "D21000201_003_01" },
+        { name: "Walk", code: "D21000201_002_01" },
+        { name: "Run", code: "D21000201_003_01" },
         { name: "Brake", code: "D21000201_004_01" },
         { name: "Dash Forward", code: "D21000201_020_01" },
         { name: "Jump Backward", code: "D21000201_021_01" },
