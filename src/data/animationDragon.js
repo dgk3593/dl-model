@@ -618,6 +618,91 @@ const dragonAni = {
     d210041_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
         { name: "Receive Gift", code: "DC_d210004_01_90_04" },
+        { name: "Idle", code: "D21000401_000_01" },
+        { name: "Run", code: "D21000401_002_01" },
+        { name: "Run Fast", code: "D21005001_003_01" },
+        { name: "Brake", code: "D21000401_004_01" },
+        { name: "Dash Forward", code: "D21000401_020_01" },
+        { name: "Transform", code: "D21000401_030_01" },
+        {
+            name: "Combo",
+            code: "D21000401_040_01>D21000401_041_01>D21000401_042_01",
+        },
+        { name: "Kick the Ground", code: "D21000401_001_01" },
+        {
+            name: "Launch Forward",
+            code: "D21000401_060_01",
+        },
+        {
+            name: "Launch Forward 2",
+            code:
+                "D21000401_101_01>D21000401_101_02>D21000401_101_03>D21000401_101_04>D21000401_101_05",
+        },
+        {
+            name: "Shocking Spark",
+            code: "D21000401_061_01",
+        },
+        {
+            name: "Shocking Spark 2",
+            code: "D21000401_102_01>D21000401_102_02>D21000401_102_03",
+        },
+        {
+            name: "Primal Thunder",
+            code: "D21000401_062_01",
+        },
+        {
+            name: "Primal Thunder 2",
+            code: "D21000401_064_01",
+        },
+        {
+            name: "Primal Thunder 3",
+            code: "D21000401_104_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000401_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000401_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000401_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000401_015_01>D21000401_015_02",
+        },
+        {
+            name: "Weakened 2",
+            code: "D21000401_080_01>D21000401_080_02>D21000401_080_03",
+        },
+        {
+            name: "Broken",
+            code: "D21000401_081_01>D21000401_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000401_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000401_090_01>D21000401_090_02",
+        },
+        {
+            name: "Peck",
+            code: "D21000401_100_01",
+        },
+        {
+            name: "Charge",
+            code:
+                "D21000401_103_01>D21000401_103_02>D21000401_103_03>D21000401_103_04",
+        },
+        {
+            name: "Supreme Surge",
+            code: "D21004101_105_01>D21004101_105_02>D21004101_105_03",
+        },
     ],
     d210042_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
@@ -1909,6 +1994,87 @@ const dragonAni = {
     d210004_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
         { name: "Receive Gift", code: "DC_d210004_01_90_04" },
+        { name: "Idle", code: "D21000401_000_01" },
+        { name: "Run", code: "D21000401_002_01" },
+        { name: "Run Fast", code: "D21005001_003_01" },
+        { name: "Brake", code: "D21000401_004_01" },
+        { name: "Dash Forward", code: "D21000401_020_01" },
+        { name: "Transform", code: "D21000401_030_01" },
+        {
+            name: "Combo",
+            code: "D21000401_040_01>D21000401_041_01>D21000401_042_01",
+        },
+        { name: "Kick the Ground", code: "D21000401_001_01" },
+        {
+            name: "Launch Forward",
+            code: "D21000401_060_01",
+        },
+        {
+            name: "Launch Forward 2",
+            code:
+                "D21000401_101_01>D21000401_101_02>D21000401_101_03>D21000401_101_04>D21000401_101_05",
+        },
+        {
+            name: "Lightning Rood",
+            code: "D21000401_061_01",
+        },
+        {
+            name: "Lightning Rood 2",
+            code: "D21000401_102_01>D21000401_102_02>D21000401_102_03",
+        },
+        {
+            name: "Primal Thunder",
+            code: "D21000401_062_01",
+        },
+        {
+            name: "Primal Thunder 2",
+            code: "D21000401_064_01",
+        },
+        {
+            name: "Primal Thunder 3",
+            code: "D21000401_104_01",
+        },
+        {
+            name: "Take Damage",
+            code: "D21000401_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21000401_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21000401_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21000401_015_01>D21000401_015_02",
+        },
+        {
+            name: "Weakened 2",
+            code: "D21000401_080_01>D21000401_080_02>D21000401_080_03",
+        },
+        {
+            name: "Broken",
+            code: "D21000401_081_01>D21000401_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21000401_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21000401_090_01>D21000401_090_02",
+        },
+        {
+            name: "Peck",
+            code: "D21000401_100_01",
+        },
+        {
+            name: "Charge",
+            code:
+                "D21000401_103_01>D21000401_103_02>D21000401_103_03>D21000401_103_04",
+        },
     ],
     d210005_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
@@ -2141,6 +2307,71 @@ const dragonAni = {
     d210050_01: [
         { name: "Dragon's Roost", code: "DC_d210050_01_90_01" },
         { name: "Receive Gift", code: "DC_d210050_01_90_04" },
+        { name: "Idle", code: "D21005001_000_01" },
+        { name: "Walk", code: "D21005001_002_01" },
+        { name: "Run", code: "D21005001_003_01" },
+        { name: "Brake", code: "D21005001_004_01" },
+        { name: "Dash Forward", code: "D21005001_020_01" },
+        { name: "Transform", code: "D21005001_030_01" },
+        {
+            name: "Combo",
+            code: "D21005001_040_01>D21005001_041_01>D21005001_042_01",
+        },
+        { name: "Kick the Ground", code: "D21005001_001_01" },
+        {
+            name: "Tactical Vortex",
+            code: "D21005001_062_01",
+        },
+        {
+            name: "Unused Skill 1",
+            code: "D21005001_061_01",
+        },
+        {
+            name: "Unused Skill 2",
+            code: "D21005001_102_01>D21005001_102_02>D21005001_102_03",
+        },
+        {
+            name: "Unused Skill 3",
+            code: "D21005001_064_01",
+        },
+        {
+            name: "Unused Skill 4",
+            code:
+                "D21005001_103_01>D21005001_103_02>D21005001_103_03>D21005001_103_04",
+        },
+        {
+            name: "Take Damage",
+            code: "D21005001_010_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21005001_011_01",
+        },
+        {
+            name: "Frozen",
+            code: "D21005001_013_01",
+        },
+        {
+            name: "Weakened",
+            code: "D21005001_080_01>D21005001_080_02>D21005001_080_03",
+        },
+        {
+            name: "Broken",
+            code: "D21005001_081_01>D21005001_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21005001_081_03",
+        },
+        {
+            name: "Peck",
+            code: "D21005001_100_01",
+        },
+        {
+            name: "Launch Forward",
+            code:
+                "D21005001_101_01>D21005001_101_02>D21005001_101_03>D21005001_101_04>D21005001_101_05",
+        },
     ],
     d210075_01: [
         { name: "Dragon's Roost", code: "DC_d210075_01_90_01" },
