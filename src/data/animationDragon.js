@@ -1187,14 +1187,22 @@ const dragonAni = {
             code:
                 "D21007701_040_01>D21007701_041_01>D21007701_042_01>D21007701_043_01>D21007701_044_01",
         },
-        {
-            name: "Daybreak Flurry",
-            code: "D21007701_060_01",
-        },
+        { name: "Daybreak Flurry", code: "D21007701_060_01" },
     ],
     d210078_01: [
         { name: "Dragon's Roost", code: "DC_d210078_01_90_01" },
         { name: "Receive Gift", code: "DC_d210078_01_90_04" },
+        { name: "Idle", code: "D21007801_000_01" },
+        { name: "Walk", code: "D21007801_002_01" },
+        { name: "Run", code: "D21007801_003_01" },
+        { name: "Brake", code: "D21007801_004_01" },
+        { name: "Dash Forward", code: "D21007801_020_01" },
+        { name: "Transform", code: "D21007801_030_01" },
+        {
+            name: "Combo",
+            code: "D21007801_040_01>D21007801_041_01>D21007801_042_01",
+        },
+        { name: "Blessed Ritual", code: "D21007801_060_01" },
     ],
     d210079_01: [
         { name: "Dragon's Roost", code: "DC_d210079_01_90_01" },
@@ -1601,6 +1609,20 @@ const dragonAni = {
     d210114_01: [
         { name: "Dragon's Roost", code: "DC_d210114_01_90_01" },
         { name: "Receive Gift", code: "DC_d210114_01_90_04" },
+        { name: "Idle", code: "D21011401_000_01" },
+        { name: "Run", code: "D21011401_002_01" },
+        { name: "Run Fast", code: "D21011401_003_01" },
+        { name: "Brake", code: "D21011401_004_01" },
+        { name: "Dash Forward", code: "D21011401_020_01" },
+        { name: "Transform", code: "D21011401_030_01" },
+        {
+            name: "Combo",
+            code: "D21011401_040_01>D21011401_041_01>D21011401_042_01",
+        },
+        {
+            name: "Taiyaki Time",
+            code: "D21011401_060_01",
+        },
     ],
     d210115_01: [
         { name: "Dragon's Roost", code: "DC_d210115_01_90_01" },
