@@ -607,7 +607,7 @@ const dragonAni = {
             code: "D21004001_106_01>D21004001_106_02>D21004001_106_03",
         },
         {
-            name: "Stand on Hind Legs",
+            name: "Bursting Bubbles",
             code: "D21004001_108_01",
         },
         {
