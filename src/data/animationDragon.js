@@ -1756,8 +1756,54 @@ const dragonAni = {
         },
     ],
     d210106_01: [
-        { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210019_01_90_04" },
+        { name: "Idle", code: "D21010601_000_01" },
+        { name: "Idle 2", code: "D21010601_014_01" },
+        { name: "Walk", code: "D21010601_002_01" },
+        { name: "Run", code: "D21010601_003_01" },
+        { name: "Dash Forward", code: "D21010601_020_01" },
+        { name: "Stomp", code: "D21010601_022_01" },
+        { name: "Defeated", code: "D21010601_011_01" },
+        {
+            name: "Broken",
+            code: "D21010601_081_01>D21010601_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21010601_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21010601_090_01>D21010601_090_02",
+        },
+        {
+            name: "Attack from Above",
+            code: "D21010601_100_01",
+        },
+        {
+            name: "Spit",
+            code:
+                "D21010601_101_01>D21010601_101_02>D21010601_101_03>D21010601_101_04>D21010601_101_05>D21010601_101_06>D21010601_101_07",
+        },
+        {
+            name: "Roar",
+            code: "D21010601_102_01>D21010601_102_02>D21010601_102_03",
+        },
+        {
+            name: "Charge",
+            code: "D21010601_103_01>D21010601_103_02>D21010601_103_03",
+        },
+        {
+            name: "Quick Attack",
+            code: "D21010601_105_01",
+        },
+        {
+            name: "Quick Stomp",
+            code: "D21010601_106_01",
+        },
+        {
+            name: "Quick Spit",
+            code: "D21010601_107_01",
+        },
     ],
     d210107_01: [
         { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
