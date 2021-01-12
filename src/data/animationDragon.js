@@ -1604,12 +1604,99 @@ const dragonAni = {
         },
     ],
     d210101_01: [
-        { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210025_01_90_04" },
+        { name: "Idle", code: "D21010101_000_01" },
+        { name: "Move Forward", code: "D21010101_002_01" },
+        { name: "Defeated", code: "D21010101_011_01" },
+        {
+            name: "Broken",
+            code: "D21010101_081_01>D21010101_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21010101_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21010101_090_01>D21010101_090_02",
+        },
+        {
+            name: "Dash Forward",
+            code: "D21010101_100_01",
+        },
+        {
+            name: "Stab",
+            code: "D21010101_101_01",
+        },
+        {
+            name: "Claw Attack",
+            code: "D21010101_102_01",
+        },
+        {
+            name: "Double Hit",
+            code: "D21010101_103_01",
+        },
+        {
+            name: "Stab Ground",
+            code: "D21010101_104_01>D21010101_104_02>D21010101_104_03",
+        },
+        {
+            name: "Throw Water",
+            code: "D21010101_105_01>D21010101_105_02>D21010101_105_03",
+        },
+        {
+            name: "Buff",
+            code: "D21010101_106_01>D21010101_106_02>D21010101_106_03",
+        },
+        {
+            name: "Trident Attack",
+            code: "D21010101_107_01",
+        },
     ],
     d210102_01: [
-        { name: "Dragon's Roost", code: "DC_d210020_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210020_01_90_04" },
+        { name: "Idle", code: "D21010201_000_01" },
+        { name: "Move Forward", code: "D21010201_002_01" },
+        { name: "Defeated", code: "D21010201_011_01>D21010201_011_02" },
+        {
+            name: "Broken",
+            code: "D21010201_081_01>D21010201_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21010201_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21010201_090_01>D21010201_090_02",
+        },
+        {
+            name: "Stab",
+            code: "D21010201_100_01",
+        },
+        {
+            name: "Double Swing",
+            code: "D21010201_101_01",
+        },
+        {
+            name: "Fly",
+            code:
+                "D21010201_102_01>D21010201_102_02>D21010201_102_03>D21010201_102_04>D21010201_102_05",
+        },
+        {
+            name: "Stab Ground",
+            code: "D21010201_103_01",
+        },
+        {
+            name: "Buff",
+            code: "D21010201_105_01",
+        },
+        {
+            name: "Thrust",
+            code: "D21010201_106_01",
+        },
+        {
+            name: "Long Thrust",
+            code: "D21010201_107_01>D21010201_107_02>D21010201_107_03",
+        },
     ],
     d210103_01: [
         { name: "Dragon's Roost", code: "DC_d210103_01_90_01" },
