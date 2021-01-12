@@ -1424,8 +1424,42 @@ const dragonAni = {
         },
     ],
     d210088_01: [
-        { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210018_01_90_04" },
+        { name: "Idle", code: "D21008801_000_01" },
+        { name: "Move Forward", code: "D21008801_002_01" },
+        { name: "Move Forward (Fast)", code: "D21001801_003_01" },
+        { name: "Brake", code: "D21001801_004_01" },
+        { name: "Move Backward", code: "D21001801_021_01" },
+        {
+            name: "Combo",
+            code: "D21008801_040_01>D21008801_041_01>D21001801_042_01",
+        },
+        {
+            name: "Flap Wings",
+            code: "D21001801_060_01",
+        },
+        { name: "Defeated", code: "D21008801_011_01" },
+        { name: "Frozen", code: "D21008801_013_01" },
+        { name: "Idle 2", code: "D21008801_014_01" },
+        {
+            name: "Broken",
+            code: "D21008801_081_01>D21008801_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21008801_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21008801_090_01>D21008801_090_02",
+        },
+        {
+            name: "Spin Attack",
+            code: "D21008801_100_01",
+        },
+        {
+            name: "Squall",
+            code: "D21008801_101_01>D21008801_101_02>D21008801_101_03",
+        },
     ],
     d210091_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
@@ -1481,8 +1515,53 @@ const dragonAni = {
         { name: "Malevolent Venom", code: "D21000501_062_01" },
     ],
     d210096_01: [
-        { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210016_01_90_04" },
+        { name: "Idle", code: "D21009601_000_01" },
+        { name: "Run", code: "D21009601_002_01" },
+        {
+            name: "Dash Forward",
+            code: "D21009601_020_01>D21009601_020_02>D21009601_020_03",
+        },
+        { name: "Defeated", code: "D21009601_011_01" },
+        { name: "Frozen", code: "D21009601_013_01" },
+        { name: "Idle 2", code: "D21009601_014_01" },
+        {
+            name: "Broken",
+            code: "D21009601_081_01>D21009601_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21009601_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21009601_090_01>D21009601_090_02",
+        },
+        {
+            name: "Claw Attack",
+            code: "D21009601_101_01>D21009601_101_02>D21009601_101_03",
+        },
+        {
+            name: "Front Strike",
+            code: "D21009601_102_01>D21009601_102_02>D21009601_102_03",
+        },
+        {
+            name: "Roar",
+            code: "D21009601_103_01>D21009601_103_02>D21009601_103_03",
+        },
+        {
+            name: "Devastation",
+            code:
+                "D21009601_104_01>D21009601_104_02>D21009601_104_03>D21009601_104_04>D21009601_104_05",
+        },
+        {
+            name: "Spit Fire",
+            code: "D21009601_105_01",
+        },
+        {
+            name: "Devastation (3 hits)",
+            code:
+                "D21009601_106_01>D21009601_106_02>D21009601_106_03>D21009601_106_04>D21009601_106_05>D21009601_106_06>D21009601_106_07",
+        },
     ],
     d210097_01: [
         { name: "Dragon's Roost", code: "DC_d210072_01_90_01" },
