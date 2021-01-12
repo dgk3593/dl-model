@@ -1922,7 +1922,7 @@ const dragonAni = {
     d210128_01: [
         { name: "Dragon's Roost", code: "DC_d210128_01_90_01" },
         { name: "Receive Gift", code: "DC_d210128_01_90_04" },
-        { name: "Give Back Gift", code: "DC_d210128_01_90_03" },
+        { name: "Scratch", code: "DC_d210128_01_90_03" },
         { name: "Sit", code: "CMN_MWM_06_21012801" },
         { name: "Idle", code: "CMN_INT_01_21012801" },
         { name: "Roll", code: "CMN_050_99_21012801" },
@@ -1993,8 +1993,11 @@ const dragonAni = {
         },
     ],
     d210132_02: [
-        { name: "Dragon's Roost", code: "DC_d210132_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210132_01_90_04" },
+        { name: "Idle", code: "D21013201_000_01" },
+        { name: "Move Forward", code: "D21013201_002_01" },
+        { name: "Move Forward (Fast)", code: "D21013201_003_01" },
+        { name: "Brake", code: "D21013201_004_01" },
+        { name: "Dash Forward", code: "D21013201_020_01" },
     ],
     d210133_01: [
         { name: "Dragon's Roost", code: "DC_d210133_01_90_01" },
@@ -2886,6 +2889,45 @@ const dragonAni = {
         {
             name: "Silver Defense",
             code: "D21008901_060_01",
+        },
+    ],
+    d210093_01: [
+        { name: "Idle", code: "D21009301_000_01" },
+        { name: "Move Forward", code: "D21009301_002_01" },
+        { name: "Move Forward (Fast)", code: "D21009301_003_01" },
+        { name: "Brake", code: "D21009301_004_01" },
+        { name: "Dash Forward", code: "D21009301_020_01" },
+        { name: "Transform", code: "D21009301_030_01" },
+        {
+            name: "Combo",
+            code: "D21009301_040_01>D21009301_041_01>D21009301_042_01",
+        },
+        { name: "Breath of Fog", code: "D21009301_060_01" },
+        { name: "Divine Dragon Blow", code: "D21009301_061_01" },
+        { name: "Defeated", code: "D21009301_011_01" },
+        {
+            name: "Broken",
+            code: "D21009301_081_01>D21009301_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21009301_081_03",
+        },
+        {
+            name: "Claw Attack",
+            code: "D21009301_100_01",
+        },
+        {
+            name: "Jump Back",
+            code: "D21009301_101_01",
+        },
+        {
+            name: "Breath",
+            code: "D21009301_102_01>D21009301_102_02>D21009301_102_03",
+        },
+        {
+            name: "Dive Attack",
+            code: "D21009301_103_01",
         },
     ],
     d210058_01: [
