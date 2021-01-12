@@ -95,6 +95,62 @@ const dragonAni = {
             code: "D20001001_060_01",
         },
     ],
+    d200011_01: [
+        { name: "Idle", code: "D20001101_000_01" },
+        { name: "Walk", code: "D20001101_002_01" },
+        { name: "Dash Forward", code: "D20001801_020_01" },
+        { name: "Roar", code: "D20001801_022_01" },
+        { name: "Take Damage", code: "D20001101_010_01" },
+        { name: "Defeated", code: "D20001101_011_01" },
+        { name: "Frozen", code: "D20001101_013_01" },
+        { name: "Frozen 2", code: "D20001101_014_01" },
+        {
+            name: "Broken",
+            code: "D20001101_081_01>D20001101_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D20001101_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D20001101_090_01",
+        },
+        {
+            name: "Stomp",
+            code: "D20001101_100_01",
+        },
+        {
+            name: "Tail Slap",
+            code: "D20001101_101_01",
+        },
+        {
+            name: "Spit Poison",
+            code: "D20001101_102_01>D20001101_102_02>D20001101_102_03",
+        },
+        {
+            name: "Quick Attack",
+            code: "D20001101_103_01",
+        },
+        {
+            name: "Charge Up",
+            code: "D20001101_104_01>D20001101_104_02>D20001101_104_03",
+        },
+        {
+            name: "Long Roar",
+            code: "D20001101_105_01>D20001101_105_02>D20001101_105_03",
+        },
+        {
+            name: "Stab Ground",
+            code:
+                "D20001101_106_01>D20001101_106_02>D20001101_106_03>D20001101_106_04>D20001101_106_05",
+        },
+        {
+            name: "Crawl",
+            code:
+                "D20001101_107_01>D20001101_107_02>D20001101_107_03>D20001101_107_04>D20001101_107_05",
+        },
+    ],
     d200017_01: [
         { name: "Dragon's Roost", code: "DC_d200017_01_90_01" },
         { name: "Receive Gift", code: "DC_d200017_01_90_04" },
@@ -1483,8 +1539,21 @@ const dragonAni = {
         },
     ],
     d210113_01: [
-        { name: "Dragon's Roost", code: "DC_d210002_01_90_01" },
-        { name: "Receive Gift", code: "DC_d210002_01_90_04" },
+        { name: "Idle", code: "D21000201_000_01" },
+        { name: "Walk", code: "D21000201_002_01" },
+        { name: "Run", code: "D21000201_003_01" },
+        { name: "Brake", code: "D21000201_004_01" },
+        { name: "Dash Forward", code: "D21000201_020_01" },
+        { name: "Jump Backward", code: "D21000201_021_01" },
+        { name: "Transform", code: "D21000201_030_01" },
+        {
+            name: "Combo",
+            code: "D21000201_040_01>D21000201_041_01>D21000201_042_01",
+        },
+        {
+            name: "Muspelheim",
+            code: "D21000201_060_01",
+        },
     ],
     d210105_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
