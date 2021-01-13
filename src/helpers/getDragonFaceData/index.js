@@ -1,0 +1,1 @@
+export { getDragonFaceData } from "./getDragonFaceData";

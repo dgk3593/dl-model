@@ -60,7 +60,7 @@ export const createInvisibleFloor = () => {
     return new THREE.Mesh(floorGeometry, floorMaterial);
 };
 
-const getMeshes = (object, getOutline = false) => {
+export const getMeshes = (object, getOutline = false) => {
     if (!object) return [];
 
     const meshes = [];
