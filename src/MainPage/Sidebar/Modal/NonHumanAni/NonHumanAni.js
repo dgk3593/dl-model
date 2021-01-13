@@ -102,7 +102,7 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
                 <div className="NonHumanAni-source">
                     {portrait}
                     <Button variant="outlined" onClick={chooseSource}>
-                        Change
+                        Change Source
                     </Button>
                 </div>
             </DialogTop>
