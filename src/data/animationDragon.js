@@ -1849,6 +1849,7 @@ const dragonAni = {
         { name: "Dragon's Roost", code: "DC_d210110_01_90_01" },
         { name: "Receive Gift", code: "DC_d210110_01_90_04" },
         { name: "Idle", code: "D21011001_000_01" },
+        { name: "Idle 2", code: "D21011001_014_01" },
         { name: "Move Forward", code: "D21011001_002_01" },
         { name: "Move Forward (Fast)", code: "D21011001_003_01" },
         { name: "Brake", code: "D21011001_004_01" },
@@ -1862,6 +1863,11 @@ const dragonAni = {
             name: "Lucky Mallet",
             code: "D21011001_060_01",
         },
+        {
+            name: "Broken",
+            code: "D21011001_081_01>D21011001_081_02",
+        },
+        { name: "Recover from Broken", code: "D21011001_081_03" },
     ],
     d210111_01: [
         { name: "Dragon's Roost", code: "DC_d210111_01_90_01" },
