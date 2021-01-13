@@ -2,6 +2,8 @@ import fbxList from "./fileList";
 import { loadModel } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
 
+const DOWNLOAD_LIMIT = 10;
+
 const getModel = async fileName => {
     const filePath = `${fbxSource}/fbx/${fileName}`;
     const model = await loadModel(filePath);
@@ -36,13 +38,13 @@ const exportAllAni = async animations => {
     for (const ani of animations) {
         await exportAni(ani);
 
-        counter = ++counter % 10;
+        counter = ++counter % DOWNLOAD_LIMIT;
         if (!counter) await pause(1000);
     }
 };
 
 const handleFile = async fileName => {
-    let fileToLoad = fileName.concat(fileName.includes("fbx") ? "" : ".fbx");
+    const fileToLoad = fileName.concat(fileName.endsWith("fbx") ? "" : ".fbx");
     const { animations } = await getModel(fileToLoad);
 
     const fromMixamo =
@@ -55,8 +57,8 @@ const handleFile = async fileName => {
     exportAllAni(animations);
 };
 
-export const fbx2json = async () => {
+export async function fbx2json() {
     for (const fileName of fbxList) {
         await handleFile(fileName);
     }
-};
+}
