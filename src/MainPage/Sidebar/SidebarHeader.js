@@ -20,22 +20,20 @@ function DrawerHeader({ toggleSidebar }) {
     } = useContext(SettingsContext);
 
     useEffect(() => {
-        try {
-            const supportedCodecs = videoCodecs.filter(codec =>
-                MediaRecorder.isTypeSupported(codec)
-            );
-            const action = {
-                type: "update",
-                key: "capture",
-                value: {
-                    supportedCodecs: [...supportedCodecs],
-                    codec: supportedCodecs[0],
-                },
-            };
-            dispatch(action);
-        } catch (err) {
-            console.log(err);
-        }
+        if (!MediaRecorder) return;
+
+        const supportedCodecs = videoCodecs.filter(
+            MediaRecorder.isTypeSupported
+        );
+        const action = {
+            type: "update",
+            key: "capture",
+            value: {
+                supportedCodecs: [...supportedCodecs],
+                codec: supportedCodecs[0],
+            },
+        };
+        dispatch(action);
     }, [dispatch]);
 
     const toggleCapture = () => {
