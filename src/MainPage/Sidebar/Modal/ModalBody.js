@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 const AdvSelect = lazy(() => import("./AdvSelect"));
 const DragonSelect = lazy(() => import("./DragonSelect"));
 const FaceSelect = lazy(() => import("./FaceSelect"));
+const DragonFaceSelect = lazy(() => import("./DragonFaceSelect"));
 const WeaponSelect = lazy(() => import("./WeaponSelect"));
 const AnimationSelect = lazy(() => import("./AnimationSelect"));
 const NonHumanAni = lazy(() => import("./NonHumanAni"));
@@ -23,6 +24,11 @@ function ModalBody({ mode, closeModal, handleSelect, docked, setDock }) {
         case "eye":
         case "mouth":
             Body = FaceSelect;
+            break;
+        case "dragonFace":
+        case "dragonEye":
+        case "dragonMouth":
+            Body = DragonFaceSelect;
             break;
         case "weapon":
             Body = WeaponSelect;

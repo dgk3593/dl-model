@@ -14,10 +14,10 @@ import { listStyle, typographyProps } from "./commonProps";
 const mainBtns = {
     adv: [
         { value: "texture", text: "Face Override" },
-        { value: "face", text: "Choose Face" },
+        { value: "face", text: "Facial Expression" },
         { value: "weapon", text: "Add Weapons" },
     ],
-    dragon: [{ value: "", text: "Under Construction" }],
+    dragon: [{ value: "dragonFace", text: "Facial Expression" }],
     base: [],
 };
 

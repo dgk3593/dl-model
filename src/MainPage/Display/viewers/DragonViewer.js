@@ -25,6 +25,17 @@ export class DragonViewer extends AniViewer {
         this.initNewModel();
     };
 
+    updateModel = async (prev, current) => {
+        await this.updateMainModel(prev.model, current.model);
+        this.updateFace(current.model);
+        this.updateAnimation(prev.animation, current.animation);
+    };
+
+    updateFace = ({ eyeIdx, mouthIdx }) => {
+        this.eyeIdx = eyeIdx;
+        this.mouthIdx = mouthIdx;
+    };
+
     afterMainModelUpdate = () => {
         this.initNewModel();
     };
