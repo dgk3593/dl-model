@@ -1,2 +1,0 @@
-(this["webpackJsonpdl-model"]=this["webpackJsonpdl-model"]||[]).push([[50],{304:function(n,t,e){},490:function(n,t,e){"use strict";e.r(t),e.d(t,"default",(function(){return r}));var a=e(8),i=e(86);e(304);var r=function(n){var t=n.options,e=n.onSelect,r=function(n){var t=n.currentTarget.dataset.value;e(t)},c=t.map((function(n){return Object(a.jsx)(i.a,{variant:"outlined","data-value":n.id,onClick:r,children:n.name},n.id)}));return Object(a.jsx)("div",{className:"SimpleOptionList",children:c})}}}]);
-//# sourceMappingURL=50.2fb93dff.chunk.js.map
