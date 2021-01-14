@@ -1,6 +1,15 @@
-import ChainAniFaceDetails from "./ChainAniFaceDetails";
+import { lazy, Suspense, useContext } from "react";
+
+import { SettingsContext } from "context/SettingsContext";
 
 import Add from "@material-ui/icons/Add";
+
+import { capitalize } from "helpers/helpers";
+
+const AdvFaceDetails = lazy(() => import("./ChainAniFaceDetails"));
+const DragonFaceDetails = lazy(() => import("./ChainAniDragonFaceDetails"));
+
+const faceDetails = { adv: AdvFaceDetails, dragon: DragonFaceDetails };
 
 function ChainAniFace(props) {
     const {
@@ -10,6 +19,10 @@ function ChainAniFace(props) {
         addFaceChange,
         openModal,
     } = props;
+
+    const {
+        app: { viewerType },
+    } = useContext(SettingsContext);
 
     const handleParamsChange = event => {
         const {
@@ -29,17 +42,23 @@ function ChainAniFace(props) {
             const newChange = { ...changeToUpdate, [key]: idx };
             updateFaceChange(id, newChange);
         };
-        openModal(target, handler);
+
+        const modalName =
+            viewerType === "dragon" ? `dragon${capitalize(target)}` : target;
+        openModal(modalName, handler);
     };
 
+    const FaceDetails = faceDetails[viewerType];
+
     const details = faceChanges?.map(change => (
-        <ChainAniFaceDetails
-            key={change.id}
-            change={change}
-            handleClick={handleClick}
-            deleteFaceChange={deleteFaceChange}
-            handleChange={handleParamsChange}
-        />
+        <Suspense fallback={null} key={change.id}>
+            <FaceDetails
+                change={change}
+                handleClick={handleClick}
+                deleteFaceChange={deleteFaceChange}
+                handleChange={handleParamsChange}
+            />
+        </Suspense>
     ));
 
     return (
