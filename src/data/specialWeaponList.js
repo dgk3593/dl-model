@@ -1,4 +1,6 @@
 const specialWeaponList = [
+    { wid: "w399037_01", name: "Kimono Luca's Fan (open)" },
+    { wid: "w399042_01", name: "Kimono Luca's Fan (folded)" },
     { wid: "w399017_01", name: "Gala Leonidas' Sword" },
     { wid: "w399018_01", name: "Lapis' Revolver 1" },
     { wid: "w399020_01", name: "Lapis' Revolver 2" },

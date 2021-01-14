@@ -424,6 +424,22 @@ const adv = [
         weapon: "Axe",
     },
     {
+        cid: "100002_15",
+        name: "Kimono Elisanne",
+        title: "Crimson Paladyn",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Lance",
+    },
+    {
+        cid: "100006_11",
+        name: "Kimono Luca",
+        title: "New Year's Prankster",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Axe",
+    },
+    {
         cid: "110353_01",
         name: "Kirsty",
         title: "Rebellious Commander",

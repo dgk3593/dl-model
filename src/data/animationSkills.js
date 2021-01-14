@@ -472,6 +472,17 @@ const skills = {
             value: "AXE_SKL_01_01_10000213&ts=0.75",
         },
         {
+            icon: "img/advIcons/100006_11_r05.png",
+            name: "Splendid Spring",
+            value:
+                "AXE_SKL_01_01_10000611>AXE_SKL_01_02_10000611&r=3>AXE_SKL_01_03_10000611",
+        },
+        {
+            icon: "img/advIcons/100006_11_r05.png",
+            name: "Bright Equinox",
+            value: "AXE_SKL_02_01_10000611",
+        },
+        {
             icon: "img/advIcons/100010_07_r05.png",
             name: "Tempering Fancy",
             value: "AXE_SKL_01_01_10001007",
@@ -590,6 +601,17 @@ const skills = {
             subtitle: "Level 3",
             value:
                 "LAN_SKL_02_01_10000202>LAN_SKL_02_02_10000202>LAN_SKL_02_03_10000202",
+        },
+        {
+            icon: "img/advIcons/100002_15_r05.png",
+            name: "Lady Nonpareil",
+            value:
+                "LAN_SKL_01_01_10000215>LAN_SKL_01_02_10000215>LAN_SKL_01_03_10000215>LAN_SKL_01_04_10000215>LAN_SKL_01_05_10000215",
+        },
+        {
+            icon: "img/advIcons/100002_15_r05.png",
+            name: "Lucky Day",
+            value: "LAN_SKL_02_01_10000215",
         },
         {
             icon: "img/advIcons/100010_04_r05.png",

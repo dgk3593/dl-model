@@ -1,4 +1,5 @@
 const faceOffset = {
+    c100006_11: { x: 0.043, y: -0.0625 }, // Kimono Luca
     c110376_01: { x: 0.043, y: -0.0625 }, // Yoshitsune
     c110375_01: { x: 0.043, y: -0.0625 }, // Seimei
     c110374_01: { x: 0.043, y: -0.0625 }, // Kuzunoha

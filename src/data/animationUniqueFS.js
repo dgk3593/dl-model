@@ -78,6 +78,11 @@ const uniqueFS = {
     ],
     Axe: [
         {
+            icon: "img/advIcons/100006_11_r05.png",
+            name: "Kimono Luca",
+            value: "AXE_CHR_01_10000611>AXE_CHR_02_10000611",
+        },
+        {
             icon: "img/advIcons/110322_01_r05.png",
             name: "Zhu Bajie",
             value:
