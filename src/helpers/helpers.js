@@ -84,7 +84,7 @@ export const setInitialSettings = params => {
 
         const [keycode, ...value] = param.split("="); // animation code can have "=" inside
         // skip if no value given
-        if (!value[0]) return;
+        if (!value[0] || !initKeyMap[keycode]) return;
 
         let setValue = value.length === 1 ? value[0] : value.join("=");
 
