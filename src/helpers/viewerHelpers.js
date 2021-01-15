@@ -571,8 +571,6 @@ export const createLight = params => {
 };
 
 export const replaceTexture = async (target, { oldTexture, texturePath }) => {
-    console.log(`replace ${oldTexture} with ${texturePath}`);
-
     const newTexture = await loadTexture(texturePath);
     newTexture.encoding = THREE.sRGBEncoding;
 
