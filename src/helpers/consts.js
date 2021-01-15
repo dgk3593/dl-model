@@ -137,7 +137,7 @@ export const asciiSet = [
 export const defaultSettings = {
     model: {
         id: "c100001_01",
-        texture: "c100001_01",
+        texture: "",
         eyeTexture: "c100001_01",
         eyeIdx: "2",
         mouthTexture: "c100001_01",
@@ -188,6 +188,7 @@ export const defaultSettings = {
 
 export const initKeyMap = {
     id: { group: "model", key: "id" },
+    tx: { group: "model", key: "texture" },
     et: { group: "model", key: "eyeTexture" },
     ei: { group: "model", key: "eyeIdx" },
     mt: { group: "model", key: "mouthTexture" },

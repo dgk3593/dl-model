@@ -18,7 +18,12 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { CAM_PARAMS } from "helpers/consts";
-import { isBlade, filterObject, getUpdated } from "helpers/helpers";
+import {
+    isBlade,
+    filterObject,
+    getUpdated,
+    getDefaultTexture,
+} from "helpers/helpers";
 import {
     createInvisibleFloor,
     createLight,
@@ -33,11 +38,13 @@ import {
     changeMaterial,
     updateMatParams,
     removeEffects,
+    replaceTexture,
 } from "helpers/viewerHelpers";
+import { fbxSource } from "App";
 
 class BaseViewer extends PureComponent {
     async componentDidMount() {
-        // window.app = this;
+        window.app = this;
 
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
@@ -195,7 +202,7 @@ class BaseViewer extends PureComponent {
         const model = await loadModel(modelPath);
         this.models.main = model;
 
-        this.basicMainProcessing(model);
+        await this.basicMainProcessing(model);
         return;
     };
 
@@ -236,10 +243,28 @@ class BaseViewer extends PureComponent {
 
     addToScene = model => this.floor.add(model);
 
-    basicMainProcessing = () => {
+    initTexture = async () => {
+        const { id: modelId, texture } = this.props.model;
+        if (!texture || texture === ">") return;
+
+        const defaultTexture = getDefaultTexture(modelId);
+        const [source, name] = texture.split(">");
+        const textureSource = source || modelId;
+        const textureName = name || getDefaultTexture(textureSource);
+
+        const texturePath = `${fbxSource}/fbx/${textureSource}/${textureName}.png`;
+        const mainModel = this.models.main;
+        await replaceTexture(mainModel, {
+            oldTexture: defaultTexture,
+            texturePath,
+        });
+    };
+
+    basicMainProcessing = async () => {
         const model = this.models.main;
 
         removeEffects(model);
+
         const materialType = this.matType;
         const modelId = this.props.model.id;
         if (isBlade(modelId)) {
@@ -248,6 +273,8 @@ class BaseViewer extends PureComponent {
         } else {
             changeMaterial(model, { materialType, forced: true });
         }
+
+        await this.initTexture();
 
         this.applyNewModelMat(model);
 

@@ -26,14 +26,14 @@ export const loadModel = url => {
     );
 };
 
-// export const loadTexture = url => {
-//     return (
-//         url &&
-//         new Promise(resolve => {
-//             new THREE.TextureLoader().load(url, resolve);
-//         })
-//     );
-// };
+export const loadTexture = url => {
+    return (
+        url &&
+        new Promise(resolve => {
+            new THREE.TextureLoader().load(url, resolve);
+        })
+    );
+};
 
 const getAniPath = name => `${fbxSource}/animations/${name}.json`;
 
@@ -568,4 +568,17 @@ export const createLight = params => {
     }
 
     return light;
+};
+
+export const replaceTexture = async (target, { oldTexture, texturePath }) => {
+    console.log(`replace ${oldTexture} with ${texturePath}`);
+
+    const newTexture = await loadTexture(texturePath);
+    newTexture.encoding = THREE.sRGBEncoding;
+
+    const material = getMaterial(target);
+    material.forEach(mat => {
+        const textureName = mat.map?.name;
+        if (textureName.includes(oldTexture)) mat.map = newTexture;
+    });
 };

@@ -17,6 +17,9 @@ import dragonAni from "data/animationDragon";
 export const capitalize = ([first, ...rest]) =>
     `${first.toUpperCase()}${rest.join("")}`;
 
+export const getDefaultTexture = id =>
+    id.match(/_[0-9]{2}/) ? id : `${id}_01`;
+
 export const filterObject = (object, keys) => {
     const entries = Object.entries(object);
     const filtered = entries.filter(([key, _]) => keys.includes(key));
@@ -86,6 +89,9 @@ export const setInitialSettings = params => {
         let setValue = value.length === 1 ? value[0] : value.join("=");
 
         switch (keycode) {
+            case "tx":
+                definedParams.add("texture");
+                break;
             case "et":
                 definedParams.add("eyeTexture");
                 break;
@@ -126,7 +132,6 @@ export const setInitialSettings = params => {
     const notDefined = param => !definedParams.has(param);
 
     const modelId = initSettings["model"]["id"];
-    initSettings["model"]["texture"] = modelId;
     initSettings["app"]["viewerType"] = getViewerType(modelId);
 
     if (notDefined("eyeTexture")) {
