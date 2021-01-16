@@ -580,3 +580,28 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
         if (textureName.includes(oldTexture)) mat.map = newTexture;
     });
 };
+
+export const logUpdate = (prev, current) => {
+    const updated = getUpdated(prev, current);
+    updated.forEach(([key, value]) => {
+        const oldValue = prev[key];
+        const subkeys = Object.keys(value);
+        if (subkeys.length === 0 || typeof value === "string") {
+            console.log(
+                `${key}: ${JSON.stringify(oldValue)} to ${JSON.stringify(
+                    value
+                )}`
+            );
+        } else {
+            subkeys.forEach(subkey => {
+                if (oldValue[subkey] !== value[subkey]) {
+                    console.log(
+                        `${key}.${subkey}: ${JSON.stringify(
+                            oldValue[subkey]
+                        )} to ${JSON.stringify(value[subkey])}`
+                    );
+                }
+            });
+        }
+    });
+};

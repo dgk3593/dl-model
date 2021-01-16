@@ -18,12 +18,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { CAM_PARAMS } from "helpers/consts";
-import {
-    isBlade,
-    filterObject,
-    getUpdated,
-    getDefaultTexture,
-} from "helpers/helpers";
+import { isBlade, filterObject, getDefaultTexture } from "helpers/helpers";
 import {
     createInvisibleFloor,
     createLight,
@@ -39,6 +34,7 @@ import {
     updateMatParams,
     removeEffects,
     replaceTexture,
+    logUpdate,
 } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
 
@@ -62,28 +58,7 @@ class BaseViewer extends PureComponent {
 
         // print updated props to console
         console.log("Updated");
-        const updated = getUpdated(prev, current);
-        updated.forEach(([key, value]) => {
-            const oldValue = prev[key];
-            const subkeys = Object.keys(value);
-            if (subkeys.length === 0 || typeof value === "string") {
-                console.log(
-                    `${key}: ${JSON.stringify(oldValue)} to ${JSON.stringify(
-                        value
-                    )}`
-                );
-            } else {
-                subkeys.forEach(subkey => {
-                    if (oldValue[subkey] !== value[subkey]) {
-                        console.log(
-                            `${key}.${subkey}: ${JSON.stringify(
-                                oldValue[subkey]
-                            )} to ${JSON.stringify(value[subkey])}`
-                        );
-                    }
-                });
-            }
-        });
+        logUpdate(prev, current);
 
         this.updateViewer(prev, current);
     }
