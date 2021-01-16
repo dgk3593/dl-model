@@ -44,7 +44,7 @@ import { fbxSource } from "App";
 
 class BaseViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
+        // window.app = this;
 
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
