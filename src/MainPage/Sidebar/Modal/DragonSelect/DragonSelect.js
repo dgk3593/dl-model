@@ -45,7 +45,7 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
         dispatch({ type: "update", key, value });
 
     const setNewModel = id => {
-        updateSetings("model")({ id, eyeIdx: "1", mouthIdx: "1" });
+        updateSetings("model")({ id, texture: "", eyeIdx: "1", mouthIdx: "1" });
 
         updateSetings("animation")({ code: getDefaultAni(id) });
 

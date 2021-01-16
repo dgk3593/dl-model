@@ -60,6 +60,7 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const setNewModel = cid => {
         updateModel({
             id: cid,
+            texture: "",
             eyeTexture: cid,
             mouthTexture: cid,
         });

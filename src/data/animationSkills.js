@@ -604,9 +604,20 @@ const skills = {
         },
         {
             icon: "img/advIcons/100002_15_r05.png",
-            name: "Lady Nonpareil",
+            name: "Lady Nonpareil (Lv1)",
+            value: "LAN_SKL_01_01_10000215>LAN_SKL_01_04_10000215",
+        },
+        {
+            icon: "img/advIcons/100002_15_r05.png",
+            name: "Lady Nonpareil (Lv2)",
             value:
-                "LAN_SKL_01_01_10000215>LAN_SKL_01_02_10000215>LAN_SKL_01_03_10000215>LAN_SKL_01_04_10000215>LAN_SKL_01_05_10000215",
+                "LAN_SKL_01_01_10000215>LAN_SKL_01_02_10000215>LAN_SKL_01_05_10000215",
+        },
+        {
+            icon: "img/advIcons/100002_15_r05.png",
+            name: "Lady Nonpareil (Lv3)",
+            value:
+                "LAN_SKL_01_01_10000215>LAN_SKL_01_02_10000215>LAN_SKL_01_03_10000215",
         },
         {
             icon: "img/advIcons/100002_15_r05.png",
