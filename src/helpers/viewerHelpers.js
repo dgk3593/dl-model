@@ -243,11 +243,11 @@ export const createOutline = (object, params) => {
 
     const outlines = []; // return value
 
-    const skip = ["Eff"];
+    const skipList = ["Eff"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
         const { name } = mesh;
-        if (skip.some(word => name.includes(word))) return;
+        if (skipList.some(word => name.includes(word))) return;
 
         const outline = mesh.clone();
         outlines.push(outline);
@@ -577,7 +577,7 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
     const material = getMaterial(target);
     material.forEach(mat => {
         const textureName = mat.map?.name;
-        if (textureName.includes(oldTexture)) mat.map = newTexture;
+        if (textureName?.includes(oldTexture)) mat.map = newTexture;
     });
 };
 
@@ -586,22 +586,24 @@ export const logUpdate = (prev, current) => {
     updated.forEach(([key, value]) => {
         const oldValue = prev[key];
         const subkeys = Object.keys(value);
-        if (subkeys.length === 0 || typeof value === "string") {
+
+        const isSingleValue = subkeys.length === 0 || typeof value === "string";
+        if (isSingleValue) {
             console.log(
                 `${key}: ${JSON.stringify(oldValue)} to ${JSON.stringify(
                     value
                 )}`
             );
-        } else {
-            subkeys.forEach(subkey => {
-                if (oldValue[subkey] !== value[subkey]) {
-                    console.log(
-                        `${key}.${subkey}: ${JSON.stringify(
-                            oldValue[subkey]
-                        )} to ${JSON.stringify(value[subkey])}`
-                    );
-                }
-            });
+            return;
         }
+        subkeys.forEach(subkey => {
+            if (oldValue[subkey] === value[subkey]) return;
+
+            console.log(
+                `${key}.${subkey}: ${JSON.stringify(
+                    oldValue[subkey]
+                )} to ${JSON.stringify(value[subkey])}`
+            );
+        });
     });
 };
