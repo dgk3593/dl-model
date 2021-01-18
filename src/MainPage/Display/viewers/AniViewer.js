@@ -50,10 +50,11 @@ export class AniViewer extends BaseViewer {
         const { mixer } = this;
         mixer.stopAllAction();
 
-        const anim = this.animations[newIdx];
-        const action = mixer.clipAction(anim);
+        const ani = this.animations[newIdx];
+        const action = mixer.clipAction(ani);
         const currentAniSettings = this.aniSettings[newIdx];
         const { timeScale, repetitions, faceChanges } = currentAniSettings;
+        const currentClipDuration = ani.duration;
 
         action.setLoop(THREE.LoopRepeat, repetitions);
         action.clampWhenFinished = true;
@@ -62,11 +63,10 @@ export class AniViewer extends BaseViewer {
 
         this.faceChanges = getFaceChangesArray(faceChanges, repetitions);
         this.faceChangeTime = this.faceChanges.map(
-            change => (this.currentClipDuration * change.time) / 100
+            change => (currentClipDuration * change.time) / 100
         );
 
         mixer.setTime(0);
-        this.currentClipDuration = anim.duration;
         action.play();
     }
 
