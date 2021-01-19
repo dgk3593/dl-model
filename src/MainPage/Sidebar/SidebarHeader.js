@@ -52,10 +52,7 @@ function DrawerHeader({ toggleSidebar }) {
                 <ArrowLeft />
             </div>
             {currentCodec && !asciiOn && (
-                <Tooltip
-                    title="Save animation as video (experimental)"
-                    placement="bottom-end"
-                >
+                <Tooltip title="Save animation as video" placement="bottom-end">
                     <div
                         className={classes.downloadButton}
                         onClick={toggleCapture}

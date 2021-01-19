@@ -18,9 +18,14 @@
 }
 
 .ChainAni-topBtns {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: center;
     width: 100%;
+}
+
+.ChainAni-topBtns button {
+    border-radius: 0;
+    flex: 1 1 auto;
 }
 
 .ChainAni-fields {

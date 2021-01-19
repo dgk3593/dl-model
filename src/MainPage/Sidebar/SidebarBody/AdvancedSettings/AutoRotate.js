@@ -51,6 +51,7 @@ function AutoRotate({ openAtStart }) {
                 <div className="AdvancedSettingsGroup-slider">
                     <Slider
                         value={rotateSpeed}
+                        track={false}
                         min={-1}
                         max={1}
                         step={0.05}

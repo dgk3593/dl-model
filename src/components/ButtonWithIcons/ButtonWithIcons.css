@@ -5,7 +5,7 @@
 .ButtonWithIcons .MuiButton-label {
     display: flex;
     align-items: center;
-    margin-top: auto;
+    margin: auto 0;
 }
 
 .ButtonWithIcons .MuiButton-startIcon > div {

@@ -483,15 +483,15 @@ const skills = {
             value: "AXE_SKL_02_01_10000611",
         },
         {
-            icon: "img/advIcons/100010_07_r05.png",
-            name: "Tempering Fancy",
-            value: "AXE_SKL_01_01_10001007",
-        },
-        {
             icon: "img/advIcons/100006_03_r04.png",
             name: "Floatie Spin",
             value:
                 "AXE_SKL_01_01_10000603>AXE_SKL_01_02_10000603>AXE_SKL_01_03_10000603",
+        },
+        {
+            icon: "img/advIcons/100010_07_r05.png",
+            name: "Tempering Fancy",
+            value: "AXE_SKL_01_01_10001007",
         },
         {
             icon: "img/advIcons/110027_02_r05.png",
