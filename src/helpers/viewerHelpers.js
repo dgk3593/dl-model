@@ -243,7 +243,7 @@ export const createOutline = (object, params) => {
 
     const outlines = []; // return value
 
-    const skipList = ["Eff"];
+    const skipList = ["Eff", "Extension"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
         const { name } = mesh;
