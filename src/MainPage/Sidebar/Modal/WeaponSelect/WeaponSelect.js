@@ -43,7 +43,7 @@ function WeaponSelect({ close, docked, moveToDock }) {
     }
 
     const buttons = list.map(weapon => (
-        <WeaponBtn key={weapon.iconName || weapon.wid} {...weapon} />
+        <WeaponBtn key={weapon.id} {...weapon} />
     ));
 
     const handleToggle = event => {

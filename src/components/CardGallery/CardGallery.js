@@ -12,7 +12,7 @@ function CardGallery(props) {
     const cards = list.map(chara => (
         <CharaCard
             {...chara}
-            key={chara.cid}
+            key={chara.id}
             onClick={onCardClick}
             portraitDir={portraitDir}
         />

@@ -1,6 +1,11 @@
+import "helpers/typedef";
+
+/**
+ * @type { Array <ModelData> }
+ */
 const weapon_list = [
     {
-        wid: "w301138_01",
+        id: "w301138_01",
         iconName: "301138_01_60101.png",
         name: "Nothung",
         weapon: "Sword",
@@ -8,7 +13,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302129_01",
+        id: "w302129_01",
         iconName: "302129_01_60101.png",
         name: "Tyrfing",
         weapon: "Blade",
@@ -16,7 +21,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303128_01",
+        id: "w303128_01",
         iconName: "303128_01_60101.png",
         name: "Hrotti",
         weapon: "Dagger",
@@ -24,7 +29,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304127_01",
+        id: "w304127_01",
         iconName: "304127_01_60101.png",
         name: "Mjölnir",
         weapon: "Axe",
@@ -32,7 +37,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305135_01",
+        id: "w305135_01",
         iconName: "305135_01_60101.png",
         name: "Gungnir",
         weapon: "Lance",
@@ -40,7 +45,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306127_01",
+        id: "w306127_01",
         iconName: "306127_01_60101.png",
         name: "Ýdalir",
         weapon: "Bow",
@@ -48,7 +53,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307135_01",
+        id: "w307135_01",
         iconName: "307135_01_60101.png",
         name: "Brísingr",
         weapon: "Wand",
@@ -56,7 +61,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308128_01",
+        id: "w308128_01",
         iconName: "308128_01_60101.png",
         name: "Gjallarhorn",
         weapon: "Staff",
@@ -64,7 +69,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w309026_01",
+        id: "w309026_01",
         iconName: "309026_01_60101.png",
         name: "Draupnir",
         weapon: "Manacaster",
@@ -72,7 +77,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301139_01",
+        id: "w301139_01",
         iconName: "301139_01_60201.png",
         name: "Ame no Murakumo",
         weapon: "Sword",
@@ -80,7 +85,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302130_01",
+        id: "w302130_01",
         iconName: "302130_01_60201.png",
         name: "Ame no Habakiri",
         weapon: "Blade",
@@ -88,7 +93,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303129_01",
+        id: "w303129_01",
         iconName: "303129_01_60201.png",
         name: "Futsu no Mitama",
         weapon: "Dagger",
@@ -96,7 +101,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304128_01",
+        id: "w304128_01",
         iconName: "304128_01_60201.png",
         name: "Ohohagari",
         weapon: "Axe",
@@ -104,7 +109,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305136_01",
+        id: "w305136_01",
         iconName: "305136_01_60201.png",
         name: "Ame no Nuhoko",
         weapon: "Lance",
@@ -112,7 +117,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306128_01",
+        id: "w306128_01",
         iconName: "306128_01_60201.png",
         name: "Ame no Hajiyumi",
         weapon: "Bow",
@@ -120,7 +125,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307136_01",
+        id: "w307136_01",
         iconName: "307136_01_60201.png",
         name: "Omizununo",
         weapon: "Wand",
@@ -128,7 +133,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308129_01",
+        id: "w308129_01",
         iconName: "308129_01_60201.png",
         name: "Kunado",
         weapon: "Staff",
@@ -136,7 +141,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w309027_01",
+        id: "w309027_01",
         iconName: "309027_01_60201.png",
         name: "Ame no Torifune ",
         weapon: "Manacaster",
@@ -144,7 +149,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301140_01",
+        id: "w301140_01",
         iconName: "301140_01_60301.png",
         name: "Excalibur",
         weapon: "Sword",
@@ -152,7 +157,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302131_01",
+        id: "w302131_01",
         iconName: "302131_01_60301.png",
         name: "Arondight",
         weapon: "Blade",
@@ -160,7 +165,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303130_01",
+        id: "w303130_01",
         iconName: "303130_01_60301.png",
         name: "Carnwennan",
         weapon: "Dagger",
@@ -168,7 +173,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304129_01",
+        id: "w304129_01",
         iconName: "304129_01_60301.png",
         name: "Marmyadose",
         weapon: "Axe",
@@ -176,7 +181,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305137_01",
+        id: "w305137_01",
         iconName: "305137_01_60301.png",
         name: "Rhongomyniad",
         weapon: "Lance",
@@ -184,7 +189,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306129_01",
+        id: "w306129_01",
         iconName: "306129_01_60301.png",
         name: "Failnaught",
         weapon: "Bow",
@@ -192,7 +197,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307137_01",
+        id: "w307137_01",
         iconName: "307137_01_60301.png",
         name: "Camelot",
         weapon: "Wand",
@@ -200,7 +205,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308130_01",
+        id: "w308130_01",
         iconName: "308130_01_60301.png",
         name: "Avalon",
         weapon: "Staff",
@@ -208,7 +213,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w309028_01",
+        id: "w309028_01",
         iconName: "309028_01_60301.png",
         name: "Gallatin",
         weapon: "Manacaster",
@@ -216,7 +221,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301141_01",
+        id: "w301141_01",
         iconName: "301141_01_60401.png",
         name: "Caladbolg",
         weapon: "Sword",
@@ -224,7 +229,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302132_01",
+        id: "w302132_01",
         iconName: "302132_01_60401.png",
         name: "Fragarach",
         weapon: "Blade",
@@ -232,7 +237,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303131_01",
+        id: "w303131_01",
         iconName: "303131_01_60401.png",
         name: "Claíomh Solais",
         weapon: "Dagger",
@@ -240,7 +245,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304130_01",
+        id: "w304130_01",
         iconName: "304130_01_60401.png",
         name: "Rog Mol",
         weapon: "Axe",
@@ -248,7 +253,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305138_01",
+        id: "w305138_01",
         iconName: "305138_01_60401.png",
         name: "Areadbhar",
         weapon: "Lance",
@@ -256,7 +261,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306130_01",
+        id: "w306130_01",
         iconName: "306130_01_60401.png",
         name: "Tathlum",
         weapon: "Bow",
@@ -264,7 +269,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307138_01",
+        id: "w307138_01",
         iconName: "307138_01_60401.png",
         name: "Brionac",
         weapon: "Wand",
@@ -272,7 +277,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308131_01",
+        id: "w308131_01",
         iconName: "308131_01_60401.png",
         name: "Del Frith",
         weapon: "Staff",
@@ -280,7 +285,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309029_01",
+        id: "w309029_01",
         iconName: "309029_01_60401.png",
         name: "Gae Assail",
         weapon: "Manacaster",
@@ -288,7 +293,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301142_01",
+        id: "w301142_01",
         iconName: "301142_01_60501.png",
         name: "Yitian Jian",
         weapon: "Sword",
@@ -296,7 +301,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302133_01",
+        id: "w302133_01",
         iconName: "302133_01_60501.png",
         name: "Qixing Baodao",
         weapon: "Blade",
@@ -304,7 +309,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303132_01",
+        id: "w303132_01",
         iconName: "303132_01_60501.png",
         name: "Qinghong Jian",
         weapon: "Dagger",
@@ -312,7 +317,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304131_01",
+        id: "w304131_01",
         iconName: "304131_01_60501.png",
         name: "Fangtian Huaji",
         weapon: "Axe",
@@ -320,7 +325,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305139_01",
+        id: "w305139_01",
         iconName: "305139_01_60501.png",
         name: "Qinglong Yanyuedao",
         weapon: "Lance",
@@ -328,7 +333,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306131_01",
+        id: "w306131_01",
         iconName: "306131_01_60501.png",
         name: "Longshe Gong",
         weapon: "Bow",
@@ -336,7 +341,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307139_01",
+        id: "w307139_01",
         iconName: "307139_01_60501.png",
         name: "Jiu Ci",
         weapon: "Wand",
@@ -344,7 +349,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308132_01",
+        id: "w308132_01",
         iconName: "308132_01_60501.png",
         name: "Li Zhang",
         weapon: "Staff",
@@ -352,7 +357,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w309030_01",
+        id: "w309030_01",
         // iconName: "309030_01_60501.png",
         name: "Shadow Agito Manacaster",
         weapon: "Manacaster",
@@ -360,7 +365,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301056_01",
+        id: "w301056_01",
         iconName: "301056_01_50101.png",
         name: "Inferno Apogee",
         weapon: "Sword",
@@ -368,7 +373,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301080_01",
+        id: "w301080_01",
         iconName: "301080_01_50101.png",
         name: "Blazing Judgment",
         weapon: "Sword",
@@ -376,7 +381,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301079_01",
+        id: "w301079_01",
         iconName: "301079_01_50101.png",
         name: "Flaming Savagetail",
         weapon: "Sword",
@@ -384,7 +389,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301108_01",
+        id: "w301108_01",
         iconName: "301108_01_50101.png",
         name: "Sword of Surging Flame",
         weapon: "Sword",
@@ -392,7 +397,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301125_01",
+        id: "w301125_01",
         iconName: "301125_01_50101.png",
         name: "Sword of Raging Souls",
         weapon: "Sword",
@@ -400,7 +405,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301132_01",
+        id: "w301132_01",
         iconName: "301132_01_50101.png",
         name: "Chimeratech Commander",
         weapon: "Sword",
@@ -408,7 +413,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301122_01",
+        id: "w301122_01",
         iconName: "301122_01_50101.png",
         name: "Absolute Crimson",
         weapon: "Sword",
@@ -416,7 +421,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301032_01",
+        id: "w301032_01",
         iconName: "301032_01_50101.png",
         name: "Levatein",
         weapon: "Sword",
@@ -424,7 +429,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301143_01",
+        id: "w301143_01",
         iconName: "301143_01_50101.png",
         name: "Rathalos Firesword",
         weapon: "Sword",
@@ -432,7 +437,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301148_01",
+        id: "w301148_01",
         iconName: "301148_01_50101.png",
         name: "Falchion",
         weapon: "Sword",
@@ -440,7 +445,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302045_01",
+        id: "w302045_01",
         iconName: "302045_01_50101.png",
         name: "Skyrender",
         weapon: "Blade",
@@ -448,7 +453,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302057_01",
+        id: "w302057_01",
         iconName: "302057_01_50101.png",
         name: "Ogreslayer Judgment",
         weapon: "Blade",
@@ -456,7 +461,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302076_01",
+        id: "w302076_01",
         iconName: "302076_01_50101.png",
         name: "Great Direblade Kagachi",
         weapon: "Blade",
@@ -464,7 +469,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302099_01",
+        id: "w302099_01",
         iconName: "302099_01_50101.png",
         name: "Liquefaction Blade",
         weapon: "Blade",
@@ -472,7 +477,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302116_01",
+        id: "w302116_01",
         iconName: "302116_01_50101.png",
         name: "Furyblister",
         weapon: "Blade",
@@ -480,7 +485,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302123_01",
+        id: "w302123_01",
         iconName: "302123_01_50101.png",
         name: "Chimeratech Lord",
         weapon: "Blade",
@@ -488,7 +493,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302113_01",
+        id: "w302113_01",
         iconName: "302113_01_50101.png",
         name: "Blinding Conflagration",
         weapon: "Blade",
@@ -496,7 +501,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302013_01",
+        id: "w302013_01",
         iconName: "302013_01_50101.png",
         name: "Heaven's Acuity",
         weapon: "Blade",
@@ -504,7 +509,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302134_01",
+        id: "w302134_01",
         iconName: "302134_01_50101.png",
         name: 'Wyvern Blade "Maple"',
         weapon: "Blade",
@@ -512,7 +517,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303065_01",
+        id: "w303065_01",
         iconName: "303065_01_50101.png",
         name: "Vermillion Pain",
         weapon: "Dagger",
@@ -520,7 +525,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303057_01",
+        id: "w303057_01",
         iconName: "303057_01_50101.png",
         name: "Searing Stinger",
         weapon: "Dagger",
@@ -528,7 +533,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303082_01",
+        id: "w303082_01",
         iconName: "303082_01_50101.png",
         name: "Blazesin",
         weapon: "Dagger",
@@ -536,7 +541,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303115_01",
+        id: "w303115_01",
         iconName: "303115_01_50101.png",
         name: "Blazing Necrom",
         weapon: "Dagger",
@@ -544,7 +549,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303098_01",
+        id: "w303098_01",
         iconName: "303098_01_50101.png",
         name: "Lavarush Edge",
         weapon: "Dagger",
@@ -552,7 +557,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303122_01",
+        id: "w303122_01",
         iconName: "303122_01_50101.png",
         name: "Chimeratech Elite",
         weapon: "Dagger",
@@ -560,7 +565,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303112_01",
+        id: "w303112_01",
         iconName: "303112_01_50101.png",
         name: "Flameruler's Maw",
         weapon: "Dagger",
@@ -568,7 +573,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303013_01",
+        id: "w303013_01",
         iconName: "303013_01_50101.png",
         name: "Aeternal Flame",
         weapon: "Dagger",
@@ -576,7 +581,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303133_01",
+        id: "w303133_01",
         iconName: "303133_01_50101.png",
         name: "Blazing Falchion",
         weapon: "Dagger",
@@ -584,7 +589,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304043_01",
+        id: "w304043_01",
         iconName: "304043_01_50101.png",
         name: "Heavenwrath Gaze",
         weapon: "Axe",
@@ -592,7 +597,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304068_01",
+        id: "w304068_01",
         iconName: "304068_01_50101.png",
         name: "Blaze Crash",
         weapon: "Axe",
@@ -600,7 +605,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304081_01",
+        id: "w304081_01",
         iconName: "304081_01_50101.png",
         name: "Atrocity Crux",
         weapon: "Axe",
@@ -608,7 +613,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304097_01",
+        id: "w304097_01",
         iconName: "304097_01_50101.png",
         name: "Sun Flare Destroyer",
         weapon: "Axe",
@@ -616,7 +621,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304114_01",
+        id: "w304114_01",
         iconName: "304114_01_50101.png",
         name: "Hellfire Crash",
         weapon: "Axe",
@@ -624,7 +629,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304121_01",
+        id: "w304121_01",
         iconName: "304121_01_50101.png",
         name: "Chimeratech Warlord",
         weapon: "Axe",
@@ -632,7 +637,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304111_01",
+        id: "w304111_01",
         iconName: "304111_01_50101.png",
         name: "Royal Crimson Heat",
         weapon: "Axe",
@@ -640,7 +645,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304027_01",
+        id: "w304027_01",
         iconName: "304027_01_50101.png",
         name: "Axe of the Blazing King",
         weapon: "Axe",
@@ -648,7 +653,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304132_01",
+        id: "w304132_01",
         iconName: "304132_01_50101.png",
         name: "Rath Blaze Splitter",
         weapon: "Axe",
@@ -656,7 +661,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305077_01",
+        id: "w305077_01",
         iconName: "305077_01_50101.png",
         name: "Flamedance Lance",
         weapon: "Lance",
@@ -664,7 +669,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305065_01",
+        id: "w305065_01",
         iconName: "305065_01_50101.png",
         name: "Reiselfeld, the Solar Spray",
         weapon: "Lance",
@@ -672,7 +677,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305088_01",
+        id: "w305088_01",
         iconName: "305088_01_50101.png",
         name: "Ashen Beast",
         weapon: "Lance",
@@ -680,7 +685,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305104_01",
+        id: "w305104_01",
         iconName: "305104_01_50101.png",
         name: "Combustion Flamelance",
         weapon: "Lance",
@@ -688,7 +693,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305121_01",
+        id: "w305121_01",
         iconName: "305121_01_50101.png",
         name: "Underworld Sinner",
         weapon: "Lance",
@@ -696,7 +701,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305128_01",
+        id: "w305128_01",
         iconName: "305128_01_50101.png",
         name: "Chimeratech Lancemaster",
         weapon: "Lance",
@@ -704,7 +709,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305118_01",
+        id: "w305118_01",
         iconName: "305118_01_50101.png",
         name: "Pureflame Lance",
         weapon: "Lance",
@@ -712,7 +717,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305030_01",
+        id: "w305030_01",
         iconName: "305030_01_50101.png",
         name: "Calamity Trigger",
         weapon: "Lance",
@@ -720,7 +725,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305140_01",
+        id: "w305140_01",
         iconName: "305140_01_50101.png",
         name: "Spear of Prominence",
         weapon: "Lance",
@@ -728,7 +733,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306061_01",
+        id: "w306061_01",
         iconName: "306061_01_50101.png",
         name: "Vulcanrage",
         weapon: "Bow",
@@ -736,7 +741,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306073_01",
+        id: "w306073_01",
         iconName: "306073_01_50101.png",
         name: "Hellfire Bow",
         weapon: "Bow",
@@ -744,7 +749,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306072_01",
+        id: "w306072_01",
         iconName: "306072_01_50101.png",
         name: "Detonation Dreadbow",
         weapon: "Bow",
@@ -752,7 +757,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306114_01",
+        id: "w306114_01",
         iconName: "306114_01_50101.png",
         name: "Soul Corrupter",
         weapon: "Bow",
@@ -760,7 +765,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306097_01",
+        id: "w306097_01",
         iconName: "306097_01_50101.png",
         name: "Strifeblazer",
         weapon: "Bow",
@@ -768,7 +773,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306121_01",
+        id: "w306121_01",
         iconName: "306121_01_50101.png",
         name: "Chimeratech Sniper",
         weapon: "Bow",
@@ -776,7 +781,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306111_01",
+        id: "w306111_01",
         iconName: "306111_01_50101.png",
         name: "Valkyrie's Fire",
         weapon: "Bow",
@@ -784,7 +789,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306027_01",
+        id: "w306027_01",
         iconName: "306027_01_50101.png",
         name: "Lupis Solis",
         weapon: "Bow",
@@ -792,7 +797,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306132_01",
+        id: "w306132_01",
         iconName: "306132_01_50101.png",
         name: "Dark Filament",
         weapon: "Bow",
@@ -800,7 +805,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307066_01",
+        id: "w307066_01",
         iconName: "307066_01_50101.png",
         name: "Scepter of Infinite Fire",
         weapon: "Wand",
@@ -808,7 +813,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307079_01",
+        id: "w307079_01",
         iconName: "307079_01_50101.png",
         name: "Infernal Conduit",
         weapon: "Wand",
@@ -816,7 +821,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307089_01",
+        id: "w307089_01",
         iconName: "307089_01_50101.png",
         name: "Hellwing",
         weapon: "Wand",
@@ -824,7 +829,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307122_01",
+        id: "w307122_01",
         iconName: "307122_01_50101.png",
         name: "Revenant of Annihilation",
         weapon: "Wand",
@@ -832,7 +837,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307105_01",
+        id: "w307105_01",
         iconName: "307105_01_50101.png",
         name: "Undying Flame",
         weapon: "Wand",
@@ -840,7 +845,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307129_01",
+        id: "w307129_01",
         iconName: "307129_01_50101.png",
         name: "Chimeratech Archmage",
         weapon: "Wand",
@@ -848,7 +853,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307119_01",
+        id: "w307119_01",
         iconName: "307119_01_50101.png",
         name: "Infernoblaze",
         weapon: "Wand",
@@ -856,7 +861,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307015_01",
+        id: "w307015_01",
         iconName: "307015_01_50101.png",
         name: "Terranigmus",
         weapon: "Wand",
@@ -864,7 +869,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307140_01",
+        id: "w307140_01",
         iconName: "307140_01_50101.png",
         name: "Plage Rod",
         weapon: "Wand",
@@ -872,7 +877,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308044_01",
+        id: "w308044_01",
         iconName: "308044_01_50101.png",
         name: "Endless Demise",
         weapon: "Staff",
@@ -880,7 +885,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308054_01",
+        id: "w308054_01",
         iconName: "308054_01_50101.png",
         name: "Igniflare Core",
         weapon: "Staff",
@@ -888,7 +893,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308072_01",
+        id: "w308072_01",
         iconName: "308072_01_50101.png",
         name: "Fangflame Staff",
         weapon: "Staff",
@@ -896,7 +901,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308115_01",
+        id: "w308115_01",
         iconName: "308115_01_50101.png",
         name: "Ruinous Eruption",
         weapon: "Staff",
@@ -904,7 +909,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308098_01",
+        id: "w308098_01",
         iconName: "308098_01_50101.png",
         name: "Flamma Staff",
         weapon: "Staff",
@@ -912,7 +917,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308122_01",
+        id: "w308122_01",
         iconName: "308122_01_50101.png",
         name: "Chimeratech Cardinal",
         weapon: "Staff",
@@ -920,7 +925,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w309016_01",
+        id: "w309016_01",
         iconName: "309016_01_50101.png",
         name: "Chimeratech Gunner",
         weapon: "Manacaster",
@@ -928,7 +933,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308112_01",
+        id: "w308112_01",
         iconName: "308112_01_50101.png",
         name: "Blazegambol",
         weapon: "Staff",
@@ -936,7 +941,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w309021_01",
+        id: "w309021_01",
         iconName: "309021_01_50101.png",
         name: "Blazegambol",
         weapon: "Manacaster",
@@ -944,7 +949,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308031_01",
+        id: "w308031_01",
         iconName: "308031_01_50101.png",
         name: "Staff of the Red Emperor",
         weapon: "Staff",
@@ -952,7 +957,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w309011_01",
+        id: "w309011_01",
         iconName: "309011_01_50101.png",
         name: "Chanzelian Caster Mk. 65",
         weapon: "Manacaster",
@@ -960,7 +965,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308133_01",
+        id: "w308133_01",
         iconName: "308133_01_50101.png",
         name: 'Wyvern Staff "Elsewhere"',
         weapon: "Staff",
@@ -968,7 +973,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301077_01",
+        id: "w301077_01",
         iconName: "301077_01_50201.png",
         name: "Judge of Oceans",
         weapon: "Sword",
@@ -976,7 +981,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301097_01",
+        id: "w301097_01",
         iconName: "301097_01_50201.png",
         name: "Icy Absolution",
         weapon: "Sword",
@@ -984,7 +989,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301073_01",
+        id: "w301073_01",
         iconName: "301073_01_50201.png",
         name: "Raging Aquatail",
         weapon: "Sword",
@@ -992,7 +997,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301109_01",
+        id: "w301109_01",
         iconName: "301109_01_50201.png",
         name: "Eternal Metempsychosis",
         weapon: "Sword",
@@ -1000,7 +1005,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301126_01",
+        id: "w301126_01",
         iconName: "301126_01_50201.png",
         name: "Fearfrost Soulsword",
         weapon: "Sword",
@@ -1008,7 +1013,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301133_01",
+        id: "w301133_01",
         iconName: "301133_01_50201.png",
         name: "Chimeratech Anomalocaris",
         weapon: "Sword",
@@ -1016,7 +1021,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301120_01",
+        id: "w301120_01",
         iconName: "301120_01_50201.png",
         name: "Absolute Aqua",
         weapon: "Sword",
@@ -1024,7 +1029,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301010_01",
+        id: "w301010_01",
         iconName: "301010_01_50201.png",
         name: "Eoantide",
         weapon: "Sword",
@@ -1032,7 +1037,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302058_01",
+        id: "w302058_01",
         iconName: "302058_01_50201.png",
         name: "Highwater Slicer",
         weapon: "Blade",
@@ -1040,7 +1045,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302088_01",
+        id: "w302088_01",
         iconName: "302088_01_50201.png",
         name: "Seaspout Blade",
         weapon: "Blade",
@@ -1048,7 +1053,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302067_01",
+        id: "w302067_01",
         iconName: "302067_01_50201.png",
         name: "Dark Direblade Mizuha",
         weapon: "Blade",
@@ -1056,7 +1061,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302117_01",
+        id: "w302117_01",
         iconName: "302117_01_50201.png",
         name: "Shadeflood Waveblade",
         weapon: "Blade",
@@ -1064,7 +1069,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302100_01",
+        id: "w302100_01",
         iconName: "302100_01_50201.png",
         name: "Gush Blade",
         weapon: "Blade",
@@ -1072,7 +1077,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302124_01",
+        id: "w302124_01",
         iconName: "302124_01_50201.png",
         name: "Chimeratech Hadranax",
         weapon: "Blade",
@@ -1080,7 +1085,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302111_01",
+        id: "w302111_01",
         iconName: "302111_01_50201.png",
         name: "Ruinous Torrent",
         weapon: "Blade",
@@ -1088,7 +1093,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302010_01",
+        id: "w302010_01",
         iconName: "302010_01_50201.png",
         name: "Maar Oasis",
         weapon: "Blade",
@@ -1096,7 +1101,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303051_01",
+        id: "w303051_01",
         iconName: "303051_01_50201.png",
         name: "Gorelust",
         weapon: "Dagger",
@@ -1104,7 +1109,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303058_01",
+        id: "w303058_01",
         iconName: "303058_01_50201.png",
         name: "Frigid Sting",
         weapon: "Dagger",
@@ -1112,7 +1117,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303087_01",
+        id: "w303087_01",
         iconName: "303087_01_50201.png",
         name: "The Surge",
         weapon: "Dagger",
@@ -1120,7 +1125,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303116_01",
+        id: "w303116_01",
         iconName: "303116_01_50201.png",
         name: "Hydroflow Necrom",
         weapon: "Dagger",
@@ -1128,7 +1133,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303099_01",
+        id: "w303099_01",
         iconName: "303099_01_50201.png",
         name: "Chillgasp",
         weapon: "Dagger",
@@ -1136,7 +1141,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303123_01",
+        id: "w303123_01",
         iconName: "303123_01_50201.png",
         name: "Chimeratech Vetulicola",
         weapon: "Dagger",
@@ -1144,7 +1149,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303110_01",
+        id: "w303110_01",
         iconName: "303110_01_50201.png",
         name: "Tideruler's Maw",
         weapon: "Dagger",
@@ -1152,7 +1157,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303020_01",
+        id: "w303020_01",
         iconName: "303020_01_50201.png",
         name: "Lux Lamina",
         weapon: "Dagger",
@@ -1160,7 +1165,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304050_01",
+        id: "w304050_01",
         iconName: "304050_01_50201.png",
         name: "Maelstrom Crux",
         weapon: "Axe",
@@ -1168,7 +1173,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304066_01",
+        id: "w304066_01",
         iconName: "304066_01_50201.png",
         name: "Permafrost Crash",
         weapon: "Axe",
@@ -1176,7 +1181,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304086_01",
+        id: "w304086_01",
         iconName: "304086_01_50201.png",
         name: "Jagged Rainstorm",
         weapon: "Axe",
@@ -1184,7 +1189,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304115_01",
+        id: "w304115_01",
         iconName: "304115_01_50201.png",
         name: "Crusher of the Depths",
         weapon: "Axe",
@@ -1192,7 +1197,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304098_01",
+        id: "w304098_01",
         iconName: "304098_01_50201.png",
         name: "Icicle Destroyer",
         weapon: "Axe",
@@ -1200,7 +1205,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304122_01",
+        id: "w304122_01",
         iconName: "304122_01_50201.png",
         name: "Chimeratech Helmetia",
         weapon: "Axe",
@@ -1208,7 +1213,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304109_01",
+        id: "w304109_01",
         iconName: "304109_01_50201.png",
         name: "Mercy's Azure Tide",
         weapon: "Axe",
@@ -1216,7 +1221,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304028_01",
+        id: "w304028_01",
         iconName: "304028_01_50201.png",
         name: "Grand Seadragon",
         weapon: "Axe",
@@ -1224,7 +1229,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305058_01",
+        id: "w305058_01",
         iconName: "305058_01_50201.png",
         name: "Vortex Beast",
         weapon: "Lance",
@@ -1232,7 +1237,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305066_01",
+        id: "w305066_01",
         iconName: "305066_01_50201.png",
         name: "Strohm Mare",
         weapon: "Lance",
@@ -1240,7 +1245,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305093_01",
+        id: "w305093_01",
         iconName: "305093_01_50201.png",
         name: "Icesovereign Trident",
         weapon: "Lance",
@@ -1248,7 +1253,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305122_01",
+        id: "w305122_01",
         iconName: "305122_01_50201.png",
         name: "Lance of Frozen Depths",
         weapon: "Lance",
@@ -1256,7 +1261,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305105_01",
+        id: "w305105_01",
         iconName: "305105_01_50201.png",
         name: "Raging Tidelance",
         weapon: "Lance",
@@ -1264,7 +1269,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305129_01",
+        id: "w305129_01",
         iconName: "305129_01_50201.png",
         name: "Chimeratech Takakkawia",
         weapon: "Lance",
@@ -1272,7 +1277,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305116_01",
+        id: "w305116_01",
         iconName: "305116_01_50201.png",
         name: "Limpid Rush",
         weapon: "Lance",
@@ -1280,7 +1285,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305014_01",
+        id: "w305014_01",
         iconName: "305014_01_50201.png",
         name: "Ocean Lord",
         weapon: "Lance",
@@ -1288,7 +1293,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306071_01",
+        id: "w306071_01",
         iconName: "306071_01_50201.png",
         name: "Everfrost Bow",
         weapon: "Bow",
@@ -1296,7 +1301,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306086_01",
+        id: "w306086_01",
         iconName: "306086_01_50201.png",
         name: "Peakbreaker Bow",
         weapon: "Bow",
@@ -1304,7 +1309,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306065_01",
+        id: "w306065_01",
         iconName: "306065_01_50201.png",
         name: "Streamgorger Bow",
         weapon: "Bow",
@@ -1312,7 +1317,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306115_01",
+        id: "w306115_01",
         iconName: "306115_01_50201.png",
         name: "Despair Spiral",
         weapon: "Bow",
@@ -1320,7 +1325,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306098_01",
+        id: "w306098_01",
         iconName: "306098_01_50201.png",
         name: "Vortex Tide",
         weapon: "Bow",
@@ -1328,7 +1333,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306122_01",
+        id: "w306122_01",
         iconName: "306122_01_50201.png",
         name: "Chimeratech Hallucigenia",
         weapon: "Bow",
@@ -1336,7 +1341,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306109_01",
+        id: "w306109_01",
         iconName: "306109_01_50201.png",
         name: "Azure Mercurius",
         weapon: "Bow",
@@ -1344,7 +1349,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306029_01",
+        id: "w306029_01",
         iconName: "306029_01_50201.png",
         name: "Peacock's Whorl",
         weapon: "Bow",
@@ -1352,7 +1357,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307055_01",
+        id: "w307055_01",
         iconName: "307055_01_50201.png",
         name: "Tsunamiwing",
         weapon: "Wand",
@@ -1360,7 +1365,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307077_01",
+        id: "w307077_01",
         iconName: "307077_01_50201.png",
         name: "Spirit Breaker",
         weapon: "Wand",
@@ -1368,7 +1373,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307094_01",
+        id: "w307094_01",
         iconName: "307094_01_50201.png",
         name: "Seasovereign's Rule",
         weapon: "Wand",
@@ -1376,7 +1381,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307123_01",
+        id: "w307123_01",
         iconName: "307123_01_50201.png",
         name: "Revenant of Calamity",
         weapon: "Wand",
@@ -1384,7 +1389,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307106_01",
+        id: "w307106_01",
         iconName: "307106_01_50201.png",
         name: "Cascading Cataract",
         weapon: "Wand",
@@ -1392,7 +1397,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307130_01",
+        id: "w307130_01",
         iconName: "307130_01_50201.png",
         name: "Chimeratech Hurdia",
         weapon: "Wand",
@@ -1400,7 +1405,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307117_01",
+        id: "w307117_01",
         iconName: "307117_01_50201.png",
         name: "Aquatic Spiral",
         weapon: "Wand",
@@ -1408,7 +1413,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307032_01",
+        id: "w307032_01",
         iconName: "307032_01_50201.png",
         name: "Ocean Monarch",
         weapon: "Wand",
@@ -1416,7 +1421,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308055_01",
+        id: "w308055_01",
         iconName: "308055_01_50201.png",
         name: "Endless Azure Core",
         weapon: "Staff",
@@ -1424,7 +1429,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308087_01",
+        id: "w308087_01",
         iconName: "308087_01_50201.png",
         name: "Drenching Staff",
         weapon: "Staff",
@@ -1432,7 +1437,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308064_01",
+        id: "w308064_01",
         iconName: "308064_01_50201.png",
         name: "Riptide Staff",
         weapon: "Staff",
@@ -1440,7 +1445,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308116_01",
+        id: "w308116_01",
         iconName: "308116_01_50201.png",
         name: "Breath Snuffer",
         weapon: "Staff",
@@ -1448,7 +1453,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308099_01",
+        id: "w308099_01",
         iconName: "308099_01_50201.png",
         name: "Flumen Staff",
         weapon: "Staff",
@@ -1456,7 +1461,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308123_01",
+        id: "w308123_01",
         iconName: "308123_01_50201.png",
         name: "Chimeratech Metaldetes",
         weapon: "Staff",
@@ -1464,7 +1469,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w309017_01",
+        id: "w309017_01",
         iconName: "309017_01_50201.png",
         name: "Chimeratech Marella",
         weapon: "Manacaster",
@@ -1472,7 +1477,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308110_01",
+        id: "w308110_01",
         iconName: "308110_01_50201.png",
         name: "Ocean's Embrace",
         weapon: "Staff",
@@ -1480,7 +1485,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w309022_01",
+        id: "w309022_01",
         iconName: "309022_01_50201.png",
         name: "Aqua Trigger",
         weapon: "Manacaster",
@@ -1488,7 +1493,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308011_01",
+        id: "w308011_01",
         iconName: "308011_01_50201.png",
         name: "Bracing Waters",
         weapon: "Staff",
@@ -1496,7 +1501,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w309012_01",
+        id: "w309012_01",
         iconName: "309012_01_50201.png",
         name: "Chanzelian Caster Mk. 72",
         weapon: "Manacaster",
@@ -1504,7 +1509,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301067_01",
+        id: "w301067_01",
         iconName: "301067_01_50301.png",
         name: "Hurricane Apogee",
         weapon: "Sword",
@@ -1512,7 +1517,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301098_01",
+        id: "w301098_01",
         iconName: "301098_01_50301.png",
         name: "Roaring Weald",
         weapon: "Sword",
@@ -1520,7 +1525,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301084_01",
+        id: "w301084_01",
         iconName: "301084_01_50301.png",
         name: "Slaughtering Stormtail",
         weapon: "Sword",
@@ -1528,7 +1533,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301110_01",
+        id: "w301110_01",
         iconName: "301110_01_50301.png",
         name: "Cholergale",
         weapon: "Sword",
@@ -1536,7 +1541,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301127_01",
+        id: "w301127_01",
         iconName: "301127_01_50301.png",
         name: "Twistwind Soulsword",
         weapon: "Sword",
@@ -1544,7 +1549,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301134_01",
+        id: "w301134_01",
         iconName: "301134_01_50301.png",
         name: "Chimeratech Cypress",
         weapon: "Sword",
@@ -1552,7 +1557,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301119_01",
+        id: "w301119_01",
         iconName: "301119_01_50301.png",
         name: "Absolute Tempest",
         weapon: "Sword",
@@ -1560,7 +1565,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301033_01",
+        id: "w301033_01",
         iconName: "301033_01_50301.png",
         name: "Durandal",
         weapon: "Sword",
@@ -1568,7 +1573,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302053_01",
+        id: "w302053_01",
         iconName: "302053_01_50301.png",
         name: "Heavenrend",
         weapon: "Blade",
@@ -1576,7 +1581,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302089_01",
+        id: "w302089_01",
         iconName: "302089_01_50301.png",
         name: "Stormsquall Crash",
         weapon: "Blade",
@@ -1584,7 +1589,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302079_01",
+        id: "w302079_01",
         iconName: "302079_01_50301.png",
         name: "Swift Direblade Hayate",
         weapon: "Blade",
@@ -1592,7 +1597,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302101_01",
+        id: "w302101_01",
         iconName: "302101_01_50301.png",
         name: "Gustnado Blade",
         weapon: "Blade",
@@ -1600,7 +1605,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302118_01",
+        id: "w302118_01",
         iconName: "302118_01_50301.png",
         name: "Galeshade Blade",
         weapon: "Blade",
@@ -1608,7 +1613,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302125_01",
+        id: "w302125_01",
         iconName: "302125_01_50301.png",
         name: "Chimeratech Benzoin",
         weapon: "Blade",
@@ -1616,7 +1621,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302110_01",
+        id: "w302110_01",
         iconName: "302110_01_50301.png",
         name: "Endless Horizon",
         weapon: "Blade",
@@ -1624,7 +1629,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302023_01",
+        id: "w302023_01",
         iconName: "302023_01_50301.png",
         name: "Anemone",
         weapon: "Blade",
@@ -1632,7 +1637,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303066_01",
+        id: "w303066_01",
         iconName: "303066_01_50301.png",
         name: "Turbulent Agony",
         weapon: "Dagger",
@@ -1640,7 +1645,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303088_01",
+        id: "w303088_01",
         iconName: "303088_01_50301.png",
         name: "The Gale",
         weapon: "Dagger",
@@ -1648,7 +1653,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303083_01",
+        id: "w303083_01",
         iconName: "303083_01_50301.png",
         name: "Mutterfang",
         weapon: "Dagger",
@@ -1656,7 +1661,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303117_01",
+        id: "w303117_01",
         iconName: "303117_01_50301.png",
         name: "Stormgale Necrom",
         weapon: "Dagger",
@@ -1664,7 +1669,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303100_01",
+        id: "w303100_01",
         iconName: "303100_01_50301.png",
         name: "Stormbode",
         weapon: "Dagger",
@@ -1672,7 +1677,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303124_01",
+        id: "w303124_01",
         iconName: "303124_01_50301.png",
         name: "Chimeratech Tea Tree",
         weapon: "Dagger",
@@ -1680,7 +1685,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303109_01",
+        id: "w303109_01",
         iconName: "303109_01_50301.png",
         name: "Windruler's Maw",
         weapon: "Dagger",
@@ -1688,7 +1693,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303028_01",
+        id: "w303028_01",
         iconName: "303028_01_50301.png",
         name: "Karlsnautr",
         weapon: "Dagger",
@@ -1696,7 +1701,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304054_01",
+        id: "w304054_01",
         iconName: "304054_01_50301.png",
         name: "Stormwrath Gaze",
         weapon: "Axe",
@@ -1704,7 +1709,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304087_01",
+        id: "w304087_01",
         iconName: "304087_01_50301.png",
         name: "Jagged Bolt",
         weapon: "Axe",
@@ -1712,7 +1717,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304082_01",
+        id: "w304082_01",
         iconName: "304082_01_50301.png",
         name: "Squall Crux",
         weapon: "Axe",
@@ -1720,7 +1725,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304099_01",
+        id: "w304099_01",
         iconName: "304099_01_50301.png",
         name: "Cyclonic Destroyer",
         weapon: "Axe",
@@ -1728,7 +1733,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304116_01",
+        id: "w304116_01",
         iconName: "304116_01_50301.png",
         name: "Stella Wind Crash",
         weapon: "Axe",
@@ -1736,7 +1741,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304123_01",
+        id: "w304123_01",
         iconName: "304123_01_50301.png",
         name: "Chimeratech Palmarosa",
         weapon: "Axe",
@@ -1744,7 +1749,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304108_01",
+        id: "w304108_01",
         iconName: "304108_01_50301.png",
         name: "Glorystorm's Guide",
         weapon: "Axe",
@@ -1752,7 +1757,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304029_01",
+        id: "w304029_01",
         iconName: "304029_01_50301.png",
         name: "Axe of the Southern Cross",
         weapon: "Axe",
@@ -1760,7 +1765,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305078_01",
+        id: "w305078_01",
         iconName: "305078_01_50301.png",
         name: "Stormpiercer Lance",
         weapon: "Lance",
@@ -1768,7 +1773,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305094_01",
+        id: "w305094_01",
         iconName: "305094_01_50301.png",
         name: "Windsovereign Trident",
         weapon: "Lance",
@@ -1776,7 +1781,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305089_01",
+        id: "w305089_01",
         iconName: "305089_01_50301.png",
         name: "Flying Beast",
         weapon: "Lance",
@@ -1784,7 +1789,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305106_01",
+        id: "w305106_01",
         iconName: "305106_01_50301.png",
         name: "Supercell",
         weapon: "Lance",
@@ -1792,7 +1797,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305123_01",
+        id: "w305123_01",
         iconName: "305123_01_50301.png",
         name: "Axiom Piercer",
         weapon: "Lance",
@@ -1800,7 +1805,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305130_01",
+        id: "w305130_01",
         iconName: "305130_01_50301.png",
         name: "Chimeratech Caraway",
         weapon: "Lance",
@@ -1808,7 +1813,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305115_01",
+        id: "w305115_01",
         iconName: "305115_01_50301.png",
         name: "Guiding Gale",
         weapon: "Lance",
@@ -1816,7 +1821,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305032_01",
+        id: "w305032_01",
         iconName: "305032_01_50301.png",
         name: "Spear of the Northern Cross",
         weapon: "Lance",
@@ -1824,7 +1829,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306062_01",
+        id: "w306062_01",
         iconName: "306062_01_50301.png",
         name: "Windhoze, the Dustblaster",
         weapon: "Bow",
@@ -1832,7 +1837,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306087_01",
+        id: "w306087_01",
         iconName: "306087_01_50301.png",
         name: "Firmament Auger",
         weapon: "Bow",
@@ -1840,7 +1845,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306076_01",
+        id: "w306076_01",
         iconName: "306076_01_50301.png",
         name: "Deathwind Caller",
         weapon: "Bow",
@@ -1848,7 +1853,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306116_01",
+        id: "w306116_01",
         iconName: "306116_01_50301.png",
         name: "Windcut",
         weapon: "Bow",
@@ -1856,7 +1861,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306099_01",
+        id: "w306099_01",
         iconName: "306099_01_50301.png",
         name: "Vortex Fury",
         weapon: "Bow",
@@ -1864,7 +1869,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306123_01",
+        id: "w306123_01",
         iconName: "306123_01_50301.png",
         name: "Chimeratech Ajwain",
         weapon: "Bow",
@@ -1872,7 +1877,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306108_01",
+        id: "w306108_01",
         iconName: "306108_01_50301.png",
         name: "Jormungand's Fury",
         weapon: "Bow",
@@ -1880,7 +1885,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306030_01",
+        id: "w306030_01",
         iconName: "306030_01_50301.png",
         name: "Stellar Pegasus",
         weapon: "Bow",
@@ -1888,7 +1893,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307067_01",
+        id: "w307067_01",
         iconName: "307067_01_50301.png",
         name: "Scepter of the Maelstrom",
         weapon: "Wand",
@@ -1896,7 +1901,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307095_01",
+        id: "w307095_01",
         iconName: "307095_01_50301.png",
         name: "Typhoon's Rule",
         weapon: "Wand",
@@ -1904,7 +1909,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307090_01",
+        id: "w307090_01",
         iconName: "307090_01_50301.png",
         name: "Tempestwing",
         weapon: "Wand",
@@ -1912,7 +1917,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307124_01",
+        id: "w307124_01",
         iconName: "307124_01_50301.png",
         name: "Revenant of Pollution",
         weapon: "Wand",
@@ -1920,7 +1925,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307107_01",
+        id: "w307107_01",
         iconName: "307107_01_50301.png",
         name: "The Inevitable Squall",
         weapon: "Wand",
@@ -1928,7 +1933,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307131_01",
+        id: "w307131_01",
         iconName: "307131_01_50301.png",
         name: "Chimeratech Frankin",
         weapon: "Wand",
@@ -1936,7 +1941,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307116_01",
+        id: "w307116_01",
         iconName: "307116_01_50301.png",
         name: "Grand Tempest",
         weapon: "Wand",
@@ -1944,7 +1949,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307014_01",
+        id: "w307014_01",
         iconName: "307014_01_50301.png",
         name: "Phytalmios",
         weapon: "Wand",
@@ -1952,7 +1957,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308052_01",
+        id: "w308052_01",
         iconName: "308052_01_50301.png",
         name: "Rise and Fall",
         weapon: "Staff",
@@ -1960,7 +1965,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308088_01",
+        id: "w308088_01",
         iconName: "308088_01_50301.png",
         name: "Skypainter Staff",
         weapon: "Staff",
@@ -1968,7 +1973,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308075_01",
+        id: "w308075_01",
         iconName: "308075_01_50301.png",
         name: "Whirlwind Staff",
         weapon: "Staff",
@@ -1976,7 +1981,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308117_01",
+        id: "w308117_01",
         iconName: "308117_01_50301.png",
         name: "Blastphantom",
         weapon: "Staff",
@@ -1984,7 +1989,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308100_01",
+        id: "w308100_01",
         iconName: "308100_01_50301.png",
         name: "Staff of Ventus",
         weapon: "Staff",
@@ -1992,7 +1997,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308124_01",
+        id: "w308124_01",
         iconName: "308124_01_50301.png",
         name: "Chimeratech Marjoram",
         weapon: "Staff",
@@ -2000,7 +2005,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w309018_01",
+        id: "w309018_01",
         iconName: "309018_01_50301.png",
         name: "Chimeratech Fennel",
         weapon: "Manacaster",
@@ -2008,7 +2013,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308109_01",
+        id: "w308109_01",
         iconName: "308109_01_50301.png",
         name: "Stormruler",
         weapon: "Staff",
@@ -2016,7 +2021,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w309023_01",
+        id: "w309023_01",
         iconName: "309023_01_50301.png",
         name: "Tempest Trigger",
         weapon: "Manacaster",
@@ -2024,7 +2029,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308032_01",
+        id: "w308032_01",
         iconName: "308032_01_50301.png",
         name: "Ancient Mage's Windcane",
         weapon: "Staff",
@@ -2032,7 +2037,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w309013_01",
+        id: "w309013_01",
         iconName: "309013_01_50301.png",
         name: "Chanzelian Caster Mk. 21",
         weapon: "Manacaster",
@@ -2040,7 +2045,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301058_01",
+        id: "w301058_01",
         iconName: "301058_01_50401.png",
         name: "Aureole Apogee",
         weapon: "Sword",
@@ -2048,7 +2053,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301105_01",
+        id: "w301105_01",
         iconName: "301105_01_50401.png",
         name: "Glintbringer",
         weapon: "Sword",
@@ -2056,7 +2061,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301111_01",
+        id: "w301111_01",
         iconName: "301111_01_50401.png",
         name: "Radiant Dominion",
         weapon: "Sword",
@@ -2064,7 +2069,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301117_01",
+        id: "w301117_01",
         iconName: "301117_01_50401.png",
         name: "Death Aeon",
         weapon: "Sword",
@@ -2072,7 +2077,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301085_01",
+        id: "w301085_01",
         iconName: "301085_01_50401.png",
         name: "Radiant Lighttail",
         weapon: "Sword",
@@ -2080,7 +2085,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301128_01",
+        id: "w301128_01",
         iconName: "301128_01_50401.png",
         name: "Heavenshaker Soulsword",
         weapon: "Sword",
@@ -2088,7 +2093,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301135_01",
+        id: "w301135_01",
         iconName: "301135_01_50401.png",
         name: "Chimeratech Sirius",
         weapon: "Sword",
@@ -2096,7 +2101,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301121_01",
+        id: "w301121_01",
         iconName: "301121_01_50401.png",
         name: "Absolute Lightning",
         weapon: "Sword",
@@ -2104,7 +2109,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301015_01",
+        id: "w301015_01",
         iconName: "301015_01_50401.png",
         name: "Zex's End",
         weapon: "Sword",
@@ -2112,7 +2117,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301081_01",
+        id: "w301081_01",
         iconName: "301081_01_50401.png",
         name: "Fólkvangr",
         weapon: "Sword",
@@ -2120,7 +2125,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302047_01",
+        id: "w302047_01",
         iconName: "302047_01_50401.png",
         name: "Primal Thunder",
         weapon: "Blade",
@@ -2128,7 +2133,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302096_01",
+        id: "w302096_01",
         iconName: "302096_01_50401.png",
         name: "Brightsheen",
         weapon: "Blade",
@@ -2136,7 +2141,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302102_01",
+        id: "w302102_01",
         iconName: "302102_01_50401.png",
         name: "Radiant Blade",
         weapon: "Blade",
@@ -2144,7 +2149,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302108_01",
+        id: "w302108_01",
         iconName: "302108_01_50401.png",
         name: "Hollow Lightning",
         weapon: "Blade",
@@ -2152,7 +2157,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302080_01",
+        id: "w302080_01",
         iconName: "302080_01_50401.png",
         name: "Shining Direblade Nozuchi",
         weapon: "Blade",
@@ -2160,7 +2165,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302119_01",
+        id: "w302119_01",
         iconName: "302119_01_50401.png",
         name: "Shadegleam Flashblade",
         weapon: "Blade",
@@ -2168,7 +2173,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302126_01",
+        id: "w302126_01",
         iconName: "302126_01_50401.png",
         name: "Chimeratech Canopus",
         weapon: "Blade",
@@ -2176,7 +2181,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302112_01",
+        id: "w302112_01",
         iconName: "302112_01_50401.png",
         name: "Brilliant Flash",
         weapon: "Blade",
@@ -2184,7 +2189,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302025_01",
+        id: "w302025_01",
         iconName: "302025_01_50401.png",
         name: "Heavenwing",
         weapon: "Blade",
@@ -2192,7 +2197,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303095_01",
+        id: "w303095_01",
         iconName: "303095_01_50401.png",
         name: "Salvation Seeker",
         weapon: "Dagger",
@@ -2200,7 +2205,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303107_01",
+        id: "w303107_01",
         iconName: "303107_01_50401.png",
         name: "Merciful Claw",
         weapon: "Dagger",
@@ -2208,7 +2213,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303084_01",
+        id: "w303084_01",
         iconName: "303084_01_50401.png",
         name: "Fatetaker",
         weapon: "Dagger",
@@ -2216,7 +2221,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303118_01",
+        id: "w303118_01",
         iconName: "303118_01_50401.png",
         name: "Luminospark Necrom",
         weapon: "Dagger",
@@ -2224,7 +2229,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303101_01",
+        id: "w303101_01",
         iconName: "303101_01_50401.png",
         name: "Whiteout",
         weapon: "Dagger",
@@ -2232,7 +2237,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303125_01",
+        id: "w303125_01",
         iconName: "303125_01_50401.png",
         name: "Chimeratech Capella",
         weapon: "Dagger",
@@ -2240,7 +2245,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303111_01",
+        id: "w303111_01",
         iconName: "303111_01_50401.png",
         name: "Fulminator's Maw",
         weapon: "Dagger",
@@ -2248,7 +2253,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303030_01",
+        id: "w303030_01",
         iconName: "303030_01_50401.png",
         name: "Thunderblade Sugaar",
         weapon: "Dagger",
@@ -2256,7 +2261,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304045_01",
+        id: "w304045_01",
         iconName: "304045_01_50401.png",
         name: "Starwrath Gaze",
         weapon: "Axe",
@@ -2264,7 +2269,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304094_01",
+        id: "w304094_01",
         iconName: "304094_01_50401.png",
         name: "Cleaver of Despair",
         weapon: "Axe",
@@ -2272,7 +2277,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304100_01",
+        id: "w304100_01",
         iconName: "304100_01_50401.png",
         name: "Plasmareaver",
         weapon: "Axe",
@@ -2280,7 +2285,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304106_01",
+        id: "w304106_01",
         iconName: "304106_01_50401.png",
         name: "Blitzfang",
         weapon: "Axe",
@@ -2288,7 +2293,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304083_01",
+        id: "w304083_01",
         iconName: "304083_01_50401.png",
         name: "Arrogance Crux",
         weapon: "Axe",
@@ -2296,7 +2301,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304117_01",
+        id: "w304117_01",
         iconName: "304117_01_50401.png",
         name: "Crushdazzle",
         weapon: "Axe",
@@ -2304,7 +2309,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304124_01",
+        id: "w304124_01",
         iconName: "304124_01_50401.png",
         name: "Chimeratech Rigel",
         weapon: "Axe",
@@ -2312,7 +2317,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304110_01",
+        id: "w304110_01",
         iconName: "304110_01_50401.png",
         name: "Mighty Thundercrash",
         weapon: "Axe",
@@ -2320,7 +2325,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304013_01",
+        id: "w304013_01",
         iconName: "304013_01_50401.png",
         name: "Radiant Swath",
         weapon: "Axe",
@@ -2328,7 +2333,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305101_01",
+        id: "w305101_01",
         iconName: "305101_01_50401.png",
         name: "Twilight Lost",
         weapon: "Lance",
@@ -2336,7 +2341,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305107_01",
+        id: "w305107_01",
         iconName: "305107_01_50401.png",
         name: "Biting Brightlance",
         weapon: "Lance",
@@ -2344,7 +2349,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305113_01",
+        id: "w305113_01",
         iconName: "305113_01_50401.png",
         name: "Starpiercer",
         weapon: "Lance",
@@ -2352,7 +2357,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305090_01",
+        id: "w305090_01",
         iconName: "305090_01_50401.png",
         name: "Fulmination Beast",
         weapon: "Lance",
@@ -2360,7 +2365,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305124_01",
+        id: "w305124_01",
         iconName: "305124_01_50401.png",
         name: "Lance of Bright Skies",
         weapon: "Lance",
@@ -2368,7 +2373,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305131_01",
+        id: "w305131_01",
         iconName: "305131_01_50401.png",
         name: "Chimeratech Arcturus",
         weapon: "Lance",
@@ -2376,7 +2381,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305117_01",
+        id: "w305117_01",
         iconName: "305117_01_50401.png",
         name: "Brilliant Lightflash",
         weapon: "Lance",
@@ -2384,7 +2389,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305033_01",
+        id: "w305033_01",
         iconName: "305033_01_50401.png",
         name: "Thunder King's Greatspear",
         weapon: "Lance",
@@ -2392,7 +2397,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305143_01",
+        id: "w305143_01",
         iconName: "305143_01_50401.png",
         name: "Fensalir",
         weapon: "Lance",
@@ -2400,7 +2405,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306094_01",
+        id: "w306094_01",
         iconName: "306094_01_50401.png",
         name: "Tiger Lily Bow",
         weapon: "Bow",
@@ -2408,7 +2413,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306106_01",
+        id: "w306106_01",
         iconName: "306106_01_50401.png",
         name: "Astral Echo",
         weapon: "Bow",
@@ -2416,7 +2421,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306077_01",
+        id: "w306077_01",
         iconName: "306077_01_50401.png",
         name: "Heavenbreaker Bow",
         weapon: "Bow",
@@ -2424,7 +2429,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306117_01",
+        id: "w306117_01",
         iconName: "306117_01_50401.png",
         name: "Soulshine Splitter",
         weapon: "Bow",
@@ -2432,7 +2437,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306100_01",
+        id: "w306100_01",
         iconName: "306100_01_50401.png",
         name: "Lighttorrent Bow",
         weapon: "Bow",
@@ -2440,7 +2445,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306124_01",
+        id: "w306124_01",
         iconName: "306124_01_50401.png",
         name: "Chimeratech Vega",
         weapon: "Bow",
@@ -2448,7 +2453,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306110_01",
+        id: "w306110_01",
         iconName: "306110_01_50401.png",
         name: "Jupiter's Sky",
         weapon: "Bow",
@@ -2456,7 +2461,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306031_01",
+        id: "w306031_01",
         iconName: "306031_01_50401.png",
         name: "Thunderbow",
         weapon: "Bow",
@@ -2464,7 +2469,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307102_01",
+        id: "w307102_01",
         iconName: "307102_01_50401.png",
         name: "Sacred Requiem",
         weapon: "Wand",
@@ -2472,7 +2477,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307114_01",
+        id: "w307114_01",
         iconName: "307114_01_50401.png",
         name: "Worldshaker",
         weapon: "Wand",
@@ -2480,7 +2485,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307091_01",
+        id: "w307091_01",
         iconName: "307091_01_50401.png",
         name: "Shinewing",
         weapon: "Wand",
@@ -2488,7 +2493,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307125_01",
+        id: "w307125_01",
         iconName: "307125_01_50401.png",
         name: "Revenant of Sol",
         weapon: "Wand",
@@ -2496,7 +2501,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307108_01",
+        id: "w307108_01",
         iconName: "307108_01_50401.png",
         name: "Ray of Perpetuity",
         weapon: "Wand",
@@ -2504,7 +2509,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307132_01",
+        id: "w307132_01",
         iconName: "307132_01_50401.png",
         name: "Chimeratech Betelgeuse",
         weapon: "Wand",
@@ -2512,7 +2517,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307118_01",
+        id: "w307118_01",
         iconName: "307118_01_50401.png",
         name: "Primeval Thunder",
         weapon: "Wand",
@@ -2520,7 +2525,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307034_01",
+        id: "w307034_01",
         iconName: "307034_01_50401.png",
         name: "Twilight Shimmer",
         weapon: "Wand",
@@ -2528,7 +2533,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308046_01",
+        id: "w308046_01",
         iconName: "308046_01_50401.png",
         name: "Genesis Bringer",
         weapon: "Staff",
@@ -2536,7 +2541,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308095_01",
+        id: "w308095_01",
         iconName: "308095_01_50401.png",
         name: "Aria of Valor",
         weapon: "Staff",
@@ -2544,7 +2549,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308107_01",
+        id: "w308107_01",
         iconName: "308107_01_50401.png",
         name: "Dominus of Ever",
         weapon: "Staff",
@@ -2552,7 +2557,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308076_01",
+        id: "w308076_01",
         iconName: "308076_01_50401.png",
         name: "Beastblast Staff",
         weapon: "Staff",
@@ -2560,7 +2565,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308118_01",
+        id: "w308118_01",
         iconName: "308118_01_50401.png",
         name: "Glintshine Grudge",
         weapon: "Staff",
@@ -2568,7 +2573,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308101_01",
+        id: "w308101_01",
         iconName: "308101_01_50401.png",
         name: "Everfulgor",
         weapon: "Staff",
@@ -2576,7 +2581,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308125_01",
+        id: "w308125_01",
         iconName: "308125_01_50401.png",
         name: "Chimeratech Procyon",
         weapon: "Staff",
@@ -2584,7 +2589,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308111_01",
+        id: "w308111_01",
         iconName: "308111_01_50401.png",
         name: "Heavensneer",
         weapon: "Staff",
@@ -2592,7 +2597,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308014_01",
+        id: "w308014_01",
         iconName: "308014_01_50401.png",
         name: "Light of Judgment",
         weapon: "Staff",
@@ -2600,7 +2605,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309024_01",
+        id: "w309024_01",
         iconName: "309024_01_50401.png",
         name: "Thundertrigger",
         weapon: "Manacaster",
@@ -2608,7 +2613,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309019_01",
+        id: "w309019_01",
         iconName: "309019_01_50401.png",
         name: "Chimeratech Al Nasr",
         weapon: "Manacaster",
@@ -2616,7 +2621,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309014_01",
+        id: "w309014_01",
         iconName: "309014_01_50401.png",
         name: "Chanzelian Caster Mk. 62",
         weapon: "Manacaster",
@@ -2624,7 +2629,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309010_01",
+        id: "w309010_01",
         iconName: "309010_01_59901.png",
         name: "Chanzelian Caster Mk.73",
         weapon: "Manacaster",
@@ -2632,7 +2637,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309009_01",
+        id: "w309009_01",
         iconName: "309009_01_59901.png",
         name: "Chanzelian Caster",
         weapon: "Manacaster",
@@ -2640,7 +2645,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301106_01",
+        id: "w301106_01",
         iconName: "301106_01_50501.png",
         name: "Abyssbringer",
         weapon: "Sword",
@@ -2648,7 +2653,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301118_01",
+        id: "w301118_01",
         iconName: "301118_01_50501.png",
         name: "Prevailing Evil",
         weapon: "Sword",
@@ -2656,7 +2661,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301086_01",
+        id: "w301086_01",
         iconName: "301086_01_50501.png",
         name: "Virulent Shadowtail",
         weapon: "Sword",
@@ -2664,7 +2669,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301129_01",
+        id: "w301129_01",
         iconName: "301129_01_50501.png",
         name: "Stained Soulsword",
         weapon: "Sword",
@@ -2672,7 +2677,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301136_01",
+        id: "w301136_01",
         iconName: "301136_01_50501.png",
         name: "Chimeratech Nocturne",
         weapon: "Sword",
@@ -2680,7 +2685,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301123_01",
+        id: "w301123_01",
         iconName: "301123_01_50501.png",
         name: "Absolute Hex",
         weapon: "Sword",
@@ -2688,7 +2693,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301037_01",
+        id: "w301037_01",
         iconName: "301037_01_50501.png",
         name: "Dáinsleif",
         weapon: "Sword",
@@ -2696,7 +2701,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302097_01",
+        id: "w302097_01",
         iconName: "302097_01_50501.png",
         name: "Nightsky Ripper",
         weapon: "Blade",
@@ -2704,7 +2709,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302109_01",
+        id: "w302109_01",
         iconName: "302109_01_50501.png",
         name: "Hollow Nightmare",
         weapon: "Blade",
@@ -2712,7 +2717,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302081_01",
+        id: "w302081_01",
         iconName: "302081_01_50501.png",
         name: "Grim Direblade Yomotsu",
         weapon: "Blade",
@@ -2720,7 +2725,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302120_01",
+        id: "w302120_01",
         iconName: "302120_01_50501.png",
         name: "Blade of Fell Visions",
         weapon: "Blade",
@@ -2728,7 +2733,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302127_01",
+        id: "w302127_01",
         iconName: "302127_01_50501.png",
         name: "Chimeratech Requiem",
         weapon: "Blade",
@@ -2736,7 +2741,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302114_01",
+        id: "w302114_01",
         iconName: "302114_01_50501.png",
         name: "True Abyss",
         weapon: "Blade",
@@ -2744,7 +2749,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302028_01",
+        id: "w302028_01",
         iconName: "302028_01_50501.png",
         name: "Blackwing",
         weapon: "Blade",
@@ -2752,7 +2757,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303096_01",
+        id: "w303096_01",
         iconName: "303096_01_50501.png",
         name: "Death Seeker",
         weapon: "Dagger",
@@ -2760,7 +2765,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303108_01",
+        id: "w303108_01",
         iconName: "303108_01_50501.png",
         name: "Terrifying Claw",
         weapon: "Dagger",
@@ -2768,7 +2773,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303048_01",
+        id: "w303048_01",
         iconName: "303048_01_50501.png",
         name: "Soulstealer",
         weapon: "Dagger",
@@ -2776,7 +2781,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303119_01",
+        id: "w303119_01",
         iconName: "303119_01_50501.png",
         name: "Damnation Necrom",
         weapon: "Dagger",
@@ -2784,7 +2789,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303126_01",
+        id: "w303126_01",
         iconName: "303126_01_50501.png",
         name: "Chimeratech Rhapsody",
         weapon: "Dagger",
@@ -2792,7 +2797,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303113_01",
+        id: "w303113_01",
         iconName: "303113_01_50501.png",
         name: "Shaderuler's Maw",
         weapon: "Dagger",
@@ -2800,7 +2805,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303031_01",
+        id: "w303031_01",
         iconName: "303031_01_50501.png",
         name: "Honor Edge",
         weapon: "Dagger",
@@ -2808,7 +2813,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304095_01",
+        id: "w304095_01",
         iconName: "304095_01_50501.png",
         name: "Genocide Cleaver",
         weapon: "Axe",
@@ -2816,7 +2821,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304107_01",
+        id: "w304107_01",
         iconName: "304107_01_50501.png",
         name: "Shadowfang",
         weapon: "Axe",
@@ -2824,7 +2829,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304048_01",
+        id: "w304048_01",
         iconName: "304048_01_50501.png",
         name: "Indignation Crux",
         weapon: "Axe",
@@ -2832,7 +2837,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304118_01",
+        id: "w304118_01",
         iconName: "304118_01_50501.png",
         name: "Perdition's Crusher",
         weapon: "Axe",
@@ -2840,7 +2845,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304125_01",
+        id: "w304125_01",
         iconName: "304125_01_50501.png",
         name: "Chimeratech Fugue",
         weapon: "Axe",
@@ -2848,7 +2853,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304112_01",
+        id: "w304112_01",
         iconName: "304112_01_50501.png",
         name: "Shadowy Darkbite Axe",
         weapon: "Axe",
@@ -2856,7 +2861,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304014_01",
+        id: "w304014_01",
         iconName: "304014_01_50501.png",
         name: "Primordial Titan",
         weapon: "Axe",
@@ -2864,7 +2869,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305102_01",
+        id: "w305102_01",
         iconName: "305102_01_50501.png",
         name: "Final Eclipse",
         weapon: "Lance",
@@ -2872,7 +2877,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305114_01",
+        id: "w305114_01",
         iconName: "305114_01_50501.png",
         name: "Plaguepiercer",
         weapon: "Lance",
@@ -2880,7 +2885,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305055_01",
+        id: "w305055_01",
         iconName: "305055_01_50501.png",
         name: "Horrifying Beast",
         weapon: "Lance",
@@ -2888,7 +2893,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305125_01",
+        id: "w305125_01",
         iconName: "305125_01_50501.png",
         name: "Rakshasan Gloomlance",
         weapon: "Lance",
@@ -2896,7 +2901,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305132_01",
+        id: "w305132_01",
         iconName: "305132_01_50501.png",
         name: "Chimeratech Elegy",
         weapon: "Lance",
@@ -2904,7 +2909,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305119_01",
+        id: "w305119_01",
         iconName: "305119_01_50501.png",
         name: "Ebon Scourge Lance",
         weapon: "Lance",
@@ -2912,7 +2917,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305036_01",
+        id: "w305036_01",
         iconName: "305036_01_50501.png",
         name: "Mistilteinn",
         weapon: "Lance",
@@ -2920,7 +2925,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306095_01",
+        id: "w306095_01",
         iconName: "306095_01_50501.png",
         name: "Black Dahlia Bow",
         weapon: "Bow",
@@ -2928,7 +2933,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306107_01",
+        id: "w306107_01",
         iconName: "306107_01_50501.png",
         name: "Astral Cruelty",
         weapon: "Bow",
@@ -2936,7 +2941,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306078_01",
+        id: "w306078_01",
         iconName: "306078_01_50501.png",
         name: "Deathbinder Bow",
         weapon: "Bow",
@@ -2944,7 +2949,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306118_01",
+        id: "w306118_01",
         iconName: "306118_01_50501.png",
         name: "Dreadbringer Bow",
         weapon: "Bow",
@@ -2952,7 +2957,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306125_01",
+        id: "w306125_01",
         iconName: "306125_01_50501.png",
         name: "Chimeratech Concerto",
         weapon: "Bow",
@@ -2960,7 +2965,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306112_01",
+        id: "w306112_01",
         iconName: "306112_01_50501.png",
         name: "Hellish Prophecy",
         weapon: "Bow",
@@ -2968,7 +2973,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306014_01",
+        id: "w306014_01",
         iconName: "306014_01_50501.png",
         name: "Necro Arcus",
         weapon: "Bow",
@@ -2976,7 +2981,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307103_01",
+        id: "w307103_01",
         iconName: "307103_01_50501.png",
         name: "Dirge of Desperation",
         weapon: "Wand",
@@ -2984,7 +2989,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307115_01",
+        id: "w307115_01",
         iconName: "307115_01_50501.png",
         name: "Fateshaker",
         weapon: "Wand",
@@ -2992,7 +2997,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307052_01",
+        id: "w307052_01",
         iconName: "307052_01_50501.png",
         name: "Chaoswing",
         weapon: "Wand",
@@ -3000,7 +3005,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307126_01",
+        id: "w307126_01",
         iconName: "307126_01_50501.png",
         name: "Revenant of Corruption",
         weapon: "Wand",
@@ -3008,7 +3013,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307133_01",
+        id: "w307133_01",
         iconName: "307133_01_50501.png",
         name: "Chimeratech Oratorio",
         weapon: "Wand",
@@ -3016,7 +3021,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307120_01",
+        id: "w307120_01",
         iconName: "307120_01_50501.png",
         name: "Darkbinder",
         weapon: "Wand",
@@ -3024,7 +3029,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307035_01",
+        id: "w307035_01",
         iconName: "307035_01_50501.png",
         name: "Underworld Despair",
         weapon: "Wand",
@@ -3032,7 +3037,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308096_01",
+        id: "w308096_01",
         iconName: "308096_01_50501.png",
         name: "Aria of Lamentation",
         weapon: "Staff",
@@ -3040,7 +3045,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308108_01",
+        id: "w308108_01",
         iconName: "308108_01_50501.png",
         name: "Dominus of the Truedark",
         weapon: "Staff",
@@ -3048,7 +3053,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308077_01",
+        id: "w308077_01",
         iconName: "308077_01_50501.png",
         name: "Malevolence Staff",
         weapon: "Staff",
@@ -3056,7 +3061,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308119_01",
+        id: "w308119_01",
         iconName: "308119_01_50501.png",
         name: "Creeping Rancor",
         weapon: "Staff",
@@ -3064,7 +3069,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308126_01",
+        id: "w308126_01",
         iconName: "308126_01_50501.png",
         name: "Chimeratech Coda",
         weapon: "Staff",
@@ -3072,7 +3077,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308113_01",
+        id: "w308113_01",
         iconName: "308113_01_50501.png",
         name: "Dark Hunger",
         weapon: "Staff",
@@ -3080,7 +3085,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308015_01",
+        id: "w308015_01",
         iconName: "308015_01_50501.png",
         name: "Caduceus",
         weapon: "Staff",
@@ -3088,7 +3093,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301041_01",
+        id: "w301041_01",
         iconName: "301041_01_59901.png",
         name: "Hero's Sword",
         weapon: "Sword",
@@ -3096,7 +3101,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301042_01",
+        id: "w301042_01",
         iconName: "301042_01_59901.png",
         name: "Hauteclaire",
         weapon: "Sword",
@@ -3104,7 +3109,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301043_01",
+        id: "w301043_01",
         iconName: "301043_01_59901.png",
         name: "Gram",
         weapon: "Sword",
@@ -3112,7 +3117,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301046_01",
+        id: "w301046_01",
         iconName: "301046_01_59901.png",
         name: "Lucky Hanetsuki Paddle",
         weapon: "Sword",
@@ -3120,7 +3125,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301130_01",
+        id: "w301130_01",
         iconName: "301130_01_59901.png",
         name: "Mega Sword",
         weapon: "Sword",
@@ -3128,7 +3133,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301145_01",
+        id: "w301145_01",
         iconName: "301145_01_59901.png",
         name: "Triumphal Breamblade",
         weapon: "Sword",
@@ -3136,7 +3141,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301144_01",
+        id: "w301144_01",
         iconName: "301144_01_59901.png",
         name: "Fatalis Sword",
         weapon: "Sword",
@@ -3144,7 +3149,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w397001_01",
+        id: "w397001_01",
         iconName: "397001_01_59901.png",
         name: "Ascendant Edge",
         weapon: "Sword",
@@ -3152,7 +3157,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w399016_01",
+        id: "w399016_01",
         iconName: "399016_01_59901.png",
         name: "Princess Sword",
         weapon: "Sword",
@@ -3160,7 +3165,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302014_01",
+        id: "w302014_01",
         iconName: "302014_01_59901.png",
         name: "Dane's Favor",
         weapon: "Blade",
@@ -3168,7 +3173,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302033_01",
+        id: "w302033_01",
         iconName: "302033_01_59901.png",
         name: "Crimson Shade",
         weapon: "Blade",
@@ -3176,7 +3181,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302034_01",
+        id: "w302034_01",
         iconName: "302034_01_59901.png",
         name: "Souleater",
         weapon: "Blade",
@@ -3184,7 +3189,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302035_01",
+        id: "w302035_01",
         iconName: "302035_01_59901.png",
         name: "Villagelight",
         weapon: "Blade",
@@ -3192,7 +3197,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302121_01",
+        id: "w302121_01",
         iconName: "302121_01_59901.png",
         name: "Mega Blade",
         weapon: "Blade",
@@ -3200,7 +3205,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302136_01",
+        id: "w302136_01",
         iconName: "302136_01_59901.png",
         name: "Evilsbane Kadomatsu",
         weapon: "Blade",
@@ -3208,7 +3213,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302135_01",
+        id: "w302135_01",
         iconName: "302135_01_59901.png",
         name: "Fatalis Xiphos",
         weapon: "Blade",
@@ -3216,7 +3221,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302040_01",
+        id: "w302040_01",
         iconName: "302040_01_59901.png",
         name: "Sohaya no Tsurugi",
         weapon: "Blade",
@@ -3224,7 +3229,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303035_01",
+        id: "w303035_01",
         iconName: "303035_01_59901.png",
         name: "Kris Naga",
         weapon: "Dagger",
@@ -3232,7 +3237,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303014_01",
+        id: "w303014_01",
         iconName: "303014_01_59901.png",
         name: "Treasure of the Iron Rose",
         weapon: "Dagger",
@@ -3240,7 +3245,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303036_01",
+        id: "w303036_01",
         iconName: "303036_01_59901.png",
         name: "Hedgehog",
         weapon: "Dagger",
@@ -3248,7 +3253,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303120_01",
+        id: "w303120_01",
         iconName: "303120_01_59901.png",
         name: "Mega Dagger",
         weapon: "Dagger",
@@ -3256,7 +3261,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303135_01",
+        id: "w303135_01",
         iconName: "303135_01_59901.png",
         name: "The Big Cheese",
         weapon: "Dagger",
@@ -3264,7 +3269,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303134_01",
+        id: "w303134_01",
         iconName: "303134_01_59901.png",
         name: "Black Dragon Blade",
         weapon: "Dagger",
@@ -3272,7 +3277,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304012_01",
+        id: "w304012_01",
         iconName: "304012_01_59901.png",
         name: "Victory Axe",
         weapon: "Axe",
@@ -3280,7 +3285,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304035_01",
+        id: "w304035_01",
         iconName: "304035_01_59901.png",
         name: "Executioner Axe Strafe",
         weapon: "Axe",
@@ -3288,7 +3293,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304036_01",
+        id: "w304036_01",
         iconName: "304036_01_59901.png",
         name: "Halfling's Broadaxe",
         weapon: "Axe",
@@ -3296,7 +3301,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304119_01",
+        id: "w304119_01",
         iconName: "304119_01_59901.png",
         name: "Mega Axe",
         weapon: "Axe",
@@ -3304,7 +3309,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304133_01",
+        id: "w304133_01",
         iconName: "304133_01_59901.png",
         name: "Black Dragon Axe",
         weapon: "Axe",
@@ -3312,7 +3317,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305015_01",
+        id: "w305015_01",
         iconName: "305015_01_59901.png",
         name: "Pactspear",
         weapon: "Lance",
@@ -3320,7 +3325,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305042_01",
+        id: "w305042_01",
         iconName: "305042_01_59901.png",
         name: "Compass Needle",
         weapon: "Lance",
@@ -3328,7 +3333,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305043_01",
+        id: "w305043_01",
         iconName: "305043_01_59901.png",
         name: "Gae Bolg",
         weapon: "Lance",
@@ -3336,7 +3341,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305126_01",
+        id: "w305126_01",
         iconName: "305126_01_59901.png",
         name: "Mega Lance",
         weapon: "Lance",
@@ -3344,7 +3349,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305141_01",
+        id: "w305141_01",
         iconName: "305141_01_59901.png",
         name: "Black Dragon Spear",
         weapon: "Lance",
@@ -3352,7 +3357,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306015_01",
+        id: "w306015_01",
         iconName: "306015_01_59901.png",
         name: "Nitralica's Koto",
         weapon: "Bow",
@@ -3360,7 +3365,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306034_01",
+        id: "w306034_01",
         iconName: "306034_01_59901.png",
         name: "Accelerator",
         weapon: "Bow",
@@ -3368,7 +3373,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306035_01",
+        id: "w306035_01",
         iconName: "306035_01_59901.png",
         name: "Starchaser",
         weapon: "Bow",
@@ -3376,7 +3381,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306036_01",
+        id: "w306036_01",
         iconName: "306036_01_59901.png",
         name: "Chimera's Guilt",
         weapon: "Bow",
@@ -3384,7 +3389,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306119_01",
+        id: "w306119_01",
         iconName: "306119_01_59901.png",
         name: "Mega Bow",
         weapon: "Bow",
@@ -3392,7 +3397,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306133_01",
+        id: "w306133_01",
         iconName: "306133_01_59901.png",
         name: "Black Dragon Bow",
         weapon: "Bow",
@@ -3400,7 +3405,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307031_01",
+        id: "w307031_01",
         iconName: "307031_01_59901.png",
         name: "Wand of the Torrent",
         weapon: "Wand",
@@ -3408,7 +3413,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307040_01",
+        id: "w307040_01",
         iconName: "307040_01_59901.png",
         name: "Welkin Wand",
         weapon: "Wand",
@@ -3416,7 +3421,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307041_01",
+        id: "w307041_01",
         iconName: "307041_01_59901.png",
         name: "Chaotic Horizon",
         weapon: "Wand",
@@ -3424,7 +3429,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307127_01",
+        id: "w307127_01",
         iconName: "307127_01_59901.png",
         name: "Mega Wand",
         weapon: "Wand",
@@ -3432,7 +3437,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307142_01",
+        id: "w307142_01",
         iconName: "307142_01_59901.png",
         name: "Catspaw Rod",
         weapon: "Wand",
@@ -3440,7 +3445,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307141_01",
+        id: "w307141_01",
         iconName: "307141_01_59901.png",
         name: "Fatalis Rhabdos",
         weapon: "Wand",
@@ -3448,7 +3453,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308030_01",
+        id: "w308030_01",
         iconName: "308030_01_59901.png",
         name: "Cane of Soul's Repose",
         weapon: "Staff",
@@ -3456,7 +3461,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308038_01",
+        id: "w308038_01",
         iconName: "308038_01_59901.png",
         name: "Rainbow Cane",
         weapon: "Staff",
@@ -3464,7 +3469,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308039_01",
+        id: "w308039_01",
         iconName: "308039_01_59901.png",
         name: "Otherworldly Bough",
         weapon: "Staff",
@@ -3472,7 +3477,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308120_01",
+        id: "w308120_01",
         iconName: "308120_01_59901.png",
         name: "Mega Staff",
         weapon: "Staff",
@@ -3480,7 +3485,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308134_01",
+        id: "w308134_01",
         iconName: "308134_01_59901.png",
         name: "Black Dragon Staff",
         weapon: "Staff",
@@ -3488,7 +3493,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301053_01",
+        id: "w301053_01",
         iconName: "301053_01_40101.png",
         name: "Molten Ingot",
         weapon: "Sword",
@@ -3496,7 +3501,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301060_01",
+        id: "w301060_01",
         iconName: "301060_01_40101.png",
         name: "Crimson Pyre",
         weapon: "Sword",
@@ -3504,7 +3509,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301014_01",
+        id: "w301014_01",
         iconName: "301014_01_40101.png",
         name: "Crimson Cry",
         weapon: "Sword",
@@ -3512,7 +3517,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302042_01",
+        id: "w302042_01",
         iconName: "302042_01_40101.png",
         name: "Blazing Steel",
         weapon: "Blade",
@@ -3520,7 +3525,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302071_01",
+        id: "w302071_01",
         iconName: "302071_01_40101.png",
         name: "Balefire Votive",
         weapon: "Blade",
@@ -3528,7 +3533,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302075_01",
+        id: "w302075_01",
         iconName: "302075_01_40101.png",
         name: "Starcutter",
         weapon: "Blade",
@@ -3536,7 +3541,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302015_01",
+        id: "w302015_01",
         iconName: "302015_01_40101.png",
         name: "Flametongue",
         weapon: "Blade",
@@ -3544,7 +3549,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303042_01",
+        id: "w303042_01",
         iconName: "303042_01_40101.png",
         name: "Sizzling Enoki Dagger",
         weapon: "Dagger",
@@ -3552,7 +3557,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303045_01",
+        id: "w303045_01",
         iconName: "303045_01_40101.png",
         name: "Big Boy of Justice",
         weapon: "Dagger",
@@ -3560,7 +3565,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303074_01",
+        id: "w303074_01",
         iconName: "303074_01_40101.png",
         name: "Conflagrant Ruby Dagger",
         weapon: "Dagger",
@@ -3568,7 +3573,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303015_01",
+        id: "w303015_01",
         iconName: "303015_01_40101.png",
         name: "Scarlet Talon",
         weapon: "Dagger",
@@ -3576,7 +3581,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304060_01",
+        id: "w304060_01",
         iconName: "304060_01_40101.png",
         name: "Inferno Arms",
         weapon: "Axe",
@@ -3584,7 +3589,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304051_01",
+        id: "w304051_01",
         iconName: "304051_01_40101.png",
         name: "Immolation Relic",
         weapon: "Axe",
@@ -3592,7 +3597,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304010_01",
+        id: "w304010_01",
         iconName: "304010_01_40101.png",
         name: "Crimsonclaw",
         weapon: "Axe",
@@ -3600,7 +3605,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305047_01",
+        id: "w305047_01",
         iconName: "305047_01_40101.png",
         name: "Triggerspore Lance",
         weapon: "Lance",
@@ -3608,7 +3613,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305080_01",
+        id: "w305080_01",
         iconName: "305080_01_40101.png",
         name: "Spiritflame Spear",
         weapon: "Lance",
@@ -3616,7 +3621,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305059_01",
+        id: "w305059_01",
         iconName: "305059_01_40101.png",
         name: "Burning Fury Lance",
         weapon: "Lance",
@@ -3624,7 +3629,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305031_01",
+        id: "w305031_01",
         iconName: "305031_01_40101.png",
         name: "Flameserpent",
         weapon: "Lance",
@@ -3632,7 +3637,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306041_01",
+        id: "w306041_01",
         iconName: "306041_01_40101.png",
         name: "Blazefungus",
         weapon: "Bow",
@@ -3640,7 +3645,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306066_01",
+        id: "w306066_01",
         iconName: "306066_01_40101.png",
         name: "Wispfire Bow",
         weapon: "Bow",
@@ -3648,7 +3653,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306049_01",
+        id: "w306049_01",
         iconName: "306049_01_40101.png",
         name: "Scorchflame Bow",
         weapon: "Bow",
@@ -3656,7 +3661,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306028_01",
+        id: "w306028_01",
         iconName: "306028_01_40101.png",
         name: "Armored Inferno",
         weapon: "Bow",
@@ -3664,7 +3669,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307049_01",
+        id: "w307049_01",
         iconName: "307049_01_40101.png",
         name: "The Second Wail",
         weapon: "Wand",
@@ -3672,7 +3677,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307062_01",
+        id: "w307062_01",
         iconName: "307062_01_40101.png",
         name: "Volcano Cane",
         weapon: "Wand",
@@ -3680,7 +3685,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307072_01",
+        id: "w307072_01",
         iconName: "307072_01_40101.png",
         name: "Brightshimmer Wand",
         weapon: "Wand",
@@ -3688,7 +3693,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307016_01",
+        id: "w307016_01",
         iconName: "307016_01_40101.png",
         name: "Firefiend's Howl",
         weapon: "Wand",
@@ -3696,7 +3701,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308041_01",
+        id: "w308041_01",
         iconName: "308041_01_40101.png",
         name: "Ashchant",
         weapon: "Staff",
@@ -3704,7 +3709,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308021_01",
+        id: "w308021_01",
         iconName: "308021_01_40101.png",
         name: "Ark Voyager",
         weapon: "Staff",
@@ -3712,7 +3717,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w309004_01",
+        id: "w309004_01",
         iconName: "309004_01_40101.png",
         name: "Antique Blaze",
         weapon: "Manacaster",
@@ -3720,7 +3725,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301061_01",
+        id: "w301061_01",
         iconName: "301061_01_40201.png",
         name: "Fervent Frost",
         weapon: "Sword",
@@ -3728,7 +3733,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301063_01",
+        id: "w301063_01",
         iconName: "301063_01_40201.png",
         name: "Blizzard Ingot",
         weapon: "Sword",
@@ -3736,7 +3741,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301009_01",
+        id: "w301009_01",
         iconName: "301009_01_40201.png",
         name: "Mercurius",
         weapon: "Sword",
@@ -3744,7 +3749,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302049_01",
+        id: "w302049_01",
         iconName: "302049_01_40201.png",
         name: "Obsidian Waterfall",
         weapon: "Blade",
@@ -3752,7 +3757,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302069_01",
+        id: "w302069_01",
         iconName: "302069_01_40201.png",
         name: "Spumecutter",
         weapon: "Blade",
@@ -3760,7 +3765,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302072_01",
+        id: "w302072_01",
         iconName: "302072_01_40201.png",
         name: "Crystalline Quietude",
         weapon: "Blade",
@@ -3768,7 +3773,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302022_01",
+        id: "w302022_01",
         iconName: "302022_01_40201.png",
         name: "Sousui",
         weapon: "Blade",
@@ -3776,7 +3781,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303040_01",
+        id: "w303040_01",
         iconName: "303040_01_40201.png",
         name: "Chilly Chanterelle Dagger",
         weapon: "Dagger",
@@ -3784,7 +3789,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303052_01",
+        id: "w303052_01",
         iconName: "303052_01_40201.png",
         name: "Big Boy of Prudence",
         weapon: "Dagger",
@@ -3792,7 +3797,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303069_01",
+        id: "w303069_01",
         iconName: "303069_01_40201.png",
         name: "Aqueous Sapphire Dagger",
         weapon: "Dagger",
@@ -3800,7 +3805,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303018_01",
+        id: "w303018_01",
         iconName: "303018_01_40201.png",
         name: "Ultramarine Knife",
         weapon: "Dagger",
@@ -3808,7 +3813,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303038_01",
+        id: "w303038_01",
         iconName: "303038_01_40201.png",
         name: "Wishing Knife",
         weapon: "Dagger",
@@ -3816,7 +3821,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304052_01",
+        id: "w304052_01",
         iconName: "304052_01_40201.png",
         name: "Blizzard Relic",
         weapon: "Axe",
@@ -3824,7 +3829,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304061_01",
+        id: "w304061_01",
         iconName: "304061_01_40201.png",
         name: "Frozen Arms",
         weapon: "Axe",
@@ -3832,7 +3837,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304011_01",
+        id: "w304011_01",
         iconName: "304011_01_40201.png",
         name: "Aqua Labrys",
         weapon: "Axe",
@@ -3840,7 +3845,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305045_01",
+        id: "w305045_01",
         iconName: "305045_01_40201.png",
         name: "Shatterspore Lance",
         weapon: "Lance",
@@ -3848,7 +3853,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305060_01",
+        id: "w305060_01",
         iconName: "305060_01_40201.png",
         name: "Callous Lance",
         weapon: "Lance",
@@ -3856,7 +3861,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305081_01",
+        id: "w305081_01",
         iconName: "305081_01_40201.png",
         name: "Gelid Grace",
         weapon: "Lance",
@@ -3864,7 +3869,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305016_01",
+        id: "w305016_01",
         iconName: "305016_01_40201.png",
         name: "Abyssal Prize",
         weapon: "Lance",
@@ -3872,7 +3877,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306039_01",
+        id: "w306039_01",
         iconName: "306039_01_40201.png",
         name: "Freezefungus",
         weapon: "Bow",
@@ -3880,7 +3885,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306050_01",
+        id: "w306050_01",
         iconName: "306050_01_40201.png",
         name: "Frostbillow",
         weapon: "Bow",
@@ -3888,7 +3893,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306067_01",
+        id: "w306067_01",
         iconName: "306067_01_40201.png",
         name: "Wavefury Bow",
         weapon: "Bow",
@@ -3896,7 +3901,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306010_01",
+        id: "w306010_01",
         iconName: "306010_01_40201.png",
         name: "Frostslinger Bow",
         weapon: "Bow",
@@ -3904,7 +3909,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307047_01",
+        id: "w307047_01",
         iconName: "307047_01_40201.png",
         name: "The Second Scream",
         weapon: "Wand",
@@ -3912,7 +3917,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307063_01",
+        id: "w307063_01",
         iconName: "307063_01_40201.png",
         name: "Frost Cane",
         weapon: "Wand",
@@ -3920,7 +3925,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307073_01",
+        id: "w307073_01",
         iconName: "307073_01_40201.png",
         name: "Lonesome Echodrip",
         weapon: "Wand",
@@ -3928,7 +3933,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307036_01",
+        id: "w307036_01",
         iconName: "307036_01_40201.png",
         name: "Rod of Tears",
         weapon: "Wand",
@@ -3936,7 +3941,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307044_01",
+        id: "w307044_01",
         iconName: "307044_01_40201.png",
         name: "Ringing Wand",
         weapon: "Wand",
@@ -3944,7 +3949,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308048_01",
+        id: "w308048_01",
         iconName: "308048_01_40201.png",
         name: "Seachant",
         weapon: "Staff",
@@ -3952,7 +3957,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308022_01",
+        id: "w308022_01",
         iconName: "308022_01_40201.png",
         name: "Marine Staff",
         weapon: "Staff",
@@ -3960,7 +3965,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w309005_01",
+        id: "w309005_01",
         iconName: "309005_01_40201.png",
         name: "Antique Flow",
         weapon: "Manacaster",
@@ -3968,7 +3973,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301048_01",
+        id: "w301048_01",
         iconName: "301048_01_40301.png",
         name: "Tempest Ravager",
         weapon: "Sword",
@@ -3976,7 +3981,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301064_01",
+        id: "w301064_01",
         iconName: "301064_01_40301.png",
         name: "Tornado Ingot",
         weapon: "Sword",
@@ -3984,7 +3989,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301034_01",
+        id: "w301034_01",
         iconName: "301034_01_40301.png",
         name: "Wingblade",
         weapon: "Sword",
@@ -3992,7 +3997,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302050_01",
+        id: "w302050_01",
         iconName: "302050_01_40301.png",
         name: "Verdurewind Cutter",
         weapon: "Blade",
@@ -4000,7 +4005,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302083_01",
+        id: "w302083_01",
         iconName: "302083_01_40301.png",
         name: "Skycutter",
         weapon: "Blade",
@@ -4008,7 +4013,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302073_01",
+        id: "w302073_01",
         iconName: "302073_01_40301.png",
         name: "Ignorant Bite",
         weapon: "Blade",
@@ -4016,7 +4021,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302011_01",
+        id: "w302011_01",
         iconName: "302011_01_40301.png",
         name: "Tempest Blade",
         weapon: "Blade",
@@ -4024,7 +4029,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303050_01",
+        id: "w303050_01",
         iconName: "303050_01_40301.png",
         name: "Stormy Shiitake Dagger",
         weapon: "Dagger",
@@ -4032,7 +4037,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303053_01",
+        id: "w303053_01",
         iconName: "303053_01_40301.png",
         name: "Big Boy of Fortitude",
         weapon: "Dagger",
@@ -4040,7 +4045,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303078_01",
+        id: "w303078_01",
         iconName: "303078_01_40301.png",
         name: "Zephyric Emerald Dagger",
         weapon: "Dagger",
@@ -4048,7 +4053,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303029_01",
+        id: "w303029_01",
         iconName: "303029_01_40301.png",
         name: "Queensflight",
         weapon: "Dagger",
@@ -4056,7 +4061,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304038_01",
+        id: "w304038_01",
         iconName: "304038_01_40301.png",
         name: "Tempest's Relic",
         weapon: "Axe",
@@ -4064,7 +4069,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304071_01",
+        id: "w304071_01",
         iconName: "304071_01_40301.png",
         name: "Pulsing Arms",
         weapon: "Axe",
@@ -4072,7 +4077,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304016_01",
+        id: "w304016_01",
         iconName: "304016_01_40301.png",
         name: "Winged Destruction",
         weapon: "Axe",
@@ -4080,7 +4085,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305050_01",
+        id: "w305050_01",
         iconName: "305050_01_40301.png",
         name: "Melancholy Lance",
         weapon: "Lance",
@@ -4088,7 +4093,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305057_01",
+        id: "w305057_01",
         iconName: "305057_01_40301.png",
         name: "Tornadospore Lance",
         weapon: "Lance",
@@ -4096,7 +4101,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305082_01",
+        id: "w305082_01",
         iconName: "305082_01_40301.png",
         name: "Immortal Wind",
         weapon: "Lance",
@@ -4104,7 +4109,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305011_01",
+        id: "w305011_01",
         iconName: "305011_01_40301.png",
         name: "Tempest Lance",
         weapon: "Lance",
@@ -4112,7 +4117,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306044_01",
+        id: "w306044_01",
         iconName: "306044_01_40301.png",
         name: "Windpiercer",
         weapon: "Bow",
@@ -4120,7 +4125,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306048_01",
+        id: "w306048_01",
         iconName: "306048_01_40301.png",
         name: "Stormfungus",
         weapon: "Bow",
@@ -4128,7 +4133,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306068_01",
+        id: "w306068_01",
         iconName: "306068_01_40301.png",
         name: "Ill Wind",
         weapon: "Bow",
@@ -4136,7 +4141,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306008_01",
+        id: "w306008_01",
         iconName: "306008_01_40301.png",
         name: "Epidemic",
         weapon: "Bow",
@@ -4144,7 +4149,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307054_01",
+        id: "w307054_01",
         iconName: "307054_01_40301.png",
         name: "The Fury",
         weapon: "Wand",
@@ -4152,7 +4157,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307074_01",
+        id: "w307074_01",
         iconName: "307074_01_40301.png",
         name: "Stormsurge Wand",
         weapon: "Wand",
@@ -4160,7 +4165,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307080_01",
+        id: "w307080_01",
         iconName: "307080_01_40301.png",
         name: "Storm Cane",
         weapon: "Wand",
@@ -4168,7 +4173,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307018_01",
+        id: "w307018_01",
         iconName: "307018_01_40301.png",
         name: "Tempest Wand",
         weapon: "Wand",
@@ -4176,7 +4181,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308049_01",
+        id: "w308049_01",
         iconName: "308049_01_40301.png",
         name: "Stormchant",
         weapon: "Staff",
@@ -4184,7 +4189,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308033_01",
+        id: "w308033_01",
         iconName: "308033_01_40301.png",
         name: "Windeater Staff",
         weapon: "Staff",
@@ -4192,7 +4197,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w309006_01",
+        id: "w309006_01",
         iconName: "309006_01_40301.png",
         name: "Antique Gale",
         weapon: "Manacaster",
@@ -4200,7 +4205,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301065_01",
+        id: "w301065_01",
         iconName: "301065_01_40401.png",
         name: "Plasma Ingot",
         weapon: "Sword",
@@ -4208,7 +4213,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301062_01",
+        id: "w301062_01",
         iconName: "301062_01_40401.png",
         name: "Abandoned Roar",
         weapon: "Sword",
@@ -4216,7 +4221,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301036_01",
+        id: "w301036_01",
         iconName: "301036_01_40401.png",
         name: "Astral Edge",
         weapon: "Sword",
@@ -4224,7 +4229,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302051_01",
+        id: "w302051_01",
         iconName: "302051_01_40401.png",
         name: "Obsidian Scintillation",
         weapon: "Blade",
@@ -4232,7 +4237,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302070_01",
+        id: "w302070_01",
         iconName: "302070_01_40401.png",
         name: "Glorycutter",
         weapon: "Blade",
@@ -4240,7 +4245,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302074_01",
+        id: "w302074_01",
         iconName: "302074_01_40401.png",
         name: "Faerielight Flash",
         weapon: "Blade",
@@ -4248,7 +4253,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302026_01",
+        id: "w302026_01",
         iconName: "302026_01_40401.png",
         name: "Thunderfang",
         weapon: "Blade",
@@ -4256,7 +4261,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303054_01",
+        id: "w303054_01",
         iconName: "303054_01_40401.png",
         name: "Big Boy of Temperance",
         weapon: "Dagger",
@@ -4264,7 +4269,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303062_01",
+        id: "w303062_01",
         iconName: "303062_01_40401.png",
         name: "Luminous Morel Dagger",
         weapon: "Dagger",
@@ -4272,7 +4277,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303070_01",
+        id: "w303070_01",
         iconName: "303070_01_40401.png",
         name: "Lucent Opal Dagger",
         weapon: "Dagger",
@@ -4280,7 +4285,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303017_01",
+        id: "w303017_01",
         iconName: "303017_01_40401.png",
         name: "Nightbreaker",
         weapon: "Dagger",
@@ -4288,7 +4293,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304053_01",
+        id: "w304053_01",
         iconName: "304053_01_40401.png",
         name: "Banished Relic",
         weapon: "Axe",
@@ -4296,7 +4301,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304062_01",
+        id: "w304062_01",
         iconName: "304062_01_40401.png",
         name: "Crackling Arms",
         weapon: "Axe",
@@ -4304,7 +4309,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304015_01",
+        id: "w304015_01",
         iconName: "304015_01_40401.png",
         name: "Shining Axe",
         weapon: "Axe",
@@ -4312,7 +4317,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305061_01",
+        id: "w305061_01",
         iconName: "305061_01_40401.png",
         name: "Lonesome Wish",
         weapon: "Lance",
@@ -4320,7 +4325,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305070_01",
+        id: "w305070_01",
         iconName: "305070_01_40401.png",
         name: "Shinespore Lance",
         weapon: "Lance",
@@ -4328,7 +4333,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305083_01",
+        id: "w305083_01",
         iconName: "305083_01_40401.png",
         name: "Highbright Grimspear",
         weapon: "Lance",
@@ -4336,7 +4341,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305012_01",
+        id: "w305012_01",
         iconName: "305012_01_40401.png",
         name: "Thunderbolt",
         weapon: "Lance",
@@ -4344,7 +4349,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306051_01",
+        id: "w306051_01",
         iconName: "306051_01_40401.png",
         name: "Heaven's Bouquet",
         weapon: "Bow",
@@ -4352,7 +4357,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306054_01",
+        id: "w306054_01",
         iconName: "306054_01_40401.png",
         name: "Glowfungus",
         weapon: "Bow",
@@ -4360,7 +4365,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306069_01",
+        id: "w306069_01",
         iconName: "306069_01_40401.png",
         name: "Lightshear Bow",
         weapon: "Bow",
@@ -4368,7 +4373,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306037_01",
+        id: "w306037_01",
         iconName: "306037_01_40401.png",
         name: "Holy Bow",
         weapon: "Bow",
@@ -4376,7 +4381,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307059_01",
+        id: "w307059_01",
         iconName: "307059_01_40401.png",
         name: "The Madness",
         weapon: "Wand",
@@ -4384,7 +4389,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307064_01",
+        id: "w307064_01",
         iconName: "307064_01_40401.png",
         name: "Rainbow Cane",
         weapon: "Wand",
@@ -4392,7 +4397,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307075_01",
+        id: "w307075_01",
         iconName: "307075_01_40401.png",
         name: "Dazzling Ray of Hope",
         weapon: "Wand",
@@ -4400,7 +4405,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307010_01",
+        id: "w307010_01",
         iconName: "307010_01_40401.png",
         name: "Conductor Rod",
         weapon: "Wand",
@@ -4408,7 +4413,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308050_01",
+        id: "w308050_01",
         iconName: "308050_01_40401.png",
         name: "Luminchant",
         weapon: "Staff",
@@ -4416,7 +4421,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308018_01",
+        id: "w308018_01",
         iconName: "308018_01_40401.png",
         name: "Tonitrus",
         weapon: "Staff",
@@ -4424,7 +4429,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309007_01",
+        id: "w309007_01",
         iconName: "309007_01_40401.png",
         name: "Antique Ray",
         weapon: "Manacaster",
@@ -4432,7 +4437,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309003_01",
+        id: "w309003_01",
         iconName: "309003_01_49901.png",
         name: "Antique Manacaster Mk. 2",
         weapon: "Manacaster",
@@ -4440,7 +4445,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w309002_01",
+        id: "w309002_01",
         iconName: "309002_01_49901.png",
         name: "Antique Manacaster",
         weapon: "Manacaster",
@@ -4448,7 +4453,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301050_01",
+        id: "w301050_01",
         iconName: "301050_01_40501.png",
         name: "Doomfang",
         weapon: "Sword",
@@ -4456,7 +4461,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301066_01",
+        id: "w301066_01",
         iconName: "301066_01_40501.png",
         name: "Darkness Ingot",
         weapon: "Sword",
@@ -4464,7 +4469,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301011_01",
+        id: "w301011_01",
         iconName: "301011_01_40501.png",
         name: "Dark Dementia",
         weapon: "Sword",
@@ -4472,7 +4477,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302054_01",
+        id: "w302054_01",
         iconName: "302054_01_40501.png",
         name: "Unwelcome Meeting",
         weapon: "Blade",
@@ -4480,7 +4485,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302082_01",
+        id: "w302082_01",
         iconName: "302082_01_40501.png",
         name: "Gloomcutter",
         weapon: "Blade",
@@ -4488,7 +4493,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302052_01",
+        id: "w302052_01",
         iconName: "302052_01_40501.png",
         name: "Dreadthirst",
         weapon: "Blade",
@@ -4496,7 +4501,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302029_01",
+        id: "w302029_01",
         iconName: "302029_01_40501.png",
         name: "Ghizlam's Darkblade",
         weapon: "Blade",
@@ -4504,7 +4509,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303077_01",
+        id: "w303077_01",
         iconName: "303077_01_40501.png",
         name: "Tenebrous Jet Dagger",
         weapon: "Dagger",
@@ -4512,7 +4517,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303055_01",
+        id: "w303055_01",
         iconName: "303055_01_40501.png",
         name: "Big Boy of Requiem",
         weapon: "Dagger",
@@ -4520,7 +4525,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303063_01",
+        id: "w303063_01",
         iconName: "303063_01_40501.png",
         name: "Sinister Skullcap Dagger",
         weapon: "Dagger",
@@ -4528,7 +4533,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303011_01",
+        id: "w303011_01",
         iconName: "303011_01_40501.png",
         name: "Dark Sacrifice",
         weapon: "Dagger",
@@ -4536,7 +4541,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304040_01",
+        id: "w304040_01",
         iconName: "304040_01_40501.png",
         name: "Regretful Relic",
         weapon: "Axe",
@@ -4544,7 +4549,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304072_01",
+        id: "w304072_01",
         iconName: "304072_01_40501.png",
         name: "Punishing Arms",
         weapon: "Axe",
@@ -4552,7 +4557,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304030_01",
+        id: "w304030_01",
         iconName: "304030_01_40501.png",
         name: "Traitor's Despair",
         weapon: "Axe",
@@ -4560,7 +4565,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305052_01",
+        id: "w305052_01",
         iconName: "305052_01_40501.png",
         name: "Lance of Nightmares",
         weapon: "Lance",
@@ -4568,7 +4573,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305062_01",
+        id: "w305062_01",
         iconName: "305062_01_40501.png",
         name: "Spear of Tragedy",
         weapon: "Lance",
@@ -4576,7 +4581,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305071_01",
+        id: "w305071_01",
         iconName: "305071_01_40501.png",
         name: "Sablespore Lance",
         weapon: "Lance",
@@ -4584,7 +4589,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305035_01",
+        id: "w305035_01",
         iconName: "305035_01_40501.png",
         name: "Hellish Lance",
         weapon: "Lance",
@@ -4592,7 +4597,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306046_01",
+        id: "w306046_01",
         iconName: "306046_01_40501.png",
         name: "Seductive Bow",
         weapon: "Bow",
@@ -4600,7 +4605,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306052_01",
+        id: "w306052_01",
         iconName: "306052_01_40501.png",
         name: "Howlshadow",
         weapon: "Bow",
@@ -4608,7 +4613,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306055_01",
+        id: "w306055_01",
         iconName: "306055_01_40501.png",
         name: "Duskfungus",
         weapon: "Bow",
@@ -4616,7 +4621,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306016_01",
+        id: "w306016_01",
         iconName: "306016_01_40501.png",
         name: "Macabre Malediction",
         weapon: "Bow",
@@ -4624,7 +4629,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307056_01",
+        id: "w307056_01",
         iconName: "307056_01_40501.png",
         name: "Darkheart",
         weapon: "Wand",
@@ -4632,7 +4637,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307081_01",
+        id: "w307081_01",
         iconName: "307081_01_40501.png",
         name: "Abyssal Cane",
         weapon: "Wand",
@@ -4640,7 +4645,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307060_01",
+        id: "w307060_01",
         iconName: "307060_01_40501.png",
         name: "The Lamentation",
         weapon: "Wand",
@@ -4648,7 +4653,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307011_01",
+        id: "w307011_01",
         iconName: "307011_01_40501.png",
         name: "Accursed Vare",
         weapon: "Wand",
@@ -4656,7 +4661,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308051_01",
+        id: "w308051_01",
         iconName: "308051_01_40501.png",
         name: "Ebonchant",
         weapon: "Staff",
@@ -4664,7 +4669,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308019_01",
+        id: "w308019_01",
         iconName: "308019_01_40501.png",
         name: "Sanity's Bane",
         weapon: "Staff",
@@ -4672,7 +4677,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301055_01",
+        id: "w301055_01",
         iconName: "301055_01_49901.png",
         name: "Wind Apogee",
         weapon: "Sword",
@@ -4680,7 +4685,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301076_01",
+        id: "w301076_01",
         iconName: "301076_01_49901.png",
         name: "Judge of Souls",
         weapon: "Sword",
@@ -4688,7 +4693,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301095_01",
+        id: "w301095_01",
         iconName: "301095_01_49901.png",
         name: "Seascale",
         weapon: "Sword",
@@ -4696,7 +4701,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301101_01",
+        id: "w301101_01",
         iconName: "301101_01_49901.png",
         name: "Gracebringer",
         weapon: "Sword",
@@ -4704,7 +4709,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301107_01",
+        id: "w301107_01",
         iconName: "301107_01_49901.png",
         name: "Cryptid Sword",
         weapon: "Sword",
@@ -4712,7 +4717,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301113_01",
+        id: "w301113_01",
         iconName: "301113_01_49901.png",
         name: "Scorn Bringer",
         weapon: "Sword",
@@ -4720,7 +4725,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301072_01",
+        id: "w301072_01",
         iconName: "301072_01_49901.png",
         name: "Fiercetail",
         weapon: "Sword",
@@ -4728,7 +4733,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301124_01",
+        id: "w301124_01",
         iconName: "301124_01_49901.png",
         name: "Soulfeeder Sword",
         weapon: "Sword",
@@ -4736,7 +4741,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301040_01",
+        id: "w301040_01",
         iconName: "301040_01_49901.png",
         name: "Knights' Grace",
         weapon: "Sword",
@@ -4744,7 +4749,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301031_01",
+        id: "w301031_01",
         iconName: "301031_01_49901.png",
         name: "Blade of Glory",
         weapon: "Sword",
@@ -4752,7 +4757,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301012_01",
+        id: "w301012_01",
         iconName: "301012_01_49901.png",
         name: "Gilda Sword",
         weapon: "Sword",
@@ -4760,7 +4765,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302044_01",
+        id: "w302044_01",
         iconName: "302044_01_49901.png",
         name: "Bladewing",
         weapon: "Blade",
@@ -4768,7 +4773,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302056_01",
+        id: "w302056_01",
         iconName: "302056_01_49901.png",
         name: "Wildhaze",
         weapon: "Blade",
@@ -4776,7 +4781,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302086_01",
+        id: "w302086_01",
         iconName: "302086_01_49901.png",
         name: "Flash of the Hollow",
         weapon: "Blade",
@@ -4784,7 +4789,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302092_01",
+        id: "w302092_01",
         iconName: "302092_01_49901.png",
         name: "Mist Blade",
         weapon: "Blade",
@@ -4792,7 +4797,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302098_01",
+        id: "w302098_01",
         iconName: "302098_01_49901.png",
         name: "Dimension Edge",
         weapon: "Blade",
@@ -4800,7 +4805,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302104_01",
+        id: "w302104_01",
         iconName: "302104_01_49901.png",
         name: "Hollow Beginning",
         weapon: "Blade",
@@ -4808,7 +4813,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302066_01",
+        id: "w302066_01",
         iconName: "302066_01_49901.png",
         name: "Direblade Mugatachi",
         weapon: "Blade",
@@ -4816,7 +4821,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302115_01",
+        id: "w302115_01",
         iconName: "302115_01_49901.png",
         name: "Shadehaze Blade",
         weapon: "Blade",
@@ -4824,7 +4829,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302012_01",
+        id: "w302012_01",
         iconName: "302012_01_49901.png",
         name: "Guardian Seal",
         weapon: "Blade",
@@ -4832,7 +4837,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302031_01",
+        id: "w302031_01",
         iconName: "302031_01_49901.png",
         name: "Iron Blade",
         weapon: "Blade",
@@ -4840,7 +4845,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302032_01",
+        id: "w302032_01",
         iconName: "302032_01_49901.png",
         name: "Masamura's Pride",
         weapon: "Blade",
@@ -4848,7 +4853,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303047_01",
+        id: "w303047_01",
         iconName: "303047_01_49901.png",
         name: "Slaughterlust",
         weapon: "Dagger",
@@ -4856,7 +4861,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303056_01",
+        id: "w303056_01",
         iconName: "303056_01_49901.png",
         name: "Hellish Sting",
         weapon: "Dagger",
@@ -4864,7 +4869,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303064_01",
+        id: "w303064_01",
         iconName: "303064_01_49901.png",
         name: "Impact Thrust",
         weapon: "Dagger",
@@ -4872,7 +4877,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303085_01",
+        id: "w303085_01",
         iconName: "303085_01_49901.png",
         name: "The Breeze",
         weapon: "Dagger",
@@ -4880,7 +4885,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303091_01",
+        id: "w303091_01",
         iconName: "303091_01_49901.png",
         name: "Rapture Seeker",
         weapon: "Dagger",
@@ -4888,7 +4893,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303103_01",
+        id: "w303103_01",
         iconName: "303103_01_49901.png",
         name: "Spirit Claw",
         weapon: "Dagger",
@@ -4896,7 +4901,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303114_01",
+        id: "w303114_01",
         iconName: "303114_01_49901.png",
         name: "Dread Necrom",
         weapon: "Dagger",
@@ -4904,7 +4909,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303097_01",
+        id: "w303097_01",
         iconName: "303097_01_49901.png",
         name: "Dreadgaze",
         weapon: "Dagger",
@@ -4912,7 +4917,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303033_01",
+        id: "w303033_01",
         iconName: "303033_01_49901.png",
         name: "Hardbreaker",
         weapon: "Dagger",
@@ -4920,7 +4925,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303012_01",
+        id: "w303012_01",
         iconName: "303012_01_49901.png",
         name: "Wyrmfang",
         weapon: "Dagger",
@@ -4928,7 +4933,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303034_01",
+        id: "w303034_01",
         iconName: "303034_01_49901.png",
         name: "The Dreamer's Greatsword",
         weapon: "Dagger",
@@ -4936,7 +4941,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304042_01",
+        id: "w304042_01",
         iconName: "304042_01_49901.png",
         name: "Unerring Gaze",
         weapon: "Axe",
@@ -4944,7 +4949,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304047_01",
+        id: "w304047_01",
         iconName: "304047_01_49901.png",
         name: "Fury Crux",
         weapon: "Axe",
@@ -4952,7 +4957,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304065_01",
+        id: "w304065_01",
         iconName: "304065_01_49901.png",
         name: "Unspeakable Crash",
         weapon: "Axe",
@@ -4960,7 +4965,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304084_01",
+        id: "w304084_01",
         iconName: "304084_01_49901.png",
         name: "Jagged Rage",
         weapon: "Axe",
@@ -4968,7 +4973,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304090_01",
+        id: "w304090_01",
         iconName: "304090_01_49901.png",
         name: "Great Cleaver",
         weapon: "Axe",
@@ -4976,7 +4981,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304096_01",
+        id: "w304096_01",
         iconName: "304096_01_49901.png",
         name: "The Great Destroyer",
         weapon: "Axe",
@@ -4984,7 +4989,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304102_01",
+        id: "w304102_01",
         iconName: "304102_01_49901.png",
         name: "Steelfang",
         weapon: "Axe",
@@ -4992,7 +4997,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304113_01",
+        id: "w304113_01",
         iconName: "304113_01_49901.png",
         name: "Soul Crusher",
         weapon: "Axe",
@@ -5000,7 +5005,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304026_01",
+        id: "w304026_01",
         iconName: "304026_01_49901.png",
         name: "Plain Axe",
         weapon: "Axe",
@@ -5008,7 +5013,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304033_01",
+        id: "w304033_01",
         iconName: "304033_01_49901.png",
         name: "The Tyrant",
         weapon: "Axe",
@@ -5016,7 +5021,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304034_01",
+        id: "w304034_01",
         iconName: "304034_01_49901.png",
         name: "Souvenir Axe",
         weapon: "Axe",
@@ -5024,7 +5029,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305054_01",
+        id: "w305054_01",
         iconName: "305054_01_49901.png",
         name: "Piercing Beast",
         weapon: "Lance",
@@ -5032,7 +5037,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305064_01",
+        id: "w305064_01",
         iconName: "305064_01_49901.png",
         name: "Attacker Lance",
         weapon: "Lance",
@@ -5040,7 +5045,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305076_01",
+        id: "w305076_01",
         iconName: "305076_01_49901.png",
         name: "Great Aquila Lance",
         weapon: "Lance",
@@ -5048,7 +5053,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305091_01",
+        id: "w305091_01",
         iconName: "305091_01_49901.png",
         name: "Sovereign Trident",
         weapon: "Lance",
@@ -5056,7 +5061,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305097_01",
+        id: "w305097_01",
         iconName: "305097_01_49901.png",
         name: "Clematis",
         weapon: "Lance",
@@ -5064,7 +5069,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305103_01",
+        id: "w305103_01",
         iconName: "305103_01_49901.png",
         name: "Phantom Truelance",
         weapon: "Lance",
@@ -5072,7 +5077,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305109_01",
+        id: "w305109_01",
         iconName: "305109_01_49901.png",
         name: "Omnipiercer",
         weapon: "Lance",
@@ -5080,7 +5085,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305120_01",
+        id: "w305120_01",
         iconName: "305120_01_49901.png",
         name: "Lance of Lamentation",
         weapon: "Lance",
@@ -5088,7 +5093,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305029_01",
+        id: "w305029_01",
         iconName: "305029_01_49901.png",
         name: "Strong Halberd",
         weapon: "Lance",
@@ -5096,7 +5101,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305040_01",
+        id: "w305040_01",
         iconName: "305040_01_49901.png",
         name: "Lance of the Innocent",
         weapon: "Lance",
@@ -5104,7 +5109,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305041_01",
+        id: "w305041_01",
         iconName: "305041_01_49901.png",
         name: "Ironside Lance",
         weapon: "Lance",
@@ -5112,7 +5117,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306060_01",
+        id: "w306060_01",
         iconName: "306060_01_49901.png",
         name: "Falkyn",
         weapon: "Bow",
@@ -5120,7 +5125,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306070_01",
+        id: "w306070_01",
         iconName: "306070_01_49901.png",
         name: "The Perforator",
         weapon: "Bow",
@@ -5128,7 +5133,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306084_01",
+        id: "w306084_01",
         iconName: "306084_01_49901.png",
         name: "Edgepiercer Bow",
         weapon: "Bow",
@@ -5136,7 +5141,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306090_01",
+        id: "w306090_01",
         iconName: "306090_01_49901.png",
         name: "Freesia Bow",
         weapon: "Bow",
@@ -5144,7 +5149,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306102_01",
+        id: "w306102_01",
         iconName: "306102_01_49901.png",
         name: "Astral Abyss",
         weapon: "Bow",
@@ -5152,7 +5157,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306064_01",
+        id: "w306064_01",
         iconName: "306064_01_49901.png",
         name: "Ragebow",
         weapon: "Bow",
@@ -5160,7 +5165,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306113_01",
+        id: "w306113_01",
         iconName: "306113_01_49901.png",
         name: "Hollow Scream",
         weapon: "Bow",
@@ -5168,7 +5173,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306096_01",
+        id: "w306096_01",
         iconName: "306096_01_49901.png",
         name: "Heavengaze Bow",
         weapon: "Bow",
@@ -5176,7 +5181,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306013_01",
+        id: "w306013_01",
         iconName: "306013_01_49901.png",
         name: "Executor",
         weapon: "Bow",
@@ -5184,7 +5189,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306033_01",
+        id: "w306033_01",
         iconName: "306033_01_49901.png",
         name: "Faerie Bow",
         weapon: "Bow",
@@ -5192,7 +5197,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306011_01",
+        id: "w306011_01",
         iconName: "306011_01_49901.png",
         name: "Duskhawk",
         weapon: "Bow",
@@ -5200,7 +5205,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307051_01",
+        id: "w307051_01",
         iconName: "307051_01_49901.png",
         name: "Beastwing",
         weapon: "Wand",
@@ -5208,7 +5213,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307065_01",
+        id: "w307065_01",
         iconName: "307065_01_49901.png",
         name: "Scepter of Spirit",
         weapon: "Wand",
@@ -5216,7 +5221,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307076_01",
+        id: "w307076_01",
         iconName: "307076_01_49901.png",
         name: "Couragebane",
         weapon: "Wand",
@@ -5224,7 +5229,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307092_01",
+        id: "w307092_01",
         iconName: "307092_01_49901.png",
         name: "Elder's Rule",
         weapon: "Wand",
@@ -5232,7 +5237,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307098_01",
+        id: "w307098_01",
         iconName: "307098_01_49901.png",
         name: "Soul's Requiem",
         weapon: "Wand",
@@ -5240,7 +5245,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307110_01",
+        id: "w307110_01",
         iconName: "307110_01_49901.png",
         name: "Groundshaker",
         weapon: "Wand",
@@ -5248,7 +5253,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307121_01",
+        id: "w307121_01",
         iconName: "307121_01_49901.png",
         name: "Revenant of Desolation",
         weapon: "Wand",
@@ -5256,7 +5261,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307104_01",
+        id: "w307104_01",
         iconName: "307104_01_49901.png",
         name: "Wand of Whelming",
         weapon: "Wand",
@@ -5264,7 +5269,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307012_01",
+        id: "w307012_01",
         iconName: "307012_01_49901.png",
         name: "Latchkey",
         weapon: "Wand",
@@ -5272,7 +5277,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307038_01",
+        id: "w307038_01",
         iconName: "307038_01_49901.png",
         name: "Rod of Alchemy",
         weapon: "Wand",
@@ -5280,7 +5285,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307039_01",
+        id: "w307039_01",
         iconName: "307039_01_49901.png",
         name: "Moonlight Rod",
         weapon: "Wand",
@@ -5288,7 +5293,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308043_01",
+        id: "w308043_01",
         iconName: "308043_01_49901.png",
         name: "Forever Sky",
         weapon: "Staff",
@@ -5296,7 +5301,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308053_01",
+        id: "w308053_01",
         iconName: "308053_01_49901.png",
         name: "Soul Core",
         weapon: "Staff",
@@ -5304,7 +5309,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308085_01",
+        id: "w308085_01",
         iconName: "308085_01_49901.png",
         name: "World's Fulcrum",
         weapon: "Staff",
@@ -5312,7 +5317,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308091_01",
+        id: "w308091_01",
         iconName: "308091_01_49901.png",
         name: "Aria of Truth",
         weapon: "Staff",
@@ -5320,7 +5325,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308103_01",
+        id: "w308103_01",
         iconName: "308103_01_49901.png",
         name: "Abyssal Dominator",
         weapon: "Staff",
@@ -5328,7 +5333,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308063_01",
+        id: "w308063_01",
         iconName: "308063_01_49901.png",
         name: "Iratus Staff",
         weapon: "Staff",
@@ -5336,7 +5341,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308114_01",
+        id: "w308114_01",
         iconName: "308114_01_49901.png",
         name: "Rancor Staff",
         weapon: "Staff",
@@ -5344,7 +5349,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308097_01",
+        id: "w308097_01",
         iconName: "308097_01_49901.png",
         name: "Staff of Vanitas",
         weapon: "Staff",
@@ -5352,7 +5357,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308005_01",
+        id: "w308005_01",
         iconName: "308005_01_49901.png",
         name: "Staff of Life",
         weapon: "Staff",
@@ -5360,7 +5365,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308013_01",
+        id: "w308013_01",
         iconName: "308013_01_49901.png",
         name: "Staff of Fortune",
         weapon: "Staff",
@@ -5368,7 +5373,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308010_01",
+        id: "w308010_01",
         iconName: "308010_01_49901.png",
         name: "Beauty's Balm",
         weapon: "Staff",
@@ -5376,7 +5381,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301013_01",
+        id: "w301013_01",
         iconName: "301013_01_30101.png",
         name: "Blazing Edge",
         weapon: "Sword",
@@ -5384,7 +5389,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w302006_01",
+        id: "w302006_01",
         iconName: "302006_01_30101.png",
         name: "Valkaheim Blade",
         weapon: "Blade",
@@ -5392,7 +5397,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w303027_01",
+        id: "w303027_01",
         iconName: "303027_01_30101.png",
         name: "Cruel Kukri",
         weapon: "Dagger",
@@ -5400,7 +5405,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w304018_01",
+        id: "w304018_01",
         iconName: "304018_01_30101.png",
         name: "Argent Battle-Axe",
         weapon: "Axe",
@@ -5408,7 +5413,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w305006_01",
+        id: "w305006_01",
         iconName: "305006_01_30101.png",
         name: "Unsung Hero's Lance",
         weapon: "Lance",
@@ -5416,7 +5421,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w306006_01",
+        id: "w306006_01",
         iconName: "306006_01_30101.png",
         name: "Flightfyre",
         weapon: "Bow",
@@ -5424,7 +5429,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w307006_01",
+        id: "w307006_01",
         iconName: "307006_01_30101.png",
         name: "Sunrise Scepter",
         weapon: "Wand",
@@ -5432,7 +5437,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w308006_01",
+        id: "w308006_01",
         iconName: "308006_01_30101.png",
         name: "Staff of Punishing Flame",
         weapon: "Staff",
@@ -5440,7 +5445,7 @@ const weapon_list = [
         element: "Flame",
     },
     {
-        wid: "w301006_01",
+        id: "w301006_01",
         iconName: "301006_01_30201.png",
         name: "Rainbreaker",
         weapon: "Sword",
@@ -5448,7 +5453,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w302007_01",
+        id: "w302007_01",
         iconName: "302007_01_30201.png",
         name: "Alighting Butterfly",
         weapon: "Blade",
@@ -5456,7 +5461,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w303021_01",
+        id: "w303021_01",
         iconName: "303021_01_30201.png",
         name: "Water Dagger",
         weapon: "Dagger",
@@ -5464,7 +5469,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w304006_01",
+        id: "w304006_01",
         iconName: "304006_01_30201.png",
         name: "Axe of the Waves",
         weapon: "Axe",
@@ -5472,7 +5477,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w305007_01",
+        id: "w305007_01",
         iconName: "305007_01_30201.png",
         name: "Azure Jewel",
         weapon: "Lance",
@@ -5480,7 +5485,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w306007_01",
+        id: "w306007_01",
         iconName: "306007_01_30201.png",
         name: "Tidal Bow",
         weapon: "Bow",
@@ -5488,7 +5493,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w307033_01",
+        id: "w307033_01",
         iconName: "307033_01_30201.png",
         name: "Oceandweller",
         weapon: "Wand",
@@ -5496,7 +5501,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w308007_01",
+        id: "w308007_01",
         iconName: "308007_01_30201.png",
         name: "Scendecipher",
         weapon: "Staff",
@@ -5504,7 +5509,7 @@ const weapon_list = [
         element: "Water",
     },
     {
-        wid: "w301035_01",
+        id: "w301035_01",
         iconName: "301035_01_30301.png",
         name: "Grassrunner",
         weapon: "Sword",
@@ -5512,7 +5517,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w302024_01",
+        id: "w302024_01",
         iconName: "302024_01_30301.png",
         name: "Dragon Commander",
         weapon: "Blade",
@@ -5520,7 +5525,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w303007_01",
+        id: "w303007_01",
         iconName: "303007_01_30301.png",
         name: "Stormspawn",
         weapon: "Dagger",
@@ -5528,7 +5533,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w304007_01",
+        id: "w304007_01",
         iconName: "304007_01_30301.png",
         name: "Singing Cyclone",
         weapon: "Axe",
@@ -5536,7 +5541,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w305017_01",
+        id: "w305017_01",
         iconName: "305017_01_30301.png",
         name: "Gale Spear",
         weapon: "Lance",
@@ -5544,7 +5549,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w306003_01",
+        id: "w306003_01",
         iconName: "306003_01_30301.png",
         name: "Proof of the Wind",
         weapon: "Bow",
@@ -5552,7 +5557,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w307007_01",
+        id: "w307007_01",
         iconName: "307007_01_30301.png",
         name: "Menace of the Storm",
         weapon: "Wand",
@@ -5560,7 +5565,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w308008_01",
+        id: "w308008_01",
         iconName: "308008_01_30301.png",
         name: "Windreader",
         weapon: "Staff",
@@ -5568,7 +5573,7 @@ const weapon_list = [
         element: "Wind",
     },
     {
-        wid: "w301007_01",
+        id: "w301007_01",
         iconName: "301007_01_30401.png",
         name: "Featherblade",
         weapon: "Sword",
@@ -5576,7 +5581,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w302027_01",
+        id: "w302027_01",
         iconName: "302027_01_30401.png",
         name: "Chanzelian Blade",
         weapon: "Blade",
@@ -5584,7 +5589,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w303008_01",
+        id: "w303008_01",
         iconName: "303008_01_30401.png",
         name: "Conscience",
         weapon: "Dagger",
@@ -5592,7 +5597,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w304008_01",
+        id: "w304008_01",
         iconName: "304008_01_30401.png",
         name: "Flash Axe",
         weapon: "Axe",
@@ -5600,7 +5605,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305008_01",
+        id: "w305008_01",
         iconName: "305008_01_30401.png",
         name: "Moonpiercer",
         weapon: "Lance",
@@ -5608,7 +5613,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w305028_01",
+        id: "w305028_01",
         iconName: "305028_01_30401.png",
         name: "Jack-o'-Lance",
         weapon: "Lance",
@@ -5616,7 +5621,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w306009_01",
+        id: "w306009_01",
         iconName: "306009_01_30401.png",
         name: "Galvanic Bow",
         weapon: "Bow",
@@ -5624,7 +5629,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w307021_01",
+        id: "w307021_01",
         iconName: "307021_01_30401.png",
         name: "Thunder Wand",
         weapon: "Wand",
@@ -5632,7 +5637,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308009_01",
+        id: "w308009_01",
         iconName: "308009_01_30401.png",
         name: "Astrolabe",
         weapon: "Staff",
@@ -5640,7 +5645,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w308026_01",
+        id: "w308026_01",
         iconName: "308026_01_30401.png",
         name: "Vampire's Lantern",
         weapon: "Staff",
@@ -5648,7 +5653,7 @@ const weapon_list = [
         element: "Light",
     },
     {
-        wid: "w301008_01",
+        id: "w301008_01",
         iconName: "301008_01_30501.png",
         name: "Blood Price",
         weapon: "Sword",
@@ -5656,7 +5661,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w302009_01",
+        id: "w302009_01",
         iconName: "302009_01_30501.png",
         name: "Sanguine Rain",
         weapon: "Blade",
@@ -5664,7 +5669,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w303009_01",
+        id: "w303009_01",
         iconName: "303009_01_30501.png",
         name: "Assassin's Knife",
         weapon: "Dagger",
@@ -5672,7 +5677,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w304009_01",
+        id: "w304009_01",
         iconName: "304009_01_30501.png",
         name: "Soulreaver",
         weapon: "Axe",
@@ -5680,7 +5685,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w305034_01",
+        id: "w305034_01",
         iconName: "305034_01_30501.png",
         name: "Lance of the Dark",
         weapon: "Lance",
@@ -5688,7 +5693,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w306018_01",
+        id: "w306018_01",
         iconName: "306018_01_30501.png",
         name: "Cimmerian Bow",
         weapon: "Bow",
@@ -5696,7 +5701,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w307008_01",
+        id: "w307008_01",
         iconName: "307008_01_30501.png",
         name: "Meggidoth Ruiner",
         weapon: "Wand",
@@ -5704,7 +5709,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w308020_01",
+        id: "w308020_01",
         iconName: "308020_01_30501.png",
         name: "Meggidoth Wisp",
         weapon: "Staff",
@@ -5712,7 +5717,7 @@ const weapon_list = [
         element: "Shadow",
     },
     {
-        wid: "w301047_01",
+        id: "w301047_01",
         iconName: "301047_01_39901.png",
         name: "Lonely Ward",
         weapon: "Sword",
@@ -5720,7 +5725,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301052_01",
+        id: "w301052_01",
         iconName: "301052_01_39901.png",
         name: "Hefty Ingot",
         weapon: "Sword",
@@ -5728,7 +5733,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301030_01",
+        id: "w301030_01",
         iconName: "301030_01_39901.png",
         name: "Knight's Sword",
         weapon: "Sword",
@@ -5736,7 +5741,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301038_01",
+        id: "w301038_01",
         iconName: "301038_01_39901.png",
         name: "Ensorcelled Sword",
         weapon: "Sword",
@@ -5744,7 +5749,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301039_01",
+        id: "w301039_01",
         iconName: "301039_01_39901.png",
         name: "Broadedge",
         weapon: "Sword",
@@ -5752,7 +5757,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302041_01",
+        id: "w302041_01",
         iconName: "302041_01_39901.png",
         name: "Goliath Splitter",
         weapon: "Blade",
@@ -5760,7 +5765,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302055_01",
+        id: "w302055_01",
         iconName: "302055_01_39901.png",
         name: "Rest Eternal",
         weapon: "Blade",
@@ -5768,7 +5773,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302068_01",
+        id: "w302068_01",
         iconName: "302068_01_39901.png",
         name: "Fiendcutter",
         weapon: "Blade",
@@ -5776,7 +5781,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302021_01",
+        id: "w302021_01",
         iconName: "302021_01_39901.png",
         name: "Subjugator",
         weapon: "Blade",
@@ -5784,7 +5789,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302030_01",
+        id: "w302030_01",
         iconName: "302030_01_39901.png",
         name: "High Shamshir",
         weapon: "Blade",
@@ -5792,7 +5797,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302008_01",
+        id: "w302008_01",
         iconName: "302008_01_39901.png",
         name: "Fusion Blade",
         weapon: "Blade",
@@ -5800,7 +5805,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303039_01",
+        id: "w303039_01",
         iconName: "303039_01_39901.png",
         name: "Mushroom Dagger",
         weapon: "Dagger",
@@ -5808,7 +5813,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303044_01",
+        id: "w303044_01",
         iconName: "303044_01_39901.png",
         name: "Big Boy",
         weapon: "Dagger",
@@ -5816,7 +5821,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303068_01",
+        id: "w303068_01",
         iconName: "303068_01_39901.png",
         name: "Gemstone Dagger",
         weapon: "Dagger",
@@ -5824,7 +5829,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303026_01",
+        id: "w303026_01",
         iconName: "303026_01_39901.png",
         name: "Bejeweled Dagger",
         weapon: "Dagger",
@@ -5832,7 +5837,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303032_01",
+        id: "w303032_01",
         iconName: "303032_01_39901.png",
         name: "Gear Knife",
         weapon: "Dagger",
@@ -5840,7 +5845,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303003_01",
+        id: "w303003_01",
         iconName: "303003_01_39901.png",
         name: "Lover's Ally",
         weapon: "Dagger",
@@ -5848,7 +5853,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304037_01",
+        id: "w304037_01",
         iconName: "304037_01_39901.png",
         name: "Reclusive Relic",
         weapon: "Axe",
@@ -5856,7 +5861,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304059_01",
+        id: "w304059_01",
         iconName: "304059_01_39901.png",
         name: "Weighty Arms",
         weapon: "Axe",
@@ -5864,7 +5869,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304025_01",
+        id: "w304025_01",
         iconName: "304025_01_39901.png",
         name: "Warrior's Axe",
         weapon: "Axe",
@@ -5872,7 +5877,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304031_01",
+        id: "w304031_01",
         iconName: "304031_01_39901.png",
         name: "Ennobled Axe",
         weapon: "Axe",
@@ -5880,7 +5885,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304032_01",
+        id: "w304032_01",
         iconName: "304032_01_39901.png",
         name: "Juggernaut",
         weapon: "Axe",
@@ -5888,7 +5893,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305044_01",
+        id: "w305044_01",
         iconName: "305044_01_39901.png",
         name: "Leechspore Lance",
         weapon: "Lance",
@@ -5896,7 +5901,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305049_01",
+        id: "w305049_01",
         iconName: "305049_01_39901.png",
         name: "Solitary Desire",
         weapon: "Lance",
@@ -5904,7 +5909,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305063_01",
+        id: "w305063_01",
         iconName: "305063_01_39901.png",
         name: "Heartseeker",
         weapon: "Lance",
@@ -5912,7 +5917,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305039_01",
+        id: "w305039_01",
         iconName: "305039_01_39901.png",
         name: "Trident",
         weapon: "Lance",
@@ -5920,7 +5925,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305013_01",
+        id: "w305013_01",
         iconName: "305013_01_39901.png",
         name: "Mailbreaker",
         weapon: "Lance",
@@ -5928,7 +5933,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305010_01",
+        id: "w305010_01",
         iconName: "305010_01_39901.png",
         name: "Drill Lance",
         weapon: "Lance",
@@ -5936,7 +5941,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306038_01",
+        id: "w306038_01",
         iconName: "306038_01_39901.png",
         name: "Fungus Bow",
         weapon: "Bow",
@@ -5944,7 +5949,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306043_01",
+        id: "w306043_01",
         iconName: "306043_01_39901.png",
         name: "Fragrant Bow",
         weapon: "Bow",
@@ -5952,7 +5957,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306053_01",
+        id: "w306053_01",
         iconName: "306053_01_39901.png",
         name: "Mockery",
         weapon: "Bow",
@@ -5960,7 +5965,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306026_01",
+        id: "w306026_01",
         iconName: "306026_01_39901.png",
         name: "Composite Bow",
         weapon: "Bow",
@@ -5968,7 +5973,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306012_01",
+        id: "w306012_01",
         iconName: "306012_01_39901.png",
         name: "Machine Bow",
         weapon: "Bow",
@@ -5976,7 +5981,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306032_01",
+        id: "w306032_01",
         iconName: "306032_01_39901.png",
         name: "Hunter's Bow",
         weapon: "Bow",
@@ -5984,7 +5989,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307046_01",
+        id: "w307046_01",
         iconName: "307046_01_39901.png",
         name: "The Scent",
         weapon: "Wand",
@@ -5992,7 +5997,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307057_01",
+        id: "w307057_01",
         iconName: "307057_01_39901.png",
         name: "Clamor Wand",
         weapon: "Wand",
@@ -6000,7 +6005,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307061_01",
+        id: "w307061_01",
         iconName: "307061_01_39901.png",
         name: "Heavy Cane",
         weapon: "Wand",
@@ -6008,7 +6013,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307042_01",
+        id: "w307042_01",
         iconName: "307042_01_39901.png",
         name: "Wizard's Rod",
         weapon: "Wand",
@@ -6016,7 +6021,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307004_01",
+        id: "w307004_01",
         iconName: "307004_01_39901.png",
         name: "Sorcerer's Cudgel",
         weapon: "Wand",
@@ -6024,7 +6029,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307037_01",
+        id: "w307037_01",
         iconName: "307037_01_39901.png",
         name: "Conchoidal Rod",
         weapon: "Wand",
@@ -6032,7 +6037,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308040_01",
+        id: "w308040_01",
         iconName: "308040_01_39901.png",
         name: "Aurachant",
         weapon: "Staff",
@@ -6040,7 +6045,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308002_01",
+        id: "w308002_01",
         iconName: "308002_01_39901.png",
         name: "Staff of Grace",
         weapon: "Staff",
@@ -6048,7 +6053,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307003_01",
+        id: "w307003_01",
         iconName: "307003_01_39901.png",
         name: "Long Ankh",
         weapon: "Staff",
@@ -6056,7 +6061,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308036_01",
+        id: "w308036_01",
         iconName: "308036_01_39901.png",
         name: "Staff of the Horned Snake",
         weapon: "Staff",
@@ -6064,7 +6069,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w309001_01",
+        id: "w309001_01",
         iconName: "309001_01_19901.png",
         name: "Battleworn Manacaster",
         weapon: "Manacaster",
@@ -6072,7 +6077,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301002_01",
+        id: "w301002_01",
         iconName: "301002_01_29901.png",
         name: "Soldier's Brand",
         weapon: "Sword",
@@ -6080,7 +6085,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302002_01",
+        id: "w302002_01",
         iconName: "302002_01_29901.png",
         name: "Striker",
         weapon: "Blade",
@@ -6088,7 +6093,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303005_01",
+        id: "w303005_01",
         iconName: "303005_01_29901.png",
         name: "Thief's Dagger",
         weapon: "Dagger",
@@ -6096,7 +6101,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304003_01",
+        id: "w304003_01",
         iconName: "304003_01_29901.png",
         name: "Soldier's Axe",
         weapon: "Axe",
@@ -6104,7 +6109,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305003_01",
+        id: "w305003_01",
         iconName: "305003_01_29901.png",
         name: "Adventurer's Lance",
         weapon: "Lance",
@@ -6112,7 +6117,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306005_01",
+        id: "w306005_01",
         iconName: "306005_01_29901.png",
         name: "Soldier's Bow",
         weapon: "Bow",
@@ -6120,7 +6125,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307002_01",
+        id: "w307002_01",
         iconName: "307002_01_29901.png",
         name: "Enchanted Wand",
         weapon: "Wand",
@@ -6128,7 +6133,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308004_01",
+        id: "w308004_01",
         iconName: "308004_01_29901.png",
         name: "Staff of Affection",
         weapon: "Staff",
@@ -6136,7 +6141,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w301001_01",
+        id: "w301001_01",
         iconName: "301001_01_19901.png",
         name: "Battleworn Sword",
         weapon: "Sword",
@@ -6144,7 +6149,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w302001_01",
+        id: "w302001_01",
         iconName: "302001_01_19901.png",
         name: "Battleworn Blade",
         weapon: "Blade",
@@ -6152,7 +6157,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w303001_01",
+        id: "w303001_01",
         iconName: "303001_01_19901.png",
         name: "Battleworn Dagger",
         weapon: "Dagger",
@@ -6160,7 +6165,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w304001_01",
+        id: "w304001_01",
         iconName: "304001_01_19901.png",
         name: "Battleworn Axe",
         weapon: "Axe",
@@ -6168,7 +6173,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w305001_01",
+        id: "w305001_01",
         iconName: "305001_01_19901.png",
         name: "Battleworn Lance",
         weapon: "Lance",
@@ -6176,7 +6181,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w306001_01",
+        id: "w306001_01",
         iconName: "306001_01_19901.png",
         name: "Battleworn Bow",
         weapon: "Bow",
@@ -6184,7 +6189,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w307001_01",
+        id: "w307001_01",
         iconName: "307001_01_19901.png",
         name: "Battleworn Wand",
         weapon: "Wand",
@@ -6192,7 +6197,7 @@ const weapon_list = [
         element: "None",
     },
     {
-        wid: "w308001_01",
+        id: "w308001_01",
         iconName: "308001_01_19901.png",
         name: "Battleworn Staff",
         weapon: "Staff",

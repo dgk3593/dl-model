@@ -1,5 +1,10 @@
+import "helpers/typedef";
+
+/**
+ * @type { Array <ModelData> }
+ */
 const extraWeaponList = [
-    { wid: "wHandgun", name: "Handgun" },
-    { wid: "wHandgunS", name: "Handgun (Small)" },
+    { id: "wHandgun", name: "Handgun" },
+    { id: "wHandgunS", name: "Handgun (Small)" },
 ];
 export default extraWeaponList;

@@ -1,3 +1,8 @@
+import "helpers/typedef";
+
+/**
+ * @type { Array <ModelData> }
+ */
 const enemies = [
     {
         id: "100016_01",

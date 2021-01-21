@@ -8,7 +8,7 @@ import { isBlade } from "helpers/helpers";
 const BladeSelector = lazy(() => import("components/selectors/BladeSelector"));
 const BtnIcon = { Left: "⇐", Right: "⇒" };
 
-function WeaponBtn({ wid, iconName, name }) {
+function WeaponBtn({ id, iconName, name }) {
     const [bladeMode, setBladeMode] = useState("Blade");
     const [clicked, toggleClicked] = useToggleState(false);
     const [reverseGrip, toggleReverseGrip] = useToggleState(false);
@@ -16,13 +16,13 @@ function WeaponBtn({ wid, iconName, name }) {
 
     const dispatch = useContext(DispatchContext);
 
-    const weaponIsBlade = isBlade(wid);
+    const weaponIsBlade = isBlade(id);
 
     const setWeapon = event => {
         event.stopPropagation();
         const side = event.currentTarget.dataset.value;
         // change id code for sheath if needed
-        const idCode = bladeMode === "Sheath" ? wid.replace("_01", "_02") : wid;
+        const idCode = bladeMode === "Sheath" ? id.replace("_01", "_02") : id;
         const gripCode = reverseGrip ? "b" : "n";
 
         const weaponCode = `${idCode}${gripCode}`;
@@ -37,8 +37,8 @@ function WeaponBtn({ wid, iconName, name }) {
     const weaponIcon = iconName && (
         <img
             src={iconPath}
-            value={wid}
-            alt={wid}
+            value={id}
+            alt={id}
             onClick={toggleClicked}
             className="WeaponBtn-icon"
         />
@@ -52,11 +52,11 @@ function WeaponBtn({ wid, iconName, name }) {
             <div>
                 <input
                     type="checkbox"
-                    id={`grip-${wid}`}
+                    id={`grip-${id}`}
                     checked={reverseGrip}
                     onChange={toggleReverseGrip}
                 />
-                <label htmlFor={`grip-${wid}`}>Reverse Grip</label>
+                <label htmlFor={`grip-${id}`}>Reverse Grip</label>
             </div>
         </div>
     );

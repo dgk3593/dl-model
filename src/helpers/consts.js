@@ -1,3 +1,5 @@
+import "helpers/typedef";
+
 export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
@@ -8,6 +10,9 @@ export const baseUrl = "https://dgk3593.github.io/dl-model/#";
 
 export const defaultAdvAni = "CMN_MWM_03";
 
+/**
+ * @type {{ [paramName: string]: MatParamDetails }}
+ */
 export const matParamsDetails = {
     wireframe: {
         name: "Wireframe",
@@ -92,6 +97,9 @@ export const matParamsDetails = {
     },
 };
 
+/**
+ *  list of parameters that can be set directly
+ */
 export const matDirectSetParams = [
     "transparent",
     "opacity",
@@ -102,15 +110,32 @@ export const matDirectSetParams = [
     "shininess",
 ];
 
+/**
+ * list of parameters whose value is a color code
+ */
 export const matColorParams = ["color", "emissive", "specular"];
 
-const defaultMatParams = {};
-Object.keys(matParamsDetails).forEach(key => {
-    defaultMatParams[key] = matParamsDetails[key].default;
-});
+/**
+ * @type { Array< [paramName: string, details: MatParamDetails] > }
+ */
+const matParamsEntries = Object.entries(matParamsDetails);
+/**
+ * default values of material parameters
+ * @type {{ [paramName: string]: * }}
+ */
+const defaultMatParams = Object.fromEntries(
+    matParamsEntries.map(([paramName, details]) => [paramName, details.default])
+);
 
+/**
+ * list of parameters that need to set needsUpdate = true to be updated
+ */
 export const needsUpdateParams = ["gradientMap", "flatShading", "useTexture"];
 
+/**
+ * default light setting
+ * @type { Array <LightParam> }
+ */
 export const defaultLights = [
     {
         id: "0",
@@ -129,11 +154,18 @@ export const defaultLights = [
     },
 ];
 
+/**
+ * ASCII sets used to create ASCII art
+ */
 export const asciiSet = [
     " .:-=+*#%@",
     " .'`^\",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$",
 ];
 
+/**
+ * used to initialize global state
+ * @type {{ [key: string] : * }}
+ */
 export const defaultSettings = {
     model: {
         id: "c100001_01",
@@ -186,6 +218,10 @@ export const defaultSettings = {
     },
 };
 
+/**
+ * map an init key to corresponding group and key in the global state
+ * @type {{ [initKey: string]: {group: string, key: string} }}
+ */
 export const initKeyMap = {
     id: { group: "model", key: "id" },
     tx: { group: "model", key: "texture" },
@@ -210,6 +246,10 @@ const commonInitKeys = ["bg", "cam", "showOutline", "AA", "rot"];
 
 const aniInitKeys = ["ts", "cc"];
 
+/**
+ * list of init keys corresponding to viewer type
+ * @type {{ [viewerType: string]: Array<string> }}
+ */
 export const initKeys = {
     adv: [
         "id",
@@ -226,8 +266,14 @@ export const initKeys = {
     base: ["id", ...commonInitKeys],
 };
 
+/**
+ * list of supported materials
+ */
 export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];
 
+/**
+ * parameters that all material has
+ */
 export const matCommonParams = [
     "transparent",
     "opacity",
@@ -236,6 +282,10 @@ export const matCommonParams = [
     "color",
 ];
 
+/**
+ * parameters specific to each type of materials
+ * @type {{ [materialName: string]: Array<string> }}
+ */
 export const matExtraParams = {
     Basic: [],
     Toon: ["emissive", "emissiveIntensity", "gradientMap"],
@@ -256,6 +306,10 @@ export const matExtraParams = {
     ],
 };
 
+/**
+ * map weapon type to weapon code
+ * @type {{ [weaponName: string]: string }}
+ */
 export const WEAPON_CODE = {
     Sword: "SWD",
     Blade: "KAT",
@@ -307,6 +361,9 @@ export const FS_LENGTH = {
     Sword: 3,
 };
 
+/**
+ * @type {FilterGroups}
+ */
 export const ADV_FILTERS = {
     rarity: ["3", "4", "5"],
     element: ["Flame", "Water", "Wind", "Light", "Shadow"],
@@ -323,11 +380,17 @@ export const ADV_FILTERS = {
     ],
 };
 
+/**
+ * @type {FilterGroups}
+ */
 export const DRAGON_FILTERS = {
     rarity: ["3", "4", "5"],
     element: ["Flame", "Water", "Wind", "Light", "Shadow"],
 };
 
+/**
+ * @type {FilterGroups}
+ */
 export const WEAPON_FILTERS = {
     rarity: ["1", "2", "3", "4", "5", "6"],
     element: ["Flame", "Water", "Wind", "Light", "Shadow", "None"],
@@ -358,6 +421,9 @@ export const incompatibleModels = new Set([
     "c100041_01",
 ]);
 
+/**
+ * @type {{[colorName: string]: ColorCode}}
+ */
 export const commonColors = {
     green: "#00ff00",
     black: "#000000",
@@ -371,6 +437,10 @@ export const CAM_PARAMS = {
     near: 0.01,
 };
 
+/**
+ * default camera coordinates
+ * @type {{ [key: string]: xyzCoordinate }}
+ */
 export const cameraPositions = {
     c: [0, 0.5, 1.5],
     d: [0, 1.5, 6],
@@ -438,6 +508,10 @@ export const cameraPositions = {
     smith: [1, 1, 2],
 };
 
+/**
+ * default control coordinates
+ * @type {{ [key: string]: xyzCoordinate }}
+ */
 export const controlsPositions = {
     c: [0, 0.5, 0],
     d: [0, 1.5, 0],
@@ -518,6 +592,9 @@ export const aniModList = {
     r: { key: "repetitions", defaultValue: 1 },
 };
 
+/**
+ * list of video codecs to check for
+ */
 export const videoCodecs = [
     "video/webm;codecs=h264",
     "video/webm;codecs=vp9",

@@ -5,13 +5,13 @@ import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles/CharaCardStyles";
 
 function AdvCard(props) {
-    const { cid, name, title, element, weapon, onClick, portraitDir } = props;
+    const { id, name, title, element, weapon, onClick, portraitDir } = props;
     const classes = useStyles();
 
     const eleIconPath = `${process.env.PUBLIC_URL}/img/filter/element_${element}.png`;
     const weaponIconPath = `${process.env.PUBLIC_URL}/img/filter/weapon_${weapon}.png`;
     // const rarityImg = `${process.env.PUBLIC_URL}/img/filter/card_r${rarity}.png`;
-    const portrait = `${process.env.PUBLIC_URL}/img/${portraitDir}/${cid}.png`;
+    const portrait = `${process.env.PUBLIC_URL}/img/${portraitDir}/${id}.png`;
 
     const eleIcon = element && <img src={eleIconPath} alt={element} />;
     const weaponIcon = weapon && <img src={weaponIconPath} alt={weapon} />;
@@ -19,7 +19,7 @@ function AdvCard(props) {
     return (
         <Card
             className={classes.root}
-            data-value={cid}
+            data-value={id}
             variant="outlined"
             onClick={onClick}
         >
