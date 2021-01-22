@@ -18,7 +18,7 @@ const mainBtns = {
         { value: "weapon", text: "Add Weapons" },
     ],
     dragon: [{ value: "dragonFace", text: "Facial Expression" }],
-    base: [],
+    basic: [],
 };
 
 function SettingBtns({ openModal }) {

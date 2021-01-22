@@ -6,7 +6,7 @@
 ################################################  
 */
 
-import BaseViewer from "./BaseViewer";
+import BasicViewer from "./BasicViewer";
 
 import * as THREE from "three";
 import {
@@ -15,7 +15,7 @@ import {
     getFaceChangesArray,
 } from "helpers/viewerHelpers";
 
-export class AniViewer extends BaseViewer {
+export class AniViewer extends BasicViewer {
     afterMainModelLoad = () => {
         this.saveMainModelInitState();
         this.addAnimation();

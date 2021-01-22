@@ -7,11 +7,11 @@ import { getTextColor } from "helpers/helpers";
 import { cameraPositions, controlsPositions } from "helpers/consts";
 
 const AniControl = lazy(() => import("./AniControl"));
-const BaseViewer = lazy(() => import("./viewers/BaseViewer"));
+const BaseViewer = lazy(() => import("./viewers/BasicViewer"));
 const AdvViewer = lazy(() => import("./viewers/AdvViewer"));
 const DragonViewer = lazy(() => import("./viewers/DragonViewer"));
 
-const viewers = { base: BaseViewer, adv: AdvViewer, dragon: DragonViewer };
+const viewers = { basic: BaseViewer, adv: AdvViewer, dragon: DragonViewer };
 
 function Display(props) {
     const { viewport } = props;

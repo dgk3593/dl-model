@@ -11,7 +11,7 @@
 #    - ASCII mode
 ################################################
 */
-
+import "helpers/typedef";
 import { PureComponent } from "react";
 
 import * as THREE from "three";
@@ -38,7 +38,7 @@ import {
 } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
 
-class BaseViewer extends PureComponent {
+class BasicViewer extends PureComponent {
     async componentDidMount() {
         // window.app = this;
 
@@ -177,7 +177,7 @@ class BaseViewer extends PureComponent {
         const model = await loadModel(modelPath);
         this.models.main = model;
 
-        await this.basicMainProcessing(model);
+        await this.basicMainProcessing();
         return;
     };
 
@@ -216,6 +216,10 @@ class BaseViewer extends PureComponent {
 
     removeAllLights = () => this.lights.forEach(this.removeLight);
 
+    /**
+     * add model to scene
+     * @param {THREE.Object3D} model
+     */
     addToScene = model => this.floor.add(model);
 
     initTexture = async () => {
@@ -431,6 +435,10 @@ class BaseViewer extends PureComponent {
         this.finalRenderer = this.effect;
     };
 
+    /**
+     * @param {xyzCoordinate} prev
+     * @param {xyzCoordinate} current
+     */
     updateCamera = (prev, current) => {
         if (prev === current) return;
 
@@ -438,6 +446,10 @@ class BaseViewer extends PureComponent {
         this.camera.updateProjectionMatrix();
     };
 
+    /**
+     * @param {xyzCoordinate} prev
+     * @param {xyzCoordinate} current
+     */
     updateControl = (prev, current) => {
         if (prev === current) return;
 
@@ -445,6 +457,9 @@ class BaseViewer extends PureComponent {
         this.controls.update();
     };
 
+    /**
+     * @param {string} color
+     */
     set bgColor(color) {
         this.scene.background =
             color !== "transparent" ? new THREE.Color(color) : null;
@@ -493,4 +508,4 @@ class BaseViewer extends PureComponent {
     }
 }
 
-export default BaseViewer;
+export default BasicViewer;
