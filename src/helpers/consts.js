@@ -263,7 +263,7 @@ export const initKeys = {
         ...aniInitKeys,
     ],
     dragon: ["id", "ei", "mi", ...commonInitKeys, ...aniInitKeys],
-    base: ["id", ...commonInitKeys],
+    basic: ["id", ...commonInitKeys],
 };
 
 /**
@@ -411,6 +411,9 @@ export const spFaceTextures = {
     c110300_01: "ec110300_01",
 };
 
+/**
+ * Set of ids of models incompatible with AdvViewer
+ */
 export const incompatibleModels = new Set([
     "c100007_01",
     "c100007_05",

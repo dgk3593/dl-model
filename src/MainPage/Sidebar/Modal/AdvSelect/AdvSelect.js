@@ -73,7 +73,7 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
             });
         }
         updateSettings("app")({
-            viewerType: isIncompatible(cid) ? "base" : "adv",
+            viewerType: isIncompatible(cid) ? "basic" : "adv",
         });
     };
 
