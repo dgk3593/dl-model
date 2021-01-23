@@ -31,7 +31,7 @@ const getFaceData = async id => {
     return { eye: eyeNumber, mouth: mouthNumber };
 };
 
-const extractDragonId = ({ cid }) => `d${cid}`;
+const extractDragonId = ({ id }) => `d${id}`;
 
 const exportFaceMap = faceMap => {
     const exportParts = [];
@@ -48,7 +48,7 @@ const exportFaceMap = faceMap => {
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
-    a.style = "display: none";
+    a.style.display = "none";
     a.href = url;
     a.download = outputFileName;
     document.body.appendChild(a);
