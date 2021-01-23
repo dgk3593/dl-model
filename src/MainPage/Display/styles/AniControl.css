@@ -1,5 +1,16 @@
+.AniControl {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.AniControl-Label {
+    text-align: right;
+    margin: auto 0;
+    width: 4rem;
+}
+
 .AniControl-Slider {
-    min-width: 20rem;
-    max-width: 80%;
+    width: min(30rem, calc(100% - 4rem));
     margin: 0 1rem;
 }

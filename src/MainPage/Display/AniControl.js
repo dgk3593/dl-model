@@ -23,8 +23,8 @@ function AniControl({ value }) {
     };
 
     return (
-        <>
-            <div>Animation Speed</div>
+        <div className="AniControl">
+            <div className="AniControl-Label">Animation Speed</div>
             <div className="AniControl-Slider">
                 <Slider
                     value={value}
@@ -36,7 +36,7 @@ function AniControl({ value }) {
                     onChange={setTimeScale}
                 />
             </div>
-        </>
+        </div>
     );
 }
 
