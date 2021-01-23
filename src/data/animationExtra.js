@@ -23,6 +23,9 @@ const extraAnimation = {
         "Punching Bag": "PunchingBag",
         "Hook Punch": "HookPunch",
     },
+    Others: {
+        Yamcha: "Yamcha",
+    },
 };
 
 export default extraAnimation;

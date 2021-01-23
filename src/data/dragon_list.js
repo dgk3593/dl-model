@@ -1,3 +1,8 @@
+import "helpers/typedef";
+
+/**
+ * @type { Array <ModelData> }
+ */
 const dragons = [
     {
         id: "210117_01",

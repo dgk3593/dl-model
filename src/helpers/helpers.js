@@ -14,18 +14,38 @@ import {
 import { chainCodeToList } from "./viewerHelpers";
 import dragonAni from "data/animationDragon";
 
+/**
+ * capitalize first letter of tring
+ * @param {string} input
+ */
 export const capitalize = ([first, ...rest]) =>
     `${first.toUpperCase()}${rest.join("")}`;
 
+/**
+ * get the default texture file of a model from id
+ * @param {string} id - model id
+ */
 export const getDefaultTexture = id =>
     id.match(/_[0-9]{2}/) ? id : `${id}_01`;
 
+/**
+ * create a new object whose entries with key listed in keys are copied from the input object
+ * @param {{ }} object - object to filter
+ * @param { string[] } keys - list of keys to filter
+ * @return {{ }}
+ */
 export const filterObject = (object, keys) => {
     const entries = Object.entries(object);
     const filtered = entries.filter(([key, _]) => keys.includes(key));
     return Object.fromEntries(filtered);
 };
 
+/**
+ * Get the difference between 2 object
+ * @param {{ }} prev - previous value
+ * @param {{ }} current - current value
+ * @returns { Array<[updatedKey: string, value: *]> } array of updated key and value pairs
+ */
 export const getUpdated = (prev, current) => {
     const updated = Object.entries(current).filter(
         ([key, value]) => value !== prev[key]
@@ -33,30 +53,59 @@ export const getUpdated = (prev, current) => {
     return updated;
 };
 
-export const isBlade = code => code.startsWith("w302");
+/**
+ * check if an ID is a blade
+ * @param {string} modelId - id to check
+ */
+export const isBlade = modelId => modelId.startsWith("w302");
 
-export const isSheath = code => isBlade(code) && code.endsWith("02");
+/**
+ * check if an ID is a sheath
+ * @param {string} modelId - id to check
+ */
+export const isSheath = modelId => isBlade(modelId) && modelId.endsWith("02");
 
+/**
+ * check if model is incompatible with AdvViewer
+ * @param {string} modelId
+ */
 export const isIncompatible = modelId =>
     !modelId.startsWith("c") ||
     modelId.endsWith("_h") ||
     incompatibleModels.has(modelId);
 
+/**
+ * check if model is compatible with AdvViewer
+ * @param {string} modelId
+ */
 const isCharaWithAni = modelId =>
     modelId.startsWith("c") &&
     !modelId.endsWith("_h") &&
     !incompatibleModels.has(modelId);
 
+/**
+ * check if a model is a dragon
+ * @param {string} modelId
+ */
 const isDragon = modelId => modelId.startsWith("d") || modelId === "smith";
 
+/**
+ * get the suitable viewer type base on ID
+ * @param {string} modelId
+ */
 export const getViewerType = modelId => {
     if (isDragon(modelId)) return "dragon";
 
     if (isCharaWithAni(modelId)) return "adv";
 
-    return "base";
+    return "basic";
 };
 
+/**
+ * get the default animation code base on model ID
+ * @param {string} modelId
+ * @return {string | undefined}
+ */
 export const getDefaultAni = modelId => {
     if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
 
@@ -65,8 +114,17 @@ export const getDefaultAni = modelId => {
     return "";
 };
 
+/**
+ * get default eye and mouth index
+ * @param {string} modelId
+ */
 const getDefaultFace = modelId => (isDragon(modelId) ? "1" : "2");
 
+/**
+ * apply callback on each element of list or on list if list is not an array
+ * @param {*|Array} list - list of objects to apply callback
+ * @param {Function} callback - callback to apply
+ */
 export const callbackOnEach = (list, callback) => {
     if (Array.isArray(list)) {
         list.forEach(child => callback(child));
@@ -75,6 +133,10 @@ export const callbackOnEach = (list, callback) => {
     callback(list);
 };
 
+/**
+ * initialize settings using array of params
+ * @param {Array<string>} params
+ */
 export const setInitialSettings = params => {
     if (params.length === 0) return;
 
@@ -86,6 +148,9 @@ export const setInitialSettings = params => {
         // skip if no value given
         if (!value[0] || !initKeyMap[keycode]) return;
 
+        /**
+         * @type {string | Array<number>}
+         */
         let setValue = value.length === 1 ? value[0] : value.join("=");
 
         switch (keycode) {
@@ -151,11 +216,19 @@ export const setInitialSettings = params => {
     }
 };
 
+/**
+ * generate animation chain code from AnimationChain
+ * @param {AnimationChain} chain
+ */
 export const generateChainCode = chain => {
     const aniCode = chain.map(aniToCode);
     return aniCode.join(">");
 };
 
+/**
+ * convert 1 animation chain item to single animation code
+ * @param {AniListItem} ani
+ */
 const aniToCode = ani => {
     const { aniName, faceChanges } = ani;
     const modCode = generateAniModCode(ani);
@@ -163,6 +236,10 @@ const aniToCode = ani => {
     return `${aniName}${modCode}${faceCode}`;
 };
 
+/**
+ * generate animation modifier code
+ * @param {AniListItem} ani
+ */
 const generateAniModCode = ani => {
     const modCodes = [];
     Object.keys(aniModList).forEach(modKey => {
@@ -174,8 +251,13 @@ const generateAniModCode = ani => {
     return modCodes.join("");
 };
 
+/**
+ * create face change code
+ * @param {FaceChangeArray} faceChanges
+ */
 const generateFaceCode = faceChanges => {
     if (!faceChanges) return "";
+
     const faceCodes = [];
     faceChanges.forEach(change => {
         const { time, eyeIdx, mouthIdx } = change;
@@ -188,26 +270,40 @@ const generateFaceCode = faceChanges => {
     return faceCodes.join("");
 };
 
+/**
+ * @param {FilterState} filterState
+ * @return {FilterConditions}
+ */
 export const collectFilter = filterState => {
-    const collected = {};
-    Object.entries(filterState).forEach(([group, groupData]) => {
-        collected[group] = Object.keys(groupData).filter(key => groupData[key]);
-    });
-    return collected;
+    const stateEntries = Object.entries(filterState);
+    /**
+     * @type {FilterConditions}
+     */
+    const filterConditions = stateEntries.map(([groupName, groupData]) => [
+        groupName,
+        Object.keys(groupData).filter(key => groupData[key]),
+    ]);
+    return filterConditions.filter(([, valueList]) => valueList.length);
 };
 
-export const multiCondFilter = (input, filters) => {
-    const filterKeys = Object.keys(filters);
-
-    return input.filter(el => {
-        return filterKeys.every(key => {
-            if (!filters[key].length) return true;
-
-            return filters[key].includes(el[key]);
-        });
-    });
+/**
+ * Multiconditional filter
+ * @param {ModelData[]} input
+ * @param {FilterConditions} filterConditions
+ */
+export const multiCondFilter = (input, filterConditions) => {
+    return input.filter(el =>
+        filterConditions.every(([propName, valueList]) =>
+            valueList.includes(el[propName])
+        )
+    );
 };
 
+/**
+ * convert hex color code to rgb triplet
+ * @param {ColorCode} hex
+ * @return {RGBTriplet}
+ */
 const hexToRgb = hex => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
@@ -219,9 +315,16 @@ const hexToRgb = hex => {
         : null;
 };
 
+/**
+ * @param {RGBTriplet} color
+ */
 export const getBrightness = ({ r, g, b }) =>
     (r * 299 + g * 587 + b * 114) / 1000;
 
+/**
+ * get the suitable text color for a given background color
+ * @param {ColorCode} color
+ */
 export const getTextColor = color => {
     const rgb = hexToRgb(color);
     return getBrightness(rgb) > 128 ? "#000000" : "#ffffff";
@@ -229,6 +332,7 @@ export const getTextColor = color => {
 
 export const aniButtonsFromObject = (object, handleSelect, groupName) => {
     if (!object) return null;
+
     const style = { maxWidth: "13.5rem" };
     return Object.keys(object).map(key => (
         <Button
@@ -245,16 +349,33 @@ export const aniButtonsFromObject = (object, handleSelect, groupName) => {
 };
 
 // Animation chain code generator
+/**
+ * @param {WeaponType} weapon
+ * @param {"Male" | "Female"} gender
+ */
 export const getStandbyCode = (weapon, gender) =>
     `${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
 
+/**
+ * @param {WeaponType} weapon
+ */
 export const getVictoryCode = weapon =>
     `${WEAPON_CODE[weapon]}_WIN_01>${WEAPON_CODE[weapon]}_WIN_02`;
 
+/**
+ * @param {WeaponType} weapon
+ */
 export const getDashAtkCode = weapon => `${WEAPON_CODE[weapon]}_DAS_02`;
 
+/**
+ * @param {WeaponType} weapon
+ */
 export const getRollCode = weapon => `${WEAPON_CODE[weapon]}_ROL_01`;
 
+/**
+ * Combo chain code
+ * @param {WeaponType} weapon
+ */
 export const getComboCode = weapon => {
     const comboLength = COMBO_LENGTH[weapon];
     const code = WEAPON_CODE[weapon];
@@ -266,7 +387,10 @@ export const getComboCode = weapon => {
     return parts.join(">");
 };
 
-// Force Strike chain code
+/**
+ * Force Strike chain code
+ * @param {WeaponType} weapon
+ */
 export const getFSCode = weapon => {
     const fsAniLength = FS_LENGTH[weapon];
     const code = WEAPON_CODE[weapon];
@@ -277,7 +401,11 @@ export const getFSCode = weapon => {
     return parts.join(">");
 };
 
-// Join Lobby chain code
+/**
+ * Join Lobby chain code
+ * @param {WeaponType} weapon
+ * @param {"Male" | "Female"} gender
+ */
 export const getLobbyCode = (weapon, gender) => {
     const code = WEAPON_CODE[weapon];
     if (gender === "Male")
