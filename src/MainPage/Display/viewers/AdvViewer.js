@@ -168,6 +168,9 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
+    /**
+     * @param {string} newIdx
+     */
     set eyeIdx(newIdx) {
         if (!newIdx) return;
 
@@ -197,6 +200,9 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
+    /**
+     * @param {string} newIdx
+     */
     set mouthIdx(newIdx) {
         if (!newIdx) return;
 

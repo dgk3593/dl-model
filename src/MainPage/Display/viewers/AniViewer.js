@@ -80,6 +80,10 @@ export class AniViewer extends BasicViewer {
         this.mouthIdx = mouthIdx;
     };
 
+    set eyeIdx(newIdx) {}
+
+    set mouthIdx(newIdx) {}
+
     beforeAddAni = () => {
         this.resetFace();
     };
