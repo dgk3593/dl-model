@@ -66,6 +66,7 @@ export class AdvViewer extends AniViewer {
 
     initFace = () => {
         const modelId = this.props.model.id;
+        this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
         const defaultFaceParams = {
             mouthTexture: modelId,
             mouthIdx: DEFAULT_FACE_IDX,
