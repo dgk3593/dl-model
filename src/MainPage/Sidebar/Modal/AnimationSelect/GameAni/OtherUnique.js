@@ -16,7 +16,7 @@ function OtherUnique({ handleSelect }) {
     const charaList = Object.keys(otherUnique[weapon]);
     const content = charaList.map(chara => {
         const aniList = otherUnique[weapon][chara].animations;
-        const iconLink = `${process.env.PUBLIC_URL}/${otherUnique[weapon][chara].icon}`;
+        const iconLink = `${process.env.PUBLIC_URL}/img/${otherUnique[weapon][chara].icon}`;
         const buttons = aniList.map(ani => (
             <Button
                 variant="contained"

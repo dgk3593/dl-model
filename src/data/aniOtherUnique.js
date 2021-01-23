@@ -6,7 +6,7 @@ import "helpers/typedef";
 const otherUnique = {
     Sword: {
         Pecorine: {
-            icon: "img/advIcons/110371_01_r05.png",
+            icon: "advIcons/110371_01_r05.png",
             animations: [
                 {
                     name: "Slow Run",
@@ -90,7 +90,7 @@ const otherUnique = {
     },
     Wand: {
         Yurius: {
-            icon: "img/advIcons/110362_01_r05.png",
+            icon: "advIcons/110362_01_r05.png",
             animations: [
                 {
                     name: "Dragondrive",
@@ -99,7 +99,7 @@ const otherUnique = {
             ],
         },
         "Mega Man": {
-            icon: "img/advIcons/110354_01_r05.png",
+            icon: "advIcons/110354_01_r05.png",
             animations: [
                 {
                     name: "Join Room",
@@ -145,7 +145,7 @@ const otherUnique = {
             ],
         },
         Peony: {
-            icon: "img/advIcons/110361_01_r05.png",
+            icon: "advIcons/110361_01_r05.png",
             animations: [
                 {
                     name: "Bob",
@@ -237,7 +237,7 @@ const otherUnique = {
     },
     Lance: {
         Nadine: {
-            icon: "img/advIcons/110357_01_r05.png",
+            icon: "advIcons/110357_01_r05.png",
             animations: [
                 {
                     name: "Join Room",
@@ -251,13 +251,13 @@ const otherUnique = {
             ],
         },
         Catherine: {
-            icon: "img/advIcons/110364_01_r05.png",
+            icon: "advIcons/110364_01_r05.png",
             animations: [{ name: "Dash Attack", code: "LAN_DAS_02_11036401" }],
         },
     },
     Dagger: {
         "Gala Laxi": {
-            icon: "img/advIcons/100032_04_r05.png",
+            icon: "advIcons/100032_04_r05.png",
             animations: [
                 {
                     name: "Join Room",
@@ -283,7 +283,7 @@ const otherUnique = {
             ],
         },
         Bellina: {
-            icon: "img/advIcons/110306_01_r05.png",
+            icon: "advIcons/110306_01_r05.png",
             animations: [
                 {
                     name: "Dragondrive",
@@ -292,7 +292,7 @@ const otherUnique = {
             ],
         },
         Tiki: {
-            icon: "img/advIcons/110360_01_r05.png",
+            icon: "advIcons/110360_01_r05.png",
             animations: [
                 {
                     name: "Transform",
@@ -303,7 +303,7 @@ const otherUnique = {
     },
     Bow: {
         Pinon: {
-            icon: "img/advIcons/110366_01_r05.png",
+            icon: "advIcons/110366_01_r05.png",
             animations: [
                 {
                     name: "Force Strike Run",
@@ -312,7 +312,7 @@ const otherUnique = {
             ],
         },
         "Hunter Sarisse": {
-            icon: "img/advIcons/100029_03_r05.png",
+            icon: "advIcons/100029_03_r05.png",
             animations: [
                 {
                     name: "Force Strike Run",
@@ -321,7 +321,7 @@ const otherUnique = {
             ],
         },
         Meene: {
-            icon: "img/advIcons/110368_01_r05.png",
+            icon: "advIcons/110368_01_r05.png",
             animations: [
                 {
                     name: "Join Room",
@@ -405,7 +405,7 @@ const otherUnique = {
     },
     Axe: {
         "Summer Patia": {
-            icon: "img/advIcons/110335_02_r05.png",
+            icon: "advIcons/110335_02_r05.png",
             animations: [
                 {
                     name: "Force Strike Run",
@@ -417,7 +417,7 @@ const otherUnique = {
 
     Staff: {
         Zethia: {
-            icon: "img/advIcons/100009_01_r05.png",
+            icon: "advIcons/100009_01_r05.png",
             animations: [
                 {
                     name: "Slow Run",
@@ -430,7 +430,7 @@ const otherUnique = {
             ],
         },
         "Gala Zena": {
-            icon: "img/advIcons/100009_08_r05.png",
+            icon: "advIcons/100009_08_r05.png",
             animations: [
                 {
                     name: "Force Strike Run",
@@ -439,7 +439,7 @@ const otherUnique = {
             ],
         },
         "Dragonyule Lily": {
-            icon: "img/advIcons/110252_02_r05.png",
+            icon: "advIcons/110252_02_r05.png",
             animations: [
                 {
                     name: "Force Strike Run",
@@ -450,7 +450,7 @@ const otherUnique = {
     },
     Manacaster: {
         Ilia: {
-            icon: "img/advIcons/110367_01_r05.png",
+            icon: "advIcons/110367_01_r05.png",
             animations: [{ name: "Roll", code: "GUN_ROL_01_11036701" }],
         },
     },
