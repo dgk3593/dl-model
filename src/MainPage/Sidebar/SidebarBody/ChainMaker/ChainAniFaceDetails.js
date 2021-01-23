@@ -23,8 +23,8 @@ function ChainAniFaceDetails(props) {
 
     const eyeImgPath = `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
     const mouthImgPath = `${fbxSource}/fbx/${mouthTexture}/${mouthTexture}.png`;
-    const eyeOffsetFix = faceOffsetFix[eyeTexture] || { x: 0, y: 0 };
-    const mouthOffsetFix = faceOffsetFix[mouthTexture] || { x: 0, y: 0 };
+    const eyeOffsetFix = faceOffsetFix[eyeTexture] || [0, 0];
+    const mouthOffsetFix = faceOffsetFix[mouthTexture] || [0, 0];
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
 

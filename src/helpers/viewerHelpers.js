@@ -435,25 +435,32 @@ const replaceMaterial = (object, newMaterial) => {
 export const calculateTextureOffset = (currentTexture, prevTexture) => {
     const offset = { x: 0, y: 0 };
     if (currentTexture !== prevTexture) {
-        const prevOffset = textureOffsets[prevTexture] || { x: 0, y: 0 };
-        const currentOffset = textureOffsets[currentTexture] || { x: 0, y: 0 };
+        const [prevOffsetX, prevOffsetY] = textureOffsets[prevTexture] || [
+            0,
+            0,
+        ];
+        const [currentOffsetX, currentOffsetY] = textureOffsets[
+            currentTexture
+        ] || [0, 0];
 
-        offset.x = currentOffset.x - prevOffset.x;
-        offset.y = currentOffset.y - prevOffset.y;
+        offset.x = currentOffsetX - prevOffsetX;
+        offset.y = currentOffsetY - prevOffsetY;
     }
-    return offset;
+    return [offset.x, offset.y];
 };
 
 export const calculateIdxOffset = (currentIdx, prevIdx) => {
     const offset = { x: 0, y: 0 };
     if (currentIdx !== prevIdx) {
-        const prevOffset = idxOffsets[`face${prevIdx}`];
-        const currentOffset = idxOffsets[`face${currentIdx}`];
+        const [prevOffsetX, prevOffsetY] = idxOffsets[`face${prevIdx}`];
+        const [currentOffsetX, currentOffsetY] = idxOffsets[
+            `face${currentIdx}`
+        ];
 
-        offset.x = currentOffset.x - prevOffset.x;
-        offset.y = currentOffset.y - prevOffset.y;
+        offset.x = currentOffsetX - prevOffsetX;
+        offset.y = currentOffsetY - prevOffsetY;
     }
-    return offset;
+    return [offset.x, offset.y];
 };
 
 /**
@@ -461,6 +468,7 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
  * @param {string} part - part to apply offset
  */
 const applyOffset = part => (target, offset) => {
+    const [offsetX, offsetY] = offset;
     target.traverse(child => {
         if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
             return;
@@ -474,8 +482,8 @@ const applyOffset = part => (target, offset) => {
         const end = start + count;
         const uv = child.geometry.attributes.uv;
         for (let i = start; i < end; i++) {
-            const u = uv.getX(i) + 0.25 * offset.x;
-            const v = uv.getY(i) + 0.25 * offset.y;
+            const u = uv.getX(i) + 0.25 * offsetX;
+            const v = uv.getY(i) + 0.25 * offsetY;
             uv.setXY(i, u, v);
         }
         uv.needsUpdate = true;

@@ -89,7 +89,7 @@ export class AniViewer extends BasicViewer {
     };
 
     addAnimation = async () => {
-        this.beforeAddAni?.();
+        this.beforeAddAni();
 
         const { code: aniCode, timeScale } = this.props.animation;
         if (!aniCode) return;

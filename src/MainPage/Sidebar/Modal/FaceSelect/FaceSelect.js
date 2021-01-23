@@ -25,8 +25,8 @@ function FaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
 
     const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
 
-    const eyeOffsetFix = faceOffsetFix[eyeTexture] || { x: 0, y: 0 };
-    const mouthOffsetFix = faceOffsetFix[mouthTexture] || { x: 0, y: 0 };
+    const eyeOffsetFix = faceOffsetFix[eyeTexture] || [0, 0];
+    const mouthOffsetFix = faceOffsetFix[mouthTexture] || [0, 0];
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
     const defaultHandler = idx => {

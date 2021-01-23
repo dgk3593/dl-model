@@ -3,6 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 const faceBGSize = "512px 512px";
 const faceSize = 64;
 
+/**
+ * @param {xyCoordinate} eyeOffsetFix
+ * @param {xyCoordinate} mouthOffsetFix
+ */
 const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
     const indexes = Array(9)
         .fill()
@@ -16,14 +20,16 @@ const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
         const offsetY = -(298 + m * 128);
         return [offsetX, offsetY];
     });
-    const { x: eyeX, y: eyeY } = eyeOffsetFix;
+
+    const [eyeX, eyeY] = eyeOffsetFix;
     const eyeXFix = eyeX * 128;
     const eyeYFix = eyeY * 128;
     const eyeBgPos = i => {
         const [offsetX, offsetY] = baseOffset[i - 1];
         return `${offsetX - eyeXFix}px ${offsetY + eyeYFix}px`;
     };
-    const { x: mouthX, y: mouthY } = mouthOffsetFix;
+
+    const [mouthX, mouthY] = mouthOffsetFix;
     const mouthXFix = mouthX * 128;
     const mouthYFix = mouthY * 128;
     const mouthBgPos = i => {
@@ -66,6 +72,7 @@ const useStyles = (eyeOffsetFix, mouthOffsetFix) => {
             backgroundPosition: mouthBgPos(i),
         };
     }
+    // @ts-ignore
     return makeStyles(styles)();
 };
 

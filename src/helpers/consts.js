@@ -578,16 +578,19 @@ export const controlsPositions = {
     smith: [0, 0.5, 0],
 };
 
+/**
+ * @type {{ [id: string]: xyCoordinate }}
+ */
 export const idxOffsets = {
-    face1: { x: 2, y: 1 },
-    face2: { x: 0, y: 0 },
-    face3: { x: 1, y: 0 },
-    face4: { x: 2, y: 0 },
-    face5: { x: 3, y: 0 },
-    face6: { x: 0, y: -1 },
-    face7: { x: 1, y: -1 },
-    face8: { x: 2, y: -1 },
-    face9: { x: 3, y: -1 },
+    face1: [2, 1],
+    face2: [0, 0],
+    face3: [1, 0],
+    face4: [2, 0],
+    face5: [3, 0],
+    face6: [0, -1],
+    face7: [1, -1],
+    face8: [2, -1],
+    face9: [3, -1],
 };
 
 export const aniModList = {
