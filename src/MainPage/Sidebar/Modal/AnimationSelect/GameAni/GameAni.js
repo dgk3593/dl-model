@@ -5,14 +5,14 @@ import Tab from "@material-ui/core/Tab";
 
 import "../styles/AnimationSelect.css";
 
-import { unidentified } from "data/animationOthers";
-import questAnimation from "data/animationQuest";
-import uniqueFS from "data/animationUniqueFS";
-import skills from "data/animationSkills";
-import uniqueVictory from "data/animationUniqueVictory";
-import uniqueCombo from "data/animationUniqueCombo";
+import otherAnimation from "data/aniOthers";
+import questAnimation from "data/aniQuest";
+import uniqueFS from "data/aniUniqueFS";
+import skills from "data/aniSkills";
+import uniqueVictory from "data/aniUniqueVictory";
+import uniqueCombo from "data/aniUniqueCombo";
 
-import { aniButtonsFromObject } from "helpers/helpers";
+import { listToAniButtons } from "helpers/helpers";
 
 import HomeAni from "./HomeAni";
 const WeaponAni = lazy(() => import("./WeaponAni"));
@@ -33,7 +33,7 @@ function GameAni({ handleSelect }) {
             content = <HomeAni handleSelect={handleSelect} />;
             break;
         case 1: // In quest animations
-            content = aniButtonsFromObject(questAnimation, handleSelect);
+            content = listToAniButtons(questAnimation, handleSelect);
             break;
         case 2: // Weapon specific animations
             content = <WeaponAni handleSelect={handleSelect} />;
@@ -77,7 +77,7 @@ function GameAni({ handleSelect }) {
             content = <OtherUnique handleSelect={handleSelect} />;
             break;
         case 9: // Unused
-            content = aniButtonsFromObject(unidentified, handleSelect);
+            content = listToAniButtons(otherAnimation, handleSelect);
             break;
         default:
     }

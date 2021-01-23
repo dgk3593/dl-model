@@ -1,6 +1,6 @@
 import Selector from "./Selector";
 
-import { gunModeExtra } from "data/animationWeaponExtra";
+import { gunModeExtra } from "data/aniWeaponExtra";
 
 function GunModeSelector({ value, onClick }) {
     const options = Object.keys(gunModeExtra);

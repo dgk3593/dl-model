@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import WeaponSelector from "components/selectors/WeaponSelector";
 import Button from "@material-ui/core/Button";
 
-import otherUnique from "data/animationOtherUnique";
+import otherUnique from "data/aniOtherUnique";
 import { WEAPON_LIST } from "helpers/consts";
 
 import "./styles/OtherUnique.css";
@@ -21,7 +21,7 @@ function OtherUnique({ handleSelect }) {
             <Button
                 variant="contained"
                 onClick={handleSelect}
-                data-value={ani.value}
+                data-value={ani.code}
                 data-name={`${chara} ${ani.name}`}
                 key={`${chara}-${ani.name}`}
             >

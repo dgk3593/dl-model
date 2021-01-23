@@ -14,9 +14,9 @@ import {
     getLobbyCode,
     getDashAtkCode,
     getRollCode,
-    aniButtonsFromObject,
+    listToAniButtons,
 } from "helpers/helpers";
-import weaponExtra, { gunModeExtra } from "data/animationWeaponExtra";
+import weaponExtra, { gunModeExtra } from "data/aniWeaponExtra";
 
 import "./styles/WeaponAni.css";
 
@@ -103,7 +103,7 @@ function WeaponAni({ handleSelect }) {
                 </Button>
             </div>
             <div className="WeaponAni-Btns">
-                {aniButtonsFromObject(weaponExtra[weapon], handleSelect)}
+                {listToAniButtons(weaponExtra[weapon], handleSelect)}
             </div>
             {weapon === "Manacaster" && (
                 <>
@@ -114,7 +114,7 @@ function WeaponAni({ handleSelect }) {
                         />
                     </div>
                     <div className="WeaponAni-Btns">
-                        {aniButtonsFromObject(
+                        {listToAniButtons(
                             gunModeExtra[params.gunMode],
                             handleSelect
                         )}

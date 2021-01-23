@@ -1,8 +1,8 @@
 import { useState } from "react";
 import WeaponSelector from "components/selectors/WeaponSelector";
 
-import { aniButtonsFromObject } from "helpers/helpers";
-import genericSkills from "data/animationGenericSkills";
+import { listToAniButtons } from "helpers/helpers";
+import genericSkills from "data/aniGenericSkills";
 
 import { WEAPON_LIST } from "helpers/consts";
 import "./styles/WeaponAni.css";
@@ -23,7 +23,7 @@ function GenericSkills({ handleSelect }) {
                 />
             </div>
             <div className="WeaponAni-Btns">
-                {aniButtonsFromObject(genericSkills[weapon], handleSelect)}
+                {listToAniButtons(genericSkills[weapon], handleSelect)}
             </div>
         </div>
     );

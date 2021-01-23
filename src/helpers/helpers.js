@@ -12,7 +12,7 @@ import {
 } from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
-import dragonAni from "data/animationDragon";
+import dragonAni from "data/aniDragon";
 
 /**
  * capitalize first letter of tring
@@ -330,20 +330,26 @@ export const getTextColor = color => {
     return getBrightness(rgb) > 128 ? "#000000" : "#ffffff";
 };
 
-export const aniButtonsFromObject = (object, handleSelect, groupName) => {
-    if (!object) return null;
+/**
+ * turn a list of animation data to buttons
+ * @param {AnimationList} list
+ * @param {*} handleSelect
+ * @param {string} [groupName]
+ */
+export const listToAniButtons = (list, handleSelect, groupName = "") => {
+    if (!list) return;
 
     const style = { maxWidth: "13.5rem" };
-    return Object.keys(object).map(key => (
+    return list.map(({ name, code }) => (
         <Button
             variant="contained"
-            key={key}
-            data-value={object[key]}
-            data-name={`${groupName ? `${groupName} ` : ""}${key}`}
+            key={name}
+            data-value={code}
+            data-name={`${groupName ? `${groupName} ` : ""}${name}`}
             onClick={handleSelect}
             style={style}
         >
-            {key}
+            {name}
         </Button>
     ));
 };

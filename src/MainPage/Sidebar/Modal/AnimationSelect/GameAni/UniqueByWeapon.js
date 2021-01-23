@@ -7,7 +7,7 @@ import { WEAPON_LIST } from "helpers/consts";
 
 import "./styles/UniqueByWeapon.css";
 
-function UniqueByWeapon({ data, groupName, handleSelect }) {
+function UniqueByWeapon({ data, groupName = "", handleSelect }) {
     const [weapon, setWeapon] = useState("Sword");
 
     useEffect(() => {

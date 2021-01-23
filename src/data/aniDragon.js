@@ -1,3 +1,8 @@
+import "helpers/typedef";
+
+/**
+ * @type {{ [id:string]: AnimationData[]}}
+ */
 const dragonAni = {
     d200008_01: [
         { name: "Idle", code: "D20000801_000_01" },

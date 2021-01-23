@@ -5,8 +5,8 @@ import Tab from "@material-ui/core/Tab";
 
 import "./styles/AnimationSelect.css";
 
-import extraAnimation from "data/animationExtra";
-import { aniButtonsFromObject } from "helpers/helpers";
+import extraAnimation from "data/aniExtra";
+import { listToAniButtons } from "helpers/helpers";
 
 function ExtraAni({ handleSelect }) {
     const [categoryId, setCategoryId] = useState(0);
@@ -30,7 +30,7 @@ function ExtraAni({ handleSelect }) {
                 ))}
             </Tabs>
             <div className="AnimationSelect-subCategory">
-                {aniButtonsFromObject(
+                {listToAniButtons(
                     extraAnimation[categoryList[categoryId]],
                     handleSelect
                 )}

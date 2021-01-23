@@ -1,6 +1,6 @@
 import "./styles/Selector.css";
 
-function Selector({ value, options, onClick, texts }) {
+function Selector({ value, options, onClick, texts = null }) {
     const handleClick = event => {
         event.stopPropagation();
         const { value } = event.currentTarget.dataset;

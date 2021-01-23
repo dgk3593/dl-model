@@ -1,3 +1,8 @@
+import "helpers/typedef";
+
+/**
+ * @type {{ [weaponType: string]: {[advName: string]: AdvAniData}}}
+ */
 const otherUnique = {
     Sword: {
         Pecorine: {
@@ -5,80 +10,80 @@ const otherUnique = {
             animations: [
                 {
                     name: "Slow Run",
-                    value: "CMN_RUN_01_11037101",
+                    code: "CMN_RUN_01_11037101",
                 },
                 {
                     name: "Fast Run",
-                    value: "CMN_RUN_02_11037101",
+                    code: "CMN_RUN_02_11037101",
                 },
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "SWD_ONT_06_11037101&ts=-0.5>SWD_ONT_04_11037101>SWD_ONT_09_11037101>SWD_ONT_10_11037101>SWD_ONT_23_11037101",
                 },
                 {
                     name: "Standby",
-                    value: "SWD_ONT_23_11037101",
+                    code: "SWD_ONT_23_11037101",
                 },
                 {
                     name: "Idle",
-                    value: "CMN_INT_01_11037101",
+                    code: "CMN_INT_01_11037101",
                 },
                 {
                     name: "Roll",
-                    value: "SWD_ROL_01_11037101",
+                    code: "SWD_ROL_01_11037101",
                 },
                 {
                     name: "Dash Attack",
-                    value: "SWD_DAS_02_11037101",
+                    code: "SWD_DAS_02_11037101",
                 },
                 {
                     name: "Quick Turn",
-                    value: "CMN_QTN_01_11037101&ts=0.5",
+                    code: "CMN_QTN_01_11037101&ts=0.5",
                 },
                 {
                     name: "Knocked Away",
-                    value: "CMN_BST_01_11037101>CMN_BST_04_11037101",
+                    code: "CMN_BST_01_11037101>CMN_BST_04_11037101",
                 },
                 {
                     name: "Fall to Ground",
-                    value: "CMN_BST_05_11037101",
+                    code: "CMN_BST_05_11037101",
                 },
                 {
                     name: "Stand back up",
-                    value: "CMN_BST_06_11037101",
+                    code: "CMN_BST_06_11037101",
                 },
                 {
                     name: "Ukemi",
-                    value: "CMN_UKM_01_11037101&ts=0.5>CMN_UKM_03_11037101",
+                    code: "CMN_UKM_01_11037101&ts=0.5>CMN_UKM_03_11037101",
                 },
                 {
                     name: "Ukemi 2",
-                    value: "CMN_UKM_11_11037101&ts=0.5>CMN_UKM_03_11037101",
+                    code: "CMN_UKM_11_11037101&ts=0.5>CMN_UKM_03_11037101",
                 },
                 {
                     name: "Landing",
-                    value: "CMN_LND_01_11037101&ts=0.5",
+                    code: "CMN_LND_01_11037101&ts=0.5",
                 },
                 {
                     name: "Stun",
-                    value: "CMN_SWN_01_11037101",
+                    code: "CMN_SWN_01_11037101",
                 },
                 {
                     name: "Frozen",
-                    value: "CMN_FRZ_01_11037101",
+                    code: "CMN_FRZ_01_11037101",
                 },
                 {
                     name: "Take Damage",
-                    value: "CMN_KNB_01_11037101",
+                    code: "CMN_KNB_01_11037101",
                 },
                 {
                     name: "Die",
-                    value: "CMN_DIE_02_11037101",
+                    code: "CMN_DIE_02_11037101",
                 },
                 {
                     name: "Transform",
-                    value: "CMN_CTD_01_11037101",
+                    code: "CMN_CTD_01_11037101",
                 },
             ],
         },
@@ -89,7 +94,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Dragondrive",
-                    value: "CMN_CTD_01_11036201>CMN_CTD_02_11036201",
+                    code: "CMN_CTD_01_11036201>CMN_CTD_02_11036201",
                 },
             ],
         },
@@ -98,44 +103,44 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "ROD_ONT_05_11035401&ts=-0.5>ROD_ONT_02_11035401>ROD_ONT_07_11035401>ROD_ONT_08_11035401>ROD_ONT_21_11035401",
                 },
                 {
                     name: "Standby",
-                    value: "ROD_ONT_21_11035401",
+                    code: "ROD_ONT_21_11035401",
                 },
                 {
                     name: "Idle",
-                    value: "CMN_INT_01_11035401",
+                    code: "CMN_INT_01_11035401",
                 },
                 {
                     name: "Slow Run",
-                    value: "CMN_RUN_01_11035401",
+                    code: "CMN_RUN_01_11035401",
                 },
                 {
                     name: "Fast Run",
-                    value: "CMN_RUN_02_11035401",
+                    code: "CMN_RUN_02_11035401",
                 },
                 {
                     name: "Force Strike Run",
-                    value: "ROD_RUN_05_11035401",
+                    code: "ROD_RUN_05_11035401",
                 },
                 {
                     name: "Slide",
-                    value: "ROD_ROL_01_11035401",
+                    code: "ROD_ROL_01_11035401",
                 },
                 {
                     name: "Stun",
-                    value: "CMN_SWN_01_11035401",
+                    code: "CMN_SWN_01_11035401",
                 },
                 {
                     name: "Damaged / Afflicted / Die",
-                    value: "CMN_BST_01_11035401",
+                    code: "CMN_BST_01_11035401",
                 },
                 {
                     name: "Jump on Rush",
-                    value: "CMN_CTD_01_11035401>CMN_CTD_02_11035401",
+                    code: "CMN_CTD_01_11035401>CMN_CTD_02_11035401",
                 },
             ],
         },
@@ -144,88 +149,88 @@ const otherUnique = {
             animations: [
                 {
                     name: "Bob",
-                    value: "CMN_MWM_03_11036101",
+                    code: "CMN_MWM_03_11036101",
                 },
                 {
                     name: "Stroll",
-                    value: "CMN_MWM_21_11036101",
+                    code: "CMN_MWM_21_11036101",
                 },
                 {
                     name: "Fly Slow",
-                    value: "CMN_RUN_01_11036101",
+                    code: "CMN_RUN_01_11036101",
                 },
                 {
                     name: "Fly Fast",
-                    value: "CMN_RUN_02_11036101",
+                    code: "CMN_RUN_02_11036101",
                 },
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "ROD_ONT_06_11036101&ts=-0.5>ROD_ONT_04_11036101>ROD_ONT_09_11036101>ROD_ONT_10_11036101>ROD_ONT_23_11036101",
                 },
                 {
                     name: "Standby",
-                    value: "ROD_ONT_23_11036101",
+                    code: "ROD_ONT_23_11036101",
                 },
                 {
                     name: "Idle",
-                    value: "CMN_INT_01_11036101",
+                    code: "CMN_INT_01_11036101",
                 },
                 {
                     name: "Roll",
-                    value: "ROD_ROL_01_11036101",
+                    code: "ROD_ROL_01_11036101",
                 },
                 {
                     name: "Dash Attack",
-                    value: "ROD_DAS_02_11036101",
+                    code: "ROD_DAS_02_11036101",
                 },
                 {
                     name: "Force Strike Run",
-                    value: "ROD_RUN_05_11036101",
+                    code: "ROD_RUN_05_11036101",
                 },
                 {
                     name: "Quick Turn",
-                    value: "CMN_QTN_01_11036101&ts=0.5",
+                    code: "CMN_QTN_01_11036101&ts=0.5",
                 },
                 {
                     name: "Knocked Away",
-                    value: "CMN_BST_01_11036101>CMN_BST_04_11036101",
+                    code: "CMN_BST_01_11036101>CMN_BST_04_11036101",
                 },
                 {
                     name: "Fall to Ground",
-                    value: "CMN_BST_05_11036101",
+                    code: "CMN_BST_05_11036101",
                 },
                 {
                     name: "Stand back up",
-                    value: "CMN_BST_06_11036101",
+                    code: "CMN_BST_06_11036101",
                 },
                 {
                     name: "Ukemi",
-                    value: "CMN_UKM_01_11036101&ts=0.5>CMN_UKM_03_11036101",
+                    code: "CMN_UKM_01_11036101&ts=0.5>CMN_UKM_03_11036101",
                 },
                 {
                     name: "Ukemi 2",
-                    value: "CMN_UKM_11_11036101&ts=0.5>CMN_UKM_03_11036101",
+                    code: "CMN_UKM_11_11036101&ts=0.5>CMN_UKM_03_11036101",
                 },
                 {
                     name: "Stun",
-                    value: "CMN_SWN_01_11036101",
+                    code: "CMN_SWN_01_11036101",
                 },
                 {
                     name: "Frozen",
-                    value: "CMN_FRZ_01_11036101",
+                    code: "CMN_FRZ_01_11036101",
                 },
                 {
                     name: "Take Damage",
-                    value: "CMN_KNB_01_11036101",
+                    code: "CMN_KNB_01_11036101",
                 },
                 {
                     name: "Die",
-                    value: "CMN_DIE_02_11036101",
+                    code: "CMN_DIE_02_11036101",
                 },
                 {
                     name: "Transform",
-                    value: "CMN_CTD_01_11036101",
+                    code: "CMN_CTD_01_11036101",
                 },
             ],
         },
@@ -236,18 +241,18 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "LAN_ONT_06_11035701&ts=-0.5>LAN_ONT_04_11035701>LAN_ONT_09_11035701>LAN_ONT_10_11035701>LAN_ONT_23_11035701",
                 },
                 {
                     name: "Standby",
-                    value: "LAN_ONT_23_11035701",
+                    code: "LAN_ONT_23_11035701",
                 },
             ],
         },
         Catherine: {
             icon: "img/advIcons/110364_01_r05.png",
-            animations: [{ name: "Dash Attack", value: "LAN_DAS_02_11036401" }],
+            animations: [{ name: "Dash Attack", code: "LAN_DAS_02_11036401" }],
         },
     },
     Dagger: {
@@ -256,24 +261,24 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "DAG_ONT_06_10003204&ts=-0.5>DAG_ONT_04_10003204>DAG_ONT_09_10003204>DAG_ONT_10_10003204>DAG_ONT_23_10003204",
                 },
                 {
                     name: "Standby",
-                    value: "DAG_ONT_23_10003204",
+                    code: "DAG_ONT_23_10003204",
                 },
                 {
                     name: "Dash Attack",
-                    value: "DAG_DAS_02_10003204",
+                    code: "DAG_DAS_02_10003204",
                 },
                 {
                     name: "Slow Run",
-                    value: "CMN_RUN_01_10003204",
+                    code: "CMN_RUN_01_10003204",
                 },
                 {
                     name: "Fast Run",
-                    value: "CMN_RUN_02_10003204",
+                    code: "CMN_RUN_02_10003204",
                 },
             ],
         },
@@ -282,7 +287,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Dragondrive",
-                    value: "CMN_CTD_01_11030601>CMN_CTD_02_11030601",
+                    code: "CMN_CTD_01_11030601>CMN_CTD_02_11030601",
                 },
             ],
         },
@@ -291,7 +296,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Transform",
-                    value: "CMN_CTD_01_11036001>CMN_CTD_02_11036001",
+                    code: "CMN_CTD_01_11036001>CMN_CTD_02_11036001",
                 },
             ],
         },
@@ -302,7 +307,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "BOW_RUN_05_11036601",
+                    code: "BOW_RUN_05_11036601",
                 },
             ],
         },
@@ -311,7 +316,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "BOW_RUN_05_10002903",
+                    code: "BOW_RUN_05_10002903",
                 },
             ],
         },
@@ -320,80 +325,80 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    value:
+                    code:
                         "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>BOW_ONT_23_11036801",
                 },
                 {
                     name: "Standby",
-                    value: "BOW_ONT_23_11036801",
+                    code: "BOW_ONT_23_11036801",
                 },
                 {
                     name: "Idle",
-                    value: "CMN_INT_01_11036801",
+                    code: "CMN_INT_01_11036801",
                 },
                 {
                     name: "Fly Slow",
-                    value: "CMN_RUN_01_11036801",
+                    code: "CMN_RUN_01_11036801",
                 },
                 {
                     name: "Fly Fast",
-                    value: "CMN_RUN_02_11036801",
+                    code: "CMN_RUN_02_11036801",
                 },
                 {
                     name: "Roll",
-                    value: "BOW_ROL_01_11036801",
+                    code: "BOW_ROL_01_11036801",
                 },
                 {
                     name: "Dash Attack",
-                    value: "BOW_DAS_02_11036801",
+                    code: "BOW_DAS_02_11036801",
                 },
                 {
                     name: "Force Strike Run",
-                    value: "BOW_RUN_05_11036801",
+                    code: "BOW_RUN_05_11036801",
                 },
                 {
                     name: "Quick Turn",
-                    value: "CMN_QTN_01_11036801&ts=0.5",
+                    code: "CMN_QTN_01_11036801&ts=0.5",
                 },
                 {
                     name: "Knocked Away",
-                    value: "CMN_BST_01_11036801>CMN_BST_04_11036801",
+                    code: "CMN_BST_01_11036801>CMN_BST_04_11036801",
                 },
                 {
                     name: "Fall to Ground",
-                    value: "CMN_BST_05_11036801",
+                    code: "CMN_BST_05_11036801",
                 },
                 {
                     name: "Stand back up",
-                    value: "CMN_BST_06_11036801",
+                    code: "CMN_BST_06_11036801",
                 },
                 {
                     name: "Ukemi",
-                    value: "CMN_UKM_01_11036801&ts=0.5>CMN_UKM_03_11036801",
+                    code: "CMN_UKM_01_11036801&ts=0.5>CMN_UKM_03_11036801",
                 },
                 {
                     name: "Ukemi 2",
-                    value: "CMN_UKM_11_11036801&ts=0.5>CMN_UKM_03_11036801",
+                    code: "CMN_UKM_11_11036801&ts=0.5>CMN_UKM_03_11036801",
                 },
                 {
                     name: "Stun",
-                    value: "CMN_SWN_01_11036801",
+                    code: "CMN_SWN_01_11036801",
                 },
                 {
                     name: "Frozen",
-                    value: "CMN_FRZ_01_11036801",
+                    code: "CMN_FRZ_01_11036801",
                 },
                 {
                     name: "Take Damage",
-                    value: "CMN_KNB_01_11036801",
+                    code: "CMN_KNB_01_11036801",
                 },
                 {
                     name: "Die",
-                    value: "CMN_DIE_02_11036801",
+                    code: "CMN_DIE_02_11036801",
                 },
                 {
                     name: "Transform",
-                    value: "CMN_CTD_01_11036801",
+                    code: "CMN_CTD_01_11036801",
                 },
             ],
         },
@@ -404,7 +409,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "AXE_RUN_05_11033502",
+                    code: "AXE_RUN_05_11033502",
                 },
             ],
         },
@@ -416,11 +421,11 @@ const otherUnique = {
             animations: [
                 {
                     name: "Slow Run",
-                    value: "CMN_RUN_03",
+                    code: "CMN_RUN_03",
                 },
                 {
                     name: "Fast Run",
-                    value: "CMN_RUN_04",
+                    code: "CMN_RUN_04",
                 },
             ],
         },
@@ -429,7 +434,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "CAN_RUN_A_05_10000908",
+                    code: "CAN_RUN_A_05_10000908",
                 },
             ],
         },
@@ -438,7 +443,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Force Strike Run",
-                    value: "CAN_RUN_A_05_11025202",
+                    code: "CAN_RUN_A_05_11025202",
                 },
             ],
         },
@@ -446,7 +451,7 @@ const otherUnique = {
     Manacaster: {
         Ilia: {
             icon: "img/advIcons/110367_01_r05.png",
-            animations: [{ name: "Roll", value: "GUN_ROL_01_11036701" }],
+            animations: [{ name: "Roll", code: "GUN_ROL_01_11036701" }],
         },
     },
 };

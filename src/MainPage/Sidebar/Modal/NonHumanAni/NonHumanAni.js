@@ -5,7 +5,7 @@ import { DispatchContext, SettingsContext } from "context/SettingsContext";
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import Button from "@material-ui/core/Button";
 
-import dragonAni from "data/animationDragon";
+import dragonAni from "data/aniDragon";
 import Modal from "../../Modal";
 
 import { chainCodeToList } from "helpers/viewerHelpers";
