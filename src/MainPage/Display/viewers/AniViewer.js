@@ -44,6 +44,10 @@ export class AniViewer extends BasicViewer {
         model.initRot = model.rotation.clone();
     };
 
+    /**
+     * play animation stored in this.animations[newIdx]
+     * @param {number} newIdx
+     */
     set aniIdx(newIdx) {
         this._aniIdx = newIdx;
 
@@ -165,7 +169,7 @@ export class AniViewer extends BasicViewer {
                 });
                 const url = URL.createObjectURL(superBuffer);
                 const a = document.createElement("a");
-                a.style = "display: none";
+                a.style.display = "none";
                 a.href = url;
                 a.download = "animation.webm";
                 document.body.appendChild(a);
@@ -175,11 +179,13 @@ export class AniViewer extends BasicViewer {
             };
         }
         this.disableInput("Recording");
-        this.beforeCaptureAnimation?.();
+        this.beforeCaptureAnimation();
         // play first animation and start capturing
         this.aniIdx = 0;
         this.mediaRecorder.start();
     };
+
+    beforeCaptureAnimation = () => void 0;
 
     everyAnimate = () => {
         const dt = this.clock.getDelta();

@@ -64,10 +64,10 @@
  * @typedef {`#${string}`} ColorCode
  *
  * @typedef {Object} LightParam
- * @property {string} id - Light ID
+ * @property {string} [id] - Light ID
  * @property {string} type - Type of light
  * @property {ColorCode} color - Light color
- * @property {Boolean} enable - true if enabled
+ * @property {Boolean} [enable] - true if enabled
  * @property {number} intensity - Light intensity
  * @property {xyzCoordinate} [position] - Light position
  *
@@ -81,4 +81,16 @@
  * @property {string} modelPath
  * @property {string} texturePath
  * @property {Boolean} flipped
+ *
+ * @typedef {Object} AnimationData
+ * @property {string} name
+ * @property {string} code
+ * @property {string} [icon]
+ * @property {string} [subtitle]
+ *
+ * @typedef { AnimationData[] } AnimationList
+ *
+ * @typedef {Object} AdvAniData
+ * @property {string} icon
+ * @property {AnimationList} animations
  */

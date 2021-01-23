@@ -11,8 +11,8 @@
 #    - ASCII mode
 ################################################
 */
-import "helpers/typedef";
 import { PureComponent } from "react";
+import "helpers/typedef";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -48,6 +48,9 @@ class BasicViewer extends PureComponent {
         // const { getDragonFaceData } = await import("helpers/getDragonFaceData");
         // await getDragonFaceData();
 
+        // const { convertData } = await import("helpers/convertAniData");
+        // convertData();
+
         await this.initialize();
         this.finishedInit = true;
     }
@@ -72,15 +75,19 @@ class BasicViewer extends PureComponent {
         this.controls = null;
         this.scene = null;
         this.renderer = null;
-        this.rendererAA.renderLists.dispose();
+        this.rendererAA.renderLists?.dispose();
         this.rendererAA.dispose();
         this.rendererAA = null;
-        this.rendererNoAA.renderLists.dispose();
+        this.rendererNoAA.renderLists?.dispose();
         this.rendererNoAA.dispose();
         this.rendererNoAA = null;
     }
 
-    disableInput = msg => this.props.setLoadingMsg(msg || "Loading");
+    /**
+     * disable input and display a message, default is "Loading..."
+     * @param {string} [msg]
+     */
+    disableInput = msg => this.props.setLoadingMsg(msg || "Loading...");
 
     enableInput = () => this.props.setLoadingMsg("");
 
@@ -94,10 +101,12 @@ class BasicViewer extends PureComponent {
         this.models = {};
         this.modelInfo = {};
         await this.loadMainModel();
-        await this.afterMainModelLoad?.();
+        await this.afterMainModelLoad();
 
         this.enableInput();
     };
+
+    afterMainModelLoad = () => void 0;
 
     initScene = () => {
         // viewport
@@ -124,12 +133,18 @@ class BasicViewer extends PureComponent {
             CAM_PARAMS.near,
             CAM_PARAMS.far
         );
+        /**
+         * @type {xyzCoordinate}
+         */
         this.cameraPosition = this.props.cameraPosition || [2, 0, 10];
         this.camera.position.set(...this.cameraPosition);
         this.camera.updateProjectionMatrix();
 
         // Controls
         this.controls = new OrbitControls(this.camera, this.mount);
+        /**
+         * @type {xyzCoordinate}
+         */
         this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
         this.controls.target.set(...this.controlsPosition);
         this.controls.update();
@@ -181,6 +196,10 @@ class BasicViewer extends PureComponent {
         return;
     };
 
+    /**
+     * enable / disable Anti Aliasing
+     * @param {Boolean} enabled
+     */
     set AA(enabled) {
         if (enabled === this._AA) return;
 
@@ -197,6 +216,10 @@ class BasicViewer extends PureComponent {
         this.canvas = newCanvas;
     }
 
+    /**
+     * add light to scene
+     * @param {LightParam} light
+     */
     addLight = light => {
         const { id, enable, ...params } = light;
         if (!enable) return;
@@ -207,11 +230,22 @@ class BasicViewer extends PureComponent {
         this.lights.push(newLight);
     };
 
+    /**
+     * add lights to scene
+     * @param {LightParam[]} lights
+     */
     addAllLights = lights => {
+        /**
+         * @type {THREE.Light[]}
+         */
         this.lights = [];
         lights.forEach(this.addLight);
     };
 
+    /**
+     * remove light from scene
+     * @param {THREE.Light} light
+     */
     removeLight = light => this.scene.remove(light);
 
     removeAllLights = () => this.lights.forEach(this.removeLight);
@@ -266,8 +300,10 @@ class BasicViewer extends PureComponent {
     updateViewer = (prev, current) => {
         this.updateEnvironment(prev, current);
         this.updateModel(prev, current);
-        this.otherUpdate?.(prev, current);
+        this.otherUpdate(prev, current);
     };
+
+    otherUpdate = (prev, current) => void 0;
 
     updateEnvironment = (prev, current) => {
         this.updateViewport(prev.viewport, current.viewport);
@@ -323,10 +359,14 @@ class BasicViewer extends PureComponent {
         const mainUpdated = prev.id !== modelId;
         if (!mainUpdated) return;
 
-        this.beforeMainModelUpdate?.();
+        this.beforeMainModelUpdate();
         await this.replaceMainModel();
-        this.afterMainModelUpdate?.();
+        this.afterMainModelUpdate();
     };
+
+    beforeMainModelUpdate = () => void 0;
+
+    afterMainModelUpdate = () => void 0;
 
     updateOutlineParams = update => {
         const outlines = Object.values(this.outlines).flat();
