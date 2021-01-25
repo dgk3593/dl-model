@@ -498,7 +498,7 @@ class BasicViewer extends PureComponent {
     };
 
     /**
-     * @param {string} color
+     * @param {ColorCode | 'transparent'} color
      */
     set bgColor(color) {
         this.scene.background =

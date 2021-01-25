@@ -579,7 +579,7 @@ export const controlsPositions = {
 };
 
 /**
- * @type {{ [id: string]: xyCoordinate }}
+ * @type {{ [faceNumber: string]: xyCoordinate }}
  */
 export const idxOffsets = {
     face1: [2, 1],

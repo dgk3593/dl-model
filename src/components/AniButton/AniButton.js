@@ -6,9 +6,12 @@ import "helpers/typedef";
 
 /**
  * create an animation button
- * @param {{ data: AnimationData, groupName: string, handleClick: Function}} buttonData
+ * @param {Object} buttonData
+ * @param {AnimationData} buttonData.data - details of animation
+ * @param {function} buttonData.handleClick  - click event handler
+ * @param {string} [buttonData.groupName] - group name if button is part of a group
  */
-function AniButton({ data, groupName, handleClick }) {
+function AniButton({ data, handleClick, groupName = "" }) {
     const { icon, name, subtitle, code } = data;
 
     const fullIconUrl = icon && `${process.env.PUBLIC_URL}/img/${icon}`;
@@ -33,7 +36,7 @@ function AniButton({ data, groupName, handleClick }) {
         <Button
             variant="outlined"
             data-value={code}
-            data-name={`${name} ${groupName || ""}`}
+            data-name={`${name} ${groupName}`}
             onClick={handleClick}
             startIcon={icons}
             className="AniButton"

@@ -260,8 +260,10 @@ export const removeEffects = model => {
 
 /**
  * create a new material
- * @param {string} materialType
- * @param {{map: THREE.Texture, skinning: Boolean }} params
+ * @param {string} materialType - type of material to create
+ * @param {Object} params
+ * @param {THREE.Texture} params.map - texture for new material
+ * @param {Boolean} params.skinning
  * @return {THREE.Material}
  */
 const createNewMaterial = (materialType, params) => {
@@ -271,11 +273,11 @@ const createNewMaterial = (materialType, params) => {
 
 /**
  * change material and optionally the texture of a 3D object
- * @param {THREE.Group} target object to apply change to
- * @param {Object} params
- * @property {string} materialType - type of material to change to
- * @property {string} [texturePath] - path to texture file
- * @property {Boolean} [forced] - force material change
+ * @param {THREE.Group} target - object to apply change to
+ * @param {object} params - parameters
+ * @param {string} params.materialType - type of material to change to
+ * @param {string} [params.texturePath] - path to texture file
+ * @param {boolean} [params.forced] - force material change
  */
 export const changeMaterial = (
     target,
@@ -374,7 +376,7 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
         opacity: { type: "float", value: opacity },
     };
 
-    const material = new THREE.ShaderMaterial({
+    return new THREE.ShaderMaterial({
         skinning: true,
         side: THREE.BackSide,
         transparent: true,
@@ -382,7 +384,6 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
         fragmentShader: outlineFragShader,
         vertexShader: outlineVertShader,
     });
-    return material;
 };
 
 /**
@@ -432,6 +433,12 @@ const replaceMaterial = (object, newMaterial) => {
         : newMaterial;
 };
 
+/**
+ * calculate the difference between 2 face texture files
+ * @param {string} currentTexture
+ * @param {string} prevTexture
+ * @return {xyCoordinate}
+ */
 export const calculateTextureOffset = (currentTexture, prevTexture) => {
     const offset = { x: 0, y: 0 };
     if (currentTexture !== prevTexture) {
@@ -449,6 +456,12 @@ export const calculateTextureOffset = (currentTexture, prevTexture) => {
     return [offset.x, offset.y];
 };
 
+/**
+ * calculate the difference between 2 face index
+ * @param {string} currentIdx
+ * @param {string} prevIdx
+ * @return {xyCoordinate}
+ */
 export const calculateIdxOffset = (currentIdx, prevIdx) => {
     const offset = { x: 0, y: 0 };
     if (currentIdx !== prevIdx) {
@@ -763,8 +776,10 @@ export const createLight = params => {
 
 /**
  * replace model's old texture with a new texture from provided path
- * @param {THREE.Group} target
- * @param {{ oldTexture: string, texturePath: string }} params
+ * @param {THREE.Group} target - object to replace texture
+ * @param {Object} params
+ * @param {string} params.oldTexture - name of texture to be replaced
+ * @param {string} params.texturePath - path to new texture file
  */
 export const replaceTexture = async (target, { oldTexture, texturePath }) => {
     const newTexture = await loadTexture(texturePath);

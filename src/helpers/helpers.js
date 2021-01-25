@@ -122,8 +122,8 @@ const getDefaultFace = modelId => (isDragon(modelId) ? "1" : "2");
 
 /**
  * apply callback on each element of list or on list if list is not an array
- * @param {*|Array} list - list of objects to apply callback
- * @param {Function} callback - callback to apply
+ * @param {* | Array} list - list of objects to apply callback
+ * @param {function} callback - callback to apply
  */
 export const callbackOnEach = (list, callback) => {
     if (Array.isArray(list)) {
