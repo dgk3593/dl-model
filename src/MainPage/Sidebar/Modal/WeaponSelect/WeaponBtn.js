@@ -8,7 +8,7 @@ import { isBlade } from "helpers/helpers";
 const BladeSelector = lazy(() => import("components/selectors/BladeSelector"));
 const BtnIcon = { Left: "⇐", Right: "⇒" };
 
-function WeaponBtn({ id, iconName, name }) {
+function WeaponBtn({ id, iconName = "", name }) {
     const [bladeMode, setBladeMode] = useState("Blade");
     const [clicked, toggleClicked] = useToggleState(false);
     const [reverseGrip, toggleReverseGrip] = useToggleState(false);

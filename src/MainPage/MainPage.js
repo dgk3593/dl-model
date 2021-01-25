@@ -34,8 +34,10 @@ function MainPage({ location }) {
     const viewerRef = useRef();
 
     useEffect(() => {
+        setLoadingMsg("Loading");
         const params = location.pathname.split("/");
         setInitialSettings(params);
+        setLoadingMsg("");
         setInitLoadDone(true);
 
         window.addEventListener("resize", updateViewportSize);

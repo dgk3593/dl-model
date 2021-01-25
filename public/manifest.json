@@ -1,6 +1,7 @@
 {
     "short_name": "DL Model",
     "name": "Dragalia Lost Model Viewer",
+    "description": "View 3D models from the game Dragalia Lost",
     "icons": [
         {
             "src": "favicon.ico",
@@ -13,7 +14,7 @@
             "sizes": "192x192"
         }
     ],
-    "start_url": ".",
+    "start_url": "./#/AA=true",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"

@@ -14,7 +14,7 @@ function SetSelect(props) {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleMenuItemClick = (event, index) => {
+    const handleMenuItemClick = (_, index) => {
         handleSelect(index);
         setAnchorEl(null);
     };
