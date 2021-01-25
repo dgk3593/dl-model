@@ -17,7 +17,7 @@ function MainPage({ location }) {
     const classes = useStyles();
 
     const [sidebar, toggleSidebar] = useToggleState(true);
-    const [loadingMsg, setLoadingMsg] = useState("");
+    const [loadingMsg, setLoadingMsg] = useState("Loading");
     const [initLoadDone, setInitLoadDone] = useState(false);
     const [viewport, setViewport] = useState({
         width: window.innerWidth,
@@ -34,7 +34,6 @@ function MainPage({ location }) {
     const viewerRef = useRef();
 
     useEffect(() => {
-        setLoadingMsg("Loading");
         const params = location.pathname.split("/");
         setInitialSettings(params);
         setLoadingMsg("");
