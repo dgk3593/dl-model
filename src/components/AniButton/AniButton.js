@@ -29,6 +29,7 @@ function AniButton({ data, groupName, handleClick }) {
     );
 
     return (
+        // @ts-ignore
         <Button
             variant="outlined"
             data-value={code}

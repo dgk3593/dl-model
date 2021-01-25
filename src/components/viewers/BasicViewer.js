@@ -1,6 +1,6 @@
-/* 
+/*
 ################################################
-# Base Viewer that supports adding / updating:
+# Basic Viewer that supports adding / updating:
 #    - 1 main model
 #    - auto rotate
 #    - viewport

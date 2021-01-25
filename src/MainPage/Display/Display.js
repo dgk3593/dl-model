@@ -7,9 +7,9 @@ import { getTextColor } from "helpers/helpers";
 import { cameraPositions, controlsPositions } from "helpers/consts";
 
 const AniControl = lazy(() => import("./AniControl"));
-const BaseViewer = lazy(() => import("./viewers/BasicViewer"));
-const AdvViewer = lazy(() => import("./viewers/AdvViewer"));
-const DragonViewer = lazy(() => import("./viewers/DragonViewer"));
+const BaseViewer = lazy(() => import("components/viewers/BasicViewer"));
+const AdvViewer = lazy(() => import("components/viewers/AdvViewer"));
+const DragonViewer = lazy(() => import("components/viewers/DragonViewer"));
 
 const viewers = { basic: BaseViewer, adv: AdvViewer, dragon: DragonViewer };
 
