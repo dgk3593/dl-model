@@ -1,24 +1,24 @@
-.ButtonWithIcons.MuiButton-root {
+.AniButton.MuiButton-root {
     padding: 0.3rem;
     max-width: 14.3rem;
 }
-.ButtonWithIcons .MuiButton-label {
+.AniButton .MuiButton-label {
     display: flex;
     align-items: center;
     margin: auto 0;
 }
 
-.ButtonWithIcons .MuiButton-startIcon > div {
+.AniButton .MuiButton-startIcon > div {
     display: flex;
     align-items: center;
 }
 
-.ButtonWithIcons-icon {
+.AniButton-icon {
     width: 3.5rem;
     height: 3.5rem;
 }
 
-.ButtonWithIcons-description {
+.AniButton-description {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -27,9 +27,9 @@
     align-self: center;
 }
 
-.ButtonWithIcons-title {
+.AniButton-title {
     margin: 0.1rem;
 }
-.ButtonWithIcons-subtitle {
+.AniButton-subtitle {
     margin: 0.1rem;
 }

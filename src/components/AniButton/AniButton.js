@@ -1,8 +1,14 @@
 import Button from "@material-ui/core/Button";
 
-import "./ButtonWithIcons.css";
+import "./AniButton.css";
 
-function ButtonWithIcons({ data, groupName, handleClick }) {
+import "helpers/typedef";
+
+/**
+ * create an animation button
+ * @param {{ data: AnimationData, groupName: string, handleClick: Function}} buttonData
+ */
+function AniButton({ data, groupName, handleClick }) {
     const { icon, name, subtitle, code } = data;
 
     const fullIconUrl = icon && `${process.env.PUBLIC_URL}/img/${icon}`;
@@ -10,21 +16,15 @@ function ButtonWithIcons({ data, groupName, handleClick }) {
     const icons = (
         <div>
             {icon && (
-                <img
-                    className="ButtonWithIcons-icon"
-                    src={fullIconUrl}
-                    alt={name}
-                />
+                <img className="AniButton-icon" src={fullIconUrl} alt={name} />
             )}
         </div>
     );
 
     const description = (
-        <div className="ButtonWithIcons-description">
-            <h3 className="ButtonWithIcons-title">{name}</h3>
-            {subtitle && (
-                <h5 className="ButtonWithIcons-subtitle">{subtitle}</h5>
-            )}
+        <div className="AniButton-description">
+            <h3 className="AniButton-title">{name}</h3>
+            {subtitle && <h5 className="AniButton-subtitle">{subtitle}</h5>}
         </div>
     );
 
@@ -35,11 +35,11 @@ function ButtonWithIcons({ data, groupName, handleClick }) {
             data-name={`${name} ${groupName || ""}`}
             onClick={handleClick}
             startIcon={icons}
-            className="ButtonWithIcons"
+            className="AniButton"
         >
             {description}
         </Button>
     );
 }
 
-export default ButtonWithIcons;
+export default AniButton;

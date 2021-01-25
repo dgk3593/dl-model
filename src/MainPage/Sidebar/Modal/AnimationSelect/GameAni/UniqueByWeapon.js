@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import WeaponSelector from "components/selectors/WeaponSelector";
-import ButtonWithIcons from "components/ButtonWithIcons";
+import AniButton from "components/AniButton";
 
 import { WEAPON_LIST } from "helpers/consts";
 
@@ -19,7 +19,7 @@ function UniqueByWeapon({ data, groupName = "", handleSelect }) {
 
     const buttons = data[weapon] ? (
         data[weapon].map(item => (
-            <ButtonWithIcons
+            <AniButton
                 key={`${item.name}-${item.subtitle}`}
                 data={item}
                 groupName={groupName}
