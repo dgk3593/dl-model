@@ -1,7 +1,7 @@
 import "helpers/typedef";
 
 /**
- * @type {{ [weaponType: string]: AnimationData[]}}
+ * @type {{ [weaponType: string]: AnimationList}}
  */
 const aniGenericSkills = {
     Sword: [

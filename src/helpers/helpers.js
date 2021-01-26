@@ -203,7 +203,7 @@ const initChainMaker = () => {
 
 /**
  * initialize settings using array of params
- * @param {Array<string>} params
+ * @param {Array<string>} paramTexts
  */
 export const setInitParams = paramTexts => {
     const paramsToSet = processParamTexts(paramTexts);

@@ -1,7 +1,7 @@
 import "helpers/typedef";
 
 /**
- * @type {{ [id:string]: AnimationData[]}}
+ * @type {{ [id:string]: AnimationList}}
  */
 const dragonAni = {
     d200008_01: [

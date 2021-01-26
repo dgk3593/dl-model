@@ -1,7 +1,7 @@
 import "helpers/typedef";
 
 /**
- * @type {{ [group :string]: AnimationData[]}}
+ * @type {{ [category :string]: AnimationList}}
  */
 const aniExtra = {
     Dance: [

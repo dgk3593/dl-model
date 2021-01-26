@@ -1,7 +1,7 @@
 import "helpers/typedef";
 
 /**
- * @type {{ [weaponType: string]: AnimationData[]}}
+ * @type {{ [weaponType: string]: AnimationList}}
  */
 const aniWeaponExtra = {
     Axe: [
@@ -141,7 +141,7 @@ const aniWeaponExtra = {
 };
 
 /**
- * @type {{ [gunMode: string]: AnimationData[]}}
+ * @type {{ [gunMode: string]: AnimationList}}
  */
 export const gunModeExtra = {
     "Long Range": [

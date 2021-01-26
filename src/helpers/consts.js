@@ -3,8 +3,9 @@ import "helpers/typedef";
 export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
-export const DEFAULT_FACE_IDX = "2";
-export const DEFAULT_DRAGON_FACE_IDX = "1";
+export const DEFAULT_MODEL_ID = "c100001_01";
+export const DEFAULT_FACE_IDX = 2;
+export const DEFAULT_DRAGON_FACE_IDX = 1;
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#";
 
@@ -164,19 +165,20 @@ export const asciiSet = [
 
 /**
  * used to initialize global state
- * @type {{ [key: string] : * }}
+ * @type {ApplicationState}
  */
 export const defaultSettings = {
     model: {
-        id: "c100001_01",
+        id: DEFAULT_MODEL_ID,
         texture: "",
         eyeTexture: "",
-        eyeIdx: "2",
+        eyeIdx: 2,
         mouthTexture: "",
-        mouthIdx: "2",
+        mouthIdx: 2,
         weaponRight: "",
         weaponLeft: "",
     },
+    // @ts-ignore
     material: {
         type: "Basic",
         ...defaultMatParams,
@@ -191,13 +193,13 @@ export const defaultSettings = {
         code: "",
         timeScale: 1,
     },
-    chainMaker: { chain: "" },
+    chainMaker: { chain: null },
     app: {
         sidebarContent: "settings",
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
-        viewerType: "adv",
+        viewerType: "",
     },
     outline: {
         enable: true,

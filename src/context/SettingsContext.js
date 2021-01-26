@@ -5,6 +5,10 @@ import { defaultSettings } from "helpers/consts";
 export const SettingsContext = createContext();
 export const DispatchContext = createContext();
 
+/**
+ * used to initialize global state
+ * @type {ApplicationState}
+ */
 const initSettings = {};
 Object.keys(defaultSettings).forEach(
     key => (initSettings[key] = { ...defaultSettings[key] })

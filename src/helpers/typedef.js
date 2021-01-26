@@ -63,6 +63,8 @@
  *
  * @typedef {`#${string}`} ColorCode
  *
+ * @typedef {"Basic" | "Toon" | "Lambert" | "Phong" | "Standard"} MaterialType
+ *
  * @typedef {Object} LightParam
  * @property {string} [id] - Light ID
  * @property {string} type - Type of light
@@ -93,4 +95,79 @@
  * @typedef {Object} AdvAniData
  * @property {string} icon
  * @property {AnimationList} animations
+ *
+ * @typedef {Object} AppModelState
+ * @property {string} id - id of the model being displayed
+ * @property {string} texture - override model texture, default is empty
+ * @property {string} eyeTexture - adventurer eyes texture, default is same as id
+ * @property {number} eyeIdx - index of model's eyes, default is 2 for adventurer and 1 for dragon
+ * @property {string} mouthTexture - adventurer mouth texture, default is same as id
+ * @property {number} mouthIdx - index of model's mouth, default is 2 for adventurer and 1 for dragon
+ * @property {string} weaponRight - id of weapon held in adventurer's right hand, default is empty
+ * @property {string} weaponLeft - id of weapon held in adventurer's left hand, default is empty
+ *
+ * @typedef {Object} AppAniState
+ * @property {string} code - animation code, default is getDefaultAni(modelId)
+ * @property {number} timeScale - animation's global time scale, default is 1
+ *
+ * @typedef {Object} AppMatState
+ * @property {MaterialType} type - type of material, default is Basic
+ * @property {Boolean} wireframe - whether wireframe is enabled, default is false
+ * @property {Boolean} useTexture - whether texture is displayed, default is true
+ * @property {Boolean} transparent - whether transparency is enabled, default is false
+ * @property {Boolean} flatShading - whether flat shading is enabled, default is false
+ * @property {ColorCode} color - material color, default is white
+ * @property {ColorCode} emissive - material emissive, default is black
+ * @property {number} emissiveIntensity - material emissive's intensity, 0 < value < 1, default is 1
+ * @property {number} opacity - material's opacity, 0 < value < 1, default is 1
+ * @property {ColorCode} specular - material specular color, default is #111111
+ * @property {number} metalness - material's metalness, 0 < value < 1, default is 0
+ * @property {number} roughness - material's roughness, 0 < value < 1, default is 1
+ * @property {number} shininess - material's shininess, 1 < value < 100, default is 30
+ * @property {string} gradientMap - material's gradient map, default is "none"
+ *
+ * @typedef {Object} AppSceneState
+ * @property {number} rotateSpeed - speed of auto rotation, upward spin, default is 0
+ * @property {ColorCode} background - viewer's background color, default is #cccccc
+ * @property {xyzCoordinate} initCameraPosition - initial camera position, default is null (auto)
+ *
+ * @typedef {Object} ChainMakerState
+ * @property {AnimationChain} chain - animation chain in Chain Maker
+ *
+ * @typedef {Object} AppOutlineState
+ * @property {Boolean} enable - whether outline is enabled, default is true
+ * @property {number} size - outline's size, default is 5
+ * @property {ColorCode} color - outline's color, default is black
+ * @property {number} opacity - outline's opacity, 0 < value < 1, default is 1
+ *
+ * @typedef {Object} AppCaptureState
+ * @property {Boolean} enable - whether animation is being captured
+ * @property {string[]} supportedCodecs - list of supported codec
+ * @property {string} codec - currently selected codec
+ *
+ * @typedef {Object} AppAsciiState
+ * @property {Boolean} enable - whether ASCII mode is on, default is false
+ * @property {string} charSet - character set used to generate ASCII art
+ * @property {Boolean} invert - whether color is inverted before converting, default is false
+ * @property {ColorCode} color - ASCII text color, default is green
+ * @property {ColorCode} bgColor - ASCII background color, default is black
+ *
+ * @typedef {Object} AppMiscState
+ * @property {string} sidebarContent - what's displayed in the sidebar
+ * @property {Boolean} showSettings - whether to display sidebar and setting button, default is true
+ * @property {Boolean} showAniControl - whether to display animation control, default is true
+ * @property {Boolean} antiAliasing - whether Anti Aliasing is enabled, default is false
+ * @property {string} viewerType - type of the current viewer component
+ *
+ * @typedef {Object} ApplicationState
+ * @property {AppSceneState} scene - data related to viewer scene
+ * @property {LightParam[]} lights - lighting settings
+ * @property {AppModelState} model - model related data
+ * @property {AppMatState} material - data related to model's material
+ * @property {AppOutlineState} outline - model's outline settings
+ * @property {AppAniState} animation - animation related data
+ * @property {ChainMakerState} chainMaker - Chain Maker data
+ * @property {AppCaptureState} capture - animation capture settings
+ * @property {AppAsciiState} ascii - ASCII mode settings
+ * @property {AppMiscState} app - other app-related settings
  */
