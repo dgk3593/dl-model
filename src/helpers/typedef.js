@@ -45,6 +45,11 @@
  *
  * @typedef { Array<AniChainItem> } AnimationChain
  *
+ * @typedef {Object} ReducerAction
+ * @property {string} type - type of action to perform
+ * @property {string} key - key to perform action on
+ * @property {*} value - specify action
+ *
  * @typedef {{ [groupName: string]: Array<string> }} FilterGroups
  *
  * @typedef {{ [filterKey: string]: Boolean }} FilterGroupState
