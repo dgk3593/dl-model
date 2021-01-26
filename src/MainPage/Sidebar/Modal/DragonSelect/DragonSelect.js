@@ -9,6 +9,7 @@ import dragons from "data/dragon_list";
 import otherDragons from "data/dragon_list_extra";
 
 import { collectFilter, multiCondFilter, getDefaultAni } from "helpers/helpers";
+import { chainCodeToList } from "helpers/viewerHelpers";
 import "./styles/DragonSelect.css";
 
 const SetSelect = lazy(() => import("components/SetSelect"));
@@ -45,9 +46,14 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
         dispatch({ type: "update", key, value });
 
     const setNewModel = id => {
-        updateSetings("model")({ id, texture: "", eyeIdx: "1", mouthIdx: "1" });
+        const defaultAni = getDefaultAni(id);
 
-        updateSetings("animation")({ code: getDefaultAni(id) });
+        updateSetings("model")({ id, texture: "", eyeIdx: 1, mouthIdx: 1 });
+
+        updateSetings("animation")({ code: defaultAni });
+        updateSetings("chainMaker")({
+            chain: chainCodeToList(defaultAni, "init"),
+        });
 
         updateSetings("app")({ viewerType: "dragon" });
     };
