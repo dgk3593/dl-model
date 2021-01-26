@@ -612,7 +612,7 @@ export const analyzeChainCode = code => {
 export const processFaceChanges = faceChanges => {
     if (!faceChanges.length) return faceChanges;
 
-    const sorted = faceChanges.sort(change => change.time);
+    const sorted = faceChanges.sort((a, b) => a.time - b.time);
     const timeStamps = new Set(faceChanges.map(change => change.time));
     if (faceChanges.length === timeStamps.size) {
         sorted.forEach(change => {

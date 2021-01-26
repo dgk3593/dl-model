@@ -1,6 +1,12 @@
 import { defaultSettings } from "helpers/consts";
 import { filterObject } from "helpers/helpers";
 
+/**
+ * reducer for setting reducer
+ * @param {ApplicationState} state
+ * @param {ReducerAction} action
+ * @return {ApplicationState} new state
+ */
 export const settingsReducer = (state, action) => {
     const { type, key, value } = action;
     switch (type) {
@@ -10,6 +16,7 @@ export const settingsReducer = (state, action) => {
                 ...state,
                 [key]: { ...state[key], [value]: !currentValue },
             };
+
         case "reset":
             // value = array of keys in settings[key] to be reset, null -> reset all
             const defaultSetting = defaultSettings[key];
