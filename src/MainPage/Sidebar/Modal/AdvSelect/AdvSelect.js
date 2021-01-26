@@ -8,7 +8,7 @@ import { ADV_FILTERS } from "helpers/consts";
 import adv from "data/adv_list";
 import allies from "data/allies";
 import enemies from "data/enemies";
-import { defaultAdvAni, spFaceTextures } from "helpers/consts";
+import { DEFAULT_ADV_ANI, spFaceTextures } from "helpers/consts";
 
 import {
     collectFilter,
@@ -65,11 +65,11 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
             mouthTexture: cid,
         });
         if (viewerType !== "adv") {
-            updateModel({ eyeIdx: "2", mouthIdx: "2" });
-            updateSettings("animation")({ code: defaultAdvAni });
+            updateModel({ eyeIdx: 2, mouthIdx: 2 });
+            updateSettings("animation")({ code: DEFAULT_ADV_ANI });
 
             updateSettings("chainMaker")({
-                chain: chainCodeToList(defaultAdvAni, "init"),
+                chain: chainCodeToList(DEFAULT_ADV_ANI, "init"),
             });
         }
         updateSettings("app")({

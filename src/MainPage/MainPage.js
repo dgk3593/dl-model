@@ -8,7 +8,7 @@ import useStyles from "./MainPageStyles";
 
 import Display from "./Display";
 import { SettingsContext } from "context/SettingsContext";
-import { setInitialSettings } from "helpers/helpers";
+import { setInitParams } from "helpers/helpers";
 
 const Sidebar = lazy(() => import("./Sidebar"));
 const Dock = lazy(() => import("./Dock"));
@@ -34,8 +34,8 @@ function MainPage({ location }) {
     const viewerRef = useRef();
 
     useEffect(() => {
-        const params = location.pathname.split("/");
-        setInitialSettings(params);
+        const paramTexts = location.pathname.split("/");
+        setInitParams(paramTexts);
         setLoadingMsg("");
         setInitLoadDone(true);
 

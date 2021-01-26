@@ -118,7 +118,7 @@ export const getDefaultAni = modelId => {
  * get default eye and mouth index
  * @param {string} modelId
  */
-const getDefaultFace = modelId => (isDragon(modelId) ? "1" : "2");
+export const getDefaultFace = modelId => (isDragon(modelId) ? 1 : 2);
 
 /**
  * apply callback on each element of list or on list if list is not an array
@@ -134,86 +134,102 @@ export const callbackOnEach = (list, callback) => {
 };
 
 /**
+ * turn string to the corresponding boolean if it's "true" or "false"
+ * @param {string} str
+ */
+const str2bool = str => Boolean(str === "true");
+
+/**
+ * convert string to xyzCoordinate
+ * @param {string} str
+ * @return {xyzCoordinate}
+ */
+const str2xyz = str => {
+    const [x, y, z] = str.split(",");
+    /**
+     * @type {array[3]}
+     */
+    const coordinate = [x, y, z].map(parseFloat);
+    return coordinate;
+};
+
+/**
+ * @param {string} str
+ * @return {ColorCode | "transparent"}
+ */
+// @ts-ignore
+const str2bg = str => (str === "transparent" ? str : `#${str}`);
+
+/**
+ * process init setting text
+ * @param {Array<string>} paramTexts
+ * @return {Array<[ keyCode: string, value: * ]>}
+ */
+const processParamTexts = paramTexts => {
+    if (paramTexts.length === 0) return [];
+
+    /**
+     * @type {{ [valueType: string]: function}}
+     */
+    const valueConvert = {
+        bg: str2bg,
+        xyz: str2xyz,
+        float: parseFloat,
+        int: parseInt,
+        boolean: str2bool,
+    };
+
+    return paramTexts
+        .filter(Boolean) // remove empty strings
+        .map(param => param.split("="))
+        .filter(
+            ([keycode, ...valueParts]) => initKeyMap[keycode] && valueParts[0]
+        ) // remove strings with invalid keycode or no value
+        .map(([keycode, ...valueParts]) => {
+            // animation code can have "=" inside
+            const value = valueParts.join("=");
+            const { type } = initKeyMap[keycode];
+            return type === "string"
+                ? [keycode, value]
+                : [keycode, valueConvert[type](value)];
+        });
+};
+
+const initChainMaker = () => {
+    const aniCode = initSettings.animation.code;
+    const chainList = chainCodeToList(aniCode, "init");
+    initSettings.chainMaker.chain = chainList;
+};
+
+/**
  * initialize settings using array of params
  * @param {Array<string>} params
  */
-export const setInitialSettings = params => {
-    if (params.length === 0) return;
-
+export const setInitParams = paramTexts => {
+    const paramsToSet = processParamTexts(paramTexts);
+    /**
+     * set of defined keycode
+     * @type {Set<string>}
+     */
     const definedParams = new Set();
-    params.forEach(param => {
-        if (!param) return;
-
-        const [keycode, ...value] = param.split("="); // animation code can have "=" inside
-        // skip if no value given
-        if (!value[0] || !initKeyMap[keycode]) return;
-
-        /**
-         * @type {string | Array<number>}
-         */
-        let setValue = value.length === 1 ? value[0] : value.join("=");
-
-        switch (keycode) {
-            case "tx":
-                definedParams.add("texture");
-                break;
-            case "et":
-                definedParams.add("eyeTexture");
-                break;
-            case "mt":
-                definedParams.add("mouthTexture");
-                break;
-            case "ei":
-                definedParams.add("eyeIdx");
-                break;
-            case "mi":
-                definedParams.add("mouthIdx");
-                break;
-            case "cc":
-                definedParams.add("animation");
-                // initialize chain maker chain
-                const chainList = chainCodeToList(setValue, "Animation");
-                initSettings["chainMaker"]["chain"] = chainList;
-                break;
-            case "bg":
-                if (setValue !== "transparent") {
-                    setValue = `#${setValue}`;
-                }
-                break;
-            case "cam": // parameters in form x, y, z
-                setValue = setValue.split(",").map(n => parseFloat(n));
-                break;
-            default:
-        }
-        const { group, key } = initKeyMap[keycode];
-
-        const isBooleanValue = setValue === "true" || setValue === "false";
-
-        initSettings[group][key] = isBooleanValue
-            ? Boolean(setValue === "true")
-            : setValue;
-    });
-
     const notDefined = param => !definedParams.has(param);
 
-    const modelId = initSettings["model"]["id"];
-    initSettings["app"]["viewerType"] = getViewerType(modelId);
+    paramsToSet.forEach(([keycode, value]) => {
+        definedParams.add(keycode);
+        const { group, key } = initKeyMap[keycode];
+        initSettings[group][key] = value;
+    });
 
-    if (notDefined("eyeTexture")) {
-        initSettings["model"]["eyeTexture"] = modelId;
-    }
-    if (notDefined("mouthTexture")) {
-        initSettings["model"]["mouthTexture"] = modelId;
-    }
-    if (notDefined("eyeIdx")) {
-        initSettings["model"]["eyeIdx"] = getDefaultFace(modelId);
-    }
-    if (notDefined("mouthIdx")) {
-        initSettings["model"]["mouthIdx"] = getDefaultFace(modelId);
-    }
-    if (notDefined("animation")) {
-        initSettings["animation"]["code"] = getDefaultAni(modelId);
-    }
+    const modelId = initSettings.model.id;
+    initSettings.app.viewerType = getViewerType(modelId);
+
+    if (notDefined("et")) initSettings.model.eyeTexture = modelId;
+    if (notDefined("ei")) initSettings.model.eyeIdx = getDefaultFace(modelId);
+    if (notDefined("mt")) initSettings.model.mouthTexture = modelId;
+    if (notDefined("mi")) initSettings.model.mouthIdx = getDefaultFace(modelId);
+    if (notDefined("cc")) initSettings.animation.code = getDefaultAni(modelId);
+
+    initChainMaker();
 };
 
 /**

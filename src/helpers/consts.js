@@ -8,7 +8,7 @@ export const DEFAULT_DRAGON_FACE_IDX = "1";
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#";
 
-export const defaultAdvAni = "CMN_MWM_03";
+export const DEFAULT_ADV_ANI = "CMN_MWM_03";
 
 /**
  * @type {{ [paramName: string]: MatParamDetails }}
@@ -170,9 +170,9 @@ export const defaultSettings = {
     model: {
         id: "c100001_01",
         texture: "",
-        eyeTexture: "c100001_01",
+        eyeTexture: "",
         eyeIdx: "2",
-        mouthTexture: "c100001_01",
+        mouthTexture: "",
         mouthIdx: "2",
         weaponRight: "",
         weaponLeft: "",
@@ -188,9 +188,10 @@ export const defaultSettings = {
     },
     lights: defaultLights,
     animation: {
-        code: defaultAdvAni,
+        code: "",
         timeScale: 1,
     },
+    chainMaker: { chain: "" },
     app: {
         sidebarContent: "settings",
         showSettings: true,
@@ -220,26 +221,26 @@ export const defaultSettings = {
 
 /**
  * map an init key to corresponding group and key in the global state
- * @type {{ [initKey: string]: {group: string, key: string} }}
+ * @type {{ [initKey: string]: {group: string, key: string, type: string} }}
  */
 export const initKeyMap = {
-    id: { group: "model", key: "id" },
-    tx: { group: "model", key: "texture" },
-    et: { group: "model", key: "eyeTexture" },
-    ei: { group: "model", key: "eyeIdx" },
-    mt: { group: "model", key: "mouthTexture" },
-    mi: { group: "model", key: "mouthIdx" },
-    wr: { group: "model", key: "weaponRight" },
-    wl: { group: "model", key: "weaponLeft" },
-    bg: { group: "scene", key: "background" },
-    cam: { group: "scene", key: "initCameraPosition" },
-    showAC: { group: "app", key: "showAniControl" },
-    showSettings: { group: "app", key: "showSettings" },
-    showOutline: { group: "outline", key: "enable" },
-    AA: { group: "app", key: "antiAliasing" },
-    rot: { group: "scene", key: "rotateSpeed" },
-    ts: { group: "animation", key: "timeScale" },
-    cc: { group: "animation", key: "code" },
+    id: { group: "model", key: "id", type: "string" },
+    tx: { group: "model", key: "texture", type: "string" },
+    et: { group: "model", key: "eyeTexture", type: "string" },
+    ei: { group: "model", key: "eyeIdx", type: "int" },
+    mt: { group: "model", key: "mouthTexture", type: "string" },
+    mi: { group: "model", key: "mouthIdx", type: "int" },
+    wr: { group: "model", key: "weaponRight", type: "string" },
+    wl: { group: "model", key: "weaponLeft", type: "string" },
+    bg: { group: "scene", key: "background", type: "bg" },
+    cam: { group: "scene", key: "initCameraPosition", type: "xyz" },
+    showAC: { group: "app", key: "showAniControl", type: "boolean" },
+    showSettings: { group: "app", key: "showSettings", type: "boolean" },
+    showOutline: { group: "outline", key: "enable", type: "boolean" },
+    AA: { group: "app", key: "antiAliasing", type: "boolean" },
+    rot: { group: "scene", key: "rotateSpeed", type: "float" },
+    ts: { group: "animation", key: "timeScale", type: "float" },
+    cc: { group: "animation", key: "code", type: "string" },
 };
 
 const commonInitKeys = ["bg", "cam", "showOutline", "AA", "rot"];

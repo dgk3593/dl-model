@@ -16,6 +16,7 @@ import {
     baseUrl,
     cameraPositions,
 } from "helpers/consts";
+import { getDefaultFace, getDefaultAni } from "helpers/helpers";
 
 import "./styles/ShareContent.css";
 
@@ -29,7 +30,10 @@ function ShareContent({ method }) {
     const [label, setLabel] = useState("Code");
 
     const currentSettings = useContext(SettingsContext);
-    const { viewerType } = currentSettings.app;
+    const {
+        model: { id: modelId },
+        app: { viewerType },
+    } = currentSettings;
 
     const CopyButton = () => (
         <IconButton onClick={copyText}>
@@ -82,26 +86,21 @@ function ShareContent({ method }) {
                     }
                     break;
                 case "et":
-                    if (
-                        currentSettings["model"]["eyeTexture"] ===
-                        currentSettings["model"]["id"]
-                    )
-                        break;
-                    linkParts.push(`${keyCode}=${currentValue}`);
-
-                    break;
                 case "mt":
-                    if (
-                        currentSettings["model"]["mouthTexture"] ===
-                        currentSettings["model"]["id"]
-                    )
-                        break;
-                    linkParts.push(`${keyCode}=${currentValue}`);
-
+                    if (currentValue !== modelId)
+                        linkParts.push(`${keyCode}=${currentValue}`);
+                    break;
+                case "ei":
+                case "mi":
+                    if (currentValue !== getDefaultFace(modelId))
+                        linkParts.push(`${keyCode}=${currentValue}`);
+                    break;
+                case "cc":
+                    if (currentValue !== getDefaultAni(modelId))
+                        linkParts.push(`${keyCode}=${currentValue}`);
                     break;
                 case "cam":
                     if (!customCam) break;
-                    const modelId = currentSettings["model"]["id"];
                     const type = modelId[0];
                     const defaultCamPos = cameraPositions[modelId]
                         ? cameraPositions[modelId]

@@ -1,14 +1,11 @@
 import { createContext, useReducer } from "react";
 import { settingsReducer } from "reducer/settingsReducer";
 import { defaultSettings } from "helpers/consts";
-import { chainCodeToList } from "helpers/viewerHelpers";
 
 export const SettingsContext = createContext();
 export const DispatchContext = createContext();
 
-const initAniChain = chainCodeToList(defaultSettings.animation.code, "init");
-
-const initSettings = { chainMaker: { chain: initAniChain } };
+const initSettings = {};
 Object.keys(defaultSettings).forEach(
     key => (initSettings[key] = { ...defaultSettings[key] })
 );
