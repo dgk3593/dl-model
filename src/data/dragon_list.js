@@ -61,13 +61,6 @@ const dragons = [
         element: "Shadow",
     },
     {
-        id: "210104_01",
-        name: "Brunhilda",
-        title: "Crimson Sweetheart",
-        rarity: "5",
-        element: "Flame",
-    },
-    {
         id: "210024_01",
         name: "Cerberus",
         title: "Underworld Gatekeeper",
