@@ -122,7 +122,7 @@ const adv = [
         title: "Princess Starfall",
         rarity: "5",
         element: "Water",
-        weapon: "Wand",
+        weapon: "Staff",
     },
     {
         id: "110036_03",
