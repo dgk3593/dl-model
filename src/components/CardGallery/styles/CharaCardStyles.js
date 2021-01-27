@@ -11,6 +11,9 @@ const useStyles = makeStyles({
         maxWidth: "47%",
         "&:hover": {
             border: "2px solid black",
+            "& $portrait": {
+                filter: "drop-shadow(0 0 1px black) drop-shadow(0 0 4px black)",
+            },
         },
         "& .MuiCardContent-root": {
             padding: "0.1rem",
@@ -32,6 +35,7 @@ const useStyles = makeStyles({
     portrait: {
         width: "100%",
         margin: "0.5rem 0",
+        filter: "drop-shadow(0 0 1px black)",
     },
 });
 
