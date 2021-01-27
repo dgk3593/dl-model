@@ -81,6 +81,10 @@ const aniExtra = {
             name: "Yamcha",
             code: "Yamcha",
         },
+        {
+            name: "Rider Kick",
+            code: "RiderKick",
+        },
     ],
 };
 export default aniExtra;

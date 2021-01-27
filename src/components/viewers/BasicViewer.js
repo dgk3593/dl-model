@@ -48,9 +48,6 @@ class BasicViewer extends PureComponent {
         // const { getDragonFaceData } = await import("helpers/getDragonFaceData");
         // await getDragonFaceData();
 
-        // const { convertData } = await import("helpers/convertAniData");
-        // convertData();
-
         await this.initialize();
         this.finishedInit = true;
     }
