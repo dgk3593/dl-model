@@ -4,6 +4,7 @@ import "helpers/typedef";
  * @type {{ [id:string]: xyCoordinate }}
  */
 const faceOffset = {
+    c100015_05: [0.05, -0.08], // Gala Chelle
     c100006_11: [0.043, -0.0625], // Kimono Luca
     c110376_01: [0.043, -0.0625], // Yoshitsune
     c110375_01: [0.043, -0.0625], // Seimei

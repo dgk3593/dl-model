@@ -1133,6 +1133,17 @@ const skills = {
                 "GUN_SKL_02_01_10001304>GUN_SKL_02_02_10001304>GUN_SKL_02_03_10001304",
         },
         {
+            icon: "advIcons/100015_05_r05.png",
+            name: "Splendido Dominio",
+            code:
+                "GUN_SKL_01_01_10001505>GUN_SKL_01_02_10001505>GUN_SKL_01_03_10001505",
+        },
+        {
+            icon: "advIcons/100015_05_r05.png",
+            name: "Burlone Gatto",
+            code: "GUN_SKL_02_01_10001505",
+        },
+        {
             icon: "advIcons/110367_01_r05.png",
             name: "Drive Buster",
             code: "GUN_SKL_01_01_11036701",

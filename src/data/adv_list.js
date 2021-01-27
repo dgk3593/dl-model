@@ -213,6 +213,14 @@ const adv = [
         weapon: "Sword",
     },
     {
+        id: "100015_05",
+        name: "Gala Chelle",
+        title: "Passionate Princess",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Manacaster",
+    },
+    {
         id: "100004_10",
         name: "Gala Cleo",
         title: "Supreme Sorcerer",

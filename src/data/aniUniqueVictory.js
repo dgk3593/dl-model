@@ -156,6 +156,11 @@ const uniqueVictory = {
             name: "Gala Leonidas",
             code: "GUN_WIN_01_10001304>GUN_WIN_02_10001304",
         },
+        {
+            icon: "advIcons/100015_05_r05.png",
+            name: "Gala Chelle",
+            code: "GUN_WIN_03_10001505>GUN_WIN_01_10001505>GUN_WIN_02_10001505",
+        },
     ],
 };
 

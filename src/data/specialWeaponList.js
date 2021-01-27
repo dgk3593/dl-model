@@ -4,6 +4,9 @@ import "helpers/typedef";
  * @type { Array <ModelData> }
  */
 const specialWeaponList = [
+    { id: "w399034_01", name: "Gala Chelle's Fan" },
+    { id: "w399019_01", name: "Gala Chelle's Gattling Gun" },
+    { id: "w399033_01", name: "Ilia's Gun" },
     { id: "w399037_01", name: "Kimono Luca's Fan (open)" },
     { id: "w399042_01", name: "Kimono Luca's Fan (folded)" },
     { id: "w399017_01", name: "Gala Leonidas' Sword" },
