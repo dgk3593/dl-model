@@ -1,7 +1,6 @@
 .Selector {
     display: flex;
     justify-content: center;
-    cursor: pointer;
     padding: 0.3rem 0.5rem;
 }
 
@@ -9,6 +8,11 @@
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(50, 50, 50);
     padding: 0.2rem 1rem;
+    cursor: pointer;
+}
+
+.Selector-Item:hover:not(.selected) {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .Selector-Item.selected {

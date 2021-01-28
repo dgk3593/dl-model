@@ -9,6 +9,7 @@ const useStyles = makeStyles({
         border: "2px solid rgba(0,0,0,0.1)",
         boxSizing: "content-box",
         maxWidth: "47%",
+        cursor: "pointer",
         "&:hover": {
             border: "2px solid black",
             "& $portrait": {
