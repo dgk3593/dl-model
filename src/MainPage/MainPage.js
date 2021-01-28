@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState, useRef, useEffect, useContext } from "react";
+
 import useToggleState from "hooks/useToggleState";
 
 import Menu from "@material-ui/icons/Menu";
@@ -34,17 +35,21 @@ function MainPage({ location }) {
     const viewerRef = useRef();
 
     useEffect(() => {
+        if (initLoadDone) return;
+
         const paramTexts = location.pathname.split("/");
         setInitParams(paramTexts);
         setLoadingMsg("");
         setInitLoadDone(true);
+    }, [initLoadDone, location.pathname]);
 
+    useEffect(() => {
         window.addEventListener("resize", updateViewportSize);
 
         return function () {
             window.removeEventListener("resize", updateViewportSize);
         };
-    }, [location.pathname]);
+    }, []);
 
     const updateViewportSize = () => {
         const width = viewerRef.current.clientWidth;
