@@ -22,7 +22,8 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: 14,
-        margin: "5px auto",
+        margin: "5px auto 2px auto",
+        lineHeight: 1,
     },
     icons: {
         display: "flex",
@@ -30,13 +31,18 @@ const useStyles = makeStyles({
         "& img": {
             width: "1.5rem",
             height: "1.5rem",
-            margin: "0.5rem 1rem",
+            margin: "0.2rem 1rem 0 1rem",
         },
     },
     portrait: {
         width: "100%",
-        margin: "0.5rem 0",
+        margin: "0.2rem 0",
         filter: "drop-shadow(0 0 1px black)",
+    },
+    rarityImg: {
+        maxHeight: "2rem",
+        maxWidth: "80%",
+        margin: "0 auto",
     },
 });
 
