@@ -1,6 +1,5 @@
 import Button from "@material-ui/core/Button";
 
-import { initSettings } from "context/SettingsContext";
 import {
     initKeyMap,
     WEAPON_CODE,
@@ -9,6 +8,7 @@ import {
     FS_LENGTH,
     aniModList,
     incompatibleModels,
+    DEFAULT_MODEL_ID,
 } from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
@@ -161,17 +161,12 @@ const str2xyz = str => {
 const str2bg = str => (str === "transparent" ? str : `#${str}`);
 
 /**
- * process init setting text
- * @param {Array<string>} paramTexts
- * @return {Array<[ keyCode: string, value: * ]>}
+ * convert a string to the specified type
+ * @param {string} str
+ * @param {string} type
  */
-const processParamTexts = paramTexts => {
-    if (paramTexts.length === 0) return [];
-
-    /**
-     * @type {{ [valueType: string]: function}}
-     */
-    const valueConvert = {
+const convertParamValue = (str, type) => {
+    const converter = {
         bg: str2bg,
         xyz: str2xyz,
         float: parseFloat,
@@ -179,57 +174,156 @@ const processParamTexts = paramTexts => {
         boolean: str2bool,
     };
 
-    return paramTexts
-        .filter(Boolean) // remove empty strings
-        .map(param => param.split("="))
-        .filter(
-            ([keycode, ...valueParts]) => initKeyMap[keycode] && valueParts[0]
-        ) // remove strings with invalid keycode or no value
-        .map(([keycode, ...valueParts]) => {
-            // animation code can have "=" inside
-            const value = valueParts.join("=");
-            const { type } = initKeyMap[keycode];
-            return type === "string"
-                ? [keycode, value]
-                : [keycode, valueConvert[type](value)];
-        });
-};
-
-const initChainMaker = () => {
-    const aniCode = initSettings.animation.code;
-    const chainList = chainCodeToList(aniCode, "init");
-    initSettings.chainMaker.chain = chainList;
+    return type === "string" ? str : converter[type](str);
 };
 
 /**
- * initialize settings using array of params
- * @param {Array<string>} paramTexts
+ * turn a string of the form 'keycode=value' to [keycode, value],
+ * return empty array if empty input, or invalid keycode/value
+ * @param {string} paramText
+ * @return {[ [keycode: string, value: *]? ]}
  */
-export const setInitParams = paramTexts => {
-    const paramsToSet = processParamTexts(paramTexts);
-    /**
-     * set of defined keycode
-     * @type {Set<string>}
-     */
-    const definedParams = new Set();
-    const notDefined = param => !definedParams.has(param);
+const extractParam = paramText => {
+    if (!paramText) return [];
 
-    paramsToSet.forEach(([keycode, value]) => {
-        definedParams.add(keycode);
+    const [keycode, ...valueParts] = paramText.split("=");
+    if (!initKeyMap[keycode] || !valueParts[0]) return [];
+
+    const value = valueParts.join("=");
+    const { type } = initKeyMap[keycode];
+
+    return [[keycode, convertParamValue(value, type)]];
+};
+
+/**
+ * turn a path into an array of keycode and value pair,
+ * invalid strings will be filtered out
+ * @param {string} path
+ * @return {[keycode: string, value: *][]}
+ */
+const getParamsFromPath = path =>
+    path
+        .split("/")
+        .reduce(
+            (output, paramText) => [...output, ...extractParam(paramText)],
+            []
+        );
+
+/**
+ * return a list of key value pairs corresponding to the specified group of the application state
+ * @param { [keycode: string, value: *][] } params
+ * @param {string} groupName
+ * @return { [key: string, value: *][] }
+ */
+const filterParamsByGroup = (params, groupName) =>
+    params.reduce((output, [keycode, value]) => {
         const { group, key } = initKeyMap[keycode];
-        initSettings[group][key] = value;
+        if (group !== groupName) return output;
+
+        return [...output, [key, value]];
+    }, []);
+
+/**
+ * set model related parameters
+ * @param {[keycode: string, value: *][]} params
+ * @param {React.Dispatch<ReducerAction>} dispatch
+ */
+const setModelParams = (params, dispatch) => {
+    const modelParams = filterParamsByGroup(params, "model");
+    const newValue = Object.fromEntries(modelParams);
+
+    // newValue.id ??= DEFAULT_MODEL_ID;
+    newValue.id = newValue.id ?? DEFAULT_MODEL_ID;
+    const modelId = newValue.id;
+
+    ["mouth", "eye"].forEach(part => {
+        // newValue[`${part}Texture`] ??= modelId;
+        // newValue[`${part}Idx`] ??= getDefaultFace(modelId);
+        newValue[`${part}Texture`] = newValue[`${part}Texture`] ?? modelId;
+        newValue[`${part}Idx`] =
+            newValue[`${part}Idx`] ?? getDefaultFace(modelId);
     });
 
-    const modelId = initSettings.model.id;
-    initSettings.app.viewerType = getViewerType(modelId);
+    dispatch({ type: "update", key: "model", value: newValue });
+    dispatch({
+        type: "update",
+        key: "app",
+        value: { viewerType: getViewerType(modelId) },
+    });
+};
 
-    if (notDefined("et")) initSettings.model.eyeTexture = modelId;
-    if (notDefined("ei")) initSettings.model.eyeIdx = getDefaultFace(modelId);
-    if (notDefined("mt")) initSettings.model.mouthTexture = modelId;
-    if (notDefined("mi")) initSettings.model.mouthIdx = getDefaultFace(modelId);
-    if (notDefined("cc")) initSettings.animation.code = getDefaultAni(modelId);
+/**
+ * set animation related parameters
+ * @param {[keycode: string, value: *][]} params
+ * @param {React.Dispatch<ReducerAction>} dispatch
+ */
+const setAniParams = (params, dispatch) => {
+    const aniParams = filterParamsByGroup(params, "animation");
 
-    initChainMaker();
+    const newValue = Object.fromEntries(aniParams);
+
+    const modelId =
+        params.filter(([keycode]) => keycode === "id")[0]?.[1] ||
+        DEFAULT_MODEL_ID;
+    // newValue.code ??= getDefaultAni(modelId);
+    newValue.code = newValue.code ?? getDefaultAni(modelId);
+    dispatch({ type: "update", key: "animation", value: newValue });
+
+    const aniCode = newValue.code;
+    dispatch({
+        type: "update",
+        key: "chainMaker",
+        value: { chain: chainCodeToList(aniCode, "init") },
+    });
+};
+
+/**
+ * set other parameters
+ * @param {[keycode: string, value: *][]} params
+ * @param {React.Dispatch<ReducerAction>} dispatch
+ * @param {string} group - name of the parameter group
+ */
+const setOtherParams = (params, dispatch, group) => {
+    const paramList = filterParamsByGroup(params, group);
+    const newValue = Object.fromEntries(paramList);
+
+    dispatch({
+        type: "update",
+        key: group,
+        value: newValue,
+    });
+};
+
+/**
+ * functions to set parameters depends on group of application state
+ * @type {{ [groupName: string]: function}}
+ */
+const paramSetter = {
+    model: setModelParams,
+    animation: setAniParams,
+    default: setOtherParams,
+};
+
+/**
+ * update application state base on information from the URL
+ * @param {string} path
+ * @param {React.Dispatch<ReducerAction>} dispatch
+ */
+export const setParamsFromPath = (path, dispatch) => {
+    const params = getParamsFromPath(path);
+
+    const definedGroups = new Set(
+        params.map(([keycode]) => initKeyMap[keycode].group)
+    );
+
+    //model and animation must always be set
+    definedGroups.add("model");
+    definedGroups.add("animation");
+
+    definedGroups.forEach(group => {
+        const setter = paramSetter[group] || paramSetter["default"];
+        setter(params, dispatch, group);
+    });
 };
 
 /**

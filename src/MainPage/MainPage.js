@@ -8,8 +8,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useStyles from "./MainPageStyles";
 
 import Display from "./Display";
-import { SettingsContext } from "context/SettingsContext";
-import { setInitParams } from "helpers/helpers";
+import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { setParamsFromPath } from "helpers/helpers";
 
 const Sidebar = lazy(() => import("./Sidebar"));
 const Dock = lazy(() => import("./Dock"));
@@ -31,17 +31,15 @@ function MainPage({ location }) {
     const {
         app: { showSettings },
     } = useContext(SettingsContext);
+    const dispatch = useContext(DispatchContext);
 
     const viewerRef = useRef();
 
     useEffect(() => {
-        if (initLoadDone) return;
-
-        const paramTexts = location.pathname.split("/");
-        setInitParams(paramTexts);
+        setParamsFromPath(location.pathname, dispatch);
         setLoadingMsg("");
         setInitLoadDone(true);
-    }, [initLoadDone, location.pathname]);
+    }, [location.pathname, dispatch]);
 
     useEffect(() => {
         window.addEventListener("resize", updateViewportSize);
