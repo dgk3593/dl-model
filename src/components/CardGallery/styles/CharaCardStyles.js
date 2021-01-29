@@ -36,6 +36,7 @@ const useStyles = makeStyles({
     },
     portrait: {
         width: "100%",
+        aspectRatio: "1 / 1",
         margin: "0.2rem 0",
         filter: "drop-shadow(0 0 1px black)",
     },
