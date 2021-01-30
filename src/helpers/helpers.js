@@ -263,8 +263,7 @@ const setAniParams = (params, dispatch) => {
     const newValue = Object.fromEntries(aniParams);
 
     const modelId =
-        params.filter(([keycode]) => keycode === "id")[0]?.[1] ||
-        DEFAULT_MODEL_ID;
+        params.find(([keycode]) => keycode === "id")?.[1] || DEFAULT_MODEL_ID;
     // newValue.code ??= getDefaultAni(modelId);
     newValue.code = newValue.code ?? getDefaultAni(modelId);
     dispatch({ type: "update", key: "animation", value: newValue });
