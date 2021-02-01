@@ -458,8 +458,8 @@ export const calculateTextureOffset = (currentTexture, prevTexture) => {
 
 /**
  * calculate the difference between 2 face index
- * @param {string} currentIdx
- * @param {string} prevIdx
+ * @param {number} currentIdx
+ * @param {number} prevIdx
  * @return {xyCoordinate}
  */
 export const calculateIdxOffset = (currentIdx, prevIdx) => {
@@ -483,11 +483,10 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
 const applyOffset = part => (target, offset) => {
     const [offsetX, offsetY] = offset;
     target.traverse(child => {
-        if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
-            return;
+        if (!child.isMesh) return;
 
-        const targetGroup = child.geometry.groups.find(
-            group => child.material[group.materialIndex].name === `mt${part}CH`
+        const targetGroup = child.geometry.groups?.find(
+            group => child.material[group.materialIndex]?.name === `mt${part}CH`
         );
         if (!targetGroup) return;
 

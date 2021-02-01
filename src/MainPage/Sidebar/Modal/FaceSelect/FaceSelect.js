@@ -47,7 +47,7 @@ function FaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
     const setIdx = event => {
         const idx = event.currentTarget.dataset.value;
         const handler = handleSelect || defaultHandler;
-        handler(idx);
+        handler(parseInt(idx));
 
         !docked && close();
     };

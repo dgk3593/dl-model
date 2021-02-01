@@ -1,5 +1,13 @@
 import { fbxSource } from "App";
 
+/**
+ * @param {Object} props
+ * @property {number} eyeIdx
+ * @property {number} mouthIdx
+ * @property {string} eyeTexture
+ * @property {string} mouthTexture
+ * @property {{ }} classes
+ */
 function FaceBox(props) {
     const { eyeIdx, mouthIdx, eyeTexture, mouthTexture, classes } = props;
     const eyeImgPath = `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
