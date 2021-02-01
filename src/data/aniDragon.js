@@ -3404,6 +3404,47 @@ const dragonAni = {
             code: "D21002301_061_01",
         },
     ],
+    d210138_01: [
+        { name: "Idle", code: "D21013801_000_01" },
+        { name: "Move Forward", code: "D21013801_002_01" },
+        { name: "Move Forward (Fast)", code: "D21013801_003_01" },
+        { name: "Brake", code: "D21013801_004_01" },
+        { name: "Dash Forward", code: "D21013801_020_01" },
+        { name: "Transform", code: "D21013801_030_01" },
+        {
+            name: "Combo",
+            code:
+                "D21013801_040_01>D21013801_041_01>D21013801_042_01>D21013801_043_01>D21013801_044_01",
+        },
+        {
+            name: "Maeiga",
+            code: "D21013801_060_01>D21013801_061_01>D21013801_062_01",
+        },
+    ],
+    d210150_01: [
+        { name: "Idle", code: "D21015001_000_01" },
+        { name: "Move Forward", code: "D21015001_002_01" },
+        { name: "Move Forward (Fast)", code: "D21015001_003_01" },
+        {
+            name: "Skill 1",
+            code: "D21015001_060_01",
+        },
+        {
+            name: "Skill 2",
+            code: "D21015001_061_01",
+        },
+    ],
+    d210151_01: [
+        { name: "Idle", code: "D21015101_000_01" },
+        {
+            name: "Skill 1",
+            code: "D21015101_060_01",
+        },
+        {
+            name: "Skill 2",
+            code: "D21015101_061_01",
+        },
+    ],
 };
 
 export default dragonAni;

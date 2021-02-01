@@ -47,6 +47,13 @@ const dragons = [
         element: "Wind",
     },
     {
+        id: "210138_01",
+        name: "Arsène",
+        title: "Pillager of Twilight",
+        rarity: "5",
+        element: "Shadow",
+    },
+    {
         id: "210126_01",
         name: "Azazel",
         title: "Winged Rebel",

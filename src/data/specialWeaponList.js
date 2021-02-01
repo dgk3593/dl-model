@@ -4,6 +4,12 @@ import "helpers/typedef";
  * @type { Array <ModelData> }
  */
 const specialWeaponList = [
+    { id: "w399026_01", name: "Joker's Gun" },
+    { id: "w399027_01", name: "Mona's Slingshot" },
+    { id: "w399029_01", name: "Panther's Leather Whip" },
+    { id: "w399028_01", name: "Sophie's Left Yo-yo" },
+    { id: "w399036_01", name: "Sophie's Right Yo-yo" },
+    { id: "w399035_01", name: "Sophie's Plasma Gun" },
     { id: "w399034_01", name: "Gala Chelle's Fan" },
     { id: "w399019_01", name: "Gala Chelle's Gattling Gun" },
     { id: "w399033_01", name: "Ilia's Gun" },

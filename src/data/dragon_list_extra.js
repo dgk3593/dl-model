@@ -70,6 +70,18 @@ const extraDragons = [
         name: "Zephyr",
         title: "Void",
     },
+    {
+        id: "210149_01",
+        name: "Carmen",
+    },
+    {
+        id: "210150_01",
+        name: "Zorro",
+    },
+    {
+        id: "210151_01",
+        name: "Pithos",
+    },
 ];
 
 export default extraDragons;

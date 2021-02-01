@@ -34,6 +34,11 @@ const uniqueFS = {
             code:
                 "SWD_CHR_A_01_11037101>SWD_CHR_A_02_11037101>SWD_CHR_A_03_11037101",
         },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Mona",
+            code: "SWD_CHR_01_11037901>SWD_CHR_02_11037901>SWD_CHR_03_11037901",
+        },
     ],
     Blade: [
         {
@@ -75,6 +80,11 @@ const uniqueFS = {
             name: "Nevin",
             code: "DAG_CHR_01_11036501>DAG_CHR_02_11036501>DAG_CHR_03_11036501",
         },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Joker",
+            code: "DAG_CHR_01_11037701>DAG_CHR_02_11037701>DAG_CHR_03_11037701",
+        },
     ],
     Axe: [
         {
@@ -97,6 +107,11 @@ const uniqueFS = {
             name: "Dragonyule Victor",
             subtitle: "Merry Mobilizer",
             code: "AXE_CHR_01>AXE_CHR_02>AXE_CHR_A_03_11030702",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Sophie",
+            code: "AXE_CHR_01_11038001>AXE_CHR_02_11038001>AXE_CHR_03_11038001",
         },
     ],
     Lance: [

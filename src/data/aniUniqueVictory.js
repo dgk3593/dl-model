@@ -50,6 +50,11 @@ const uniqueVictory = {
             name: "Pecorine",
             code: "SWD_WIN_01_11037101>SWD_WIN_02_11037101",
         },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Mona",
+            code: "SWD_WIN_01_11037901>SWD_WIN_02_11037901>SWD_WIN_03_11037901",
+        },
     ],
     Blade: [
         {
@@ -69,12 +74,22 @@ const uniqueVictory = {
             name: "Gala Laxi",
             code: "DAG_WIN_01_10003204>DAG_WIN_02_10003204",
         },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Joker",
+            code: "DAG_WIN_01_11037701>DAG_WIN_02_11037701>DAG_WIN_03_11037701",
+        },
     ],
     Axe: [
         {
             icon: "advIcons/100002_13_r05.png",
             name: "Gala Elisanne",
             code: "AXE_WIN_01_10000213>AXE_WIN_02_10000213",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Sophie",
+            code: "AXE_WIN_01_11038001>AXE_WIN_02_11038001>AXE_WIN_03_11038001",
         },
     ],
     Lance: [

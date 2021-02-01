@@ -146,6 +146,27 @@ const skills = {
             name: "Princess Valiance",
             code: "SWD_SKL_03_01_11037101",
         },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Mona Car",
+            code:
+                "SWD_SKL_01_01_11037901>SWD_SKL_01_02_11037901>SWD_SKL_01_03_11037901",
+        },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Beckoning Cat",
+            code: "SWD_SKL_02_01_11037901",
+        },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Lucky Punch",
+            code: "SWD_SKL_03_01_11037901",
+        },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Garula",
+            code: "SWD_SKL_04_01_11037901",
+        },
     ],
     Blade: [
         {
@@ -459,6 +480,26 @@ const skills = {
             code: "DAG_SKL_02_01_11036501",
         },
         {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Marking Shot",
+            code: "DAG_SKL_01_01_11037701",
+        },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Phantom Barrage",
+            code: "DAG_SKL_02_01_11037701",
+        },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Wild Rush",
+            code: "DAG_SKL_03_01_11037701",
+        },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Eiha",
+            code: "DAG_SKL_04_01_11037701",
+        },
+        {
             icon: "advIcons/110344_01_r04.png",
             name: "Deadly Joyride",
             code:
@@ -592,6 +633,26 @@ const skills = {
             icon: "advIcons/110307_02_r05.png",
             name: "Chuting Stars",
             code: "AXE_SKL_02_01_11030702",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Drive Spinner",
+            code: "AXE_SKL_01_01_11038001",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Upgrade",
+            code: "AXE_SKL_02_01_11038001",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Kouha?",
+            code: "AXE_SKL_03_01_11038001",
+        },
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Media?",
+            code: "AXE_SKL_04_01_11038001",
         },
     ],
     Lance: [

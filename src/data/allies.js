@@ -44,6 +44,10 @@ const allies = [
         id: "100007_09",
         name: "2nd Anniversary Notte",
     },
+    {
+        id: "110377_01_h",
+        name: "Joker (Story)",
+    },
 ];
 
 export default allies;

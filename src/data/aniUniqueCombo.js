@@ -31,6 +31,12 @@ const uniqueCombo = {
             code:
                 "SWD_CMB_01_11037101>SWD_CMB_02_11037101>SWD_CMB_03_11037101>SWD_CMB_04_11037101>SWD_CMB_05_11037101",
         },
+        {
+            icon: "advIcons/110379_01_r05.png",
+            name: "Mona",
+            code:
+                "SWD_CMB_01_11037901>SWD_CMB_02_11037901>SWD_CMB_03_11037901>SWD_CMB_04_11037901>SWD_CMB_05_11037901>SWD_CMB_06_11037901>SWD_CMB_07_11037901",
+        },
     ],
     Bow: [
         {
@@ -92,6 +98,12 @@ const uniqueCombo = {
             subtitle: "Revelation Sword",
             code: "DAG_CMB_06_11036501",
         },
+        {
+            icon: "advIcons/110377_01_r05.png",
+            name: "Joker",
+            code:
+                "DAG_CMB_01_11037701>DAG_CMB_02_11037701>DAG_CMB_03_11037701>DAG_CMB_04_11037701>DAG_CMB_05_11037701>DAG_CMB_06_11037701",
+        },
     ],
     Blade: [
         {
@@ -121,6 +133,14 @@ const uniqueCombo = {
             subtitle: "Sacred Blade",
             code:
                 "KAT_CMB_A_01_11035201>KAT_CMB_A_02_11035201>KAT_CMB_A_03_11035201",
+        },
+    ],
+    Axe: [
+        {
+            icon: "advIcons/110380_01_r05.png",
+            name: "Sophie",
+            code:
+                "AXE_CMB_01_11038001>AXE_CMB_02_11038001>AXE_CMB_03_11038001>AXE_CMB_04_11038001>AXE_CMB_05_11038001>AXE_CMB_06_11038001",
         },
     ],
     Lance: [

@@ -87,6 +87,43 @@ const otherUnique = {
                 },
             ],
         },
+        Mona: {
+            icon: "advIcons/110379_01_r05.png",
+            animations: [
+                {
+                    name: "Idle",
+                    code: "CMN_INT_01_11037901",
+                },
+                {
+                    name: "Backflip",
+                    code: "SWD_BAC_01_11037901",
+                },
+                {
+                    name: "Dash Forward",
+                    code: "SWD_ROL_01_11037901",
+                },
+                {
+                    name: "Slow Run",
+                    code: "CMN_RUN_01_11037901",
+                },
+                {
+                    name: "Fast Run",
+                    code: "CMN_RUN_02_11037901",
+                },
+                {
+                    name: "Quick Turn",
+                    code: "CMN_QTN_01_11037901",
+                },
+                {
+                    name: "Dash Attack",
+                    code: "SWD_DAS_02_11037901",
+                },
+                {
+                    name: "Summon Zorro",
+                    code: "CMN_CTD_01_11037901>CMN_CTD_02_11037901",
+                },
+            ],
+        },
     },
     Wand: {
         Yurius: {
@@ -300,6 +337,43 @@ const otherUnique = {
                 },
             ],
         },
+        Joker: {
+            icon: "advIcons/110377_01_r05.png",
+            animations: [
+                {
+                    name: "Idle",
+                    code: "CMN_INT_01_11037701",
+                },
+                {
+                    name: "Backflip",
+                    code: "DAG_BAC_01_11037701",
+                },
+                {
+                    name: "Dash Forward",
+                    code: "DAG_ROL_01_11037701",
+                },
+                {
+                    name: "Slow Run",
+                    code: "CMN_RUN_01_11037701",
+                },
+                {
+                    name: "Fast Run",
+                    code: "CMN_RUN_02_11037701",
+                },
+                {
+                    name: "Quick Turn",
+                    code: "DAG_QTN_01_11037701",
+                },
+                {
+                    name: "Dash Attack",
+                    code: "DAG_DAS_02_11037701",
+                },
+                {
+                    name: "Summon Arsène",
+                    code: "CMN_CTD_01_11037701>CMN_CTD_02_11037701",
+                },
+            ],
+        },
     },
     Bow: {
         Pinon: {
@@ -413,8 +487,53 @@ const otherUnique = {
                 },
             ],
         },
+        Sophie: {
+            icon: "advIcons/110380_01_r05.png",
+            animations: [
+                {
+                    name: "Join Room",
+                    code:
+                        "AXE_ONT_06_11038001&ts=-0.5>AXE_ONT_04_11038001>AXE_ONT_09_11038001>AXE_ONT_10_11038001>AXE_ONT_23_11038001",
+                },
+                {
+                    name: "Standby",
+                    code: "AXE_ONT_03_11038001",
+                },
+                {
+                    name: "Idle",
+                    code: "CMN_INT_01_11038001",
+                },
+                {
+                    name: "Backflip",
+                    code: "AXE_BAC_01_11038001",
+                },
+                {
+                    name: "Dash Forward",
+                    code: "AXE_ROL_01_11038001",
+                },
+                {
+                    name: "Slow Run",
+                    code: "CMN_RUN_01_11038001",
+                },
+                {
+                    name: "Fast Run",
+                    code: "CMN_RUN_02_11038001",
+                },
+                {
+                    name: "Quick Turn",
+                    code: "CMN_QTN_01_11038001",
+                },
+                {
+                    name: "Dash Attack",
+                    code: "AXE_DAS_02_11038001",
+                },
+                {
+                    name: "Summon Pithos",
+                    code: "CMN_CTD_01_11038001>CMN_CTD_02_11038001",
+                },
+            ],
+        },
     },
-
     Staff: {
         Zethia: {
             icon: "advIcons/100009_01_r05.png",
