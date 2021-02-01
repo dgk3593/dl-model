@@ -122,6 +122,14 @@ const otherUnique = {
                     name: "Summon Zorro",
                     code: "CMN_CTD_01_11037901>CMN_CTD_02_11037901",
                 },
+                {
+                    name: "After All-Out Attack",
+                    code: "R002_002_c11037901_a_01>R002_002_c11037901_a_02",
+                },
+                {
+                    name: "After All-Out Attack 2",
+                    code: "R002_002_c11037901_b_02>R002_002_c11037901_b_03",
+                },
             ],
         },
     },
@@ -291,6 +299,15 @@ const otherUnique = {
             icon: "advIcons/110364_01_r05.png",
             animations: [{ name: "Dash Attack", code: "LAN_DAS_02_11036401" }],
         },
+        Panther: {
+            icon: "advIcons/110378_01_r05.png",
+            animations: [
+                {
+                    name: "After All-Out Attack",
+                    code: "R002_002_c11037801_a_01>R002_002_c11037801_a_02",
+                },
+            ],
+        },
     },
     Dagger: {
         "Gala Laxi": {
@@ -371,6 +388,14 @@ const otherUnique = {
                 {
                     name: "Summon Arsène",
                     code: "CMN_CTD_01_11037701>CMN_CTD_02_11037701",
+                },
+                {
+                    name: "After All-Out Attack",
+                    code: "R002_002_c11037701_a_01>R002_002_c11037701_a_02",
+                },
+                {
+                    name: "Unknown",
+                    code: "c11037701_090_01>c11037701_090_02",
                 },
             ],
         },
@@ -530,6 +555,10 @@ const otherUnique = {
                 {
                     name: "Summon Pithos",
                     code: "CMN_CTD_01_11038001>CMN_CTD_02_11038001",
+                },
+                {
+                    name: "After All-Out Attack",
+                    code: "R002_002_c11038001_a_01>R002_002_c11038001_a_02",
                 },
             ],
         },

@@ -76,7 +76,7 @@ function GameAni({ handleSelect }) {
         case 8: // Special characters
             content = <OtherUnique handleSelect={handleSelect} />;
             break;
-        case 9: // Unused
+        case 9: // Others
             content = listToAniButtons(otherAnimation, handleSelect);
             break;
         default:
@@ -99,7 +99,7 @@ function GameAni({ handleSelect }) {
                 <Tab label="Generic Skills" />
                 <Tab label="Special Skills" />
                 <Tab label="Other Unique" />
-                <Tab label="Unused" />
+                <Tab label="Others" />
             </Tabs>
             <div className="AnimationSelect-subCategory">
                 <Suspense fallback={<div>Loading</div>}>{content}</Suspense>

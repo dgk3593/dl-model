@@ -40,13 +40,10 @@ import { fbxSource } from "App";
 
 class BasicViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
+        // window.app = this;
 
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
-
-        // const { getDragonFaceData } = await import("helpers/getDragonFaceData");
-        // await getDragonFaceData();
 
         await this.initialize();
         this.finishedInit = true;
