@@ -98,8 +98,13 @@
  * @typedef { AnimationData[] } AnimationList
  *
  * @typedef {Object} AdvAniData
+ * @property {string} name
  * @property {string} icon
  * @property {AnimationList} animations
+ *
+ * @typedef {Object} DragonFaceData
+ * @property {number} eye - number of eyes expression
+ * @property {number} mouth - number of mouth expression
  *
  * @typedef {Object} AppModelState
  * @property {string} id - id of the model being displayed

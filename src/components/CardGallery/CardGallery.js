@@ -2,8 +2,6 @@ import CharaCard from "./CharaCard";
 
 import "./styles/CardGallery.css";
 
-import "helpers/typedef";
-
 /**
  * @callback onSelectCallback - called when a card is clicked, with the card's ID as argument
  * @param {string} id

@@ -13,10 +13,10 @@ function OtherUnique({ handleSelect }) {
 
     const disabled = WEAPON_LIST.filter(weapon => !otherUnique[weapon]);
 
-    const charaList = Object.keys(otherUnique[weapon]);
+    const charaList = otherUnique[weapon];
     const content = charaList.map(chara => {
-        const aniList = otherUnique[weapon][chara].animations;
-        const iconLink = `${process.env.PUBLIC_URL}/img/${otherUnique[weapon][chara].icon}`;
+        const aniList = chara.animations;
+        const iconLink = `${process.env.PUBLIC_URL}/img/${chara.icon}`;
         const buttons = aniList.map(ani => (
             <Button
                 variant="contained"
@@ -29,15 +29,15 @@ function OtherUnique({ handleSelect }) {
             </Button>
         ));
         return (
-            <Fragment key={chara}>
+            <Fragment key={chara.name}>
                 <div className="OtherUnique-chara">
                     <div className="OtherUnique-charaInfo">
                         <img
                             className="OtherUnique-charaIcon"
                             src={iconLink}
-                            alt={chara}
+                            alt={chara.name}
                         />
-                        <h4 className="OtherUnique-charaName">{chara}</h4>
+                        <h4 className="OtherUnique-charaName">{chara.name}</h4>
                     </div>
                     <div className="OtherUnique-btns">{buttons}</div>
                 </div>

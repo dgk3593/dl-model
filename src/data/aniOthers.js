@@ -1,5 +1,3 @@
-import "helpers/typedef";
-
 /**
  * @type {AnimationList}
  */

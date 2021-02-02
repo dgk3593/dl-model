@@ -1,5 +1,3 @@
-import "helpers/typedef";
-
 /**
  * @type {{ [weaponType: string]: AnimationList}}
  */

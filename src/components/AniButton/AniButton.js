@@ -2,8 +2,6 @@ import Button from "@material-ui/core/Button";
 
 import "./AniButton.css";
 
-import "helpers/typedef";
-
 /**
  * create an animation button
  * @param {Object} buttonData

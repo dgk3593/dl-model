@@ -1,5 +1,3 @@
-import "helpers/typedef";
-
 export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
@@ -325,6 +323,9 @@ export const WEAPON_CODE = {
     Manacaster: "GUN",
 };
 
+/**
+ * @type WeaponType[]
+ */
 export const WEAPON_LIST = [
     "Sword",
     "Blade",

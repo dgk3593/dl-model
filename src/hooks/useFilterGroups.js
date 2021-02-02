@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "helpers/typedef";
 
 /**
  * Create initial state for a group of a multiconditional filter
