@@ -3,12 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
     root: {
         width: "14rem",
+        maxWidth: "47%",
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 15rem",
         padding: 0,
         textAlign: "center",
         margin: "0.3rem 0.1rem",
         border: "2px solid rgba(0,0,0,0.1)",
         boxSizing: "content-box",
-        maxWidth: "47%",
         cursor: "pointer",
         "&:hover": {
             border: "2px solid black",
@@ -21,7 +23,6 @@ const useStyles = makeStyles({
         },
     },
     title: {
-        fontSize: 14,
         margin: "5px auto 2px auto",
         lineHeight: 1,
     },
