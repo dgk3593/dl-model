@@ -10,6 +10,12 @@ const uniqueFS = {
             code: "SWD_CHR_11",
         },
         {
+            icon: "advIcons/100018_02_r05.png",
+            name: "Gala Leif",
+            subtitle: "Shielding Stance",
+            code: "SWD_CHR_01_10001802>SWD_CHR_02_10001802>SWD_CHR_03_10001802",
+        },
+        {
             icon: "advIcons/110315_01_r04.png",
             name: "Ku Hai",
             subtitle: "Apsaras Formation",

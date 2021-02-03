@@ -4,6 +4,13 @@
 const otherUnique = {
     Sword: [
         {
+            name: "Gala Leif",
+            icon: "advIcons/100018_02_r05.png",
+            animations: [
+                { name: "Shielding Stance Idle", code: "CMN_INT_01_10001802" },
+            ],
+        },
+        {
             name: "Pecorine",
             icon: "advIcons/110371_01_r05.png",
             animations: [
