@@ -48,13 +48,16 @@ function DrawerHeader({ toggleSidebar }) {
     return (
         <div className={classes.root}>
             <span>Settings</span>
-            <div className={classes.closeDrawerButton} onClick={toggleSidebar}>
+            <div
+                className={`${classes.closeDrawer} ${classes.button}`}
+                onClick={toggleSidebar}
+            >
                 <ArrowLeft />
             </div>
             {currentCodec && !asciiOn && (
                 <Tooltip title="Save animation as video" placement="bottom-end">
                     <div
-                        className={classes.downloadButton}
+                        className={`${classes.download} ${classes.button}`}
                         onClick={toggleCapture}
                     >
                         <SaveIcon />

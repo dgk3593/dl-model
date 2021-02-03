@@ -1,14 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
     root: {
         display: "block",
         width: "100vw",
         height: "100vh",
     },
     content: {
-        height: "100vh",
         width: "100vw",
+        height: "100vh",
         padding: 0,
     },
     openSidebarButton: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     },
     loadingMsg: {
         position: "absolute",
-        zIndex: "9999",
+        zIndex: 9999,
         width: "100vw",
         height: "100vh",
         display: "flex",

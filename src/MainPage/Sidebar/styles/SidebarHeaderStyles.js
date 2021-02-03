@@ -4,26 +4,14 @@ import bg from "./Rose-Petals.svg";
 
 const drawerBG = DRAWER_BGCOLOR;
 
-const useStyles = makeStyles(theme => ({
-    downloadButton: {
-        color: "black",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "2rem",
-        height: "2rem",
-        borderRadius: "50%",
-        position: "absolute",
+const useStyles = makeStyles(() => ({
+    download: {
         left: "0",
-        top: "0",
-        margin: "1rem",
-        cursor: "pointer",
-        backgroundColor: "rgba(255,255,255,0.5)",
-        "&:hover": {
-            backgroundColor: "rgba(255,255,255,0.8)",
-        },
     },
-    closeDrawerButton: {
+    closeDrawer: {
+        right: "0",
+    },
+    button: {
         color: "black",
         display: "flex",
         alignItems: "center",
@@ -32,7 +20,6 @@ const useStyles = makeStyles(theme => ({
         height: "2rem",
         borderRadius: "50%",
         position: "absolute",
-        right: "0",
         top: "0",
         margin: "1rem",
         cursor: "pointer",
