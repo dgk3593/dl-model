@@ -149,8 +149,8 @@ export const analyzeWeaponCode = code => {
 /**
  * dispose a 3D object
  */
-export const disposeItem = item => {
-    if (!item) return;
+export const dispose3dObject = object => {
+    if (!object) return;
 
     const disposedList = new Set();
 
@@ -180,7 +180,7 @@ export const disposeItem = item => {
         dispose(mesh.geometry);
     };
 
-    const meshes = getMeshes(item, true);
+    const meshes = getMeshes(object, true);
     meshes.forEach(disposeMesh);
 };
 
@@ -625,7 +625,7 @@ export const processFaceChanges = faceChanges => {
      */
     const simplified = [];
     timeStamps.forEach(time => {
-        let output = { time, id: uuid(), eyeIdx: "", mouthIdx: "" };
+        let output = { time, id: uuid(), eyeIdx: NaN, mouthIdx: NaN };
         const changes = sorted.filter(change => change.time === time);
         changes.forEach(change => (output = Object.assign(output, change)));
         simplified.push(output);

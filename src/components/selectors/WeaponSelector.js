@@ -2,7 +2,16 @@ import { WEAPON_LIST } from "helpers/consts";
 
 import "./styles/WeaponSelector.css";
 
+/**
+ * @param {Object} params
+ * @param {WeaponType} params.value - currently selected value
+ * @param {WeaponType[]} params.disabled - list of disabled weapon types
+ * @param {function} params.onClick - called when an option is clicked
+ */
 function WeaponSelector({ value, disabled, onClick }) {
+    /**
+     * @param {React.MouseEvent<HTMLDivElement, MouseEvent>} event
+     */
     const handleClick = event => {
         const { value } = event.currentTarget.dataset;
         onClick(value);

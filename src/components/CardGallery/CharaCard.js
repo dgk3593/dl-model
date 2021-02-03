@@ -6,7 +6,7 @@ import useStyles from "./styles/CharaCardStyles";
 
 /**
  * @callback onClickCallback
- * @param {React.MouseEvent<HTMLElement>} event
+ * @param {React.MouseEvent<HTMLElement, MouseEvent>} event
  * @return {void}
  */
 /**

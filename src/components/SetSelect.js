@@ -6,6 +6,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 
+/**
+ * @param {Object} props
+ * @param {string[]} props.options - list of sets to select
+ * @param {number} props.selectedIndex - currently selected set's index
+ * @param {function} props.handleSelect - called when a set is selected
+ */
 function SetSelect(props) {
     const { options, selectedIndex, handleSelect } = props;
     const [anchorEl, setAnchorEl] = useState(null);
@@ -27,7 +33,7 @@ function SetSelect(props) {
         <>
             <List
                 component="nav"
-                aria-label="Character Set Settings"
+                aria-label="Set Selector"
                 style={{ backgroundColor: "rgba(50,50,50,0.5", color: "white" }}
             >
                 <ListItem button onClick={handleClickListItem}>

@@ -17,8 +17,8 @@
  * @typedef {Object} FaceMod encode a face modification
  * @property {number} time - time when the modification happens
  * @property {string} [id] - id of the modification
- * @property {string} [eyeIdx] - index of eyes to change to
- * @property {string} [mouthIdx] - index of mouth to change to
+ * @property {number} [eyeIdx] - index of eyes to change to
+ * @property {number} [mouthIdx] - index of mouth to change to
  *
  * @typedef {Array<FaceMod>} FaceChangeArray array of face modifiers
  *
@@ -106,6 +106,12 @@
  * @property {number} eye - number of eyes expression
  * @property {number} mouth - number of mouth expression
  *
+ * @typedef {Object} AdvFaceState
+ * @property {string} eyeTexture - adventurer eyes texture, default is same as id
+ * @property {number} eyeIdx - index of model's eyes, default is 2 for adventurer and 1 for dragon
+ * @property {string} mouthTexture - adventurer mouth texture, default is same as id
+ * @property {number} mouthIdx - index of model's mouth, default is 2 for adventurer and 1 for dragon
+ *
  * @typedef {Object} AppModelState
  * @property {string} id - id of the model being displayed
  * @property {string} texture - override model texture, default is empty
@@ -117,7 +123,7 @@
  * @property {string} weaponLeft - id of weapon held in adventurer's left hand, default is empty
  *
  * @typedef {Object} AppAniState
- * @property {string} code - animation code, default is getDefaultAni(modelId)
+ * @property {string} code - animation code, default is getDefaultAni( modelId )
  * @property {number} timeScale - animation's global time scale, default is 1
  *
  * @typedef {Object} AppMatState
@@ -180,4 +186,21 @@
  * @property {AppCaptureState} capture - animation capture settings
  * @property {AppAsciiState} ascii - ASCII mode settings
  * @property {AppMiscState} app - other app-related settings
+ *
+ * @typedef {Object} ViewerProps
+ * @property {function} setLoadingMsg - function to allow the viewer to set loading message
+ * @property {function} toggleCapture - called after recording is finished
+ * @property {AppCaptureState} capture - capture settings
+ * @property {AppModelState} model - model related data
+ * @property {AppMatState} material - data related to model's material
+ * @property {AppOutlineState} outline - model's outline settings
+ * @property {AppAniState} animation - animation related data
+ * @property {LightParam[]} lights - lighting settings
+ * @property {AppAsciiState} ascii - ASCII mode settings
+ * @property {Boolean} antiAliasing - whether Anti Aliasing is enabled
+ * @property {ColorCode | "transparent"} bgColor - scene background color
+ * @property {{width: number, height: number}} viewport - size of the viewport
+ * @property {xyzCoordinate} cameraPosition - position of the camera
+ * @property {xyzCoordinate} controlsPosition - position of the orbit control
+ * @property {number} rotateSpeed - auto rotate speed
  */

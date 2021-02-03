@@ -10,8 +10,8 @@ import AniViewer from "./AniViewer";
 import { getDragonEye, getDragonMouth } from "helpers/viewerHelpers";
 
 export class DragonViewer extends AniViewer {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this._eyeIdx = this._mouthIdx = 0;
     }
 
@@ -53,31 +53,35 @@ export class DragonViewer extends AniViewer {
         this.mouthIdx = mouthIdx;
     };
 
+    /**
+     * @param {number} newIdx
+     */
     set eyeIdx(newIdx) {
-        const idx = parseInt(newIdx);
         const oldIdx = this._eyeIdx;
-        if (idx === oldIdx) return;
+        if (newIdx === oldIdx) return;
 
-        this._eyeIdx = idx;
+        this._eyeIdx = newIdx;
         const regex = /[0-9]{2}/;
         this.eyes.forEach(mesh => {
             const { name } = mesh;
             const id = regex.exec(name)[0];
-            mesh.visible = parseInt(id) === idx;
+            mesh.visible = parseInt(id) === newIdx;
         });
     }
 
+    /**
+     * @param {number} newIdx
+     */
     set mouthIdx(newIdx) {
-        const idx = parseInt(newIdx);
         const oldIdx = this._mouthIdx;
-        if (idx === oldIdx) return;
+        if (newIdx === oldIdx) return;
 
-        this._mouthIdx = idx;
+        this._mouthIdx = newIdx;
         const regex = /[0-9]{2}/;
         this.mouths.forEach(mesh => {
             const { name } = mesh;
             const id = regex.exec(name)[0];
-            mesh.visible = parseInt(id) === idx;
+            mesh.visible = parseInt(id) === newIdx;
         });
     }
 }

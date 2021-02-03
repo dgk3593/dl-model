@@ -24,8 +24,7 @@ import {
     analyzeWeaponCode,
     getModelPath,
     loadModel,
-    getMaterial,
-    disposeItem,
+    dispose3dObject,
     createOutline,
     applyOutlineSettings,
     getParamsList,
@@ -37,6 +36,10 @@ import {
 } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
 
+/**
+ * @typedef {ViewerProps} Props
+ * @extends PureComponent<Props>
+ */
 class BasicViewer extends PureComponent {
     async componentDidMount() {
         // window.app = this;
@@ -48,8 +51,14 @@ class BasicViewer extends PureComponent {
         this.finishedInit = true;
     }
 
+    /**
+     * @param {ViewerProps} prev
+     */
     componentDidUpdate(prev) {
         if (!this.finishedInit) return;
+        /**
+         * @type {ViewerProps}
+         */
         const current = this.props;
 
         // print updated props to console
@@ -61,7 +70,7 @@ class BasicViewer extends PureComponent {
 
     componentWillUnmount() {
         cancelAnimationFrame(this.frameId);
-        disposeItem(this.scene);
+        dispose3dObject(this.scene);
         this.mixer = null;
         this.clock = null;
         this.camera = null;
@@ -82,14 +91,19 @@ class BasicViewer extends PureComponent {
      */
     disableInput = msg => this.props.setLoadingMsg(msg || "Loading...");
 
+    /**
+     * remove loading message
+     */
     enableInput = () => this.props.setLoadingMsg("");
 
+    /**
+     * called when viewer is mounted to initialize the scene
+     */
     initialize = async () => {
         this.disableInput();
 
         this.initScene();
 
-        this.materials = [];
         this.outlines = {};
         this.models = {};
         this.modelInfo = {};
@@ -99,8 +113,14 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
+    /**
+     * Called after main model is loaded and added to scene
+     */
     afterMainModelLoad = () => void 0;
 
+    /**
+     * initialize scene, display size, floor, clock, light, camera, controls, and renderers
+     */
     initScene = () => {
         // viewport
         this.viewport = this.props.viewport || {
@@ -146,7 +166,10 @@ class BasicViewer extends PureComponent {
         const { lights } = this.props;
         this.addAllLights(lights);
 
-        // effects
+        /**
+         * loaded effects' constructors
+         * @type {Map< string, new (...params) => * >}
+         */
         this.loadedFX = new Map();
 
         // Renderer
@@ -177,6 +200,9 @@ class BasicViewer extends PureComponent {
         this.animate();
     };
 
+    /**
+     * load, and perform basic processing on main model
+     */
     loadMainModel = async () => {
         const modelId = this.props.model.id;
         this.modelInfo.main = modelId;
@@ -241,6 +267,9 @@ class BasicViewer extends PureComponent {
      */
     removeLight = light => this.scene.remove(light);
 
+    /**
+     * remove all lights in the scene
+     */
     removeAllLights = () => this.lights.forEach(this.removeLight);
 
     /**
@@ -249,6 +278,9 @@ class BasicViewer extends PureComponent {
      */
     addToScene = model => this.floor.add(model);
 
+    /**
+     * change main model's texture if specified
+     */
     initTexture = async () => {
         const { id: modelId, texture } = this.props.model;
         if (!texture || texture === ">") return;
@@ -266,6 +298,10 @@ class BasicViewer extends PureComponent {
         });
     };
 
+    /**
+     * main model basic processing:
+     * remove effects, change material, change texture, add outline, then add to scene
+     */
     basicMainProcessing = async () => {
         const model = this.models.main;
 
@@ -290,14 +326,30 @@ class BasicViewer extends PureComponent {
         this.addToScene(model);
     };
 
+    /**
+     * update viewer's display
+     * @param {ViewerProps} prev
+     * @param {ViewerProps} current
+     */
     updateViewer = (prev, current) => {
         this.updateEnvironment(prev, current);
         this.updateModel(prev, current);
         this.otherUpdate(prev, current);
     };
 
+    /**
+     * update settings other than model and environment
+     * @param {ViewerProps} prev
+     * @param {ViewerProps} current
+     */
     otherUpdate = (prev, current) => void 0;
 
+    /**
+     * update viewport, outline, material, lighting, ASCII,
+     * camera, control, background, and Anti Aliasing
+     * @param {ViewerProps} prev
+     * @param {ViewerProps} current
+     */
     updateEnvironment = (prev, current) => {
         this.updateViewport(prev.viewport, current.viewport);
         this.updateOutline(prev.outline, current.outline);
@@ -315,10 +367,20 @@ class BasicViewer extends PureComponent {
         this.AA = current.antiAliasing;
     };
 
+    /**
+     * update model settings
+     * @param {ViewerProps} prev
+     * @param {ViewerProps} current
+     */
     updateModel = (prev, current) => {
         this.updateMainModel(prev.model, current.model);
     };
 
+    /**
+     * update viewport
+     * @param {ViewerProps["viewport"]} prev
+     * @param {ViewerProps["viewport"]} current
+     */
     updateViewport = (prev, current) => {
         const { width, height } = current;
         if (prev.width === width && prev.height === height) return;
@@ -331,12 +393,18 @@ class BasicViewer extends PureComponent {
         this.camera.updateProjectionMatrix();
     };
 
+    /**
+     * remove from scene and dispose main model
+     */
     disposeMainModel = () => {
         const mainModel = this.models.main;
         this.floor.remove(mainModel);
-        disposeItem(mainModel);
+        dispose3dObject(mainModel);
     };
 
+    /**
+     * replace main model
+     */
     replaceMainModel = async () => {
         this.disableInput();
 
@@ -347,6 +415,11 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
+    /**
+     * update main model
+     * @param {ViewerProps["model"]} prev
+     * @param {ViewerProps["model"]} current
+     */
     updateMainModel = async (prev, current) => {
         const modelId = current.id;
         const mainUpdated = prev.id !== modelId;
@@ -357,10 +430,20 @@ class BasicViewer extends PureComponent {
         this.afterMainModelUpdate();
     };
 
+    /**
+     * called before main model is updated
+     */
     beforeMainModelUpdate = () => void 0;
 
+    /**
+     * called after main model is updated
+     */
     afterMainModelUpdate = () => void 0;
 
+    /**
+     * update outline parameters
+     * @param {Map<string, *>} update
+     */
     updateOutlineParams = update => {
         const outlines = Object.values(this.outlines).flat();
         outlines.forEach(outline => {
@@ -368,6 +451,11 @@ class BasicViewer extends PureComponent {
         });
     };
 
+    /**
+     * update outline settings
+     * @param {AppOutlineState} prev - previous settings
+     * @param {AppOutlineState} current - current settings
+     */
     updateOutline = (prev, current) => {
         if (prev === current) return;
 
@@ -380,27 +468,34 @@ class BasicViewer extends PureComponent {
         this.updateOutlineParams(update);
     };
 
-    saveMaterialReference = () => {
-        const mainModel = this.models.main;
-        this.materials = getMaterial(mainModel);
-    };
-
+    /**
+     * get relevant parameters for the current material type
+     */
     get matParams() {
         const { type: materialType, ...allParams } = this.props.material;
         const paramList = getParamsList(materialType);
         return filterObject(allParams, paramList);
     }
 
+    /**
+     * get the current material type
+     */
     get matType() {
         return this.props.material.type;
     }
 
+    /**
+     * apply material setting to a newly loaded model
+     */
     applyNewModelMat = model => {
         const params = this.matParams;
         const defaultParams = { useTexture: true };
         updateMatParams(model, { prevParams: defaultParams, params });
     };
 
+    /**
+     * update material settings
+     */
     updateMaterial = (prev, current) => {
         if (prev === current) return;
 
@@ -419,6 +514,11 @@ class BasicViewer extends PureComponent {
         updateMatParams(mainModel, { prevParams, params });
     };
 
+    /**
+     * update lighting
+     * @param {LightParam[]} prev
+     * @param {LightParam[]} current
+     */
     updateLights = (prev, current) => {
         if (prev !== current) {
             this.removeAllLights();
@@ -426,6 +526,11 @@ class BasicViewer extends PureComponent {
         }
     };
 
+    /**
+     * Update ASCII settings
+     * @param {ViewerProps["ascii"]} prev
+     * @param {ViewerProps["ascii"]} current
+     */
     updateAscii = async (prev, current) => {
         const updated = Object.keys(prev).some(
             key => prev[key] !== current[key]
@@ -451,6 +556,9 @@ class BasicViewer extends PureComponent {
         this.finalRenderer.setSize(this.viewport.width, this.viewport.height);
     };
 
+    /**
+     * render scene as ASCII
+     */
     showAscii = () => {
         const { charSet, color, bgColor, invert } = this.props.ascii;
         const AsciiEffect = this.loadedFX.get("ascii");
@@ -498,6 +606,9 @@ class BasicViewer extends PureComponent {
             color !== "transparent" ? new THREE.Color(color) : null;
     }
 
+    /**
+     * set display canvas
+     */
     set canvas(canvas) {
         const oldCanvas = this._canvas;
         oldCanvas && this.mount.removeChild(oldCanvas);
@@ -505,10 +616,17 @@ class BasicViewer extends PureComponent {
         this._canvas = canvas;
     }
 
+    /**
+     * get currently displayed canvas
+     */
     get canvas() {
         return this._canvas;
     }
 
+    /**
+     * rotate the floor
+     * @param {number} dt - time difference
+     */
     rotateFloor = dt => {
         const { rotateSpeed } = this.props;
         if (!rotateSpeed) return;
@@ -517,11 +635,17 @@ class BasicViewer extends PureComponent {
         this.floor.rotateY(angle);
     };
 
+    /**
+     * called during every animation frame
+     */
     everyAnimate = () => {
         const dt = this.clock.getDelta();
         this.rotateFloor(dt);
     };
 
+    /**
+     * render loop
+     */
     animate = () => {
         this.frameId = requestAnimationFrame(this.animate);
 

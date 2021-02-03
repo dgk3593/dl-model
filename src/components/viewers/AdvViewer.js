@@ -19,7 +19,7 @@ import {
     applyMouthTexture,
     applyEyeOffset,
     applyMouthOffset,
-    disposeItem,
+    dispose3dObject,
     createOutline,
     changeMaterial,
 } from "helpers/viewerHelpers";
@@ -27,8 +27,8 @@ import {
 const SIDES = ["Right", "Left"];
 
 export class AdvViewer extends AniViewer {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
     }
 
@@ -64,6 +64,9 @@ export class AdvViewer extends AniViewer {
         this.updateAnimation(prev.animation, current.animation);
     };
 
+    /**
+     * initialize facial expressions
+     */
     initFace = () => {
         const modelId = this.props.model.id;
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
@@ -76,6 +79,9 @@ export class AdvViewer extends AniViewer {
         this.updateFace(defaultFaceParams, this.props.model);
     };
 
+    /**
+     * add specified weapons
+     */
     addWeapons = async () => {
         this.getWeaponInfo();
 
@@ -86,6 +92,9 @@ export class AdvViewer extends AniViewer {
         this.attachAllWeapons();
     };
 
+    /**
+     * extract data from weapon code
+     */
     getWeaponInfo = () => {
         const { weaponRight, weaponLeft } = this.props.model;
         const newInfo = {
@@ -95,6 +104,9 @@ export class AdvViewer extends AniViewer {
         this.modelInfo = Object.assign(this.modelInfo, newInfo);
     };
 
+    /**
+     * load weapons during initialization
+     */
     initWeaponLoad = () => {
         const weaponRight = this.modelInfo.weaponRight?.modelPath;
         const loadWeaponR = loadModel(weaponRight);
@@ -105,6 +117,9 @@ export class AdvViewer extends AniViewer {
         return Promise.all([loadWeaponR, loadWeaponL]);
     };
 
+    /**
+     * initialize all weapons
+     */
     initAllWeapons = async () => {
         const materialType = this.matType;
         SIDES.forEach(side => {
@@ -122,6 +137,11 @@ export class AdvViewer extends AniViewer {
         });
     };
 
+    /**
+     * attach weapon model to main model's hand
+     * @param {THREE.Group} weapon - weapon model
+     * @param {string} side - Left or Right
+     */
     attachWeapon = (weapon, side) => {
         const boneName = `jWeapon${side[0]}`;
         this.models.main.traverse(child => {
@@ -131,6 +151,9 @@ export class AdvViewer extends AniViewer {
         });
     };
 
+    /**
+     * attach weapons when they are loaded
+     */
     attachAllWeapons = () => {
         SIDES.forEach(side => {
             const key = `weapon${side}`;
@@ -141,6 +164,10 @@ export class AdvViewer extends AniViewer {
         });
     };
 
+    /**
+     * detach the weapon on one side
+     * @param {string} side - Left or Right
+     */
     detachWeapon = side => {
         const key = `weapon${side}`;
         const model = this.models[key];
@@ -149,8 +176,17 @@ export class AdvViewer extends AniViewer {
         model.parent.remove(model);
     };
 
+    /**
+     * detach all weapons attached to main model
+     */
     detachAllWeapons = () => SIDES.forEach(side => this.detachWeapon(side));
 
+    /**
+     * change eye texture
+     * @param { AdvFaceState } prev - previous state
+     * @param { AdvFaceState } current - current state
+     * @return {Boolean} whether texture was updated
+     */
     updateEyeTexture = (prev, current) => {
         const currentTexture = current.eyeTexture;
         const prevTexture = prev.eyeTexture;
@@ -183,6 +219,12 @@ export class AdvViewer extends AniViewer {
         this._eyeIdx = newIdx;
     }
 
+    /**
+     * change mouth texture
+     * @param { AdvFaceState } prev - previous state
+     * @param { AdvFaceState } current - current state
+     * @return {Boolean} whether texture was updated
+     */
     updateMouthTexture = (prev, current) => {
         const currentTexture = current.mouthTexture;
         const prevTexture = prev.mouthTexture;
@@ -215,6 +257,11 @@ export class AdvViewer extends AniViewer {
         this._mouthIdx = newIdx;
     }
 
+    /**
+     * update eyes and mouth texture
+     * @param {AdvFaceState} prev
+     * @param {AdvFaceState} current
+     */
     updateFaceTexture = (prev, current) => {
         const eyeUpdated = this.updateEyeTexture(prev, current);
         const mouthUpdated = this.updateMouthTexture(prev, current);
@@ -224,25 +271,39 @@ export class AdvViewer extends AniViewer {
         }
     };
 
+    /**
+     * update uv of face mesh
+     * @param {AdvFaceState} params
+     */
     updateFaceOffset = ({ eyeIdx, mouthIdx }) => {
         this.eyeIdx = eyeIdx;
         this.mouthIdx = mouthIdx;
     };
 
+    /**
+     * update face texture and offset
+     * @param {AdvFaceState} prev
+     * @param {AdvFaceState} current
+     */
     updateFace = (prev, current) => {
         this.updateFaceTexture(prev, current);
         this.updateFaceOffset(current);
     };
 
+    /**
+     * add, change, or remove weapons if needed
+     * @param {AppModelState} prev
+     * @param {AppModelState} current
+     */
     updateWeapons = async (prev, current) => {
         this.disableInput();
         SIDES.forEach(async side => {
             const key = `weapon${side}`;
             if (prev[key] === current[key]) return;
 
-            // remove old weapon
+            // remove and dispose old weapon
             this.detachWeapon(side);
-            disposeItem(this.models[key]); // dispose old weapon
+            dispose3dObject(this.models[key]);
 
             // if current weapon is empty (weapon removed)
             if (!current[key]) {
