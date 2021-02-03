@@ -24,5 +24,6 @@ const aniQuest = [
     { name: "Defense Buff", code: "CMN_052_99" },
     { name: "Heal", code: "CMN_053_99" },
     { name: "Quick Turn", code: "CMN_QTN_01" },
+    { name: "Throw Item", code: "CMN_055_01_01" },
 ];
 export default aniQuest;

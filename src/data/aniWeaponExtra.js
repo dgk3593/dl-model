@@ -84,6 +84,14 @@ const aniWeaponExtra = {
             name: "Buff",
             code: "KAT_050_99",
         },
+        {
+            name: "Throw Item",
+            code: "KAT_055_01_01",
+        },
+        {
+            name: "Mega Man Weapon Force Strike",
+            code: "KAT_054_01_01",
+        },
     ],
     Manacaster: [
         {
