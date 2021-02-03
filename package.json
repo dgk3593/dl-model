@@ -15,10 +15,12 @@
         "react-dom": "^17.0.1",
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.1",
+        "source-map-explorer": "^2.5.2",
         "three": "^0.125.2",
         "uuid": "^8.3.2"
     },
     "scripts": {
+        "analyze": "source-map-explorer 'build/static/js/*.js'",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
