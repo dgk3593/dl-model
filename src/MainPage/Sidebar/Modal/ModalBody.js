@@ -10,7 +10,13 @@ const NonHumanAni = lazy(() => import("./NonHumanAni"));
 const ColorSelect = lazy(() => import("./ColorSelect"));
 const Share = lazy(() => import("./Share"));
 
-function ModalBody({ mode, closeModal, handleSelect, docked, setDock }) {
+function ModalBody({
+    mode,
+    closeModal,
+    handleSelect,
+    docked = false,
+    setDock = null,
+}) {
     let Body = null;
     switch (mode) {
         case "adv":
