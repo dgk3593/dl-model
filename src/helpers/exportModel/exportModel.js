@@ -84,7 +84,7 @@ async function model2gltf(model, options) {
 }
 
 /**
- * ! NOT WORKING
+ * ! NOT WORKING WITH MULTIPLE MATERIALS
  */
 /**
  * export model to glTF
@@ -118,7 +118,7 @@ async function model2usdz(model) {
 }
 
 /**
- * ! NOT WORKING
+ * ! NOT WORKING WITH MULTIPLE MATERIALS
  */
 /**
  * Export a model to USDZ
@@ -148,7 +148,7 @@ async function model2ply(model, options) {
 }
 
 /**
- * ! NOT WORKING
+ * ! NEEDS SMOOTHING
  */
 /**
  * export model to stl
