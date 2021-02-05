@@ -2,7 +2,26 @@ import downloadBlob from "../downloadBlob";
 import { filterObject } from "../helpers";
 import exportOptions from "./exportOptions";
 
-const exporters = { stl: exportSTL, gltf: exportGLTF, usdz: exportUSDZ };
+const exporters = {
+    stl: exportSTL,
+    gltf: exportGLTF,
+    usdz: exportUSDZ,
+    ply: exportPLY,
+};
+
+/**
+ * create a copy of the model without outlines
+ * @param {THREE.Object3D} model
+ */
+const cloneModel = model => {
+    const output = model.clone(true);
+
+    output.traverse(child => {
+        if (child.name === "outline") child.parent.remove(child);
+    });
+
+    return output;
+};
 
 /**
  * export 3d model
@@ -25,7 +44,7 @@ export async function exportModel(model, settings) {
  * @param {THREE.Object3D} model
  * @param {Object} options
  */
-async function scene2stl(model, options) {
+async function model2stl(model, options) {
     const { STLExporter } = await import(
         "three/examples/jsm/exporters/STLExporter"
     );
@@ -35,7 +54,7 @@ async function scene2stl(model, options) {
 }
 
 /**
- * ! NOT WORKING
+ * ! NEEDS SMOOTHING
  */
 /**
  * export model to stl
@@ -43,7 +62,7 @@ async function scene2stl(model, options) {
  * @param {Object} options
  */
 async function exportSTL(model, options) {
-    const fileContent = await scene2stl(model, options);
+    const fileContent = await model2stl(model, options);
     const blob = new Blob([fileContent], { type: "text/plain" });
     const fileName = "model.stl";
 
@@ -115,15 +134,35 @@ async function exportUSDZ(model) {
 }
 
 /**
- * create a copy of the model without outlines
+ * convert model to ply data
  * @param {THREE.Object3D} model
+ * @param {Object} options
  */
-const cloneModel = model => {
-    const output = model.clone(true);
+async function model2ply(model, options) {
+    const { PLYExporter } = await import(
+        "three/examples/jsm/exporters/PLYExporter"
+    );
+    const exporter = new PLYExporter();
 
-    output.traverse(child => {
-        if (child.name === "outline") child.parent.remove(child);
-    });
+    return new Promise(resolve => exporter.parse(model, resolve, options));
+}
 
-    return output;
-};
+/**
+ * ! NOT WORKING
+ */
+/**
+ * export model to stl
+ * @param {THREE.Object3D} model
+ * @param {Object} options
+ */
+async function exportPLY(model, options) {
+    const fileContent = await model2ply(model, options);
+
+    const { binary } = options;
+    const blob = binary
+        ? new Blob([fileContent], { type: "application/octet-stream" })
+        : new Blob([fileContent], { type: "text/plain" });
+    const fileName = "model.ply";
+
+    downloadBlob(blob, fileName);
+}

@@ -34,7 +34,7 @@ function Export({ close }) {
     return (
         <>
             <DialogTop>
-                <DialogTitle onClose={close}>Export (Experiment)</DialogTitle>
+                <DialogTitle onClose={close}>Export (Experimental)</DialogTitle>
             </DialogTop>
             <DialogContent dividers>
                 <div className="Export-options">
