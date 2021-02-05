@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/CoordinatePicker/CoordinatePicker.css"],"names":[],"mappings":"AAAA,kBACI,UAAW,CACX,YAAa,CACb,mCACJ","file":"46.81cebd7a.chunk.css","sourcesContent":[".CoordinatePicker {\r\n    width: 100%;\r\n    display: grid;\r\n    grid-template-columns: repeat(3, 1fr);\r\n}\r\n"]}
