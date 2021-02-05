@@ -15,6 +15,8 @@ import {
     getFaceChangesArray,
 } from "helpers/viewerHelpers";
 
+import downloadBlob from "helpers/downloadBlob";
+
 export class AniViewer extends BasicViewer {
     afterMainModelLoad = () => {
         this.saveMainModelInitState();
@@ -223,15 +225,7 @@ export class AniViewer extends BasicViewer {
                 const superBuffer = new Blob(this.chunks, {
                     type: "video/webm",
                 });
-                const url = URL.createObjectURL(superBuffer);
-                const a = document.createElement("a");
-                a.style.display = "none";
-                a.href = url;
-                a.download = "animation.webm";
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                document.body.removeChild(a);
+                downloadBlob(superBuffer, "animation.webm");
             };
         }
         this.disableInput("Recording");

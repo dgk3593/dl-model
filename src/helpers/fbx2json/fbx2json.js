@@ -1,6 +1,7 @@
 import fbxList from "./fileList";
 import { loadModel } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
+import downloadBlob from "../downloadBlob";
 
 const DOWNLOAD_LIMIT = 10;
 
@@ -15,18 +16,8 @@ const exportAni = async ani => {
     const content = JSON.stringify(ani.toJSON());
 
     const blob = new Blob([content], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.style.display = "none";
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-    console.log(`exported ${ani.name}`);
-
-    window.URL.revokeObjectURL(url);
-    document.body.removeChild(a);
+    downloadBlob(blob, fileName);
 };
 
 const pause = async msec => {
