@@ -1,2 +1,0 @@
-.Selector{display:flex;justify-content:center;padding:.3rem .5rem}.Selector-Item{color:hsla(0,0%,100%,.5);background-color:#323232;padding:.2rem 1rem;cursor:pointer}.Selector-Item:hover:not(.selected){color:hsla(0,0%,100%,.8)}.Selector-Item.selected{color:#fff}.Export-options{width:100%;display:grid;grid-template-columns:5rem auto;margin:1rem}.Export-options div{margin:auto}.Export-btn{display:flex;width:100%;justify-content:center}
-/*# sourceMappingURL=15.5dd08e10.chunk.css.map */
