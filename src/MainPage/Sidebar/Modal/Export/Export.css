@@ -1,0 +1,16 @@
+.Export-options {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5rem auto;
+    margin: 1rem;
+}
+
+.Export-options div {
+    margin: auto;
+}
+
+.Export-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

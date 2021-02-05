@@ -210,6 +210,11 @@ export const defaultSettings = {
         supportedCodecs: [],
         codec: "",
     },
+    export: {
+        enable: false,
+        format: "stl",
+        binary: true,
+    },
     ascii: {
         enable: false,
         charSet: asciiSet[1],

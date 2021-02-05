@@ -161,6 +161,11 @@
  * @property {string[]} supportedCodecs - list of supported codec
  * @property {string} codec - currently selected codec
  *
+ * @typedef {Object} AppExportState
+ * @property {string} format - format to export
+ * @property {Boolean} enable - flip to true to start
+ * @property {Boolean} binary - export as binary or ASCII
+ *
  * @typedef {Object} AppAsciiState
  * @property {Boolean} enable - whether ASCII mode is on, default is false
  * @property {string} charSet - character set used to generate ASCII art
@@ -184,13 +189,16 @@
  * @property {AppAniState} animation - animation related data
  * @property {ChainMakerState} chainMaker - Chain Maker data
  * @property {AppCaptureState} capture - animation capture settings
+ * @property {AppExportState} export - export settings
  * @property {AppAsciiState} ascii - ASCII mode settings
  * @property {AppMiscState} app - other app-related settings
  *
  * @typedef {Object} ViewerProps
  * @property {function} setLoadingMsg - function to allow the viewer to set loading message
- * @property {function} toggleCapture - called after recording is finished
  * @property {AppCaptureState} capture - capture settings
+ * @property {function} toggleCapture - called after recording is finished
+ * @property {AppExportState} export - export settings
+ * @property {function} toggleExport - called after exporting is finished
  * @property {AppModelState} model - model related data
  * @property {AppMatState} material - data related to model's material
  * @property {AppOutlineState} outline - model's outline settings

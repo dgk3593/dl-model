@@ -11,6 +11,8 @@ import ModelSelectBtns from "./ModelSelectBtns";
 
 import { listStyle, typographyProps } from "./commonProps";
 
+import "./styles/SettingBtns.css";
+
 const mainBtns = {
     adv: [
         { value: "texture", text: "Face Override" },
@@ -99,14 +101,21 @@ function SettingBtns({ openModal }) {
         </List>
     );
 
-    const shareBtn = (
-        <div className="SettingBtns-Share">
+    const others = (
+        <div className="SettingBtns-others">
             <Button
                 variant="contained"
                 data-value="share"
                 onClick={handleBtnClick}
             >
                 Share
+            </Button>
+            <Button
+                variant="contained"
+                data-value="export"
+                onClick={handleBtnClick}
+            >
+                Export
             </Button>
         </div>
     );
@@ -195,7 +204,7 @@ function SettingBtns({ openModal }) {
                 </ListItem>
             </List>
 
-            {shareBtn}
+            {others}
         </>
     );
 }

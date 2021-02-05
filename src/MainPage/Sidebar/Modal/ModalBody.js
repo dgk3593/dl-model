@@ -9,6 +9,7 @@ const AnimationSelect = lazy(() => import("./AnimationSelect"));
 const NonHumanAni = lazy(() => import("./NonHumanAni"));
 const ColorSelect = lazy(() => import("./ColorSelect"));
 const Share = lazy(() => import("./Share"));
+const Export = lazy(() => import("./Export"));
 
 function ModalBody({
     mode,
@@ -50,6 +51,9 @@ function ModalBody({
             break;
         case "share":
             Body = Share;
+            break;
+        case "export":
+            Body = Export;
             break;
         default:
             Body = mode.includes("-") ? ColorSelect : null;

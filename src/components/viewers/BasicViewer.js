@@ -331,8 +331,9 @@ class BasicViewer extends PureComponent {
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
      */
-    updateViewer = (prev, current) => {
-        this.updateEnvironment(prev, current);
+    updateViewer = async (prev, current) => {
+        await this.updateExport(prev.export, current.export);
+        this.updateCommon(prev, current);
         this.updateModel(prev, current);
         this.otherUpdate(prev, current);
     };
@@ -350,7 +351,7 @@ class BasicViewer extends PureComponent {
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
      */
-    updateEnvironment = (prev, current) => {
+    updateCommon = (prev, current) => {
         this.updateViewport(prev.viewport, current.viewport);
         this.updateOutline(prev.outline, current.outline);
         this.updateMaterial(prev.material, current.material);
@@ -596,6 +597,21 @@ class BasicViewer extends PureComponent {
 
         this.controls.target.set(...current);
         this.controls.update();
+    };
+
+    /**
+     * @param {ViewerProps["export"]} prev
+     * @param {ViewerProps["export"]} current
+     */
+    updateExport = async (prev, current) => {
+        if (!current.enable || prev.enable) return;
+        this.disableInput("Exporting");
+
+        const { exportModel } = await import("helpers/exportModel");
+        await exportModel(this.models.main, current);
+        this.props.toggleExport();
+
+        this.enableInput();
     };
 
     /**

@@ -5,7 +5,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import { listStyle, typographyProps } from "./commonProps";
 
-import "./ModelSelectBtns.css";
+import "./styles/ModelSelectBtns.css";
 
 const categories = ["adv", "dragon"];
 
