@@ -191,6 +191,17 @@ const otherUnique = {
             name: "Panther",
             icon: "advIcons/110378_01_r05.png",
             animations: [
+                { name: "Idle", code: "CMN_INT_01_11037801" },
+                { name: "Back Jump", code: "LAN_BAC_01_11037801" },
+                { name: "Dash Forward", code: "LAN_ROL_01_11037801" },
+                { name: "Slow Run", code: "CMN_RUN_01_11037801" },
+                { name: "Fast Run", code: "CMN_RUN_02_11037801" },
+                { name: "Quick Turn", code: "CMN_QTN_01_11037801" },
+                { name: "Dash Attack", code: "LAN_DAS_02_11037801" },
+                {
+                    name: "Summon Carmen",
+                    code: "CMN_CTD_01_11037801>CMN_CTD_02_11037801",
+                },
                 {
                     name: "After All-Out Attack",
                     code: "R002_002_c11037801_a_01>R002_002_c11037801_a_02",

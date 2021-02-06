@@ -824,6 +824,27 @@ const skills = {
             code:
                 "LAN_SKL_02_01_11027002>LAN_SKL_02_02_11027002>LAN_SKL_02_03_11027002",
         },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Wildfire",
+            code: "LAN_SKL_01_01_11037801",
+        },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Feel The Heat",
+            code: "LAN_SKL_02_01_11037801",
+        },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Wildfire",
+            subtitle: "Carmen",
+            code: "LAN_SKL_03_01_11037801",
+        },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Tarunda",
+            code: "LAN_SKL_04_01_11037801",
+        },
     ],
     Bow: [
         {

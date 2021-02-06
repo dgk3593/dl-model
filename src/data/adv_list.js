@@ -693,7 +693,7 @@ const adv = [
     {
         id: "110378_01",
         name: "Panther",
-        title: "TBA",
+        title: "Dancing Panther",
         rarity: "5",
         element: "Flame",
         weapon: "Lance",

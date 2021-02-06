@@ -154,6 +154,12 @@ const uniqueCombo = {
             code:
                 "LAN_CMB_A_01_11036401>LAN_CMB_A_02_11036401>LAN_CMB_A_03_11036401",
         },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Panther",
+            code:
+                "LAN_CMB_01_11037801>LAN_CMB_02_11037801>LAN_CMB_03_11037801>LAN_CMB_04_11037801>LAN_CMB_05_11037801",
+        },
     ],
     Wand: [
         {

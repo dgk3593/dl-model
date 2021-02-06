@@ -3432,6 +3432,19 @@ const dragonAni = {
             code: "D21015001_061_01",
         },
     ],
+    d210149_01: [
+        { name: "Idle", code: "D21014901_000_01" },
+        { name: "Move Forward", code: "D21014901_002_01" },
+        { name: "Move Forward (Fast)", code: "D21014901_003_01" },
+        {
+            name: "Skill 1",
+            code: "D21014901_060_01",
+        },
+        {
+            name: "Skill 2",
+            code: "D21014901_061_01",
+        },
+    ],
     d210151_01: [
         { name: "Idle", code: "D21015101_000_01" },
         {

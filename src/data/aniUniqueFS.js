@@ -151,6 +151,11 @@ const uniqueFS = {
             subtitle: "Damaged while Charging",
             code: "LAN_CHR_01_11000702>LAN_CHR_02_11000702>LAN_CHR_04_11000702",
         },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Panther",
+            code: "LAN_CHR_01_11037801>LAN_CHR_02_11037801>LAN_CHR_03_11037801",
+        },
     ],
     Bow: [
         {

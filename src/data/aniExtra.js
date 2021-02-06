@@ -76,6 +76,14 @@ const aniExtra = {
     ],
     Others: [
         {
+            name: "T-Pose",
+            code: "TPose",
+        },
+        {
+            name: "Defeated",
+            code: "Defeated",
+        },
+        {
             name: "Yamcha",
             code: "Yamcha",
         },

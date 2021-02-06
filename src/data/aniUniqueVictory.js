@@ -111,6 +111,11 @@ const uniqueVictory = {
             name: "Sharena",
             code: "LAN_WIN_01_11035801>LAN_WIN_02_11035801",
         },
+        {
+            icon: "advIcons/110378_01_r05.png",
+            name: "Panther",
+            code: "LAN_WIN_01_11037801>LAN_WIN_02_11037801>LAN_WIN_03_11037801",
+        },
     ],
     Bow: [
         {

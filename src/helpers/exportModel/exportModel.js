@@ -10,20 +10,6 @@ const exporters = {
 };
 
 /**
- * create a copy of the model without outlines
- * @param {THREE.Object3D} model
- */
-const cloneModel = model => {
-    const output = model.clone(true);
-
-    output.traverse(child => {
-        if (child.name === "outline") child.parent.remove(child);
-    });
-
-    return output;
-};
-
-/**
  * export 3d model
  * @param {THREE.Object3D} model
  * @param {AppExportState} settings
@@ -38,6 +24,20 @@ export async function exportModel(model, settings) {
 
     exporters[format](clone, options);
 }
+
+/**
+ * create a copy of the model without outlines
+ * @param {THREE.Object3D} model
+ */
+const cloneModel = model => {
+    const clone = model.clone(true);
+
+    clone.traverse(child => {
+        if (child.name === "outline") child.parent.remove(child);
+    });
+
+    return clone;
+};
 
 /**
  * convert model to stl data
@@ -62,6 +62,9 @@ async function model2stl(model, options) {
  * @param {Object} options
  */
 async function exportSTL(model, options) {
+    model.rotateX(Math.PI / 2);
+    window.model = model;
+
     const fileContent = await model2stl(model, options);
     const blob = new Blob([fileContent], { type: "text/plain" });
     const fileName = "model.stl";
