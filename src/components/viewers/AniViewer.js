@@ -74,7 +74,6 @@ export class AniViewer extends BasicViewer {
         const currentClipDuration = ani.duration;
 
         action.setLoop(THREE.LoopRepeat, repetitions);
-        action.clampWhenFinished = true;
         action.timeScale = timeScale;
         action.time = 0;
 
