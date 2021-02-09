@@ -46,6 +46,7 @@ const handleFile = async fileName => {
     }
 
     exportAllAni(animations);
+    console.log(`exported ${fileName}`);
 };
 
 export async function fbx2json() {
