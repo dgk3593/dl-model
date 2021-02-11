@@ -4,32 +4,8 @@
 const aniExtra = {
     Dance: [
         {
-            name: "Slide Step",
-            code: "SlideStep",
-        },
-        {
             name: "Rumba",
             code: "Rumba",
-        },
-        {
-            name: "Flair Start",
-            code: "FlairStart",
-        },
-        {
-            name: "Flair",
-            code: "Flair",
-        },
-        {
-            name: "Flair End",
-            code: "FlairEnd",
-        },
-        {
-            name: "Raise The Roof",
-            code: "RaiseTheRoof",
-        },
-        {
-            name: "Hip Hop",
-            code: "HipHop",
         },
         {
             name: "Ballet",
@@ -64,100 +40,12 @@ const aniExtra = {
             code: "IndianStep",
         },
         {
-            name: "Bboy",
-            code: "Bboy",
-        },
-        {
-            name: "Bboy 2",
-            code: "Bboy2",
-        },
-        {
-            name: "Bboy 3",
-            code: "Bboy3",
-        },
-        {
-            name: "Brooklyn Uprock",
-            code: "BrooklynUprock",
-        },
-        {
-            name: "Booty Hip Hop",
-            code: "Booty",
-        },
-        {
             name: "Gangnam Style",
             code: "GangnamStyle",
         },
         {
-            name: "Hanstand Spin",
-            code: "1990_1>1990_2&r=3>1990_3",
-        },
-        {
-            name: "Footwork",
-            code: "Footwork",
-        },
-        {
-            name: "Footwork 2",
-            code: "Footwork2",
-        },
-        {
-            name: "Footwork To Idle",
-            code: "FootworkToIdle",
-        },
-        {
-            name: "Footwork To Idle 2",
-            code: "FootworkToIdle2",
-        },
-        {
-            name: "Uprock Start",
-            code: "UprockStart",
-        },
-        {
-            name: "Uprock 2 Start",
-            code: "Uprock2Start",
-        },
-        {
-            name: "Uprock",
-            code: "Uprock",
-        },
-        {
-            name: "Uprock 2",
-            code: "Uprock2",
-        },
-        {
-            name: "Uprock 3",
-            code: "Uprock3",
-        },
-        {
-            name: "Uprock To Ground",
-            code: "UprockToGround",
-        },
-        {
-            name: "Uprock To Ground 2",
-            code: "UprockToGround2",
-        },
-        {
             name: "Moonwalk",
             code: "Moonwalk",
-        },
-        {
-            name: "Hip Hop Wave",
-            code: "HipHopWave",
-        },
-        {
-            name: "Hip Hop Wave 2",
-            code: "HipHopWave2",
-        },
-        {
-            name: "Waving The Arms",
-            code: "WavingTheArms",
-        },
-        {
-            name: "Body Wave",
-            code: "BodyWave",
-        },
-        {
-            name: "Arm Wave",
-            code: "ArmWave",
         },
         {
             name: "Shuffling",
@@ -178,38 +66,6 @@ const aniExtra = {
         {
             name: "House Dance 3",
             code: "HouseDance3",
-        },
-        {
-            name: "Freeze Combo",
-            code: "FreezeCombo",
-        },
-        {
-            name: "Single Handstand Freeze",
-            code: "SingleHandstandFreeze",
-        },
-        {
-            name: "Arch Freeze",
-            code: "ArchFreeze",
-        },
-        {
-            name: "Footwork To Crossleg Freeze",
-            code: "FootworkToCrossleg",
-        },
-        {
-            name: "Crossleg To Idle",
-            code: "CrosslegToIdle",
-        },
-        {
-            name: "Breakdance End",
-            code: "BreakdanceEnd",
-        },
-        {
-            name: "Breakdance End 2",
-            code: "BreakdanceEnd2",
-        },
-        {
-            name: "Breakdance End 3",
-            code: "BreakdanceEnd3",
         },
         {
             name: "Maraschino Step",
@@ -236,18 +92,6 @@ const aniExtra = {
             code: "Rapping",
         },
         {
-            name: "Robot Dance",
-            code: "RobotDance",
-        },
-        {
-            name: "Robot Dance 2",
-            code: "RobotDance2",
-        },
-        {
-            name: "Locking Dance",
-            code: "LockingDance",
-        },
-        {
             name: "Shopping Cart Dance",
             code: "ShoppingDance",
         },
@@ -260,40 +104,12 @@ const aniExtra = {
             code: "TwistDance",
         },
         {
-            name: "Snake Dance",
-            code: "SnakeDance",
-        },
-        {
-            name: "Step Dance",
-            code: "StepDance",
-        },
-        {
             name: "YMCA Dance",
             code: "YmcaDance",
         },
         {
             name: "Cabbage Patch",
             code: "CabbagePatch",
-        },
-        {
-            name: "Headspin Start",
-            code: "HeadspinStart",
-        },
-        {
-            name: "Headspin",
-            code: "Headspin",
-        },
-        {
-            name: "Headspin End",
-            code: "HeadspinEnd",
-        },
-        {
-            name: "Tut Hip Hop",
-            code: "Tut",
-        },
-        {
-            name: "Tut Hip Hop 2",
-            code: "Tut2",
         },
         {
             name: "Northern Soul Floor Combo",
@@ -304,16 +120,78 @@ const aniExtra = {
             code: "NorthernSoulSpinCombo",
         },
         {
-            name: "Hip Hop Slide",
-            code: "HipHopSlide",
+            name: "Boogaloo",
+            code: "Boogaloo",
+        },
+    ],
+    "Hip Hop": [
+        {
+            name: "Bboy",
+            code: "Bboy",
         },
         {
-            name: "Hip Hop Quake",
+            name: "Bboy 2",
+            code: "Bboy2",
+        },
+        {
+            name: "Bboy 3",
+            code: "Bboy3",
+        },
+        {
+            name: "Booty",
+            code: "Booty",
+        },
+        {
+            name: "Flair Start",
+            code: "FlairStart",
+        },
+        {
+            name: "Flair",
+            code: "Flair",
+        },
+        {
+            name: "Flair End",
+            code: "FlairEnd",
+        },
+        {
+            name: "Hip Hop",
+            code: "HipHop",
+        },
+        {
+            name: "Just Listening",
+            code: "JustListening",
+        },
+        {
+            name: "Kick Step",
+            code: "KickStep",
+        },
+        {
+            name: "Locking Dance",
+            code: "LockingDance",
+        },
+        {
+            name: "Quake",
             code: "HipHopQuake",
         },
         {
-            name: "Slide Walk",
-            code: "SlideWalk",
+            name: "Raise The Roof",
+            code: "RaiseTheRoof",
+        },
+        {
+            name: "Rib Pops",
+            code: "RibPops",
+        },
+        {
+            name: "Really Twirl",
+            code: "ReallyTwirl",
+        },
+        {
+            name: "Robot Dance",
+            code: "RobotDance",
+        },
+        {
+            name: "Robot Dance 2",
+            code: "RobotDance2",
         },
         {
             name: "Running Man",
@@ -328,65 +206,191 @@ const aniExtra = {
             code: "Shimmy",
         },
         {
-            name: "Kick Step",
-            code: "KickStep",
+            name: "Slide",
+            code: "HipHopSlide",
         },
         {
-            name: "Just Listening",
-            code: "JustListening",
+            name: "Slide Step",
+            code: "SlideStep",
         },
         {
-            name: "Really Twirl",
-            code: "ReallyTwirl",
+            name: "Slide Walk",
+            code: "SlideWalk",
         },
         {
-            name: "Rib Pops",
-            code: "RibPops",
+            name: "Snake Dance",
+            code: "SnakeDance",
+        },
+        {
+            name: "Step Dance",
+            code: "StepDance",
         },
         {
             name: "Side To Side",
             code: "SideToSide",
         },
         {
-            name: "Boogaloo",
-            code: "Boogaloo",
+            name: "Tut",
+            code: "Tut",
         },
         {
-            name: "Rockette Kick",
-            code: "RocketteKick",
+            name: "Tut 2",
+            code: "Tut2",
         },
         {
-            name: "Around The World",
-            code: "AroundTheWorld",
+            name: "Wave",
+            code: "HipHopWave",
         },
         {
-            name: "Arm Push",
-            code: "ArmPush",
+            name: "Wave 2",
+            code: "HipHopWave2",
         },
         {
-            name: "Jazz Square",
-            code: "JazzSquare",
+            name: "Waving The Arms",
+            code: "WavingTheArms",
         },
         {
-            name: "Charleston",
-            code: "Charleston",
+            name: "Body Wave",
+            code: "BodyWave",
         },
         {
-            name: "Charleston 2",
-            code: "Charleston2",
+            name: "Arm Wave",
+            code: "ArmWave",
+        },
+    ],
+    Breakdance: [
+        {
+            name: "Arch Freeze",
+            code: "ArchFreeze",
         },
         {
-            name: "Shim Sham",
-            code: "ShimSham",
+            name: "Breakdance End",
+            code: "BreakdanceEnd",
         },
         {
-            name: "Shim Sham 2",
-            code: "ShimSham2",
+            name: "Breakdance End 2",
+            code: "BreakdanceEnd2",
         },
         {
-            name: "Crazy Legs",
-            code: "CrazyLegs",
+            name: "Breakdance End 3",
+            code: "BreakdanceEnd3",
         },
+        {
+            name: "Brooklyn Uprock",
+            code: "BrooklynUprock",
+        },
+        {
+            name: "Crossleg To Idle",
+            code: "CrosslegToIdle",
+        },
+        {
+            name: "Footwork",
+            code: "Footwork",
+        },
+        {
+            name: "Footwork 2",
+            code: "Footwork2",
+        },
+        {
+            name: "Footwork To Crossleg Freeze",
+            code: "FootworkToCrossleg",
+        },
+        {
+            name: "Footwork To Idle",
+            code: "FootworkToIdle",
+        },
+        {
+            name: "Footwork To Idle 2",
+            code: "FootworkToIdle2",
+        },
+        {
+            name: "Freeze Combo",
+            code: "FreezeCombo",
+        },
+        {
+            name: "Hanstand Spin",
+            code: "1990_1>1990_2&r=3>1990_3",
+        },
+        {
+            name: "Headspin Start",
+            code: "HeadspinStart",
+        },
+        {
+            name: "Headspin",
+            code: "Headspin",
+        },
+        {
+            name: "Headspin End",
+            code: "HeadspinEnd",
+        },
+        {
+            name: "Single Handstand Freeze",
+            code: "SingleHandstandFreeze",
+        },
+        {
+            name: "Uprock Start",
+            code: "UprockStart",
+        },
+        {
+            name: "Uprock",
+            code: "Uprock",
+        },
+        {
+            name: "Uprock 2 Start",
+            code: "Uprock2Start",
+        },
+        {
+            name: "Uprock 2",
+            code: "Uprock2",
+        },
+        {
+            name: "Uprock 3",
+            code: "Uprock3",
+        },
+        {
+            name: "Uprock To Ground",
+            code: "UprockToGround",
+        },
+        {
+            name: "Uprock To Ground 2",
+            code: "UprockToGround2",
+        },
+    ],
+    Samba: [
+        {
+            name: "Afoxe Samba Reggae",
+            code: "AfoxeSambaReggae",
+        },
+        {
+            name: "Samba Funky Pocoto",
+            code: "SambaFunkyPocoto",
+        },
+        {
+            name: "Samba Pagode",
+            code: "SambaPagode",
+        },
+        {
+            name: "Samba Gandy",
+            code: "SambaGandy",
+        },
+        {
+            name: "Desfile De Samba",
+            code: "DesfileDeSamba",
+        },
+        {
+            name: "Olodum",
+            code: "Olodum",
+        },
+        {
+            name: "Ijexa",
+            code: "Ijexa",
+        },
+        {
+            name: "Enredo",
+            code: "Enredo",
+        },
+    ],
+    Salsa: [
         {
             name: "Female Salsa",
             code: "FemaleSalsa",
@@ -427,55 +431,43 @@ const aniExtra = {
             name: "Salsa",
             code: "Salsa",
         },
-        {
-            name: "Afoxe Samba Reggae",
-            code: "AfoxeSambaReggae",
-        },
-        {
-            name: "Samba Funky Pocoto",
-            code: "SambaFunkyPocoto",
-        },
-        {
-            name: "Samba Pagode",
-            code: "SambaPagode",
-        },
-        {
-            name: "Samba Gandy",
-            code: "SambaGandy",
-        },
-        {
-            name: "Desfile De Samba",
-            code: "DesfileDeSamba",
-        },
-        {
-            name: "Olodum",
-            code: "Olodum",
-        },
-        {
-            name: "Ijexa",
-            code: "Ijexa",
-        },
-        {
-            name: "Enredo",
-            code: "Enredo",
-        },
     ],
-    Exercise: [
+    Jazz: [
         {
-            name: "Bicycle Crunch",
-            code: "BicycleCrunch",
+            name: "Rockette Kick",
+            code: "RocketteKick",
         },
         {
-            name: "Pistol Squat",
-            code: "PistolSquat",
+            name: "Around The World",
+            code: "AroundTheWorld",
         },
         {
-            name: "Push Up",
-            code: "PushUp",
+            name: "Arm Push",
+            code: "ArmPush",
         },
         {
-            name: "Sit Ups",
-            code: "SitUps",
+            name: "Jazz Square",
+            code: "JazzSquare",
+        },
+        {
+            name: "Charleston",
+            code: "Charleston",
+        },
+        {
+            name: "Charleston 2",
+            code: "Charleston2",
+        },
+        {
+            name: "Shim Sham",
+            code: "ShimSham",
+        },
+        {
+            name: "Shim Sham 2",
+            code: "ShimSham2",
+        },
+        {
+            name: "Crazy Legs",
+            code: "CrazyLegs",
         },
     ],
     Movement: [
@@ -582,6 +574,24 @@ const aniExtra = {
         {
             name: "Zombie Crawl",
             code: "ZombieCrawl",
+        },
+    ],
+    Exercise: [
+        {
+            name: "Bicycle Crunch",
+            code: "BicycleCrunch",
+        },
+        {
+            name: "Pistol Squat",
+            code: "PistolSquat",
+        },
+        {
+            name: "Push Up",
+            code: "PushUp",
+        },
+        {
+            name: "Sit Ups",
+            code: "SitUps",
         },
     ],
     Combat: [
