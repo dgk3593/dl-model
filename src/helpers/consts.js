@@ -612,6 +612,7 @@ export const aniModList = {
  * list of video codecs to check for
  */
 export const videoCodecs = [
+    "video/mp4;codecs=h264",
     "video/webm;codecs=h264",
     "video/webm;codecs=vp9",
     "video/webm;codecs=vp8",

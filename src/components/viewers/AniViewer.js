@@ -221,10 +221,13 @@ export class AniViewer extends BasicViewer {
                 this.chunks.push(event.data);
             this.mediaRecorder.onstop = () => {
                 this.enableInput();
+
+                const { format } = this.props.capture;
+
                 const superBuffer = new Blob(this.chunks, {
-                    type: "video/webm",
+                    type: `video/${format}`,
                 });
-                downloadBlob(superBuffer, "animation.webm");
+                downloadBlob(superBuffer, `animation.${format}`);
             };
         }
         this.disableInput("Recording");

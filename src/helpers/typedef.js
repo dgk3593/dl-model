@@ -160,6 +160,7 @@
  * @property {Boolean} enable - whether animation is being captured
  * @property {string[]} supportedCodecs - list of supported codec
  * @property {string} codec - currently selected codec
+ * @property {string} format - currently selected format
  *
  * @typedef {Object} AppExportState
  * @property {string} format - format to export

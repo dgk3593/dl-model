@@ -25,12 +25,16 @@ function DrawerHeader({ toggleSidebar }) {
         const supportedCodecs = videoCodecs.filter(
             MediaRecorder.isTypeSupported
         );
+        const codec = supportedCodecs[0];
+        const format = codec.includes("mp4") ? "mp4" : "webm";
+
         const action = {
             type: "update",
             key: "capture",
             value: {
                 supportedCodecs: [...supportedCodecs],
-                codec: supportedCodecs[0],
+                codec,
+                format,
             },
         };
         dispatch(action);
