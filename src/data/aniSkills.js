@@ -930,7 +930,7 @@ const skills = {
         {
             icon: "advIcons/110342_03_r05.png",
             name: "Rampaging Passion",
-            subtitle: "Modified",
+            subtitle: "Used by Luca",
             code: "BOW_SKL_03_01_11034203",
         },
         {
