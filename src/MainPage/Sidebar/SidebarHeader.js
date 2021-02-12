@@ -26,6 +26,8 @@ function DrawerHeader({ toggleSidebar }) {
             MediaRecorder.isTypeSupported
         );
         const codec = supportedCodecs[0];
+        if (!codec) return;
+
         const format = codec.includes("mp4") ? "mp4" : "webm";
 
         const action = {
