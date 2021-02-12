@@ -1,6 +1,8 @@
 import { lazy, Suspense, useState, useEffect, useContext } from "react";
 import useToggleState from "hooks/useToggleState";
 
+import { SettingsContext } from "context/SettingsContext";
+
 import FileCopy from "@material-ui/icons/FileCopy";
 
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -8,14 +10,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Checkbox from "@material-ui/core/Checkbox";
 import TextField from "@material-ui/core/TextField";
 
-import { SettingsContext } from "context/SettingsContext";
-import {
-    defaultSettings,
-    initKeyMap,
-    initKeys,
-    baseUrl,
-    cameraPositions,
-} from "helpers/consts";
+import { defaultSettings, initKeyMap, initKeys, baseUrl } from "helpers/consts";
+import cameraPositions from "data/cameraPositions";
+
 import { getDefaultFace, getDefaultAni } from "helpers/helpers";
 
 import "./styles/ShareContent.css";
@@ -54,6 +51,10 @@ function ShareContent({ method }) {
     };
 
     const copyText = () => {
+        /**
+         * @type {HTMLInputElement}
+         */
+        // @ts-ignore
         const shareTextField = document.getElementById("shareTextField");
         shareTextField.select();
         shareTextField.setSelectionRange(0, 99999); // For mobile
@@ -134,8 +135,14 @@ function ShareContent({ method }) {
 
     useEffect(() => {
         if (method !== 1) return; // QR
+
+        /**
+         * @type {HTMLInputElement}
+         */
+        // @ts-ignore
         const shareTextField = document.getElementById("shareTextField");
         if (!shareTextField) return;
+
         shareTextField.focus();
         shareTextField.select();
     }, [shareLink, method]);

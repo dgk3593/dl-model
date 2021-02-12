@@ -4,7 +4,8 @@ import { SettingsContext, DispatchContext } from "context/SettingsContext";
 import "./styles/Display.css";
 
 import { getTextColor } from "helpers/helpers";
-import { cameraPositions, controlsPositions } from "helpers/consts";
+import cameraPositions from "data/cameraPositions";
+import controlsPosition from "data/controlsPositions";
 
 const AniControl = lazy(() => import("./AniControl"));
 const BaseViewer = lazy(() => import("components/viewers/BasicViewer"));
@@ -48,8 +49,8 @@ function Display(props) {
           )
         : defaultCameraPosition;
 
-    const controlsPosition =
-        controlsPositions[modelId] || controlsPositions[modelType];
+    const controlPosition =
+        controlsPosition[modelId] || controlsPosition[modelType];
 
     const ModelViewer = viewers[viewerType];
 
@@ -82,7 +83,7 @@ function Display(props) {
                     bgColor={bgColor}
                     viewport={viewport}
                     cameraPosition={cameraPosition}
-                    controlsPosition={controlsPosition}
+                    controlsPosition={controlPosition}
                     rotateSpeed={rotateSpeed}
                 />
             </Suspense>
