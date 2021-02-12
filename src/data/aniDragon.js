@@ -3456,6 +3456,24 @@ const dragonAni = {
             code: "D21015101_061_01",
         },
     ],
+    d210137_01: [
+        { name: "Dragon's Roost", code: "DC_d210137_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210137_01_90_04" },
+        { name: "Idle", code: "D21013701_000_01" },
+        { name: "Move Forward", code: "D21013701_002_01" },
+        { name: "Move Forward (Fast)", code: "D21013701_003_01" },
+        { name: "Brake", code: "D21013701_004_01" },
+        { name: "Dash Forward", code: "D21013701_020_01" },
+        { name: "Transform", code: "D21013701_030_01" },
+        {
+            name: "Combo",
+            code: "D21013701_040_01>D21013701_041_01>D21013701_042_01",
+        },
+        {
+            name: "Menoetius's Devastation",
+            code: "D21013701_060_01",
+        },
+    ],
 };
 
 export default dragonAni;

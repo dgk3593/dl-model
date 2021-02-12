@@ -907,6 +907,14 @@ const adv = [
         weapon: "Bow",
     },
     {
+        id: "110342_03",
+        name: "Valentine's Chelsea",
+        title: "Cloying Clingy Admirer",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Bow",
+    },
+    {
         id: "110043_02",
         name: "Valentine's Hildegarde",
         title: "Rosy Saint",

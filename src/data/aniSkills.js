@@ -918,14 +918,30 @@ const skills = {
             code: "BOW_SKL_01_01_11031002",
         },
         {
-            icon: "advIcons/110317_01_r05.png",
-            name: "Vivid Volley",
-            code: "BOW_SKL_01_01_11031701",
-        },
-        {
             icon: "advIcons/110342_01_r05.png",
             name: "Love's Liberation",
             code: "BOW_SKL_01_01_11034201",
+        },
+        {
+            icon: "advIcons/110342_03_r05.png",
+            name: "Rampaging Passion",
+            code: "BOW_SKL_01_01_11034203",
+        },
+        {
+            icon: "advIcons/110342_03_r05.png",
+            name: "Rampaging Passion",
+            subtitle: "Modified",
+            code: "BOW_SKL_03_01_11034203",
+        },
+        {
+            icon: "advIcons/110342_03_r05.png",
+            name: "Infinite Love",
+            code: "BOW_SKL_02_01_11034203",
+        },
+        {
+            icon: "advIcons/110317_01_r05.png",
+            name: "Vivid Volley",
+            code: "BOW_SKL_01_01_11031701",
         },
         {
             icon: "advIcons/110350_01_r04.png",

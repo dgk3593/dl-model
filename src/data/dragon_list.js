@@ -353,6 +353,13 @@ const dragons = [
         element: "Shadow",
     },
     {
+        id: "210137_01",
+        name: "Menoetius",
+        title: "Raging Wind",
+        rarity: "5",
+        element: "Wind",
+    },
+    {
         id: "210131_01",
         name: "Midgardsormr Zero",
         title: "Primal Stormbearer",

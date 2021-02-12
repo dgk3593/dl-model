@@ -2,6 +2,7 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const faceOffset = {
+    c110342_03: [0.05, -0.08], // Valentine's Chelsea
     c110377_02: [0.043, -0.08], // Joker
     c110377_01: [0.043, -0.08], // Joker
     c110378_02: [0.043, -0.08], // Panther
