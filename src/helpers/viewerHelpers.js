@@ -170,7 +170,7 @@ export const dispose3dObject = object => {
     const disposeMaterial = object => {
         callbackOnEach(object.material, mat => {
             dispose(mat.map);
-            dispose(mat.backupMap);
+            dispose(mat.userData.backupMap);
             dispose(mat);
         });
     };
@@ -312,12 +312,13 @@ export const changeMaterial = (
             };
             const newMaterial = createNewMaterial(materialType, initParams);
             newMaterial.name = mat.name;
-            // @ts-ignore
-            if (mat.backupMap) newMaterial.backupMap = mat.backupMap;
+            if (mat.userData.backupMap) {
+                newMaterial.userData.backupMap = mat.userData.backupMap;
+            }
 
             if (texturePath) {
                 mat.map?.dispose?.();
-                mat.backupMap?.dispose?.();
+                mat.userData.backupMap?.dispose?.();
             }
             mat.dispose();
 
@@ -422,8 +423,8 @@ const replaceMaterial = (object, newMaterial) => {
     const { material } = object;
     // dispose old material
     callbackOnEach(material, mat => {
-        mat.map.dispose?.();
-        mat.backupMap?.dispose?.();
+        mat.map?.dispose?.();
+        mat.userData.backupMap?.dispose?.();
         mat.dispose();
     });
     // apply new material
@@ -710,6 +711,7 @@ export const applyMaterialParam = (materials, param) => {
     const [key, value] = param;
     let handler;
     const needsUpdate = needsUpdateParams.includes(key);
+
     switch (key) {
         case "gradientMap":
             const nTones = parseInt(value);
@@ -719,11 +721,11 @@ export const applyMaterialParam = (materials, param) => {
         case "useTexture":
             handler = value
                 ? mat => {
-                      mat.map = mat.backupMap;
-                      mat.backupMap = null;
+                      mat.map = mat.userData.backupMap;
+                      mat.userData.backupMap = null;
                   }
                 : mat => {
-                      mat.backupMap = mat.map;
+                      if (mat.map) mat.userData.backupMap = mat.map;
                       mat.map = null;
                   };
             break;
@@ -788,7 +790,7 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
     material.forEach(mat => {
         const textureName = mat.map?.name;
         if (textureName?.includes(oldTexture)) {
-            mat.map.dispose?.();
+            mat.map?.dispose?.();
             mat.map = newTexture;
         }
     });

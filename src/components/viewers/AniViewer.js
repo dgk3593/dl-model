@@ -1,4 +1,4 @@
-/* 
+/** 
 ################################################
 # Extension of Base Viewer that adds:
 #    - Animation
@@ -53,8 +53,8 @@ export class AniViewer extends BasicViewer {
      */
     saveMainModelInitState = () => {
         const model = this.models.main;
-        model.initPos = model.position.clone();
-        model.initRot = model.rotation.clone();
+        model.userData.initPos = model.position.clone();
+        model.userData.initRot = model.rotation.clone();
     };
 
     /**
@@ -159,7 +159,7 @@ export class AniViewer extends BasicViewer {
         mainModel.mixer?.stopAllAction?.();
 
         // Reset position and rotation to initial value
-        const { initPos, initRot } = mainModel;
+        const { initPos, initRot } = mainModel.userData;
         mainModel.position.copy(initPos);
         mainModel.rotation.copy(initRot);
 

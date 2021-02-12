@@ -1,4 +1,4 @@
-/* 
+/**
 ################################################
 # Extension of Ani Viewer that adds:
 #    - Weapons

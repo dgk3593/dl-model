@@ -1,4 +1,4 @@
-/* 
+/**
 ################################################
 # Extension of Ani Viewer for dragons that adds:
 #    - Eyes and Mouth
