@@ -8,12 +8,17 @@ import cameraPositions from "data/cameraPositions";
 import controlsPosition from "data/controlsPositions";
 
 const AniControl = lazy(() => import("./AniControl"));
-const BaseViewer = lazy(() => import("components/viewers/BasicViewer"));
+const BasicViewer = lazy(() => import("components/viewers/BasicViewer"));
 const AdvViewer = lazy(() => import("components/viewers/AdvViewer"));
 const DragonViewer = lazy(() => import("components/viewers/DragonViewer"));
 
-const viewers = { basic: BaseViewer, adv: AdvViewer, dragon: DragonViewer };
+const viewers = { basic: BasicViewer, adv: AdvViewer, dragon: DragonViewer };
 
+/**
+ * @param {Object} props
+ * @param {function} props.setLoadingMsg
+ * @param {{width: number, height: number}} props.viewport
+ */
 function Display(props) {
     const { viewport } = props;
 
