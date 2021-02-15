@@ -32,9 +32,15 @@ export async function exportModel(model, settings) {
 const cloneModel = model => {
     const clone = model.clone(true);
 
-    clone.traverse(child => {
-        if (child.name === "outline") child.parent.remove(child);
-    });
+    /**
+     * @type {THREE.Object3D[]}
+     */
+    const outlines = [];
+    clone.traverseVisible(
+        child => child.name === "outline" && outlines.push(child)
+    );
+
+    outlines.forEach(outline => outline.parent.remove(outline));
 
     return clone;
 };
@@ -45,6 +51,8 @@ const cloneModel = model => {
  * @param {Object} options
  */
 async function model2stl(model, options) {
+    model.rotateX(Math.PI / 2);
+
     const { STLExporter } = await import(
         "three/examples/jsm/exporters/STLExporter"
     );
@@ -62,9 +70,6 @@ async function model2stl(model, options) {
  * @param {Object} options
  */
 async function exportSTL(model, options) {
-    model.rotateX(Math.PI / 2);
-    window.model = model;
-
     const fileContent = await model2stl(model, options);
     const blob = new Blob([fileContent], { type: "text/plain" });
     const fileName = "model.stl";
