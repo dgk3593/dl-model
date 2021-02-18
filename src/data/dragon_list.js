@@ -170,6 +170,13 @@ const dragons = [
         rarity: "5",
         element: "Flame",
     },
+    // {
+    //     id: "210144_01",
+    //     name: "Gala Reborn Jeanne d'Arc",
+    //     title: "",
+    //     rarity: "5",
+    //     element: "Light",
+    // },
     {
         id: "210134_01",
         name: "Gala Reborn Poseidon",
