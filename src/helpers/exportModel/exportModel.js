@@ -15,35 +15,34 @@ const exporters = {
  * @param {AppExportState} settings
  */
 export async function exportModel(model, settings) {
-    const clone = cloneModel(model);
     const { format } = settings;
     const optionList = exportOptions.find(option => option.format === format)
         .options;
 
     const options = filterObject(settings, optionList);
 
-    exporters[format](clone, options);
+    exporters[format](model, options);
 }
 
-/**
- * create a copy of the model without outlines
- * @param {THREE.Object3D} model
- */
-const cloneModel = model => {
-    const clone = model.clone(true);
+// /**
+//  * create a copy of the model without outlines
+//  * @param {THREE.Object3D} model
+//  */
+// function cloneModel(model) {
+//     const clone = model.clone(true);
 
-    /**
-     * @type {THREE.Object3D[]}
-     */
-    const outlines = [];
-    clone.traverseVisible(
-        child => child.name === "outline" && outlines.push(child)
-    );
+//     /**
+//      * @type {THREE.Object3D[]}
+//      */
+//     const outlines = [];
+//     clone.traverseVisible(
+//         child => child.name === "outline" && outlines.push(child)
+//     );
 
-    outlines.forEach(outline => outline.parent.remove(outline));
+//     outlines.forEach(outline => outline.parent.remove(outline));
 
-    return clone;
-};
+//     return clone;
+// }
 
 /**
  * convert model to stl data
@@ -58,7 +57,10 @@ async function model2stl(model, options) {
     );
     const exporter = new STLExporter();
 
-    return exporter.parse(model, options);
+    const output = exporter.parse(model, options);
+    model.rotateX(-Math.PI / 2);
+
+    return output;
 }
 
 /**
