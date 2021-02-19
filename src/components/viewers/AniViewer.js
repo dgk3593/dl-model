@@ -12,7 +12,7 @@ import * as THREE from "three";
 import {
     analyzeChainCode,
     loadAnimations,
-    getFaceChangesArray,
+    getFaceChangesQueue,
 } from "helpers/viewerHelpers";
 
 import downloadBlob from "helpers/downloadBlob";
@@ -77,7 +77,7 @@ export class AniViewer extends BasicViewer {
         action.timeScale = timeScale;
         action.time = 0;
 
-        this.faceChanges = getFaceChangesArray(faceChanges, repetitions);
+        this.faceChanges = getFaceChangesQueue(faceChanges, repetitions);
         this.faceChangeTime = this.faceChanges.map(
             change => (currentClipDuration * change.time) / 100
         );

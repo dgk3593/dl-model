@@ -640,7 +640,7 @@ export const processFaceChanges = faceChanges => {
  * @param {number} repetitions - number of repetitions
  * @return {FaceChangeArray} extended face change array
  */
-export const getFaceChangesArray = (faceChanges, repetitions) => {
+export const getFaceChangesQueue = (faceChanges, repetitions) => {
     if (!faceChanges) return [];
     if (repetitions === 1) return [...faceChanges];
     // [0, 100, 200,...]
