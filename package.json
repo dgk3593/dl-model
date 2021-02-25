@@ -16,7 +16,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.3",
         "source-map-explorer": "^2.5.2",
-        "three": "^0.125.2",
+        "three": "^0.126.0",
         "uuid": "^8.3.2"
     },
     "scripts": {
