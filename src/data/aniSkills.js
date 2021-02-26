@@ -845,6 +845,11 @@ const skills = {
             name: "Tarunda",
             code: "LAN_SKL_04_01_11037801",
         },
+        {
+            icon: "advIcons/110381_01_r05.png",
+            name: "Clemens Punishment",
+            code: "LAN_SKL_01_01_11038101",
+        },
     ],
     Bow: [
         {

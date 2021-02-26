@@ -156,6 +156,11 @@ const uniqueFS = {
             name: "Panther",
             code: "LAN_CHR_01_11037801>LAN_CHR_02_11037801>LAN_CHR_03_11037801",
         },
+        {
+            icon: "advIcons/110381_01_r05.png",
+            name: "Ryszarda",
+            code: "LAN_CHR_01_11038101>LAN_CHR_02_11038101>LAN_CHR_03_11038101",
+        },
     ],
     Bow: [
         {

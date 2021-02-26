@@ -3474,6 +3474,58 @@ const dragonAni = {
             code: "D21013701_060_01",
         },
     ],
+    d210144_01: [
+        { name: "Dragon's Roost", code: "DC_d210144_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210144_01_90_04" },
+        { name: "Idle", code: "D21014401_000_01" },
+        { name: "Move Forward", code: "D21014401_002_01" },
+        { name: "Move Forward (Fast)", code: "D21014401_003_01" },
+        { name: "Brake", code: "D21014401_004_01" },
+        { name: "Dash Forward", code: "D21014401_020_01" },
+        { name: "Transform", code: "D21014401_030_01" },
+        {
+            name: "Combo",
+            code: "D21014401_040_01>D21014401_041_01>D21014401_042_01",
+        },
+        {
+            name: "Holy Crusade",
+            code: "D21014401_060_01",
+        },
+    ],
+    d210145_02: [
+        { name: "Idle", code: "D21014502_000_01" },
+        { name: "Move Forward", code: "D21014502_002_01" },
+        { name: "Idle 2", code: "D21014502_014_01" },
+        { name: "Dash Forward", code: "D21014502_102_01" },
+        {
+            name: "Broken",
+            code: "D21014502_081_01>D21014502_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21014502_081_03",
+        },
+        {
+            name: "Boss Appear",
+            code: "D21014502_090_01>D21014502_090_02",
+        },
+        { name: "Skill", code: "D21014502_022_01" },
+        {
+            name: "Skill 2",
+            code:
+                "D21014502_100_01>D21014502_100_02>D21014502_100_03>D21014502_100_04>D21014502_100_05",
+        },
+        {
+            name: "Skill 3",
+            code:
+                "D21014502_101_01>D21014502_101_02>D21014502_101_03>D21014502_101_04>D21014502_101_05",
+        },
+        {
+            name: "Skill 4",
+            code:
+                "D21014502_103_01>D21014502_103_02>D21014502_103_03>D21014502_103_04>D21014502_103_05",
+        },
+    ],
 };
 
 export default dragonAni;

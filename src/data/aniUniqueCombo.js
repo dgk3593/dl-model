@@ -160,6 +160,13 @@ const uniqueCombo = {
             code:
                 "LAN_CMB_01_11037801>LAN_CMB_02_11037801>LAN_CMB_03_11037801>LAN_CMB_04_11037801>LAN_CMB_05_11037801",
         },
+        {
+            icon: "advIcons/110381_01_r05.png",
+            name: "Ryszarda",
+            subtitle: "Sigil Unlocked",
+            code:
+                "LAN_CMB_06_01_11038101>LAN_CMB_06_02_11038101>LAN_CMB_06_03_11038101",
+        },
     ],
     Wand: [
         {

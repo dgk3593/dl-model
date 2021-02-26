@@ -8,8 +8,8 @@ const dragonFace = {
     d200011_01: { eye: 4, mouth: 0 },
     d210071_01: { eye: 0, mouth: 0 },
     d210128_01: { eye: 4, mouth: 0 },
-    d210132_02: { eye: 5, mouth: 5 },
     d210118_01: { eye: 3, mouth: 0 },
+    d210132_02: { eye: 5, mouth: 5 },
     d210093_01: { eye: 4, mouth: 0 },
     d210096_01: { eye: 4, mouth: 0 },
     d210102_01: { eye: 5, mouth: 5 },
@@ -81,8 +81,8 @@ const dragonFace = {
     d210094_01: { eye: 5, mouth: 5 },
     d210025_01: { eye: 4, mouth: 0 },
     d210052_01: { eye: 5, mouth: 5 },
-    d210132_01: { eye: 5, mouth: 5 },
     d210121_01: { eye: 4, mouth: 0 },
+    d210132_01: { eye: 5, mouth: 5 },
     d210087_01: { eye: 4, mouth: 0 },
     d210078_01: { eye: 4, mouth: 0 },
     d210081_01: { eye: 4, mouth: 0 },
@@ -133,5 +133,7 @@ const dragonFace = {
     d210150_01: { eye: 4, mouth: 0 },
     d210151_01: { eye: 0, mouth: 0 },
     d210137_01: { eye: 5, mouth: 5 },
+    d210144_01: { eye: 5, mouth: 5 },
+    d210145_02: { eye: 5, mouth: 5 },
 };
 export default dragonFace;

@@ -35,6 +35,11 @@ const extraDragons = [
         title: "Otherworld",
     },
     {
+        id: "210145_02",
+        name: "Gabriel",
+        title: "Otherworld",
+    },
+    {
         id: "210118_01",
         name: "Rush",
     },

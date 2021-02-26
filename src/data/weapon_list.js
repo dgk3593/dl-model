@@ -3451,6 +3451,14 @@ const weapon_list = [
         element: "None",
     },
     {
+        id: "w306021_01",
+        iconName: "306021_01_59901.png",
+        name: "Eternal Bloom",
+        weapon: "Bow",
+        rarity: "5",
+        element: "None",
+    },
+    {
         id: "w307031_01",
         iconName: "307031_01_59901.png",
         name: "Wand of the Torrent",

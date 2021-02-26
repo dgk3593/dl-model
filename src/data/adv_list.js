@@ -1451,6 +1451,22 @@ const adv = [
         weapon: "Dagger",
     },
     {
+        id: "110381_01",
+        name: "Ryszarda",
+        title: "The Wing of Enlightenment",
+        rarity: "5",
+        element: "Light",
+        weapon: "Lance",
+    },
+    {
+        id: "110381_91",
+        name: "Ryszarda",
+        title: "Sigil Unlocked",
+        rarity: "5",
+        element: "Light",
+        weapon: "Lance",
+    },
+    {
         id: "110039_01",
         name: "Ryozen",
         title: "Dormant Demon",
