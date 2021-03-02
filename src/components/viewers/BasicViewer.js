@@ -32,6 +32,7 @@ import {
     updateMatParams,
     removeEffects,
     replaceTexture,
+    applyMod,
     logUpdate,
 } from "helpers/viewerHelpers";
 import { fbxSource } from "App";
@@ -299,6 +300,14 @@ class BasicViewer extends PureComponent {
     };
 
     /**
+     * apply modifier code to main model
+     */
+    applyModelMod = () => {
+        const modCode = this.props.model.mod;
+        applyMod(this.models.main, modCode);
+    };
+
+    /**
      * main model basic processing:
      * remove effects, change material, change texture, add outline, then add to scene
      */
@@ -317,6 +326,7 @@ class BasicViewer extends PureComponent {
         }
 
         await this.initTexture();
+        this.applyModelMod();
 
         this.applyNewModelMat(model);
 
@@ -423,8 +433,12 @@ class BasicViewer extends PureComponent {
      */
     updateMainModel = async (prev, current) => {
         const modelId = current.id;
-        const mainUpdated = prev.id !== modelId;
-        if (!mainUpdated) return;
+        const idChanged = prev.id !== modelId;
+        const modChanged = prev.mod !== current.mod;
+
+        modChanged && this.applyModelMod();
+
+        if (!idChanged) return;
 
         this.beforeMainModelUpdate();
         await this.replaceMainModel();

@@ -55,9 +55,9 @@ export class AdvViewer extends AniViewer {
 
         const prevModel = prev.model;
         const { model } = current;
-        if (prevModel.id !== model.id) {
-            await this.updateMainModel(prevModel, model);
-        } else {
+        await this.updateMainModel(prevModel, model);
+
+        if (prevModel.id === model.id) {
             this.updateFace(prevModel, model);
         }
         this.updateWeapons(prevModel, model);
