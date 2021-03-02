@@ -155,6 +155,14 @@ const adv = [
         weapon: "Dagger",
     },
     {
+        id: "110382_01",
+        name: "Faris",
+        title: "The Wing of Righteousness",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Manacaster",
+    },
+    {
         id: "110328_01",
         name: "Fjorm",
         title: "Princess of Ice",

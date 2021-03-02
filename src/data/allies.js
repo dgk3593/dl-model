@@ -46,10 +46,6 @@ const allies = [
         id: "110377_01_h",
         name: "Joker (Story)",
     },
-    {
-        id: "110382_01",
-        name: "Faris",
-    },
 ];
 
 export default allies;
