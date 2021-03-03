@@ -13,7 +13,11 @@ import TextField from "@material-ui/core/TextField";
 import { defaultSettings, initKeyMap, initKeys, baseUrl } from "helpers/consts";
 import cameraPositions from "data/cameraPositions";
 
-import { getDefaultFace, getDefaultAni } from "helpers/helpers";
+import {
+    getDefaultFace,
+    getDefaultAni,
+    getDefaultModelMod,
+} from "helpers/helpers";
 
 import "./styles/ShareContent.css";
 
@@ -111,6 +115,14 @@ function ShareContent({ method }) {
                             p !== defaultCamPos[i] ? p : ""
                         );
                         linkParts.push(`cam=${camParams.join(",")}`);
+                    }
+                    break;
+                case "modName":
+                    const defaultModName = getDefaultModelMod(modelId)?.name;
+                    if (currentValue !== defaultModName) {
+                        linkParts.push(
+                            `modName=${currentValue.replace(" ", "")}`
+                        );
                     }
                     break;
                 default:

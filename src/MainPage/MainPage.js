@@ -1,15 +1,30 @@
-import { lazy, Suspense, useState, useRef, useEffect, useContext } from "react";
+import {
+    lazy,
+    Suspense,
+    useState,
+    useRef,
+    useEffect,
+    useContext,
+    useCallback,
+} from "react";
 
 import useToggleState from "hooks/useToggleState";
 
 import Menu from "@material-ui/icons/Menu";
-
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useStyles from "./MainPageStyles";
 
 import Display from "./Display";
+
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
-import { setParamsFromPath } from "helpers/helpers";
+import {
+    setParamsFromPath,
+    getViewerType,
+    getDefaultAni,
+    getDefaultModelMod,
+} from "helpers/helpers";
+
+import { chainCodeToList } from "helpers/viewerHelpers";
 
 const Sidebar = lazy(() => import("./Sidebar"));
 const Dock = lazy(() => import("./Dock"));
@@ -29,25 +44,13 @@ function MainPage({ location }) {
     const dockHandle = useRef();
 
     const {
-        app: { showSettings },
+        model,
+        app: { showSettings, viewerType },
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
     const viewerRef = useRef();
-
-    useEffect(() => {
-        setParamsFromPath(location.pathname, dispatch);
-        setLoadingMsg("");
-        setInitLoadDone(true);
-    }, [location.pathname, dispatch]);
-
-    useEffect(() => {
-        window.addEventListener("resize", updateViewportSize);
-
-        return function () {
-            window.removeEventListener("resize", updateViewportSize);
-        };
-    }, []);
+    const currentId = useRef("");
 
     const updateViewportSize = () => {
         const width = viewerRef.current.clientWidth;
@@ -61,6 +64,67 @@ function MainPage({ location }) {
     };
 
     const closeDock = () => setDockMode("");
+
+    const updateSetings = useCallback(
+        key => value => dispatch({ type: "update", key, value }),
+        [dispatch]
+    );
+
+    // load params from path
+    useEffect(() => {
+        setParamsFromPath(location.pathname, dispatch);
+        setLoadingMsg("");
+        setInitLoadDone(true);
+    }, [location.pathname, dispatch]);
+
+    // update viewport size when resized
+    useEffect(() => {
+        window.addEventListener("resize", updateViewportSize);
+
+        return function () {
+            window.removeEventListener("resize", updateViewportSize);
+        };
+    }, []);
+
+    // update settings when id changed
+    useEffect(() => {
+        const { id, modName } = model;
+        if (id === currentId.current) return;
+
+        const newViewerType = getViewerType(id);
+        const viewerChanged = newViewerType !== viewerType;
+        updateSetings("app")({ viewerType: newViewerType });
+
+        const viewerChangedToAdv = newViewerType === "adv" && viewerChanged;
+        if (viewerChangedToAdv) {
+            updateSetings("model")({ eyeIdx: 2, mouthIdx: 2 });
+        }
+
+        if (viewerChanged && newViewerType === "dragon") {
+            updateSetings("model")({ eyeIdx: 1, mouthIdx: 1 });
+        }
+
+        const needResetAni = newViewerType === "dragon" || viewerChangedToAdv;
+
+        if (needResetAni) {
+            const newAni = getDefaultAni(id);
+            updateSetings("animation")({ code: newAni });
+            updateSetings("chainMaker")({
+                chain: chainCodeToList(newAni, "init"),
+            });
+        }
+
+        if (!modName) {
+            const modelMod = getDefaultModelMod(id);
+            updateSetings("model")({
+                mod: modelMod?.code,
+                modName: modelMod?.name,
+            });
+        }
+        console.log(model);
+
+        currentId.current = id;
+    }, [model, updateSetings, viewerType]);
 
     return (
         <>

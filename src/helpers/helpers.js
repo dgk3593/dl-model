@@ -13,6 +13,7 @@ import {
 
 import { chainCodeToList } from "./viewerHelpers";
 import dragonAni from "data/aniDragon";
+import modelMod from "data/modelMod";
 
 /**
  * capitalize first letter of tring
@@ -113,6 +114,12 @@ export const getDefaultAni = modelId => {
 
     return "";
 };
+
+/**
+ * @param {string} modelId
+ * @return {ModelMod | undefined}
+ */
+export const getDefaultModelMod = modelId => modelMod[modelId]?.[0];
 
 /**
  * get default eye and mouth index
@@ -224,6 +231,18 @@ const filterParamsByGroup = (params, groupName) =>
     }, []);
 
 /**
+ * @param {string} id
+ * @param {string} modName
+ * @return {ModelMod}
+ */
+const getModelModByName = (id, modName) => {
+    const result = modelMod[id]?.find(
+        ({ name }) => name.replace(" ", "") === modName
+    );
+
+    return result || { name: "", code: "" };
+};
+/**
  * set model related parameters
  * @param {[keycode: string, value: *][]} params
  * @param {React.Dispatch<ReducerAction>} dispatch
@@ -235,6 +254,19 @@ const setModelParams = (params, dispatch) => {
     // newValue.id ??= DEFAULT_MODEL_ID;
     newValue.id = newValue.id ?? DEFAULT_MODEL_ID;
     const modelId = newValue.id;
+
+    const defaultMod = getDefaultModelMod(modelId);
+    if (defaultMod) {
+        if (newValue.modName) {
+            const mod = getModelModByName(modelId, newValue.modName);
+
+            newValue.mod = mod.code;
+            newValue.modName = mod.name;
+        } else {
+            newValue.mod = defaultMod.code;
+            newValue.modName = defaultMod.name;
+        }
+    }
 
     ["mouth", "eye"].forEach(part => {
         // newValue[`${part}Texture`] ??= modelId;

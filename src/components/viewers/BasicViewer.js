@@ -72,11 +72,6 @@ class BasicViewer extends PureComponent {
     componentWillUnmount() {
         cancelAnimationFrame(this.frameId);
         dispose3dObject(this.scene);
-        this.mixer = null;
-        this.clock = null;
-        this.camera = null;
-        this.controls = null;
-        this.scene = null;
         this.renderer = null;
         this.rendererAA.renderLists?.dispose();
         this.rendererAA.dispose();
@@ -84,6 +79,9 @@ class BasicViewer extends PureComponent {
         this.rendererNoAA.renderLists?.dispose();
         this.rendererNoAA.dispose();
         this.rendererNoAA = null;
+        this.mixer = null;
+        this.clock = null;
+        this.scene = null;
     }
 
     /**

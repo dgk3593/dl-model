@@ -1,4 +1,4 @@
-import { useEffect, useContext, useCallback } from "react";
+import { useContext } from "react";
 
 import { DispatchContext } from "context/SettingsContext";
 
@@ -19,24 +19,14 @@ function ModelModSelect({ model }) {
 
     const modList = modelMod[id]?.map(mod => mod.name);
 
-    const setMod = useCallback(
-        (code, name) => {
-            const action = {
-                type: "update",
-                key: "model",
-                value: { mod: code, modName: name },
-            };
-            dispatch(action);
-        },
-        [dispatch]
-    );
-
-    useEffect(() => {
-        const defaultCode = modelMod[id]?.[0].code;
-        const defaultName = modelMod[id]?.[0].name;
-
-        setMod(defaultCode, defaultName);
-    }, [id, setMod]);
+    const setMod = (code, name) => {
+        const action = {
+            type: "update",
+            key: "model",
+            value: { mod: code, modName: name },
+        };
+        dispatch(action);
+    };
 
     const handleChange = event => {
         const { value: modName } = event.target;

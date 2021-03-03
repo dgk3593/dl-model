@@ -124,9 +124,7 @@ function SettingBtns({ openModal }) {
     return (
         <>
             <ModelSelectBtns handleClick={handleBtnClick} />
-            <List dense disablePadding style={listStyle} component="div">
-                <ModelModSelect model={model} />
-            </List>
+            <ModelModSelect model={model} />
             <List dense disablePadding style={listStyle} component="div">
                 {mainBtns[viewerType].map(btn => (
                     <ListItem

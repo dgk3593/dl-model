@@ -8,14 +8,9 @@ import { ADV_FILTERS } from "helpers/consts";
 import adv from "data/adv_list";
 import allies from "data/allies";
 import enemies from "data/enemies";
-import { DEFAULT_ADV_ANI, spFaceTextures } from "helpers/consts";
+import { spFaceTextures } from "helpers/consts";
 
-import {
-    collectFilter,
-    multiCondFilter,
-    isIncompatible,
-} from "helpers/helpers";
-import { chainCodeToList } from "helpers/viewerHelpers";
+import { collectFilter, multiCondFilter } from "helpers/helpers";
 
 import "./styles/AdvSelect.css";
 
@@ -32,7 +27,6 @@ const options = ["Adventurers", "Allies", "Enemies"];
 function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const {
         model: { id: currentId },
-        app: { viewerType },
     } = useContext(SettingsContext);
     const dispatch = useContext(DispatchContext);
 
@@ -57,32 +51,18 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
 
     const updateModel = updateSettings("model");
 
-    const setNewModel = cid => {
+    const setNewModel = id =>
         updateModel({
-            id: cid,
+            id: id,
             texture: "",
-            eyeTexture: cid,
-            mouthTexture: cid,
+            eyeTexture: id,
+            mouthTexture: id,
         });
-        if (viewerType !== "adv") {
-            updateModel({ eyeIdx: 2, mouthIdx: 2 });
-            updateSettings("animation")({ code: DEFAULT_ADV_ANI });
 
-            updateSettings("chainMaker")({
-                chain: chainCodeToList(DEFAULT_ADV_ANI, "init"),
-            });
-        }
-        updateSettings("app")({
-            viewerType: isIncompatible(cid) ? "basic" : "adv",
-        });
-    };
-
-    const setTexture = cid => {
+    const setTexture = id => {
         const value = {};
         const outputTexture =
-            spFaceTextures[cid] && cid !== currentId
-                ? spFaceTextures[cid]
-                : cid;
+            spFaceTextures[id] && id !== currentId ? spFaceTextures[id] : id;
 
         if (["eye", "both"].includes(facePart)) {
             value["eyeTexture"] = outputTexture;
