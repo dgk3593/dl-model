@@ -8,6 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import ModelSelectBtns from "./ModelSelectBtns";
+import ModelModSelect from "./ModelModSelect";
 
 import { listStyle, typographyProps } from "./commonProps";
 
@@ -123,6 +124,7 @@ function SettingBtns({ openModal }) {
     return (
         <>
             <ModelSelectBtns handleClick={handleBtnClick} />
+            <ModelModSelect model={model} />
             <List dense disablePadding style={listStyle} component="div">
                 {mainBtns[viewerType].map(btn => (
                     <ListItem

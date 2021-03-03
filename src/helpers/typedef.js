@@ -121,6 +121,8 @@
  * @property {number} mouthIdx - index of model's mouth, default is 2 for adventurer and 1 for dragon
  * @property {string} weaponRight - id of weapon held in adventurer's right hand, default is empty
  * @property {string} weaponLeft - id of weapon held in adventurer's left hand, default is empty
+ * @property {string} [mod] - modifier
+ * @property {string} [modName] - modifier name
  *
  * @typedef {Object} AppAniState
  * @property {string} code - animation code, default is getDefaultAni( modelId )
@@ -212,4 +214,9 @@
  * @property {xyzCoordinate} cameraPosition - position of the camera
  * @property {xyzCoordinate} controlsPosition - position of the orbit control
  * @property {number} rotateSpeed - auto rotate speed
+ *
+ * @typedef {Object} ModelMod
+ * @property {string} name - name of modifier
+ * @property {string} code - modifier code
+ *
  */

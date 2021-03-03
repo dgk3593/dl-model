@@ -361,7 +361,7 @@ export const createOutline = (object, params) => {
         if (mesh.isSkinnedMesh) {
             outline.bind(mesh.skeleton, mesh.bindMatrix);
         }
-        mesh.parent.add(outline);
+        mesh.add(outline);
     });
     return outlines;
 };
@@ -793,6 +793,39 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
             mat.map?.dispose?.();
             mat.map = newTexture;
         }
+    });
+};
+
+/**
+ * @param {string} modCode
+ */
+const analyzeModelModCode = modCode => {
+    const output = {};
+    const cmds = modCode.split(";").map(str => str.trim());
+
+    cmds.forEach(cmd => {
+        const [opcode, ...args] = cmd.split(" ");
+        const outArgs = args.join("").split(",");
+        output[opcode] = outArgs;
+    });
+
+    return output;
+};
+
+/**
+ * apply modifier code to a 3D model
+ * @param {THREE.Group} target - model to apply
+ * @param {string} modCode - code to apply
+ */
+export const applyMod = (target, modCode) => {
+    if (!modCode) return;
+
+    const meshes = getMeshes(target);
+    const { show, hide } = analyzeModelModCode(modCode);
+
+    meshes.forEach(mesh => {
+        if (hide?.includes(mesh.name)) mesh.visible = false;
+        if (show?.includes(mesh.name)) mesh.visible = true;
     });
 };
 

@@ -231,6 +231,7 @@ export const defaultSettings = {
  */
 export const initKeyMap = {
     id: { group: "model", key: "id", type: "string" },
+    modName: { group: "model", key: "modName", type: "string" },
     tx: { group: "model", key: "texture", type: "string" },
     et: { group: "model", key: "eyeTexture", type: "string" },
     ei: { group: "model", key: "eyeIdx", type: "int" },
@@ -249,7 +250,15 @@ export const initKeyMap = {
     cc: { group: "animation", key: "code", type: "string" },
 };
 
-const commonInitKeys = ["bg", "cam", "showOutline", "AA", "rot"];
+const commonInitKeys = [
+    "id",
+    "modName",
+    "bg",
+    "cam",
+    "showOutline",
+    "AA",
+    "rot",
+];
 
 const aniInitKeys = ["ts", "cc"];
 
@@ -259,7 +268,6 @@ const aniInitKeys = ["ts", "cc"];
  */
 export const initKeys = {
     adv: [
-        "id",
         "et",
         "ei",
         "mt",
@@ -269,8 +277,8 @@ export const initKeys = {
         ...commonInitKeys,
         ...aniInitKeys,
     ],
-    dragon: ["id", "ei", "mi", ...commonInitKeys, ...aniInitKeys],
-    basic: ["id", ...commonInitKeys],
+    dragon: ["ei", "mi", ...commonInitKeys, ...aniInitKeys],
+    basic: [...commonInitKeys],
 };
 
 /**

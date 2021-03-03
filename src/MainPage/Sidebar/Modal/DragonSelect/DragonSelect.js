@@ -8,8 +8,7 @@ import { DRAGON_FILTERS } from "helpers/consts";
 import dragons from "data/dragon_list";
 import otherDragons from "data/dragon_list_extra";
 
-import { collectFilter, multiCondFilter, getDefaultAni } from "helpers/helpers";
-import { chainCodeToList } from "helpers/viewerHelpers";
+import { collectFilter, multiCondFilter } from "helpers/helpers";
 import "./styles/DragonSelect.css";
 
 const SetSelect = lazy(() => import("components/SetSelect"));
@@ -45,18 +44,8 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
     const updateSetings = key => value =>
         dispatch({ type: "update", key, value });
 
-    const setNewModel = id => {
-        const defaultAni = getDefaultAni(id);
-
+    const setNewModel = id =>
         updateSetings("model")({ id, texture: "", eyeIdx: 1, mouthIdx: 1 });
-
-        updateSetings("animation")({ code: defaultAni });
-        updateSetings("chainMaker")({
-            chain: chainCodeToList(defaultAni, "init"),
-        });
-
-        updateSetings("app")({ viewerType: "dragon" });
-    };
 
     const handler = handleSelect || setNewModel;
 
