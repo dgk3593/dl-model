@@ -89,6 +89,9 @@ function MainPage({ location }) {
     // update settings when id changed
     useEffect(() => {
         const { id, modName } = model;
+        // currentId.current ||= id;
+        currentId.current = currentId.current || id;
+
         if (id === currentId.current) return;
 
         const newViewerType = getViewerType(id);

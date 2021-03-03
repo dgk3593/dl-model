@@ -276,6 +276,8 @@ const setModelParams = (params, dispatch) => {
             newValue[`${part}Idx`] ?? getDefaultFace(modelId);
     });
 
+    console.log("newValue", newValue);
+
     dispatch({ type: "update", key: "model", value: newValue });
     dispatch({
         type: "update",

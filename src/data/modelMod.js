@@ -11,6 +11,13 @@ const modelMod = {
         { name: "With Flag", code: "show mPartsA_A, mPartsA_B" },
         { name: "No Lance", code: "hide mPartsA_A, mPartsA_B" },
     ],
+    d210145_01:[
+        {name: "0", code: ""}
+        {name: "1", code: "hide mPartsA_A"}
+        {name: "2", code: "hide mPartsA_B"}
+        {name: "3", code: "hide mPartsB_A"}
+        {name: "4", code: "hide mPartsB_B"}
+    ]
 };
 
 export default modelMod;
