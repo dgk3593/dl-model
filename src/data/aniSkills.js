@@ -1308,6 +1308,11 @@ const skills = {
             name: "Shanao Strike",
             code: "GUN_SKL_02_01_11037601>GUN_SKL_02_02_11037601",
         },
+        {
+            icon: "advIcons/110382_01_r05.png",
+            name: "Carbunculus Balletto",
+            code: "GUN_SKL_01_01_11038201",
+        },
     ],
 };
 

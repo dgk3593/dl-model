@@ -3492,6 +3492,24 @@ const dragonAni = {
             code: "D21014401_060_01",
         },
     ],
+    d210145_01: [
+        { name: "Dragon's Roost", code: "DC_d210145_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210145_01_90_04" },
+        { name: "Idle", code: "D21014501_000_01" },
+        { name: "Move Forward", code: "D21014501_002_01" },
+        { name: "Move Forward (Fast)", code: "D21014501_003_01" },
+        { name: "Brake", code: "D21014501_004_01" },
+        { name: "Dash Forward", code: "D21014501_020_01" },
+        { name: "Transform", code: "D21014501_030_01" },
+        {
+            name: "Combo",
+            code: "D21014501_040_01>D21014501_041_01>D21014501_042_01",
+        },
+        {
+            name: "Angelic Devotion",
+            code: "D21014501_060_01",
+        },
+    ],
     d210145_02: [
         { name: "Idle", code: "D21014502_000_01" },
         { name: "Move Forward", code: "D21014502_002_01" },

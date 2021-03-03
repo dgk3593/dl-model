@@ -150,6 +150,13 @@ const dragons = [
         element: "Wind",
     },
     {
+        id: "210145_01",
+        name: "Gabriel",
+        title: "Blessed Angel",
+        rarity: "5",
+        element: "Water",
+    },
+    {
         id: "210120_01",
         name: "Gaibhne & Creidhne",
         title: "Delightful Dreamer",

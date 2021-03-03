@@ -222,6 +222,12 @@ const uniqueFS = {
             code:
                 "GUN_CHR_U_01_11036701>GUN_CHR_U_02_11036701>GUN_CHR_U_03_11036701",
         },
+        {
+            icon: "advIcons/110382_01_r05.png",
+            name: "Faris",
+            code:
+                "GUN_CHR_A_01_11038201>GUN_CHR_A_02_11038201>GUN_CHR_A_03_11038201",
+        },
     ],
 };
 
