@@ -2,6 +2,12 @@
  * @type { Array <ModelData> }
  */
 const specialWeaponList = [
+    { id: "wOnigiri", name: "Lunch Onigiri" },
+    { id: "wOnigiriBitten", name: "Bitten Lunch Onigiri" },
+    { id: "wOnigiri2", name: "Victory Onigiri" },
+    { id: "wOnigiri2", name: "Bitten Victory Onigiri" },
+    { id: "wTenmusu", name: "Tenmusu" },
+    { id: "wTenmusu", name: "Bitten Tenmusu" },
     { id: "w399026_01", name: "Joker's Gun" },
     { id: "w399027_01", name: "Mona's Slingshot" },
     { id: "w399029_01", name: "Panther's Leather Whip" },
