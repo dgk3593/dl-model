@@ -164,8 +164,8 @@ const modelMod = {
     ],
     // Roy III
     d200008_01: [
-        { name: "Normal", code: "show mBox_01" },
-        { name: "No Box", code: "hide mBox_01" },
+        { name: "Normal", code: "show mbox_01" },
+        { name: "No Box", code: "hide mbox_01" },
     ],
 };
 
