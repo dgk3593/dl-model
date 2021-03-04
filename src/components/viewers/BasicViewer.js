@@ -302,7 +302,7 @@ class BasicViewer extends PureComponent {
      */
     applyModelMod = () => {
         const modCode = this.props.model.mod;
-        applyMod(this.models.main, modCode);
+        modCode && applyMod(this.models.main, modCode);
     };
 
     /**

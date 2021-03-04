@@ -117,14 +117,13 @@ function MainPage({ location }) {
             });
         }
 
-        if (!modName) {
-            const modelMod = getDefaultModelMod(id);
+        const modelMod = getDefaultModelMod(id);
+        if (!modelMod || !modName) {
             updateSetings("model")({
                 mod: modelMod?.code,
                 modName: modelMod?.name,
             });
         }
-        console.log(model);
 
         currentId.current = id;
     }, [model, updateSetings, viewerType]);
