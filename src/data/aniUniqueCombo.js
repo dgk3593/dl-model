@@ -163,7 +163,7 @@ const uniqueCombo = {
         {
             icon: "advIcons/110381_01_r05.png",
             name: "Ryszarda",
-            subtitle: "Sigil Unlocked",
+            subtitle: "Sigil Released",
             code:
                 "LAN_CMB_06_01_11038101>LAN_CMB_06_02_11038101>LAN_CMB_06_03_11038101",
         },
