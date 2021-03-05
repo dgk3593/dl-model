@@ -87,6 +87,12 @@ const modelMod = {
         { name: "With Wings", code: "show mPartsA_B" },
         { name: "No Wings", code: "hide mPartsA_B" },
     ],
+    // Fallen Ramiel
+    d210132_03: [
+        { name: "Halo and Wings", code: "show mPartsA_B; hide mPartsA_A" },
+        { name: "No Wings", code: "hide mPartsA_B; show mPartsA_A" },
+        { name: "No Halo No Wings", code: "hide mPartsA_B, mPartsA_A" },
+    ],
     // Rush
     d210118_01: [
         { name: "No Buster", code: "show mPartsA_A; hide mPartsA_B" },

@@ -2220,6 +2220,13 @@ const dragonAni = {
         { name: "Brake", code: "D21013201_004_01" },
         { name: "Dash Forward", code: "D21013201_020_01" },
     ],
+    d210132_03: [
+        { name: "Idle", code: "D21013201_000_01" },
+        { name: "Move Forward", code: "D21013201_002_01" },
+        { name: "Move Forward (Fast)", code: "D21013201_003_01" },
+        { name: "Brake", code: "D21013201_004_01" },
+        { name: "Dash Forward", code: "D21013201_020_01" },
+    ],
     d210133_01: [
         { name: "Dragon's Roost", code: "DC_d210133_01_90_01" },
         { name: "Receive Gift", code: "DC_d210133_01_90_04" },
