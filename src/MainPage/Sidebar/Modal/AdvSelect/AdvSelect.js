@@ -4,7 +4,7 @@ import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
-import { ADV_FILTERS } from "helpers/consts";
+import { ADV_FILTERS } from "helpers/filterDef";
 import adv from "data/adv_list";
 import allies from "data/allies";
 import enemies from "data/enemies";

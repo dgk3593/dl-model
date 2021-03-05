@@ -7,7 +7,7 @@ import TextField from "@material-ui/core/TextField";
 import Close from "@material-ui/icons/Close";
 
 import { fbxSource } from "App";
-import faceOffsetFix from "data/face_offset";
+import textureOffsets from "data/face_offset";
 
 function ChainAniFaceDetails(props) {
     const {
@@ -23,8 +23,8 @@ function ChainAniFaceDetails(props) {
 
     const eyeImgPath = `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
     const mouthImgPath = `${fbxSource}/fbx/${mouthTexture}/${mouthTexture}.png`;
-    const eyeOffsetFix = faceOffsetFix[eyeTexture] || [0, 0];
-    const mouthOffsetFix = faceOffsetFix[mouthTexture] || [0, 0];
+    const eyeOffsetFix = textureOffsets[eyeTexture] || [0, 0];
+    const mouthOffsetFix = textureOffsets[mouthTexture] || [0, 0];
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
 

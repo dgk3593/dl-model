@@ -10,6 +10,21 @@ export const baseUrl = "https://dgk3593.github.io/dl-model/#";
 export const DEFAULT_ADV_ANI = "CMN_MWM_03";
 
 /**
+ * @type WeaponType[]
+ */
+export const WEAPON_LIST = [
+    "Sword",
+    "Blade",
+    "Dagger",
+    "Axe",
+    "Lance",
+    "Bow",
+    "Wand",
+    "Staff",
+    "Manacaster",
+];
+
+/**
  * @type {{ [paramName: string]: MatParamDetails }}
  */
 export const matParamsDetails = {
@@ -321,110 +336,6 @@ export const matExtraParams = {
     ],
 };
 
-/**
- * map weapon type to weapon code
- * @type {{ [weaponName: string]: string }}
- */
-export const WEAPON_CODE = {
-    Sword: "SWD",
-    Blade: "KAT",
-    Dagger: "DAG",
-    Axe: "AXE",
-    Lance: "LAN",
-    Bow: "BOW",
-    Wand: "ROD",
-    Staff: "CAN",
-    Manacaster: "GUN",
-};
-
-/**
- * @type WeaponType[]
- */
-export const WEAPON_LIST = [
-    "Sword",
-    "Blade",
-    "Dagger",
-    "Axe",
-    "Lance",
-    "Bow",
-    "Wand",
-    "Staff",
-    "Manacaster",
-];
-
-export const GENDER_CODE = {
-    Male: 21,
-    Female: 23,
-};
-
-export const COMBO_LENGTH = {
-    Axe: 5,
-    Bow: 6,
-    Staff: 5,
-    Dagger: 6,
-    Blade: 5,
-    Lance: 5,
-    Wand: 5,
-    Sword: 5,
-};
-
-export const FS_LENGTH = {
-    Axe: 3,
-    Bow: 3,
-    Staff: 5,
-    Dagger: 3,
-    Blade: 3,
-    Lance: 4,
-    Wand: 3,
-    Sword: 3,
-};
-
-/**
- * @type {FilterGroups}
- */
-export const ADV_FILTERS = {
-    rarity: ["3", "4", "5"],
-    element: ["Flame", "Water", "Wind", "Light", "Shadow"],
-    weapon: [
-        "Sword",
-        "Blade",
-        "Dagger",
-        "Axe",
-        "Lance",
-        "Bow",
-        "Wand",
-        "Staff",
-        "Manacaster",
-    ],
-};
-
-/**
- * @type {FilterGroups}
- */
-export const DRAGON_FILTERS = {
-    rarity: ["3", "4", "5"],
-    element: ["Flame", "Water", "Wind", "Light", "Shadow"],
-};
-
-/**
- * @type {FilterGroups}
- */
-export const WEAPON_FILTERS = {
-    rarity: ["1", "2", "3", "4", "5", "6"],
-    element: ["Flame", "Water", "Wind", "Light", "Shadow", "None"],
-    weapon: [
-        "Sword",
-        "Blade",
-        "Dagger",
-        "Axe",
-        "Lance",
-        "Bow",
-        "Wand",
-        "Staff",
-        "Manacaster",
-    ],
-};
-
 export const spFaceTextures = {
     c110300_01: "ec110300_01",
 };
@@ -456,21 +367,6 @@ export const CAM_PARAMS = {
     angle: 45,
     far: 300,
     near: 0.01,
-};
-
-/**
- * @type {{ [faceNumber: string]: xyCoordinate }}
- */
-export const idxOffsets = {
-    face1: [2, 1],
-    face2: [0, 0],
-    face3: [1, 0],
-    face4: [2, 0],
-    face5: [3, 0],
-    face6: [0, -1],
-    face7: [1, -1],
-    face8: [2, -1],
-    face9: [3, -1],
 };
 
 export const aniModList = {

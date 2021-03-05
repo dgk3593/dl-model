@@ -1,5 +1,5 @@
 import Button from "@material-ui/core/Button";
-import { getTextColor } from "helpers/helpers";
+import getTextColor from "helpers/getTextColor";
 
 function ColorButton(props) {
     const { color, value, onClick, children, ...others } = props;

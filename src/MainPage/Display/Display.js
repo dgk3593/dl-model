@@ -3,7 +3,7 @@ import { lazy, Suspense, useContext, useCallback } from "react";
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
 import "./styles/Display.css";
 
-import { getTextColor } from "helpers/helpers";
+import getTextColor from "helpers/getTextColor";
 import cameraPositions from "data/cameraPositions";
 import controlsPosition from "data/controlsPositions";
 

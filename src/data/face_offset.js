@@ -1,17 +1,13 @@
 /**
  * @type {{ [id:string]: xyCoordinate }}
  */
-const faceOffset = {
+const textureOffsets = {
     c110382_01: [0.05, -0.08], // Faris
-    c110381_91: [0.05, -0.08], // Ryszarda
     c110381_01: [0.05, -0.08], // Ryszarda
     c110342_03: [0.05, -0.08], // Valentine's Chelsea
-    c110377_02: [0.043, -0.08], // Joker
     c110377_01: [0.043, -0.08], // Joker
-    c110378_02: [0.043, -0.08], // Panther
     c110378_01: [0.043, -0.08], // Panther
     c110379_01: [0.075, -0.08], // Mona
-    c110380_02: [0.043, -0.2], // Sophie
     c110380_01: [0.043, -0.2], // Sophie
     c100015_05: [0.05, -0.08], // Gala Chelle
     c100006_11: [0.043, -0.0625], // Kimono Luca
@@ -52,4 +48,20 @@ const faceOffset = {
     c110270_02: [0.043, -0.0625], // HMelsa
     c110341_03: [0.043, -0.0625], // Hakasha
 };
-export default faceOffset;
+
+export default textureOffsets;
+
+/**
+ * @type {{ [faceNumber: string]: xyCoordinate }}
+ */
+export const idxOffsets = {
+    face1: [2, 1],
+    face2: [0, 0],
+    face3: [1, 0],
+    face4: [2, 0],
+    face5: [3, 0],
+    face6: [0, -1],
+    face7: [1, -1],
+    face8: [2, -1],
+    face9: [3, -1],
+};

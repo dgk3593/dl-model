@@ -4,7 +4,7 @@ import { DispatchContext } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
-import { DRAGON_FILTERS } from "helpers/consts";
+import { DRAGON_FILTERS } from "helpers/filterDef";
 import dragons from "data/dragon_list";
 import otherDragons from "data/dragon_list_extra";
 

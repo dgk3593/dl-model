@@ -4,7 +4,7 @@ import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import FaceBox from "./FaceBox";
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
 
-import faceOffsetFix from "data/face_offset";
+import textureOffsets from "data/face_offset";
 import useStyles from "./styles/FaceSelectStyles";
 
 const FacePartSelector = lazy(() =>
@@ -25,8 +25,8 @@ function FaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
 
     const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
 
-    const eyeOffsetFix = faceOffsetFix[eyeTexture] || [0, 0];
-    const mouthOffsetFix = faceOffsetFix[mouthTexture] || [0, 0];
+    const eyeOffsetFix = textureOffsets[eyeTexture] || [0, 0];
+    const mouthOffsetFix = textureOffsets[mouthTexture] || [0, 0];
 
     const classes = useStyles(eyeOffsetFix, mouthOffsetFix);
     const defaultHandler = idx => {

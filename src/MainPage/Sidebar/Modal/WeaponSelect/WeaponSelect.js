@@ -9,7 +9,7 @@ import extraWeaponList from "data/extraWeaponList";
 import { collectFilter, multiCondFilter } from "helpers/helpers";
 import "./styles/WeaponSelect.css";
 
-import { WEAPON_FILTERS } from "helpers/consts";
+import { WEAPON_FILTERS } from "helpers/filterDef";
 
 const WeaponBtn = lazy(() => import("./WeaponBtn"));
 const SetSelect = lazy(() => import("components/SetSelect"));

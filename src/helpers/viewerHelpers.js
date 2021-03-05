@@ -2,8 +2,7 @@ import * as THREE from "three";
 import { fbxSource } from "App";
 import { v4 as uuid } from "uuid";
 
-import { idxOffsets } from "helpers/consts";
-import textureOffsets from "data/face_offset";
+import textureOffsets, { idxOffsets } from "data/face_offset";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach, getUpdated } from "helpers/helpers";
@@ -192,13 +191,6 @@ export const getParamsList = matType => [
     ...matCommonParams,
     ...matExtraParams[matType],
 ];
-
-/**
- * check if an ID is a dragon
- * @param {string} modelId
- */
-export const isDragon = modelId =>
-    modelId.startsWith("d") || modelId === "smith";
 
 /**
  * Hide all eye and mouth that's not mEye_01 or mMouth_01

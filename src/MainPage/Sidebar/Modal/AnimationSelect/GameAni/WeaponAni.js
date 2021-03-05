@@ -6,6 +6,7 @@ import GunModeSelector from "components/selectors/GunModeSelector";
 
 import Button from "@material-ui/core/Button";
 
+import { listToAniButtons } from "helpers/helpers";
 import {
     getStandbyCode,
     getVictoryCode,
@@ -14,8 +15,7 @@ import {
     getLobbyCode,
     getDashAtkCode,
     getRollCode,
-    listToAniButtons,
-} from "helpers/helpers";
+} from "helpers/aniCodeGenerator";
 import weaponExtra, { gunModeExtra } from "data/aniWeaponExtra";
 
 import "./styles/WeaponAni.css";

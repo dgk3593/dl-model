@@ -2,13 +2,10 @@ import Button from "@material-ui/core/Button";
 
 import {
     initKeyMap,
-    WEAPON_CODE,
-    GENDER_CODE,
-    COMBO_LENGTH,
-    FS_LENGTH,
     aniModList,
     incompatibleModels,
     DEFAULT_MODEL_ID,
+    DEFAULT_ADV_ANI,
 } from "./consts";
 
 import { chainCodeToList } from "./viewerHelpers";
@@ -67,15 +64,6 @@ export const isBlade = modelId => modelId.startsWith("w302");
 export const isSheath = modelId => isBlade(modelId) && modelId.endsWith("02");
 
 /**
- * check if model is incompatible with AdvViewer
- * @param {string} modelId
- */
-export const isIncompatible = modelId =>
-    !modelId.startsWith("c") ||
-    modelId.endsWith("_h") ||
-    incompatibleModels.has(modelId);
-
-/**
  * check if model is compatible with AdvViewer
  * @param {string} modelId
  */
@@ -110,7 +98,7 @@ export const getViewerType = modelId => {
 export const getDefaultAni = modelId => {
     if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
 
-    if (isCharaWithAni(modelId)) return "CMN_MWM_03";
+    if (isCharaWithAni(modelId)) return DEFAULT_ADV_ANI;
 
     return "";
 };
@@ -230,18 +218,6 @@ const filterParamsByGroup = (params, groupName) =>
         return [...output, [key, value]];
     }, []);
 
-/**
- * @param {string} id
- * @param {string} modName
- * @return {ModelMod}
- */
-const getModelModByName = (id, modName) => {
-    const result = modelMod[id]?.find(
-        ({ name }) => name.replace(" ", "") === modName
-    );
-
-    return result || { name: "", code: "" };
-};
 /**
  * set model related parameters
  * @param {[keycode: string, value: *][]} params
@@ -441,37 +417,6 @@ export const multiCondFilter = (input, filterConditions) => {
 };
 
 /**
- * convert hex color code to rgb triplet
- * @param {ColorCode} hex
- * @return {RGBTriplet}
- */
-const hexToRgb = hex => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-        ? {
-              r: parseInt(result[1], 16),
-              g: parseInt(result[2], 16),
-              b: parseInt(result[3], 16),
-          }
-        : null;
-};
-
-/**
- * @param {RGBTriplet} color
- */
-export const getBrightness = ({ r, g, b }) =>
-    (r * 299 + g * 587 + b * 114) / 1000;
-
-/**
- * get the suitable text color for a given background color
- * @param {ColorCode} color
- */
-export const getTextColor = color => {
-    const rgb = hexToRgb(color);
-    return getBrightness(rgb) > 128 ? "#000000" : "#ffffff";
-};
-
-/**
  * turn a list of animation data to buttons
  * @param {AnimationList} list
  * @param {*} handleSelect
@@ -495,68 +440,15 @@ export const listToAniButtons = (list, handleSelect, groupName = "") => {
     ));
 };
 
-// Animation chain code generator
 /**
- * @param {WeaponType} weapon
- * @param {"Male" | "Female"} gender
+ * @param {string} id
+ * @param {string} modName
+ * @return {ModelMod}
  */
-export const getStandbyCode = (weapon, gender) =>
-    `${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
+const getModelModByName = (id, modName) => {
+    const result = modelMod[id]?.find(
+        ({ name }) => name.replace(" ", "") === modName
+    );
 
-/**
- * @param {WeaponType} weapon
- */
-export const getVictoryCode = weapon =>
-    `${WEAPON_CODE[weapon]}_WIN_01>${WEAPON_CODE[weapon]}_WIN_02`;
-
-/**
- * @param {WeaponType} weapon
- */
-export const getDashAtkCode = weapon => `${WEAPON_CODE[weapon]}_DAS_02`;
-
-/**
- * @param {WeaponType} weapon
- */
-export const getRollCode = weapon => `${WEAPON_CODE[weapon]}_ROL_01`;
-
-/**
- * Combo chain code
- * @param {WeaponType} weapon
- */
-export const getComboCode = weapon => {
-    const comboLength = COMBO_LENGTH[weapon];
-    const code = WEAPON_CODE[weapon];
-
-    const parts = Array(comboLength)
-        .fill()
-        .map((_, i) => `${code}_CMB_0${i + 1}`);
-
-    return parts.join(">");
-};
-
-/**
- * Force Strike chain code
- * @param {WeaponType} weapon
- */
-export const getFSCode = weapon => {
-    const fsAniLength = FS_LENGTH[weapon];
-    const code = WEAPON_CODE[weapon];
-    const parts = Array(fsAniLength)
-        .fill()
-        .map((_, i) => `${code}_CHR_0${i + 1}`);
-
-    return parts.join(">");
-};
-
-/**
- * Join Lobby chain code
- * @param {WeaponType} weapon
- * @param {"Male" | "Female"} gender
- */
-export const getLobbyCode = (weapon, gender) => {
-    const code = WEAPON_CODE[weapon];
-    if (gender === "Male")
-        return `${code}_ONT_05&ts=-0.5>${code}_ONT_02>${code}_ONT_07>${code}_ONT_08>${code}_ONT_21`;
-    // Female
-    return `${code}_ONT_06&ts=-0.5>${code}_ONT_04>${code}_ONT_09>${code}_ONT_10>${code}_ONT_23`;
+    return result || { name: "", code: "" };
 };
