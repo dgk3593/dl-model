@@ -31,6 +31,7 @@ import {
     changeMaterial,
     updateMatParams,
     removeEffects,
+    disableFrustumCulling,
     replaceTexture,
     applyMod,
     logUpdate,
@@ -313,6 +314,7 @@ class BasicViewer extends PureComponent {
         const model = this.models.main;
 
         removeEffects(model);
+        disableFrustumCulling(model);
 
         const materialType = this.matType;
         const modelId = this.props.model.id;

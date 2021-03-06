@@ -43,10 +43,8 @@ export class DragonViewer extends AniViewer {
     initFace = () => {
         const mainModel = this.models.main;
         this.eyes = getDragonEye(mainModel);
-        this.eyes.forEach(eye => (eye.frustumCulled = false));
 
         this.mouths = getDragonMouth(mainModel);
-        this.mouths.forEach(mouth => (mouth.frustumCulled = false));
 
         const { eyeIdx, mouthIdx } = this.props.model;
         this.eyeIdx = eyeIdx;

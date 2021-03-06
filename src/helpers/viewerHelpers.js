@@ -251,6 +251,17 @@ export const removeEffects = model => {
 };
 
 /**
+ * set frustumCulled = false for all children of a model
+ */
+export const disableFrustumCulling = model => {
+    model.traverse(child => {
+        if (!child.isMesh) return;
+
+        child.frustumCulled = false;
+    });
+};
+
+/**
  * create a new material
  * @param {string} materialType - type of material to create
  * @param {Object} params
