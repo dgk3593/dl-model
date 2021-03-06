@@ -293,6 +293,7 @@ export const initKeys = {
         ...aniInitKeys,
     ],
     dragon: ["ei", "mi", ...commonInitKeys, ...aniInitKeys],
+    ani: [...commonInitKeys, ...aniInitKeys],
     basic: [...commonInitKeys],
 };
 
