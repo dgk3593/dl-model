@@ -182,12 +182,12 @@ export const asciiSet = [
  */
 export const defaultSettings = {
     model: {
-        id: DEFAULT_MODEL_ID,
+        id: "",
         texture: "",
         eyeTexture: "",
-        eyeIdx: 2,
+        eyeIdx: NaN,
         mouthTexture: "",
-        mouthIdx: 2,
+        mouthIdx: NaN,
         weaponRight: "",
         weaponLeft: "",
     },
