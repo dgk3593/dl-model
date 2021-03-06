@@ -9,10 +9,16 @@ import controlsPosition from "data/controlsPositions";
 
 const AniControl = lazy(() => import("./AniControl"));
 const BasicViewer = lazy(() => import("components/viewers/BasicViewer"));
+const AniViewer = lazy(() => import("components/viewers/AniViewer"));
 const AdvViewer = lazy(() => import("components/viewers/AdvViewer"));
 const DragonViewer = lazy(() => import("components/viewers/DragonViewer"));
 
-const viewers = { basic: BasicViewer, adv: AdvViewer, dragon: DragonViewer };
+const viewers = {
+    basic: BasicViewer,
+    ani: AniViewer,
+    adv: AdvViewer,
+    dragon: DragonViewer,
+};
 
 /**
  * @param {Object} props

@@ -21,6 +21,7 @@ const mainBtns = {
         { value: "weapon", text: "Add Weapons" },
     ],
     dragon: [{ value: "dragonFace", text: "Facial Expression" }],
+    ani: [],
     basic: [],
 };
 
@@ -144,7 +145,7 @@ function SettingBtns({ openModal }) {
                 {removeWeaponBtn("Right")}
             </List>
 
-            {["adv", "dragon"].includes(viewerType) ? animationBtns : null}
+            {viewerType !== "basic" ? animationBtns : null}
 
             <List dense disablePadding style={listStyle} component="div">
                 <ListItem

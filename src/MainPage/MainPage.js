@@ -107,7 +107,8 @@ function MainPage({ location }) {
             updateSetings("model")({ eyeIdx: 1, mouthIdx: 1 });
         }
 
-        const needResetAni = newViewerType === "dragon" || viewerChangedToAdv;
+        const needResetAni =
+            ["dragon", "ani"].includes(newViewerType) || viewerChangedToAdv;
 
         if (needResetAni) {
             const newAni = getDefaultAni(id);

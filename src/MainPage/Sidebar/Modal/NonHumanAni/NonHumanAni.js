@@ -6,6 +6,7 @@ import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import Button from "@material-ui/core/Button";
 
 import dragonAni from "data/aniDragon";
+import enemyAni from "data/aniEnemies";
 import Modal from "../../Modal";
 
 import { chainCodeToList } from "helpers/viewerHelpers";
@@ -26,7 +27,8 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const source = useRef(modelId);
 
     useEffect(() => {
-        if (getViewerType(modelId) !== "dragon") {
+        const viewerType = getViewerType(modelId);
+        if (!["dragon", "ani"].includes(viewerType)) {
             close();
             return;
         }
@@ -36,17 +38,23 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         }
     }, [modelId, close]);
 
-    const portraitDir = "dragonPortraits";
+    const portraitDir = sourceId.startsWith("h")
+        ? "enemyPortraits"
+        : "dragonPortraits";
 
-    const portraitPath = `${
-        process.env.PUBLIC_URL
-    }/img/${portraitDir}/${sourceId.slice?.(1)}.png`;
+    const portraitName = sourceId.startsWith("h")
+        ? sourceId
+        : sourceId.slice?.(1);
+
+    const portraitPath = `${process.env.PUBLIC_URL}/img/${portraitDir}/${portraitName}.png`;
 
     const portrait = <img src={portraitPath} alt="portrait" />;
 
     const chainMode = sidebarContent === "chainMaker";
 
-    const animations = dragonAni[sourceId];
+    const animations = sourceId.startsWith("h")
+        ? enemyAni[sourceId]
+        : dragonAni[sourceId];
 
     const chooseSource = () => setModalMode("dragon");
     const closeModal = () => setModalMode("");

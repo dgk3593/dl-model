@@ -10,6 +10,7 @@ import {
 
 import { chainCodeToList } from "./viewerHelpers";
 import dragonAni from "data/aniDragon";
+import enemyAni from "data/aniEnemies";
 import modelMod from "data/modelMod";
 
 /**
@@ -85,6 +86,8 @@ const isDragon = modelId => modelId.startsWith("d") || modelId === "smith";
 export const getViewerType = modelId => {
     if (isDragon(modelId)) return "dragon";
 
+    if (modelId.startsWith("h")) return "ani";
+
     if (isCharaWithAni(modelId)) return "adv";
 
     return "basic";
@@ -97,6 +100,8 @@ export const getViewerType = modelId => {
  */
 export const getDefaultAni = modelId => {
     if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
+
+    if (modelId.startsWith("h")) return enemyAni[modelId]?.[0].code;
 
     if (isCharaWithAni(modelId)) return DEFAULT_ADV_ANI;
 
