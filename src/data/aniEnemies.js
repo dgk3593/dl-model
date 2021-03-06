@@ -38,6 +38,12 @@ const enemyAni = {
         },
         { name: "Boss Appear", code: "H0080501_090_01>H0080501_090_02" },
     ],
+    h0090501: [
+        { name: "Idle", code: "H0090501_000_01" },
+        { name: "Move Forward", code: "H0090501_002_01" },
+        { name: "Idle 2", code: "H0090501_014_01" },
+        { name: "Spin", code: "H0090501_100_01" },
+    ],
 };
 
 export default enemyAni;

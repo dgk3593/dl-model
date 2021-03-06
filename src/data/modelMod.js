@@ -195,6 +195,24 @@ const modelMod = {
             code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR, mCandy",
         },
     ],
+    h0090501: [
+        {
+            name: "Normal",
+            code: "hide mPartsA_BR, mPartsB_BR; show mPartsA, mPartsB",
+        },
+        {
+            name: "Broken Right Wing",
+            code: "hide mPartsA, mPartsB_BR; show mPartsA_BR, mPartsB, mCandy",
+        },
+        {
+            name: "Broken Left Wing",
+            code: "hide mPartsA_BR, mPartsB; show mPartsA, mPartsB_BR, mCandy",
+        },
+        {
+            name: "Wings Broken",
+            code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR, mCandy",
+        },
+    ],
 };
 
 export default modelMod;
