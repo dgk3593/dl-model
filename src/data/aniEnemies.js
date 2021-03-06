@@ -4,7 +4,7 @@
 const enemyAni = {
     h0080501: [
         { name: "Idle", code: "H0080501_000_01" },
-        { name: "Move Forward", code: "H0080501_000_01" },
+        { name: "Move Forward", code: "H0080501_002_01" },
         { name: "Defeated", code: "H0080501_011_01" },
         { name: "Idle 2", code: "H0080501_014_01" },
         { name: "Buff", code: "H0080501_030_01" },
@@ -24,11 +24,7 @@ const enemyAni = {
         {
             name: "Weapon Swing",
             code:
-                "H0080501_102_01>H0080501_102_02>H0080501_102_03>H0080501_102_04",
-        },
-        {
-            name: "Multiple Swings",
-            code: "H0080501_103_01>H0080501_103_02>H0080501_103_03",
+                "H0080501_102_01>H0080501_102_02>H0080501_102_03>H0080501_102_04>H0080501_103_01>H0080501_103_02>H0080501_103_03",
         },
         {
             name: "Charge Forward",

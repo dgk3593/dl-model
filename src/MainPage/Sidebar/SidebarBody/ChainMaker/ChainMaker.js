@@ -13,7 +13,11 @@ import "./styles/ChainMaker.css";
 
 const ChainAniList = lazy(() => import("./ChainAniList"));
 
-const aniSelectMode = { adv: "animation", dragon: "nonHumanAni" };
+const aniSelectMode = {
+    adv: "animation",
+    dragon: "nonHumanAni",
+    ani: "nonHumanAni",
+};
 
 function ChainMaker({ openModal }) {
     const {
