@@ -90,7 +90,11 @@ function MainPage({ location }) {
     useEffect(() => {
         const { id, modName } = model;
         // currentId.current ||= id;
-        currentId.current = currentId.current || id;
+        if (!currentId.current) {
+            currentId.current = id;
+            return;
+        }
+        currentId.current = id;
 
         if (id === currentId.current) return;
 
