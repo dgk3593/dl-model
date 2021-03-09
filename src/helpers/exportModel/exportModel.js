@@ -4,9 +4,9 @@ import exportOptions from "./exportOptions";
 
 const exporters = {
     stl: exportSTL,
+    ply: exportPLY,
     gltf: exportGLTF,
     usdz: exportUSDZ,
-    ply: exportPLY,
 };
 
 /**
@@ -53,6 +53,7 @@ async function model2stl(model, options) {
     model.rotateX(Math.PI / 2);
 
     const { STLExporter } = await import(
+        /* webpackChunkName: "STLExporter" */
         "three/examples/jsm/exporters/STLExporter"
     );
     const exporter = new STLExporter();
@@ -75,6 +76,69 @@ async function exportSTL(model, options) {
     const fileContent = await model2stl(model, options);
     const blob = new Blob([fileContent], { type: "text/plain" });
     const fileName = "model.stl";
+
+    downloadBlob(blob, fileName);
+}
+
+/**
+ * convert model to ply data
+ * @param {THREE.Object3D} model
+ * @param {Object} options
+ */
+async function model2ply(model, options) {
+    const { PLYExporter } = await import(
+        /* webpackChunkName: "PLYExporter" */
+        "three/examples/jsm/exporters/PLYExporter"
+    );
+    const exporter = new PLYExporter();
+
+    return new Promise(resolve => exporter.parse(model, resolve, options));
+}
+
+/**
+ * ! NEEDS SMOOTHING
+ */
+/**
+ * export model to stl
+ * @param {THREE.Object3D} model
+ * @param {Object} options
+ */
+async function exportPLY(model, options) {
+    const fileContent = await model2ply(model, options);
+
+    const { binary } = options;
+    const blob = binary
+        ? new Blob([fileContent], { type: "application/octet-stream" })
+        : new Blob([fileContent], { type: "text/plain" });
+    const fileName = "model.ply";
+
+    downloadBlob(blob, fileName);
+}
+
+/**
+ * convert a model to USDZ
+ * @param {THREE.Object3D} model
+ */
+async function model2usdz(model) {
+    const { USDZExporter } = await import(
+        "three/examples/jsm/exporters/USDZExporter"
+    );
+    const exporter = new USDZExporter();
+    return exporter.parse(model);
+}
+
+/**
+ * ! NOT WORKING WITH MULTIPLE MATERIALS
+ */
+/**
+ * Export a model to USDZ
+ * @param {THREE.Object3D} model
+ */
+async function exportUSDZ(model) {
+    const fileContent = await model2usdz(model);
+
+    const blob = new Blob([fileContent], { type: "application/octet-stream" });
+    const fileName = "model.usdz";
 
     downloadBlob(blob, fileName);
 }
@@ -111,68 +175,6 @@ async function exportGLTF(model, options) {
 
     const ext = binary ? "glb" : "gltf";
     const fileName = `model.${ext}`;
-
-    downloadBlob(blob, fileName);
-}
-
-/**
- * convert a model to USDZ
- * @param {THREE.Object3D} model
- */
-async function model2usdz(model) {
-    const { USDZExporter } = await import(
-        "three/examples/jsm/exporters/USDZExporter"
-    );
-    const exporter = new USDZExporter();
-    return exporter.parse(model);
-}
-
-/**
- * ! NOT WORKING WITH MULTIPLE MATERIALS
- */
-/**
- * Export a model to USDZ
- * @param {THREE.Object3D} model
- */
-async function exportUSDZ(model) {
-    const fileContent = await model2usdz(model);
-
-    const blob = new Blob([fileContent], { type: "application/octet-stream" });
-    const fileName = "model.usdz";
-
-    downloadBlob(blob, fileName);
-}
-
-/**
- * convert model to ply data
- * @param {THREE.Object3D} model
- * @param {Object} options
- */
-async function model2ply(model, options) {
-    const { PLYExporter } = await import(
-        "three/examples/jsm/exporters/PLYExporter"
-    );
-    const exporter = new PLYExporter();
-
-    return new Promise(resolve => exporter.parse(model, resolve, options));
-}
-
-/**
- * ! NEEDS SMOOTHING
- */
-/**
- * export model to stl
- * @param {THREE.Object3D} model
- * @param {Object} options
- */
-async function exportPLY(model, options) {
-    const fileContent = await model2ply(model, options);
-
-    const { binary } = options;
-    const blob = binary
-        ? new Blob([fileContent], { type: "application/octet-stream" })
-        : new Blob([fileContent], { type: "text/plain" });
-    const fileName = "model.ply";
 
     downloadBlob(blob, fileName);
 }

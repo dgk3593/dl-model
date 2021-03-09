@@ -611,7 +611,9 @@ class BasicViewer extends PureComponent {
         if (!current.enable || prev.enable) return;
         this.disableInput("Exporting");
 
-        const { exportModel } = await import("helpers/exportModel");
+        const { exportModel } = await import(
+            /* webpackChunkName: "exporter" */ "helpers/exportModel"
+        );
         await exportModel(this.models.main, current);
         this.props.toggleExport();
 
