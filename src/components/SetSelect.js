@@ -34,10 +34,13 @@ function SetSelect(props) {
             <List
                 component="nav"
                 aria-label="Set Selector"
-                style={{ backgroundColor: "rgba(50,50,50,0.5", color: "white" }}
+                style={{
+                    backgroundColor: "rgba(50,50,50,0.5)",
+                    color: "white",
+                }}
             >
                 <ListItem button onClick={handleClickListItem}>
-                    <ListItemText primary={options[selectedIndex]} />
+                    <ListItemText primary={`${options[selectedIndex]} ▼`} />
                 </ListItem>
             </List>
             <Menu
