@@ -166,12 +166,6 @@ class BasicViewer extends PureComponent {
         const { lights } = this.props;
         this.addAllLights(lights);
 
-        /**
-         * loaded effects' constructors
-         * @type {Map< string, new (...params) => * >}
-         */
-        this.loadedFX = new Map();
-
         // Renderer
         this.rendererAA = new THREE.WebGLRenderer({
             antialias: true,
@@ -555,38 +549,38 @@ class BasicViewer extends PureComponent {
         const { enable } = current;
         if (!enable) {
             this.finalRenderer = this.renderer;
-            const newCanvas = this.renderer.domElement;
-            this.canvas = newCanvas;
+
+            const { width, height } = this.viewport;
+            this.renderer.setSize(width, height);
+
+            const canvas = this.renderer.domElement;
+            this.canvas = canvas;
+
             return;
         }
 
-        if (!this.loadedFX.has("ascii")) {
-            const { AsciiEffect } = await import(
-                "three/examples/jsm/effects/AsciiEffect"
-            );
-            this.loadedFX.set("ascii", AsciiEffect);
-            this.showAscii();
-        } else this.showAscii();
-
-        this.finalRenderer.setSize(this.viewport.width, this.viewport.height);
+        this.showAscii();
     };
 
     /**
      * render scene as ASCII
      */
-    showAscii = () => {
+    showAscii = async () => {
         const { charSet, color, bgColor, invert } = this.props.ascii;
-        const AsciiEffect = this.loadedFX.get("ascii");
+        const { AsciiEffect } = await import(
+            /* webpackChunkName: "AsciiEffect" */
+            "three/examples/jsm/effects/AsciiEffect"
+        );
 
         this.effect = new AsciiEffect(this.renderer, charSet, { invert });
 
         const { width, height } = this.viewport;
         this.effect.setSize(width, height);
 
-        const newCanvas = this.effect.domElement;
-        newCanvas.style.color = color;
-        newCanvas.style.background = bgColor;
-        this.canvas = newCanvas;
+        const canvas = this.effect.domElement;
+        canvas.style.color = color;
+        canvas.style.background = bgColor;
+        this.canvas = canvas;
 
         this.finalRenderer = this.effect;
     };
