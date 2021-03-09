@@ -2,6 +2,8 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110384_01: [0.05, -0.08], // Eirene
+    c110383_01: [0.05, -0.08], // Finni
     c110382_01: [0.05, -0.08], // Faris
     c110381_01: [0.05, -0.08], // Ryszarda
     c110342_03: [0.05, -0.08], // Valentine's Chelsea
