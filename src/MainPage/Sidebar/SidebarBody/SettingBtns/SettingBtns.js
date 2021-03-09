@@ -208,6 +208,17 @@ function SettingBtns({ openModal }) {
             </List>
 
             {others}
+            <a
+                href="https://ko-fi.com/L4L83VOAP"
+                rel="noreferrer"
+                target="_blank"
+            >
+                <img
+                    height="36px"
+                    src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2"
+                    alt="Buy Me a Coffee"
+                />
+            </a>
         </>
     );
 }
