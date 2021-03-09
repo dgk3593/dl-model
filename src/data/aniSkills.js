@@ -1313,6 +1313,11 @@ const skills = {
             name: "Carbunculus Balletto",
             code: "GUN_SKL_01_01_11038201",
         },
+        {
+            icon: "advIcons/110384_01_r05.png",
+            name: "Unknown",
+            code: "GUN_SKL_01_01_11038401",
+        },
     ],
 };
 

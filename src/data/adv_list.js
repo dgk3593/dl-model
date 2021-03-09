@@ -3,6 +3,22 @@
  */
 const adv = [
     {
+        id: "110383_01",
+        name: "Finni",
+        title: "",
+        rarity: "5",
+        element: "None",
+        weapon: "Manacaster",
+    },
+    {
+        id: "110384_01",
+        name: "Eirene",
+        title: "",
+        rarity: "5",
+        element: "None",
+        weapon: "Manacaster",
+    },
+    {
         id: "110341_01",
         name: "Akasha",
         title: "Pursuer of Knowledge",
