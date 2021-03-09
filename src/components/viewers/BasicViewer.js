@@ -667,11 +667,9 @@ class BasicViewer extends PureComponent {
 
     /**
      * called during every animation frame
+     * @param {number} dt - time difference since last call
      */
-    everyAnimate = () => {
-        const dt = this.clock.getDelta();
-        this.rotateFloor(dt);
-    };
+    everyAnimate = dt => void 0;
 
     /**
      * render loop
@@ -679,7 +677,10 @@ class BasicViewer extends PureComponent {
     animate = () => {
         this.frameId = requestAnimationFrame(this.animate);
 
-        this.everyAnimate();
+        const dt = this.clock.getDelta();
+        this.rotateFloor(dt);
+
+        this.everyAnimate(dt);
 
         this.finalRenderer.render(this.scene, this.camera);
     };
