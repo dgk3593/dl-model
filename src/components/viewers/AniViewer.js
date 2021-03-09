@@ -1,11 +1,3 @@
-/** 
-################################################
-# Extension of Base Viewer that adds:
-#    - Animation
-#    - Recording Animation
-################################################  
-*/
-
 import BasicViewer from "./BasicViewer";
 
 import * as THREE from "three";
@@ -17,6 +9,11 @@ import {
 
 import downloadBlob from "helpers/downloadBlob";
 
+/**
+ *  Extension of Base Viewer that adds:
+ *    - Animation
+ *    - Recording Animation
+ */
 export class AniViewer extends BasicViewer {
     afterMainModelLoad = () => {
         this.saveMainModelInitState();

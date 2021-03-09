@@ -1,12 +1,3 @@
-/**
-################################################
-# Extension of Ani Viewer that adds:
-#    - Weapons
-#    - Face Texture
-#    - Face offset
-################################################  
-*/
-
 import AniViewer from "./AniViewer";
 
 import { DEFAULT_FACE_IDX } from "helpers/consts";
@@ -26,7 +17,16 @@ import {
 
 const SIDES = ["Right", "Left"];
 
+/**
+ *  Extension of Ani Viewer that adds:
+ *    - Weapons
+ *    - Face Texture
+ *    - Face offset
+ */
 export class AdvViewer extends AniViewer {
+    /**
+     * @param {ViewerProps} props
+     */
     constructor(props) {
         super(props);
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;

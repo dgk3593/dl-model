@@ -1,15 +1,15 @@
-/**
-################################################
-# Extension of Ani Viewer for dragons that adds:
-#    - Eyes and Mouth
-################################################  
-*/
-
 import AniViewer from "./AniViewer";
 
 import { getDragonEye, getDragonMouth } from "helpers/viewerHelpers";
 
+/**
+ * Extension of Ani Viewer for dragons that adds:
+ *   - Eyes and Mouth
+ */
 export class DragonViewer extends AniViewer {
+    /**
+     * @param {ViewerProps} props
+     */
     constructor(props) {
         super(props);
         this._eyeIdx = this._mouthIdx = 0;

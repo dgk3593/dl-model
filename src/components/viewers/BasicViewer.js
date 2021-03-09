@@ -1,16 +1,3 @@
-/**
-################################################
-# Basic Viewer that supports adding / updating:
-#    - 1 main model
-#    - auto rotate
-#    - viewport
-#    - material
-#    - background color
-#    - lighting
-#    - anti aliasing
-#    - ASCII mode
-################################################
-*/
 import { PureComponent } from "react";
 
 import * as THREE from "three";
@@ -39,6 +26,15 @@ import {
 import { fbxSource } from "App";
 
 /**
+ * Basic Viewer that supports adding / updating:
+ *   - 1 main model
+ *   - auto rotate
+ *   - viewport
+ *   - material
+ *   - background color
+ *   - lighting
+ *   - anti aliasing
+ *   - ASCII mode
  * @typedef {ViewerProps} Props
  * @extends PureComponent<Props>
  */
