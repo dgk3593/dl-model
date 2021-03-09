@@ -2,6 +2,25 @@
  * @type {{ [id:string]: ModelMod[] }}
  */
 const modelMod = {
+    // Finni
+    c110383_01: [
+        {
+            name: "Wheel Up",
+            code: "show mPartsB_A, mPartsA_A, mPartsC_A; hide mPartsB_B",
+        },
+        {
+            name: "Wheel Down",
+            code: "hide mPartsB_A; show mPartsB_B, mPartsA_A, mPartsC_A",
+        },
+        {
+            name: "Wheel Up No Booster",
+            code: "show mPartsB_A; hide mPartsB_B, mPartsA_A, mPartsC_A",
+        },
+        {
+            name: "Wheel Down No Booster",
+            code: "hide mPartsB_A, mPartsA_A, mPartsC_A; show mPartsB_B",
+        },
+    ],
     // Yukata Curran
     c110281_02: [
         { name: "Unmasked", code: "show mPartsA_A; hide mPartsA_B" },
