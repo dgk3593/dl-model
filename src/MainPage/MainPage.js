@@ -77,15 +77,6 @@ function MainPage({ location }) {
         setInitLoadDone(true);
     }, [location.pathname, dispatch]);
 
-    // update viewport size when resized
-    useEffect(() => {
-        window.addEventListener("resize", updateViewportSize);
-
-        return function () {
-            window.removeEventListener("resize", updateViewportSize);
-        };
-    }, []);
-
     // update settings when id changed
     useEffect(() => {
         const { id, modName } = model;
@@ -130,6 +121,15 @@ function MainPage({ location }) {
 
         currentId.current = id;
     }, [model, updateSetings, viewerType]);
+
+    // update viewport size when resized
+    useEffect(() => {
+        window.addEventListener("resize", updateViewportSize);
+
+        return function () {
+            window.removeEventListener("resize", updateViewportSize);
+        };
+    }, []);
 
     return (
         <>
