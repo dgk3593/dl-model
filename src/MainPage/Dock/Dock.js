@@ -1,7 +1,9 @@
+import { lazy, Suspense } from "react";
 import Drawer from "@material-ui/core/Drawer";
-import ModalBody from "MainPage/Sidebar/Modal/ModalBody";
 
 import useStyles from "./DockStyles";
+
+const ModalBody = lazy(() => import("MainPage/Sidebar/Modal/ModalBody"));
 
 function Dock({ mode, handleSelect, close }) {
     const classes = useStyles();
@@ -16,12 +18,14 @@ function Dock({ mode, handleSelect, close }) {
                 paper: classes.drawerPaper,
             }}
         >
-            <ModalBody
-                mode={mode}
-                docked
-                closeModal={close}
-                handleSelect={handleSelect}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ModalBody
+                    mode={mode}
+                    docked
+                    closeModal={close}
+                    handleSelect={handleSelect}
+                />
+            </Suspense>
         </Drawer>
     );
 }
