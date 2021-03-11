@@ -5,17 +5,17 @@ const adv = [
     {
         id: "110383_01",
         name: "Finni",
-        title: "",
+        title: "Emotional Android",
         rarity: "5",
-        element: "None",
-        weapon: "Manacaster",
+        element: "Water",
+        weapon: "Axe",
     },
     {
         id: "110384_01",
         name: "Eirene",
-        title: "",
+        title: "Rational Android",
         rarity: "5",
-        element: "None",
+        element: "Light",
         weapon: "Manacaster",
     },
     {

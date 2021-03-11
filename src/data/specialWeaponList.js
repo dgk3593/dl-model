@@ -2,8 +2,8 @@
  * @type { Array <ModelData> }
  */
 const specialWeaponList = [
-    { id: "w399038_01", name: "Eirene's Blaster" },
-    { id: "w399039_01", name: "Finni's Drone" },
+    { id: "w399038_01", name: "Eirene's Blaster", iconName: "w399038_01.png" },
+    { id: "w399039_01", name: "Eirene's Drone", iconName: "w399039_01.png" },
     { id: "wOnigiri", name: "Lunch Onigiri", iconName: "wOnigiri.png" },
     {
         id: "wOnigiriBitten",

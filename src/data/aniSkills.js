@@ -1315,7 +1315,7 @@ const skills = {
         },
         {
             icon: "advIcons/110384_01_r05.png",
-            name: "Unknown",
+            name: "Armed 17: Scamble",
             code: "GUN_SKL_01_01_11038401",
         },
     ],
