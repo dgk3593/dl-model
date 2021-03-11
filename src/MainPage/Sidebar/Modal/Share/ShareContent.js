@@ -11,17 +11,17 @@ import Checkbox from "@material-ui/core/Checkbox";
 import TextField from "@material-ui/core/TextField";
 
 import { defaultSettings, initKeyMap, initKeys, baseUrl } from "helpers/consts";
-import cameraPositions from "data/cameraPositions";
 
-import {
-    getDefaultFace,
-    getDefaultAni,
-    getDefaultModelMod,
-} from "helpers/helpers";
+import { getDefaultFace } from "helpers/helpers";
+import { getDefaultModelMod } from "helpers/async/getModelMod";
+import { getDefaultAni } from "helpers/async/getDefaultAni";
+import { getDefaultCamera } from "helpers/async/getDefaultCamera";
 
 import "./styles/ShareContent.css";
 
-const QRCode = lazy(() => import("qrcode.react"));
+const QRCode = lazy(() =>
+    import(/* webpackChunkName: "QRCode" */ "qrcode.react")
+);
 
 function ShareContent({ method }) {
     const [show, setShow] = useState({ AC: true, Settings: true });
@@ -29,12 +29,9 @@ function ShareContent({ method }) {
     const [customCam, toggleCustomCam] = useToggleState(false);
     const [camPos, setCamPos] = useState([0, 0.5, 1.5]);
     const [label, setLabel] = useState("Code");
+    const [shareLink, setShareLink] = useState("Generating...");
 
     const currentSettings = useContext(SettingsContext);
-    const {
-        model: { id: modelId },
-        app: { viewerType },
-    } = currentSettings;
 
     const CopyButton = () => (
         <IconButton onClick={copyText}>
@@ -65,85 +62,116 @@ function ShareContent({ method }) {
         document.execCommand("copy");
         setLabel("Copied");
         setTimeout(() => {
-            setLabel("Link");
+            setLabel("Code");
         }, 2000);
     };
 
-    const getShareLink = () => {
-        const keyCodes = initKeys[viewerType];
-
-        const linkParts = [baseUrl];
-
-        keyCodes.forEach(keyCode => {
-            const { group, key } = initKeyMap[keyCode];
-            const currentValue = currentSettings[group][key];
-            const defaultValue = defaultSettings[group][key];
-            switch (keyCode) {
-                case "bg":
-                    if (transparentBG) {
-                        linkParts.push(`bg=transparent`);
-                        break;
-                    }
-                    if (currentValue !== defaultValue) {
-                        linkParts.push(
-                            `${keyCode}=${currentValue.replace("#", "")}`
-                        );
-                    }
-                    break;
-                case "et":
-                case "mt":
-                    if (currentValue !== modelId)
-                        linkParts.push(`${keyCode}=${currentValue}`);
-                    break;
-                case "ei":
-                case "mi":
-                    if (currentValue !== getDefaultFace(modelId))
-                        linkParts.push(`${keyCode}=${currentValue}`);
-                    break;
-                case "cc":
-                    if (currentValue !== getDefaultAni(modelId))
-                        linkParts.push(`${keyCode}=${currentValue}`);
-                    break;
-                case "cam":
-                    if (!customCam) break;
-                    const type = modelId[0];
-                    const defaultCamPos = cameraPositions[modelId]
-                        ? cameraPositions[modelId]
-                        : cameraPositions[type];
-                    if (camPos.some((p, i) => p !== defaultCamPos[i])) {
-                        const camParams = camPos.map((p, i) =>
-                            p !== defaultCamPos[i] ? p : ""
-                        );
-                        linkParts.push(`cam=${camParams.join(",")}`);
-                    }
-                    break;
-                case "modName":
-                    const defaultModName = getDefaultModelMod(modelId)?.name;
-                    if (currentValue !== defaultModName) {
-                        linkParts.push(
-                            `modName=${currentValue.replace(" ", "")}`
-                        );
-                    }
-                    break;
-                default:
-                    if (currentValue !== defaultValue && currentValue) {
-                        linkParts.push(`${keyCode}=${currentValue}`);
-                    }
-            }
-        });
-
-        Object.keys(show).forEach(key => {
-            if (!show[key]) {
-                linkParts.push(`show${key}=false`);
-            }
-        });
-        return linkParts.join("/");
-    };
-
-    const shareLink = getShareLink();
+    // const shareLink = getShareLink();
     const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
         transparentBG ? "allowtransparency " : ""
     }/></iframe>`;
+
+    useEffect(() => {
+        const modelId = currentSettings.model.id;
+        const setDefaultCamera = async () => {
+            const defaultCam = await getDefaultCamera(modelId);
+            setCamPos(defaultCam);
+        };
+        setDefaultCamera();
+    }, [currentSettings.model.id]);
+
+    useEffect(() => {
+        setShareLink("Generating...");
+        const modelId = currentSettings.model.id;
+        const { viewerType } = currentSettings.app;
+        const getShareLink = async () => {
+            const keyCodes = initKeys[viewerType];
+            const createPromise = keyCode => {
+                return new Promise(async resolve => {
+                    const { group, key } = initKeyMap[keyCode];
+                    const value = currentSettings[group][key];
+                    const defaultValue = defaultSettings[group][key];
+
+                    switch (keyCode) {
+                        case "bg":
+                            if (transparentBG) {
+                                resolve(`bg=transparent`);
+                                break;
+                            }
+                            resolve(
+                                value !== defaultValue
+                                    ? `${keyCode}=${value.replace("#", "")}`
+                                    : ""
+                            );
+                            break;
+                        case "et":
+                        case "mt":
+                            resolve(
+                                value !== modelId ? `${keyCode}=${value}` : ""
+                            );
+                            break;
+                        case "ei":
+                        case "mi":
+                            resolve(
+                                value !== getDefaultFace(modelId)
+                                    ? `${keyCode}=${value}`
+                                    : ""
+                            );
+                            break;
+                        case "cc":
+                            const defaultAni = await getDefaultAni(modelId);
+                            if (value !== defaultAni)
+                                resolve(`${keyCode}=${value}`);
+
+                            resolve("");
+                            break;
+                        case "cam":
+                            if (!customCam) resolve("");
+
+                            const defaultCam = await getDefaultCamera(modelId);
+
+                            if (camPos.some((p, i) => p !== defaultCam[i])) {
+                                const camParams = camPos.map((p, i) =>
+                                    p !== defaultCam[i] ? p : ""
+                                );
+                                resolve(`cam=${camParams.join(",")}`);
+                            }
+
+                            resolve("");
+                            break;
+                        case "modName":
+                            const defaultModName = (
+                                await getDefaultModelMod(modelId)
+                            )?.name;
+
+                            resolve(
+                                value !== defaultModName
+                                    ? `modName=${value.replace(" ", "")}`
+                                    : ""
+                            );
+                            break;
+                        default:
+                            resolve(
+                                value && value !== defaultValue
+                                    ? `${keyCode}=${value}`
+                                    : ""
+                            );
+                    }
+                });
+            };
+
+            const hashPromises = keyCodes.map(createPromise);
+
+            const hashParts = await Promise.all(hashPromises);
+            const hash = hashParts.filter(Boolean).join("/");
+            return `${baseUrl}/${hash}`;
+        };
+        const generateLink = async () => {
+            const link = await getShareLink();
+            setShareLink(link);
+        };
+        generateLink();
+    }, [currentSettings, customCam, camPos, show, transparentBG]);
 
     useEffect(() => {
         if (method !== 1) return; // QR

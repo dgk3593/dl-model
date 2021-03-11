@@ -17,17 +17,17 @@ import useStyles from "./MainPageStyles";
 import Display from "./Display";
 
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
-import {
-    setParamsFromPath,
-    getViewerType,
-    getDefaultAni,
-    getDefaultModelMod,
-} from "helpers/helpers";
+import { getViewerType, getDefaultAni } from "helpers/helpers";
+
+import setParamsFromPath from "helpers/async/setParamsFromPath";
+import { getDefaultModelMod } from "helpers/async/getModelMod";
 
 import { chainCodeToList } from "helpers/viewerHelpers";
 
-const Sidebar = lazy(() => import("./Sidebar"));
-const Dock = lazy(() => import("./Dock"));
+const Sidebar = lazy(() =>
+    import(/* webpackChunkName: "Sidebar" */ "./Sidebar")
+);
+const Dock = lazy(() => import(/* webpackChunkName: "Dock" */ "./Dock"));
 
 function MainPage({ location }) {
     const classes = useStyles();
@@ -72,9 +72,12 @@ function MainPage({ location }) {
 
     // load params from path
     useEffect(() => {
-        setParamsFromPath(location.pathname, dispatch);
-        setLoadingMsg("");
-        setInitLoadDone(true);
+        const setParams = async () => {
+            await setParamsFromPath(location.pathname, dispatch);
+            setLoadingMsg("");
+            setInitLoadDone(true);
+        };
+        setParams();
     }, [location.pathname, dispatch]);
 
     // update settings when id changed
@@ -111,13 +114,16 @@ function MainPage({ location }) {
             });
         }
 
-        const modelMod = getDefaultModelMod(id);
-        if (!modelMod || !modName) {
-            updateSetings("model")({
-                mod: modelMod?.code,
-                modName: modelMod?.name,
-            });
-        }
+        const setModelMod = async () => {
+            const modelMod = await getDefaultModelMod(id);
+            if (!modelMod || !modName) {
+                updateSetings("model")({
+                    mod: modelMod?.code,
+                    modName: modelMod?.name,
+                });
+            }
+        };
+        setModelMod();
 
         currentId.current = id;
     }, [model, updateSetings, viewerType]);
