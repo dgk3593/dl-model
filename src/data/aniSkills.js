@@ -652,6 +652,17 @@ const skills = {
             name: "Media?",
             code: "AXE_SKL_04_01_11038001",
         },
+        {
+            icon: "advIcons/110383_01_r05.png",
+            name: "Armed 72: Fastbreak",
+            code: "AXE_SKL_01_01_11038301",
+        },
+        {
+            icon: "advIcons/110383_01_r05.png",
+            name: "Armed 24: Astroburst",
+            code:
+                "AXE_SKL_02_01_11038301>AXE_SKL_02_02_11038301>AXE_SKL_02_03_11038301",
+        },
     ],
     Lance: [
         {
@@ -1309,14 +1320,20 @@ const skills = {
             code: "GUN_SKL_02_01_11037601>GUN_SKL_02_02_11037601",
         },
         {
-            icon: "advIcons/110382_01_r05.png",
-            name: "Carbunculus Balletto",
-            code: "GUN_SKL_01_01_11038201",
+            icon: "advIcons/110384_01_r05.png",
+            name: "Armed 17: Scamble",
+            code:
+                "GUN_SKL_01_01_11038401>GUN_SKL_01_02_11038401>GUN_SKL_01_03_11038401",
         },
         {
             icon: "advIcons/110384_01_r05.png",
-            name: "Armed 17: Scamble",
-            code: "GUN_SKL_01_01_11038401",
+            name: "Armed 99: Overclock",
+            code: "GUN_SKL_02_01_11038401",
+        },
+        {
+            icon: "advIcons/110382_01_r05.png",
+            name: "Carbunculus Balletto",
+            code: "GUN_SKL_01_01_11038201",
         },
     ],
 };
