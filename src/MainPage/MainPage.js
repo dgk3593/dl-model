@@ -17,7 +17,8 @@ import useStyles from "./MainPageStyles";
 import Display from "./Display";
 
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
-import { getViewerType, getDefaultAni } from "helpers/helpers";
+import { getViewerType } from "helpers/helpers";
+import { getDefaultAni } from "helpers/async/getDefaultAni";
 
 import setParamsFromPath from "helpers/async/setParamsFromPath";
 import { getDefaultModelMod } from "helpers/async/getModelMod";
@@ -33,7 +34,7 @@ function MainPage({ location }) {
     const classes = useStyles();
 
     const [sidebar, toggleSidebar] = useToggleState(true);
-    const [loadingMsg, setLoadingMsg] = useState("Loading");
+    const [loadingMsg, setLoadingMsg] = useState("Loading...");
     const [initLoadDone, setInitLoadDone] = useState(false);
     const [viewport, setViewport] = useState({
         width: window.innerWidth,
@@ -73,6 +74,7 @@ function MainPage({ location }) {
     // load params from path
     useEffect(() => {
         const setParams = async () => {
+            setLoadingMsg("Loading...");
             await setParamsFromPath(location.pathname, dispatch);
             setLoadingMsg("");
             setInitLoadDone(true);
@@ -106,13 +108,13 @@ function MainPage({ location }) {
         const needResetAni =
             ["dragon", "ani"].includes(newViewerType) || viewerChangedToAdv;
 
-        if (needResetAni) {
-            const newAni = getDefaultAni(id);
-            updateSetings("animation")({ code: newAni });
+        const resetAni = async () => {
+            const ani = await getDefaultAni(id);
+            updateSetings("animation")({ code: ani });
             updateSetings("chainMaker")({
-                chain: chainCodeToList(newAni, "init"),
+                chain: chainCodeToList(ani, "init"),
             });
-        }
+        };
 
         const setModelMod = async () => {
             const modelMod = await getDefaultModelMod(id);
@@ -123,7 +125,7 @@ function MainPage({ location }) {
                 });
             }
         };
-        setModelMod();
+        Promise.all([setModelMod(), needResetAni && resetAni()]);
 
         currentId.current = id;
     }, [model, updateSetings, viewerType]);

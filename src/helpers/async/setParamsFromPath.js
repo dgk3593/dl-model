@@ -100,7 +100,7 @@ const filterParamsByGroup = (params, groupName) =>
  * @param {[keycode: string, value: *][]} params
  * @param {React.Dispatch<ReducerAction>} dispatch
  */
-const setModelParams = (params, dispatch) => {
+const setModelParams = async (params, dispatch) => {
     const modelParams = filterParamsByGroup(params, "model");
     const model = Object.fromEntries(modelParams);
 
@@ -122,7 +122,7 @@ const setModelParams = (params, dispatch) => {
         value: { viewerType: getViewerType(modelId) },
     });
 
-    setModelMod(model, dispatch);
+    await setModelMod(model, dispatch);
 };
 
 /**
@@ -195,35 +195,28 @@ const setOtherParams = (params, dispatch, group) => {
 };
 
 /**
- * functions to set parameters depends on group of application state
- * @type {{ [groupName: string]: function}}
- */
-const paramSetter = {
-    model: setModelParams,
-    animation: setAniParams,
-    default: setOtherParams,
-};
-
-/**
  * update application state base on information from the URL
  * @param {string} path
  * @param {React.Dispatch<ReducerAction>} dispatch
  */
-export const setParamsFromPath = (path, dispatch) => {
+export const setParamsFromPath = async (path, dispatch) => {
     const params = getParamsFromPath(path);
 
     const definedGroups = new Set(
         params.map(([keycode]) => initKeyMap[keycode].group)
     );
 
-    //model and animation must always be set
-    definedGroups.add("model");
-    definedGroups.add("animation");
+    definedGroups.delete("model");
+    definedGroups.delete("animation");
 
-    definedGroups.forEach(group => {
-        const setter = paramSetter[group] || paramSetter["default"];
-        setter(params, dispatch, group);
-    });
+    await setModelParams(params, dispatch);
+
+    const groups = [...definedGroups];
+    const groupSetPromise = groups.map(group =>
+        setOtherParams(params, dispatch, group)
+    );
+
+    await Promise.all([setAniParams(params, dispatch), ...groupSetPromise]);
 };
 
 export default setParamsFromPath;

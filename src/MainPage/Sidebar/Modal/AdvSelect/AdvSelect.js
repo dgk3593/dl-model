@@ -1,13 +1,10 @@
-import { lazy, Suspense, useContext, useMemo, useState } from "react";
+import { lazy, Suspense, useContext, useState, useEffect } from "react";
 import useFilterGroups from "hooks/useFilterGroups";
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
 import { ADV_FILTERS } from "helpers/filterDef";
-import adv from "data/adv_list";
-import allies from "data/allies";
-import enemies from "data/enemies";
 import { spFaceTextures } from "helpers/consts";
 
 import { collectFilter, multiCondFilter } from "helpers/helpers";
@@ -34,12 +31,32 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
 
     const [charaSet, setCharaSet] = useState(0);
     const [facePart, setFacePart] = useState("both");
+    const [adv, setAdv] = useState([]);
+    const [allies, setAllies] = useState([]);
+    const [enemies, setEnemies] = useState([]);
     const [filterState, toggleFilter, resetFilters] = useFilterGroups(
         ADV_FILTERS
     );
 
-    const filters = useMemo(() => collectFilter(filterState), [filterState]);
-    const advList = useMemo(() => multiCondFilter(adv, filters), [filters]);
+    const filters = collectFilter(filterState);
+    const advList = multiCondFilter(adv, filters);
+
+    useEffect(() => {
+        const fetchAdv = async () => {
+            const { default: data } = await import("data/adv_list");
+            setAdv(data);
+        };
+        const fetchAllies = async () => {
+            const { default: data } = await import("data/allies");
+            setAllies(data);
+        };
+        const fetchEnemies = async () => {
+            const { default: data } = await import("data/enemies");
+            setEnemies(data);
+        };
+
+        Promise.all([fetchAdv(), fetchAllies(), fetchEnemies()]);
+    }, []);
 
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;

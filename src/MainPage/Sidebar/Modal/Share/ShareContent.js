@@ -39,7 +39,7 @@ function ShareContent({ method }) {
         </IconButton>
     );
 
-    const handleChange = event => {
+    const toggleShow = event => {
         const name = event.currentTarget.name;
         setShow(oldValue => ({ ...oldValue, [name]: !oldValue[name] }));
     };
@@ -84,50 +84,44 @@ function ShareContent({ method }) {
         setShareLink("Generating...");
         const modelId = currentSettings.model.id;
         const { viewerType } = currentSettings.app;
-        const getShareLink = async () => {
-            const keyCodes = initKeys[viewerType];
-            const createPromise = keyCode => {
-                return new Promise(async resolve => {
-                    const { group, key } = initKeyMap[keyCode];
-                    const value = currentSettings[group][key];
-                    const defaultValue = defaultSettings[group][key];
+        const keyCodes = initKeys[viewerType];
 
-                    switch (keyCode) {
-                        case "bg":
-                            if (transparentBG) {
-                                resolve(`bg=transparent`);
-                                break;
-                            }
-                            resolve(
-                                value !== defaultValue
-                                    ? `${keyCode}=${value.replace("#", "")}`
-                                    : ""
-                            );
-                            break;
-                        case "et":
-                        case "mt":
-                            resolve(
-                                value !== modelId ? `${keyCode}=${value}` : ""
-                            );
-                            break;
-                        case "ei":
-                        case "mi":
-                            resolve(
-                                value !== getDefaultFace(modelId)
-                                    ? `${keyCode}=${value}`
-                                    : ""
-                            );
-                            break;
-                        case "cc":
+        const getShareLink = async () => {
+            /**
+             * @param {string} keyCode
+             * @return {Promise<string> | string}
+             */
+            const getHashParts = keyCode => {
+                const { group, key } = initKeyMap[keyCode];
+                const value = currentSettings[group][key];
+                const defaultValue = defaultSettings[group][key];
+                switch (keyCode) {
+                    case "bg":
+                        if (transparentBG) return "bg=transparent";
+
+                        return value !== defaultValue
+                            ? `${keyCode}=${value.replace("#", "")}`
+                            : "";
+                    case "et":
+                    case "mt":
+                        return value !== modelId ? `${keyCode}=${value}` : "";
+                    case "ei":
+                    case "mi":
+                        return value !== getDefaultFace(modelId)
+                            ? `${keyCode}=${value}`
+                            : "";
+                    case "cc":
+                        return new Promise(async resolve => {
                             const defaultAni = await getDefaultAni(modelId);
                             if (value !== defaultAni)
                                 resolve(`${keyCode}=${value}`);
 
                             resolve("");
-                            break;
-                        case "cam":
-                            if (!customCam) resolve("");
+                        });
+                    case "cam":
+                        if (!customCam) return "";
 
+                        return new Promise(async resolve => {
                             const defaultCam = await getDefaultCamera(modelId);
 
                             if (camPos.some((p, i) => p !== defaultCam[i])) {
@@ -138,31 +132,34 @@ function ShareContent({ method }) {
                             }
 
                             resolve("");
-                            break;
-                        case "modName":
-                            const defaultModName = (
-                                await getDefaultModelMod(modelId)
-                            )?.name;
+                        });
+                    case "modName":
+                        return new Promise(async resolve => {
+                            const defaultMod = await getDefaultModelMod(
+                                modelId
+                            );
 
                             resolve(
-                                value !== defaultModName
+                                value !== defaultMod?.name
                                     ? `modName=${value.replace(" ", "")}`
                                     : ""
                             );
-                            break;
-                        default:
-                            resolve(
-                                value && value !== defaultValue
-                                    ? `${keyCode}=${value}`
-                                    : ""
-                            );
-                    }
-                });
+                        });
+                    default:
+                        return value && value !== defaultValue
+                            ? `${keyCode}=${value}`
+                            : "";
+                }
             };
 
-            const hashPromises = keyCodes.map(createPromise);
+            const hashParts = await Promise.all(keyCodes.map(getHashParts));
 
-            const hashParts = await Promise.all(hashPromises);
+            Object.keys(show).forEach(key => {
+                if (!show[key]) {
+                    hashParts.push(`show${key}=false`);
+                }
+            });
+
             const hash = hashParts.filter(Boolean).join("/");
             return `${baseUrl}/${hash}`;
         };
@@ -260,7 +257,7 @@ function ShareContent({ method }) {
                     control={
                         <Checkbox
                             checked={show.AC}
-                            onChange={handleChange}
+                            onChange={toggleShow}
                             name="AC"
                             color="primary"
                         />
@@ -271,7 +268,7 @@ function ShareContent({ method }) {
                     control={
                         <Checkbox
                             checked={show.Settings}
-                            onChange={handleChange}
+                            onChange={toggleShow}
                             name="Settings"
                             color="primary"
                         />
