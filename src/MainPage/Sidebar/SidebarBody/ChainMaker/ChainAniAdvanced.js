@@ -1,8 +1,11 @@
+import { useContext, lazy, Suspense } from "react";
+
 import TextField from "@material-ui/core/TextField";
 
-import ChainAniFace from "./ChainAniFace";
-
+import { SettingsContext } from "context/SettingsContext";
 import { v4 as uuid } from "uuid";
+
+const ChainAniFace = lazy(() => import("./ChainAniFace"));
 
 function ChainAniAdvanced(props) {
     const {
@@ -12,6 +15,10 @@ function ChainAniAdvanced(props) {
         updateParams,
         openModal,
     } = props;
+
+    const {
+        app: { viewerType },
+    } = useContext(SettingsContext);
 
     const handleParamChange = event => {
         const { name, value } = event.target;
@@ -72,13 +79,18 @@ function ChainAniAdvanced(props) {
                     value={repetitions}
                 />
             </div>
-            <ChainAniFace
-                openModal={openModal}
-                faceChanges={faceChanges}
-                deleteFaceChange={deleteFaceChange}
-                updateFaceChange={updateFaceChange}
-                addFaceChange={addFaceChange}
-            />
+
+            {["adv", "dragon"].includes(viewerType) && (
+                <Suspense fallback={null}>
+                    <ChainAniFace
+                        openModal={openModal}
+                        faceChanges={faceChanges}
+                        deleteFaceChange={deleteFaceChange}
+                        updateFaceChange={updateFaceChange}
+                        addFaceChange={addFaceChange}
+                    />
+                </Suspense>
+            )}
         </>
     );
 }
