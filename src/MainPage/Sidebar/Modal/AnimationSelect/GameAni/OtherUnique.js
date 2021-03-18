@@ -53,6 +53,7 @@ function OtherUnique({ handleSelect }) {
                     value={weapon}
                     onClick={setWeapon}
                 />
+                <hr />
             </div>
             <div className="OtherUnique-content">{content}</div>
         </div>

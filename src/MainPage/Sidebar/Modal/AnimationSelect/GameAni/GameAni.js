@@ -102,7 +102,7 @@ function GameAni({ handleSelect }) {
                 <Tab label="Others" />
             </Tabs>
             <div className="AnimationSelect-subCategory">
-                <Suspense fallback={<div>Loading</div>}>{content}</Suspense>
+                <Suspense fallback={<p>Loading...</p>}>{content}</Suspense>
             </div>
         </div>
     );

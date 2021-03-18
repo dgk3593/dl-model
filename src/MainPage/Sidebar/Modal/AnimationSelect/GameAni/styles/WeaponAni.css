@@ -17,4 +17,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+}
+
+.WeaponAni-Btns p {
+    width: 40rem;
+    text-align: center;
 }

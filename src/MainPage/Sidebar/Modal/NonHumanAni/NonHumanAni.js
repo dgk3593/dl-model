@@ -2,15 +2,14 @@ import { useState, useEffect, useContext, useRef } from "react";
 
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 
-import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import Button from "@material-ui/core/Button";
 
-import dragonAni from "data/aniDragon";
-import enemyAni from "data/aniEnemies";
+import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import Modal from "../../Modal";
 
 import { chainCodeToList } from "helpers/viewerHelpers";
 import { getViewerType } from "helpers/helpers";
+import { getNonHumanAniList } from "helpers/async/getNonHumanAniList";
 
 import "./styles/NonHumanAni.css";
 
@@ -23,6 +22,12 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
 
     const [sourceId, setSourceId] = useState(modelId);
     const [modalMode, setModalMode] = useState("");
+
+    /**
+     * @type {[ undefined|AnimationList , function]}
+     */
+    const [aniList, setAniList] = useState();
+    const [listLoading, setListLoading] = useState(true);
 
     const source = useRef(modelId);
 
@@ -38,23 +43,30 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         }
     }, [modelId, close]);
 
-    const portraitDir = sourceId.startsWith("h")
+    useEffect(() => {
+        const getAniList = async () => {
+            const list = await getNonHumanAniList(sourceId);
+            setAniList(list);
+            setListLoading(false);
+        };
+
+        setListLoading(true);
+        getAniList();
+    }, [sourceId]);
+
+    const sourceIsNotDragon = sourceId.startsWith("h");
+
+    const portraitDir = sourceIsNotDragon
         ? "enemyPortraits"
         : "dragonPortraits";
 
-    const portraitName = sourceId.startsWith("h")
-        ? sourceId
-        : sourceId.slice?.(1);
+    const portraitName = sourceIsNotDragon ? sourceId : sourceId.slice?.(1);
 
     const portraitPath = `${process.env.PUBLIC_URL}/img/${portraitDir}/${portraitName}.png`;
 
     const portrait = <img src={portraitPath} alt="portrait" />;
 
     const chainMode = sidebarContent === "chainMaker";
-
-    const animations = sourceId.startsWith("h")
-        ? enemyAni[sourceId]
-        : dragonAni[sourceId];
 
     const chooseSource = () => setModalMode("dragon");
     const closeModal = () => setModalMode("");
@@ -81,8 +93,8 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         !docked && close();
     };
 
-    const aniButtons = animations ? (
-        animations.map(({ name, code }) => (
+    const aniButtons = aniList ? (
+        aniList.map(({ name, code }) => (
             <Button
                 key={code}
                 data-value={code}
@@ -115,7 +127,7 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
                 </div>
             </DialogTop>
             <DialogContent dividers className="NonHumanAni-content">
-                {aniButtons}
+                {listLoading ? <div>Loading...</div> : aniButtons}
             </DialogContent>
             <Modal
                 mode={modalMode}

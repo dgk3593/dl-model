@@ -1,9 +1,6 @@
 import Button from "@material-ui/core/Button";
 
-import { aniModList, incompatibleModels, DEFAULT_ADV_ANI } from "./consts";
-
-import dragonAni from "data/aniDragon";
-import enemyAni from "data/aniEnemies";
+import { aniModList, incompatibleModels } from "./consts";
 
 /**
  * capitalize first letter of tring
@@ -84,21 +81,6 @@ export const getViewerType = modelId => {
     if (isCharaWithAni(modelId)) return "adv";
 
     return "basic";
-};
-
-/**
- * get the default animation code base on model ID
- * @param {string} modelId
- * @return {string | undefined}
- */
-export const getDefaultAni = modelId => {
-    if (isDragon(modelId)) return dragonAni[modelId]?.[0].code;
-
-    if (modelId.startsWith("h")) return enemyAni[modelId]?.[0].code;
-
-    if (isCharaWithAni(modelId)) return DEFAULT_ADV_ANI;
-
-    return "";
 };
 
 /**

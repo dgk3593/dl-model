@@ -129,7 +129,10 @@ const otherUnique = {
                     name: "After All-Out Attack",
                     code: "R002_002_c11037701_a_01>R002_002_c11037701_a_02",
                 },
-                { name: "Unknown", code: "c11037701_090_01>c11037701_090_02" },
+                {
+                    name: "Hit by All-Out Attack",
+                    code: "c11037701_090_01>c11037701_090_02",
+                },
             ],
         },
     ],

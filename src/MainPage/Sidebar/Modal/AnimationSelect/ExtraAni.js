@@ -45,6 +45,7 @@ function ExtraAni({ handleSelect }) {
             </div>
         </div>
     ) : (
+        // prevent layout shift while loading
         <div className="AnimationSelect-categories">
             <div>
                 <p />
