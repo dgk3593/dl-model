@@ -22,6 +22,11 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
+    overflow-x: hidden;
+}
+
+.AnimationSelect-categories div p {
+    width: 40rem;
 }
 
 .AnimationSelect-subCategory button {
