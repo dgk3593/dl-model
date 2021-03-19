@@ -42,6 +42,12 @@ export const getUpdated = (prev, current) => {
 };
 
 /**
+ * check if an object is empty
+ * @param {{}} object
+ */
+export const isEmpty = object => !Object.keys(object).length;
+
+/**
  * check if an ID is a blade
  * @param {string} modelId - id to check
  */
