@@ -84,7 +84,7 @@ function MainPage({ location }) {
 
     // update settings when id changed
     useEffect(() => {
-        const { id, modName } = model;
+        const { id } = model;
         if (!currentId.current) {
             currentId.current = id;
             return;
@@ -118,7 +118,7 @@ function MainPage({ location }) {
 
         const setModelMod = async () => {
             const modelMod = await getDefaultModelMod(id);
-            if (!modelMod || !modName) {
+            if (modelMod) {
                 updateSetings("model")({
                     mod: modelMod?.code,
                     modName: modelMod?.name,
