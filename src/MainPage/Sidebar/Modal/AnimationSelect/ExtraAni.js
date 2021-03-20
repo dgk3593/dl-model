@@ -1,23 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
 import "./styles/AnimationSelect.css";
 
-import extraAnimation from "data/aniExtra";
 import { listToAniButtons } from "helpers/helpers";
 
 function ExtraAni({ handleSelect }) {
     const [categoryId, setCategoryId] = useState(0);
+    const [animations, setAnimations] = useState({});
+
+    useEffect(() => {
+        const fetchAnimations = async () => {
+            const { default: data } = await import("data/aniExtra");
+            setAnimations(data);
+        };
+        fetchAnimations();
+    }, []);
 
     const handleChange = (_, value) => {
         setCategoryId(value);
     };
 
-    const categoryList = Object.keys(extraAnimation);
+    const categoryList = Object.keys(animations);
 
-    return (
+    return categoryList.length ? (
         <div className="AnimationSelect-categories">
             <Tabs
                 orientation="vertical"
@@ -31,9 +39,19 @@ function ExtraAni({ handleSelect }) {
             </Tabs>
             <div className="AnimationSelect-subCategory">
                 {listToAniButtons(
-                    extraAnimation[categoryList[categoryId]],
+                    animations[categoryList[categoryId]],
                     handleSelect
                 )}
+            </div>
+        </div>
+    ) : (
+        // prevent layout shift while loading
+        <div className="AnimationSelect-categories">
+            <div>
+                <p />
+            </div>
+            <div className="AnimationSelect-subCategory">
+                <p>Loading...</p>
             </div>
         </div>
     );

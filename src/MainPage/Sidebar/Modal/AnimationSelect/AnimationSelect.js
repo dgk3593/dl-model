@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useContext } from "react";
+import { useState, useContext } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import TabPanel from "components/TabPanel";
@@ -11,7 +11,7 @@ import { DispatchContext, SettingsContext } from "context/SettingsContext";
 import { chainCodeToList } from "helpers/viewerHelpers";
 
 import GameAni from "./GameAni";
-const ExtraAni = lazy(() => import("./ExtraAni"));
+import ExtraAni from "./ExtraAni";
 
 function AnimationSelect({ close, handleSelect, docked, moveToDock }) {
     const [aniSet, setAniSet] = useState(0);
@@ -66,14 +66,12 @@ function AnimationSelect({ close, handleSelect, docked, moveToDock }) {
                 </AppBar>
             </DialogTop>
             <DialogContent dividers className="AnimationSelect-content">
-                <Suspense fallback={<div>Loading</div>}>
-                    <TabPanel value={aniSet} index={0}>
-                        <GameAni handleSelect={handleAniSelect} />
-                    </TabPanel>
-                    <TabPanel value={aniSet} index={1}>
-                        <ExtraAni handleSelect={handleAniSelect} />
-                    </TabPanel>
-                </Suspense>
+                <TabPanel value={aniSet} index={0}>
+                    <GameAni handleSelect={handleAniSelect} />
+                </TabPanel>
+                <TabPanel value={aniSet} index={1}>
+                    <ExtraAni handleSelect={handleAniSelect} />
+                </TabPanel>
             </DialogContent>
         </>
     );

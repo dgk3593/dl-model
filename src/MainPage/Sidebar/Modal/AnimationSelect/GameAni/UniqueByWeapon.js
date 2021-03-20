@@ -38,8 +38,8 @@ function UniqueByWeapon({ data, groupName = "", handleSelect }) {
                     value={weapon}
                     onClick={setWeapon}
                 />
+                <hr />
             </div>
-            <hr />
             <div className="UniqueByWeapon-btns">{buttons}</div>
         </div>
     );

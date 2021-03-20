@@ -21,6 +21,7 @@ function GenericSkills({ handleSelect }) {
                     value={weapon}
                     onClick={setWeapon}
                 />
+                <hr />
             </div>
             <div className="WeaponAni-Btns">
                 {listToAniButtons(genericSkills[weapon], handleSelect)}

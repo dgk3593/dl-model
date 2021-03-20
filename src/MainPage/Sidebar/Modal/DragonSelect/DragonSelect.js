@@ -1,12 +1,12 @@
-import { lazy, Suspense, useContext, useMemo, useState } from "react";
+import { lazy, Suspense, useContext, useState, useEffect } from "react";
 import useFilterGroups from "hooks/useFilterGroups";
 import { DispatchContext } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
 import { DRAGON_FILTERS } from "helpers/filterDef";
-import dragons from "data/dragon_list";
-import otherDragons from "data/dragon_list_extra";
+// import dragons from "data/dragon_list";
+// import otherDragons from "data/dragon_list_extra";
 
 import { collectFilter, multiCondFilter } from "helpers/helpers";
 import "./styles/DragonSelect.css";
@@ -23,6 +23,8 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
     const title = "Select a Model";
 
     const [dragonSet, setDragonSet] = useState(0);
+    const [dragons, setDragons] = useState([]);
+    const [otherDragons, setOtherDragons] = useState([]);
     const [filterState, toggleFilter, resetFilters] = useFilterGroups(
         DRAGON_FILTERS
     );
@@ -30,11 +32,8 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
     const list = { 0: dragons, 1: otherDragons };
 
     const rawList = list[dragonSet];
-    const filters = useMemo(() => collectFilter(filterState), [filterState]);
-    const dragonList = useMemo(() => multiCondFilter(rawList, filters), [
-        rawList,
-        filters,
-    ]);
+    const filters = collectFilter(filterState);
+    const dragonList = multiCondFilter(rawList, filters);
 
     const handleToggle = event => {
         const { group, name } = event.currentTarget.dataset;
@@ -55,6 +54,19 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
 
         !docked && close();
     };
+
+    useEffect(() => {
+        const fetchDragons = async () => {
+            const { default: data } = await import("data/dragon_list");
+            setDragons(data);
+        };
+        const fetchOthers = async () => {
+            const { default: data } = await import("data/dragon_list_extra");
+            setOtherDragons(data);
+        };
+
+        Promise.all([fetchDragons(), fetchOthers()]);
+    }, []);
 
     return (
         <>

@@ -1,8 +1,13 @@
+import { lazy, Suspense } from "react";
 import { createPortal } from "react-dom";
 
 import Dialog from "@material-ui/core/Dialog";
 
-import ModalBody from "./ModalBody";
+const ModalBody = lazy(() =>
+    import(
+        /* webpackChunkName: "ModalBody" */ "MainPage/Sidebar/Modal/ModalBody"
+    )
+);
 
 function Modal({ mode, closeModal, handleSelect, setDock = null }) {
     return (
@@ -15,12 +20,14 @@ function Modal({ mode, closeModal, handleSelect, setDock = null }) {
                 scroll="paper"
                 PaperProps={{ classes: { root: "Modal" } }}
             >
-                <ModalBody
-                    mode={mode}
-                    closeModal={closeModal}
-                    handleSelect={handleSelect}
-                    setDock={setDock}
-                />
+                <Suspense fallback={<div>Loading</div>}>
+                    <ModalBody
+                        mode={mode}
+                        closeModal={closeModal}
+                        handleSelect={handleSelect}
+                        setDock={setDock}
+                    />
+                </Suspense>
             </Dialog>,
             document.getElementById("modal-root")
         )

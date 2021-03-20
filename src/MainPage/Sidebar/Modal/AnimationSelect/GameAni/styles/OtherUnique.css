@@ -1,13 +1,17 @@
 .OtherUnique {
+    padding: 0.3rem 0.3rem;
     display: flex;
     flex-wrap: wrap;
+}
+
+.OtherUnique hr {
+    width: 100%;
 }
 
 .OtherUnique-Selectors {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0.5rem 0;
     justify-content: center;
 }
 

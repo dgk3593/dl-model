@@ -3,7 +3,11 @@ import Drawer from "@material-ui/core/Drawer";
 
 import useStyles from "./DockStyles";
 
-const ModalBody = lazy(() => import("MainPage/Sidebar/Modal/ModalBody"));
+const ModalBody = lazy(() =>
+    import(
+        /* webpackChunkName: "ModalBody" */ "MainPage/Sidebar/Modal/ModalBody"
+    )
+);
 
 function Dock({ mode, handleSelect, close }) {
     const classes = useStyles();

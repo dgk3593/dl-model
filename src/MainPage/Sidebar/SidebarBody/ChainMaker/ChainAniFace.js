@@ -61,7 +61,7 @@ function ChainAniFace(props) {
         </Suspense>
     ));
 
-    return ["adv", "dragon"].includes(viewerType) ? (
+    return (
         <>
             <div className="ChainAniFace-title">Facial Expression</div>
             <div className="ChainAniFace-list">
@@ -79,8 +79,6 @@ function ChainAniFace(props) {
                 </div>
             </div>
         </>
-    ) : (
-        <></>
     );
 }
 
