@@ -166,14 +166,14 @@ class BasicViewer extends PureComponent {
         this.rendererAA = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true,
-            logarithmicDepthBuffer: true,
+            // logarithmicDepthBuffer: true,
         });
         this.rendererAA.outputEncoding = THREE.sRGBEncoding;
 
         this.rendererNoAA = new THREE.WebGLRenderer({
             antialias: false,
             alpha: true,
-            logarithmicDepthBuffer: true,
+            // logarithmicDepthBuffer: true,
         });
         this.rendererNoAA.outputEncoding = THREE.sRGBEncoding;
 
