@@ -9,7 +9,7 @@ const dragonAni = {
             code: "D20000801_011_01>D20000801_011_02",
         },
         {
-            name: "Appear",
+            name: "Intro",
             code: "D20000801_090_01>D20000801_090_02",
         },
         { name: "Clap", code: "D20000801_100_01" },
@@ -116,7 +116,7 @@ const dragonAni = {
             code: "D20001101_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D20001101_090_01",
         },
         {
@@ -518,7 +518,7 @@ const dragonAni = {
                 "D21000101_082_01>D21000101_082_02>D21000101_082_03>D21000101_082_04>D21000101_082_05",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000101_090_01>D21000101_090_02",
         },
         {
@@ -620,7 +620,7 @@ const dragonAni = {
             code: "D21000201_082_05",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000201_090_01>D21000201_090_02",
         },
         {
@@ -719,7 +719,7 @@ const dragonAni = {
             code: "D21000301_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000301_090_01>D21000301_090_02",
         },
         {
@@ -839,7 +839,7 @@ const dragonAni = {
             code: "D21000401_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000401_090_01>D21000401_090_02",
         },
         {
@@ -898,7 +898,7 @@ const dragonAni = {
             code: "D21000501_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000501_090_01>D21000501_090_02",
         },
         {
@@ -1452,7 +1452,7 @@ const dragonAni = {
             code: "D21008801_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21008801_090_01>D21008801_090_02",
         },
         {
@@ -1536,7 +1536,7 @@ const dragonAni = {
             code: "D21009601_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21009601_090_01>D21009601_090_02",
         },
         {
@@ -1619,7 +1619,7 @@ const dragonAni = {
             code: "D21010101_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21010101_090_01>D21010101_090_02",
         },
         {
@@ -1668,7 +1668,7 @@ const dragonAni = {
             code: "D21010201_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21010201_090_01>D21010201_090_02",
         },
         {
@@ -1775,7 +1775,7 @@ const dragonAni = {
             code: "D21010601_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21010601_090_01>D21010601_090_02",
         },
         {
@@ -1846,6 +1846,22 @@ const dragonAni = {
         {
             name: "White Land",
             code: "D21010901_060_01",
+        },
+        {
+            name: "Defeated",
+            code: "D21010901_011_01",
+        },
+        {
+            name: "Broken",
+            code: "D21010901_081_01>D21010901_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "D21010901_081_03",
+        },
+        {
+            name: "Boss Intro",
+            code: "D21010901_090_02>D21010901_090_01",
         },
     ],
     d210110_01: [
@@ -2387,7 +2403,7 @@ const dragonAni = {
                 "D21000101_082_01>D21000101_082_02>D21000101_082_03>D21000101_082_04>D21000101_082_05",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000101_090_01>D21000101_090_02",
         },
         {
@@ -2486,7 +2502,7 @@ const dragonAni = {
             code: "D21000201_082_05",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000201_090_01>D21000201_090_02",
         },
         {
@@ -2574,7 +2590,7 @@ const dragonAni = {
             code: "D21000301_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000301_090_01>D21000301_090_02",
         },
         {
@@ -2678,7 +2694,7 @@ const dragonAni = {
             code: "D21000401_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000401_090_01>D21000401_090_02",
         },
         {
@@ -2733,7 +2749,7 @@ const dragonAni = {
             code: "D21000501_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21000501_090_01>D21000501_090_02",
         },
         {
@@ -3531,7 +3547,7 @@ const dragonAni = {
             code: "D21014502_081_03",
         },
         {
-            name: "Boss Appear",
+            name: "Boss Intro",
             code: "D21014502_090_01>D21014502_090_02",
         },
         { name: "Skill", code: "D21014502_022_01" },
