@@ -40,13 +40,33 @@ import { fbxSource } from "App";
  */
 class BasicViewer extends PureComponent {
     async componentDidMount() {
-        // window.app = this;
+        window.app = this;
 
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
 
         await this.initialize();
         this.finishedInit = true;
+
+        if (!document.fullscreenEnabled) return;
+
+        const enableFullScreen = () => {
+            if (!this.mount.requestFullscreen?.())
+                this.mount.webkitRequestFullScreen?.();
+        };
+
+        const toggleFullScreen = () => {
+            if (!document.fullscreenElement) {
+                enableFullScreen();
+                return;
+            }
+            document.exitFullscreen();
+        };
+        this.mount?.addEventListener("dblclick", () => toggleFullScreen());
+        this.removeFullScreenListener = () =>
+            this.mount?.removeEventListener("dblclick", () =>
+                toggleFullScreen()
+            );
     }
 
     /**
@@ -67,6 +87,7 @@ class BasicViewer extends PureComponent {
     }
 
     componentWillUnmount() {
+        this.removeFullScreenListener?.();
         cancelAnimationFrame(this.frameId);
         dispose3dObject(this.scene);
         this.renderer = null;

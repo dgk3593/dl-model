@@ -1,11 +1,4 @@
-import {
-    lazy,
-    Suspense,
-    useContext,
-    useCallback,
-    useRef,
-    useEffect,
-} from "react";
+import { lazy, Suspense, useContext, useCallback } from "react";
 
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
 import "./styles/Display.css";
@@ -44,31 +37,6 @@ function Display(props) {
 
     const dispatch = useContext(DispatchContext);
 
-    const display = useRef();
-
-    useEffect(() => {
-        if (!document.fullscreenEnabled) return;
-
-        const enableFS = () => {
-            const docElement = document.documentElement;
-            if (docElement.requestFullscreen?.()) return;
-            docElement.webkitRequestFullScreen?.();
-        };
-
-        const toggleFullScreen = () => {
-            if (!document.fullscreenElement) {
-                enableFS();
-                return;
-            }
-            document.exitFullscreen();
-        };
-        display.current?.addEventListener("dblclick", () => toggleFullScreen());
-
-        return display.current?.removeEventListener("dblclick", () =>
-            toggleFullScreen()
-        );
-    }, []);
-
     const toggleSetting = useCallback(
         (key, value) => dispatch({ type: "toggle", key, value }),
         [dispatch]
@@ -98,7 +66,7 @@ function Display(props) {
     const ModelViewer = viewers[viewerType];
 
     return (
-        <div className="Display" ref={display}>
+        <div className="Display">
             {showAniControl && (
                 <div
                     className="Display-AniControl"

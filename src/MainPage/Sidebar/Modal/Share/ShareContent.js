@@ -69,7 +69,7 @@ function ShareContent({ method }) {
     // const shareLink = getShareLink();
     const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
         transparentBG ? "allowtransparency " : ""
-    }/></iframe>`;
+    } allowfullscreen/></iframe>`;
 
     useEffect(() => {
         const modelId = currentSettings.model.id;
