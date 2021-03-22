@@ -149,15 +149,6 @@ class BasicViewer extends PureComponent {
         this.camera.position.set(...this.cameraPosition);
         this.camera.updateProjectionMatrix();
 
-        // Controls
-        this.controls = new OrbitControls(this.camera, this.mount);
-        /**
-         * @type {xyzCoordinate}
-         */
-        this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
-        this.controls.target.set(...this.controlsPosition);
-        this.controls.update();
-
         // Light
         const { lights } = this.props;
         this.addAllLights(lights);
@@ -188,6 +179,15 @@ class BasicViewer extends PureComponent {
 
         const canvas = this.finalRenderer.domElement;
         this.canvas = canvas;
+
+        // Controls
+        this.controls = new OrbitControls(this.camera, this.mount);
+        /**
+         * @type {xyzCoordinate}
+         */
+        this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
+        this.controls.target.set(...this.controlsPosition);
+        this.controls.update();
 
         this.animate();
     };
@@ -672,6 +672,8 @@ class BasicViewer extends PureComponent {
         this.frameId = requestAnimationFrame(this.animate);
 
         const dt = this.clock.getDelta();
+        if (document.visibilityState === "hidden") return;
+
         this.rotateFloor(dt);
 
         this.everyAnimate(dt);

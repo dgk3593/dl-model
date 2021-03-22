@@ -366,7 +366,7 @@ export const commonColors = {
 
 export const CAM_PARAMS = {
     angle: 45,
-    far: 300,
+    far: 100,
     near: 0.01,
 };
 
