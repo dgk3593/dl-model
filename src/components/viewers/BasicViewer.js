@@ -48,25 +48,7 @@ class BasicViewer extends PureComponent {
         await this.initialize();
         this.finishedInit = true;
 
-        if (!document.fullscreenEnabled) return;
-
-        const enableFullScreen = () => {
-            if (!this.mount.requestFullscreen?.())
-                this.mount.webkitRequestFullScreen?.();
-        };
-
-        const toggleFullScreen = () => {
-            if (!document.fullscreenElement) {
-                enableFullScreen();
-                return;
-            }
-            document.exitFullscreen();
-        };
-        this.mount?.addEventListener("dblclick", () => toggleFullScreen());
-        this.removeFullScreenListener = () =>
-            this.mount?.removeEventListener("dblclick", () =>
-                toggleFullScreen()
-            );
+        this.addFullScreenListener();
     }
 
     /**
@@ -101,6 +83,34 @@ class BasicViewer extends PureComponent {
         this.clock = null;
         this.scene = null;
     }
+
+    addFullScreenListener = () => {
+        const fullscreenEnabled =
+            document.fullscreenEnabled || document.webkitFullscreenEnabled;
+
+        if (!fullscreenEnabled) return;
+
+        const enableFullScreen = () =>
+            this.mount.requestFullscreen?.() ||
+            this.mount.webkitRequestFullScreen?.();
+
+        const toggleFullScreen = () => {
+            const isFullScreen =
+                document.fullscreenElement || document.webkitFullscreenElement;
+
+            if (!isFullScreen) {
+                enableFullScreen();
+                return;
+            }
+
+            document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+        };
+        this.mount?.addEventListener("dblclick", () => toggleFullScreen());
+        this.removeFullScreenListener = () =>
+            this.mount?.removeEventListener("dblclick", () =>
+                toggleFullScreen()
+            );
+    };
 
     /**
      * disable input and display a message, default is "Loading..."
