@@ -9,16 +9,18 @@ import "./styles/AdvancedSettingsGroup.css";
 
 function AutoRotate({ openAtStart = false }) {
     const {
-        scene: { rotateSpeed },
+        app: { pixelRatio },
     } = useContext(SettingsContext);
 
     const dispatch = useContext(DispatchContext);
 
+    const maxPixelRatio = window.devicePixelRatio;
+
     const handleValueChange = (_, newValue) => {
         const action = {
             type: "update",
-            key: "scene",
-            value: { rotateSpeed: newValue },
+            key: "app",
+            value: { pixelRatio: newValue },
         };
         dispatch(action);
     };
@@ -27,39 +29,42 @@ function AutoRotate({ openAtStart = false }) {
         event.stopPropagation();
         const action = {
             type: "reset",
-            key: "scene",
-            value: ["rotateSpeed"],
+            key: "app",
+            value: ["pixelRatio"],
         };
         dispatch(action);
     };
+
     const titleButton = (
         <Button variant="contained" onClick={resetSettings}>
             Reset
         </Button>
     );
 
-    return (
+    return maxPixelRatio !== 1 ? (
         <SettingsGroup
-            title="Auto Rotate"
+            title="Pixel Ratio"
             titleButton={titleButton}
             openAtStart={openAtStart}
         >
             <div className="AdvancedSettingsGroup-options">
                 <div className="AdvancedSettingsGroup-optionName">
-                    Speed: {rotateSpeed}
+                    Pixel Ratio: {pixelRatio}
                 </div>
                 <div className="AdvancedSettingsGroup-slider">
                     <Slider
-                        value={rotateSpeed}
+                        value={pixelRatio}
                         track={false}
-                        min={-1}
-                        max={1}
-                        step={0.05}
+                        min={0.1}
+                        max={devicePixelRatio}
+                        step={0.1}
                         onChange={handleValueChange}
                     />
                 </div>
             </div>
         </SettingsGroup>
+    ) : (
+        <></>
     );
 }
 

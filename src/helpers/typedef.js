@@ -181,6 +181,7 @@
  * @property {Boolean} showSettings - whether to display sidebar and setting button, default is true
  * @property {Boolean} showAniControl - whether to display animation control, default is true
  * @property {Boolean} antiAliasing - whether Anti Aliasing is enabled, default is false
+ * @property {Number} pixelRatio - renderer pixel ratio
  * @property {string} viewerType - type of the current viewer component
  *
  * @typedef {Object} ApplicationState
@@ -209,6 +210,7 @@
  * @property {LightParam[]} lights - lighting settings
  * @property {AppAsciiState} ascii - ASCII mode settings
  * @property {Boolean} antiAliasing - whether Anti Aliasing is enabled
+ * @property {Number} pixelRatio - renderer pixel ratio
  * @property {ColorCode | "transparent"} bgColor - scene background color
  * @property {{width: number, height: number}} viewport - size of the viewport
  * @property {xyzCoordinate} cameraPosition - position of the camera

@@ -41,7 +41,7 @@ import { fbxSource } from "App";
  */
 class BasicViewer extends PureComponent {
     async componentDidMount() {
-        window.app = this;
+        // window.app = this;
 
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
@@ -176,12 +176,14 @@ class BasicViewer extends PureComponent {
         this.addAllLights(lights);
 
         // Renderer
+        const { pixelRatio } = this.props;
         this.rendererAA = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true,
             // logarithmicDepthBuffer: true,
         });
         this.rendererAA.outputEncoding = THREE.sRGBEncoding;
+        this.rendererAA.setPixelRatio(pixelRatio);
 
         this.rendererNoAA = new THREE.WebGLRenderer({
             antialias: false,
@@ -189,6 +191,7 @@ class BasicViewer extends PureComponent {
             // logarithmicDepthBuffer: true,
         });
         this.rendererNoAA.outputEncoding = THREE.sRGBEncoding;
+        this.rendererNoAA.setPixelRatio(pixelRatio);
 
         const AAEnabled = this.props.antiAliasing;
         this._AA = AAEnabled;
@@ -383,6 +386,7 @@ class BasicViewer extends PureComponent {
         this.updateAscii(prev.ascii, current.ascii);
         this.updateCamera(prev.cameraPosition, current.cameraPosition);
         this.updateControl(prev.controlsPosition, current.controlsPosition);
+        this.updatePixelRatio(prev.pixelRatio, current.pixelRatio);
 
         // Update background color
         if (prev.bgColor !== current.bgColor) {
@@ -625,6 +629,18 @@ class BasicViewer extends PureComponent {
 
         this.controls.target.set(...current);
         this.controls.update();
+    };
+
+    /**
+     * update renderer's pixel ratio
+     * @param {number} prev
+     * @param {number} current
+     */
+    updatePixelRatio = (prev, current) => {
+        if (prev === current) return;
+
+        this.rendererAA.setPixelRatio(current);
+        this.rendererNoAA.setPixelRatio(current);
     };
 
     /**

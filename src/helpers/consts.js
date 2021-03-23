@@ -212,6 +212,7 @@ export const defaultSettings = {
         showSettings: true,
         showAniControl: true,
         antiAliasing: false,
+        pixelRatio: 1,
         viewerType: "",
     },
     outline: {

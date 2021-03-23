@@ -32,7 +32,7 @@ function Display(props) {
     const {
         model: { id: modelId },
         scene: { rotateSpeed, background: bgColor, initCameraPosition },
-        app: { showAniControl, antiAliasing, viewerType },
+        app: { showAniControl, antiAliasing, pixelRatio, viewerType },
     } = settings;
 
     const dispatch = useContext(DispatchContext);
@@ -91,6 +91,7 @@ function Display(props) {
                     lights={settings.lights}
                     ascii={settings.ascii}
                     antiAliasing={antiAliasing}
+                    pixelRatio={pixelRatio}
                     bgColor={bgColor}
                     viewport={viewport}
                     cameraPosition={cameraPosition}

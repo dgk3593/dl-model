@@ -7,6 +7,7 @@ import "./styles/AdvancedSettings.css";
 
 const OutlineSettings = lazy(() => import("./OutlineSettings"));
 const AutoRotate = lazy(() => import("./AutoRotate"));
+const PixelRatio = lazy(() => import("./PixelRatio"));
 const MaterialSettings = lazy(() => import("./MaterialSettings"));
 const LightSettings = lazy(() => import("./LightSettings"));
 const AsciiSettings = lazy(() => import("./AsciiSettings"));
@@ -37,6 +38,9 @@ function AdvancedSettings({ openModal }) {
             <div className="AdvancedSettings-List">
                 <Suspense fallback={<div>Loading</div>}>
                     <AutoRotate openAtStart />
+                </Suspense>
+                <Suspense fallback={<div>Loading</div>}>
+                    <PixelRatio />
                 </Suspense>
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openModal={openModal} />

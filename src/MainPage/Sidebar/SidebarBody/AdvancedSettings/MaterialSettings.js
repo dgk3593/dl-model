@@ -11,7 +11,7 @@ import { MATERIALS } from "helpers/consts";
 
 const MaterialParamsSetting = lazy(() => import("./MaterialParamsSetting"));
 
-function MaterialSettings({ openModal, openAtStart }) {
+function MaterialSettings({ openModal, openAtStart = false }) {
     const {
         material: { type: materialType },
     } = useContext(SettingsContext);

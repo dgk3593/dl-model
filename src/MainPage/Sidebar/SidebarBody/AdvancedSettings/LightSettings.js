@@ -8,7 +8,7 @@ import { defaultLights } from "helpers/consts";
 import SettingsGroup from "./AdvancedSettingsGroup";
 const LightParamsSetting = lazy(() => import("./LightParamsSetting"));
 
-function LightSettings({ openModal, openAtStart }) {
+function LightSettings({ openModal, openAtStart = false }) {
     const { lights: currentLights } = useContext(SettingsContext);
 
     const dispatch = useContext(DispatchContext);

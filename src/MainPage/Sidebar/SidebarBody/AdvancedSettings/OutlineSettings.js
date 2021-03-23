@@ -10,7 +10,7 @@ import SettingsGroup from "./AdvancedSettingsGroup";
 import { DispatchContext, SettingsContext } from "context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 
-function OutlineSettings({ openModal, openAtStart }) {
+function OutlineSettings({ openModal, openAtStart = false }) {
     const dispatch = useContext(DispatchContext);
 
     const toggleOutline = event => {
