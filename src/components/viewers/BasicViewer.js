@@ -23,6 +23,7 @@ import {
     applyMod,
     logUpdate,
 } from "helpers/viewerHelpers";
+import fscreen from "fscreen";
 import { fbxSource } from "App";
 
 /**
@@ -85,25 +86,15 @@ class BasicViewer extends PureComponent {
     }
 
     addFullScreenListener = () => {
-        const fullscreenEnabled =
-            document.fullscreenEnabled || document.webkitFullscreenEnabled;
-
-        if (!fullscreenEnabled) return;
-
-        const enableFullScreen = () =>
-            this.mount.requestFullscreen?.() ||
-            this.mount.webkitRequestFullScreen?.();
+        if (!fscreen.fullscreenEnabled) return;
 
         const toggleFullScreen = () => {
-            const isFullScreen =
-                document.fullscreenElement || document.webkitFullscreenElement;
-
-            if (!isFullScreen) {
-                enableFullScreen();
+            if (!fscreen.fullscreenElement) {
+                fscreen.requestFullscreen(this.mount);
                 return;
             }
 
-            document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+            fscreen.exitFullscreen();
         };
         this.mount?.addEventListener("dblclick", () => toggleFullScreen());
         this.removeFullScreenListener = () =>
