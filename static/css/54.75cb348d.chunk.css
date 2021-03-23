@@ -1,0 +1,2 @@
+.Selector{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;padding:.3rem .5rem}.Selector-Item{color:hsla(0,0%,100%,.5);background-color:#323232;padding:.2rem 1rem;cursor:pointer}.Selector-Item:hover:not(.selected){color:hsla(0,0%,100%,.8)}.Selector-Item.selected{color:#fff}
+/*# sourceMappingURL=54.75cb348d.chunk.css.map */
