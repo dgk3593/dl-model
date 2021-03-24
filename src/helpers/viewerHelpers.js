@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { fbxSource } from "App";
-import { v4 as uuid } from "uuid";
+import { nanoid } from "nanoid";
 
 import textureOffsets, { idxOffsets } from "data/face_offset";
 
@@ -619,7 +619,7 @@ export const processFaceChanges = faceChanges => {
     const timeStamps = new Set(faceChanges.map(change => change.time));
     if (faceChanges.length === timeStamps.size) {
         sorted.forEach(change => {
-            change.id = uuid();
+            change.id = nanoid();
         });
         return sorted;
     }
@@ -629,7 +629,7 @@ export const processFaceChanges = faceChanges => {
      */
     const simplified = [];
     timeStamps.forEach(time => {
-        let output = { time, id: uuid(), eyeIdx: NaN, mouthIdx: NaN };
+        let output = { time, id: nanoid(), eyeIdx: NaN, mouthIdx: NaN };
         const changes = sorted.filter(change => change.time === time);
         changes.forEach(change => (output = Object.assign(output, change)));
         simplified.push(output);
@@ -680,7 +680,7 @@ export const chainCodeToList = (code, name) => {
          */
         const listItem = {
             name: partName,
-            id: uuid(),
+            id: nanoid(),
             aniName,
             timeScale,
             repetitions,

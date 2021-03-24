@@ -3,7 +3,7 @@ import { useContext, lazy, Suspense } from "react";
 import TextField from "@material-ui/core/TextField";
 
 import { SettingsContext } from "context/SettingsContext";
-import { v4 as uuid } from "uuid";
+import { nanoid } from "nanoid";
 
 const ChainAniFace = lazy(() => import("./ChainAniFace"));
 
@@ -45,7 +45,12 @@ function ChainAniAdvanced(props) {
     };
 
     const addFaceChange = () => {
-        const blankChange = { id: uuid(), time: "", eyeIdx: "", mouthIdx: "" };
+        const blankChange = {
+            id: nanoid(),
+            time: "",
+            eyeIdx: "",
+            mouthIdx: "",
+        };
         const newFaceChanges = [...faceChanges, blankChange];
         updateFaceChanges(newFaceChanges);
     };

@@ -10,6 +10,7 @@
         "@testing-library/user-event": "^13.0.7",
         "@types/dom-mediacapture-record": "^1.0.7",
         "fscreen": "^1.2.0",
+        "nanoid": "^3.1.22",
         "qrcode.react": "^1.0.1",
         "react": "^17.0.1",
         "react-color": "^2.19.3",
@@ -17,8 +18,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.3",
         "source-map-explorer": "^2.5.2",
-        "three": "^0.126.1",
-        "uuid": "^8.3.2"
+        "three": "^0.126.1"
     },
     "scripts": {
         "analyze": "source-map-explorer 'build/static/js/*.js'",
