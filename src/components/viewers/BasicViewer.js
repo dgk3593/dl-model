@@ -701,7 +701,7 @@ class BasicViewer extends PureComponent {
      * called during every animation frame
      * @param {number} dt - time difference since last call
      */
-    everyAnimate = dt => void 0;
+    updateScene = dt => void 0;
 
     /**
      * render loop
@@ -714,7 +714,7 @@ class BasicViewer extends PureComponent {
 
         this.rotateFloor(dt);
 
-        this.everyAnimate(dt);
+        this.updateScene(dt);
 
         this.finalRenderer.render(this.scene, this.camera);
     };

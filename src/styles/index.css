@@ -16,3 +16,7 @@ canvas {
     display: block;
     margin: 0;
 }
+
+canvas:fullscreen {
+    background-color: #cccccc;
+}

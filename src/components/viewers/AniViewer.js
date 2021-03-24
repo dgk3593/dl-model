@@ -239,7 +239,7 @@ export class AniViewer extends BasicViewer {
      */
     beforeCaptureAnimation = () => void 0;
 
-    everyAnimate = dt => {
+    updateScene = dt => {
         this.mixer?.update(dt);
 
         if (this.faceChanges && this.faceChanges.length) {
