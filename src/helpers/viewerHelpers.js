@@ -3,6 +3,7 @@ import { fbxSource } from "App";
 import { nanoid } from "nanoid";
 
 import textureOffsets, { idxOffsets } from "data/face_offset";
+import matcapList from "data/matcapList";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach, getUpdated } from "helpers/helpers";
@@ -11,6 +12,7 @@ import {
     matExtraParams,
     matColorParams,
     needsUpdateParams,
+    matcapDir,
 } from "helpers/consts";
 
 import outlineFragShader from "shader/outlineFragShader";
@@ -42,6 +44,23 @@ export const loadTexture = url => {
             new THREE.TextureLoader().load(url, resolve);
         })
     );
+};
+
+/**
+ * @param {string} name
+ */
+const getMatcapPath = name => {
+    const matcap = matcapList.find(e => e.name === name);
+    return matcap?.path ? `${matcapDir}/${matcap.path}` : null;
+};
+
+/**
+ * @param {string} name
+ * @return {null | Promise< THREE.Texture >}
+ */
+export const loadMatcap = name => {
+    const path = getMatcapPath(name);
+    return path ? loadTexture(path) : null;
 };
 
 /**
@@ -731,6 +750,15 @@ export const applyMaterialParam = (materials, param) => {
                       if (mat.map) mat.userData.backupMap = mat.map;
                       mat.map = null;
                   };
+            break;
+        case "matcap":
+            const matcapPromise = loadMatcap(value);
+            handler = mat => {
+                matcapPromise.then(matcap => {
+                    mat.matcap = matcap;
+                    mat.needsUpdate = true;
+                });
+            };
             break;
         default:
             const isColor = matColorParams.includes(key);

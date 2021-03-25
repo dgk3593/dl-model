@@ -3,6 +3,8 @@ import { lazy, Suspense, useContext } from "react";
 import { SettingsContext, DispatchContext } from "context/SettingsContext";
 import Close from "@material-ui/icons/Close";
 
+import { NO_LIGHT_MATERIALS } from "helpers/consts";
+
 import "./styles/AdvancedSettings.css";
 
 const OutlineSettings = lazy(() => import("./OutlineSettings"));
@@ -45,7 +47,7 @@ function AdvancedSettings({ openModal }) {
                 <Suspense fallback={<div>Loading</div>}>
                     <OutlineSettings openModal={openModal} />
                 </Suspense>
-                {materialType !== "Basic" && (
+                {!NO_LIGHT_MATERIALS.includes(materialType) && (
                     <Suspense fallback={<div>Loading</div>}>
                         <LightSettings openModal={openModal} />
                     </Suspense>

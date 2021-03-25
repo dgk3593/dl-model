@@ -1,3 +1,5 @@
+import matcapList from "data/matcapList";
+
 export const DRAWER_WIDTH = "16rem";
 export const DRAWER_BGCOLOR = "#330000";
 
@@ -6,6 +8,7 @@ export const DEFAULT_FACE_IDX = 2;
 export const DEFAULT_DRAGON_FACE_IDX = 1;
 
 export const baseUrl = "https://dgk3593.github.io/dl-model/#";
+export const matcapDir = `${process.env.PUBLIC_URL}/img/matcap`;
 
 export const DEFAULT_ADV_ANI = "CMN_MWM_03";
 
@@ -109,6 +112,12 @@ export const matParamsDetails = {
         default: "none",
         options: ["none", "2 Tones", "3 Tones", "4 Tones", "5 Tones"],
     },
+    matcap: {
+        name: "Matcap",
+        type: "select",
+        default: matcapList[0].name,
+        options: matcapList.map(({ name }) => name),
+    },
 };
 
 /**
@@ -144,7 +153,12 @@ const defaultMatParams = Object.fromEntries(
 /**
  * list of parameters that need to set needsUpdate = true to be updated
  */
-export const needsUpdateParams = ["gradientMap", "flatShading", "useTexture"];
+export const needsUpdateParams = [
+    "gradientMap",
+    "flatShading",
+    "useTexture",
+    "matcap",
+];
 
 /**
  * default light setting
@@ -301,7 +315,19 @@ export const initKeys = {
 /**
  * list of supported materials
  */
-export const MATERIALS = ["Basic", "Toon", "Lambert", "Phong", "Standard"];
+export const MATERIALS = [
+    "Basic",
+    "Toon",
+    "Lambert",
+    "Phong",
+    "Standard",
+    "Matcap",
+];
+
+/**
+ * list of supported materials
+ */
+export const NO_LIGHT_MATERIALS = ["Basic", "Matcap"];
 
 /**
  * parameters that all material has
@@ -336,6 +362,7 @@ export const matExtraParams = {
         "roughness",
         "flatShading",
     ],
+    Matcap: ["flatShading", "matcap"],
 };
 
 export const spFaceTextures = {
