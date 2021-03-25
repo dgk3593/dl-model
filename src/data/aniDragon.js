@@ -2170,6 +2170,9 @@ const dragonAni = {
         { name: "Bark", code: "CMN_040_01_21012801" },
         { name: "Pick Things", code: "CMN_052_98_21012801" },
         { name: "Inspect", code: "CMN_052_99_21012801" },
+        { name: "Lie Down", code: "CMN_052_97_01_21012801" },
+        { name: "Lying on Side", code: "CMN_052_97_02_21012801" },
+        { name: "Stand Up", code: "CMN_052_97_03_21012801" },
         {
             name: "Victory",
             code: "CMN_WIN_01_21012801>CMN_WIN_02_21012801>CMN_WIN_03_21012801",
