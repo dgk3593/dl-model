@@ -52,6 +52,11 @@ const uniqueCombo = {
     ],
     Dagger: [
         {
+            icon: "advIcons/100007_07_r05.png",
+            name: "Gala Notte",
+            code: "DAG_CMB_01_10000707>DAG_CMB_02_10000707>DAG_CMB_03_10000707",
+        },
+        {
             icon: "advIcons/100032_04_r05.png",
             name: "Gala Laxi",
             code:

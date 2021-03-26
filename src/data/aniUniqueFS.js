@@ -69,6 +69,11 @@ const uniqueFS = {
     ],
     Dagger: [
         {
+            icon: "advIcons/100007_07_r05.png",
+            name: "Gala Notte",
+            code: "DAG_CHR_01_10000707>DAG_CHR_02_10000707>DAG_CHR_03_10000707",
+        },
+        {
             icon: "advIcons/100032_04_r05.png",
             name: "Gala Laxi",
             code: "DAG_CHR_01_10003204>DAG_CHR_02_10003204>DAG_CHR_03_10003204",

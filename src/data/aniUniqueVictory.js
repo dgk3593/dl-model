@@ -63,6 +63,11 @@ const uniqueVictory = {
     ],
     Dagger: [
         {
+            icon: "advIcons/100007_07_r05.png",
+            name: "Gala Notte",
+            code: "DAG_WIN_01_10000707>DAG_WIN_02_10000707",
+        },
+        {
             icon: "advIcons/110360_01_r05.png",
             name: "Tiki",
             code: "DAG_WIN_01_11036001>DAG_WIN_02_11036001",

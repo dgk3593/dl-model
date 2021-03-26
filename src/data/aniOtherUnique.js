@@ -76,6 +76,43 @@ const otherUnique = {
     ],
     Dagger: [
         {
+            name: "Gala Notte",
+            icon: "advIcons/100007_07_r05.png",
+            animations: [
+                { name: "Fly Slow", code: "CMN_RUN_01_10000707" },
+                { name: "Fly Fast", code: "CMN_RUN_02_10000707" },
+                { name: "Idle", code: "CMN_INT_01_10000707" },
+                { name: "Dash", code: "DAG_ROL_01_10000707" },
+                { name: "Dash Attack", code: "DAG_DAS_02_10000707" },
+                { name: "Quick Turn", code: "CMN_QTN_01_10000707" },
+                {
+                    name: "Knocked Away",
+                    code:
+                        "CMN_BST_01_10000707>CMN_BST_02_10000707>CMN_BST_03_10000707>CMN_BST_04_10000707>CMN_BST_07_10000707",
+                },
+                { name: "Fall to Ground", code: "CMN_BST_05_10000707" },
+                { name: "Stand back up", code: "CMN_BST_06_10000707" },
+                {
+                    name: "Ukemi",
+                    code:
+                        "CMN_UKM_01_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
+                },
+                {
+                    name: "Ukemi 2",
+                    code:
+                        "CMN_UKM_11_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
+                },
+                { name: "Stun", code: "CMN_SWN_01_10000707" },
+                { name: "Frozen", code: "CMN_FRZ_01_10000707" },
+                { name: "Take Damage", code: "CMN_KNB_01_10000707" },
+                { name: "Die", code: "CMN_DIE_02_10000707" },
+                {
+                    name: "Transform",
+                    code: "CMN_CTD_01_10000707>CMN_CTD_02_10000707",
+                },
+            ],
+        },
+        {
             name: "Gala Laxi",
             icon: "advIcons/100032_04_r05.png",
             animations: [

@@ -3,20 +3,12 @@
  */
 const adv = [
     {
-        id: "110383_01",
-        name: "Finni",
-        title: "Emotional Android",
+        id: "100007_07",
+        name: "Gala Notte",
+        title: "Eternal Partner",
         rarity: "5",
-        element: "Water",
-        weapon: "Axe",
-    },
-    {
-        id: "110384_01",
-        name: "Eirene",
-        title: "Rational Android",
-        rarity: "5",
-        element: "Light",
-        weapon: "Manacaster",
+        element: "Wind",
+        weapon: "Dagger",
     },
     {
         id: "110341_01",
@@ -155,6 +147,14 @@ const adv = [
         weapon: "Axe",
     },
     {
+        id: "110384_01",
+        name: "Eirene",
+        title: "Rational Android",
+        rarity: "5",
+        element: "Light",
+        weapon: "Manacaster",
+    },
+    {
         id: "110363_01",
         name: "Eugene",
         title: "Sullen Youth",
@@ -177,6 +177,14 @@ const adv = [
         rarity: "5",
         element: "Flame",
         weapon: "Manacaster",
+    },
+    {
+        id: "110383_01",
+        name: "Finni",
+        title: "Emotional Android",
+        rarity: "5",
+        element: "Water",
+        weapon: "Axe",
     },
     {
         id: "110328_01",

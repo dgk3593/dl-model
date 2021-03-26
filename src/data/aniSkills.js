@@ -334,6 +334,16 @@ const skills = {
             code: "DAG_SKL_01_01_10000501",
         },
         {
+            icon: "advIcons/100007_07_r05.png",
+            name: "Faerie Punishment",
+            code: "DAG_SKL_01_01_10000707>DAG_SKL_01_02_10000707",
+        },
+        {
+            icon: "advIcons/100007_07_r05.png",
+            name: "Faerie Illusion",
+            code: "DAG_SKL_02_01_10000707",
+        },
+        {
             icon: "advIcons/100032_04_r05.png",
             name: "Code 14: Conviction",
             code: "DAG_SKL_01_01_10003204",
