@@ -28,8 +28,17 @@ const str2xyz = str => {
  * @param {string} str
  * @return {ColorCode | "transparent"}
  */
-// @ts-ignore
-const str2bg = str => (str === "transparent" ? str : `#${str}`);
+const str2bg = str => {
+    switch (str) {
+        case "transparent":
+            return str;
+        case "camera":
+            return "#cccccc";
+        default:
+            // @ts-ignore
+            return `#${str}`;
+    }
+};
 
 /**
  * convert a string to the specified type

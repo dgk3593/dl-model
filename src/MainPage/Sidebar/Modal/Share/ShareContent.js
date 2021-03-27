@@ -98,6 +98,7 @@ function ShareContent({ method }) {
                 switch (keyCode) {
                     case "bg":
                         if (transparentBG) return "bg=transparent";
+                        if (value === "camera") return "";
 
                         return value !== defaultValue
                             ? `${keyCode}=${value.replace("#", "")}`

@@ -21,10 +21,12 @@ const getBrightness = ({ r, g, b }) => (r * 299 + g * 587 + b * 114) / 1000;
 
 /**
  * get the suitable text color for a given background color
- * @param {ColorCode} color
+ * @param {ColorCode | 'camera'} background
  */
-export const getTextColor = color => {
-    const rgb = hexToRgb(color);
+export const getTextColor = background => {
+    if (background === "camera") return "#ffffff";
+
+    const rgb = hexToRgb(background);
     return getBrightness(rgb) > 128 ? "#000000" : "#ffffff";
 };
 

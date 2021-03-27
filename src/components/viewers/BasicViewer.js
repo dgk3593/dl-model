@@ -24,6 +24,7 @@ import {
     logUpdate,
 } from "helpers/viewerHelpers";
 import fscreen from "fscreen";
+
 import { fbxSource } from "App";
 
 /**
@@ -70,6 +71,7 @@ class BasicViewer extends PureComponent {
     }
 
     componentWillUnmount() {
+        this.cameraStream?.getVideoTracks()[0].stop();
         this.removeFullScreenListener?.();
         cancelAnimationFrame(this.frameId);
         dispose3dObject(this.scene);
@@ -151,7 +153,7 @@ class BasicViewer extends PureComponent {
 
         // Scene
         this.scene = new THREE.Scene();
-        this.bgColor = this.props.bgColor;
+        this.background = this.props.background;
 
         // Floor for auto rotate
         this.floor = createInvisibleFloor();
@@ -389,8 +391,8 @@ class BasicViewer extends PureComponent {
         this.updatePixelRatio(prev.pixelRatio, current.pixelRatio);
 
         // Update background color
-        if (prev.bgColor !== current.bgColor) {
-            this.bgColor = current.bgColor;
+        if (prev.background !== current.background) {
+            this.background = current.background;
         }
 
         this.AA = current.antiAliasing;
@@ -420,6 +422,8 @@ class BasicViewer extends PureComponent {
         this.finalRenderer.setSize(width, height);
         this.camera.aspect = width / height;
         this.camera.updateProjectionMatrix();
+
+        this.props.background === "camera" && this.setVideoBackgroundSize();
     };
 
     /**
@@ -661,12 +665,79 @@ class BasicViewer extends PureComponent {
     };
 
     /**
-     * @param {ColorCode | 'transparent'} color
+     * @param {ColorCode | 'transparent' | 'camera'} bg
      */
-    set bgColor(color) {
-        this.scene.background =
-            color !== "transparent" ? new THREE.Color(color) : null;
+    set background(bg) {
+        switch (bg) {
+            case "transparent":
+                this.scene.background = null;
+                return;
+            case "camera":
+                this.useCameraAsBackground();
+                return;
+            default:
+                this.cameraStream?.getVideoTracks()[0].stop();
+                this.scene.background = new THREE.Color(bg);
+        }
     }
+
+    setVideoBackgroundSize = () => {
+        if (!this.cameraStream) return;
+
+        const { width: screenWidth, height: screenHeight } = this.viewport;
+        const screenAspectRatio = screenWidth / screenHeight;
+
+        const {
+            width: camWidth,
+            aspectRatio: camAspectRatio,
+        } = this.cameraStream.getVideoTracks()[0].getSettings();
+
+        const videoWidth =
+            camAspectRatio > screenAspectRatio ? screenWidth : camWidth;
+        const videoAspectRatio =
+            camAspectRatio > screenAspectRatio
+                ? screenAspectRatio
+                : camAspectRatio;
+        const videoHeight = videoWidth / videoAspectRatio;
+
+        this.video.width = videoWidth;
+        this.video.height = videoHeight;
+    };
+
+    /**
+     * use hardware camera as background, rear facing is prioritized
+     */
+    useCameraAsBackground = async () => {
+        if (!navigator.mediaDevices?.getUserMedia) return;
+
+        const rearCameraStream = await navigator.mediaDevices?.getUserMedia({
+            audio: false,
+            video: { facingMode: "environment" },
+        });
+
+        this.cameraStream =
+            rearCameraStream ||
+            (await navigator.mediaDevices?.getUserMedia({
+                audio: false,
+                video: { facingMode: "user" },
+            }));
+
+        if (!this.cameraStream) return;
+
+        this.video = document.createElement("video");
+
+        Object.assign(this.video, {
+            srcObject: this.cameraStream,
+            autoplay: true,
+            playsinline: true,
+        });
+
+        const videoTexture = new THREE.VideoTexture(this.video);
+        videoTexture.minFilter = THREE.LinearFilter;
+        this.scene.background = videoTexture;
+
+        // this.setVideoBackgroundSize();
+    };
 
     /**
      * set display canvas

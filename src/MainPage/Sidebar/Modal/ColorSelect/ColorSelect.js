@@ -67,6 +67,11 @@ function ColorSelect({ close, mode, handleSelect, docked, moveToDock }) {
         !docked && close();
     };
 
+    const useCamera = () => {
+        updateSettings("scene", { background: "camera" });
+        close();
+    };
+
     const commonBtn = Object.entries(commonColors).map(([name, code]) => (
         <ColorButton onClick={setColor} value={code} color={code} key={name}>
             {name}
@@ -86,7 +91,10 @@ function ColorSelect({ close, mode, handleSelect, docked, moveToDock }) {
             </DialogTop>
             <DialogContent dividers className="ColorSelect">
                 <div className="ColorSelect-btn">
-                    <ColorButton color={color} onClick={applyColor}>
+                    <ColorButton
+                        color={color === "camera" ? "#000000" : color}
+                        onClick={applyColor}
+                    >
                         Apply
                     </ColorButton>
                     <div className="ColorSelect-common">{commonBtn}</div>
@@ -97,6 +105,16 @@ function ColorSelect({ close, mode, handleSelect, docked, moveToDock }) {
                         onChangeComplete={handleChangeComplete}
                     />
                 </Suspense>
+                {mode === "background" && navigator.mediaDevices?.getUserMedia && (
+                    <>
+                        <div />
+                        <div style={{ padding: "1rem" }}>
+                            <ColorButton color="#000000" onClick={useCamera}>
+                                Use Camera (Experimental)
+                            </ColorButton>
+                        </div>
+                    </>
+                )}
             </DialogContent>
         </div>
     );

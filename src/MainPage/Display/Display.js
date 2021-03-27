@@ -31,7 +31,7 @@ function Display(props) {
     const settings = useContext(SettingsContext);
     const {
         model: { id: modelId },
-        scene: { rotateSpeed, background: bgColor, initCameraPosition },
+        scene: { rotateSpeed, background, initCameraPosition },
         app: { showAniControl, antiAliasing, pixelRatio, viewerType },
     } = settings;
 
@@ -70,7 +70,7 @@ function Display(props) {
             {showAniControl && (
                 <div
                     className="Display-AniControl"
-                    style={{ color: getTextColor(bgColor) }}
+                    style={{ color: getTextColor(background) }}
                 >
                     <Suspense fallback={null}>
                         <AniControl value={settings.animation.timeScale} />
@@ -92,7 +92,7 @@ function Display(props) {
                     ascii={settings.ascii}
                     antiAliasing={antiAliasing}
                     pixelRatio={pixelRatio}
-                    bgColor={bgColor}
+                    background={background}
                     viewport={viewport}
                     cameraPosition={cameraPosition}
                     controlsPosition={controlPosition}

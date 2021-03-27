@@ -211,7 +211,7 @@
  * @property {AppAsciiState} ascii - ASCII mode settings
  * @property {Boolean} antiAliasing - whether Anti Aliasing is enabled
  * @property {Number} pixelRatio - renderer pixel ratio
- * @property {ColorCode | "transparent"} bgColor - scene background color
+ * @property {ColorCode | "transparent" | "camera"} background - scene background color
  * @property {{width: number, height: number}} viewport - size of the viewport
  * @property {xyzCoordinate} cameraPosition - position of the camera
  * @property {xyzCoordinate} controlsPosition - position of the orbit control
