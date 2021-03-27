@@ -3570,6 +3570,44 @@ const dragonAni = {
                 "D21014502_103_01>D21014502_103_02>D21014502_103_03>D21014502_103_04>D21014502_103_05",
         },
     ],
+    d210146_01: [
+        { name: "Dragon's Roost", code: "DC_d210146_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210146_01_90_04" },
+        { name: "Idle", code: "D21014601_000_01" },
+        { name: "Run", code: "D21014601_002_01" },
+        { name: "Run Fast", code: "D21014601_003_01" },
+        { name: "Brake", code: "D21014601_004_01" },
+        { name: "Dash Forward", code: "D21014601_020_01" },
+        { name: "Transform", code: "D21014601_030_01" },
+        {
+            name: "Combo",
+            code: "D21014601_040_01>D21014601_041_01>D21014601_042_01",
+        },
+        {
+            name: "Tidal Jubilation",
+            code: "D21014601_060_01",
+        },
+    ],
+    d210153_01: [
+        { name: "Idle", code: "D21015301_000_01" },
+        { name: "Fly", code: "D21015301_002_01" },
+        { name: "Fly Fast", code: "D21015301_003_01" },
+        { name: "Brake", code: "D21015301_004_01" },
+        { name: "Dash Forward", code: "D21015301_020_01" },
+        { name: "Transform", code: "D21015301_030_01" },
+        {
+            name: "Combo",
+            code: "D21015301_040_01>D21015301_041_01>D21015301_042_01",
+        },
+        {
+            name: "Faerie Circlet",
+            code: "D21015301_060_01",
+        },
+        {
+            name: "Faerie Glory ",
+            code: "D21015301_061_01",
+        },
+    ],
 };
 
 export default dragonAni;

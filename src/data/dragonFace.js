@@ -137,5 +137,7 @@ const dragonFace = {
     d210144_01: { eye: 5, mouth: 5 },
     d210145_01: { eye: 5, mouth: 5 },
     d210145_02: { eye: 5, mouth: 5 },
+    d210146_01: { eye: 4, mouth: 0 },
+    d210153_01: { eye: 5, mouth: 5 },
 };
 export default dragonFace;

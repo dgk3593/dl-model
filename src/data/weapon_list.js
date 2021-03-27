@@ -3,6 +3,14 @@
  */
 const weapon_list = [
     {
+        id: "w397003_01",
+        iconName: "397003_01_59901.png",
+        name: "Gala Notte's Dagger",
+        weapon: "Dagger",
+        rarity: "5",
+        element: "None",
+    },
+    {
         id: "w301138_01",
         iconName: "301138_01_60101.png",
         name: "Nothung",

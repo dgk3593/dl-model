@@ -975,12 +975,6 @@ const skills = {
             code: "BOW_SKL_01_01_11035001&ts=0.5",
         },
         {
-            icon: "advIcons/110366_01_r05.png",
-            name: "Sanctus Arrow",
-            code:
-                "BOW_SKL_01_01_11036601>BOW_SKL_01_02_11036601>BOW_SKL_01_03_11036601",
-        },
-        {
             icon: "advIcons/110368_01_r05.png",
             name: "Faerie Magic",
             code: "BOW_SKL_01_01_11036801",
@@ -1000,6 +994,17 @@ const skills = {
             icon: "advIcons/110018_02_r05.png",
             name: "Operatic Shanty",
             code: "BOW_SKL_02_01_11001802",
+        },
+        {
+            icon: "advIcons/110366_01_r05.png",
+            name: "Sanctus Arrow",
+            code:
+                "BOW_SKL_01_01_11036601>BOW_SKL_01_02_11036601>BOW_SKL_01_03_11036601",
+        },
+        {
+            icon: "advIcons/110387_01_r05.png",
+            name: "Catastrophic Blast",
+            code: "BOW_SKL_02_01_11038701",
         },
     ],
     Wand: [
@@ -1156,6 +1161,17 @@ const skills = {
             icon: "advIcons/110375_01_r05.png",
             name: "Onmyoji Exorcism",
             code: "ROD_SKL_02_01_11037501",
+        },
+        {
+            icon: "advIcons/110386_01_r05.png",
+            name: "Adoring Blow",
+            code: "ROD_SKL_01_01_11038601",
+        },
+        {
+            icon: "advIcons/110386_01_r05.png",
+            name: "Blast of Emotion",
+            code:
+                "ROD_SKL_02_01_11038601>ROD_SKL_02_02_11038601>ROD_SKL_02_03_11038601",
         },
     ],
     Staff: [

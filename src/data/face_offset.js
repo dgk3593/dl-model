@@ -2,6 +2,10 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110386_01: [0.043, 0.05], // Myriam
+    c110387_01: [0.05, -0.08], // Humanoid Midgardsormr
+    c100031_03: [0.05, -0.08], // Alberius
+    c100007_07: [0.05, -0.08], // Gala Notte
     c110384_01: [0.05, -0.08], // Eirene
     c110383_01: [0.05, -0.08], // Finni
     c110382_01: [0.05, -0.08], // Faris

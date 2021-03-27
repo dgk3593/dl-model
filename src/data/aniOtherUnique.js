@@ -79,6 +79,12 @@ const otherUnique = {
             name: "Gala Notte",
             icon: "advIcons/100007_07_r05.png",
             animations: [
+                {
+                    name: "Join Room",
+                    code:
+                        "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>DAG_ONT_23_10000707",
+                },
+                { name: "Standby", code: "DAG_ONT_03_10000707" },
                 { name: "Fly Slow", code: "CMN_RUN_01_10000707" },
                 { name: "Fly Fast", code: "CMN_RUN_02_10000707" },
                 { name: "Idle", code: "CMN_INT_01_10000707" },

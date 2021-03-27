@@ -127,6 +127,11 @@ const modelMod = {
         { name: "Normal", code: "show mSpear" },
         { name: "No Weapon", code: "hide mSpear" },
     ],
+    // Poseidon
+    d210025_01: [
+        { name: "Normal", code: "show mWeapon" },
+        { name: "No Weapon", code: "hide mWeapon" },
+    ],
     // Void Poseidon
     d210101_01: [
         { name: "Normal", code: "show mWeapon" },
@@ -174,6 +179,11 @@ const modelMod = {
     ],
     // Marishiten
     d210077_01: [
+        { name: "Normal", code: "show mSword" },
+        { name: "No Weapon", code: "hide mSword" },
+    ],
+    // Gala Notte
+    d210153_01: [
         { name: "Normal", code: "show mSword" },
         { name: "No Weapon", code: "hide mSword" },
     ],
@@ -230,6 +240,24 @@ const modelMod = {
         {
             name: "Wings Broken",
             code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR, mCandy",
+        },
+    ],
+    r0130001: [
+        {
+            name: "Normal",
+            code: "hide mPartsA_BR, mPartsB_BR; show mPartsA, mPartsB",
+        },
+        {
+            name: "Broken Wings",
+            code: "hide mPartsA_BR, mPartsB; show mPartsA, mPartsB_BR",
+        },
+        {
+            name: "Broken Blue Soul",
+            code: "hide mPartsA, mPartsB_BR; show mPartsA_BR, mPartsB",
+        },
+        {
+            name: "Broken",
+            code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR",
         },
     ],
 };
