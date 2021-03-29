@@ -5,7 +5,7 @@ const weapon_list = [
     {
         id: "w397003_01",
         iconName: "397003_01_59901.png",
-        name: "Gala Notte's Dagger",
+        name: "Faerie's Wish",
         weapon: "Dagger",
         rarity: "5",
         element: "None",

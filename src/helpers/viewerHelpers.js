@@ -399,14 +399,17 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
         opacity: { type: "float", value: opacity },
     };
 
-    return new THREE.ShaderMaterial({
+    const outlineMaterial = new THREE.ShaderMaterial({
         skinning: true,
         side: THREE.BackSide,
         transparent: true,
-        uniforms,
+        depthFunc: THREE.LessDepth,
         fragmentShader: outlineFragShader,
         vertexShader: outlineVertShader,
+        uniforms,
     });
+
+    return outlineMaterial;
 };
 
 /**
