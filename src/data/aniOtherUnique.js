@@ -79,6 +79,8 @@ const otherUnique = {
             name: "Gala Notte",
             icon: "advIcons/100007_07_r05.png",
             animations: [
+                { name: "Bob", code: "CMN_MWM_03_11036101" },
+                { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
                     name: "Join Room",
                     code:
@@ -279,6 +281,8 @@ const otherUnique = {
             name: "Meene",
             icon: "advIcons/110368_01_r05.png",
             animations: [
+                { name: "Bob", code: "CMN_MWM_03_11036101" },
+                { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
                     name: "Join Room",
                     code:
