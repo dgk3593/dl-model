@@ -13,9 +13,9 @@ const adv = [
     {
         id: "100031_03",
         name: "Alberius",
-        title: "",
+        title: "Dragonblooded Hero",
         rarity: "5",
-        element: "Light",
+        element: "Shadow",
         weapon: "Sword",
     },
     {
