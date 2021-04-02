@@ -4,6 +4,11 @@
 const skills = {
     Sword: [
         {
+            icon: "advIcons/100031_03_r05.png",
+            name: "Circlet Dawn",
+            code: "SWD_SKL_01_01_10003103>SWD_SKL_01_02_10003103",
+        },
+        {
             icon: "advIcons/100001_08_r05.png",
             name: "Rising Circlet",
             code: "SWD_SKL_01_01_10000108",

@@ -2,13 +2,13 @@
  * @type { Array <ModelData> }
  */
 const dragons = [
-    // {
-    //     id: "210148_01",
-    //     name: "High Chthonius",
-    //     title: "Eternal Dreamer",
-    //     rarity: "5",
-    //     element: "Shadow",
-    // },
+    {
+        id: "210148_01",
+        name: "High Chthonius",
+        title: "Eternal Dreamer",
+        rarity: "5",
+        element: "Shadow",
+    },
     {
         id: "210146_01",
         name: "Mini Mercs",
