@@ -1,7 +1,6 @@
 const outlineVertShader = `
 uniform float size;
 
-#include <common>
 #include <skinning_pars_vertex>
 
 void main() {
@@ -11,7 +10,7 @@ void main() {
 	#include <skinnormal_vertex>
 	#include <defaultnormal_vertex>
 	
-    vec3 transformed = position + objectNormal * 0.0005 * size;
+    vec3 transformed = position + normal * 0.0005 * size;
         
 	#include <skinning_vertex>
 	#include <project_vertex>
