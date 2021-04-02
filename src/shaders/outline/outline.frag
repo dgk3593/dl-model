@@ -1,4 +1,7 @@
-#define OUTLINE
+precision highp float;
+
+#define SHADER_NAME OutlineMaterial
+
 uniform float opacity;
 uniform vec3 color;
 

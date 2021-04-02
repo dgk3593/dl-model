@@ -399,7 +399,7 @@ const createOutlineMaterial = ({ size, color, opacity }) => {
         opacity: { value: opacity },
     };
 
-    const outlineMaterial = new THREE.ShaderMaterial({
+    const outlineMaterial = new THREE.RawShaderMaterial({
         skinning: true,
         side: THREE.BackSide,
         transparent: true,
