@@ -15,8 +15,8 @@ import {
     matcapDir,
 } from "helpers/consts";
 
-import outlineFragShader from "shader/outlineFragShader";
-import outlineVertShader from "shader/outlineVertShader";
+import outlineFragShader from "shaders/outline/fragShader";
+import outlineVertShader from "shaders/outline/vertShader";
 
 /**
  * load a 3D model
@@ -394,9 +394,9 @@ export const createOutline = (object, params) => {
  */
 const createOutlineMaterial = ({ size, color, opacity }) => {
     const uniforms = {
-        size: { type: "float", value: size },
-        color: { tyle: "vec3", value: new THREE.Color(color) },
-        opacity: { type: "float", value: opacity },
+        size: { value: size },
+        color: { value: new THREE.Color(color) },
+        opacity: { value: opacity },
     };
 
     const outlineMaterial = new THREE.ShaderMaterial({
