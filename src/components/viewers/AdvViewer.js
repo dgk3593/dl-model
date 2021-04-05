@@ -122,7 +122,7 @@ export class AdvViewer extends AniViewer {
      */
     initAllWeapons = async () => {
         const materialType = this.matType;
-        SIDES.forEach(side => {
+        SIDES.forEach(async side => {
             const key = `weapon${side}`;
             const weapon = this.models[key];
             if (!weapon) return;
@@ -133,7 +133,7 @@ export class AdvViewer extends AniViewer {
             if (flipped) weapon.rotation.y += Math.PI;
 
             const outlineParams = this.props.outline;
-            this.outlines[key] = createOutline(weapon, outlineParams);
+            this.outlines[key] = await createOutline(weapon, outlineParams);
         });
     };
 
@@ -332,7 +332,7 @@ export class AdvViewer extends AniViewer {
             }
 
             const outlineParams = this.props.outline;
-            this.outlines[key] = createOutline(model, outlineParams);
+            this.outlines[key] = await createOutline(model, outlineParams);
 
             this.attachWeapon(model, side);
         });

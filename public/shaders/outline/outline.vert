@@ -56,8 +56,7 @@ void main() {
     skinned += boneMatW * skinVertex * skinWeight.w;
     transformed = ( bindMatrixInverse * skinned ).xyz;
         
-    vec4 mvPosition = vec4( transformed, 1.0 );
-
-    mvPosition = modelViewMatrix * mvPosition;
+    vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
+    
     gl_Position = projectionMatrix * mvPosition;
 }

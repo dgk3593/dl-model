@@ -350,7 +350,7 @@ class BasicViewer extends PureComponent {
         this.applyNewModelMat(model);
 
         const outlineParams = this.props.outline;
-        this.outlines.main = createOutline(model, outlineParams);
+        this.outlines.main = await createOutline(model, outlineParams);
 
         this.addToScene(model);
     };
