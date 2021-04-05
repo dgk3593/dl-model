@@ -15,9 +15,6 @@ import {
     matcapDir,
 } from "helpers/consts";
 
-import outlineFragShader from "shaders/outline/fragShader";
-import outlineVertShader from "shaders/outline/vertShader";
-
 /**
  * load a 3D model
  * @param {string} url
@@ -358,7 +355,7 @@ export const changeMaterial = (
  * @param {THREE.Group} object
  * @param {OutlineParams} params
  */
-export const createOutline = (object, params) => {
+export const createOutline = async (object, params) => {
     if (!object) return;
 
     const outlines = [];
@@ -368,14 +365,14 @@ export const createOutline = (object, params) => {
      */
     const skipList = ["Eff", "Extension"];
     const meshes = getMeshes(object);
-    meshes.forEach(mesh => {
+    meshes.forEach(async mesh => {
         const { name } = mesh;
         if (skipList.some(word => name.includes(word))) return;
 
         const outline = mesh.clone();
         outlines.push(outline);
 
-        const newMaterial = createOutlineMaterial(params);
+        const newMaterial = await createOutlineMaterial(params);
         replaceMaterial(outline, newMaterial);
         outline.visible = params.enable;
         outline.name = "outline";
@@ -389,23 +386,58 @@ export const createOutline = (object, params) => {
 };
 
 /**
+ * @param {string} url
+ * @return {Promise<string>}
+ */
+const loadRawText = async url =>
+    new Promise(resolve => {
+        fetch(url)
+            .then(response => response.text())
+            .then(resolve);
+    });
+
+/**
+ * @param {string} dir - shader directory
+ * @param {string} name - shader name
+ * @return {Promise<[ vertexShader: string, fragmentShader: string ]>}
+ */
+const loadShaderFiles = async (dir, name) => {
+    const filePaths = [`${dir}/${name}.vert`, `${dir}/${name}.frag`];
+
+    // @ts-ignore
+    return Promise.all(filePaths.map(loadRawText));
+};
+
+/**
+ * @param {string} name - name of the shader
+ * @return {Promise<[ vertexShader: string, fragmentShader: string ]>}
+ */
+const loadShader = async name => {
+    const shaderDir = `${process.env.PUBLIC_URL}/shaders/${name}`;
+
+    return loadShaderFiles(shaderDir, name);
+};
+
+/**
  * create outline material
  * @param {OutlineParams} params
  */
-const createOutlineMaterial = ({ size, color, opacity }) => {
+const createOutlineMaterial = async ({ size, color, opacity }) => {
     const uniforms = {
         size: { value: size },
         color: { value: new THREE.Color(color) },
         opacity: { value: opacity },
     };
 
+    const [vertShader, fragShader] = await loadShader("outline");
+
     const outlineMaterial = new THREE.RawShaderMaterial({
         skinning: true,
         side: THREE.BackSide,
         transparent: true,
         depthFunc: THREE.LessDepth,
-        fragmentShader: outlineFragShader,
-        vertexShader: outlineVertShader,
+        vertexShader: vertShader,
+        fragmentShader: fragShader,
         uniforms,
     });
 

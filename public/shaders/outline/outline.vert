@@ -60,4 +60,4 @@ void main() {
 
     mvPosition = modelViewMatrix * mvPosition;
     gl_Position = projectionMatrix * mvPosition;
-} 
+}
