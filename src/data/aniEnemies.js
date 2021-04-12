@@ -47,7 +47,6 @@ const enemyAni = {
     h0030401: [
         { name: "Idle", code: "H0030401_000_01" },
         { name: "Walk", code: "H0030401_002_01" },
-        { name: "Take Damage", code: "H0030401_010_01" },
         { name: "Roar", code: "H0030401_022_01" },
         {
             name: "Broken",
@@ -75,7 +74,11 @@ const enemyAni = {
         },
         {
             name: "Cataclysm Broken",
-            code: "H0030401_103_03>H0030401_103_04",
+            code: "H0030401_103_03",
+        },
+        {
+            name: "Cataclysm Exploded",
+            code: "H0030401_103_04",
         },
         {
             name: "Throw",
