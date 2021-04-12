@@ -82,7 +82,8 @@ export const isDragon = modelId =>
 export const getViewerType = modelId => {
     if (isDragon(modelId)) return "dragon";
 
-    if (modelId.startsWith("h")) return "ani";
+    if (modelId.startsWith("h") || incompatibleModels.has(modelId))
+        return "ani";
 
     if (isCharaWithAni(modelId)) return "adv";
 

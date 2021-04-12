@@ -44,6 +44,53 @@ const enemyAni = {
         { name: "Idle 2", code: "H0090501_014_01" },
         { name: "Spin", code: "H0090501_100_01" },
     ],
+    h0030401: [
+        { name: "Idle", code: "H0030401_000_01" },
+        { name: "Walk", code: "H0030401_002_01" },
+        { name: "Take Damage", code: "H0030401_010_01" },
+        { name: "Roar", code: "H0030401_022_01" },
+        {
+            name: "Broken",
+            code: "H0030401_081_01>H0030401_081_02",
+        },
+        {
+            name: "Recover from Broken",
+            code: "H0030401_081_03",
+        },
+        {
+            name: "Left Swipe",
+            code: "H0030401_100_01>H0030401_100_02>H0030401_100_03",
+        },
+        {
+            name: "Right Swipe",
+            code: "H0030401_101_01>H0030401_101_02>H0030401_101_03",
+        },
+        {
+            name: "Charge",
+            code: "H0030401_102_01>H0030401_102_02>H0030401_102_03",
+        },
+        {
+            name: "Cataclysm",
+            code: "H0030401_103_01>H0030401_103_02",
+        },
+        {
+            name: "Cataclysm Broken",
+            code: "H0030401_103_03>H0030401_103_04",
+        },
+        {
+            name: "Throw",
+            code: "H0030401_104_01",
+        },
+        {
+            name: "Put up Shield",
+            code:
+                "H0030401_105_01>H0030401_105_02>H0030401_105_03>H0030401_105_04>H0030401_105_05",
+        },
+        {
+            name: "Extinction",
+            code: "H0030401_106_01>H0030401_106_02>H0030401_106_03",
+        },
+    ],
 };
 
 export default enemyAni;
