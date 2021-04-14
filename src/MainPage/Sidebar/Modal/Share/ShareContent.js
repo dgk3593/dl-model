@@ -51,19 +51,17 @@ function ShareContent({ method }) {
         setCamPos(newCamPos);
     };
 
-    const copyText = () => {
+    const copyText = async () => {
         /**
          * @type {HTMLInputElement}
          */
         // @ts-ignore
         const shareTextField = document.getElementById("shareTextField");
-        shareTextField.select();
-        shareTextField.setSelectionRange(0, 99999); // For mobile
-        document.execCommand("copy");
+        await navigator.clipboard.writeText(shareTextField.value);
         setLabel("Copied");
         setTimeout(() => {
             setLabel("Code");
-        }, 2000);
+        }, 1000);
     };
 
     // const shareLink = getShareLink();
