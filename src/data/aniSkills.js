@@ -4,11 +4,6 @@
 const skills = {
     Sword: [
         {
-            icon: "advIcons/100031_03_r05.png",
-            name: "Circlet Dawn",
-            code: "SWD_SKL_01_01_10003103>SWD_SKL_01_02_10003103",
-        },
-        {
             icon: "advIcons/100001_08_r05.png",
             name: "Rising Circlet",
             code: "SWD_SKL_01_01_10000108",
@@ -69,6 +64,11 @@ const skills = {
             code: "SWD_SKL_04_01_10001802",
         },
         {
+            icon: "advIcons/100031_03_r05.png",
+            name: "Circlet Dawn",
+            code: "SWD_SKL_01_01_10003103>SWD_SKL_01_02_10003103",
+        },
+        {
             icon: "advIcons/110022_01_r05.png",
             name: "Majestic Tide",
             code: "SWD_SKL_01_01_11002201",
@@ -93,11 +93,6 @@ const skills = {
             icon: "advIcons/110266_01_r05.png",
             name: "Crystalline Blades",
             code: "SWD_SKL_01_01_11026601",
-        },
-        {
-            icon: "advIcons/110274_01_r05.png",
-            name: "Lightning Burst",
-            code: "SWD_SKL_01_01_11027401",
         },
         {
             icon: "advIcons/110291_01_r05.png",
@@ -133,6 +128,11 @@ const skills = {
             icon: "advIcons/110363_01_r05.png",
             name: "Signature Tactics",
             code: "SWD_SKL_01_01_11036301",
+        },
+        {
+            icon: "advIcons/110274_01_r05.png",
+            name: "Lightning Burst",
+            code: "SWD_SKL_01_01_11027401",
         },
         {
             icon: "advIcons/110371_01_r05.png",
@@ -518,6 +518,22 @@ const skills = {
             code:
                 "DAG_SKL_01_01_11034401>DAG_SKL_01_02_11034401>DAG_SKL_01_03_11034401",
         },
+        {
+            icon: "advIcons/110385_01_r05.png",
+            name: "Raging Ocean",
+            code: "DAG_SKL_01_01_11038501",
+        },
+        {
+            icon: "advIcons/110385_01_r05.png",
+            name: "Raging Ocean",
+            subtitle: "Team Strength Amp",
+            code: "DAG_SKL_03_01_11038501",
+        },
+        {
+            icon: "advIcons/110385_01_r05.png",
+            name: "Aquatic Ruin",
+            code: "DAG_SKL_01_01_11038501",
+        },
     ],
     Axe: [
         {
@@ -529,6 +545,17 @@ const skills = {
             icon: "advIcons/100002_13_r05.png",
             name: "Celestial Ascent",
             code: "AXE_SKL_01_01_10000213&ts=0.75",
+        },
+        {
+            icon: "advIcons/100003_10_r05.png",
+            name: "Swing for the Fences",
+            code: "AXE_SKL_01_01_10000310",
+        },
+        {
+            icon: "advIcons/100003_10_r05.png",
+            name: "Swing for the Fences",
+            subtitle: "Grand Slam",
+            code: "AXE_SKL_02_01_10000310",
         },
         {
             icon: "advIcons/100006_11_r05.png",
@@ -1323,14 +1350,14 @@ const skills = {
         },
         {
             icon: "advIcons/110350_02_r05.png",
-            name: "Ace Operator",
-            code: "GUN_SKL_02_01_11035002",
-        },
-        {
-            icon: "advIcons/110350_02_r05.png",
             name: "Hound Shot",
             subtitle: "Poison",
             code: "GUN_SKL_03_01_11035002",
+        },
+        {
+            icon: "advIcons/110350_02_r05.png",
+            name: "Ace Operator",
+            code: "GUN_SKL_02_01_11035002",
         },
         {
             icon: "advIcons/110376_01_r05.png",
@@ -1341,7 +1368,7 @@ const skills = {
         {
             icon: "advIcons/110376_01_r05.png",
             name: "Kumasaka Flash",
-            subtitle: "Interrupted",
+            subtitle: "Counter",
             code:
                 "GUN_SKL_01_01_11037601>GUN_SKL_01_02_11037601>GUN_SKL_01_03_11037601",
         },

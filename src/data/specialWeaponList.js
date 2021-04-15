@@ -2,6 +2,16 @@
  * @type { Array <ModelData> }
  */
 const specialWeaponList = [
+    {
+        id: "w399052_01",
+        name: "Humanoid Mercury's Dagger",
+        iconName: "w399052_01.png",
+    },
+    {
+        id: "w399050_01",
+        name: "Child Ranzal's Bat",
+        iconName: "w399050_01.png",
+    },
     { id: "w399038_01", name: "Eirene's Blaster", iconName: "w399038_01.png" },
     { id: "w399039_01", name: "Eirene's Drone", iconName: "w399039_01.png" },
     { id: "wOnigiri", name: "Lunch Onigiri", iconName: "wOnigiri.png" },
@@ -12,12 +22,16 @@ const specialWeaponList = [
     },
     { id: "wOnigiri2", name: "Victory Onigiri", iconName: "wOnigiri.png" },
     {
-        id: "wOnigiri2",
+        id: "wOnigiri2Bitten",
         name: "Bitten Victory Onigiri",
         iconName: "wOnigiriBitten.png",
     },
     { id: "wTenmusu", name: "Tenmusu", iconName: "wTenmusu.png" },
-    { id: "wTenmusu", name: "Bitten Tenmusu", iconName: "wTenmusuBitten.png" },
+    {
+        id: "wTenmusuBitten",
+        name: "Bitten Tenmusu",
+        iconName: "wTenmusuBitten.png",
+    },
     { id: "w399026_01", name: "Joker's Gun", iconName: "w399026_01.png" },
     { id: "w399027_01", name: "Mona's Slingshot", iconName: "w399027_01.png" },
     {
