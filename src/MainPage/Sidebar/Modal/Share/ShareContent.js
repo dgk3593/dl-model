@@ -52,12 +52,8 @@ function ShareContent({ method }) {
     };
 
     const copyText = async () => {
-        /**
-         * @type {HTMLInputElement}
-         */
-        // @ts-ignore
-        const shareTextField = document.getElementById("shareTextField");
-        await navigator.clipboard.writeText(shareTextField.value);
+        const contentToCopy = method === 2 ? embedCode : shareLink;
+        await navigator.clipboard.writeText(contentToCopy);
         setLabel("Copied");
         setTimeout(() => {
             setLabel("Code");
