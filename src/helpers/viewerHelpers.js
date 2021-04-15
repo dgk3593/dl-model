@@ -359,21 +359,20 @@ export const createOutline = async (object, params) => {
     if (!object) return;
 
     const outlines = [];
+    const outlineMaterial = await createOutlineMaterial(params);
 
     /**
      * if a mesh's name includes any word in this list, skip
      */
     const skipList = ["Eff", "Extension"];
     const meshes = getMeshes(object);
-    meshes.forEach(async mesh => {
+    meshes.forEach(mesh => {
         const { name } = mesh;
         if (skipList.some(word => name.includes(word))) return;
 
         const outline = mesh.clone();
-        outlines.push(outline);
 
-        const newMaterial = await createOutlineMaterial(params);
-        replaceMaterial(outline, newMaterial);
+        replaceMaterial(outline, outlineMaterial);
         outline.visible = params.enable;
         outline.name = "outline";
 
@@ -381,6 +380,7 @@ export const createOutline = async (object, params) => {
             outline.bind(mesh.skeleton, mesh.bindMatrix);
         }
         mesh.add(outline);
+        outlines.push(outline);
     });
     return outlines;
 };
@@ -429,15 +429,15 @@ const createOutlineMaterial = async ({ size, color, opacity }) => {
         opacity: { value: opacity },
     };
 
-    const [vertShader, fragShader] = await loadShader("outline");
+    const [vertexShader, fragmentShader] = await loadShader("outline");
 
-    const outlineMaterial = new THREE.RawShaderMaterial({
+    const outlineMaterial = new THREE.ShaderMaterial({
         skinning: true,
         side: THREE.BackSide,
         transparent: true,
         depthFunc: THREE.LessDepth,
-        vertexShader: vertShader,
-        fragmentShader: fragShader,
+        vertexShader,
+        fragmentShader,
         uniforms,
     });
 
