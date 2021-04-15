@@ -553,8 +553,7 @@ const skills = {
         },
         {
             icon: "advIcons/100003_10_r05.png",
-            name: "Swing for the Fences",
-            subtitle: "Grand Slam",
+            name: "Grand Slam",
             code: "AXE_SKL_02_01_10000310",
         },
         {
