@@ -224,7 +224,16 @@ export class AniViewer extends BasicViewer {
                 const superBuffer = new Blob(this.chunks, {
                     type: `video/${format}`,
                 });
-                downloadBlob(superBuffer, `animation.${format}`);
+
+                const date = new Date();
+                const dateStr = date.toDateString().replace(/ /g, "_");
+                const timeStr = date
+                    .toLocaleTimeString()
+                    .replace(/:/g, "-")
+                    .replace(/ /g, "");
+                const fileName = `ani_${dateStr}_${timeStr}.${format}`;
+
+                downloadBlob(superBuffer, fileName);
             };
         }
         this.disableInput("Recording");
