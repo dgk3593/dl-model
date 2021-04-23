@@ -41,13 +41,14 @@ function Display(props) {
         (key, value) => dispatch({ type: "toggle", key, value }),
         [dispatch]
     );
-    const toggleCapture = useCallback(
+    const onCaptureFinish = useCallback(
         () => toggleSetting("capture", "enable"),
         [toggleSetting]
     );
-    const toggleExport = useCallback(() => toggleSetting("export", "enable"), [
-        toggleSetting,
-    ]);
+    const onExportFinish = useCallback(
+        () => toggleSetting("export", "enable"),
+        [toggleSetting]
+    );
 
     const modelType = modelId[0];
 
@@ -81,9 +82,9 @@ function Display(props) {
                 <ModelViewer
                     setLoadingMsg={props.setLoadingMsg}
                     capture={settings.capture}
-                    toggleCapture={toggleCapture}
+                    onCaptureFinish={onCaptureFinish}
                     export={settings.export}
-                    toggleExport={toggleExport}
+                    onExportFinish={onExportFinish}
                     model={settings.model}
                     material={settings.material}
                     outline={settings.outline}

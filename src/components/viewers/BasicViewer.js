@@ -659,7 +659,7 @@ class BasicViewer extends PureComponent {
             /* webpackChunkName: "exporter" */ "helpers/exportModel"
         );
         await exportModel(this.models.main, current);
-        this.props.toggleExport();
+        this.props.onExportFinish();
 
         this.enableInput();
     };

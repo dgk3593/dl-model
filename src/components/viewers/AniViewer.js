@@ -175,7 +175,7 @@ export class AniViewer extends BasicViewer {
             this.props.capture.enable && this._aniIdx === nAni - 1;
         if (finishedRecording) {
             this.mediaRecorder.stop();
-            this.props.toggleCapture();
+            this.props.onCaptureFinish();
         }
         const newIdx = (this._aniIdx + 1) % nAni;
         this.aniIdx = newIdx;

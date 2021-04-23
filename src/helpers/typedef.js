@@ -200,9 +200,9 @@
  * @typedef {Object} ViewerProps
  * @property {function} setLoadingMsg - function to allow the viewer to set loading message
  * @property {AppCaptureState} capture - capture settings
- * @property {function} toggleCapture - called after recording is finished
+ * @property {function} onCaptureFinish - called after recording is finished
  * @property {AppExportState} export - export settings
- * @property {function} toggleExport - called after exporting is finished
+ * @property {function} onExportFinish - called after exporting is finished
  * @property {AppModelState} model - model related data
  * @property {AppMatState} material - data related to model's material
  * @property {AppOutlineState} outline - model's outline settings
