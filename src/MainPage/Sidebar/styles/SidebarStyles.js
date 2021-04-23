@@ -8,6 +8,8 @@ const useStyles = makeStyles(() => ({
         overflowY: "scroll",
     },
     drawerPaper: {
+        scrollbarWidth: "thin",
+        scrollbarColor: "rgba(255, 255, 255, 0.8) rgba(0, 0, 0, 0.3)",
         alignItems: "center",
         backgroundColor: DRAWER_BGCOLOR,
         backgroundImage: `url(${bg})`,
@@ -17,6 +19,14 @@ const useStyles = makeStyles(() => ({
         width: DRAWER_WIDTH,
         "& button": {
             marginBottom: "0.2rem",
+        },
+        "&::-webkit-scrollbar": {
+            width: "8px",
+            backgroundColor: "rgba(0, 0, 0, 0.3)",
+        },
+        "&::-webkit-scrollbar-thumb": {
+            width: "8px",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
         },
     },
 }));
