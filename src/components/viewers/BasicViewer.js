@@ -6,7 +6,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { CAM_PARAMS } from "helpers/consts";
 import { isBlade, filterObject, getDefaultTexture } from "helpers/helpers";
 import {
-    createInvisibleFloor,
     createLight,
     analyzeWeaponCode,
     getModelPath,
@@ -155,10 +154,6 @@ class BasicViewer extends PureComponent {
         this.scene = new THREE.Scene();
         this.background = this.props.background;
 
-        // Floor for auto rotate
-        this.floor = createInvisibleFloor();
-        this.scene.add(this.floor);
-
         // Camera
         this.camera = new THREE.PerspectiveCamera(
             CAM_PARAMS.angle,
@@ -295,7 +290,7 @@ class BasicViewer extends PureComponent {
      * add model to scene
      * @param {THREE.Object3D} model
      */
-    addToScene = model => this.floor.add(model);
+    addToScene = model => this.scene.add(model);
 
     /**
      * change main model's texture if specified
@@ -431,7 +426,7 @@ class BasicViewer extends PureComponent {
      */
     disposeMainModel = () => {
         const mainModel = this.models.main;
-        this.floor.remove(mainModel);
+        this.scene.remove(mainModel);
         dispose3dObject(mainModel);
     };
 
@@ -760,12 +755,12 @@ class BasicViewer extends PureComponent {
      * rotate the floor
      * @param {number} dt - time difference
      */
-    rotateFloor = dt => {
+    rotateModel = dt => {
         const { rotateSpeed } = this.props;
         if (!rotateSpeed) return;
 
         const angle = (rotateSpeed * dt * Math.PI) / 2;
-        this.floor.rotateY(angle);
+        this.models.main.rotateY(angle);
     };
 
     /**
@@ -783,7 +778,7 @@ class BasicViewer extends PureComponent {
         const dt = this.clock.getDelta();
         if (document.visibilityState === "hidden") return;
 
-        this.rotateFloor(dt);
+        this.rotateModel(dt);
 
         this.updateScene(dt);
 

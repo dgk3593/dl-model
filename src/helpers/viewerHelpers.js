@@ -89,19 +89,6 @@ export const loadAnimations = aniList =>
     Promise.all(aniList.map(loadSingleAni));
 
 /**
- * create an invisible floor for auto rotate feature
- */
-export const createInvisibleFloor = () => {
-    const floorGeometry = new THREE.PlaneBufferGeometry(0.1, 0.1);
-    floorGeometry.rotateX(Math.PI / 2);
-
-    const floorMaterial = new THREE.MeshBasicMaterial();
-    floorMaterial.visible = false;
-
-    return new THREE.Mesh(floorGeometry, floorMaterial);
-};
-
-/**
  * get all meshes of a 3D object
  * @param {THREE.Group} object
  * @param {Boolean} getOutline - whether to include outline meshes
