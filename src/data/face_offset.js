@@ -2,6 +2,8 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110285_01: [0.05, -0.08], // Humanoid Mercury
+    c110388_01: [0.05, -0.08], // Humanoid Mercury
     c110385_01: [0.05, -0.08], // Humanoid Mercury
     c100003_10: [0.05, -0.08], // Child Ranzal
     c110386_01: [0.043, 0.05], // Myriam

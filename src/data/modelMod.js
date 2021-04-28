@@ -83,6 +83,10 @@ const modelMod = {
         },
         { name: "Buster", code: "show mPartsA_B; hide mPartsA_A" },
     ],
+    c110388_01: [
+        { name: "Clenched Fist", code: "show mPartsA_A; hide mPartsA_B" },
+        { name: "Claw Hand", code: "show mPartsA_B; hide mPartsA_A" },
+    ],
     // Gala Reborn Jeanne
     d210144_01: [
         { name: "No Flag", code: "hide mPartsA_B; show mPartsA_A" },
@@ -201,6 +205,16 @@ const modelMod = {
     d200008_01: [
         { name: "Normal", code: "show mbox_01" },
         { name: "No Box", code: "hide mbox_01" },
+    ],
+    d210147_01: [
+        {
+            name: "Large Wings",
+            code: "show mPartsA_B; hide mPartsA_A, mPartsB_A, mPartsB_B",
+        },
+        {
+            name: "Small Wings",
+            code: "show mPartsA_A; hide mPartsA_B, mPartsB_A, mPartsB_B",
+        },
     ],
     h0080501: [
         {

@@ -3,18 +3,11 @@
  */
 const dragons = [
     {
-        id: "210148_01",
-        name: "High Chthonius",
-        title: "Eternal Dreamer",
+        id: "210147_01",
+        name: "Gala Reborn Agni",
+        title: "Greedy Encroaching Flame",
         rarity: "5",
-        element: "Shadow",
-    },
-    {
-        id: "210146_01",
-        name: "Mini Mercs",
-        title: "Mama To All",
-        rarity: "5",
-        element: "Water",
+        element: "Flame",
     },
     {
         id: "210117_01",
@@ -276,6 +269,13 @@ const dragons = [
         element: "Flame",
     },
     {
+        id: "210148_01",
+        name: "High Chthonius",
+        title: "Eternal Dreamer",
+        rarity: "5",
+        element: "Shadow",
+    },
+    {
         id: "210041_01",
         name: "High Jupiter",
         title: "Radiant Hedonist",
@@ -400,6 +400,13 @@ const dragons = [
         title: "First & Last",
         rarity: "5",
         element: "Flame",
+    },
+    {
+        id: "210146_01",
+        name: "Mini Mercs",
+        title: "Mama To All",
+        rarity: "5",
+        element: "Water",
     },
     {
         id: "210111_01",

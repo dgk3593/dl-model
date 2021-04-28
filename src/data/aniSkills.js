@@ -902,6 +902,21 @@ const skills = {
             name: "Clemens Punishment",
             code: "LAN_SKL_01_01_11038101",
         },
+        {
+            icon: "advIcons/110285_01_r05.png",
+            name: "S1",
+            code: "LAN_SKL_01_01_11028501",
+        },
+        {
+            icon: "advIcons/110285_01_r05.png",
+            name: "S2",
+            code: "LAN_SKL_02_01_11028501",
+        },
+        {
+            icon: "advIcons/110285_01_r05.png",
+            name: "S3",
+            code: "LAN_SKL_03_01_11028501",
+        },
     ],
     Bow: [
         {
@@ -1203,6 +1218,16 @@ const skills = {
             name: "Blast of Emotion",
             code:
                 "ROD_SKL_02_01_11038601>ROD_SKL_02_02_11038601>ROD_SKL_02_03_11038601",
+        },
+        {
+            icon: "advIcons/110388_01_r05.png",
+            name: "Crimson Order",
+            code: "ROD_SKL_01_01_11038801",
+        },
+        {
+            icon: "advIcons/110388_01_r05.png",
+            name: "Scarlet Gift",
+            code: "ROD_SKL_02_01_11038801",
         },
     ],
     Staff: [

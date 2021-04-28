@@ -3,20 +3,20 @@
  */
 const adv = [
     {
-        id: "110385_01",
-        name: "Humanoid Mercury",
-        title: "Teacher from the Tides",
+        id: "110388_01",
+        name: "Vania",
+        title: "Vampire Princess",
         rarity: "5",
-        element: "Water",
-        weapon: "Dagger",
+        element: "Shadow",
+        weapon: "Wand",
     },
     {
-        id: "100003_10",
-        name: "Child Ranzal",
-        title: "Childlike Mercenary",
+        id: "110285_01",
+        name: "Grimmir",
+        title: "",
         rarity: "5",
-        element: "Flame",
-        weapon: "Axe",
+        element: "Wind",
+        weapon: "Lance",
     },
     {
         id: "110341_01",
@@ -105,6 +105,14 @@ const adv = [
         rarity: "5",
         element: "Flame",
         weapon: "Bow",
+    },
+    {
+        id: "100003_10",
+        name: "Child Ranzal",
+        title: "Childlike Mercenary",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Axe",
     },
     {
         id: "110359_01",
@@ -425,6 +433,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Staff",
+    },
+    {
+        id: "110385_01",
+        name: "Humanoid Mercury",
+        title: "Teacher from the Tides",
+        rarity: "5",
+        element: "Water",
+        weapon: "Dagger",
     },
     {
         id: "110387_01",
