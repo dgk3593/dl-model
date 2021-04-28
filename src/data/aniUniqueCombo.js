@@ -174,7 +174,7 @@ const uniqueCombo = {
         },
         {
             icon: "advIcons/110285_01_r05.png",
-            name: "Grimmir",
+            name: "Grimnir",
             code:
                 "LAN_CMB_01_11028501>LAN_CMB_02_11028501>LAN_CMB_03_11028501>LAN_CMB_04_11028501>LAN_CMB_05_01_11028501>LAN_CMB_05_02_11028501>LAN_CMB_05_03_11028501",
         },

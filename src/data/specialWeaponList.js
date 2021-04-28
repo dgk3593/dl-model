@@ -5,7 +5,7 @@ const specialWeaponList = [
     {
         id: "w399051_01",
         iconName: "w399051_01.png",
-        name: "Grimmir's Lance",
+        name: "Grimnir's Lance",
         weapon: "Lance",
         rarity: "5",
         element: "Wind",
