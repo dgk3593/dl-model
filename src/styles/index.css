@@ -12,6 +12,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+}
+
 canvas {
     display: block;
     margin: 0;

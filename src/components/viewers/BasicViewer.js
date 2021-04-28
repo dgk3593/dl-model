@@ -290,7 +290,7 @@ class BasicViewer extends PureComponent {
      * add model to scene
      * @param {THREE.Object3D} model
      */
-    addToScene = model => this.scene.add(model);
+    addToScene = model => this.scene?.add(model);
 
     /**
      * change main model's texture if specified
@@ -426,7 +426,7 @@ class BasicViewer extends PureComponent {
      */
     disposeMainModel = () => {
         const mainModel = this.models.main;
-        this.scene.remove(mainModel);
+        this.scene?.remove(mainModel);
         dispose3dObject(mainModel);
     };
 
