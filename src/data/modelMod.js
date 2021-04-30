@@ -105,6 +105,11 @@ const modelMod = {
         { name: "Normal", code: "show mPartsA_A" },
         { name: "No Book", code: "hide mPartsA_A" },
     ],
+    // Fallen Gabriel
+    d210145_03: [
+        { name: "Normal", code: "show mPartsA_A" },
+        { name: "No Book", code: "hide mPartsA_A" },
+    ],
     // Ramiel
     d210132_01: [
         { name: "With Wings", code: "show mPartsA_B" },
@@ -255,6 +260,10 @@ const modelMod = {
             name: "Wings Broken",
             code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR, mCandy",
         },
+    ],
+    h0100301: [
+        { name: "Normal", code: "show mPartsA; hide mPartsA_BR" },
+        { name: "Broken Tome", code: "hide mPartsA; show mPartsA_BR" },
     ],
     r0130001: [
         {

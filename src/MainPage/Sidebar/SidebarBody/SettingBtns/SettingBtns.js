@@ -13,8 +13,6 @@ import ModelSelectBtns from "./ModelSelectBtns";
 import ModelModSelect from "./ModelModSelect";
 
 import { listStyle, typographyProps } from "./commonProps";
-import downloadURI from "helpers/downloadURI";
-import { getDateTimeString } from "helpers/helpers";
 
 import "./styles/SettingBtns.css";
 

@@ -3,7 +3,7 @@
  * @param {string} uri - data URI
  * @param {string} fileName
  */
-export default function downloadURI(uri, fileName) {
+export default function downloadURL(uri, fileName) {
     const a = document.createElement("a");
     a.style.display = "none";
     a.href = uri;

@@ -23,7 +23,7 @@ import {
     logUpdate,
 } from "helpers/viewerHelpers";
 
-import downloadURI from "helpers/downloadURI";
+import downloadURL from "helpers/downloadURL";
 import { getDateTimeString } from "helpers/helpers";
 import fscreen from "fscreen";
 
@@ -776,7 +776,7 @@ class BasicViewer extends PureComponent {
         const canvas = document.querySelector("canvas");
         const screenshot = canvas.toDataURL("image/png");
 
-        downloadURI(screenshot, `screenshot_${getDateTimeString()}.png`);
+        downloadURL(screenshot, `screenshot_${getDateTimeString()}.png`);
     };
 
     /**

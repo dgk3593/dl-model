@@ -3,14 +3,6 @@
  */
 const specialWeaponList = [
     {
-        id: "w399051_01",
-        iconName: "w399051_01.png",
-        name: "Grimnir's Lance",
-        weapon: "Lance",
-        rarity: "5",
-        element: "Wind",
-    },
-    {
         id: "w399052_01",
         name: "Humanoid Mercury's Dagger",
         iconName: "w399052_01.png",

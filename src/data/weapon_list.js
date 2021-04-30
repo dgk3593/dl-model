@@ -3,6 +3,14 @@
  */
 const weapon_list = [
     {
+        id: "w399051_01",
+        iconName: "399051_01_59901.png",
+        name: "Last Storm Lance",
+        weapon: "Lance",
+        rarity: "5",
+        element: "Wind",
+    },
+    {
         id: "w301138_01",
         iconName: "301138_01_60101.png",
         name: "Nothung",

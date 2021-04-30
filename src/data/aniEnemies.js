@@ -301,6 +301,39 @@ const enemyAni = {
             code: "H0070501_030_01",
         },
     ],
+    h0100301: [
+        { name: "Idle", code: "H0100301_000_01" },
+        { name: "Fly", code: "H0100301_002_01" },
+        { name: "Defeated", code: "H0100301_011_01" },
+        { name: "Buff", code: "H0100301_030_01" },
+        { name: "Knocked Back", code: "H0100301_070_01" },
+        {
+            name: "Knocked Back 2",
+            code: "H0100301_104_01>H0100301_104_02>H0100301_104_03",
+        },
+        {
+            name: "Broken",
+            code: "H0100301_081_01>H0100301_081_02",
+        },
+        { name: "Recover from Broken", code: "H0100301_081_03" },
+        {
+            name: "Attack 1",
+            code: "H0100301_100_01>H0100301_100_02>H0100301_100_03",
+        },
+        {
+            name: "Attack 2",
+            code: "H0100301_101_01>H0100301_101_02>H0100301_101_03",
+        },
+        {
+            name: "Attack 3",
+            code: "H0100301_102_01>H0100301_102_02>H0100301_102_03",
+        },
+        {
+            name: "Attack 4",
+            code: "H0100301_103_01",
+        },
+        { name: "Boss Intro", code: "H0100301_090_02>H0100301_090_01" },
+    ],
 };
 
 export default enemyAni;
