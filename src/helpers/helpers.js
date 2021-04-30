@@ -10,6 +10,18 @@ export const capitalize = ([first, ...rest]) =>
     `${first.toUpperCase()}${rest.join("")}`;
 
 /**
+ *  generate date time string
+ */
+export const getDateTimeString = () => {
+    const date = new Date();
+    const dateStr = date.toDateString().replace(/ /g, "_");
+    const timeStr = date
+        .toLocaleTimeString()
+        .replace(/:/g, "-")
+        .replace(/ /g, "");
+    return `${dateStr}_${timeStr}`;
+};
+/**
  * get the default texture file of a model from id
  * @param {string} id - model id
  */

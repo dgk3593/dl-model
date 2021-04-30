@@ -22,6 +22,9 @@ import {
     applyMod,
     logUpdate,
 } from "helpers/viewerHelpers";
+
+import downloadURI from "helpers/downloadURI";
+import { getDateTimeString } from "helpers/helpers";
 import fscreen from "fscreen";
 
 import { fbxSource } from "App";
@@ -769,6 +772,13 @@ class BasicViewer extends PureComponent {
      */
     updateScene = dt => void 0;
 
+    getScreenshot = () => {
+        const canvas = document.querySelector("canvas");
+        const screenshot = canvas.toDataURL("image/png");
+
+        downloadURI(screenshot, `screenshot_${getDateTimeString()}.png`);
+    };
+
     /**
      * render loop
      */
@@ -781,6 +791,19 @@ class BasicViewer extends PureComponent {
         this.rotateModel(dt);
 
         this.updateScene(dt);
+
+        this.finalRenderer.render(this.scene, this.camera);
+        if (window.getScreenshot) {
+            const tmp = this.scene.background;
+            this.scene.background = null;
+
+            this.finalRenderer.render(this.scene, this.camera);
+            this.getScreenshot();
+
+            this.scene.background = tmp;
+            window.getScreenshot = false;
+            return;
+        }
 
         this.finalRenderer.render(this.scene, this.camera);
     };

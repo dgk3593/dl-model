@@ -7,6 +7,8 @@ import {
     getFaceChangesQueue,
 } from "helpers/viewerHelpers";
 
+import { getDateTimeString } from "helpers/helpers";
+
 import downloadBlob from "helpers/downloadBlob";
 
 /**
@@ -225,13 +227,7 @@ export class AniViewer extends BasicViewer {
                     type: `video/${format}`,
                 });
 
-                const date = new Date();
-                const dateStr = date.toDateString().replace(/ /g, "_");
-                const timeStr = date
-                    .toLocaleTimeString()
-                    .replace(/:/g, "-")
-                    .replace(/ /g, "");
-                const fileName = `ani_${dateStr}_${timeStr}.${format}`;
+                const fileName = `ani_${getDateTimeString()}.${format}`;
 
                 downloadBlob(superBuffer, fileName);
             };

@@ -6,11 +6,15 @@ import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import Tooltip from "@material-ui/core/Tooltip";
+import CameraIcon from "@material-ui/icons/Camera";
 
 import ModelSelectBtns from "./ModelSelectBtns";
 import ModelModSelect from "./ModelModSelect";
 
 import { listStyle, typographyProps } from "./commonProps";
+import downloadURI from "helpers/downloadURI";
+import { getDateTimeString } from "helpers/helpers";
 
 import "./styles/SettingBtns.css";
 
@@ -33,6 +37,7 @@ function SettingBtns({ openModal }) {
         model,
         app: { showAniControl, antiAliasing, viewerType },
         outline: { enable: outlineEnabled },
+        ascii: { enable: asciiOn },
     } = settings;
 
     const handleBtnClick = e => {
@@ -66,6 +71,8 @@ function SettingBtns({ openModal }) {
         const { value } = event.currentTarget.dataset;
         updateSettings("app", { sidebarContent: value });
     };
+
+    const getScreenshot = () => (window.getScreenshot = true);
 
     const removeWeaponBtn = side => {
         const key = `weapon${side}`;
@@ -119,6 +126,13 @@ function SettingBtns({ openModal }) {
             >
                 Export
             </Button>
+            {!asciiOn && (
+                <Tooltip title="Take screenshot" placement="top">
+                    <Button variant="contained" onClick={getScreenshot}>
+                        <CameraIcon />
+                    </Button>
+                </Tooltip>
+            )}
         </div>
     );
 
