@@ -10,6 +10,13 @@ const dragons = [
         element: "Flame",
     },
     {
+        id: "210152_01",
+        name: "Rose Queen",
+        title: "Solitary Rose",
+        rarity: "5",
+        element: "Wind",
+    },
+    {
         id: "210117_01",
         name: "AC-011 Garland",
         title: "Revolutionary Warrior",

@@ -13,7 +13,7 @@ const adv = [
     {
         id: "110285_01",
         name: "Grimnir",
-        title: "",
+        title: "The Mad Cyclone",
         rarity: "5",
         element: "Wind",
         weapon: "Lance",

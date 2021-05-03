@@ -904,18 +904,18 @@ const skills = {
         },
         {
             icon: "advIcons/110285_01_r05.png",
-            name: "S1",
+            name: "Eternal Storm",
             code: "LAN_SKL_01_01_11028501",
         },
         {
             icon: "advIcons/110285_01_r05.png",
-            name: "S2",
-            code: "LAN_SKL_02_01_11028501",
+            name: "Eternal Tempest",
+            code: "LAN_SKL_03_01_11028501",
         },
         {
             icon: "advIcons/110285_01_r05.png",
-            name: "S3",
-            code: "LAN_SKL_03_01_11028501",
+            name: "Full Storm Tempest'",
+            code: "LAN_SKL_02_01_11028501",
         },
     ],
     Bow: [

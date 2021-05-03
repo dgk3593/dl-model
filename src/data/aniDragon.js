@@ -3678,6 +3678,22 @@ const dragonAni = {
             code: "D21015301_061_01",
         },
     ],
+    d210152_01: [
+        { name: "Idle", code: "D21015201_000_01" },
+        { name: "Fly", code: "D21015201_002_01" },
+        { name: "Fly Fast", code: "D21015201_003_01" },
+        { name: "Brake", code: "D21015201_004_01" },
+        { name: "Dash Forward", code: "D21015201_020_01" },
+        { name: "Transform", code: "D21015201_030_01" },
+        {
+            name: "Combo",
+            code: "D21015201_040_01>D21015201_041_01>D21015201_042_01",
+        },
+        {
+            name: "Sullen Rose",
+            code: "D21015201_060_01",
+        },
+    ],
 };
 
 export default dragonAni;
