@@ -12,11 +12,10 @@ function ExtraAni({ handleSelect }) {
     const [animations, setAnimations] = useState({});
 
     useEffect(() => {
-        const fetchAnimations = async () => {
+        (async function fetchAnimations() {
             const { default: data } = await import("data/aniExtra");
             setAnimations(data);
-        };
-        fetchAnimations();
+        })();
     }, []);
 
     const handleChange = (_, value) => {

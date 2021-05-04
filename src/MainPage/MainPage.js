@@ -73,13 +73,12 @@ function MainPage({ location }) {
 
     // load params from path
     useEffect(() => {
-        const setParams = async () => {
+        (async function setParams() {
             setLoadingMsg("Loading...");
             await setParamsFromPath(location.pathname, dispatch);
             setLoadingMsg("");
             setInitLoadDone(true);
-        };
-        setParams();
+        })();
     }, [location.pathname, dispatch]);
 
     // update settings when id changed
