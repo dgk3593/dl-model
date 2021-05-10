@@ -83,9 +83,15 @@ const modelMod = {
         },
         { name: "Buster", code: "show mPartsA_B; hide mPartsA_A" },
     ],
+    // Vania
     c110388_01: [
         { name: "Clenched Fist", code: "show mPartsA_A; hide mPartsA_B" },
         { name: "Claw Hand", code: "show mPartsA_B; hide mPartsA_A" },
+    ],
+    // Saiga
+    c110389_01: [
+        { name: "With Scarf", code: "show mPartsA_B; hide mPartsA_A" },
+        { name: "No Scarf", code: "show mPartsA_A; hide mPartsA_B" },
     ],
     // Gala Reborn Jeanne
     d210144_01: [

@@ -3,20 +3,12 @@
  */
 const adv = [
     {
-        id: "110388_01",
-        name: "Vania",
-        title: "Vampire Princess",
-        rarity: "5",
-        element: "Shadow",
-        weapon: "Wand",
-    },
-    {
-        id: "110285_01",
-        name: "Grimnir",
-        title: "The Mad Cyclone",
+        id: "110389_01",
+        name: "Saiga",
+        title: "",
         rarity: "5",
         element: "Wind",
-        weapon: "Lance",
+        weapon: "Manacaster",
     },
     {
         id: "110341_01",
@@ -377,6 +369,14 @@ const adv = [
         rarity: "5",
         element: "Shadow",
         weapon: "Staff",
+    },
+    {
+        id: "110285_01",
+        name: "Grimnir",
+        title: "The Mad Cyclone",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Lance",
     },
     {
         id: "110341_03",
@@ -1001,6 +1001,14 @@ const adv = [
         rarity: "5",
         element: "Water",
         weapon: "Blade",
+    },
+    {
+        id: "110388_01",
+        name: "Vania",
+        title: "Vampire Princess",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Wand",
     },
     {
         id: "110333_01",
