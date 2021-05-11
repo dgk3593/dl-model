@@ -74,6 +74,22 @@ const otherUnique = {
             ],
         },
     ],
+    Blade: [
+        {
+            name: "Ieyasu",
+            icon: "advIcons/110313_01_r05.png",
+            animations: [
+                { name: "Idle", code: "a0030101_000_01" },
+                {
+                    name: "Boss Intro",
+                    code: "a0030101_090_02>a0030101_090_01",
+                },
+                { name: "Quick Draw", code: "a0030101_100_01" },
+                { name: "Triple Slash", code: "a0030101_101_01" },
+                { name: "Jump Slash", code: "a0030101_104_01" },
+            ],
+        },
+    ],
     Dagger: [
         {
             name: "Gala Notte",
