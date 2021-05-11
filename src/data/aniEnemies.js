@@ -468,6 +468,36 @@ const enemyAni = {
             code: "A0130102_105_01>A0130102_105_02>A0130102_105_03",
         },
     ],
+    c100041_01: [
+        { name: "Idle", code: "A0140001_000_01" },
+        { name: "Run", code: "A0140001_002_01" },
+        { name: "Die", code: "A0140001_011_01" },
+        { name: "Frozen", code: "A0140001_013_01" },
+        { name: "Stun", code: "A0140001_014_01" },
+        { name: "Transform", code: "A0140001_030_01" },
+        { name: "Buff", code: "A0140001_050_01" },
+        {
+            name: "Nebula",
+            code: "A0140001_052_01>A0140001_052_02>A0140001_052_03",
+        },
+        { name: "Boss Intro", code: "A0140001_090_02>A0140001_090_01" },
+        {
+            name: "Downward Slash",
+            code: "A0140001_100_01>A0140001_100_02>A0140001_100_03",
+        },
+        {
+            name: "Side Slash",
+            code: "A0140001_101_01>A0140001_101_02>A0140001_101_03",
+        },
+        {
+            name: "Triple Slash",
+            code: "A0140001_102_01",
+        },
+        {
+            name: "Stab Ground",
+            code: "A0140001_103_01>A0140001_103_02>A0140001_103_03",
+        },
+    ],
 };
 
 export default enemyAni;
