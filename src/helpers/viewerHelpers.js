@@ -877,8 +877,20 @@ export const applyMod = (target, modCode) => {
     const { show, hide } = analyzeModelModCode(modCode);
 
     meshes.forEach(mesh => {
-        if (hide?.includes(mesh.name)) mesh.visible = false;
-        if (show?.includes(mesh.name)) mesh.visible = true;
+        if (hide?.includes(mesh.name)) {
+            mesh.visible = false;
+            const outline = mesh.children?.find?.(
+                ({ name }) => name === "outline"
+            );
+            outline && (outline.visible = false);
+        }
+        if (show?.includes(mesh.name)) {
+            mesh.visible = true;
+            const outline = mesh.children?.find?.(
+                ({ name }) => name === "outline"
+            );
+            outline && (outline.visible = true);
+        }
     });
 };
 

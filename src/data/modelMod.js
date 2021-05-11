@@ -91,7 +91,7 @@ const modelMod = {
     // Saiga
     c110389_01: [
         { name: "With Scarf", code: "show mPartsA_B; hide mPartsA_A" },
-        { name: "No Scarf", code: "show mPartsA_A; hide mPartsA_B" },
+        { name: "No Scarf", code: "hide mPartsA_B, mPartsA_A" },
     ],
     // Gala Reborn Jeanne
     d210144_01: [

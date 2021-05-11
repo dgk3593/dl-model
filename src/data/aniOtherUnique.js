@@ -268,6 +268,33 @@ const otherUnique = {
                 },
             ],
         },
+        {
+            name: "Volk",
+            icon: "advIcons/100033_01.png",
+            animations: [
+                { name: "Idle", code: "A0080001_000_01" },
+                { name: "Run", code: "A0080001_002_01" },
+                { name: "Take Damage", code: "A0080001_010_01" },
+                { name: "Die", code: "A0080001_011_01" },
+                { name: "Frozen", code: "A0080001_013_01" },
+                { name: "Stun", code: "A0080001_014_01" },
+                { name: "Transform", code: "A0080001_022_01" },
+                { name: "Buff", code: "A0080001_050_01" },
+                {
+                    name: "Throw Projectiles",
+                    code: "A0080001_052_01>A0080001_052_02>A0080001_052_03",
+                },
+                { name: "Boss Intro", code: "A0080001_090_02>A0080001_090_01" },
+                {
+                    name: "Spin Attack",
+                    code: "A0080001_100_01>A0080001_100_02>A0080001_052_03",
+                },
+                {
+                    name: "Thrust",
+                    code: "A0080001_101_01>A0080001_101_02>A0080001_101_03",
+                },
+            ],
+        },
     ],
     Bow: [
         {
