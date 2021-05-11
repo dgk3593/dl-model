@@ -54,7 +54,8 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         getAniList();
     }, [sourceId]);
 
-    const sourceIsNotDragon = sourceId.startsWith("h");
+    const sourceIsNotDragon =
+        sourceId.startsWith("h") || sourceId.startsWith("c");
 
     const portraitDir = sourceIsNotDragon
         ? "enemyPortraits"

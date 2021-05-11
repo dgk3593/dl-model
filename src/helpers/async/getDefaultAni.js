@@ -1,15 +1,15 @@
 import { isDragon, isCharaWithAni } from "../helpers";
-import { DEFAULT_ADV_ANI } from "../consts";
+import { DEFAULT_ADV_ANI, incompatibleModels } from "../consts";
 
-/**
- * get the default animation code base on model ID
+/** get the default animation code base on model ID
  * @param {string} modelId
  * @return {Promise<string | undefined>}
  */
 export const getDefaultAni = async modelId => {
     if (isDragon(modelId)) return getDefaultDragonAni(modelId);
 
-    if (modelId.startsWith("h")) return getDefaultEnemyAni(modelId);
+    if (modelId.startsWith("h") || incompatibleModels.has(modelId))
+        return getDefaultEnemyAni(modelId);
 
     if (isCharaWithAni(modelId)) return DEFAULT_ADV_ANI;
 

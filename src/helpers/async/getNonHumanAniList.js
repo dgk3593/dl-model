@@ -4,9 +4,10 @@
  * @return {Promise<AnimationList>}
  */
 export const getNonHumanAniList = async sourceId => {
-    const { default: data } = sourceId.startsWith("h")
-        ? await import("data/aniEnemies")
-        : await import("data/aniDragon");
+    const { default: data } =
+        sourceId.startsWith("h") || sourceId.startsWith("c")
+            ? await import("data/aniEnemies")
+            : await import("data/aniDragon");
 
     return data[sourceId];
 };

@@ -334,6 +334,33 @@ const enemyAni = {
         },
         { name: "Boss Intro", code: "H0100301_090_02>H0100301_090_01" },
     ],
+    c100034_01: [
+        { name: "Ilde", code: "A0100001_000_01" },
+        { name: "Run", code: "A0100001_002_01" },
+        { name: "Take Damage", code: "A0100001_010_01" },
+        { name: "Die", code: "A0100001_011_01" },
+        { name: "Frozen", code: "A0100001_013_01" },
+        { name: "Stun", code: "A0100001_014_01" },
+        { name: "Transform", code: "A0100001_022_01" },
+        { name: "Buff", code: "A0100001_050_01" },
+        {
+            name: "Swing",
+            code: "A0100001_052_01>A0100001_052_02>A0100001_052_03",
+        },
+        {
+            name: "Boss Intro",
+            code: "A0100001_090_02>A0100001_090_01",
+        },
+        {
+            name: "Spin",
+            code:
+                "A0100001_100_01>A0100001_100_02>A0100001_100_03>A0100001_100_04>A0100001_100_05",
+        },
+        {
+            name: "Smash",
+            code: "A0100001_101_01>A0100001_101_02>A0100001_101_03",
+        },
+    ],
 };
 
 export default enemyAni;
