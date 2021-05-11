@@ -241,6 +241,13 @@ const otherUnique = {
             animations: [{ name: "Dash Attack", code: "LAN_DAS_02_11036401" }],
         },
         {
+            name: "Grimnir",
+            icon: "advIcons/110285_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0840001_090_02>A0840001_090_01" },
+            ],
+        },
+        {
             name: "Panther",
             icon: "advIcons/110378_01_r05.png",
             animations: [
@@ -430,6 +437,23 @@ const otherUnique = {
             name: "Eirene",
             icon: "advIcons/110384_01_r05.png",
             animations: [{ name: "Fast Run", code: "GUN_RUN_02_11038401" }],
+        },
+        {
+            name: "Saiga",
+            icon: "advIcons/110389_01_r05.png",
+            animations: [
+                { name: "Boss Idle", code: "A0700001_000_01" },
+                { name: "Broken", code: "A0700001_081_01>A0700001_081_02" },
+                { name: "Recover from Broken", code: "A0700001_081_03" },
+                { name: "Boss Intro", code: "A0830001_090_02>A0830001_090_01" },
+                {
+                    name: "Take Aim",
+                    code: "A0830001_101_01>A0830001_101_02>A0830001_101_03",
+                },
+                { name: "Shoot", code: "A0830001_104_01" },
+                { name: "Multiple Shots", code: "A0830001_105_01" },
+                { name: "Buff", code: "A0830001_106_01" },
+            ],
         },
     ],
 };
