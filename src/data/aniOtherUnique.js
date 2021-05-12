@@ -11,6 +11,25 @@ const otherUnique = {
             ],
         },
         {
+            name: "Alfonse",
+            icon: "advIcons/110327_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0060401_090_02>A0060401_090_01" },
+                {
+                    name: "Rolling Slash",
+                    code: "A0060401_100_01>A0060401_100_02>A0060401_100_03",
+                },
+                {
+                    name: "Buff",
+                    code: "A0060401_101_01>A0060401_101_02>A0060401_101_03",
+                },
+                {
+                    name: "Sword Slash",
+                    code: "A0060401_102_01>A0060401_102_02>A0060401_102_03>A0060401_102_04>A0060401_102_05",
+                },
+            ],
+        },
+        {
             name: "Pecorine",
             icon: "advIcons/110371_01_r05.png",
             animations: [
@@ -419,6 +438,25 @@ const otherUnique = {
                 {
                     name: "Dragondrive",
                     code: "CMN_CTD_01_11036201>CMN_CTD_02_11036201",
+                },
+            ],
+        },
+        {
+            name: "Veronica",
+            icon: "advIcons/110333_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0070501_090_02>A0070501_090_01" },
+                {
+                    name: "Attack 1",
+                    code: "A0070501_100_01>A0070501_100_02>A0070501_100_03",
+                },
+                {
+                    name: "Attack 2",
+                    code: "A0070501_101_01>A0070501_101_02>A0070501_101_03",
+                },
+                {
+                    name: "Buff",
+                    code: "A0070501_102_01>A0070501_102_02>A0070501_102_03",
                 },
             ],
         },
