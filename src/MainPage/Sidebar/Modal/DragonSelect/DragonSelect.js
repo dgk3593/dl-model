@@ -49,7 +49,7 @@ function DragonSelect({ close, handleSelect, docked, moveToDock }) {
     const handler = handleSelect || setNewModel;
 
     const onSelect = id => {
-        const cid = `d${id}`;
+        const cid = id === "smith" ? id : `d${id}`;
         handler(cid);
 
         !docked && close();
