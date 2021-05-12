@@ -16,6 +16,10 @@ const extraDragons = [
         name: "Fafnir Roy III",
     },
     {
+        id: "smith",
+        name: "Smithwyrm",
+    },
+    {
         id: "210113_01",
         name: "Brunhilda",
         title: "Halloween Mym",
