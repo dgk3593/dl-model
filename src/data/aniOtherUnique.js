@@ -94,6 +94,33 @@ const otherUnique = {
     ],
     Blade: [
         {
+            name: "Laxi",
+            icon: "advIcons/100032_02.png",
+            animations: [
+                {
+                    name: "Boss Intro",
+                    code: "A0110001_090_02>A0110001_090_01",
+                },
+                {
+                    name: "Defeated",
+                    code: "A0110001_015_01>A0110001_015_02",
+                },
+                { name: "Buff", code: "A0110001_022_01" },
+                {
+                    name: "Broken",
+                    code: "A0110001_081_01>A0110001_081_02",
+                },
+                {
+                    name: "Two-handed Slash",
+                    code: "A0110001_102_01>A0110001_102_02>A0110001_102_03",
+                },
+                { name: "Quick Draw", code: "A0110001_103_01" },
+                { name: "Triple Slash Jump Back", code: "A0110001_104_01" },
+                { name: "Triple Slash", code: "A0110001_107_01" },
+                { name: "Spinning Slash", code: "A0110001_108_01" },
+            ],
+        },
+        {
             name: "Ieyasu",
             icon: "advIcons/110313_01_r05.png",
             animations: [
