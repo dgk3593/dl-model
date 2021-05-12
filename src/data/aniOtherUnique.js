@@ -207,6 +207,27 @@ const otherUnique = {
             ],
         },
         {
+            name: "Valyx",
+            icon: "advIcons/100016_01.png",
+            animations: [
+                { name: "Boss Intro", code: "a0020101_090_02>a0020101_090_01" },
+                { name: "Broken", code: "a0020101_015_01>a0020101_015_02" },
+                { name: "Recover from Broken", code: "a0020101_015_03" },
+                {
+                    name: "Roar",
+                    code: "a0020101_017_01>a0020101_017_02>a0020101_017_03>a0020101_017_04",
+                },
+                {
+                    name: "Charged Smash",
+                    code: "a0020101_102_01>a0020101_102_02>a0020101_102_03",
+                },
+                {
+                    name: "Command",
+                    code: "a0020101_103_01>a0020101_103_02>a0020101_103_03>a0020101_103_04>a0020101_103_05",
+                },
+            ],
+        },
+        {
             name: "Summer Patia",
             icon: "advIcons/110335_02_r05.png",
             animations: [
