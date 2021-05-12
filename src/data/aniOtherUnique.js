@@ -206,6 +206,11 @@ const otherUnique = {
             ],
         },
         {
+            name: "Finni",
+            icon: "advIcons/110383_01_r05.png",
+            animations: [{ name: "Fast Run", code: "CMN_RUN_02_11038301" }],
+        },
+        {
             name: "Sophie",
             icon: "advIcons/110380_01_r05.png",
             animations: [
@@ -231,11 +236,6 @@ const otherUnique = {
                     code: "R002_002_c11038001_a_01>R002_002_c11038001_a_02",
                 },
             ],
-        },
-        {
-            name: "Finni",
-            icon: "advIcons/110383_01_r05.png",
-            animations: [{ name: "Fast Run", code: "CMN_RUN_02_11038301" }],
         },
     ],
     Lance: [

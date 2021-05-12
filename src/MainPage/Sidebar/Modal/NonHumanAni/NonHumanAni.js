@@ -61,7 +61,10 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
         ? "enemyPortraits"
         : "dragonPortraits";
 
-    const portraitName = sourceIsNotDragon ? sourceId : sourceId.slice?.(1);
+    const portraitName =
+        sourceIsNotDragon || sourceId === "smith"
+            ? sourceId
+            : sourceId.slice?.(1);
 
     const portraitPath = `${process.env.PUBLIC_URL}/img/${portraitDir}/${portraitName}.png`;
 

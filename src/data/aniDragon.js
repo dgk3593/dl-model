@@ -3694,6 +3694,12 @@ const dragonAni = {
             code: "D21015201_060_01",
         },
     ],
+    smith: [
+        { name: "Idle", code: "CSL_SMS_02" },
+        { name: "Spin", code: "CSL_SMS_01" },
+        { name: "Finish Building", code: "CSL_SMS_04" },
+        { name: "Hammer", code: "CSL_SMS_03" },
+    ],
 };
 
 export default dragonAni;
