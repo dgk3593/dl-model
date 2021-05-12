@@ -18,8 +18,7 @@ const otherUnique = {
                 { name: "Fast Run", code: "CMN_RUN_02_11037101" },
                 {
                     name: "Join Room",
-                    code:
-                        "SWD_ONT_06_11037101&ts=-0.5>SWD_ONT_04_11037101>SWD_ONT_09_11037101>SWD_ONT_10_11037101>SWD_ONT_23_11037101",
+                    code: "SWD_ONT_06_11037101&ts=-0.5>SWD_ONT_04_11037101>SWD_ONT_09_11037101>SWD_ONT_10_11037101>SWD_ONT_23_11037101",
                 },
                 { name: "Standby", code: "SWD_ONT_23_11037101" },
                 { name: "Idle", code: "CMN_INT_01_11037101" },
@@ -99,8 +98,7 @@ const otherUnique = {
                 { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
                     name: "Join Room",
-                    code:
-                        "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>DAG_ONT_23_10000707",
+                    code: "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>DAG_ONT_23_10000707",
                 },
                 { name: "Standby", code: "DAG_ONT_03_10000707" },
                 { name: "Fly Slow", code: "CMN_RUN_01_10000707" },
@@ -111,20 +109,17 @@ const otherUnique = {
                 { name: "Quick Turn", code: "CMN_QTN_01_10000707" },
                 {
                     name: "Knocked Away",
-                    code:
-                        "CMN_BST_01_10000707>CMN_BST_02_10000707>CMN_BST_03_10000707>CMN_BST_04_10000707>CMN_BST_07_10000707",
+                    code: "CMN_BST_01_10000707>CMN_BST_02_10000707>CMN_BST_03_10000707>CMN_BST_04_10000707>CMN_BST_07_10000707",
                 },
                 { name: "Fall to Ground", code: "CMN_BST_05_10000707" },
                 { name: "Stand back up", code: "CMN_BST_06_10000707" },
                 {
                     name: "Ukemi",
-                    code:
-                        "CMN_UKM_01_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
+                    code: "CMN_UKM_01_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
                 },
                 {
                     name: "Ukemi 2",
-                    code:
-                        "CMN_UKM_11_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
+                    code: "CMN_UKM_11_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707",
                 },
                 { name: "Stun", code: "CMN_SWN_01_10000707" },
                 { name: "Frozen", code: "CMN_FRZ_01_10000707" },
@@ -142,8 +137,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    code:
-                        "DAG_ONT_06_10003204&ts=-0.5>DAG_ONT_04_10003204>DAG_ONT_09_10003204>DAG_ONT_10_10003204>DAG_ONT_23_10003204",
+                    code: "DAG_ONT_06_10003204&ts=-0.5>DAG_ONT_04_10003204>DAG_ONT_09_10003204>DAG_ONT_10_10003204>DAG_ONT_23_10003204",
                 },
                 { name: "Standby", code: "DAG_ONT_23_10003204" },
                 { name: "Dash Attack", code: "DAG_DAS_02_10003204" },
@@ -199,6 +193,20 @@ const otherUnique = {
     ],
     Axe: [
         {
+            name: "Ranzal",
+            icon: "advIcons/100003_01_r04.png",
+            animations: [
+                { name: "Boss Intro", code: "a0010101_090_02>a0010101_090_01" },
+                { name: "Broken", code: "a0010101_015_01>a0010101_015_02" },
+                { name: "Recover from Broken", code: "a0010101_015_03" },
+                { name: "Smash", code: "a0010101_102_01" },
+                {
+                    name: "Jump Smash",
+                    code: "a0010101_103_01>a0010101_103_02>a0010101_103_03",
+                },
+            ],
+        },
+        {
             name: "Summer Patia",
             icon: "advIcons/110335_02_r05.png",
             animations: [
@@ -216,8 +224,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    code:
-                        "AXE_ONT_06_11038001&ts=-0.5>AXE_ONT_04_11038001>AXE_ONT_09_11038001>AXE_ONT_10_11038001>AXE_ONT_23_11038001",
+                    code: "AXE_ONT_06_11038001&ts=-0.5>AXE_ONT_04_11038001>AXE_ONT_09_11038001>AXE_ONT_10_11038001>AXE_ONT_23_11038001",
                 },
                 { name: "Standby", code: "AXE_ONT_03_11038001" },
                 { name: "Idle", code: "CMN_INT_01_11038001" },
@@ -245,8 +252,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    code:
-                        "LAN_ONT_06_11035701&ts=-0.5>LAN_ONT_04_11035701>LAN_ONT_09_11035701>LAN_ONT_10_11035701>LAN_ONT_23_11035701",
+                    code: "LAN_ONT_06_11035701&ts=-0.5>LAN_ONT_04_11035701>LAN_ONT_09_11035701>LAN_ONT_10_11035701>LAN_ONT_23_11035701",
                 },
                 { name: "Standby", code: "LAN_ONT_23_11035701" },
             ],
@@ -335,8 +341,7 @@ const otherUnique = {
                 { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
                     name: "Join Room",
-                    code:
-                        "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>BOW_ONT_23_11036801",
+                    code: "BOW_ONT_06_11036801&ts=-0.5>BOW_ONT_04_11036801>BOW_ONT_09_11036801>BOW_ONT_10_11036801>BOW_ONT_23_11036801",
                 },
                 { name: "Standby", code: "BOW_ONT_23_11036801" },
                 { name: "Idle", code: "CMN_INT_01_11036801" },
@@ -385,8 +390,7 @@ const otherUnique = {
             animations: [
                 {
                     name: "Join Room",
-                    code:
-                        "ROD_ONT_05_11035401&ts=-0.5>ROD_ONT_02_11035401>ROD_ONT_07_11035401>ROD_ONT_08_11035401>ROD_ONT_21_11035401",
+                    code: "ROD_ONT_05_11035401&ts=-0.5>ROD_ONT_02_11035401>ROD_ONT_07_11035401>ROD_ONT_08_11035401>ROD_ONT_21_11035401",
                 },
                 { name: "Standby", code: "ROD_ONT_21_11035401" },
                 { name: "Idle", code: "CMN_INT_01_11035401" },
@@ -415,8 +419,7 @@ const otherUnique = {
                 { name: "Fly Fast", code: "CMN_RUN_02_11036101" },
                 {
                     name: "Join Room",
-                    code:
-                        "ROD_ONT_06_11036101&ts=-0.5>ROD_ONT_04_11036101>ROD_ONT_09_11036101>ROD_ONT_10_11036101>ROD_ONT_23_11036101",
+                    code: "ROD_ONT_06_11036101&ts=-0.5>ROD_ONT_04_11036101>ROD_ONT_09_11036101>ROD_ONT_10_11036101>ROD_ONT_23_11036101",
                 },
                 { name: "Standby", code: "ROD_ONT_23_11036101" },
                 { name: "Idle", code: "CMN_INT_01_11036101" },

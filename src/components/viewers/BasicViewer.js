@@ -685,10 +685,8 @@ class BasicViewer extends PureComponent {
         const { width: screenWidth, height: screenHeight } = this.viewport;
         const screenAspectRatio = screenWidth / screenHeight;
 
-        const {
-            width: camWidth,
-            aspectRatio: camAspectRatio,
-        } = this.cameraStream.getVideoTracks()[0].getSettings();
+        const { width: camWidth, aspectRatio: camAspectRatio } =
+            this.cameraStream.getVideoTracks()[0].getSettings();
 
         const videoWidth =
             camAspectRatio > screenAspectRatio ? screenWidth : camWidth;
