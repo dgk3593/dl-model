@@ -356,6 +356,26 @@ const otherUnique = {
                     name: "After All-Out Attack",
                     code: "R002_002_c11038001_a_01>R002_002_c11038001_a_02",
                 },
+                {
+                    name: "Boss Intro",
+                    code: "A0750001_090_02>A0750001_090_01",
+                },
+                {
+                    name: "Defeated",
+                    code: "A0750001_011_01",
+                },
+                {
+                    name: "Broken",
+                    code: "A0750001_081_01>A0750001_081_02",
+                },
+                {
+                    name: "Recover from Broken",
+                    code: "A0750001_081_03",
+                },
+                {
+                    name: "Small Hit",
+                    code: "A0750001_106_01",
+                },
             ],
         },
     ],
