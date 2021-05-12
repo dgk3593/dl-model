@@ -78,7 +78,6 @@ const otherUnique = {
             name: "Ieyasu",
             icon: "advIcons/110313_01_r05.png",
             animations: [
-                { name: "Idle", code: "a0030101_000_01" },
                 {
                     name: "Boss Intro",
                     code: "a0030101_090_02>a0030101_090_01",
@@ -86,6 +85,16 @@ const otherUnique = {
                 { name: "Quick Draw", code: "a0030101_100_01" },
                 { name: "Triple Slash", code: "a0030101_101_01" },
                 { name: "Jump Slash", code: "a0030101_104_01" },
+            ],
+        },
+        {
+            name: "Addis",
+            icon: "advIcons/110310_01_r04.png",
+            animations: [
+                { name: "Broken", code: "a0050101_015_01>a0050101_015_02" },
+                { name: "Recover from Broken", code: "a0050101_015_03" },
+                { name: "Quick Draw", code: "a0050101_100_01" },
+                { name: "Jump Slash", code: "a0050101_101_01" },
             ],
         },
     ],
@@ -225,6 +234,14 @@ const otherUnique = {
                     name: "Command",
                     code: "a0020101_103_01>a0020101_103_02>a0020101_103_03>a0020101_103_04>a0020101_103_05",
                 },
+            ],
+        },
+        {
+            name: "Sazanka",
+            icon: "advIcons/110311_01_r04.png",
+            animations: [
+                { name: "Broken", code: "a0040101_015_01>a0040101_015_02" },
+                { name: "Recover from Broken", code: "a0040101_015_03" },
             ],
         },
         {
