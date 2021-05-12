@@ -64,6 +64,7 @@ const otherUnique = {
                 { name: "Take Damage", code: "CMN_KNB_01_11037101" },
                 { name: "Die", code: "CMN_DIE_02_11037101" },
                 { name: "Transform", code: "CMN_CTD_01_11037101" },
+                { name: "Boss Intro", code: "A0720001_090_01" },
             ],
         },
         {
@@ -198,6 +199,16 @@ const otherUnique = {
                 { name: "Dash Attack", code: "DAG_DAS_02_10003204" },
                 { name: "Slow Run", code: "CMN_RUN_01_10003204" },
                 { name: "Fast Run", code: "CMN_RUN_02_10003204" },
+            ],
+        },
+        {
+            name: "Mitsuhide",
+            icon: "advIcons/110345_01_r05.png",
+            animations: [
+                {
+                    name: "Boss Intro",
+                    code: "A0570001_090_02>A0570001_090_01",
+                },
             ],
         },
         {
@@ -583,6 +594,25 @@ const otherUnique = {
             animations: [{ name: "Roll", code: "GUN_ROL_01_11036701" }],
         },
         {
+            name: "Lapis",
+            icon: "advIcons/110370_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0700001_090_02>A0700001_090_01" },
+                { name: "Broken", code: "A0700001_081_01>A0700001_081_02" },
+                { name: "Recover from Broken", code: "A0700001_081_03" },
+                { name: "Throw", code: "A0700001_100_01>A0700001_100_02" },
+                { name: "Throw 2", code: "A0700001_107_01" },
+                { name: "Swing", code: "A0700001_108_01" },
+                { name: "Swing 2", code: "A0700001_109_01" },
+                { name: "Backflip", code: "A0700001_110_01" },
+                {
+                    name: "Jump Spin",
+                    code: "A0700001_111_01>A0700001_111_02>A0700001_111_03",
+                },
+                { name: "Spin Backflip", code: "A0700001_113_01" },
+            ],
+        },
+        {
             name: "Eirene",
             icon: "advIcons/110384_01_r05.png",
             animations: [{ name: "Fast Run", code: "GUN_RUN_02_11038401" }],
@@ -591,7 +621,6 @@ const otherUnique = {
             name: "Saiga",
             icon: "advIcons/110389_01_r05.png",
             animations: [
-                { name: "Boss Idle", code: "A0700001_000_01" },
                 { name: "Broken", code: "A0700001_081_01>A0700001_081_02" },
                 { name: "Recover from Broken", code: "A0700001_081_03" },
                 { name: "Boss Intro", code: "A0830001_090_02>A0830001_090_01" },
@@ -601,7 +630,6 @@ const otherUnique = {
                 },
                 { name: "Shoot", code: "A0830001_104_01" },
                 { name: "Multiple Shots", code: "A0830001_105_01" },
-                { name: "Buff", code: "A0830001_106_01" },
             ],
         },
     ],
