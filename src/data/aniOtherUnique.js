@@ -242,6 +242,9 @@ const otherUnique = {
                 { name: "Fast Run", code: "CMN_RUN_02_11037701" },
                 { name: "Quick Turn", code: "DAG_QTN_01_11037701" },
                 { name: "Dash Attack", code: "DAG_DAS_02_11037701" },
+                { name: "Defeated", code: "A0740001_011_01" },
+                { name: "Broken", code: "A0740001_081_01>A0740001_081_02" },
+                { name: "Recover from Broken", code: "A0740001_081_03" },
                 {
                     name: "Summon Arsène",
                     code: "CMN_CTD_01_11037701>CMN_CTD_02_11037701",
@@ -253,6 +256,22 @@ const otherUnique = {
                 {
                     name: "Hit by All-Out Attack",
                     code: "c11037701_090_01>c11037701_090_02",
+                },
+                {
+                    name: "Boss Intro",
+                    code: "A0740001_090_02>A0740001_110_01",
+                },
+                {
+                    name: "Jump Slash",
+                    code: "A0740001_106_01",
+                },
+                {
+                    name: "Small Slash",
+                    code: "A0740001_109_01",
+                },
+                {
+                    name: "Side to Side",
+                    code: "A0740001_107_01>A0740001_107_02>A0740001_107_03",
                 },
             ],
         },
