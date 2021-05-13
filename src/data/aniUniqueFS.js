@@ -35,8 +35,7 @@ const uniqueFS = {
             icon: "advIcons/110371_01_r05.png",
             name: "Pecorine",
             subtitle: "Enhanced",
-            code:
-                "SWD_CHR_A_01_11037101>SWD_CHR_A_02_11037101>SWD_CHR_A_03_11037101",
+            code: "SWD_CHR_A_01_11037101>SWD_CHR_A_02_11037101>SWD_CHR_A_03_11037101",
         },
         {
             icon: "advIcons/110379_01_r05.png",
@@ -49,22 +48,30 @@ const uniqueFS = {
             icon: "advIcons/110027_01_r03.png",
             name: "Melody",
             subtitle: "Maid's Soul",
-            code:
-                "KAT_CHR_A_01_11002701>KAT_CHR_A_02_11002701>KAT_CHR_A_03_11002701",
+            code: "KAT_CHR_A_01_11002701>KAT_CHR_A_02_11002701>KAT_CHR_A_03_11002701",
         },
         {
             icon: "advIcons/110271_01_r05.png",
             name: "Linnea",
             subtitle: "Cluster Amaryllis",
-            code:
-                "KAT_CHR_A_01_11027101>KAT_CHR_A_02_11027101>KAT_CHR_A_03_11027101",
+            code: "KAT_CHR_A_01_11027101>KAT_CHR_A_02_11027101>KAT_CHR_A_03_11027101",
+        },
+        {
+            icon: "advIcons/110064_02_r05.png",
+            name: "Armored Yachiyo",
+            code: "KAT_CHR_01_11006402>KAT_CHR_02_11006402>KAT_CHR_03_11006402",
+        },
+        {
+            icon: "advIcons/110064_02_r05.png",
+            name: "Armored Yachiyo",
+            subtitle: "Peerless Flourish",
+            code: "KAT_CHR_01_11006402>KAT_CHR_02_11006402>KAT_CHR_A_03_11006402",
         },
         {
             icon: "advIcons/110296_02_r05.png",
             name: "Forager Mitsuba",
             subtitle: "Plucked Mandradish",
-            code:
-                "KAT_CHR_A_01_11029602>KAT_CHR_A_02_11029602>KAT_CHR_A_03_11029602",
+            code: "KAT_CHR_A_01_11029602>KAT_CHR_A_02_11029602>KAT_CHR_A_03_11029602",
         },
     ],
     Dagger: [
@@ -208,15 +215,13 @@ const uniqueFS = {
             icon: "advIcons/100009_08_r05.png",
             name: "Gala Zena",
             subtitle: "Twilight Moon",
-            code:
-                "CAN_CHR_A_01_10000908>CAN_CHR_A_02_10000908>CAN_CHR_A_03_10000908",
+            code: "CAN_CHR_A_01_10000908>CAN_CHR_A_02_10000908>CAN_CHR_A_03_10000908",
         },
         {
             icon: "advIcons/110252_02_r05.png",
             name: "Dragonyule Lily",
             subtitle: "Saint Starfall Lily",
-            code:
-                "CAN_CHR_A_01_11025202>CAN_CHR_A_02_11025202>CAN_CHR_A_03_11025202",
+            code: "CAN_CHR_A_01_11025202>CAN_CHR_A_02_11025202>CAN_CHR_A_03_11025202",
         },
     ],
     Manacaster: [
@@ -224,14 +229,12 @@ const uniqueFS = {
             icon: "advIcons/110367_01_r05.png",
             name: "Ilia",
             subtitle: "Alchemic Blast",
-            code:
-                "GUN_CHR_U_01_11036701>GUN_CHR_U_02_11036701>GUN_CHR_U_03_11036701",
+            code: "GUN_CHR_U_01_11036701>GUN_CHR_U_02_11036701>GUN_CHR_U_03_11036701",
         },
         {
             icon: "advIcons/110382_01_r05.png",
             name: "Faris",
-            code:
-                "GUN_CHR_A_01_11038201>GUN_CHR_A_02_11038201>GUN_CHR_A_03_11038201",
+            code: "GUN_CHR_A_01_11038201>GUN_CHR_A_02_11038201>GUN_CHR_A_03_11038201",
         },
     ],
 };

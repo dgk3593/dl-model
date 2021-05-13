@@ -663,11 +663,6 @@ const otherUnique = {
                 { name: "Broken", code: "A0700001_081_01>A0700001_081_02" },
                 { name: "Recover from Broken", code: "A0700001_081_03" },
                 { name: "Boss Intro", code: "A0830001_090_02>A0830001_090_01" },
-                {
-                    name: "Take Aim",
-                    code: "A0830001_101_01>A0830001_101_02>A0830001_101_03",
-                },
-                { name: "Shoot", code: "A0830001_104_01" },
                 { name: "Multiple Shots", code: "A0830001_105_01" },
             ],
         },

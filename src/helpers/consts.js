@@ -369,9 +369,7 @@ export const spFaceTextures = {
     c110300_01: "ec110300_01",
 };
 
-/**
- * Set of ids of models incompatible with AdvViewer
- */
+/** Set of ids of models incompatible with AdvViewer*/
 export const incompatibleModels = new Set([
     "c100007_01",
     "c100007_05",
@@ -383,9 +381,7 @@ export const incompatibleModels = new Set([
     "c100041_01",
 ]);
 
-/**
- * @type {{[colorName: string]: ColorCode}}
- */
+/**  @type {{[colorName: string]: ColorCode}}  */
 export const commonColors = {
     green: "#00ff00",
     black: "#000000",

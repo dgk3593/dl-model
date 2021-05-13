@@ -5,10 +5,18 @@ const adv = [
     {
         id: "110389_01",
         name: "Saiga",
-        title: "",
+        title: "Sinful Marksman",
         rarity: "5",
         element: "Wind",
         weapon: "Manacaster",
+    },
+    {
+        id: "110064_02",
+        name: "Armored Yachiyo",
+        title: "Resplendent Duelist",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Blade",
     },
     {
         id: "110341_01",

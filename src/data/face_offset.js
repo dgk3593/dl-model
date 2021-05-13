@@ -2,6 +2,7 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110064_02: [0.05, -0.08], // Armored Yachiyo
     c110389_01: [0.05, -0.08], // Saiga
     c110285_01: [0.05, -0.08], // Grimnir
     c110388_01: [0.05, -0.08], // Vania
