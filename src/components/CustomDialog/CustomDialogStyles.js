@@ -14,6 +14,10 @@ const styles = {
         right: "2.3rem",
         top: "0.5rem",
         color: "rgba(0,0,0,0.8)",
+        "& svg": {
+            animation:
+                "$bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95)",
+        },
     },
     titleRoot: {
         margin: 0,
@@ -21,6 +25,11 @@ const styles = {
         paddingBottom: 0,
         display: "flex",
         justifyContent: "center",
+    },
+    "@keyframes bounce": {
+        "50%": {
+            transform: "translateX(-50%)",
+        },
     },
 };
 
