@@ -625,6 +625,13 @@ const otherUnique = {
                 { name: "Force Strike Run", code: "CAN_RUN_A_05_11025202" },
             ],
         },
+        {
+            name: "Kuzunoha",
+            icon: "advIcons/110374_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0760001_090_02>A0760001_090_01" },
+            ],
+        },
     ],
     Manacaster: [
         {
@@ -649,6 +656,15 @@ const otherUnique = {
                     code: "A0700001_111_01>A0700001_111_02>A0700001_111_03",
                 },
                 { name: "Spin Backflip", code: "A0700001_113_01" },
+            ],
+        },
+        {
+            name: "Yoshitsune",
+            icon: "advIcons/110376_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0730001_090_01" },
+                { name: "Broken", code: "A0700001_081_01>A0700001_081_02" },
+                { name: "Recover from Broken", code: "A0700001_081_03" },
             ],
         },
         {
