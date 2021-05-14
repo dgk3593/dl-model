@@ -28,7 +28,7 @@ const styles = {
     },
     "@keyframes bounce": {
         "50%": {
-            transform: "translateX(-50%)",
+            transform: "translateX(25%)",
         },
     },
 };
