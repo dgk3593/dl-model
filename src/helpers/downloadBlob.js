@@ -1,5 +1,4 @@
-/**
- * download a blob as the given file name
+/** download a blob as the given file name
  * @param {Blob} blob
  * @param {string} fileName
  */

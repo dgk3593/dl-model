@@ -1,6 +1,4 @@
-/**
- * @type { Array <ModelData> }
- */
+/** @type { Array <ModelData> } */
 const adv = [
     {
         id: "110389_01",

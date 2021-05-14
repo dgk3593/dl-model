@@ -33,9 +33,7 @@ function DragonFaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
 
     const { eye: nEye, mouth: nMouth } = faceData[modelId] || {};
 
-    /**
-     * @param {{ }} value
-     */
+    /** @param {{ }} value */
     const updateModel = value => {
         const action = {
             type: "update",
@@ -54,9 +52,7 @@ function DragonFaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
         updateModel({ [updateKey]: idx });
     };
 
-    /**
-     * @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event
-     */
+    /** @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event */
     const setIdx = event => {
         const idx = parseInt(event.currentTarget.dataset.value);
         const part = event.currentTarget.dataset.part;

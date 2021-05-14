@@ -1,6 +1,4 @@
-/**
- * @type {{ [id:string]: xyCoordinate }}
- */
+/** @type {{ [id:string]: xyCoordinate }} */
 const textureOffsets = {
     c110064_02: [0.05, -0.08], // Armored Yachiyo
     c110389_01: [0.05, -0.08], // Saiga
@@ -63,9 +61,7 @@ const textureOffsets = {
 
 export default textureOffsets;
 
-/**
- * @type {{ [faceNumber: string]: xyCoordinate }}
- */
+/** @type {{ [faceNumber: string]: xyCoordinate }} */
 export const idxOffsets = {
     face1: [2, 1],
     face2: [0, 0],

@@ -1,6 +1,4 @@
-/**
- * @type {{ [weaponType: string]: AnimationList }}
- */
+/** @type {{ [weaponType: string]: AnimationList }} */
 const uniqueVictory = {
     Sword: [
         {

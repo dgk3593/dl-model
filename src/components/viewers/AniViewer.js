@@ -11,8 +11,7 @@ import { getDateTimeString } from "helpers/helpers";
 
 import downloadBlob from "helpers/downloadBlob";
 
-/**
- *  Extension of Base Viewer that adds:
+/** Extension of Base Viewer that adds:
  *    - Animation
  *    - Recording Animation
  */
@@ -47,17 +46,14 @@ export class AniViewer extends BasicViewer {
         }
     };
 
-    /**
-     * save main model's initial position and rotation
-     */
+    /** save main model's initial position and rotation */
     saveMainModelInitState = () => {
         const model = this.models.main;
         model.userData.initPos = model.position.clone();
         model.userData.initRot = model.rotation.clone();
     };
 
-    /**
-     * play animation stored in this.animations[newIdx]
+    /** play animation stored in this.animations[newIdx]
      * @param {number} newIdx
      */
     set aniIdx(newIdx) {
@@ -85,35 +81,25 @@ export class AniViewer extends BasicViewer {
         action.play();
     }
 
-    /**
-     * reset model's face to the ones specified in model setting
-     */
+    /** reset model's face to the ones specified in model setting */
     resetFace = () => {
         const { eyeIdx, mouthIdx } = this.props.model;
         this.eyeIdx = eyeIdx;
         this.mouthIdx = mouthIdx;
     };
 
-    /**
-     * @param {number} newIdx
-     */
+    /** @param {number} newIdx */
     set eyeIdx(newIdx) {}
 
-    /**
-     * @param {number} newIdx
-     */
+    /** @param {number} newIdx */
     set mouthIdx(newIdx) {}
 
-    /**
-     * called before animation is attached
-     */
+    /** called before animation is attached */
     beforeAddAni = () => {
         this.resetFace();
     };
 
-    /**
-     * load and attach animations
-     */
+    /** load and attach animations */
     addAnimation = async () => {
         this.beforeAddAni();
 
@@ -124,15 +110,11 @@ export class AniViewer extends BasicViewer {
 
         const mainModel = this.models.main;
         const aniList = analyzeChainCode(aniCode);
-        /**
-         * number of currently loaded animations
-         */
+        /** number of currently loaded animations */
         this.nAni = aniList.length;
 
         mainModel.mixer = new THREE.AnimationMixer(mainModel);
-        /**
-         * @type {THREE.AnimationMixer}
-         */
+        /**  @type {THREE.AnimationMixer} */
         this.mixer = mainModel.mixer;
 
         this._aniIdx = 0;
@@ -140,9 +122,7 @@ export class AniViewer extends BasicViewer {
         mainModel.mixer.addEventListener("finished", this.playNextAni);
         this.aniSettings = aniList;
 
-        /**
-         * @type {THREE.AnimationClip[]}
-         */
+        /**  @type {THREE.AnimationClip[]}  */
         this.animations = await loadAnimations(aniList);
 
         // play first animation
@@ -150,9 +130,7 @@ export class AniViewer extends BasicViewer {
         this.enableInput();
     };
 
-    /**
-     * remove all loaded animation
-     */
+    /** remove all loaded animation */
     removeAnimation = () => {
         const mainModel = this.models.main;
         mainModel.mixer?.stopAllAction?.();
@@ -167,9 +145,7 @@ export class AniViewer extends BasicViewer {
         this.aniSettings = [];
     };
 
-    /**
-     * play the next animation stored in this.animations
-     */
+    /** play the next animation stored in this.animations */
     playNextAni = () => {
         const { nAni } = this;
         // if capturing and finished recording current chain, stop capturing and set capture flag back to false
@@ -183,8 +159,7 @@ export class AniViewer extends BasicViewer {
         this.aniIdx = newIdx;
     };
 
-    /**
-     * update animation and global time scale
+    /** update animation and global time scale
      * @param {ViewerProps["animation"]} prev
      * @param {ViewerProps["animation"]} current
      */
@@ -201,13 +176,9 @@ export class AniViewer extends BasicViewer {
         }
     };
 
-    /**
-     * capture current animation and save as video
-     */
+    /** capture current animation and save as video */
     captureAnimation = () => {
-        /**
-         * @type {Blob[]}
-         */
+        /** @type {Blob[]} */
         this.chunks = [];
         this.videoStream = this.canvas.captureStream(30);
 
@@ -239,9 +210,7 @@ export class AniViewer extends BasicViewer {
         this.mediaRecorder.start();
     };
 
-    /**
-     * called before animation capture
-     */
+    /** called before animation capture  */
     beforeCaptureAnimation = () => void 0;
 
     updateScene = dt => {

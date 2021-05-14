@@ -168,9 +168,7 @@ function ShareContent({ method }) {
     useEffect(() => {
         if (method !== 1) return; // QR
 
-        /**
-         * @type {HTMLInputElement}
-         */
+        /** @type {HTMLInputElement} */
         // @ts-ignore
         const shareTextField = document.getElementById("shareTextField");
         if (!shareTextField) return;

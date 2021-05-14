@@ -2,17 +2,13 @@ import { createContext, useReducer } from "react";
 import { settingsReducer } from "reducer/settingsReducer";
 import { defaultSettings } from "helpers/consts";
 
-/**
- * @type {React.Context<ApplicationState>}
- */
+/** @type {React.Context<ApplicationState>} */
 export const SettingsContext = createContext(null);
-/**
- * @type {React.Context< React.Dispatch<ReducerAction> >}
- */
+
+/** @type {React.Context< React.Dispatch<ReducerAction> >} */
 export const DispatchContext = createContext(null);
 
-/**
- * used to initialize global state
+/** used to initialize global state
  * @type {ApplicationState}
  */
 const initSettings = {};

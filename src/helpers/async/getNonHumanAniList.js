@@ -1,5 +1,4 @@
-/**
- * get list of animations associated with a given source id
+/** get list of animations associated with a given source id
  * @param {string} sourceId
  * @return {Promise<AnimationList>}
  */

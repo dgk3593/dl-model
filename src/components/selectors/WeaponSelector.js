@@ -9,9 +9,7 @@ import "./styles/WeaponSelector.css";
  * @param {function} params.onClick - called when an option is clicked
  */
 function WeaponSelector({ value, disabled, onClick }) {
-    /**
-     * @param {React.MouseEvent<HTMLDivElement, MouseEvent>} event
-     */
+    /** @param {React.MouseEvent<HTMLDivElement, MouseEvent>} event */
     const handleClick = event => {
         const { value } = event.currentTarget.dataset;
         onClick(value);

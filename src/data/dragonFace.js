@@ -1,6 +1,4 @@
-/**
- * @type {{ [id:string]: DragonFaceData }}
- */
+/** @type {{ [id:string]: DragonFaceData }} */
 const dragonFace = {
     d200001_01: { eye: 4, mouth: 0 },
     d200008_01: { eye: 4, mouth: 0 },

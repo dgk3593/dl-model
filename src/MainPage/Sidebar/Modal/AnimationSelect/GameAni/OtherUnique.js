@@ -22,8 +22,8 @@ function OtherUnique({ handleSelect }) {
                 variant="contained"
                 onClick={handleSelect}
                 data-value={ani.code}
-                data-name={`${chara} ${ani.name}`}
-                key={`${chara}-${ani.name}`}
+                data-name={`${chara.name} ${ani.name}`}
+                key={`${chara.name}-${ani.name}`}
             >
                 {ani.name}
             </Button>

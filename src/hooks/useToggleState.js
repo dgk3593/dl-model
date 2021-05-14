@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 
-/**
- * custom hook for a boolean state
+/** custom hook for a boolean state
  * @param {Boolean} initVal - initial value, default is false
  * @return {[state: Boolean, toggleFunction: Function]}
  */

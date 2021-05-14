@@ -23,9 +23,7 @@ function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
     const [sourceId, setSourceId] = useState(modelId);
     const [modalMode, setModalMode] = useState("");
 
-    /**
-     * @type {[ undefined|AnimationList , function]}
-     */
+    /** @type {[ undefined|AnimationList , function]} */
     const [aniList, setAniList] = useState();
     const [listLoading, setListLoading] = useState(true);
 

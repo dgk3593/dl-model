@@ -1,6 +1,4 @@
-/**
- * @type { Array <ModelData> }
- */
+/** @type { Array <ModelData> } */
 const specialWeaponList = [
     {
         id: "w399052_01",

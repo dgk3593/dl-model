@@ -12,9 +12,7 @@ export const matcapDir = `${process.env.PUBLIC_URL}/img/matcap`;
 
 export const DEFAULT_ADV_ANI = "CMN_MWM_03";
 
-/**
- * @type WeaponType[]
- */
+/** @type {WeaponType[]} */
 export const WEAPON_LIST = [
     "Sword",
     "Blade",
@@ -27,9 +25,7 @@ export const WEAPON_LIST = [
     "Manacaster",
 ];
 
-/**
- * @type {{ [paramName: string]: MatParamDetails }}
- */
+/** @type {{ [paramName: string]: MatParamDetails }} */
 export const matParamsDetails = {
     wireframe: {
         name: "Wireframe",
@@ -120,9 +116,7 @@ export const matParamsDetails = {
     },
 };
 
-/**
- *  list of parameters that can be set directly
- */
+/** list of parameters that can be set directly */
 export const matDirectSetParams = [
     "transparent",
     "opacity",
@@ -133,26 +127,20 @@ export const matDirectSetParams = [
     "shininess",
 ];
 
-/**
- * list of parameters whose value is a color code
- */
+/** list of parameters whose value is a color code */
 export const matColorParams = ["color", "emissive", "specular"];
 
-/**
- * @type { Array< [paramName: string, details: MatParamDetails] > }
- */
+/** @type { Array< [paramName: string, details: MatParamDetails] > } */
 const matParamsEntries = Object.entries(matParamsDetails);
-/**
- * default values of material parameters
+
+/** default values of material parameters
  * @type {{ [paramName: string]: * }}
  */
 const defaultMatParams = Object.fromEntries(
     matParamsEntries.map(([paramName, details]) => [paramName, details.default])
 );
 
-/**
- * list of parameters that need to set needsUpdate = true to be updated
- */
+/** list of parameters that need to set needsUpdate = true to be updated */
 export const needsUpdateParams = [
     "gradientMap",
     "flatShading",
@@ -160,8 +148,7 @@ export const needsUpdateParams = [
     "matcap",
 ];
 
-/**
- * default light setting
+/** default light setting
  * @type { Array <LightParam> }
  */
 export const defaultLights = [
@@ -182,16 +169,13 @@ export const defaultLights = [
     },
 ];
 
-/**
- * ASCII sets used to create ASCII art
- */
+/** ASCII sets used to create ASCII art */
 export const asciiSet = [
     " .:-=+*#%@",
     " .'`^\",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$",
 ];
 
-/**
- * used to initialize global state
+/** used to initialize global state
  * @type {ApplicationState}
  */
 export const defaultSettings = {
@@ -255,8 +239,7 @@ export const defaultSettings = {
     },
 };
 
-/**
- * map an init key to corresponding group and key in the global state
+/** map an init key to corresponding group and key in the global state
  * @type {{ [initKey: string]: {group: string, key: string, type: string} }}
  */
 export const initKeyMap = {
@@ -292,8 +275,7 @@ const commonInitKeys = [
 
 const aniInitKeys = ["ts", "cc"];
 
-/**
- * list of init keys corresponding to viewer type
+/** list of init keys corresponding to viewer type
  * @type {{ [viewerType: string]: Array<string> }}
  */
 export const initKeys = {
@@ -312,9 +294,7 @@ export const initKeys = {
     basic: [...commonInitKeys],
 };
 
-/**
- * list of supported materials
- */
+/** list of supported materials */
 export const MATERIALS = [
     "Basic",
     "Toon",
@@ -324,14 +304,10 @@ export const MATERIALS = [
     "Matcap",
 ];
 
-/**
- * list of supported materials
- */
+/** list of materials not using lights */
 export const NO_LIGHT_MATERIALS = ["Basic", "Matcap"];
 
-/**
- * parameters that all material has
- */
+/** parameters that all material has */
 export const matCommonParams = [
     "transparent",
     "opacity",
@@ -340,8 +316,7 @@ export const matCommonParams = [
     "color",
 ];
 
-/**
- * parameters specific to each type of materials
+/** parameters specific to each type of materials
  * @type {{ [materialName: string]: Array<string> }}
  */
 export const matExtraParams = {
@@ -369,7 +344,7 @@ export const spFaceTextures = {
     c110300_01: "ec110300_01",
 };
 
-/** Set of ids of models incompatible with AdvViewer*/
+/** Set of ids of models incompatible with AdvViewer */
 export const incompatibleModels = new Set([
     "c100007_01",
     "c100007_05",
@@ -400,9 +375,7 @@ export const aniModList = {
     r: { key: "repetitions", defaultValue: 1 },
 };
 
-/**
- * list of video codecs to check for
- */
+/** list of video codecs to check for */
 export const videoCodecs = [
     "video/mp4;codecs=h264",
     "video/webm;codecs=h264",

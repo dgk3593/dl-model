@@ -1,5 +1,4 @@
-/**
- * default camera coordinates
+/** default camera coordinates
  * @type {{ [key: string]: xyzCoordinate }}
  */
 export const cameraPositions = {

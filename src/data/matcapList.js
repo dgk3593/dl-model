@@ -1,6 +1,4 @@
-/**
- * @type { Array<{ name: string, path: string }> }
- */
+/** @type { Array<{ name: string, path: string }> } */
 const matcapList = [
     { name: "Black Stone", path: "matcap_black_stone.jpg" },
     { name: "Chrome 1", path: "matcap_chrome_1.jpg" },

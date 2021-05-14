@@ -9,8 +9,7 @@ import useStyles from "./styles/CharaCardStyles";
  * @param {React.MouseEvent<HTMLElement, MouseEvent>} event
  * @return {void}
  */
-/**
- * A single card in card gallery
+/** A single card in card gallery
  * @param {Object} props
  * @param {ModelData['id']} props.id - model's ID
  * @param {ModelData['name']} props.name - model's name
@@ -22,16 +21,8 @@ import useStyles from "./styles/CharaCardStyles";
  * @param {string} props.portraitDir - directory of the card's portrait
  */
 function AdvCard(props) {
-    const {
-        id,
-        name,
-        title,
-        rarity,
-        element,
-        weapon,
-        onClick,
-        portraitDir,
-    } = props;
+    const { id, name, title, rarity, element, weapon, onClick, portraitDir } =
+        props;
     const classes = useStyles();
 
     const eleIconPath = `${process.env.PUBLIC_URL}/img/filter/element_${element}.png`;

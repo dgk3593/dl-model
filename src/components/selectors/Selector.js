@@ -8,9 +8,7 @@ import "./styles/Selector.css";
  * @param {string[]} [params.texts] - display texts for the options
  */
 function Selector({ value, options, onClick, texts = null }) {
-    /**
-     * @param {React.MouseEvent<HTMLDivElement, MouseEvent>} event
-     */
+    /** @param {React.MouseEvent<HTMLDivElement, MouseEvent>} event */
     const handleClick = event => {
         event.stopPropagation();
         const { value } = event.currentTarget.dataset;

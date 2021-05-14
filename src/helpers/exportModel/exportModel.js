@@ -9,31 +9,28 @@ const exporters = {
     usdz: exportUSDZ,
 };
 
-/**
- * export 3d model
+/** export 3d model
  * @param {THREE.Object3D} model
  * @param {AppExportState} settings
  */
 export async function exportModel(model, settings) {
     const { format } = settings;
-    const optionList = exportOptions.find(option => option.format === format)
-        .options;
+    const optionList = exportOptions.find(
+        option => option.format === format
+    ).options;
 
     const options = filterObject(settings, optionList);
 
     exporters[format](model, options);
 }
 
-// /**
-//  * create a copy of the model without outlines
+// /** create a copy of the model without outlines
 //  * @param {THREE.Object3D} model
 //  */
 // function cloneModel(model) {
 //     const clone = model.clone(true);
 
-//     /**
-//      * @type {THREE.Object3D[]}
-//      */
+//     /** @type {THREE.Object3D[]} */
 //     const outlines = [];
 //     clone.traverseVisible(
 //         child => child.name === "outline" && outlines.push(child)
@@ -44,8 +41,7 @@ export async function exportModel(model, settings) {
 //     return clone;
 // }
 
-/**
- * convert model to stl data
+/** convert model to stl data
  * @param {THREE.Object3D} model
  * @param {Object} options
  */
@@ -64,11 +60,8 @@ async function model2stl(model, options) {
     return output;
 }
 
-/**
- * ! NEEDS SMOOTHING
- */
-/**
- * export model to stl
+/**  ! NEEDS SMOOTHING */
+/** export model to stl
  * @param {THREE.Object3D} model
  * @param {Object} options
  */
@@ -80,8 +73,7 @@ async function exportSTL(model, options) {
     downloadBlob(blob, fileName);
 }
 
-/**
- * convert model to ply data
+/** convert model to ply data
  * @param {THREE.Object3D} model
  * @param {Object} options
  */
@@ -95,11 +87,8 @@ async function model2ply(model, options) {
     return new Promise(resolve => exporter.parse(model, resolve, options));
 }
 
-/**
- * ! NEEDS SMOOTHING
- */
-/**
- * export model to stl
+/** ! NEEDS SMOOTHING */
+/** export model to stl
  * @param {THREE.Object3D} model
  * @param {Object} options
  */
@@ -115,8 +104,7 @@ async function exportPLY(model, options) {
     downloadBlob(blob, fileName);
 }
 
-/**
- * convert a model to USDZ
+/** convert a model to USDZ
  * @param {THREE.Object3D} model
  */
 async function model2usdz(model) {
@@ -127,11 +115,8 @@ async function model2usdz(model) {
     return exporter.parse(model);
 }
 
-/**
- * ! NOT WORKING WITH MULTIPLE MATERIALS
- */
-/**
- * Export a model to USDZ
+/** ! NOT WORKING WITH MULTIPLE MATERIALS */
+/** Export a model to USDZ
  * @param {THREE.Object3D} model
  */
 async function exportUSDZ(model) {
@@ -143,8 +128,7 @@ async function exportUSDZ(model) {
     downloadBlob(blob, fileName);
 }
 
-/**
- * convert model to glTF data
+/** convert model to glTF data
  * @param {THREE.Object3D} model
  * @param {{ }} options
  */
@@ -157,11 +141,8 @@ async function model2gltf(model, options) {
     return new Promise(resolve => exporter.parse(model, resolve, options));
 }
 
-/**
- * ! NOT WORKING WITH MULTIPLE MATERIALS
- */
-/**
- * export model to glTF
+/** ! NOT WORKING WITH MULTIPLE MATERIALS */
+/** export model to glTF
  * @param {THREE.Object3D} model
  * @param {Object} options
  */

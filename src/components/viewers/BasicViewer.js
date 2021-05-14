@@ -29,8 +29,7 @@ import fscreen from "fscreen";
 
 import { fbxSource } from "App";
 
-/**
- * Basic Viewer that supports adding / updating:
+/** Basic Viewer that supports adding / updating:
  *   - 1 main model
  *   - auto rotate
  *   - viewport
@@ -55,14 +54,10 @@ class BasicViewer extends PureComponent {
         this.addFullScreenListener();
     }
 
-    /**
-     * @param {ViewerProps} prev
-     */
+    /** @param {ViewerProps} prev */
     componentDidUpdate(prev) {
         if (!this.finishedInit) return;
-        /**
-         * @type {ViewerProps}
-         */
+        /** @type {ViewerProps} */
         const current = this.props;
 
         // print updated props to console
@@ -107,20 +102,15 @@ class BasicViewer extends PureComponent {
             );
     };
 
-    /**
-     * disable input and display a message, default is "Loading..."
+    /** disable input and display a message, default is "Loading..."
      * @param {string} [msg]
      */
     disableInput = msg => this.props.setLoadingMsg(msg || "Loading...");
 
-    /**
-     * remove loading message
-     */
+    /** remove loading message */
     enableInput = () => this.props.setLoadingMsg("");
 
-    /**
-     * called when viewer is mounted to initialize the scene
-     */
+    /** called when viewer is mounted to initialize the scene */
     initialize = async () => {
         this.disableInput();
 
@@ -135,14 +125,10 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
-    /**
-     * Called after main model is loaded and added to scene
-     */
+    /** Called after main model is loaded and added to scene */
     afterMainModelLoad = () => void 0;
 
-    /**
-     * initialize scene, display size, floor, clock, light, camera, controls, and renderers
-     */
+    /** initialize scene, display size, floor, clock, light, camera, controls, and renderers */
     initScene = () => {
         // viewport
         this.viewport = this.props.viewport || {
@@ -164,9 +150,7 @@ class BasicViewer extends PureComponent {
             CAM_PARAMS.near,
             CAM_PARAMS.far
         );
-        /**
-         * @type {xyzCoordinate}
-         */
+        /** @type {xyzCoordinate} */
         this.cameraPosition = this.props.cameraPosition || [2, 0, 10];
         this.camera.position.set(...this.cameraPosition);
         this.camera.updateProjectionMatrix();
@@ -207,9 +191,7 @@ class BasicViewer extends PureComponent {
 
         // Controls
         this.controls = new OrbitControls(this.camera, this.mount);
-        /**
-         * @type {xyzCoordinate}
-         */
+        /** @type {xyzCoordinate} */
         this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
         this.controls.target.set(...this.controlsPosition);
         this.controls.update();
@@ -217,9 +199,7 @@ class BasicViewer extends PureComponent {
         this.animate();
     };
 
-    /**
-     * load, and perform basic processing on main model
-     */
+    /** load, and perform basic processing on main model */
     loadMainModel = async () => {
         const modelId = this.props.model.id;
         this.modelInfo.main = modelId;
@@ -232,8 +212,7 @@ class BasicViewer extends PureComponent {
         return;
     };
 
-    /**
-     * enable / disable Anti Aliasing
+    /** enable / disable Anti Aliasing
      * @param {Boolean} enabled
      */
     set AA(enabled) {
@@ -252,8 +231,7 @@ class BasicViewer extends PureComponent {
         this.canvas = newCanvas;
     }
 
-    /**
-     * add light to scene
+    /** add light to scene
      * @param {LightParam} light
      */
     addLight = light => {
@@ -266,38 +244,29 @@ class BasicViewer extends PureComponent {
         this.lights.push(newLight);
     };
 
-    /**
-     * add lights to scene
+    /** add lights to scene
      * @param {LightParam[]} lights
      */
     addAllLights = lights => {
-        /**
-         * @type {THREE.Light[]}
-         */
+        /** @type {THREE.Light[]} */
         this.lights = [];
         lights.forEach(this.addLight);
     };
 
-    /**
-     * remove light from scene
+    /** remove light from scene
      * @param {THREE.Light} light
      */
     removeLight = light => this.scene.remove(light);
 
-    /**
-     * remove all lights in the scene
-     */
+    /** remove all lights in the scene */
     removeAllLights = () => this.lights.forEach(this.removeLight);
 
-    /**
-     * add model to scene
+    /** add model to scene
      * @param {THREE.Object3D} model
      */
     addToScene = model => this.scene?.add(model);
 
-    /**
-     * change main model's texture if specified
-     */
+    /** change main model's texture if specified */
     initTexture = async () => {
         const { id: modelId, texture } = this.props.model;
         if (!texture || texture === ">") return;
@@ -315,16 +284,13 @@ class BasicViewer extends PureComponent {
         });
     };
 
-    /**
-     * apply modifier code to main model
-     */
+    /** apply modifier code to main model */
     applyModelMod = () => {
         const modCode = this.props.model.mod;
         modCode && applyMod(this.models.main, modCode);
     };
 
-    /**
-     * main model basic processing:
+    /** main model basic processing:
      * remove effects, change material, change texture, add outline, then add to scene
      */
     basicMainProcessing = async () => {
@@ -353,8 +319,7 @@ class BasicViewer extends PureComponent {
         this.addToScene(model);
     };
 
-    /**
-     * update viewer's display
+    /** update viewer's display
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
      */
@@ -365,15 +330,13 @@ class BasicViewer extends PureComponent {
         this.otherUpdate(prev, current);
     };
 
-    /**
-     * update settings other than model and environment
+    /** update settings other than model and environment
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
      */
     otherUpdate = (prev, current) => void 0;
 
-    /**
-     * update viewport, outline, material, lighting, ASCII,
+    /** update viewport, outline, material, lighting, ASCII,
      * camera, control, background, and Anti Aliasing
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
@@ -396,8 +359,7 @@ class BasicViewer extends PureComponent {
         this.AA = current.antiAliasing;
     };
 
-    /**
-     * update model settings
+    /** update model settings
      * @param {ViewerProps} prev
      * @param {ViewerProps} current
      */
@@ -405,8 +367,7 @@ class BasicViewer extends PureComponent {
         this.updateMainModel(prev.model, current.model);
     };
 
-    /**
-     * update viewport
+    /** update viewport
      * @param {ViewerProps["viewport"]} prev
      * @param {ViewerProps["viewport"]} current
      */
@@ -424,18 +385,14 @@ class BasicViewer extends PureComponent {
         this.props.background === "camera" && this.setVideoBackgroundSize();
     };
 
-    /**
-     * remove from scene and dispose main model
-     */
+    /** remove from scene and dispose main model */
     disposeMainModel = () => {
         const mainModel = this.models.main;
         this.scene?.remove(mainModel);
         dispose3dObject(mainModel);
     };
 
-    /**
-     * replace main model
-     */
+    /** replace main model */
     replaceMainModel = async () => {
         this.disableInput();
 
@@ -446,8 +403,7 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
-    /**
-     * update main model
+    /** update main model
      * @param {ViewerProps["model"]} prev
      * @param {ViewerProps["model"]} current
      */
@@ -465,18 +421,13 @@ class BasicViewer extends PureComponent {
         this.afterMainModelUpdate();
     };
 
-    /**
-     * called before main model is updated
-     */
+    /** called before main model is updated */
     beforeMainModelUpdate = () => void 0;
 
-    /**
-     * called after main model is updated
-     */
+    /** called after main model is updated */
     afterMainModelUpdate = () => void 0;
 
-    /**
-     * update outline parameters
+    /** update outline parameters
      * @param {Map<string, *>} update
      */
     updateOutlineParams = update => {
@@ -486,8 +437,7 @@ class BasicViewer extends PureComponent {
         });
     };
 
-    /**
-     * update outline settings
+    /** update outline settings
      * @param {AppOutlineState} prev - previous settings
      * @param {AppOutlineState} current - current settings
      */
@@ -503,34 +453,26 @@ class BasicViewer extends PureComponent {
         this.updateOutlineParams(update);
     };
 
-    /**
-     * get relevant parameters for the current material type
-     */
+    /** get relevant parameters for the current material type */
     get matParams() {
         const { type: materialType, ...allParams } = this.props.material;
         const paramList = getParamsList(materialType);
         return filterObject(allParams, paramList);
     }
 
-    /**
-     * get the current material type
-     */
+    /** get the current material type */
     get matType() {
         return this.props.material.type;
     }
 
-    /**
-     * apply material setting to a newly loaded model
-     */
+    /** apply material setting to a newly loaded model */
     applyNewModelMat = model => {
         const params = this.matParams;
         const defaultParams = { useTexture: true };
         updateMatParams(model, { prevParams: defaultParams, params });
     };
 
-    /**
-     * update material settings
-     */
+    /** update material settings */
     updateMaterial = (prev, current) => {
         if (prev === current) return;
 
@@ -549,8 +491,7 @@ class BasicViewer extends PureComponent {
         updateMatParams(mainModel, { prevParams, params });
     };
 
-    /**
-     * update lighting
+    /** update lighting
      * @param {LightParam[]} prev
      * @param {LightParam[]} current
      */
@@ -561,8 +502,7 @@ class BasicViewer extends PureComponent {
         }
     };
 
-    /**
-     * Update ASCII settings
+    /** Update ASCII settings
      * @param {ViewerProps["ascii"]} prev
      * @param {ViewerProps["ascii"]} current
      */
@@ -588,9 +528,7 @@ class BasicViewer extends PureComponent {
         this.showAscii();
     };
 
-    /**
-     * render scene as ASCII
-     */
+    /** render scene as ASCII */
     showAscii = async () => {
         const { charSet, color, bgColor, invert } = this.props.ascii;
         const { AsciiEffect } = await import(
@@ -633,8 +571,7 @@ class BasicViewer extends PureComponent {
         this.controls.update();
     };
 
-    /**
-     * update renderer's pixel ratio
+    /** update renderer's pixel ratio
      * @param {number} prev
      * @param {number} current
      */
@@ -662,9 +599,7 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
-    /**
-     * @param {ColorCode | 'transparent' | 'camera'} bg
-     */
+    /** @param {ColorCode | 'transparent' | 'camera'} bg */
     set background(bg) {
         switch (bg) {
             case "transparent":
@@ -700,9 +635,7 @@ class BasicViewer extends PureComponent {
         this.video.height = videoHeight;
     };
 
-    /**
-     * use hardware camera as background, rear facing is prioritized
-     */
+    /** use hardware camera as background, rear facing is prioritized */
     useCameraAsBackground = async () => {
         if (!navigator.mediaDevices?.getUserMedia) return;
 
@@ -735,9 +668,7 @@ class BasicViewer extends PureComponent {
         // this.setVideoBackgroundSize();
     };
 
-    /**
-     * set display canvas
-     */
+    /** set display canvas */
     set canvas(canvas) {
         const oldCanvas = this._canvas;
         oldCanvas && this.mount.removeChild(oldCanvas);
@@ -745,15 +676,12 @@ class BasicViewer extends PureComponent {
         this._canvas = canvas;
     }
 
-    /**
-     * get currently displayed canvas
-     */
+    /** get currently displayed canvas */
     get canvas() {
         return this._canvas;
     }
 
-    /**
-     * rotate the floor
+    /** rotate model
      * @param {number} dt - time difference
      */
     rotateModel = dt => {
@@ -764,8 +692,7 @@ class BasicViewer extends PureComponent {
         this.models.main.rotateY(angle);
     };
 
-    /**
-     * called during every animation frame
+    /** called during every animation frame
      * @param {number} dt - time difference since last call
      */
     updateScene = dt => void 0;
@@ -777,9 +704,7 @@ class BasicViewer extends PureComponent {
         downloadURL(screenshot, `screenshot_${getDateTimeString()}.png`);
     };
 
-    /**
-     * render loop
-     */
+    /** render loop */
     animate = () => {
         this.frameId = requestAnimationFrame(this.animate);
 

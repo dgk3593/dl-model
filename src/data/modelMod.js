@@ -1,6 +1,4 @@
-/**
- * @type {{ [id:string]: ModelMod[] }}
- */
+/** @type {{ [id:string]: ModelMod[] }} */
 const modelMod = {
     // Finni
     c110383_01: [

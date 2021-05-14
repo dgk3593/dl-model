@@ -1,6 +1,4 @@
-/**
- * @type { Array <ModelData> }
- */
+/** @type { Array <ModelData> } */
 const allies = [
     {
         id: "100009_01",

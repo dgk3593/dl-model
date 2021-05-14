@@ -1,5 +1,4 @@
-/**
- * default control coordinates
+/** default control coordinates
  * @type {{ [key: string]: xyzCoordinate }}
  */
 export const controlsPosition = {

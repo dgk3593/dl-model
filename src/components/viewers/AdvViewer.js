@@ -17,16 +17,13 @@ import {
 
 const SIDES = ["Right", "Left"];
 
-/**
- *  Extension of Ani Viewer that adds:
+/** Extension of Ani Viewer that adds:
  *    - Weapons
  *    - Face Texture
  *    - Face offset
  */
 export class AdvViewer extends AniViewer {
-    /**
-     * @param {ViewerProps} props
-     */
+    /** @param {ViewerProps} props  */
     constructor(props) {
         super(props);
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
@@ -64,9 +61,7 @@ export class AdvViewer extends AniViewer {
         this.updateAnimation(prev.animation, current.animation);
     };
 
-    /**
-     * initialize facial expressions
-     */
+    /** initialize facial expressions */
     initFace = () => {
         const modelId = this.props.model.id;
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
@@ -79,9 +74,7 @@ export class AdvViewer extends AniViewer {
         this.updateFace(defaultFaceParams, this.props.model);
     };
 
-    /**
-     * add specified weapons
-     */
+    /** add specified weapons */
     addWeapons = async () => {
         this.getWeaponInfo();
 
@@ -92,9 +85,7 @@ export class AdvViewer extends AniViewer {
         this.attachAllWeapons();
     };
 
-    /**
-     * extract data from weapon code
-     */
+    /** extract data from weapon code */
     getWeaponInfo = () => {
         const { weaponRight, weaponLeft } = this.props.model;
         const newInfo = {
@@ -104,9 +95,7 @@ export class AdvViewer extends AniViewer {
         this.modelInfo = Object.assign(this.modelInfo, newInfo);
     };
 
-    /**
-     * load weapons during initialization
-     */
+    /** load weapons during initialization */
     initWeaponLoad = () => {
         const weaponRight = this.modelInfo.weaponRight?.modelPath;
         const loadWeaponR = loadModel(weaponRight);
@@ -117,9 +106,7 @@ export class AdvViewer extends AniViewer {
         return Promise.all([loadWeaponR, loadWeaponL]);
     };
 
-    /**
-     * initialize all weapons
-     */
+    /** initialize all weapons */
     initAllWeapons = async () => {
         const materialType = this.matType;
         SIDES.forEach(async side => {
@@ -137,8 +124,7 @@ export class AdvViewer extends AniViewer {
         });
     };
 
-    /**
-     * attach weapon model to main model's hand
+    /** attach weapon model to main model's hand
      * @param {THREE.Group} weapon - weapon model
      * @param {string} side - Left or Right
      */
@@ -151,9 +137,7 @@ export class AdvViewer extends AniViewer {
         });
     };
 
-    /**
-     * attach weapons when they are loaded
-     */
+    /** attach weapons when they are loaded */
     attachAllWeapons = () => {
         SIDES.forEach(side => {
             const key = `weapon${side}`;
@@ -164,8 +148,7 @@ export class AdvViewer extends AniViewer {
         });
     };
 
-    /**
-     * detach the weapon on one side
+    /**detach the weapon on one side
      * @param {string} side - Left or Right
      */
     detachWeapon = side => {
@@ -176,13 +159,10 @@ export class AdvViewer extends AniViewer {
         model.parent.remove(model);
     };
 
-    /**
-     * detach all weapons attached to main model
-     */
+    /** detach all weapons attached to main model */
     detachAllWeapons = () => SIDES.forEach(side => this.detachWeapon(side));
 
-    /**
-     * change eye texture
+    /**change eye texture
      * @param { AdvFaceState } prev - previous state
      * @param { AdvFaceState } current - current state
      * @return {Boolean} whether texture was updated
@@ -204,9 +184,7 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
-    /**
-     * @param {number} newIdx
-     */
+    /** @param {number} newIdx */
     set eyeIdx(newIdx) {
         if (!newIdx) return;
 
@@ -219,8 +197,7 @@ export class AdvViewer extends AniViewer {
         this._eyeIdx = newIdx;
     }
 
-    /**
-     * change mouth texture
+    /**change mouth texture
      * @param { AdvFaceState } prev - previous state
      * @param { AdvFaceState } current - current state
      * @return {Boolean} whether texture was updated
@@ -242,9 +219,7 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
-    /**
-     * @param {number} newIdx
-     */
+    /** @param {number} newIdx */
     set mouthIdx(newIdx) {
         if (!newIdx) return;
 
@@ -257,8 +232,7 @@ export class AdvViewer extends AniViewer {
         this._mouthIdx = newIdx;
     }
 
-    /**
-     * update eyes and mouth texture
+    /** update eyes and mouth texture
      * @param {AdvFaceState} prev
      * @param {AdvFaceState} current
      */
@@ -271,8 +245,7 @@ export class AdvViewer extends AniViewer {
         }
     };
 
-    /**
-     * update uv of face mesh
+    /** update uv of face mesh
      * @param {AdvFaceState} params
      */
     updateFaceOffset = ({ eyeIdx, mouthIdx }) => {
@@ -280,8 +253,7 @@ export class AdvViewer extends AniViewer {
         this.mouthIdx = mouthIdx;
     };
 
-    /**
-     * update face texture and offset
+    /** update face texture and offset
      * @param {AdvFaceState} prev
      * @param {AdvFaceState} current
      */
@@ -290,8 +262,7 @@ export class AdvViewer extends AniViewer {
         this.updateFaceOffset(current);
     };
 
-    /**
-     * add, change, or remove weapons if needed
+    /** add, change, or remove weapons if needed
      * @param {AppModelState} prev
      * @param {AppModelState} current
      */

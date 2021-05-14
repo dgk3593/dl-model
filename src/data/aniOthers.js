@@ -1,6 +1,4 @@
-/**
- * @type {AnimationList}
- */
+/** @type {AnimationList}  */
 const aniOthers = [
     {
         name: "Encounter Boss 1",

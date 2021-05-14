@@ -1,5 +1,4 @@
-/**
- * map weapon type to weapon code
+/** map weapon type to weapon code
  * @type {{ [weaponName: string]: string }}
  */
 export const WEAPON_CODE = {
@@ -48,24 +47,17 @@ export const FS_LENGTH = {
 export const getStandbyCode = (weapon, gender) =>
     `${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
 
-/**
- * @param {WeaponType} weapon
- */
+/** @param {WeaponType} weapon */
 export const getVictoryCode = weapon =>
     `${WEAPON_CODE[weapon]}_WIN_01>${WEAPON_CODE[weapon]}_WIN_02`;
 
-/**
- * @param {WeaponType} weapon
- */
+/**@param {WeaponType} weapon*/
 export const getDashAtkCode = weapon => `${WEAPON_CODE[weapon]}_DAS_02`;
 
-/**
- * @param {WeaponType} weapon
- */
+/**@param {WeaponType} weapon */
 export const getRollCode = weapon => `${WEAPON_CODE[weapon]}_ROL_01`;
 
-/**
- * Combo chain code
+/** Combo chain code
  * @param {WeaponType} weapon
  */
 export const getComboCode = weapon => {
@@ -79,8 +71,7 @@ export const getComboCode = weapon => {
     return parts.join(">");
 };
 
-/**
- * Force Strike chain code
+/** Force Strike chain code
  * @param {WeaponType} weapon
  */
 export const getFSCode = weapon => {
@@ -93,8 +84,7 @@ export const getFSCode = weapon => {
     return parts.join(">");
 };
 
-/**
- * Join Lobby chain code
+/** Join Lobby chain code
  * @param {WeaponType} weapon
  * @param {"Male" | "Female"} gender
  */

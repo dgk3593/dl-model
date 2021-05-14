@@ -15,8 +15,7 @@ import {
     matcapDir,
 } from "helpers/consts";
 
-/**
- * load a 3D model
+/** load a 3D model
  * @param {string} url
  * @return { ?Promise<THREE.Group>}
  */
@@ -29,8 +28,7 @@ export const loadModel = url => {
     );
 };
 
-/**
- * Load a texture
+/** Load a texture
  * @param {string} url
  * @return {Promise<THREE.Texture>}
  */
@@ -43,15 +41,13 @@ export const loadTexture = url => {
     );
 };
 
-/**
- * @param {string} name
- */
+/** @param {string} name */
 const getMatcapPath = name => {
     const matcap = matcapList.find(e => e.name === name);
     return matcap?.path ? `${matcapDir}/${matcap.path}` : null;
 };
 
-/**
+/** load matcap texture
  * @param {string} name
  * @return {null | Promise< THREE.Texture >}
  */
@@ -60,14 +56,12 @@ export const loadMatcap = name => {
     return path ? loadTexture(path) : null;
 };
 
-/**
- * get the path to the animation file
+/** get the path to the animation file
  * @param {string} name
  */
 const getAniPath = name => `${fbxSource}/animations/${name}.json`;
 
-/**
- * load a single animation
+/** load a single animation
  * @param {AniListItem} aniListItem
  * @return {Promise<THREE.AnimationClip>}
  */
@@ -81,15 +75,13 @@ const loadSingleAni = ({ aniName }) => {
     );
 };
 
-/**
- * Load all animations in a list of animation
+/** Load all animations in a list of animation
  * @param {AniList} aniList
  */
 export const loadAnimations = aniList =>
     Promise.all(aniList.map(loadSingleAni));
 
-/**
- * get all meshes of a 3D object
+/** get all meshes of a 3D object
  * @param {THREE.Group} object
  * @param {Boolean} getOutline - whether to include outline meshes
  * @returns {Array}
@@ -108,8 +100,7 @@ export const getMeshes = (object, getOutline = false) => {
     return meshes;
 };
 
-/**
- * get all materials of a 3D object
+/** get all materials of a 3D object
  * @param {THREE.Group} object
  */
 export const getMaterial = object => {
@@ -120,20 +111,17 @@ export const getMaterial = object => {
     return materials;
 };
 
-/**
- * get the path to the model's fbx file
+/** get the path to the model's fbx file
  * @param {string} id
  */
 export const getModelPath = id => `${fbxSource}/fbx/${id}/${id}.fbx`;
 
-/**
- * get the path to the model's texture file
+/** get the path to the model's texture file
  * @param {string} id
  */
 export const getTexturePath = id => `${fbxSource}/fbx/${id}/${id}.png`;
 
-/**
- * get weapon data from weapon code
+/** get weapon data from weapon code
  * @param {string} code
  * @return {AdvWeaponData}
  */
@@ -148,9 +136,7 @@ export const analyzeWeaponCode = code => {
     return { modelPath, texturePath, flipped };
 };
 
-/**
- * dispose a 3D object
- */
+/** dispose a 3D object */
 export const dispose3dObject = object => {
     if (!object) return;
 
@@ -186,8 +172,7 @@ export const dispose3dObject = object => {
     meshes.forEach(disposeMesh);
 };
 
-/**
- * get list of parameter names relevant to a material type
+/** get list of parameter names relevant to a material type
  * @param {string} matType
  */
 export const getParamsList = matType => [
@@ -195,9 +180,7 @@ export const getParamsList = matType => [
     ...matExtraParams[matType],
 ];
 
-/**
- * Hide all eye and mouth that's not mEye_01 or mMouth_01
- */
+/** Hide all eye and mouth that's not mEye_01 or mMouth_01 */
 export const initDragonFace = model => {
     const nameRegex = /m[A-Z].*_[0-9]/m;
     model.traverse(child => {
@@ -210,9 +193,7 @@ export const initDragonFace = model => {
     });
 };
 
-/**
- * get all eye meshes of a dragon model
- */
+/** get all eye meshes of a dragon model */
 export const getDragonEye = model => {
     const eyes = [];
     const nameRegex = /mEye_[0-9]/m;
@@ -227,9 +208,7 @@ export const getDragonEye = model => {
     return eyes;
 };
 
-/**
- * get all mouth meshes of a dragon model
- */
+/** get all mouth meshes of a dragon model */
 export const getDragonMouth = model => {
     const mouths = [];
     const nameRegex = /mMouth_[0-9]/m;
@@ -244,8 +223,7 @@ export const getDragonMouth = model => {
     return mouths;
 };
 
-/**
- * make all effect meshes of the model invisible
+/** make all effect meshes of the model invisible
  * @param {THREE.Group} model
  */
 export const removeEffects = model => {
@@ -253,9 +231,7 @@ export const removeEffects = model => {
     meshes.forEach(mesh => (mesh.visible = !mesh.name.includes("Eff")));
 };
 
-/**
- * set frustumCulled = false for all children of a model
- */
+/** set frustumCulled = false for all children of a model */
 export const disableFrustumCulling = model => {
     model.traverse(child => {
         if (!child.isMesh) return;
@@ -264,8 +240,7 @@ export const disableFrustumCulling = model => {
     });
 };
 
-/**
- * create a new material
+/** create a new material
  * @param {string} materialType - type of material to create
  * @param {Object} params
  * @param {THREE.Texture} params.map - texture for new material
@@ -277,8 +252,7 @@ const createNewMaterial = (materialType, params) => {
     return new THREE[matType](params);
 };
 
-/**
- * change material and optionally the texture of a 3D object
+/** change material and optionally the texture of a 3D object
  * @param {THREE.Group} target - object to apply change to
  * @param {object} params - parameters
  * @param {string} params.materialType - type of material to change to
@@ -337,8 +311,7 @@ export const changeMaterial = (
     });
 };
 
-/**
- * Add outline to object and return reference to outlines
+/** Add outline to object and return reference to outlines
  * @param {THREE.Group} object
  * @param {OutlineParams} params
  */
@@ -348,9 +321,7 @@ export const createOutline = async (object, params) => {
     const outlines = [];
     const outlineMaterial = await createOutlineMaterial(params);
 
-    /**
-     * if a mesh's name includes any word in this list, skip
-     */
+    /** if a mesh's name includes any word in this list, skip */
     const skipList = ["Eff", "Extension"];
     const meshes = getMeshes(object);
     meshes.forEach(mesh => {
@@ -405,8 +376,7 @@ const loadShader = async name => {
     return loadShaderFiles(shaderDir, name);
 };
 
-/**
- * create outline material
+/** create outline material
  * @param {OutlineParams} params
  */
 const createOutlineMaterial = async ({ size, color, opacity }) => {
@@ -431,8 +401,7 @@ const createOutlineMaterial = async ({ size, color, opacity }) => {
     return outlineMaterial;
 };
 
-/**
- * apply settings to an outline mesh
+/** apply settings to an outline mesh
  * @param {THREE.Mesh} outline
  * @param {Map<string, *>} settings
  */
@@ -460,9 +429,7 @@ export const applyOutlineSettings = (outline, settings) => {
     });
 };
 
-/**
- * replace material of an object
- */
+/** replace material of an object */
 const replaceMaterial = (object, newMaterial) => {
     const { material } = object;
     // dispose old material
@@ -478,8 +445,7 @@ const replaceMaterial = (object, newMaterial) => {
         : newMaterial;
 };
 
-/**
- * calculate the difference between 2 face texture files
+/** calculate the difference between 2 face texture files
  * @param {string} currentTexture
  * @param {string} prevTexture
  * @return {xyCoordinate}
@@ -488,8 +454,7 @@ export const calculateTextureOffset = (currentTexture, prevTexture) => {
     const offset = { x: 0, y: 0 };
     if (currentTexture !== prevTexture) {
         const [prevOffsetX, prevOffsetY] = textureOffsets[prevTexture] || [
-            0,
-            0,
+            0, 0,
         ];
         const [currentOffsetX, currentOffsetY] = textureOffsets[
             currentTexture
@@ -501,8 +466,7 @@ export const calculateTextureOffset = (currentTexture, prevTexture) => {
     return [offset.x, offset.y];
 };
 
-/**
- * calculate the difference between 2 face index
+/** calculate the difference between 2 face index
  * @param {number} currentIdx
  * @param {number} prevIdx
  * @return {xyCoordinate}
@@ -511,9 +475,8 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
     const offset = { x: 0, y: 0 };
     if (currentIdx !== prevIdx) {
         const [prevOffsetX, prevOffsetY] = idxOffsets[`face${prevIdx}`];
-        const [currentOffsetX, currentOffsetY] = idxOffsets[
-            `face${currentIdx}`
-        ];
+        const [currentOffsetX, currentOffsetY] =
+            idxOffsets[`face${currentIdx}`];
 
         offset.x = currentOffsetX - prevOffsetX;
         offset.y = currentOffsetY - prevOffsetY;
@@ -521,8 +484,7 @@ export const calculateIdxOffset = (currentIdx, prevIdx) => {
     return [offset.x, offset.y];
 };
 
-/**
- * generate offset applying functions
+/** generate offset applying functions
  * @param {string} part - part to apply offset
  */
 const applyOffset = part => (target, offset) => {
@@ -551,50 +513,49 @@ export const applyEyeOffset = applyOffset("Eye");
 export const applyMouthOffset = applyOffset("Mouth");
 // export const applyBodyOffset = applyOffset("BodyAll");
 
-/**
- * generate texture applying functions
+/** generate texture applying functions
  * @param {string} part - part to apply offset
  */
-const applyTexture = part => (target, { materialType, textureId }) => {
-    const texturePath = getTexturePath(textureId);
-    const texture = new THREE.TextureLoader().load(texturePath);
-    texture.encoding = THREE.sRGBEncoding;
+const applyTexture =
+    part =>
+    (target, { materialType, textureId }) => {
+        const texturePath = getTexturePath(textureId);
+        const texture = new THREE.TextureLoader().load(texturePath);
+        texture.encoding = THREE.sRGBEncoding;
 
-    const materialParams = {
-        map: texture,
-        skinning: true,
+        const materialParams = {
+            map: texture,
+            skinning: true,
+        };
+        const newMaterial = createNewMaterial(materialType, materialParams);
+        target.traverse(child => {
+            if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
+                return;
+
+            const targetGroup = child.geometry.groups.find(
+                group =>
+                    child.material[group.materialIndex].name === `mt${part}CH`
+            );
+            if (!targetGroup) return;
+
+            const { materialIndex } = targetGroup;
+            const oldMaterial = child.material[materialIndex];
+            newMaterial.name = oldMaterial.name;
+
+            child.material[materialIndex] = newMaterial;
+        });
     };
-    const newMaterial = createNewMaterial(materialType, materialParams);
-    target.traverse(child => {
-        if (child.name !== "mBodyAll" || child.geometry.groups.length !== 3)
-            return;
-
-        const targetGroup = child.geometry.groups.find(
-            group => child.material[group.materialIndex].name === `mt${part}CH`
-        );
-        if (!targetGroup) return;
-
-        const { materialIndex } = targetGroup;
-        const oldMaterial = child.material[materialIndex];
-        newMaterial.name = oldMaterial.name;
-
-        child.material[materialIndex] = newMaterial;
-    });
-};
 
 export const applyEyeTexture = applyTexture("Eye");
 export const applyMouthTexture = applyTexture("Mouth");
 // export const applyBodyTexture = applyTexture("BodyAll");
 
-/**
- * get animation modifiers from a list of modifiers
+/** get animation modifiers from a list of modifiers
  * @param {Array<string>} modList
  * @return {AniModifier} object containing values to modify animation
  */
 const getAniModifiers = modList => {
-    /**
-     * @type {FaceChangeArray}
-     */
+    /** @type {FaceChangeArray} */
     const faceChanges = [];
     let timeScale = 1,
         repetitions = 1;
@@ -623,8 +584,7 @@ const getAniModifiers = modList => {
     };
 };
 
-/**
- * get animation data from single animation code
+/** get animation data from single animation code
  * @param {string} code - single animation code
  * @return {AniListItem}
  */
@@ -634,8 +594,7 @@ const getAniData = code => {
     return { aniName, ...modifiers };
 };
 
-/**
- * turn chain animation code to a list of animation name and modifiers
+/** turn chain animation code to a list of animation name and modifiers
  * @param {string} code
  * @return {AniList}
  */
@@ -648,8 +607,7 @@ export const analyzeChainCode = code => {
     return aniList;
 };
 
-/**
- * simplify and sort a face change array
+/** simplify and sort a face change array
  * @param {FaceChangeArray} faceChanges
  * @return {FaceChangeArray} simplified and sorted face change array
  */
@@ -665,9 +623,7 @@ export const processFaceChanges = faceChanges => {
         return sorted;
     }
 
-    /**
-     * @type {FaceChangeArray}
-     */
+    /** @type {FaceChangeArray} */
     const simplified = [];
     timeStamps.forEach(time => {
         let output = { time, id: nanoid(), eyeIdx: NaN, mouthIdx: NaN };
@@ -678,8 +634,7 @@ export const processFaceChanges = faceChanges => {
     return simplified;
 };
 
-/**
- * extend face change array if repetitions > 1
+/** extend face change array if repetitions > 1
  * @param {FaceChangeArray} faceChanges - face change array
  * @param {number} repetitions - number of repetitions
  * @return {FaceChangeArray} extended face change array
@@ -690,8 +645,7 @@ export const getFaceChangesQueue = (faceChanges, repetitions) => {
     // [0, 100, 200,...]
     const timeOffset = new Array(repetitions).fill().map((_, i) => i * 100);
 
-    /**
-     * offset the time of the whole face change array
+    /** offset the time of the whole face change array
      * @param {number} offset
      * @return {FaceChangeArray} offsetted array
      */
@@ -704,8 +658,7 @@ export const getFaceChangesQueue = (faceChanges, repetitions) => {
     return timeOffset.flatMap(offsetFaceChanges);
 };
 
-/**
- * convert animation chain code to AnimationChain
+/** convert animation chain code to AnimationChain
  * @param {string} code - animation chain code
  * @param {string} name - animation name
  * @return {AnimationChain}
@@ -716,9 +669,7 @@ export const chainCodeToList = (code, name) => {
     const output = aniList.map((ani, i) => {
         const { aniName, timeScale, repetitions, faceChanges } = ani;
         const partName = name.concat(length > 1 ? `#${i + 1}` : "");
-        /**
-         * @type {AniChainItem}
-         */
+        /** @type {AniChainItem} */
         const listItem = {
             name: partName,
             id: nanoid(),
@@ -732,8 +683,7 @@ export const chainCodeToList = (code, name) => {
     return output;
 };
 
-/**
- * create gradient map for toon material
+/** create gradient map for toon material
  * @param {number} nTones - number of tones
  */
 export const createGradientMap = nTones => {
@@ -746,8 +696,7 @@ export const createGradientMap = nTones => {
     return map;
 };
 
-/**
- * apply a parameter change to all material of input array
+/** apply a parameter change to all material of input array
  * @param {Array} materials - array of materials
  * @param {[paramName: string, value:*]} param parameters to apply
  */
@@ -794,8 +743,7 @@ export const applyMaterialParam = (materials, param) => {
     });
 };
 
-/**
- * update model's material parameters
+/** update model's material parameters
  * @param {THREE.Group} model
  * @param {{ prevParams?: {}, params: {} }} data
  */
@@ -805,8 +753,7 @@ export const updateMatParams = (model, { prevParams = {}, params }) => {
     updated.forEach(update => applyMaterialParam(materials, update));
 };
 
-/**
- * create light from params
+/** create light from params
  * @param {LightParam} params
  * @return {THREE.Light}
  */
@@ -828,8 +775,7 @@ export const createLight = params => {
     return light;
 };
 
-/**
- * replace model's old texture with a new texture from provided path
+/** replace model's old texture with a new texture from provided path
  * @param {THREE.Group} target - object to replace texture
  * @param {Object} params
  * @param {string} params.oldTexture - name of texture to be replaced
@@ -849,9 +795,7 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
     });
 };
 
-/**
- * @param {string} modCode
- */
+/** @param {string} modCode */
 const analyzeModelModCode = modCode => {
     const output = {};
     const cmds = modCode.split(";").map(str => str.trim());
@@ -865,8 +809,7 @@ const analyzeModelModCode = modCode => {
     return output;
 };
 
-/**
- * apply modifier code to a 3D model
+/** apply modifier code to a 3D model
  * @param {THREE.Group} target - model to apply
  * @param {string} modCode - code to apply
  */
@@ -894,8 +837,7 @@ export const applyMod = (target, modCode) => {
     });
 };
 
-/**
- * log the updated values to console
+/** log the updated values to console
  * @param {{ }} prev - previous state
  * @param {{ }} current - current state
  */

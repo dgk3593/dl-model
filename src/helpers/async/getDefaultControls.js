@@ -1,5 +1,4 @@
-/**
- * get default controls
+/** get default controls
  * @param {string} modelId
  */
 export const getDefaultControls = async modelId => {

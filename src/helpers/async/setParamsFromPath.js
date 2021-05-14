@@ -4,14 +4,12 @@ import { getDefaultFace, getViewerType } from "../helpers";
 import { getDefaultModelMod, getModelModByName } from "./getModelMod";
 import { getDefaultAni } from "./getDefaultAni";
 
-/**
- * turn string to the corresponding boolean if it's "true" or "false"
+/** turn string to the corresponding boolean if it's "true" or "false"
  * @param {string} str
  */
 const str2bool = str => Boolean(str === "true");
 
-/**
- * convert string to xyzCoordinate
+/** convert string to xyzCoordinate
  * @param {string} str
  * @return {xyzCoordinate}
  */
@@ -40,8 +38,7 @@ const str2bg = str => {
     }
 };
 
-/**
- * convert a string to the specified type
+/** convert a string to the specified type
  * @param {string} str
  * @param {string} type
  */
@@ -58,8 +55,7 @@ const convertParamValue = (str, type) => {
     return converter[type](str);
 };
 
-/**
- * turn a string of the form 'keycode=value' to [keycode, value],
+/** turn a string of the form 'keycode=value' to [keycode, value],
  * return empty array if empty input, or invalid keycode/value
  * @param {string} paramText
  * @return {[ [keycode: string, value: *]? ]}
@@ -76,8 +72,7 @@ const extractParam = paramText => {
     return [[keycode, convertParamValue(value, type)]];
 };
 
-/**
- * turn a path into an array of keycode and value pair,
+/** turn a path into an array of keycode and value pair,
  * invalid strings will be filtered out
  * @param {string} path
  * @return {[keycode: string, value: *][]}
@@ -90,8 +85,7 @@ const getParamsFromPath = path =>
             []
         );
 
-/**
- * return a list of key value pairs corresponding to the specified group of the application state
+/** return a list of key value pairs corresponding to the specified group of the application state
  * @param { [keycode: string, value: *][] } params
  * @param {string} groupName
  * @return { [key: string, value: *][] }
@@ -104,8 +98,7 @@ const filterParamsByGroup = (params, groupName) =>
         return [...output, [key, value]];
     }, []);
 
-/**
- * set model related parameters
+/** set model related parameters
  * @param {[keycode: string, value: *][]} params
  * @param {React.Dispatch<ReducerAction>} dispatch
  */
@@ -134,8 +127,7 @@ const setModelParams = async (params, dispatch) => {
     await setModelMod(model, dispatch);
 };
 
-/**
- * set model mod from param init object
+/** set model mod from param init object
  * @param {Object} modelData
  */
 const setModelMod = async (modelData, dispatch) => {
@@ -162,8 +154,7 @@ const setModelMod = async (modelData, dispatch) => {
     });
 };
 
-/**
- * set animation related parameters
+/** set animation related parameters
  * @param {[keycode: string, value: *][]} params
  * @param {React.Dispatch<ReducerAction>} dispatch
  */
@@ -186,8 +177,7 @@ const setAniParams = async (params, dispatch) => {
     });
 };
 
-/**
- * set other parameters
+/** set other parameters
  * @param {[keycode: string, value: *][]} params
  * @param {React.Dispatch<ReducerAction>} dispatch
  * @param {string} group - name of the parameter group
@@ -203,8 +193,7 @@ const setOtherParams = (params, dispatch, group) => {
     });
 };
 
-/**
- * update application state base on information from the URL
+/** update application state base on information from the URL
  * @param {string} path
  * @param {React.Dispatch<ReducerAction>} dispatch
  */

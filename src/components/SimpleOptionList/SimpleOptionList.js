@@ -8,9 +8,7 @@ import "./SimpleOptionList.css";
  * @param {function} params.onSelect
  */
 function SimpleOptionList({ options, onSelect }) {
-    /**
-     * @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event
-     */
+    /** @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event */
     const handleClick = event => {
         const { value } = event.currentTarget.dataset;
         onSelect(value);

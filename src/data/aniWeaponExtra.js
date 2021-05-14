@@ -1,6 +1,4 @@
-/**
- * @type {{ [weaponType: string]: AnimationList}}
- */
+/** @type {{ [weaponType: string]: AnimationList}} */
 const aniWeaponExtra = {
     Axe: [
         {
@@ -65,8 +63,7 @@ const aniWeaponExtra = {
         },
         {
             name: "Knocked Away",
-            code:
-                "KAT_BST_01>KAT_BST_02>KAT_BST_03>KAT_BST_04&ts=0.5>KAT_BST_07",
+            code: "KAT_BST_01>KAT_BST_02>KAT_BST_03>KAT_BST_04&ts=0.5>KAT_BST_07",
         },
         {
             name: "Stand Back Up",
@@ -128,8 +125,7 @@ const aniWeaponExtra = {
         },
         {
             name: "Knocked Away",
-            code:
-                "GUN_BST_01>GUN_BST_02>GUN_BST_03>GUN_BST_04&ts=0.5>GUN_BST_07",
+            code: "GUN_BST_01>GUN_BST_02>GUN_BST_03>GUN_BST_04&ts=0.5>GUN_BST_07",
         },
         {
             name: "Stand Back Up",
@@ -146,9 +142,7 @@ const aniWeaponExtra = {
     ],
 };
 
-/**
- * @type {{ [gunMode: string]: AnimationList}}
- */
+/** @type {{ [gunMode: string]: AnimationList}} */
 export const gunModeExtra = {
     "Long Range": [
         { name: "Combo", code: "GUN_CMB_A_01" },

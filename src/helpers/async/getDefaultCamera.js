@@ -1,5 +1,4 @@
-/**
- * get default camera
+/** get default camera
  * @param {string} modelId
  */
 export const getDefaultCamera = async modelId => {

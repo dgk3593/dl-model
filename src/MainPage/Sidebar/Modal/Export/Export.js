@@ -20,13 +20,10 @@ function Export({ close }) {
     const toggleSettings = name =>
         dispatch({ type: "toggle", key: "export", value: name });
 
-    /**
-     * @param {string} format
-     */
+    /**@param {string} format*/
     const setFormat = format => updateSettings({ format });
-    /**
-     * @param {string} value
-     */
+
+    /**@param {string} value*/
     const setBinary = value => updateSettings({ binary: value === "true" });
 
     const startExport = () => toggleSettings("enable");

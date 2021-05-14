@@ -1,6 +1,4 @@
-/**
- * @type { Array <ModelData> }
- */
+/** @type { Array <ModelData> } */
 const weapon_list = [
     {
         id: "w399051_01",

@@ -1,6 +1,4 @@
-/**
- * @type { AnimationList }
- */
+/** @type { AnimationList } */
 const aniQuest = [
     { name: "Slow Weapon Run", code: "CMN_RUN_01" },
     { name: "Fast Weapon Run", code: "CMN_RUN_02" },

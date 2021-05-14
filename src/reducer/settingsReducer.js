@@ -1,8 +1,7 @@
 import { defaultSettings } from "helpers/consts";
 import { filterObject } from "helpers/helpers";
 
-/**
- * reducer for setting reducer
+/** reducer for settings
  * @param {ApplicationState} state
  * @param {ReducerAction} action
  * @return {ApplicationState} new state

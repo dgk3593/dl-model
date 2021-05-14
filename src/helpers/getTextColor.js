@@ -1,5 +1,4 @@
-/**
- * convert hex color code to rgb triplet
+/** convert hex color code to rgb triplet
  * @param {ColorCode} hex
  * @return {RGBTriplet}
  */
@@ -14,13 +13,10 @@ const hexToRgb = hex => {
         : null;
 };
 
-/**
- * @param {RGBTriplet} color
- */
+/** @param {RGBTriplet} color */
 const getBrightness = ({ r, g, b }) => (r * 299 + g * 587 + b * 114) / 1000;
 
-/**
- * get the suitable text color for a given background color
+/** get the suitable text color for a given background color
  * @param {ColorCode | 'camera'} background
  */
 export const getTextColor = background => {

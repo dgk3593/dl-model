@@ -2,16 +2,13 @@ import Button from "@material-ui/core/Button";
 
 import { aniModList, incompatibleModels } from "./consts";
 
-/**
- * capitalize first letter of tring
+/** capitalize first letter of tring
  * @param {string} input
  */
 export const capitalize = ([first, ...rest]) =>
     `${first.toUpperCase()}${rest.join("")}`;
 
-/**
- *  generate date time string
- */
+/** generate date time string */
 export const getDateTimeString = () => {
     const date = new Date();
     const dateStr = date.toDateString().replace(/ /g, "_");
@@ -21,15 +18,14 @@ export const getDateTimeString = () => {
         .replace(/ /g, "");
     return `${dateStr}_${timeStr}`;
 };
-/**
- * get the default texture file of a model from id
+
+/** get the default texture file of a model from id
  * @param {string} id - model id
  */
 export const getDefaultTexture = id =>
     id.match(/_[0-9]{2}/) ? id : `${id}_01`;
 
-/**
- * create a new object whose entries with key listed in keys are copied from the input object
+/** create a new object whose entries with key listed in keys are copied from the input object
  * @param {{ }} object - object to filter
  * @param { string[] } keys - list of keys to filter
  * @return {{ }}
@@ -40,8 +36,7 @@ export const filterObject = (object, keys) => {
     return Object.fromEntries(filtered);
 };
 
-/**
- * Get the difference between 2 object
+/** Get the difference between 2 object
  * @param {{ }} prev - previous value
  * @param {{ }} current - current value
  * @returns { Array<[updatedKey: string, value: *]> } array of updated key and value pairs
@@ -53,26 +48,22 @@ export const getUpdated = (prev, current) => {
     return updated;
 };
 
-/**
- * check if an object is empty
+/** check if an object is empty
  * @param {{}} object
  */
 export const isEmpty = object => !Object.keys(object).length;
 
-/**
- * check if an ID is a blade
+/** check if an ID is a blade
  * @param {string} modelId - id to check
  */
 export const isBlade = modelId => modelId.startsWith("w302");
 
-/**
- * check if an ID is a sheath
+/** check if an ID is a sheath
  * @param {string} modelId - id to check
  */
 export const isSheath = modelId => isBlade(modelId) && modelId.endsWith("02");
 
-/**
- * check if model is compatible with AdvViewer
+/** check if model is compatible with AdvViewer
  * @param {string} modelId
  */
 export const isCharaWithAni = modelId =>
@@ -80,15 +71,13 @@ export const isCharaWithAni = modelId =>
     !modelId.endsWith("_h") &&
     !incompatibleModels.has(modelId);
 
-/**
- * check if a model is a dragon
+/** check if a model is a dragon
  * @param {string} modelId
  */
 export const isDragon = modelId =>
     modelId.startsWith("d") || modelId === "smith";
 
-/**
- * get the suitable viewer type base on ID
+/** get the suitable viewer type base on ID
  * @param {string} modelId
  */
 export const getViewerType = modelId => {
@@ -102,27 +91,19 @@ export const getViewerType = modelId => {
     return "basic";
 };
 
-/**
- * get default eye and mouth index
+/** get default eye and mouth index
  * @param {string} modelId
  */
 export const getDefaultFace = modelId => (isDragon(modelId) ? 1 : 2);
 
-/**
- * apply callback on each element of list or on list if list is not an array
+/** apply callback on each element of list or on list if list is not an array
  * @param {* | Array} list - list of objects to apply callback
  * @param {function} callback - callback to apply
  */
-export const callbackOnEach = (list, callback) => {
-    if (Array.isArray(list)) {
-        list.forEach(child => callback(child));
-        return;
-    }
-    callback(list);
-};
+export const callbackOnEach = (list, callback) =>
+    [list].flat().forEach(child => callback(child));
 
-/**
- * generate animation chain code from AnimationChain
+/** generate animation chain code from AnimationChain
  * @param {AnimationChain} chain
  */
 export const generateChainCode = chain => {
@@ -130,8 +111,7 @@ export const generateChainCode = chain => {
     return aniCode.join(">");
 };
 
-/**
- * convert 1 animation chain item to single animation code
+/** convert 1 animation chain item to single animation code
  * @param {AniListItem} ani
  */
 const aniToCode = ani => {
@@ -141,8 +121,7 @@ const aniToCode = ani => {
     return `${aniName}${modCode}${faceCode}`;
 };
 
-/**
- * generate animation modifier code
+/**  generate animation modifier code
  * @param {AniListItem} ani
  */
 const generateAniModCode = ani => {
@@ -156,8 +135,7 @@ const generateAniModCode = ani => {
     return modCodes.join("");
 };
 
-/**
- * create face change code
+/** create face change code
  * @param {FaceChangeArray} faceChanges
  */
 const generateFaceCode = faceChanges => {
@@ -181,9 +159,7 @@ const generateFaceCode = faceChanges => {
  */
 export const collectFilter = filterState => {
     const stateEntries = Object.entries(filterState);
-    /**
-     * @type {FilterConditions}
-     */
+    /** @type {FilterConditions} */
     const filterConditions = stateEntries.map(([groupName, groupData]) => [
         groupName,
         Object.keys(groupData).filter(key => groupData[key]),
@@ -191,8 +167,7 @@ export const collectFilter = filterState => {
     return filterConditions.filter(([, valueList]) => valueList.length);
 };
 
-/**
- * Multiconditional filter
+/** Multiconditional filter
  * @param {ModelData[]} input
  * @param {FilterConditions} filterConditions
  */
@@ -204,8 +179,7 @@ export const multiCondFilter = (input, filterConditions) => {
     );
 };
 
-/**
- * turn a list of animation data to buttons
+/** turn a list of animation data to buttons
  * @param {AnimationList} list
  * @param {*} handleSelect
  * @param {string} [groupName]

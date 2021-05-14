@@ -1,6 +1,4 @@
-/**
- * @type {{ [group: string]: AnimationList}}
- */
+/** @type {{ [group: string]: AnimationList}} */
 const aniHome = {
     common: [
         {

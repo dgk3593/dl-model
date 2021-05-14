@@ -1,6 +1,4 @@
-/**
- * @type {{ [category :string]: AnimationList}}
- */
+/** @type {{ [category :string]: AnimationList}} */
 const aniExtra = {
     Dance: [
         {
