@@ -1,8 +1,8 @@
-import { lazy, Suspense, useState, useContext } from "react";
+import { lazy, Suspense, useState } from "react";
 import useToggleState from "hooks/useToggleState";
 import "./styles/WeaponBtn.css";
 
-import { DispatchContext } from "context/SettingsContext";
+import { useDispatch } from "context/SettingsContext";
 import { isBlade } from "helpers/helpers";
 
 const BladeSelector = lazy(() => import("components/selectors/BladeSelector"));
@@ -14,7 +14,7 @@ function WeaponBtn({ id, iconName = "", name }) {
     const [reverseGrip, toggleReverseGrip] = useToggleState(false);
     const iconPath = `${process.env.PUBLIC_URL}/img/weaponIcons/${iconName}`;
 
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const weaponIsBlade = isBlade(id);
 

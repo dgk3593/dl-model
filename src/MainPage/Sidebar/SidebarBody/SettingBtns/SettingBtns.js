@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
@@ -28,8 +26,8 @@ const mainBtns = {
 };
 
 function SettingBtns({ openModal }) {
-    const settings = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    const settings = useSettings();
+    const dispatch = useDispatch();
 
     const {
         model,

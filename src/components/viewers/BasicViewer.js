@@ -54,10 +54,14 @@ class BasicViewer extends PureComponent {
         this.addFullScreenListener();
     }
 
-    /** @param {ViewerProps} prev */
+    /**
+     * @param {ViewerProps} prev
+     */
     componentDidUpdate(prev) {
         if (!this.finishedInit) return;
-        /** @type {ViewerProps} */
+        /**
+         * @type {ViewerProps}
+         */
         const current = this.props;
 
         // print updated props to console
@@ -150,7 +154,9 @@ class BasicViewer extends PureComponent {
             CAM_PARAMS.near,
             CAM_PARAMS.far
         );
-        /** @type {xyzCoordinate} */
+        /**
+         * @type {xyzCoordinate}
+         */
         this.cameraPosition = this.props.cameraPosition || [2, 0, 10];
         this.camera.position.set(...this.cameraPosition);
         this.camera.updateProjectionMatrix();
@@ -191,7 +197,9 @@ class BasicViewer extends PureComponent {
 
         // Controls
         this.controls = new OrbitControls(this.camera, this.mount);
-        /** @type {xyzCoordinate} */
+        /**
+         * @type {xyzCoordinate}
+         */
         this.controlsPosition = this.props.controlsPosition || [0, 0, 0];
         this.controls.target.set(...this.controlsPosition);
         this.controls.update();
@@ -248,7 +256,9 @@ class BasicViewer extends PureComponent {
      * @param {LightParam[]} lights
      */
     addAllLights = lights => {
-        /** @type {THREE.Light[]} */
+        /**
+         * @type {THREE.Light[]}
+         */
         this.lights = [];
         lights.forEach(this.addLight);
     };
@@ -599,7 +609,9 @@ class BasicViewer extends PureComponent {
         this.enableInput();
     };
 
-    /** @param {ColorCode | 'transparent' | 'camera'} bg */
+    /**
+     * @param {ColorCode | 'transparent' | 'camera'} bg
+     */
     set background(bg) {
         switch (bg) {
             case "transparent":

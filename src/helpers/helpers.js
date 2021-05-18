@@ -159,7 +159,9 @@ const generateFaceCode = faceChanges => {
  */
 export const collectFilter = filterState => {
     const stateEntries = Object.entries(filterState);
-    /** @type {FilterConditions} */
+    /**
+     * @type {FilterConditions}
+     */
     const filterConditions = stateEntries.map(([groupName, groupData]) => [
         groupName,
         Object.keys(groupData).filter(key => groupData[key]),

@@ -1,4 +1,6 @@
-/** @type {{ [id:string]: AnimationList}} */
+/**
+ * @type {{ [id:string]: AnimationList}}
+ */
 const dragonAni = {
     d200008_01: [
         { name: "Idle", code: "D20000801_000_01" },

@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense } from "react";
 
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import Close from "@material-ui/icons/Close";
 
 import { NO_LIGHT_MATERIALS } from "helpers/consts";
@@ -15,10 +15,10 @@ const LightSettings = lazy(() => import("./LightSettings"));
 const AsciiSettings = lazy(() => import("./AsciiSettings"));
 
 function AdvancedSettings({ openModal }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         material: { type: materialType },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const close = () => {
         const action = {

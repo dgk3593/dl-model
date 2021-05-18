@@ -1,12 +1,10 @@
-import { lazy, Suspense, useContext, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import useFilterGroups from "hooks/useFilterGroups";
-import { DispatchContext } from "context/SettingsContext";
+import { useDispatch } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
 import { DRAGON_FILTERS } from "helpers/filterDef";
-// import dragons from "data/dragon_list";
-// import otherDragons from "data/dragon_list_extra";
 
 import { collectFilter, multiCondFilter } from "helpers/helpers";
 import "./styles/DragonSelect.css";
@@ -18,16 +16,15 @@ const CardGallery = lazy(() => import("components/CardGallery"));
 const options = ["Dragons", "Others"];
 
 function DragonSelect({ close, handleSelect, docked, moveToDock }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const title = "Select a Model";
 
     const [dragonSet, setDragonSet] = useState(0);
     const [dragons, setDragons] = useState([]);
     const [otherDragons, setOtherDragons] = useState([]);
-    const [filterState, toggleFilter, resetFilters] = useFilterGroups(
-        DRAGON_FILTERS
-    );
+    const [filterState, toggleFilter, resetFilters] =
+        useFilterGroups(DRAGON_FILTERS);
 
     const list = { 0: dragons, 1: otherDragons };
 

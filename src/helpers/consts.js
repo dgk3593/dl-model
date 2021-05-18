@@ -12,7 +12,9 @@ export const matcapDir = `${process.env.PUBLIC_URL}/img/matcap`;
 
 export const DEFAULT_ADV_ANI = "CMN_MWM_03";
 
-/** @type {WeaponType[]} */
+/**
+ * @type {WeaponType[]}
+ */
 export const WEAPON_LIST = [
     "Sword",
     "Blade",
@@ -25,7 +27,9 @@ export const WEAPON_LIST = [
     "Manacaster",
 ];
 
-/** @type {{ [paramName: string]: MatParamDetails }} */
+/**
+ * @type {{ [paramName: string]: MatParamDetails }}
+ */
 export const matParamsDetails = {
     wireframe: {
         name: "Wireframe",
@@ -130,7 +134,9 @@ export const matDirectSetParams = [
 /** list of parameters whose value is a color code */
 export const matColorParams = ["color", "emissive", "specular"];
 
-/** @type { Array< [paramName: string, details: MatParamDetails] > } */
+/**
+ * @type { Array< [paramName: string, details: MatParamDetails] > }
+ */
 const matParamsEntries = Object.entries(matParamsDetails);
 
 /** default values of material parameters
@@ -356,7 +362,9 @@ export const incompatibleModels = new Set([
     "c100041_01",
 ]);
 
-/**  @type {{[colorName: string]: ColorCode}}  */
+/**
+ * @type {{[colorName: string]: ColorCode}}
+ */
 export const commonColors = {
     green: "#00ff00",
     black: "#000000",

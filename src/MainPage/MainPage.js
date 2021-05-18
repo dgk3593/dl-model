@@ -4,7 +4,6 @@ import {
     useState,
     useRef,
     useEffect,
-    useContext,
     useCallback,
 } from "react";
 
@@ -16,7 +15,7 @@ import useStyles from "./MainPageStyles";
 
 import Display from "./Display";
 
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import { getViewerType } from "helpers/helpers";
 import { getDefaultAni } from "helpers/async/getDefaultAni";
 
@@ -47,8 +46,8 @@ function MainPage({ location }) {
     const {
         model,
         app: { showSettings, viewerType },
-    } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    } = useSettings();
+    const dispatch = useDispatch();
 
     const viewerRef = useRef();
     const currentId = useRef("");

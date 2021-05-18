@@ -1,8 +1,8 @@
-import { useState, useContext, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import FaceBox from "./FaceBox";
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import textureOffsets from "data/face_offset";
 import useStyles from "./styles/FaceSelectStyles";
@@ -18,10 +18,10 @@ const titles = {
 };
 
 function FaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         model: { eyeTexture, mouthTexture, eyeIdx, mouthIdx },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const [facePart, setFacePart] = useState(mode !== "face" ? mode : "both");
 

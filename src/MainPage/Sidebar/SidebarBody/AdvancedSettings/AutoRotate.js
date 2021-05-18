@@ -1,18 +1,16 @@
-import { useContext } from "react";
-
 import Slider from "@material-ui/core/Slider";
 import Button from "@material-ui/core/Button";
 import SettingsGroup from "./AdvancedSettingsGroup";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 
 function AutoRotate({ openAtStart = false }) {
     const {
         scene: { rotateSpeed },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const handleValueChange = (_, newValue) => {
         const action = {

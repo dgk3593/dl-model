@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext, useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import useFilterGroups from "hooks/useFilterGroups";
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
@@ -24,8 +24,8 @@ const options = ["Adventurers", "Allies", "Enemies"];
 function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const {
         model: { id: currentId },
-    } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    } = useSettings();
+    const dispatch = useDispatch();
 
     const title = mode === "adv" ? "Select a Model" : "Override Texture";
 
@@ -34,9 +34,8 @@ function AdvSelect({ close, mode, handleSelect, docked, moveToDock }) {
     const [adv, setAdv] = useState([]);
     const [allies, setAllies] = useState([]);
     const [enemies, setEnemies] = useState([]);
-    const [filterState, toggleFilter, resetFilters] = useFilterGroups(
-        ADV_FILTERS
-    );
+    const [filterState, toggleFilter, resetFilters] =
+        useFilterGroups(ADV_FILTERS);
 
     const filters = collectFilter(filterState);
     const advList = multiCondFilter(adv, filters);

@@ -1,6 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import SaveIcon from "@material-ui/icons/GetApp";
@@ -13,11 +13,11 @@ import { videoCodecs } from "helpers/consts";
 
 function DrawerHeader({ toggleSidebar }) {
     const classes = useStyles();
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         capture: { codec: currentCodec },
         ascii: { enable: asciiOn },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     useEffect(() => {
         if (!MediaRecorder) return;

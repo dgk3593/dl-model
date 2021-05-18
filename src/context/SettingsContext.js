@@ -1,12 +1,16 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useContext } from "react";
 import { settingsReducer } from "reducer/settingsReducer";
 import { defaultSettings } from "helpers/consts";
 
-/** @type {React.Context<ApplicationState>} */
-export const SettingsContext = createContext(null);
+/**
+ * @type {React.Context<ApplicationState>}
+ */
+const SettingsContext = createContext(null);
 
-/** @type {React.Context< React.Dispatch<ReducerAction> >} */
-export const DispatchContext = createContext(null);
+/**
+ * @type {React.Context< React.Dispatch<ReducerAction> >}
+ */
+const DispatchContext = createContext(null);
 
 /** used to initialize global state
  * @type {ApplicationState}
@@ -31,4 +35,20 @@ export function SettingsProvider(props) {
             </DispatchContext.Provider>
         </SettingsContext.Provider>
     );
+}
+
+export function useSettings() {
+    const context = useContext(SettingsContext);
+    if (context === undefined) {
+        throw new Error("useSettings must be used within a SettingsProvider");
+    }
+    return context;
+}
+
+export function useDispatch() {
+    const context = useContext(DispatchContext);
+    if (context === undefined) {
+        throw new Error("useDispatch must be used within a DispatchProvider");
+    }
+    return context;
 }

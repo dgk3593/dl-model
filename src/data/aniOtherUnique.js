@@ -1,4 +1,6 @@
-/** @type {{ [weaponType: string]: AdvAniData[] }} */
+/**
+ * @type {{ [weaponType: string]: AdvAniData[] }}
+ */
 const otherUnique = {
     Sword: [
         {

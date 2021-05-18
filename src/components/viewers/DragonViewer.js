@@ -6,7 +6,9 @@ import { getDragonEye, getDragonMouth } from "helpers/viewerHelpers";
  *   - Eyes and Mouth
  */
 export class DragonViewer extends AniViewer {
-    /** @param {ViewerProps} props */
+    /**
+     * @param {ViewerProps} props
+     */
     constructor(props) {
         super(props);
         this._eyeIdx = this._mouthIdx = 0;
@@ -48,7 +50,9 @@ export class DragonViewer extends AniViewer {
         this.mouthIdx = mouthIdx;
     };
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set eyeIdx(newIdx) {
         const oldIdx = this._eyeIdx;
         if (newIdx === oldIdx) return;
@@ -62,7 +66,9 @@ export class DragonViewer extends AniViewer {
         });
     }
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set mouthIdx(newIdx) {
         const oldIdx = this._mouthIdx;
         if (newIdx === oldIdx) return;

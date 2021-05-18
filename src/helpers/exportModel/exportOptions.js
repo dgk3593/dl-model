@@ -4,7 +4,9 @@
  * @property {string} name
  * @property {string[]} options
  */
-/** @type {ExportType[]} */
+/**
+ * @type {ExportType[]}
+ */
 const exportOptions = [
     { format: "stl", name: "STL", options: ["binary"] },
     { format: "ply", name: "PLY", options: ["binary"] },

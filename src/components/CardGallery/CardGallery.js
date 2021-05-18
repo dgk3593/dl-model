@@ -15,7 +15,9 @@ import "./styles/CardGallery.css";
 function CardGallery(props) {
     const { list, onSelect, portraitDir } = props;
 
-    /** @param {React.MouseEvent<HTMLElement>} event */
+    /**
+     * @param {React.MouseEvent<HTMLElement>} event
+     */
     const onCardClick = event => {
         const { value } = event.currentTarget.dataset;
         onSelect(value);

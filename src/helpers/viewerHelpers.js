@@ -41,7 +41,9 @@ export const loadTexture = url => {
     );
 };
 
-/** @param {string} name */
+/**
+ * @param {string} name
+ */
 const getMatcapPath = name => {
     const matcap = matcapList.find(e => e.name === name);
     return matcap?.path ? `${matcapDir}/${matcap.path}` : null;
@@ -555,7 +557,9 @@ export const applyMouthTexture = applyTexture("Mouth");
  * @return {AniModifier} object containing values to modify animation
  */
 const getAniModifiers = modList => {
-    /** @type {FaceChangeArray} */
+    /**
+     * @type {FaceChangeArray}
+     */
     const faceChanges = [];
     let timeScale = 1,
         repetitions = 1;
@@ -623,7 +627,9 @@ export const processFaceChanges = faceChanges => {
         return sorted;
     }
 
-    /** @type {FaceChangeArray} */
+    /**
+     * @type {FaceChangeArray}
+     */
     const simplified = [];
     timeStamps.forEach(time => {
         let output = { time, id: nanoid(), eyeIdx: NaN, mouthIdx: NaN };
@@ -669,7 +675,9 @@ export const chainCodeToList = (code, name) => {
     const output = aniList.map((ani, i) => {
         const { aniName, timeScale, repetitions, faceChanges } = ani;
         const partName = name.concat(length > 1 ? `#${i + 1}` : "");
-        /** @type {AniChainItem} */
+        /**
+         * @type {AniChainItem}
+         */
         const listItem = {
             name: partName,
             id: nanoid(),
@@ -795,7 +803,9 @@ export const replaceTexture = async (target, { oldTexture, texturePath }) => {
     });
 };
 
-/** @param {string} modCode */
+/**
+ * @param {string} modCode
+ */
 const analyzeModelModCode = modCode => {
     const output = {};
     const cmds = modCode.split(";").map(str => str.trim());

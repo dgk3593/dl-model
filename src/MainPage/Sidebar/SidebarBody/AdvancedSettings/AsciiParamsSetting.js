@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import { asciiSet } from "helpers/consts";
 
 import Button from "@material-ui/core/Button";
@@ -12,8 +10,8 @@ import ColorButton from "components/ColorButton";
 function AsciiParamsSetting({ openModal }) {
     const {
         ascii: { invert, color, bgColor, charSet },
-    } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    } = useSettings();
+    const dispatch = useDispatch();
 
     const currentSet = asciiSet.findIndex(set => set === charSet);
 

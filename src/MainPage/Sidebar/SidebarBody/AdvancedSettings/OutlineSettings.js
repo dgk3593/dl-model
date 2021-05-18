@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 import Slider from "@material-ui/core/Slider";
 import Button from "@material-ui/core/Button";
 
@@ -7,11 +5,11 @@ import ColorButton from "components/ColorButton";
 
 import SettingsGroup from "./AdvancedSettingsGroup";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 
 function OutlineSettings({ openModal, openAtStart = false }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const toggleOutline = event => {
         event.stopPropagation();
@@ -42,7 +40,7 @@ function OutlineSettings({ openModal, openAtStart = false }) {
 
     const {
         outline: { enable, size, color, opacity },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const titleButton = (
         <Button variant="contained" onClick={toggleOutline}>

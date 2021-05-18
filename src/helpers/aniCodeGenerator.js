@@ -47,14 +47,20 @@ export const FS_LENGTH = {
 export const getStandbyCode = (weapon, gender) =>
     `${WEAPON_CODE[weapon]}_ONT_${GENDER_CODE[gender]}`;
 
-/** @param {WeaponType} weapon */
+/**
+ * @param {WeaponType} weapon
+ */
 export const getVictoryCode = weapon =>
     `${WEAPON_CODE[weapon]}_WIN_01>${WEAPON_CODE[weapon]}_WIN_02`;
 
-/**@param {WeaponType} weapon*/
+/**
+ * @param {WeaponType} weapon
+ */
 export const getDashAtkCode = weapon => `${WEAPON_CODE[weapon]}_DAS_02`;
 
-/**@param {WeaponType} weapon */
+/**
+ * @param {WeaponType} weapon
+ */
 export const getRollCode = weapon => `${WEAPON_CODE[weapon]}_ROL_01`;
 
 /** Combo chain code

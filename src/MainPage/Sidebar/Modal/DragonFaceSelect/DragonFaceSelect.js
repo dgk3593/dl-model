@@ -1,10 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
 import Button from "@material-ui/core/Button";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import { getViewerType } from "helpers/helpers";
 
@@ -19,10 +19,10 @@ const titles = {
 };
 
 function DragonFaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         model: { id: modelId },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     useEffect(() => {
         if (getViewerType(modelId) !== "dragon") {
@@ -33,7 +33,9 @@ function DragonFaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
 
     const { eye: nEye, mouth: nMouth } = faceData[modelId] || {};
 
-    /** @param {{ }} value */
+    /**
+     * @param {{ }} value
+     */
     const updateModel = value => {
         const action = {
             type: "update",
@@ -52,7 +54,9 @@ function DragonFaceSelect({ mode, close, handleSelect, docked, moveToDock }) {
         updateModel({ [updateKey]: idx });
     };
 
-    /** @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event */
+    /**
+     * @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event
+     */
     const setIdx = event => {
         const idx = parseInt(event.currentTarget.dataset.value);
         const part = event.currentTarget.dataset.part;

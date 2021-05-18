@@ -1,5 +1,5 @@
-import { useContext, lazy, Suspense } from "react";
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { lazy, Suspense } from "react";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import Button from "@material-ui/core/Button";
 
@@ -9,9 +9,8 @@ import SettingsGroup from "./AdvancedSettingsGroup";
 const LightParamsSetting = lazy(() => import("./LightParamsSetting"));
 
 function LightSettings({ openModal, openAtStart = false }) {
-    const { lights: currentLights } = useContext(SettingsContext);
-
-    const dispatch = useContext(DispatchContext);
+    const { lights: currentLights } = useSettings();
+    const dispatch = useDispatch();
 
     const resetSettings = event => {
         event.stopPropagation();

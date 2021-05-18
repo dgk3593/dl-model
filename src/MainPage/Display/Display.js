@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext, useCallback } from "react";
+import { lazy, Suspense, useCallback } from "react";
 
-import { SettingsContext, DispatchContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import "./styles/Display.css";
 
 import getTextColor from "helpers/getTextColor";
@@ -28,14 +28,14 @@ const viewers = {
 function Display(props) {
     const { viewport } = props;
 
-    const settings = useContext(SettingsContext);
+    const settings = useSettings();
     const {
         model: { id: modelId },
         scene: { rotateSpeed, background, initCameraPosition },
         app: { showAniControl, antiAliasing, pixelRatio, viewerType },
     } = settings;
 
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const toggleSetting = useCallback(
         (key, value) => dispatch({ type: "toggle", key, value }),

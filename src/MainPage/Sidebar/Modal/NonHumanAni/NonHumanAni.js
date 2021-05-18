@@ -1,6 +1,6 @@
-import { useState, useEffect, useContext, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import Button from "@material-ui/core/Button";
 
@@ -14,16 +14,18 @@ import { getNonHumanAniList } from "helpers/async/getNonHumanAniList";
 import "./styles/NonHumanAni.css";
 
 function NonHumanAni({ close, handleSelect, docked, moveToDock }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         model: { id: modelId },
         app: { sidebarContent },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const [sourceId, setSourceId] = useState(modelId);
     const [modalMode, setModalMode] = useState("");
 
-    /** @type {[ undefined|AnimationList , function]} */
+    /**
+     * @type {[ undefined|AnimationList , function]}
+     */
     const [aniList, setAniList] = useState();
     const [listLoading, setListLoading] = useState(true);
 

@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense } from "react";
 
-import { SettingsContext } from "context/SettingsContext";
+import { useSettings } from "context/SettingsContext";
 
 import Add from "@material-ui/icons/Add";
 
@@ -22,7 +22,7 @@ function ChainAniFace(props) {
 
     const {
         app: { viewerType },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const handleParamsChange = event => {
         const {

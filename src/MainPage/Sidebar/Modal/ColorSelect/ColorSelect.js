@@ -1,10 +1,10 @@
-import { lazy, Suspense, useState, useContext } from "react";
+import { lazy, Suspense, useState } from "react";
 
 import ColorButton from "components/ColorButton";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import { commonColors } from "helpers/consts";
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import "./styles/ColorSelect.css";
 
@@ -18,8 +18,8 @@ const titles = {
 };
 
 function ColorSelect({ close, mode, handleSelect, docked, moveToDock }) {
-    const dispatch = useContext(DispatchContext);
-    const settings = useContext(SettingsContext);
+    const dispatch = useDispatch();
+    const settings = useSettings();
     const title = titles[mode] || "Pick a Color";
 
     const getInitColor = mode => {

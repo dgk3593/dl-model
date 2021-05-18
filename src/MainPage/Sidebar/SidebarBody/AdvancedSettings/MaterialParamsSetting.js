@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 
 import Button from "@material-ui/core/Button";
 import Slider from "@material-ui/core/Slider";
@@ -13,11 +13,11 @@ import {
     matParamsDetails as paramsDetails,
 } from "helpers/consts";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 function MaterialParamsSetting({ materialType: matType, openModal }) {
-    const settings = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    const settings = useSettings();
+    const dispatch = useDispatch();
 
     const currentSettings = settings.material;
 

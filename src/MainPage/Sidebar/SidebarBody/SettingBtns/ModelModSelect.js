@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import { DispatchContext } from "context/SettingsContext";
+import { useDispatch } from "context/SettingsContext";
 
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -15,7 +13,7 @@ import "./styles/ModelModSelect.css";
  */
 function ModelModSelect({ model }) {
     const { id, modName } = model;
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const modList = modelMod[id]?.map(mod => mod.name);
 

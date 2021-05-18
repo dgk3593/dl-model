@@ -1,17 +1,17 @@
-import { useContext, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 import Button from "@material-ui/core/Button";
 import SettingsGroup from "./AdvancedSettingsGroup";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 const ParamsSetting = lazy(() => import("./AsciiParamsSetting"));
 
 function AsciiSettings({ openModal }) {
     const {
         ascii: { enable },
-    } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    } = useSettings();
+    const dispatch = useDispatch();
 
     const toggleAscii = event => {
         event.stopPropagation();

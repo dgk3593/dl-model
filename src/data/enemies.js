@@ -1,4 +1,6 @@
-/** @type { Array <ModelData> } */
+/**
+ * @type { Array <ModelData> }
+ */
 const enemies = [
     {
         id: "100016_01",

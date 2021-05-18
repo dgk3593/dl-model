@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import TabPanel from "components/TabPanel";
@@ -7,7 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import { chainCodeToList } from "helpers/viewerHelpers";
 
 import GameAni from "./GameAni";
@@ -15,10 +15,10 @@ import ExtraAni from "./ExtraAni";
 
 function AnimationSelect({ close, handleSelect, docked, moveToDock }) {
     const [aniSet, setAniSet] = useState(0);
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const {
         app: { sidebarContent },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const chainMode = sidebarContent === "chainMaker";
 

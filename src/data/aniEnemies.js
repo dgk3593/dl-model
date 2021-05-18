@@ -1,4 +1,6 @@
-/** @type {{ [id:string]: AnimationList}} */
+/**
+ * @type {{ [id:string]: AnimationList}}
+ */
 const enemyAni = {
     h0080501: [
         { name: "Idle", code: "H0080501_000_01" },

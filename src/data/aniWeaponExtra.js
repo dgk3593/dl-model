@@ -1,4 +1,6 @@
-/** @type {{ [weaponType: string]: AnimationList}} */
+/**
+ * @type {{ [weaponType: string]: AnimationList}}
+ */
 const aniWeaponExtra = {
     Axe: [
         {
@@ -142,7 +144,9 @@ const aniWeaponExtra = {
     ],
 };
 
-/** @type {{ [gunMode: string]: AnimationList}} */
+/**
+ * @type {{ [gunMode: string]: AnimationList}}
+ */
 export const gunModeExtra = {
     "Long Range": [
         { name: "Combo", code: "GUN_CMB_A_01" },

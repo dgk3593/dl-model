@@ -23,7 +23,9 @@ const SIDES = ["Right", "Left"];
  *    - Face offset
  */
 export class AdvViewer extends AniViewer {
-    /** @param {ViewerProps} props  */
+    /**
+     * @param {ViewerProps} props
+     */
     constructor(props) {
         super(props);
         this._eyeIdx = this._mouthIdx = DEFAULT_FACE_IDX;
@@ -184,7 +186,9 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set eyeIdx(newIdx) {
         if (!newIdx) return;
 
@@ -219,7 +223,9 @@ export class AdvViewer extends AniViewer {
         return true;
     };
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set mouthIdx(newIdx) {
         if (!newIdx) return;
 

@@ -88,10 +88,14 @@ export class AniViewer extends BasicViewer {
         this.mouthIdx = mouthIdx;
     };
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set eyeIdx(newIdx) {}
 
-    /** @param {number} newIdx */
+    /**
+     * @param {number} newIdx
+     */
     set mouthIdx(newIdx) {}
 
     /** called before animation is attached */
@@ -114,7 +118,9 @@ export class AniViewer extends BasicViewer {
         this.nAni = aniList.length;
 
         mainModel.mixer = new THREE.AnimationMixer(mainModel);
-        /**  @type {THREE.AnimationMixer} */
+        /**
+         * @type {THREE.AnimationMixer}
+         */
         this.mixer = mainModel.mixer;
 
         this._aniIdx = 0;
@@ -122,7 +128,9 @@ export class AniViewer extends BasicViewer {
         mainModel.mixer.addEventListener("finished", this.playNextAni);
         this.aniSettings = aniList;
 
-        /**  @type {THREE.AnimationClip[]}  */
+        /**
+         * @type {THREE.AnimationClip[]}
+         */
         this.animations = await loadAnimations(aniList);
 
         // play first animation
@@ -178,7 +186,9 @@ export class AniViewer extends BasicViewer {
 
     /** capture current animation and save as video */
     captureAnimation = () => {
-        /** @type {Blob[]} */
+        /**
+         * @type {Blob[]}
+         */
         this.chunks = [];
         this.videoStream = this.canvas.captureStream(30);
 

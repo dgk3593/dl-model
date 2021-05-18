@@ -1,11 +1,11 @@
-import { useContext, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import SettingsGroup from "./AdvancedSettingsGroup";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 import "./styles/AdvancedSettingsGroup.css";
 import { MATERIALS } from "helpers/consts";
 
@@ -14,9 +14,9 @@ const MaterialParamsSetting = lazy(() => import("./MaterialParamsSetting"));
 function MaterialSettings({ openModal, openAtStart = false }) {
     const {
         material: { type: materialType },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
 
     const resetSettings = event => {
         event.stopPropagation();

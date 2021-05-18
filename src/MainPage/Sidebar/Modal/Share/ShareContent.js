@@ -1,7 +1,7 @@
-import { lazy, Suspense, useState, useEffect, useContext } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import useToggleState from "hooks/useToggleState";
 
-import { SettingsContext } from "context/SettingsContext";
+import { useSettings } from "context/SettingsContext";
 
 import FileCopy from "@material-ui/icons/FileCopy";
 
@@ -31,7 +31,7 @@ function ShareContent({ method }) {
     const [label, setLabel] = useState("Code");
     const [shareLink, setShareLink] = useState("Generating...");
 
-    const currentSettings = useContext(SettingsContext);
+    const currentSettings = useSettings();
 
     const CopyButton = () => (
         <IconButton onClick={copyText}>
@@ -60,7 +60,6 @@ function ShareContent({ method }) {
         }, 1000);
     };
 
-    // const shareLink = getShareLink();
     const embedCode = `<iframe src="${shareLink}" frameborder="0" width="300" height="300" ${
         transparentBG ? "allowtransparency " : ""
     } allowfullscreen/></iframe>`;
@@ -168,7 +167,9 @@ function ShareContent({ method }) {
     useEffect(() => {
         if (method !== 1) return; // QR
 
-        /** @type {HTMLInputElement} */
+        /**
+         * @type {HTMLInputElement}
+         */
         // @ts-ignore
         const shareTextField = document.getElementById("shareTextField");
         if (!shareTextField) return;

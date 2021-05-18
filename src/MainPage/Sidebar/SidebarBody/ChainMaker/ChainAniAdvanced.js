@@ -1,24 +1,19 @@
-import { useContext, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 import TextField from "@material-ui/core/TextField";
 
-import { SettingsContext } from "context/SettingsContext";
+import { useSettings } from "context/SettingsContext";
 import { nanoid } from "nanoid";
 
 const ChainAniFace = lazy(() => import("./ChainAniFace"));
 
 function ChainAniAdvanced(props) {
-    const {
-        timeScale,
-        repetitions,
-        faceChanges,
-        updateParams,
-        openModal,
-    } = props;
+    const { timeScale, repetitions, faceChanges, updateParams, openModal } =
+        props;
 
     const {
         app: { viewerType },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const handleParamChange = event => {
         const { name, value } = event.target;

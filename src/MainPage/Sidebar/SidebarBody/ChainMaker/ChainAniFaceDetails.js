@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { SettingsContext } from "context/SettingsContext";
+import { useSettings } from "context/SettingsContext";
 import useStyles from "MainPage/Sidebar/Modal/FaceSelect/styles/FaceSelectStyles";
 
 import TextField from "@material-ui/core/TextField";
@@ -19,7 +18,7 @@ function ChainAniFaceDetails(props) {
 
     const {
         model: { eyeTexture, mouthTexture },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const eyeImgPath = `${fbxSource}/fbx/${eyeTexture}/${eyeTexture}.png`;
     const mouthImgPath = `${fbxSource}/fbx/${mouthTexture}/${mouthTexture}.png`;

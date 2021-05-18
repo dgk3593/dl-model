@@ -1,6 +1,4 @@
-import { useContext } from "react";
-
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import { DialogContent, DialogTitle, DialogTop } from "components/CustomDialog";
 import Selector from "components/selectors/Selector";
@@ -11,8 +9,8 @@ import Button from "@material-ui/core/Button";
 import "./Export.css";
 
 function Export({ close }) {
-    const { export: settings } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    const { export: settings } = useSettings();
+    const dispatch = useDispatch();
 
     const updateSettings = value =>
         dispatch({ type: "update", key: "export", value });
@@ -20,10 +18,14 @@ function Export({ close }) {
     const toggleSettings = name =>
         dispatch({ type: "toggle", key: "export", value: name });
 
-    /**@param {string} format*/
+    /**
+     * @param {string} format
+     */
     const setFormat = format => updateSettings({ format });
 
-    /**@param {string} value*/
+    /**
+     * @param {string} value
+     */
     const setBinary = value => updateSettings({ binary: value === "true" });
 
     const startExport = () => toggleSettings("enable");

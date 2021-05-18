@@ -1,4 +1,6 @@
-/** @type { Array <ModelData> } */
+/**
+ * @type { Array <ModelData> }
+ */
 const dragons = [
     {
         id: "210147_01",

@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense } from "react";
 
-import { DispatchContext, SettingsContext } from "context/SettingsContext";
+import { useSettings, useDispatch } from "context/SettingsContext";
 
 import Close from "@material-ui/icons/Close";
 
@@ -23,8 +23,8 @@ function ChainMaker({ openModal }) {
     const {
         chainMaker: { chain },
         app: { viewerType },
-    } = useContext(SettingsContext);
-    const dispatch = useContext(DispatchContext);
+    } = useSettings();
+    const dispatch = useDispatch();
 
     const updateSettings = (key, value) => {
         const action = { type: "update", key, value };

@@ -1,12 +1,10 @@
-import { useContext } from "react";
-
-import { DispatchContext } from "context/SettingsContext";
+import { useDispatch } from "context/SettingsContext";
 
 import Slider from "@material-ui/core/Slider";
 import "./styles/AniControl.css";
 
 function AniControl({ value }) {
-    const dispatch = useContext(DispatchContext);
+    const dispatch = useDispatch();
     const scaleOptions = [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
     const marks = scaleOptions.map(scale => ({
         value: scale,

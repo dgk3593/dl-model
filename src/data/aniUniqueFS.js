@@ -1,4 +1,6 @@
-/** @type {{ [weaponType: string]: AnimationList }} */
+/**
+ * @type {{ [weaponType: string]: AnimationList }}
+ */
 const uniqueFS = {
     Sword: [
         {

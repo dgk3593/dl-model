@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext } from "react";
+import { lazy, Suspense } from "react";
 
-import { SettingsContext } from "context/SettingsContext";
+import { useSettings } from "context/SettingsContext";
 
 const SettingBtns = lazy(() => import("./SettingBtns"));
 const ChainMaker = lazy(() => import("./ChainMaker"));
@@ -15,7 +15,7 @@ const contentMap = {
 function SidebarBody({ openModal }) {
     const {
         app: { sidebarContent },
-    } = useContext(SettingsContext);
+    } = useSettings();
 
     const Body = contentMap[sidebarContent];
 

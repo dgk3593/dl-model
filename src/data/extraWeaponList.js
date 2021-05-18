@@ -1,4 +1,6 @@
-/** @type { Array <ModelData> } */
+/**
+ * @type { Array <ModelData> }
+ */
 const extraWeaponList = [
     { id: "wHandgun", name: "Handgun" },
     { id: "wHandgunS", name: "Handgun (Small)" },
