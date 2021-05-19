@@ -17,6 +17,7 @@ const dragonAni = {
     d200009_01: [
         { name: "Dragon's Roost", code: "DC_d200009_01_90_01" },
         { name: "Receive Gift", code: "DC_d200009_01_90_04" },
+        { name: "Boss Intro", code: "D20000901_090_02>D20000901_090_01" },
         { name: "Idle", code: "D20000901_000_01" },
         { name: "Lean forward", code: "D20000901_001_01" },
         { name: "Walk", code: "D20000901_002_01" },
@@ -3119,6 +3120,7 @@ const dragonAni = {
         },
         { name: "Breath of Fog", code: "D21009301_060_01" },
         { name: "Divine Dragon Blow", code: "D21009301_061_01" },
+        { name: "Boss Intro", code: "D21009301_090_02>D21009301_090_01" },
         { name: "Defeated", code: "D21009301_011_01" },
         {
             name: "Broken",

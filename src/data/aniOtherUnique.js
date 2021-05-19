@@ -30,6 +30,13 @@ const otherUnique = {
             ],
         },
         {
+            name: "Chrom",
+            icon: "advIcons/110359_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0150001_090_02>A0150001_090_01" },
+            ],
+        },
+        {
             name: "Pecorine",
             icon: "advIcons/110371_01_r05.png",
             animations: [
@@ -599,6 +606,8 @@ const otherUnique = {
                 { name: "Take Damage", code: "CMN_KNB_01_11036101" },
                 { name: "Die", code: "CMN_DIE_02_11036101" },
                 { name: "Transform", code: "CMN_CTD_01_11036101" },
+                { name: "Boss Intro", code: "A0170001_090_02>A0170001_090_01" },
+                { name: "Boss Attack", code: "A0170001_100_01" },
             ],
         },
     ],
