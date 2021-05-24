@@ -7,6 +7,14 @@ const aniWeaponExtra = {
             name: "Force Strike Run",
             code: "AXE_RUN_05",
         },
+        {
+            name: "Summon",
+            code: "SMN_CHR_AXE_APPEAR_01>SMN_CHR_AXE_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_AXE_WEAPON_APPEAR_01>SMN_CHR_AXE_WEAPON_LOOP_01",
+        },
     ],
     Bow: [
         {
@@ -17,11 +25,39 @@ const aniWeaponExtra = {
             name: "Old Force Strike",
             code: "BOW_CHR_A_01>BOW_CHR_A_02>BOW_CHR_A_03",
         },
+        {
+            name: "Summon",
+            code: "SMN_CHR_BOW_APPEAR_01>SMN_CHR_BOW_LOOP_01",
+        },
+    ],
+    Dagger: [
+        {
+            name: "Summon",
+            code: "SMN_CHR_DAG_APPEAR_01>SMN_CHR_DAG_LOOP_01",
+        },
+    ],
+    Lance: [
+        {
+            name: "Summon",
+            code: "SMN_CHR_LAN_APPEAR_01>SMN_CHR_LAN_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_LAN_WEAPON_APPEAR_01>SMN_CHR_LAN_WEAPON_LOOP_01",
+        },
     ],
     Staff: [
         {
             name: "Force Strike Run",
             code: "CAN_RUN_05",
+        },
+        {
+            name: "Summon",
+            code: "SMN_CHR_CAN_APPEAR_01>SMN_CHR_CAN_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_CAN_WEAPON_APPEAR_01>SMN_CHR_CAN_WEAPON_LOOP_01",
         },
     ],
     Wand: [
@@ -29,8 +65,20 @@ const aniWeaponExtra = {
             name: "Force Strike Run",
             code: "ROD_RUN_05",
         },
+        {
+            name: "Summon",
+            code: "SMN_CHR_ROD_APPEAR_01>SMN_CHR_ROD_LOOP_01",
+        },
     ],
     Blade: [
+        {
+            name: "Summon",
+            code: "SMN_CHR_KAT_APPEAR_01>SMN_CHR_KAT_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_KAT_WEAPON_APPEAR_01",
+        },
         {
             name: "Slow Run",
             code: "KAT_RUN_01",
@@ -93,6 +141,10 @@ const aniWeaponExtra = {
         },
     ],
     Manacaster: [
+        {
+            name: "Summon",
+            code: "SMN_CHR_GUN_APPEAR_01>SMN_CHR_GUN_LOOP_01",
+        },
         {
             name: "Die",
             code: "GUN_DIE_02",

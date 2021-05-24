@@ -15,5 +15,7 @@ const aniOthers = [
     },
     { name: "Tantrum?", code: "CMN_BAT_05" },
     { name: "Sideroll", code: "CMN_BAT_08" },
+    { name: "Summoner Pray", code: "SMN_NPC_100027_01_PRAY_01" },
+    { name: "Summoner Pray 2", code: "SMN_NPC_100027_01_PRAY_02" },
 ];
 export default aniOthers;

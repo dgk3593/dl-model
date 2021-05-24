@@ -48,6 +48,11 @@ class BasicViewer extends PureComponent {
         // const { fbx2json } = await import("helpers/fbx2json");
         // await fbx2json();
 
+        // const { processSummonClips } = await import(
+        //     "helpers/processSummonClips"
+        // );
+        // await processSummonClips();
+
         await this.initialize();
         this.finishedInit = true;
 

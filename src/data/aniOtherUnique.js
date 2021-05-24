@@ -40,6 +40,10 @@ const otherUnique = {
             name: "Pecorine",
             icon: "advIcons/110371_01_r05.png",
             animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_SWD_APPEAR_01_11037101>SMN_CHR_SWD_LOOP_01_11037101",
+                },
                 { name: "Slow Run", code: "CMN_RUN_01_11037101" },
                 { name: "Fast Run", code: "CMN_RUN_02_11037101" },
                 {
@@ -78,6 +82,14 @@ const otherUnique = {
             name: "Mona",
             icon: "advIcons/110379_01_r05.png",
             animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_SWD_APPEAR_01_11037901>SMN_CHR_SWD_LOOP_01_11037901",
+                },
+                {
+                    name: "Eldwater",
+                    code: "SMN_CHR_MOON_APPEAR_02_11037901>SMN_CHR_MOON_LOOP_02_11037901",
+                },
                 { name: "Idle", code: "CMN_INT_01_11037901" },
                 { name: "Backflip", code: "SWD_BAC_01_11037901" },
                 { name: "Dash Forward", code: "SWD_ROL_01_11037901" },
@@ -526,6 +538,20 @@ const otherUnique = {
             ],
         },
         {
+            name: "Pipple",
+            icon: "advIcons/110300_01_r04.png",
+            animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_ROD_APPEAR_01_11030001>SMN_CHR_ROD_LOOP_01_11030001",
+                },
+                {
+                    name: "Eldwater",
+                    code: "SMN_CHR_MOON_APPEAR_02_11030001>SMN_CHR_MOON_LOOP_02_11030001",
+                },
+            ],
+        },
+        {
             name: "Veronica",
             icon: "advIcons/110333_01_r05.png",
             animations: [
@@ -573,6 +599,14 @@ const otherUnique = {
             name: "Peony",
             icon: "advIcons/110361_01_r05.png",
             animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_ROD_APPEAR_01_11036101>SMN_CHR_ROD_LOOP_01_11036101",
+                },
+                {
+                    name: "Eldwater",
+                    code: "SMN_CHR_MOON_APPEAR_02_11036101>SMN_CHR_MOON_LOOP_02_11036101",
+                },
                 { name: "Bob", code: "CMN_MWM_03_11036101" },
                 { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 { name: "Fly Slow", code: "CMN_RUN_01_11036101" },

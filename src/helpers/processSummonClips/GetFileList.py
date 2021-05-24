@@ -1,6 +1,6 @@
 import os
 
-directory = '../../../public/fbx'
+directory = '../../../public/animations/todo'
 outputFile = 'fileList.js'
 
 if __name__ == '__main__':
