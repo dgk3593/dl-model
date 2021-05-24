@@ -337,6 +337,8 @@ const dragonAni = {
     d210020_01: [
         { name: "Dragon's Roost", code: "DC_d210020_01_90_01" },
         { name: "Receive Gift", code: "DC_d210020_01_90_04" },
+        { name: "Dragon's Roost (Tsukuyomi)", code: "DC_d210028_01_90_01" },
+        { name: "Receive Gift (Tsukuyomi)", code: "DC_d210028_01_90_04" },
         { name: "Idle", code: "D21002001_000_01" },
         { name: "Move Forward", code: "D21002001_002_01" },
         { name: "Move Forward (Fast)", code: "D21002001_003_01" },
