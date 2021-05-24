@@ -29,11 +29,19 @@ const aniWeaponExtra = {
             name: "Summon",
             code: "SMN_CHR_BOW_APPEAR_01>SMN_CHR_BOW_LOOP_01",
         },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_BOW_WEAPON_APPEAR_01>SMN_CHR_BOW_WEAPON_LOOP_01",
+        },
     ],
     Dagger: [
         {
             name: "Summon",
             code: "SMN_CHR_DAG_APPEAR_01>SMN_CHR_DAG_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_DAG_WEAPON_APPEAR_01>SMN_CHR_DAG_WEAPON_LOOP_01",
         },
     ],
     Lance: [
@@ -68,6 +76,20 @@ const aniWeaponExtra = {
         {
             name: "Summon",
             code: "SMN_CHR_ROD_APPEAR_01>SMN_CHR_ROD_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_ROD_WEAPON_APPEAR_01>SMN_CHR_ROD_WEAPON_LOOP_01",
+        },
+    ],
+    Sword: [
+        {
+            name: "Summon",
+            code: "SMN_CHR_SWD_APPEAR_01>SMN_CHR_SWD_LOOP_01",
+        },
+        {
+            name: "Summon Special",
+            code: "SMN_CHR_SWD_WEAPON_APPEAR_01>SMN_CHR_SWD_WEAPON_LOOP_01",
         },
     ],
     Blade: [

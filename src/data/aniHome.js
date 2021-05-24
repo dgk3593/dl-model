@@ -39,6 +39,10 @@ const aniHome = {
             name: "Turn Around",
             code: "CMN_MWM_13",
         },
+        {
+            name: "Eldwater",
+            code: "SMN_CHR_MOON_APPEAR_02>SMN_CHR_MOON_LOOP_02",
+        },
     ],
     Male: [
         {

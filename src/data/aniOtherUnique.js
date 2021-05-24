@@ -169,6 +169,14 @@ const otherUnique = {
             name: "Gala Notte",
             icon: "advIcons/100007_07_r05.png",
             animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_BOW_APPEAR_01_11036801>SMN_CHR_BOW_LOOP_01_11036801",
+                },
+                {
+                    name: "Eldwater",
+                    code: "SMN_CHR_MOON_APPEAR_02_11036801>SMN_CHR_MOON_LOOP_02_11036801",
+                },
                 { name: "Bob", code: "CMN_MWM_03_11036101" },
                 { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
@@ -490,6 +498,14 @@ const otherUnique = {
             name: "Meene",
             icon: "advIcons/110368_01_r05.png",
             animations: [
+                {
+                    name: "Summon",
+                    code: "SMN_CHR_BOW_APPEAR_01_11036801>SMN_CHR_BOW_LOOP_01_11036801",
+                },
+                {
+                    name: "Eldwater",
+                    code: "SMN_CHR_MOON_APPEAR_02_11036801>SMN_CHR_MOON_LOOP_02_11036801",
+                },
                 { name: "Bob", code: "CMN_MWM_03_11036101" },
                 { name: "Stroll", code: "CMN_MWM_21_11036101" },
                 {
