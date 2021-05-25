@@ -2246,6 +2246,10 @@ const dragonAni = {
     d210121_01: [
         { name: "Dragon's Roost", code: "DC_d210121_01_90_01" },
         { name: "Receive Gift", code: "DC_d210121_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210121_01_APPEAR_01>SMN_DRG_210121_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012101_000_01" },
         { name: "Move Forward", code: "D21012101_002_01" },
         { name: "Move Forward (Fast)", code: "D21012101_003_01" },
@@ -2264,6 +2268,10 @@ const dragonAni = {
     d210122_01: [
         { name: "Dragon's Roost", code: "DC_d210122_01_90_01" },
         { name: "Receive Gift", code: "DC_d210122_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210121_01_APPEAR_01>SMN_DRG_210121_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012101_000_01" },
         { name: "Move Forward", code: "D21012101_002_01" },
         { name: "Move Forward (Fast)", code: "D21012101_003_01" },
