@@ -1,19 +1,2 @@
-const fileList = [
-    "SMN_CHR_BOW_APPEAR_01_11036801.json",
-    "SMN_CHR_BOW_LOOP_01_11036801.json",
-    "SMN_CHR_BOW_WEAPON_APPEAR_01.json",
-    "SMN_CHR_BOW_WEAPON_LOOP_01.json",
-    "SMN_CHR_DAG_WEAPON_APPEAR_01.json",
-    "SMN_CHR_DAG_WEAPON_LOOP_01.json",
-    "SMN_CHR_MOON_APPEAR_02.json",
-    "SMN_CHR_MOON_APPEAR_02_11036801.json",
-    "SMN_CHR_MOON_LOOP_02.json",
-    "SMN_CHR_MOON_LOOP_02_11036801.json",
-    "SMN_CHR_ROD_WEAPON_APPEAR_01.json",
-    "SMN_CHR_ROD_WEAPON_LOOP_01.json",
-    "SMN_CHR_SWD_APPEAR_01.json",
-    "SMN_CHR_SWD_LOOP_01.json",
-    "SMN_CHR_SWD_WEAPON_APPEAR_01.json",
-    "SMN_CHR_SWD_WEAPON_LOOP_01.json",
-];
+const fileList = [];
 export default fileList;

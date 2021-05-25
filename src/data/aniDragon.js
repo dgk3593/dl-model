@@ -17,6 +17,10 @@ const dragonAni = {
     d200009_01: [
         { name: "Dragon's Roost", code: "DC_d200009_01_90_01" },
         { name: "Receive Gift", code: "DC_d200009_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_200009_01_APPEAR_01>SMN_DRG_200009_01_LOOP_01",
+        },
         { name: "Boss Intro", code: "D20000901_090_02>D20000901_090_01" },
         { name: "Idle", code: "D20000901_000_01" },
         { name: "Lean forward", code: "D20000901_001_01" },
@@ -82,6 +86,10 @@ const dragonAni = {
     d200010_01: [
         { name: "Dragon's Roost", code: "DC_d200010_01_90_01" },
         { name: "Receive Gift", code: "DC_d200010_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_200010_01_APPEAR_01>SMN_DRG_200010_01_LOOP_01",
+        },
         { name: "Idle", code: "D20001001_000_01" },
         { name: "Walk", code: "D20001001_002_01" },
         { name: "Run", code: "D20001001_003_01" },
@@ -154,6 +162,10 @@ const dragonAni = {
     d200017_01: [
         { name: "Dragon's Roost", code: "DC_d200017_01_90_01" },
         { name: "Receive Gift", code: "DC_d200017_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_200017_01_APPEAR_01>SMN_DRG_200017_01_LOOP_01",
+        },
         { name: "Idle", code: "D20001701_000_01" },
         { name: "Walk", code: "D20001701_002_01" },
         { name: "Run", code: "D20001701_003_01" },
@@ -172,6 +184,10 @@ const dragonAni = {
     d200018_01: [
         { name: "Dragon's Roost", code: "DC_d200018_01_90_01" },
         { name: "Receive Gift", code: "DC_d200018_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_200018_01_APPEAR_01>SMN_DRG_200018_01_LOOP_01",
+        },
         { name: "Idle", code: "D20001801_000_01" },
         { name: "Move Forward", code: "D20001801_002_01" },
         { name: "Move Forward (Fast)", code: "D20001801_003_01" },
@@ -226,6 +242,10 @@ const dragonAni = {
     d210010_01: [
         { name: "Dragon's Roost", code: "DC_d210010_01_90_01" },
         { name: "Receive Gift", code: "DC_d210010_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210010_01_APPEAR_01>SMN_DRG_210010_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001001_000_01" },
         { name: "Move Forward", code: "D21001001_002_01" },
         { name: "Move Forward (Fast)", code: "D21001001_003_01" },
@@ -248,6 +268,10 @@ const dragonAni = {
     d210016_01: [
         { name: "Dragon's Roost", code: "DC_d210016_01_90_01" },
         { name: "Receive Gift", code: "DC_d210016_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210016_01_APPEAR_01>SMN_DRG_210016_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001601_000_01" },
         { name: "Walk", code: "D21001601_002_01" },
         { name: "Run", code: "D21001601_003_01" },
@@ -270,6 +294,10 @@ const dragonAni = {
     d210017_01: [
         { name: "Dragon's Roost", code: "DC_d210017_01_90_01" },
         { name: "Receive Gift", code: "DC_d210017_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210017_01_APPEAR_01>SMN_DRG_210017_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001701_000_01" },
         { name: "Move Forward", code: "D21001701_002_01" },
         { name: "Move Forward (Fast)", code: "D21001701_003_01" },
@@ -292,6 +320,10 @@ const dragonAni = {
     d210018_01: [
         { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
         { name: "Receive Gift", code: "DC_d210018_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210018_01_APPEAR_01>SMN_DRG_210018_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001801_000_01" },
         { name: "Move Forward", code: "D21001801_002_01" },
         { name: "Move Forward (Fast)", code: "D21001801_003_01" },
@@ -315,6 +347,10 @@ const dragonAni = {
     d210019_01: [
         { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
         { name: "Receive Gift", code: "DC_d210019_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210019_01_APPEAR_01>SMN_DRG_210019_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001901_000_01" },
         { name: "Walk", code: "D21001901_002_01" },
         { name: "Run", code: "D21001901_003_01" },
@@ -337,8 +373,16 @@ const dragonAni = {
     d210020_01: [
         { name: "Dragon's Roost", code: "DC_d210020_01_90_01" },
         { name: "Receive Gift", code: "DC_d210020_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210020_01_APPEAR_01>SMN_DRG_210020_01_LOOP_01",
+        },
         { name: "Dragon's Roost (Tsukuyomi)", code: "DC_d210028_01_90_01" },
         { name: "Receive Gift (Tsukuyomi)", code: "DC_d210028_01_90_04" },
+        {
+            name: "Summon (Tsukuyomi)",
+            code: "SMN_DRG_210028_01_APPEAR_01>SMN_DRG_210028_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002001_000_01" },
         { name: "Move Forward", code: "D21002001_002_01" },
         { name: "Move Forward (Fast)", code: "D21002001_003_01" },
@@ -362,6 +406,10 @@ const dragonAni = {
     d210024_01: [
         { name: "Dragon's Roost", code: "DC_d210024_01_90_01" },
         { name: "Receive Gift", code: "DC_d210024_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210024_01_APPEAR_01>SMN_DRG_210024_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002401_000_01" },
         { name: "Move Forward", code: "D21002401_002_01" },
         { name: "Move Forward (Fast)", code: "D21002401_003_01" },
@@ -384,6 +432,10 @@ const dragonAni = {
     d210025_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
         { name: "Receive Gift", code: "DC_d210025_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210025_01_APPEAR_01>SMN_DRG_210025_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002501_000_01" },
         { name: "Move Forward", code: "D21002501_002_01" },
         { name: "Move Forward (Fast)", code: "D21002501_003_01" },
@@ -406,6 +458,10 @@ const dragonAni = {
     d210026_01: [
         { name: "Dragon's Roost", code: "DC_d210026_01_90_01" },
         { name: "Receive Gift", code: "DC_d210026_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210026_01_APPEAR_01>SMN_DRG_210026_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002601_000_01" },
         { name: "Move Forward", code: "D21002601_002_01" },
         { name: "Move Forward (Fast)", code: "D21002601_003_01" },
@@ -425,6 +481,10 @@ const dragonAni = {
     d210030_01: [
         { name: "Dragon's Roost", code: "DC_d210030_01_90_01" },
         { name: "Receive Gift", code: "DC_d210030_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210030_01_APPEAR_01>SMN_DRG_210030_01_LOOP_01",
+        },
         { name: "Idle", code: "D21003001_000_01" },
         { name: "Run", code: "D21003001_002_01" },
         { name: "Run Fast", code: "D21003001_003_01" },
@@ -443,6 +503,10 @@ const dragonAni = {
     d210036_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
         { name: "Receive Gift", code: "DC_d210006_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210006_01_APPEAR_01>SMN_DRG_210006_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000601_000_01" },
         { name: "Move Forward", code: "D21000601_002_01" },
         { name: "Move Forward (Fast)", code: "D21000601_003_01" },
@@ -670,6 +734,10 @@ const dragonAni = {
     d210040_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
         { name: "Receive Gift", code: "DC_d210003_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210003_01_APPEAR_01>SMN_DRG_210003_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000301_000_01" },
         { name: "Lean Forward", code: "D21000301_001_01" },
         { name: "Walk", code: "D21000301_002_01" },
@@ -761,6 +829,10 @@ const dragonAni = {
     d210041_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
         { name: "Receive Gift", code: "DC_d210004_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210050_01_APPEAR_01>SMN_DRG_210050_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000401_000_01" },
         { name: "Run", code: "D21000401_002_01" },
         { name: "Run Fast", code: "D21005001_003_01" },
@@ -934,6 +1006,10 @@ const dragonAni = {
     d210043_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210014_01_APPEAR_01>SMN_DRG_210014_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001401_000_01" },
         { name: "Walk", code: "D21001401_002_01" },
         { name: "Run", code: "D21001401_003_01" },
@@ -952,6 +1028,10 @@ const dragonAni = {
     d210045_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210014_01_APPEAR_01>SMN_DRG_210014_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001401_000_01" },
         { name: "Walk", code: "D21001401_002_01" },
         { name: "Run", code: "D21001401_003_01" },
@@ -970,6 +1050,10 @@ const dragonAni = {
     d210046_01: [
         { name: "Dragon's Roost", code: "DC_d210046_01_90_01" },
         { name: "Receive Gift", code: "DC_d210046_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210046_01_APPEAR_01>SMN_DRG_210046_01_LOOP_01",
+        },
         { name: "Idle", code: "D21004601_000_01" },
         { name: "Walk", code: "D21004601_002_01" },
         { name: "Run", code: "D21004601_003_01" },
@@ -988,6 +1072,10 @@ const dragonAni = {
     d210048_01: [
         { name: "Dragon's Roost", code: "DC_d210048_01_90_01" },
         { name: "Receive Gift", code: "DC_d210048_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210048_01_APPEAR_01>SMN_DRG_210048_01_LOOP_01",
+        },
         { name: "Idle", code: "D21004801_000_01" },
         { name: "Move Forward", code: "D21004801_002_01" },
         { name: "Move Forward (Fast)", code: "D21004801_003_01" },
@@ -1007,6 +1095,10 @@ const dragonAni = {
     d210049_01: [
         { name: "Dragon's Roost", code: "DC_d210049_01_90_01" },
         { name: "Receive Gift", code: "DC_d210049_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210049_01_APPEAR_01>SMN_DRG_210049_01_LOOP_01",
+        },
         { name: "Idle", code: "D21004901_000_01" },
         { name: "Move Forward", code: "D21004901_002_01" },
         { name: "Move Forward (Fast)", code: "D21004901_003_01" },
@@ -1025,6 +1117,10 @@ const dragonAni = {
     d210051_01: [
         { name: "Dragon's Roost", code: "DC_d210051_01_90_01" },
         { name: "Receive Gift", code: "DC_d210051_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210007_01_APPEAR_01>SMN_DRG_210007_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000701_000_01" },
         { name: "Walk", code: "D21000701_002_01" },
         { name: "Run", code: "D21000701_003_01" },
@@ -1047,6 +1143,10 @@ const dragonAni = {
     d210052_01: [
         { name: "Dragon's Roost", code: "DC_d210052_01_90_01" },
         { name: "Receive Gift", code: "DC_d210052_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210052_01_APPEAR_01>SMN_DRG_210052_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005201_000_01" },
         { name: "Move Forward", code: "D21005201_002_01" },
         { name: "Move Forward (Fast)", code: "D21005201_003_01" },
@@ -1065,6 +1165,10 @@ const dragonAni = {
     d210053_01: [
         { name: "Dragon's Roost", code: "DC_d210053_01_90_01" },
         { name: "Receive Gift", code: "DC_d210053_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210053_01_APPEAR_01>SMN_DRG_210053_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005301_000_01" },
         { name: "Move Forward", code: "D21005301_002_01" },
         { name: "Move Forward (Fast)", code: "D21005301_003_01" },
@@ -1083,6 +1187,10 @@ const dragonAni = {
     d210054_01: [
         { name: "Dragon's Roost", code: "DC_d210054_01_90_01" },
         { name: "Receive Gift", code: "DC_d210054_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210054_01_APPEAR_01>SMN_DRG_210054_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005401_000_01" },
         { name: "Move Forward", code: "D21005401_002_01" },
         { name: "Move Forward (Fast)", code: "D21005401_003_01" },
@@ -1101,6 +1209,10 @@ const dragonAni = {
     d210055_01: [
         { name: "Dragon's Roost", code: "DC_d210055_01_90_01" },
         { name: "Receive Gift", code: "DC_d210055_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210055_01_APPEAR_01>SMN_DRG_210055_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005501_000_01" },
         { name: "Walk", code: "D21005501_002_01" },
         { name: "Run", code: "D21005501_003_01" },
@@ -1119,6 +1231,10 @@ const dragonAni = {
     d210056_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
         { name: "Receive Gift", code: "DC_d210006_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210006_01_APPEAR_01>SMN_DRG_210006_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000601_000_01" },
         { name: "Move Forward", code: "D21000601_002_01" },
         { name: "Move Forward (Fast)", code: "D21000601_003_01" },
@@ -1137,6 +1253,10 @@ const dragonAni = {
     d210057_01: [
         { name: "Dragon's Roost", code: "DC_d210008_01_90_01" },
         { name: "Receive Gift", code: "DC_d210008_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210008_01_APPEAR_01>SMN_DRG_210008_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000801_000_01" },
         { name: "Move Forward", code: "D21000801_002_01" },
         { name: "Move Forward (Fast)", code: "D21000801_003_01" },
@@ -1171,6 +1291,10 @@ const dragonAni = {
     d210072_01: [
         { name: "Dragon's Roost", code: "DC_d210072_01_90_01" },
         { name: "Receive Gift", code: "DC_d210072_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210072_01_APPEAR_01>SMN_DRG_210072_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007201_000_01" },
         { name: "Run", code: "D21007201_002_01" },
         { name: "Run Fast", code: "D21007201_003_01" },
@@ -1189,6 +1313,10 @@ const dragonAni = {
     d210074_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
         { name: "Receive Gift", code: "DC_d210012_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210012_01_APPEAR_01>SMN_DRG_210012_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001201_000_01" },
         { name: "Walk", code: "D21001201_002_01" },
         { name: "Run", code: "D21001201_003_01" },
@@ -1211,6 +1339,10 @@ const dragonAni = {
     d210076_01: [
         { name: "Dragon's Roost", code: "DC_d210076_01_90_01" },
         { name: "Receive Gift", code: "DC_d210076_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210076_01_APPEAR_01>SMN_DRG_210076_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007601_000_01" },
         { name: "Move Forward", code: "D21007601_002_01" },
         { name: "Move Forward (Fast)", code: "D21007601_003_01" },
@@ -1234,6 +1366,10 @@ const dragonAni = {
     d210077_01: [
         { name: "Dragon's Roost", code: "DC_d210077_01_90_01" },
         { name: "Receive Gift", code: "DC_d210077_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210077_01_APPEAR_01>SMN_DRG_210077_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007701_000_01" },
         { name: "Move Forward", code: "D21007701_002_01" },
         { name: "Move Forward (Fast)", code: "D21007701_003_01" },
@@ -1249,6 +1385,10 @@ const dragonAni = {
     d210078_01: [
         { name: "Dragon's Roost", code: "DC_d210078_01_90_01" },
         { name: "Receive Gift", code: "DC_d210078_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210078_01_APPEAR_01>SMN_DRG_210078_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007801_000_01" },
         { name: "Walk", code: "D21007801_002_01" },
         { name: "Run", code: "D21007801_003_01" },
@@ -1264,6 +1404,10 @@ const dragonAni = {
     d210079_01: [
         { name: "Dragon's Roost", code: "DC_d210079_01_90_01" },
         { name: "Receive Gift", code: "DC_d210079_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210079_01_APPEAR_01>SMN_DRG_210079_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007901_000_01" },
         { name: "Move Forward", code: "D21007901_002_01" },
         { name: "Move Forward (Fast)", code: "D21007901_003_01" },
@@ -1282,6 +1426,10 @@ const dragonAni = {
     d210080_01: [
         { name: "Dragon's Roost", code: "DC_d210080_01_90_01" },
         { name: "Receive Gift", code: "DC_d210080_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210080_01_APPEAR_01>SMN_DRG_210080_01_LOOP_01",
+        },
         { name: "Idle", code: "D21008001_000_01" },
         { name: "Move Forward", code: "D21008001_002_01" },
         { name: "Move Forward (Fast)", code: "D21008001_003_01" },
@@ -1300,6 +1448,10 @@ const dragonAni = {
     d210081_01: [
         { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
         { name: "Receive Gift", code: "DC_d210018_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210081_01_APPEAR_01>SMN_DRG_210081_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001801_000_01" },
         { name: "Move Forward", code: "D21001801_002_01" },
         { name: "Move Forward (Fast)", code: "D21001801_003_01" },
@@ -1323,6 +1475,10 @@ const dragonAni = {
     d210082_01: [
         { name: "Dragon's Roost", code: "DC_d210082_01_90_01" },
         { name: "Receive Gift", code: "DC_d210082_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210082_01_APPEAR_01>SMN_DRG_210082_01_LOOP_01",
+        },
         { name: "Idle", code: "D21008201_000_01" },
         { name: "Move Forward", code: "D21008201_002_01" },
         { name: "Move Forward (Fast)", code: "D21008201_003_01" },
@@ -1341,6 +1497,10 @@ const dragonAni = {
     d210083_01: [
         { name: "Dragon's Roost", code: "DC_d210083_01_90_01" },
         { name: "Receive Gift", code: "DC_d210083_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210083_01_APPEAR_01>SMN_DRG_210083_01_LOOP_01",
+        },
         { name: "Idle", code: "D21008301_000_01" },
         { name: "Move Forward", code: "D21008301_002_01" },
         { name: "Move Forward (Fast)", code: "D21008301_003_01" },
@@ -1359,6 +1519,10 @@ const dragonAni = {
     d210084_01: [
         { name: "Dragon's Roost", code: "DC_d210084_01_90_01" },
         { name: "Receive Gift", code: "DC_d210084_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210084_01_APPEAR_01>SMN_DRG_210084_01_LOOP_01",
+        },
         { name: "Idle", code: "D21008401_000_01" },
         { name: "Move Forward", code: "D21008401_002_01" },
         { name: "Move Forward (Fast)", code: "D21008401_003_01" },
@@ -1377,6 +1541,10 @@ const dragonAni = {
     d210085_01: [
         { name: "Dragon's Roost", code: "DC_d210085_01_90_01" },
         { name: "Receive Gift", code: "DC_d210085_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210085_01_APPEAR_01>SMN_DRG_210085_01_LOOP_01",
+        },
         { name: "Idle", code: "D21008501_000_01" },
         { name: "Move Forward", code: "D21008501_002_01" },
         { name: "Move Forward (Fast)", code: "D21008501_003_01" },
@@ -1395,6 +1563,10 @@ const dragonAni = {
     d210087_01: [
         { name: "Dragon's Roost", code: "DC_d210087_01_90_01" },
         { name: "Receive Gift", code: "DC_d210087_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210087_01_APPEAR_01>SMN_DRG_210087_01_LOOP_01",
+        },
         { name: "Idle", code: "D21004801_000_01" },
         { name: "Move Forward", code: "D21004801_002_01" },
         { name: "Move Forward (Fast)", code: "D21004801_003_01" },
@@ -1471,6 +1643,10 @@ const dragonAni = {
     d210094_01: [
         { name: "Dragon's Roost", code: "DC_d210094_01_90_01" },
         { name: "Receive Gift", code: "DC_d210094_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210094_01_APPEAR_01>SMN_DRG_210094_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005401_000_01" },
         { name: "Move Forward", code: "D21005401_002_01" },
         { name: "Move Forward (Fast)", code: "D21005401_003_01" },
@@ -1489,6 +1665,10 @@ const dragonAni = {
     d210095_01: [
         { name: "Dragon's Roost", code: "DC_d210005_01_90_01" },
         { name: "Receive Gift", code: "DC_d210005_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210095_01_APPEAR_01>SMN_DRG_210095_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000501_000_01" },
         { name: "Howl", code: "D21000501_001_01" },
         { name: "Walk", code: "D21000501_002_01" },
@@ -1552,6 +1732,10 @@ const dragonAni = {
     d210097_01: [
         { name: "Dragon's Roost", code: "DC_d210072_01_90_01" },
         { name: "Receive Gift", code: "DC_d210072_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210072_01_APPEAR_01>SMN_DRG_210072_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007201_000_01" },
         { name: "Run", code: "D21009701_002_01" },
         { name: "Run Fast", code: "D21009701_003_01" },
@@ -1570,6 +1754,10 @@ const dragonAni = {
     d210098_01: [
         { name: "Dragon's Roost", code: "DC_d210098_01_90_01" },
         { name: "Receive Gift", code: "DC_d210098_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210016_01_APPEAR_01>SMN_DRG_210016_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001601_000_01" },
         { name: "Walk", code: "D21001601_002_01" },
         { name: "Run", code: "D21001601_003_01" },
@@ -1686,6 +1874,10 @@ const dragonAni = {
     d210103_01: [
         { name: "Dragon's Roost", code: "DC_d210103_01_90_01" },
         { name: "Receive Gift", code: "DC_d210103_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210103_01_APPEAR_01>SMN_DRG_210103_01_LOOP_01",
+        },
         { name: "Idle", code: "D21010301_000_01" },
         { name: "Move Forward", code: "D21010301_002_01" },
         { name: "Move Forward (Fast)", code: "D21010301_003_01" },
@@ -1721,6 +1913,10 @@ const dragonAni = {
     d210105_01: [
         { name: "Dragon's Roost", code: "DC_d210025_01_90_01" },
         { name: "Receive Gift", code: "DC_d210025_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210105_01_APPEAR_01>SMN_DRG_210105_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002501_000_01" },
         { name: "Move Forward", code: "D21002501_002_01" },
         { name: "Move Forward (Fast)", code: "D21002501_003_01" },
@@ -1792,6 +1988,10 @@ const dragonAni = {
     d210107_01: [
         { name: "Dragon's Roost", code: "DC_d210019_01_90_01" },
         { name: "Receive Gift", code: "DC_d210019_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210019_01_APPEAR_01>SMN_DRG_210019_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001901_000_01" },
         { name: "Walk", code: "D21001901_002_01" },
         { name: "Run", code: "D21001901_003_01" },
@@ -1814,6 +2014,10 @@ const dragonAni = {
     d210109_01: [
         { name: "Dragon's Roost", code: "DC_d210109_01_90_01" },
         { name: "Receive Gift", code: "DC_d210109_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210109_01_APPEAR_01>SMN_DRG_210109_01_LOOP_01",
+        },
         { name: "Idle", code: "D21010901_000_01" },
         { name: "Walk", code: "D21010901_002_01" },
         { name: "Run", code: "D21010901_003_01" },
@@ -1848,6 +2052,10 @@ const dragonAni = {
     d210110_01: [
         { name: "Dragon's Roost", code: "DC_d210110_01_90_01" },
         { name: "Receive Gift", code: "DC_d210110_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210110_01_APPEAR_01>SMN_DRG_210110_01_LOOP_01",
+        },
         { name: "Idle", code: "D21011001_000_01" },
         { name: "Idle 2", code: "D21011001_014_01" },
         { name: "Move Forward", code: "D21011001_002_01" },
@@ -1890,6 +2098,10 @@ const dragonAni = {
     d210112_01: [
         { name: "Dragon's Roost", code: "DC_d210112_01_90_01" },
         { name: "Receive Gift", code: "DC_d210112_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210052_01_APPEAR_01>SMN_DRG_210052_01_LOOP_01",
+        },
         { name: "Idle", code: "D21005201_000_01" },
         { name: "Move Forward", code: "D21005201_002_01" },
         { name: "Move Forward (Fast)", code: "D21005201_003_01" },
@@ -1908,6 +2120,10 @@ const dragonAni = {
     d210114_01: [
         { name: "Dragon's Roost", code: "DC_d210114_01_90_01" },
         { name: "Receive Gift", code: "DC_d210114_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210114_01_APPEAR_01>SMN_DRG_210114_01_LOOP_01",
+        },
         { name: "Idle", code: "D21011401_000_01" },
         { name: "Run", code: "D21011401_002_01" },
         { name: "Run Fast", code: "D21011401_003_01" },
@@ -1926,6 +2142,10 @@ const dragonAni = {
     d210115_01: [
         { name: "Dragon's Roost", code: "DC_d210115_01_90_01" },
         { name: "Receive Gift", code: "DC_d210115_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210115_01_APPEAR_01>SMN_DRG_210115_01_LOOP_01",
+        },
         { name: "Idle", code: "D21011501_000_01" },
         { name: "Move Forward", code: "D21011501_002_01" },
         { name: "Move Forward (Fast)", code: "D21011501_003_01" },
@@ -1944,6 +2164,10 @@ const dragonAni = {
     d210116_01: [
         { name: "Dragon's Roost", code: "DC_d210116_01_90_01" },
         { name: "Receive Gift", code: "DC_d210116_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210116_01_APPEAR_01>SMN_DRG_210116_01_LOOP_01",
+        },
         { name: "Idle", code: "D21011601_000_01" },
         { name: "Move Forward", code: "D21011601_002_01" },
         { name: "Move Forward (Fast)", code: "D21011601_003_01" },
@@ -1962,6 +2186,10 @@ const dragonAni = {
     d210117_01: [
         { name: "Dragon's Roost", code: "DC_d210117_01_90_01" },
         { name: "Receive Gift", code: "DC_d210117_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210117_01_APPEAR_01>SMN_DRG_210117_01_LOOP_01",
+        },
         { name: "Idle", code: "D21011701_000_01" },
         { name: "Move Forward", code: "D21011701_002_01" },
         { name: "Move Forward (Fast)", code: "D21011701_003_01" },
@@ -1996,6 +2224,10 @@ const dragonAni = {
     d210120_01: [
         { name: "Dragon's Roost", code: "DC_d210120_01_90_01" },
         { name: "Receive Gift", code: "DC_d210120_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210120_01_APPEAR_01>SMN_DRG_210120_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012001_000_01" },
         { name: "Move Forward", code: "D21012001_002_01" },
         { name: "Move Forward (Fast)", code: "D21012001_003_01" },
@@ -2050,6 +2282,10 @@ const dragonAni = {
     d210123_01: [
         { name: "Dragon's Roost", code: "DC_d210123_01_90_01" },
         { name: "Receive Gift", code: "DC_d210123_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210123_01_APPEAR_01>SMN_DRG_210123_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012301_000_01" },
         { name: "Move Forward", code: "D21012301_002_01" },
         { name: "Move Forward (Fast)", code: "D21012301_003_01" },
@@ -2068,6 +2304,10 @@ const dragonAni = {
     d210124_01: [
         { name: "Dragon's Roost", code: "DC_d210124_01_90_01" },
         { name: "Receive Gift", code: "DC_d210124_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210124_01_APPEAR_01>SMN_DRG_210124_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012401_000_01" },
         { name: "Move Forward", code: "D21012401_002_01" },
         { name: "Move Forward (Fast)", code: "D21012401_003_01" },
@@ -2086,6 +2326,10 @@ const dragonAni = {
     d210125_01: [
         { name: "Dragon's Roost", code: "DC_d210125_01_90_01" },
         { name: "Receive Gift", code: "DC_d210125_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210125_01_APPEAR_01>SMN_DRG_210125_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012501_000_01" },
         { name: "Move Forward", code: "D21012501_002_01" },
         { name: "Move Forward (Fast)", code: "D21012501_003_01" },
@@ -2104,6 +2348,10 @@ const dragonAni = {
     d210126_01: [
         { name: "Dragon's Roost", code: "DC_d210126_01_90_01" },
         { name: "Receive Gift", code: "DC_d210126_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210126_01_APPEAR_01>SMN_DRG_210126_01_LOOP_01",
+        },
         { name: "Idle", code: "D21012601_000_01" },
         { name: "Move Forward", code: "D21012601_002_01" },
         { name: "Move Forward (Fast)", code: "D21012601_003_01" },
@@ -2162,6 +2410,10 @@ const dragonAni = {
     d210130_01: [
         { name: "Dragon's Roost", code: "DC_d210130_01_90_01" },
         { name: "Receive Gift", code: "DC_d210130_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210130_01_APPEAR_01>SMN_DRG_210130_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013001_000_01" },
         { name: "Move Forward", code: "D21013001_002_01" },
         { name: "Move Forward (Fast)", code: "D21013001_003_01" },
@@ -2180,6 +2432,10 @@ const dragonAni = {
     d210131_01: [
         { name: "Dragon's Roost", code: "DC_d210131_01_90_01" },
         { name: "Receive Gift", code: "DC_d210131_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210131_01_APPEAR_01>SMN_DRG_210131_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013101_000_01" },
         { name: "Move Forward", code: "D21013101_002_01" },
         { name: "Move Forward (Fast)", code: "D21013101_003_01" },
@@ -2198,6 +2454,10 @@ const dragonAni = {
     d210132_01: [
         { name: "Dragon's Roost", code: "DC_d210132_01_90_01" },
         { name: "Receive Gift", code: "DC_d210132_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210132_01_APPEAR_01>SMN_DRG_210132_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013201_000_01" },
         { name: "Move Forward", code: "D21013201_002_01" },
         { name: "Move Forward (Fast)", code: "D21013201_003_01" },
@@ -2248,6 +2508,10 @@ const dragonAni = {
     d210134_01: [
         { name: "Dragon's Roost", code: "DC_d210134_01_90_01" },
         { name: "Receive Gift", code: "DC_d210134_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210134_01_APPEAR_01>SMN_DRG_210134_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013401_000_01" },
         { name: "Move Forward", code: "D21013401_002_01" },
         { name: "Move Forward (Fast)", code: "D21013401_003_01" },
@@ -2266,6 +2530,10 @@ const dragonAni = {
     d210135_01: [
         { name: "Dragon's Roost", code: "DC_d210135_01_90_01" },
         { name: "Receive Gift", code: "DC_d210135_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210135_01_APPEAR_01>SMN_DRG_210135_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013501_000_01" },
         { name: "Move Forward", code: "D21013501_002_01" },
         { name: "Move Forward (Fast)", code: "D21013501_003_01" },
@@ -2284,6 +2552,10 @@ const dragonAni = {
     d210142_01: [
         { name: "Dragon's Roost", code: "DC_d210142_01_90_01" },
         { name: "Receive Gift", code: "DC_d210142_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210142_01_APPEAR_01>SMN_DRG_210142_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014201_000_01" },
         { name: "Move Forward", code: "D21014201_002_01" },
         { name: "Move Forward (Fast)", code: "D21014201_003_01" },
@@ -2302,6 +2574,10 @@ const dragonAni = {
     d210143_01: [
         { name: "Dragon's Roost", code: "DC_d210143_01_90_01" },
         { name: "Receive Gift", code: "DC_d210143_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210143_01_APPEAR_01>SMN_DRG_210143_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014301_000_01" },
         { name: "Move Forward", code: "D21014301_002_01" },
         { name: "Move Forward (Fast)", code: "D21014301_003_01" },
@@ -2317,6 +2593,10 @@ const dragonAni = {
     d210136_01: [
         { name: "Dragon's Roost", code: "DC_d210136_01_90_01" },
         { name: "Receive Gift", code: "DC_d210136_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210136_01_APPEAR_01>SMN_DRG_210136_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013601_000_01" },
         { name: "Walk", code: "D21013601_002_01" },
         { name: "Run", code: "D21013601_003_01" },
@@ -2529,6 +2809,10 @@ const dragonAni = {
     d210003_01: [
         { name: "Dragon's Roost", code: "DC_d210003_01_90_01" },
         { name: "Receive Gift", code: "DC_d210003_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210003_01_APPEAR_01>SMN_DRG_210003_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000301_000_01" },
         { name: "Lean Forward", code: "D21000301_001_01" },
         { name: "Walk", code: "D21000301_002_01" },
@@ -2604,6 +2888,10 @@ const dragonAni = {
     d210004_01: [
         { name: "Dragon's Roost", code: "DC_d210004_01_90_01" },
         { name: "Receive Gift", code: "DC_d210004_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210004_02_APPEAR_01>SMN_DRG_210004_02_LOOP_01",
+        },
         { name: "Idle", code: "D21000401_000_01" },
         { name: "Run", code: "D21000401_002_01" },
         { name: "Run Fast", code: "D21000401_003_01" },
@@ -2761,6 +3049,10 @@ const dragonAni = {
     d210006_01: [
         { name: "Dragon's Roost", code: "DC_d210006_01_90_01" },
         { name: "Receive Gift", code: "DC_d210006_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210006_01_APPEAR_01>SMN_DRG_210006_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000601_000_01" },
         { name: "Move Forward", code: "D21000601_002_01" },
         { name: "Move Forward (Fast)", code: "D21000601_003_01" },
@@ -2779,6 +3071,10 @@ const dragonAni = {
     d210007_01: [
         { name: "Dragon's Roost", code: "DC_d210007_01_90_01" },
         { name: "Receive Gift", code: "DC_d210007_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210007_01_APPEAR_01>SMN_DRG_210007_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000701_000_01" },
         { name: "Walk", code: "D21000701_002_01" },
         { name: "Run", code: "D21000701_003_01" },
@@ -2801,6 +3097,10 @@ const dragonAni = {
     d210008_01: [
         { name: "Dragon's Roost", code: "DC_d210008_01_90_01" },
         { name: "Receive Gift", code: "DC_d210008_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210008_01_APPEAR_01>SMN_DRG_210008_01_LOOP_01",
+        },
         { name: "Idle", code: "D21000801_000_01" },
         { name: "Move Forward", code: "D21000801_002_01" },
         { name: "Move Forward (Fast)", code: "D21000801_003_01" },
@@ -2819,6 +3119,10 @@ const dragonAni = {
     d210011_01: [
         { name: "Dragon's Roost", code: "DC_d210011_01_90_01" },
         { name: "Receive Gift", code: "DC_d210011_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210011_01_APPEAR_01>SMN_DRG_210011_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001101_000_01" },
         { name: "Move Forward", code: "D21001101_002_01" },
         { name: "Move Forward (Fast)", code: "D21001101_003_01" },
@@ -2842,6 +3146,10 @@ const dragonAni = {
     d210012_01: [
         { name: "Dragon's Roost", code: "DC_d210012_01_90_01" },
         { name: "Receive Gift", code: "DC_d210012_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210012_01_APPEAR_01>SMN_DRG_210012_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001201_000_01" },
         { name: "Walk", code: "D21001201_002_01" },
         { name: "Run", code: "D21001201_003_01" },
@@ -2864,6 +3172,10 @@ const dragonAni = {
     d210013_01: [
         { name: "Dragon's Roost", code: "DC_d210013_01_90_01" },
         { name: "Receive Gift", code: "DC_d210013_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210013_01_APPEAR_01>SMN_DRG_210013_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001301_000_01" },
         { name: "Walk", code: "D21001301_002_01" },
         { name: "Run", code: "D21001301_003_01" },
@@ -2886,6 +3198,10 @@ const dragonAni = {
     d210014_01: [
         { name: "Dragon's Roost", code: "DC_d210014_01_90_01" },
         { name: "Receive Gift", code: "DC_d210014_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210014_01_APPEAR_01>SMN_DRG_210014_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001401_000_01" },
         { name: "Walk", code: "D21001401_002_01" },
         { name: "Run", code: "D21001401_003_01" },
@@ -2904,6 +3220,10 @@ const dragonAni = {
     d210015_01: [
         { name: "Dragon's Roost", code: "DC_d210015_01_90_01" },
         { name: "Receive Gift", code: "DC_d210015_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210015_01_APPEAR_01>SMN_DRG_210015_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001501_000_01" },
         { name: "Move Forward", code: "D21001501_002_01" },
         { name: "Move Forward (Fast)", code: "D21001501_003_01" },
@@ -2927,6 +3247,10 @@ const dragonAni = {
     d210021_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
         { name: "Receive Gift", code: "DC_d210021_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210021_01_APPEAR_01>SMN_DRG_210021_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002101_000_01" },
         { name: "Move Forward", code: "D21002101_002_01" },
         { name: "Move Forward (Fast)", code: "D21002101_003_01" },
@@ -2946,6 +3270,10 @@ const dragonAni = {
     d210022_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
         { name: "Receive Gift", code: "DC_d210022_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210022_01_APPEAR_01>SMN_DRG_210022_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002201_000_01" },
         { name: "Move Forward", code: "D21002201_002_01" },
         { name: "Move Forward (Fast)", code: "D21002201_003_01" },
@@ -2965,6 +3293,10 @@ const dragonAni = {
     d210023_01: [
         { name: "Dragon's Roost", code: "DC_d210023_01_90_01" },
         { name: "Receive Gift", code: "DC_d210023_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210023_01_APPEAR_01>SMN_DRG_210023_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002301_000_01" },
         { name: "Move Forward", code: "D21002301_002_01" },
         { name: "Move Forward (Fast)", code: "D21002301_003_01" },
@@ -2984,6 +3316,10 @@ const dragonAni = {
     d210050_01: [
         { name: "Dragon's Roost", code: "DC_d210050_01_90_01" },
         { name: "Receive Gift", code: "DC_d210050_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210004_02_APPEAR_01>SMN_DRG_210004_02_LOOP_01",
+        },
         { name: "Idle", code: "D21005001_000_01" },
         { name: "Walk", code: "D21005001_002_01" },
         { name: "Run", code: "D21005001_003_01" },
@@ -3051,6 +3387,10 @@ const dragonAni = {
     d210075_01: [
         { name: "Dragon's Roost", code: "DC_d210075_01_90_01" },
         { name: "Receive Gift", code: "DC_d210075_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210075_01_APPEAR_01>SMN_DRG_210075_01_LOOP_01",
+        },
         { name: "Idle", code: "D21007501_000_01" },
         { name: "Move Forward", code: "D21007501_002_01" },
         { name: "Move Forward (Fast)", code: "D21007501_003_01" },
@@ -3152,6 +3492,10 @@ const dragonAni = {
     d210058_01: [
         { name: "Dragon's Roost", code: "DC_d210011_01_90_01" },
         { name: "Receive Gift", code: "DC_d210011_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210011_01_APPEAR_01>SMN_DRG_210011_01_LOOP_01",
+        },
         { name: "Idle", code: "D21001101_000_01" },
         { name: "Move Forward", code: "D21001101_002_01" },
         { name: "Move Forward (Fast)", code: "D21001101_003_01" },
@@ -3175,6 +3519,10 @@ const dragonAni = {
     d210059_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
         { name: "Receive Gift", code: "DC_d210021_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210021_01_APPEAR_01>SMN_DRG_210021_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002101_000_01" },
         { name: "Move Forward", code: "D21002101_002_01" },
         { name: "Move Forward (Fast)", code: "D21002101_003_01" },
@@ -3194,6 +3542,10 @@ const dragonAni = {
     d210060_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
         { name: "Receive Gift", code: "DC_d210021_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210021_01_APPEAR_01>SMN_DRG_210021_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002101_000_01" },
         { name: "Move Forward", code: "D21002101_002_01" },
         { name: "Move Forward (Fast)", code: "D21002101_003_01" },
@@ -3213,6 +3565,10 @@ const dragonAni = {
     d210061_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
         { name: "Receive Gift", code: "DC_d210021_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210021_01_APPEAR_01>SMN_DRG_210021_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002101_000_01" },
         { name: "Move Forward", code: "D21002101_002_01" },
         { name: "Move Forward (Fast)", code: "D21002101_003_01" },
@@ -3232,6 +3588,10 @@ const dragonAni = {
     d210062_01: [
         { name: "Dragon's Roost", code: "DC_d210021_01_90_01" },
         { name: "Receive Gift", code: "DC_d210021_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210021_01_APPEAR_01>SMN_DRG_210021_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002101_000_01" },
         { name: "Move Forward", code: "D21002101_002_01" },
         { name: "Move Forward (Fast)", code: "D21002101_003_01" },
@@ -3251,6 +3611,10 @@ const dragonAni = {
     d210063_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
         { name: "Receive Gift", code: "DC_d210022_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210022_01_APPEAR_01>SMN_DRG_210022_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002201_000_01" },
         { name: "Move Forward", code: "D21002201_002_01" },
         { name: "Move Forward (Fast)", code: "D21002201_003_01" },
@@ -3270,6 +3634,10 @@ const dragonAni = {
     d210064_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
         { name: "Receive Gift", code: "DC_d210022_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210022_01_APPEAR_01>SMN_DRG_210022_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002201_000_01" },
         { name: "Move Forward", code: "D21002201_002_01" },
         { name: "Move Forward (Fast)", code: "D21002201_003_01" },
@@ -3289,6 +3657,10 @@ const dragonAni = {
     d210065_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
         { name: "Receive Gift", code: "DC_d210022_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210022_01_APPEAR_01>SMN_DRG_210022_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002201_000_01" },
         { name: "Move Forward", code: "D21002201_002_01" },
         { name: "Move Forward (Fast)", code: "D21002201_003_01" },
@@ -3308,6 +3680,10 @@ const dragonAni = {
     d210066_01: [
         { name: "Dragon's Roost", code: "DC_d210022_01_90_01" },
         { name: "Receive Gift", code: "DC_d210022_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210022_01_APPEAR_01>SMN_DRG_210022_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002201_000_01" },
         { name: "Move Forward", code: "D21002201_002_01" },
         { name: "Move Forward (Fast)", code: "D21002201_003_01" },
@@ -3327,6 +3703,10 @@ const dragonAni = {
     d210067_01: [
         { name: "Dragon's Roost", code: "DC_d210023_01_90_01" },
         { name: "Receive Gift", code: "DC_d210023_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210023_01_APPEAR_01>SMN_DRG_210023_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002301_000_01" },
         { name: "Move Forward", code: "D21002301_002_01" },
         { name: "Move Forward (Fast)", code: "D21002301_003_01" },
@@ -3346,6 +3726,10 @@ const dragonAni = {
     d210068_01: [
         { name: "Dragon's Roost", code: "DC_d210023_01_90_01" },
         { name: "Receive Gift", code: "DC_d210023_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210023_01_APPEAR_01>SMN_DRG_210023_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002301_000_01" },
         { name: "Move Forward", code: "D21002301_002_01" },
         { name: "Move Forward (Fast)", code: "D21002301_003_01" },
@@ -3365,6 +3749,10 @@ const dragonAni = {
     d210069_01: [
         { name: "Dragon's Roost", code: "DC_d210023_01_90_01" },
         { name: "Receive Gift", code: "DC_d210023_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210023_01_APPEAR_01>SMN_DRG_210023_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002301_000_01" },
         { name: "Move Forward", code: "D21002301_002_01" },
         { name: "Move Forward (Fast)", code: "D21002301_003_01" },
@@ -3384,6 +3772,10 @@ const dragonAni = {
     d210070_01: [
         { name: "Dragon's Roost", code: "DC_d210023_01_90_01" },
         { name: "Receive Gift", code: "DC_d210023_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210023_01_APPEAR_01>SMN_DRG_210023_01_LOOP_01",
+        },
         { name: "Idle", code: "D21002301_000_01" },
         { name: "Move Forward", code: "D21002301_002_01" },
         { name: "Move Forward (Fast)", code: "D21002301_003_01" },
@@ -3403,6 +3795,10 @@ const dragonAni = {
     d210138_01: [
         { name: "Idle", code: "D21013801_000_01" },
         { name: "Move Forward", code: "D21013801_002_01" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210138_01_APPEAR_01>SMN_DRG_210138_01_LOOP_01",
+        },
         { name: "Move Forward (Fast)", code: "D21013801_003_01" },
         { name: "Brake", code: "D21013801_004_01" },
         { name: "Dash Forward", code: "D21013801_020_01" },
@@ -3456,6 +3852,10 @@ const dragonAni = {
     d210137_01: [
         { name: "Dragon's Roost", code: "DC_d210137_01_90_01" },
         { name: "Receive Gift", code: "DC_d210137_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210137_01_APPEAR_01>SMN_DRG_210137_01_LOOP_01",
+        },
         { name: "Idle", code: "D21013701_000_01" },
         { name: "Move Forward", code: "D21013701_002_01" },
         { name: "Move Forward (Fast)", code: "D21013701_003_01" },
@@ -3474,6 +3874,10 @@ const dragonAni = {
     d210144_01: [
         { name: "Dragon's Roost", code: "DC_d210144_01_90_01" },
         { name: "Receive Gift", code: "DC_d210144_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210144_01_APPEAR_01>SMN_DRG_210144_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014401_000_01" },
         { name: "Move Forward", code: "D21014401_002_01" },
         { name: "Move Forward (Fast)", code: "D21014401_003_01" },
@@ -3492,6 +3896,10 @@ const dragonAni = {
     d210145_01: [
         { name: "Dragon's Roost", code: "DC_d210145_01_90_01" },
         { name: "Receive Gift", code: "DC_d210145_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210145_01_APPEAR_01>SMN_DRG_210145_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014501_000_01" },
         { name: "Move Forward", code: "D21014501_002_01" },
         { name: "Move Forward (Fast)", code: "D21014501_003_01" },
@@ -3590,6 +3998,10 @@ const dragonAni = {
     d210148_01: [
         { name: "Dragon's Roost", code: "DC_d210148_01_90_01" },
         { name: "Receive Gift", code: "DC_d210148_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210148_01_APPEAR_01>SMN_DRG_210148_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014801_000_01" },
         { name: "Walk", code: "D21014801_002_01" },
         { name: "Run", code: "D21014801_003_01" },
@@ -3608,6 +4020,10 @@ const dragonAni = {
     d210147_01: [
         { name: "Dragon's Roost", code: "DC_d210147_01_90_01" },
         { name: "Receive Gift", code: "DC_d210147_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210147_01_APPEAR_01>SMN_DRG_210147_01_LOOP_01",
+        },
         { name: "Idle", code: "D21014701_000_01" },
         { name: "Walk", code: "D21014701_002_01" },
         { name: "Run", code: "D21014701_003_01" },
@@ -3646,6 +4062,10 @@ const dragonAni = {
     d210152_01: [
         { name: "Idle", code: "D21015201_000_01" },
         { name: "Fly", code: "D21015201_002_01" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210152_01_APPEAR_01>SMN_DRG_210152_01_LOOP_01",
+        },
         { name: "Fly Fast", code: "D21015201_003_01" },
         { name: "Brake", code: "D21015201_004_01" },
         { name: "Dash Forward", code: "D21015201_020_01" },
