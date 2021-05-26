@@ -99,7 +99,7 @@ const aniWeaponExtra = {
         },
         {
             name: "Summon Special",
-            code: "SMN_CHR_KAT_WEAPON_APPEAR_01",
+            code: "SMN_CHR_KAT_WEAPON_APPEAR_01>SMN_CHR_KAT_WEAPON_LOOP_01",
         },
         {
             name: "Slow Run",
