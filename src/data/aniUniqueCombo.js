@@ -100,7 +100,7 @@ const uniqueCombo = {
         {
             icon: "advIcons/100045_01_r05.png",
             name: "Gala Mascula",
-            code: "KAT_CMB_01_10004501>KAT_CMB_02_10004501>KAT_CMB_03_10004501",
+            code: "KAT_CMB_01_10004501>KAT_CMB_02_10004501>KAT_CMB_03_10004501>KAT_CMB_04_10004501",
         },
         {
             icon: "advIcons/110295_01_r05.png",
