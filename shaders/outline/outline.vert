@@ -9,5 +9,4 @@ void main() {
         
 	#include <skinning_vertex>
 	#include <project_vertex>
-	#include <worldpos_vertex>
 }
