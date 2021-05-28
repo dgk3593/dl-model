@@ -1,7 +1,7 @@
 import os
 
-directory = '../../../public/animations/todo'
-outputFile = 'fileList.js'
+directory = 'public/animations/todo'
+outputFile = 'src/helper/processSummonClips/fileList.js'
 
 if __name__ == '__main__':
     fileList = os.listdir(directory)
