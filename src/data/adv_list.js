@@ -3,20 +3,28 @@
  */
 const adv = [
     {
-        id: "110389_01",
-        name: "Saiga",
-        title: "Sinful Marksman",
+        id: "100045_01",
+        name: "Gala Mascula",
+        title: "Pure-Hearted Android",
         rarity: "5",
-        element: "Wind",
+        element: "Water",
+        weapon: "Blade",
+    },
+    {
+        id: "100029_04",
+        name: "Sharpshooter Sarisse",
+        title: "Sylvan Sharpshooter",
+        rarity: "5",
+        element: "Water",
         weapon: "Manacaster",
     },
     {
-        id: "110064_02",
-        name: "Armored Yachiyo",
-        title: "Resplendent Duelist",
+        id: "110391_01",
+        name: "Isaac",
+        title: "",
         rarity: "5",
-        element: "Flame",
-        weapon: "Blade",
+        element: "Light",
+        weapon: "Bow",
     },
     {
         id: "110341_01",
@@ -57,6 +65,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Lance",
+    },
+    {
+        id: "110064_02",
+        name: "Armored Yachiyo",
+        title: "Resplendent Duelist",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Blade",
     },
     {
         id: "110015_02",
@@ -833,6 +849,14 @@ const adv = [
         rarity: "5",
         element: "Flame",
         weapon: "Blade",
+    },
+    {
+        id: "110389_01",
+        name: "Saiga",
+        title: "Sinful Marksman",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Manacaster",
     },
     {
         id: "110375_01",

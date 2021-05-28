@@ -45,6 +45,11 @@ const uniqueFS = {
     ],
     Blade: [
         {
+            icon: "advIcons/100045_01_r05.png",
+            name: "Gala Masula",
+            code: "KAT_CHR_01_10004501>KAT_CHR_02_10004501>KAT_CHR_03_10004501",
+        },
+        {
             icon: "advIcons/110027_01_r03.png",
             name: "Melody",
             subtitle: "Maid's Soul",

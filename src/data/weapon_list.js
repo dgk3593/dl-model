@@ -3,12 +3,20 @@
  */
 const weapon_list = [
     {
-        id: "w399051_01",
-        iconName: "399051_01_59901.png",
-        name: "Last Storm Lance",
-        weapon: "Lance",
+        id: "w397004_01",
+        iconName: "397004_01_59901.png",
+        name: "Azure Resolve",
+        weapon: "Blade",
         rarity: "5",
-        element: "Wind",
+        element: "None",
+    },
+    {
+        id: "w396001_01",
+        iconName: "396001_01_59901.png",
+        name: "Alliance Trigger",
+        weapon: "Manacaster",
+        rarity: "5",
+        element: "None",
     },
     {
         id: "w301138_01",
@@ -3417,6 +3425,14 @@ const weapon_list = [
         weapon: "Lance",
         rarity: "5",
         element: "None",
+    },
+    {
+        id: "w399051_01",
+        iconName: "399051_01_59901.png",
+        name: "Last Storm Lance",
+        weapon: "Lance",
+        rarity: "5",
+        element: "Wind",
     },
     {
         id: "w306015_01",

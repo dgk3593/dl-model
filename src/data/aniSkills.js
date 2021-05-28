@@ -181,15 +181,21 @@ const skills = {
             code: "KAT_SKL_02_01_10000302",
         },
         {
-            icon: "advIcons/100006_09_r05.png",
-            name: "Shining Slash",
-            code: "KAT_SKL_01_01_10000609",
-        },
-        {
             icon: "advIcons/100032_01_r04.png",
             name: "Code 07:",
             subtitle: "Combustion Slash",
             code: "KAT_SKL_01_01_10003201",
+        },
+        {
+            icon: "advIcons/100045_01_r05.png",
+            name: "Code 06:",
+            subtitle: "Conclusion",
+            code: "KAT_SKL_01_01_10004501>KAT_SKL_01_02_10004501>KAT_SKL_01_03_10004501",
+        },
+        {
+            icon: "advIcons/100006_09_r05.png",
+            name: "Shining Slash",
+            code: "KAT_SKL_01_01_10000609",
         },
         {
             icon: "advIcons/110010_01_r05.png",
@@ -239,12 +245,6 @@ const skills = {
             code: "KAT_SKL_03_01_11026201",
         },
         {
-            icon: "advIcons/110264_01_r05.png",
-            name: "Roaring Furnace",
-            code: "KAT_SKL_01_01_11026401",
-        },
-
-        {
             icon: "advIcons/110295_01_r05.png",
             name: "Amuse-bouche",
             code: "KAT_SKL_01_01_11029501",
@@ -253,6 +253,11 @@ const skills = {
             icon: "advIcons/110295_01_r05.png",
             name: "Bon Appétit",
             code: "KAT_SKL_02_01_11029501",
+        },
+        {
+            icon: "advIcons/110264_01_r05.png",
+            name: "Roaring Furnace",
+            code: "KAT_SKL_01_01_11026401",
         },
         {
             icon: "advIcons/110307_01_r05.png",
@@ -1033,6 +1038,11 @@ const skills = {
             icon: "advIcons/110387_01_r05.png",
             name: "Catastrophic Blast",
             code: "BOW_SKL_02_01_11038701",
+        },
+        {
+            icon: "advIcons/110391_01_r05.png",
+            name: "Unknown",
+            code: "BOW_SKL_01_01_11039101",
         },
     ],
     Wand: [

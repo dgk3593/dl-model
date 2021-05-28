@@ -3,20 +3,6 @@
  */
 const dragons = [
     {
-        id: "210147_01",
-        name: "Gala Reborn Agni",
-        title: "Greedy Encroaching Flame",
-        rarity: "5",
-        element: "Flame",
-    },
-    {
-        id: "210152_01",
-        name: "Rose Queen",
-        title: "Solitary Rose",
-        rarity: "5",
-        element: "Wind",
-    },
-    {
         id: "210117_01",
         name: "AC-011 Garland",
         title: "Revolutionary Warrior",
@@ -188,6 +174,13 @@ const dragons = [
         id: "200009_01",
         name: "Gala Mars",
         title: "Forbidden Flamebringer",
+        rarity: "5",
+        element: "Flame",
+    },
+    {
+        id: "210147_01",
+        name: "Gala Reborn Agni",
+        title: "Greedy Encroaching Flame",
         rarity: "5",
         element: "Flame",
     },
@@ -519,6 +512,13 @@ const dragons = [
         title: "King of the Skies",
         rarity: "5",
         element: "Flame",
+    },
+    {
+        id: "210152_01",
+        name: "Rose Queen",
+        title: "Solitary Rose",
+        rarity: "5",
+        element: "Wind",
     },
     {
         id: "210087_01",

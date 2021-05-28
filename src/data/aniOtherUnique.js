@@ -495,6 +495,13 @@ const otherUnique = {
             ],
         },
         {
+            name: "Isaac",
+            icon: "advIcons/110391_01_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0850001_090_02>A0850001_090_01" },
+            ],
+        },
+        {
             name: "Meene",
             icon: "advIcons/110368_01_r05.png",
             animations: [

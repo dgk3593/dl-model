@@ -60,6 +60,11 @@ const uniqueVictory = {
             name: "Gala Luca",
             code: "KAT_WIN_01_10000609>KAT_WIN_02_10000609",
         },
+        {
+            icon: "advIcons/100045_01_r05.png",
+            name: "Gala Mascula",
+            code: "KAT_WIN_01_10004501>KAT_WIN_02_10004501>KAT_WIN_03_10004501",
+        },
     ],
     Dagger: [
         {
