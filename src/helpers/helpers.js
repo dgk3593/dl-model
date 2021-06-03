@@ -1,6 +1,6 @@
 import Button from "@material-ui/core/Button";
 
-import { aniModList, incompatibleModels } from "./consts";
+import { aniModList, incompatibleModels, specialBlades } from "./consts";
 
 /** capitalize first letter of tring
  * @param {string} input
@@ -56,7 +56,8 @@ export const isEmpty = object => !Object.keys(object).length;
 /** check if an ID is a blade
  * @param {string} modelId - id to check
  */
-export const isBlade = modelId => modelId.startsWith("w302");
+export const isBlade = modelId =>
+    specialBlades.has(modelId) || modelId.startsWith("w302");
 
 /** check if an ID is a sheath
  * @param {string} modelId - id to check
