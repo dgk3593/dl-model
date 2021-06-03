@@ -4093,6 +4093,28 @@ const dragonAni = {
         { name: "Finish Building", code: "CSL_SMS_04" },
         { name: "Hammer", code: "CSL_SMS_03" },
     ],
+    d210154_01: [
+        { name: "Dragon's Roost", code: "DC_d210154_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210154_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210154_01_APPEAR_01>SMN_DRG_210154_01_LOOP_01",
+        },
+        { name: "Idle", code: "D21015401_000_01" },
+        { name: "Move Forward", code: "D21015401_002_01" },
+        { name: "Move Forward (Fast)", code: "D21015401_003_01" },
+        { name: "Brake", code: "D21015401_004_01" },
+        { name: "Dash Forward", code: "D21015401_020_01" },
+        { name: "Transform", code: "D21015401_030_01" },
+        {
+            name: "Combo",
+            code: "D21015401_040_01>D21015401_041_01>D21015401_042_01",
+        },
+        {
+            name: "Angelic Justice",
+            code: "D21015401_060_01",
+        },
+    ],
 };
 
 export default dragonAni;

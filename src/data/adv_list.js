@@ -21,7 +21,7 @@ const adv = [
     {
         id: "110391_01",
         name: "Isaac",
-        title: "",
+        title: "Guardsman of the Verdure",
         rarity: "5",
         element: "Light",
         weapon: "Bow",

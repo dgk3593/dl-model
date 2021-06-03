@@ -3,6 +3,13 @@
  */
 const dragons = [
     {
+        id: "210154_01",
+        name: "Raphael",
+        title: "Grace-Granting Angel",
+        rarity: "5",
+        element: "Light",
+    },
+    {
         id: "210117_01",
         name: "AC-011 Garland",
         title: "Revolutionary Warrior",

@@ -217,6 +217,7 @@ const modelMod = {
         { name: "Normal", code: "show mbox_01" },
         { name: "No Box", code: "hide mbox_01" },
     ],
+    // Gala Reborn Agni
     d210147_01: [
         {
             name: "Large Wings",
@@ -226,6 +227,11 @@ const modelMod = {
             name: "Small Wings",
             code: "show mPartsA_A; hide mPartsA_B, mPartsB_A, mPartsB_B",
         },
+    ],
+    // Raphael
+    d210154_01: [
+        { name: "With Wings", code: "show mPartsA_B" },
+        { name: "No Wings", code: "hide mPartsA_B" },
     ],
     h0080501: [
         {

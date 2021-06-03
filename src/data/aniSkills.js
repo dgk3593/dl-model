@@ -1041,7 +1041,7 @@ const skills = {
         },
         {
             icon: "advIcons/110391_01_r05.png",
-            name: "Unknown",
+            name: "Wealdfury",
             code: "BOW_SKL_01_01_11039101",
         },
     ],
