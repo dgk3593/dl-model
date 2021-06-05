@@ -2,6 +2,15 @@
  * @type {{ [id:string]: AnimationList}}
  */
 const dragonAni = {
+    d200001_01: [
+        { name: "Look Right", code: "ct001_002_C009_d20000101_a_001lp" },
+        { name: "Look Left", code: "ct001_002_C008_d20000101_a_001lp" },
+        { name: "Inhale", code: "ct001_002_C010_d20000101_a_001" },
+        { name: "Blast", code: "ct001_002_C011_d20000101_a_001" },
+        { name: "Charge", code: "ct001_002_C013_d20000101_a_001lp" },
+        { name: "Hover", code: "ct001_002_C014_d20000101_a_001" },
+        { name: "Roar", code: "ct001_002_C015_d20000101_a_001" },
+    ],
     d200008_01: [
         { name: "Idle", code: "D20000801_000_01" },
         {
