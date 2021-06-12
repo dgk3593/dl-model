@@ -58,7 +58,12 @@ function AdvCard(props) {
                     {eleIcon}
                     {weaponIcon}
                 </div>
-                <img className={classes.portrait} src={portrait} alt={name} />
+                <img
+                    className={classes.portrait}
+                    src={portrait}
+                    alt={name}
+                    loading="lazy"
+                />
                 {rarityImg}
             </CardContent>
         </Card>
