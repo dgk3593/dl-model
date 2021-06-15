@@ -37,6 +37,16 @@ const otherUnique = {
             ],
         },
         {
+            name: "Nino",
+            icon: "advIcons/110392_01_r05.png",
+            animations: [
+                {
+                    name: "Dragondrive",
+                    code: "CMN_CTD_02_11039201>CMN_CTD_03_11039201",
+                },
+            ],
+        },
+        {
             name: "Pecorine",
             icon: "advIcons/110371_01_r05.png",
             animations: [
@@ -591,6 +601,17 @@ const otherUnique = {
                     name: "Buff",
                     code: "A0070501_102_01>A0070501_102_02>A0070501_102_03",
                 },
+            ],
+        },
+        {
+            name: "Radiant Xuan Zang",
+            icon: "advIcons/110299_02_r05.png",
+            animations: [
+                { name: "Boss Intro", code: "A0690001_090_02>A0690001_090_01" },
+                { name: "Swing", code: "A0690001_040_01" },
+                { name: "Broken", code: "A0690001_081_01>A0690001_081_02" },
+                { name: "Recover from Broken", code: "A0690001_081_03" },
+                { name: "Front Attack", code: "A0690001_103_01" },
             ],
         },
         {

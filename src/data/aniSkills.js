@@ -129,11 +129,6 @@ const skills = {
             code: "SWD_SKL_01_01_11036301",
         },
         {
-            icon: "advIcons/110274_01_r05.png",
-            name: "Lightning Burst",
-            code: "SWD_SKL_01_01_11027401",
-        },
-        {
             icon: "advIcons/110371_01_r05.png",
             name: "Princess Strike",
             code: "SWD_SKL_01_01_11037101",
@@ -167,6 +162,21 @@ const skills = {
             icon: "advIcons/110379_01_r05.png",
             name: "Garula",
             code: "SWD_SKL_04_01_11037901",
+        },
+        {
+            icon: "advIcons/110392_01_r05.png",
+            name: "Faerie Stance",
+            code: "SWD_SKL_01_01_11039201",
+        },
+        {
+            icon: "advIcons/110392_01_r05.png",
+            name: "Crescent Faeria",
+            code: "SWD_SKL_02_01_11039201",
+        },
+        {
+            icon: "advIcons/110274_01_r05.png",
+            name: "Lightning Burst",
+            code: "SWD_SKL_01_01_11027401",
         },
     ],
     Blade: [
@@ -903,8 +913,18 @@ const skills = {
         },
         {
             icon: "advIcons/110285_01_r05.png",
-            name: "Full Storm Tempest'",
+            name: "Full Storm Tempest",
             code: "LAN_SKL_02_01_11028501",
+        },
+        {
+            icon: "advIcons/110352_03_r05.png",
+            name: "Fae Lance",
+            code: "LAN_SKL_01_01_11035203>LAN_SKL_01_02_11035203>LAN_SKL_01_03_11035203",
+        },
+        {
+            icon: "advIcons/110352_03_r05.png",
+            name: "Spiritual Purge",
+            code: "LAN_SKL_02_01_11035203",
         },
     ],
     Bow: [

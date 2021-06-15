@@ -157,6 +157,12 @@ const uniqueCombo = {
             code: "LAN_CMB_06_01_11038101>LAN_CMB_06_02_11038101>LAN_CMB_06_03_11038101",
         },
         {
+            icon: "advIcons/110352_03_r05.png",
+            name: "Faeblessed Tobias",
+            subtitle: "Fae Lance",
+            code: "LAN_CMB_A_01_11035203>LAN_CMB_A_02_11035203",
+        },
+        {
             icon: "advIcons/110285_01_r05.png",
             name: "Grimnir",
             code: "LAN_CMB_01_11028501>LAN_CMB_02_11028501>LAN_CMB_03_11028501>LAN_CMB_04_11028501>LAN_CMB_05_01_11028501>LAN_CMB_05_02_11028501>LAN_CMB_05_03_11028501",

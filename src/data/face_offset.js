@@ -2,6 +2,8 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110352_03: [0.05, -0.08], // Faeblessed Tobias
+    c110392_01: [0.05, -0.08], // Nino
     c110391_01: [0.05, -0.08], // Isaac
     c100029_04: [0.05, -0.08], // Sharpshooter Sarisse
     c100045_01: [0.05, -0.08], // Gala Mascula

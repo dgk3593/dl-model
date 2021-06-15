@@ -3,28 +3,20 @@
  */
 const adv = [
     {
-        id: "100045_01",
-        name: "Gala Mascula",
-        title: "Pure-Hearted Android",
+        id: "110392_01",
+        name: "Nino",
+        title: "Inheritor of the Wing",
         rarity: "5",
-        element: "Water",
-        weapon: "Blade",
+        element: "Wind",
+        weapon: "Sword",
     },
     {
-        id: "100029_04",
-        name: "Sharpshooter Sarisse",
-        title: "Sylvan Sharpshooter",
+        id: "110352_03",
+        name: "Faeblessed Tobias",
+        title: "Winged Knight",
         rarity: "5",
         element: "Water",
-        weapon: "Manacaster",
-    },
-    {
-        id: "110391_01",
-        name: "Isaac",
-        title: "Guardsman of the Verdure",
-        rarity: "5",
-        element: "Light",
-        weapon: "Bow",
+        weapon: "Lance",
     },
     {
         id: "110341_01",
@@ -339,6 +331,14 @@ const adv = [
         weapon: "Blade",
     },
     {
+        id: "100045_01",
+        name: "Gala Mascula",
+        title: "Pure-Hearted Android",
+        rarity: "5",
+        element: "Water",
+        weapon: "Blade",
+    },
+    {
         id: "100010_04",
         name: "Gala Mym",
         title: "Lovestruck Dragon",
@@ -521,6 +521,14 @@ const adv = [
         rarity: "5",
         element: "Flame",
         weapon: "Wand",
+    },
+    {
+        id: "110391_01",
+        name: "Isaac",
+        title: "Guardsman of the Verdure",
+        rarity: "5",
+        element: "Light",
+        weapon: "Bow",
     },
     {
         id: "110351_01",
@@ -873,6 +881,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Lance",
+    },
+    {
+        id: "100029_04",
+        name: "Sharpshooter Sarisse",
+        title: "Sylvan Sharpshooter",
+        rarity: "5",
+        element: "Water",
+        weapon: "Manacaster",
     },
     {
         id: "110380_01",
