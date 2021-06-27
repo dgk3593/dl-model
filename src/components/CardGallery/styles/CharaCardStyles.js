@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
     root: {
         width: "14rem",
+        position: "relative",
         maxWidth: "47%",
         contentVisibility: "auto",
         containIntrinsicSize: "0 15rem",
@@ -20,6 +21,15 @@ const useStyles = makeStyles({
         },
         "& .MuiCardContent-root": {
             padding: "0.1rem",
+        },
+        "&[data-value]:hover::after": {
+            content: "attr(data-value)",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "white",
+            width: "100%",
         },
     },
     title: {
