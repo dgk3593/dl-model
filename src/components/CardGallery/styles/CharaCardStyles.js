@@ -30,6 +30,9 @@ const useStyles = makeStyles({
             backgroundColor: "rgba(0,0,0,0.5)",
             color: "white",
             width: "100%",
+            display: "inline-block",
+            opacity: 0,
+            animation: "$fadeIn 0.2s forwards ease-in 1s 1",
         },
     },
     title: {
@@ -55,6 +58,10 @@ const useStyles = makeStyles({
         maxHeight: "2rem",
         maxWidth: "80%",
         margin: "0 auto",
+    },
+    "@keyframes fadeIn": {
+        "0%": { opacity: 0 },
+        "100%": { opacity: 1 },
     },
 });
 
