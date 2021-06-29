@@ -3,20 +3,28 @@
  */
 const adv = [
     {
-        id: "110392_01",
-        name: "Nino",
-        title: "Inheritor of the Wing",
+        id: "100005_08",
+        name: "Summer Alex",
+        title: "Shimmering Guardian",
         rarity: "5",
-        element: "Wind",
-        weapon: "Sword",
+        element: "Flame",
+        weapon: "Bow",
     },
     {
-        id: "110352_03",
-        name: "Faeblessed Tobias",
-        title: "Winged Knight",
+        id: "100002_07",
+        name: "Summer Elisanne",
+        title: "",
         rarity: "5",
-        element: "Water",
-        weapon: "Lance",
+        element: "",
+        weapon: "",
+    },
+    {
+        id: "100010_10",
+        name: "Summer Mym",
+        title: "",
+        rarity: "5",
+        element: "Flame",
+        weapon: "",
     },
     {
         id: "110341_01",
@@ -201,6 +209,14 @@ const adv = [
         rarity: "5",
         element: "Flame",
         weapon: "Dagger",
+    },
+    {
+        id: "110352_03",
+        name: "Faeblessed Tobias",
+        title: "Winged Knight",
+        rarity: "5",
+        element: "Water",
+        weapon: "Lance",
     },
     {
         id: "110382_01",
@@ -785,6 +801,14 @@ const adv = [
         rarity: "5",
         element: "Shadow",
         weapon: "Dagger",
+    },
+    {
+        id: "110392_01",
+        name: "Nino",
+        title: "Inheritor of the Wing",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Sword",
     },
     {
         id: "110346_01",
