@@ -17,8 +17,8 @@
     "static/js/6.319e7f2b.chunk.js.map": "/dl-model/static/js/6.319e7f2b.chunk.js.map",
     "static/js/7.6e2d84ff.chunk.js": "/dl-model/static/js/7.6e2d84ff.chunk.js",
     "static/js/7.6e2d84ff.chunk.js.map": "/dl-model/static/js/7.6e2d84ff.chunk.js.map",
-    "aniDragon.js": "/dl-model/static/js/aniDragon.594c0c9c.chunk.js",
-    "aniDragon.js.map": "/dl-model/static/js/aniDragon.594c0c9c.chunk.js.map",
+    "aniDragon.js": "/dl-model/static/js/aniDragon.3ee7a256.chunk.js",
+    "aniDragon.js.map": "/dl-model/static/js/aniDragon.3ee7a256.chunk.js.map",
     "aniEnemies.js": "/dl-model/static/js/aniEnemies.d84476c1.chunk.js",
     "aniEnemies.js.map": "/dl-model/static/js/aniEnemies.d84476c1.chunk.js.map",
     "static/js/10.d3b25d95.chunk.js": "/dl-model/static/js/10.d3b25d95.chunk.js",
@@ -50,8 +50,8 @@
     "main.css": "/dl-model/static/css/main.30f3c706.chunk.css",
     "main.js": "/dl-model/static/js/main.cc7c7d30.chunk.js",
     "main.js.map": "/dl-model/static/js/main.cc7c7d30.chunk.js.map",
-    "runtime-main.js": "/dl-model/static/js/runtime-main.1648f6d8.js",
-    "runtime-main.js.map": "/dl-model/static/js/runtime-main.1648f6d8.js.map",
+    "runtime-main.js": "/dl-model/static/js/runtime-main.52b332f4.js",
+    "runtime-main.js.map": "/dl-model/static/js/runtime-main.52b332f4.js.map",
     "static/js/24.d0313950.chunk.js": "/dl-model/static/js/24.d0313950.chunk.js",
     "static/js/24.d0313950.chunk.js.map": "/dl-model/static/js/24.d0313950.chunk.js.map",
     "static/js/25.830b20f2.chunk.js": "/dl-model/static/js/25.830b20f2.chunk.js",
@@ -228,7 +228,7 @@
     "static/media/Rose-Petals.bc11ecc7.svg": "/dl-model/static/media/Rose-Petals.bc11ecc7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1648f6d8.js",
+    "static/js/runtime-main.52b332f4.js",
     "static/js/25.830b20f2.chunk.js",
     "static/css/main.30f3c706.chunk.css",
     "static/js/main.cc7c7d30.chunk.js"
