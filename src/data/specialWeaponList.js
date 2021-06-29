@@ -3,6 +3,11 @@
  */
 const specialWeaponList = [
     {
+        id: "w305020_01",
+        name: "Elisanne's Lance",
+        iconName: "w305020_01.png",
+    },
+    {
         id: "w399052_01",
         name: "Humanoid Mercury's Dagger",
         iconName: "w399052_01.png",
