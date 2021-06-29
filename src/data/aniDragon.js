@@ -325,6 +325,16 @@ const dragonAni = {
             name: "Tidal Stream",
             code: "D21001701_061_01",
         },
+        { name: "Boss Intro", code: "D21001701_090_02>D21001701_090_01" },
+        { name: "Broken", code: "D21001701_081_01>D21001701_081_02" },
+        { name: "Recover from Broken", code: "D21001701_081_03" },
+        { name: "Frozen", code: "D21001701_013_01" },
+    ],
+    d210017_02: [
+        { name: "Boss Intro", code: "D21001701_090_02>D21001701_090_01" },
+        { name: "Broken", code: "D21001701_081_01>D21001701_081_02" },
+        { name: "Recover from Broken", code: "D21001701_081_03" },
+        { name: "Frozen", code: "D21001701_013_01" },
     ],
     d210018_01: [
         { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
