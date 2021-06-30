@@ -3,11 +3,11 @@
  */
 const dragons = [
     {
-        id: "210154_01",
-        name: "Raphael",
-        title: "Grace-Granting Angel",
+        id: "210155_01",
+        name: "Gala Reborn Nidhogg",
+        title: "Observer of Life and Death",
         rarity: "5",
-        element: "Light",
+        element: "Shadow",
     },
     {
         id: "210117_01",
@@ -512,6 +512,13 @@ const dragons = [
         title: "Angelic Herald",
         rarity: "5",
         element: "Shadow",
+    },
+    {
+        id: "210154_01",
+        name: "Raphael",
+        title: "Grace-Granting Angel",
+        rarity: "5",
+        element: "Light",
     },
     {
         id: "210121_01",

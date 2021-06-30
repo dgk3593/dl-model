@@ -4134,6 +4134,28 @@ const dragonAni = {
             code: "D21015401_060_01",
         },
     ],
+    d210155_01: [
+        { name: "Dragon's Roost", code: "DC_d210155_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210155_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210155_01_APPEAR_01>SMN_DRG_210155_01_LOOP_01",
+        },
+        { name: "Idle", code: "D21015501_000_01" },
+        { name: "Walk", code: "D21015501_002_01" },
+        { name: "Run", code: "D21015501_003_01" },
+        { name: "Brake", code: "D21015501_004_01" },
+        { name: "Dash Forward", code: "D21015501_020_01" },
+        { name: "Transform", code: "D21015501_030_01" },
+        {
+            name: "Combo",
+            code: "D21015501_040_01>D21015501_041_01>D21015501_042_01",
+        },
+        {
+            name: "Doomsday Eclipse",
+            code: "D21015501_060_01>D21015501_060_02>D21015501_060_03",
+        },
+    ],
 };
 
 export default dragonAni;

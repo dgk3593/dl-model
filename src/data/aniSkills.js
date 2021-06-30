@@ -959,6 +959,17 @@ const skills = {
             code: "BOW_SKL_01_01_10002903",
         },
         {
+            icon: "advIcons/100005_08_r05.png",
+            name: "Tropical Snipe",
+            code: "BOW_SKL_01_01_10000508",
+        },
+        {
+            icon: "advIcons/100005_08_r05.png",
+            subtitle: "Burning Bonds",
+            name: "Tropical Snipe",
+            code: "BOW_SKL_02_01_10000508>BOW_SKL_02_02_10000508>BOW_SKL_02_03_10000508",
+        },
+        {
             icon: "advIcons/100006_01_r04.png",
             name: "Radiant Bonds",
             code: "BOW_SKL_01_01_10000601",

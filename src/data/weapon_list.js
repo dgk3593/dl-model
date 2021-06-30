@@ -3,18 +3,10 @@
  */
 const weapon_list = [
     {
-        id: "w397004_01",
-        iconName: "397004_01_59901.png",
-        name: "Azure Resolve",
-        weapon: "Blade",
-        rarity: "5",
-        element: "None",
-    },
-    {
-        id: "w396001_01",
-        iconName: "396001_01_59901.png",
-        name: "Alliance Trigger",
-        weapon: "Manacaster",
+        id: "w304020_01",
+        iconName: "304020_01_59901.png",
+        name: "Rainbow Axe",
+        weapon: "Axe",
         rarity: "5",
         element: "None",
     },
@@ -3275,6 +3267,14 @@ const weapon_list = [
         element: "None",
     },
     {
+        id: "w397004_01",
+        iconName: "397004_01_59901.png",
+        name: "Azure Resolve",
+        weapon: "Blade",
+        rarity: "5",
+        element: "None",
+    },
+    {
         id: "w303035_01",
         iconName: "303035_01_59901.png",
         name: "Kris Naga",
@@ -3582,6 +3582,14 @@ const weapon_list = [
         id: "w399023_01",
         iconName: "399023_01_59901.png",
         name: "Replica Machine Gun",
+        weapon: "Manacaster",
+        rarity: "5",
+        element: "None",
+    },
+    {
+        id: "w396001_01",
+        iconName: "396001_01_59901.png",
+        name: "Alliance Trigger",
         weapon: "Manacaster",
         rarity: "5",
         element: "None",
