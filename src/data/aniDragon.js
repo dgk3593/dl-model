@@ -330,12 +330,6 @@ const dragonAni = {
         { name: "Recover from Broken", code: "D21001701_081_03" },
         { name: "Frozen", code: "D21001701_013_01" },
     ],
-    d210017_02: [
-        { name: "Boss Intro", code: "D21001701_090_02>D21001701_090_01" },
-        { name: "Broken", code: "D21001701_081_01>D21001701_081_02" },
-        { name: "Recover from Broken", code: "D21001701_081_03" },
-        { name: "Frozen", code: "D21001701_013_01" },
-    ],
     d210018_01: [
         { name: "Dragon's Roost", code: "DC_d210018_01_90_01" },
         { name: "Receive Gift", code: "DC_d210018_01_90_04" },
@@ -4133,6 +4127,25 @@ const dragonAni = {
             name: "Angelic Justice",
             code: "D21015401_060_01",
         },
+    ],
+    d210154_03: [
+        { name: "Idle", code: "D21015403_000_01" },
+        { name: "Move Forward", code: "D21015403_002_01" },
+        { name: "Move Forward (Fast)", code: "D21015403_003_01" },
+        { name: "Defeated", code: "D21015403_011_01>D21015403_011_02" },
+        { name: "Dash Forward", code: "D21015403_020_01" },
+        { name: "Broken", code: "D21015403_081_01>D21015403_081_02" },
+        { name: "Recover from Broken", code: "D21015403_081_03" },
+        { name: "Boss Intro", code: "D21015403_090_02>D21015403_090_01" },
+        {
+            name: "Charged Punch",
+            code: "D21015403_100_01>D21015403_100_02>D21015403_100_03",
+        },
+        {
+            name: "Pump Up",
+            code: "D21015403_101_01>D21015403_101_02>D21015403_101_03",
+        },
+        { name: "Ground Punch", code: "D21015403_102_01" },
     ],
     d210155_01: [
         { name: "Dragon's Roost", code: "DC_d210155_01_90_01" },

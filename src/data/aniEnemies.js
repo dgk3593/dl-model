@@ -311,6 +311,24 @@ const enemyAni = {
         },
         { name: "Boss Intro", code: "H0100301_090_02>H0100301_090_01" },
     ],
+    h0110401: [
+        { name: "Idle", code: "H0110401_000_01" },
+        { name: "Cross Leg Sit", code: "H0110401_002_01" },
+        { name: "Defeated", code: "H0110401_011_01" },
+        { name: "Spin Attack", code: "H0110401_030_01" },
+        { name: "Knocked Back", code: "H0110401_070_01" },
+        { name: "Broken", code: "H0110401_081_01>H0110401_081_02" },
+        { name: "Recover from Broken", code: "H0110401_081_03" },
+        { name: "Boss Intro", code: "H0110401_090_02>H0110401_090_01" },
+        {
+            name: "Cross Leg",
+            code: "H0110401_100_01>H0110401_100_02>H0110401_100_03",
+        },
+        {
+            name: "Charged Attack",
+            code: "H0110401_101_01>H0110401_101_02>H0110401_101_03",
+        },
+    ],
     c100034_01: [
         { name: "Ilde", code: "A0100001_000_01" },
         { name: "Run", code: "A0100001_002_01" },

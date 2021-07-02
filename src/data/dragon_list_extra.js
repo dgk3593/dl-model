@@ -46,7 +46,7 @@ const extraDragons = [
     {
         id: "210132_03",
         name: "Ramiel",
-        title: "Fallen",
+        title: "Fallen Angel",
     },
     {
         id: "210145_02",
@@ -56,7 +56,12 @@ const extraDragons = [
     {
         id: "210145_03",
         name: "Gabriel",
-        title: "Fallen",
+        title: "Fallen Angel",
+    },
+    {
+        id: "210154_03",
+        name: "Raphael",
+        title: "Fallen Angel",
     },
     {
         id: "210118_01",

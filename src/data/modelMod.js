@@ -277,6 +277,15 @@ const modelMod = {
         { name: "Normal", code: "show mPartsA; hide mPartsA_BR" },
         { name: "Broken Tome", code: "hide mPartsA; show mPartsA_BR" },
     ],
+    h0110401: [
+        { name: "Normal", code: "show mPartsA, mChair; hide mPartsA_BR" },
+        { name: "Broken Wings", code: "hide mPartsA; show mPartsA_BR, mChair" },
+        { name: "No Chair", code: "hide mPartsA_BR, mChair; show mPartsA" },
+        {
+            name: "Broken Wings No Chair",
+            code: "hide mPartsA, mChair; show mPartsA_BR",
+        },
+    ],
     r0130001: [
         {
             name: "Normal",
