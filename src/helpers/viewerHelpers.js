@@ -391,7 +391,6 @@ const createOutlineMaterial = async ({ size, color, opacity }) => {
     const [vertexShader, fragmentShader] = await loadShader("outline");
 
     const outlineMaterial = new THREE.ShaderMaterial({
-        skinning: true,
         side: THREE.BackSide,
         transparent: true,
         depthFunc: THREE.LessDepth,
