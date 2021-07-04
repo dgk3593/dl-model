@@ -11,19 +11,19 @@ const adv = [
         weapon: "Bow",
     },
     {
+        id: "100010_10",
+        name: "Summer Mym",
+        title: "MidSummer Temptress",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Manacaster",
+    },
+    {
         id: "100002_07",
         name: "Summer Elisanne",
         title: "",
         rarity: "5",
         element: "",
-        weapon: "",
-    },
-    {
-        id: "100010_10",
-        name: "Summer Mym",
-        title: "",
-        rarity: "5",
-        element: "Flame",
         weapon: "",
     },
     {
