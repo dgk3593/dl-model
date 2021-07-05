@@ -1439,6 +1439,11 @@ const skills = {
             name: "Carbunculus Balletto",
             code: "GUN_SKL_01_01_11038201",
         },
+        {
+            icon: "advIcons/100010_10_r05.png",
+            name: "Twilit Memory",
+            code: "GUN_SKL_01_01_10001010",
+        },
     ],
 };
 

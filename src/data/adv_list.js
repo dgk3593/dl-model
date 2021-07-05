@@ -13,7 +13,7 @@ const adv = [
     {
         id: "100010_10",
         name: "Summer Mym",
-        title: "MidSummer Temptress",
+        title: "Midsummer Temptress",
         rarity: "5",
         element: "Shadow",
         weapon: "Manacaster",

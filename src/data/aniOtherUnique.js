@@ -727,6 +727,16 @@ const otherUnique = {
             animations: [{ name: "Roll", code: "GUN_ROL_01_11036701" }],
         },
         {
+            name: "Summer Mym",
+            icon: "advIcons/100010_10_r05.png",
+            animations: [
+                {
+                    name: "Dragondrive",
+                    code: "GUN_CTD_01_10001010>GUN_CTD_02_10001010",
+                },
+            ],
+        },
+        {
             name: "Lapis",
             icon: "advIcons/110370_01_r05.png",
             animations: [

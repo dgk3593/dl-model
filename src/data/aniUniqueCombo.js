@@ -180,6 +180,14 @@ const uniqueCombo = {
             code: "ROD_CMB_01_11036101>ROD_CMB_02_11036101>ROD_CMB_03_11036101>ROD_CMB_04_11036101>ROD_CMB_05_11036101",
         },
     ],
+    Manacaster: [
+        {
+            icon: "advIcons/100010_10_r05.png",
+            name: "Summer Mym",
+            subtitle: "Dragondrive",
+            code: "GUN_CMB_U_01_10001010",
+        },
+    ],
 };
 
 export default uniqueCombo;
