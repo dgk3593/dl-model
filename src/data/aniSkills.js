@@ -178,6 +178,21 @@ const skills = {
             name: "Lightning Burst",
             code: "SWD_SKL_01_01_11027401",
         },
+        {
+            icon: "advIcons/110313_03_r05.png",
+            name: "Skill 1",
+            code: "SWD_SKL_01_01_11031303",
+        },
+        {
+            icon: "advIcons/110313_03_r05.png",
+            name: "Skill 2",
+            code: "SWD_SKL_02_01_11031303",
+        },
+        {
+            icon: "advIcons/110313_03_r05.png",
+            name: "Skill 3",
+            code: "SWD_SKL_03_01_11031303",
+        },
     ],
     Blade: [
         {

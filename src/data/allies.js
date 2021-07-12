@@ -15,6 +15,10 @@ const allies = [
         name: "Aurelius",
     },
     {
+        id: "100002_07",
+        name: "Summer Elisanne",
+    },
+    {
         id: "100018_01",
         name: "Leif",
     },

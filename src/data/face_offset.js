@@ -2,6 +2,7 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110313_03: [0, -0.025], // Summer Ieyasu
     c100005_08: [0.05, -0.08], // Summer Alex
     c100002_07: [0.05, -0.08], // Summer Elisanne
     c100010_10: [0.05, -0.08], // Summer Mym

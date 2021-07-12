@@ -3,28 +3,12 @@
  */
 const adv = [
     {
-        id: "100005_08",
-        name: "Summer Alex",
-        title: "Shimmering Guardian",
-        rarity: "5",
-        element: "Flame",
-        weapon: "Bow",
-    },
-    {
-        id: "100010_10",
-        name: "Summer Mym",
-        title: "Midsummer Temptress",
-        rarity: "5",
-        element: "Shadow",
-        weapon: "Manacaster",
-    },
-    {
-        id: "100002_07",
-        name: "Summer Elisanne",
+        id: "110313_03",
+        name: "Summer Ieyasu",
         title: "",
         rarity: "5",
         element: "",
-        weapon: "",
+        weapon: "Sword",
     },
     {
         id: "110341_01",
@@ -931,6 +915,14 @@ const adv = [
         weapon: "Wand",
     },
     {
+        id: "100005_08",
+        name: "Summer Alex",
+        title: "Shimmering Guardian",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Bow",
+    },
+    {
         id: "110041_02",
         name: "Summer Amane",
         title: "Kitty Cafe's Shining Star",
@@ -969,6 +961,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Bow",
+    },
+    {
+        id: "100010_10",
+        name: "Summer Mym",
+        title: "Midsummer Temptress",
+        rarity: "5",
+        element: "Shadow",
+        weapon: "Manacaster",
     },
     {
         id: "110066_02",

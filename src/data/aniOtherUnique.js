@@ -11,6 +11,11 @@ const otherUnique = {
             ],
         },
         {
+            name: "Summer Ieyasu",
+            icon: "advIcons/110313_03_r05.png",
+            animations: [{ name: "Boss Intro", code: "a0030002_090_01" }],
+        },
+        {
             name: "Alfonse",
             icon: "advIcons/110327_01_r05.png",
             animations: [
