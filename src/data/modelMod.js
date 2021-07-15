@@ -233,6 +233,19 @@ const modelMod = {
         { name: "With Wings", code: "show mPartsA_B" },
         { name: "No Wings", code: "hide mPartsA_B" },
     ],
+    // Summer Marishiten
+    d210156_01: [
+        { name: "Normal", code: "show mUribou, mPartsA_A; hide mPartsA_B" },
+        { name: "No Uribou", code: "hide mUribou, mPartsA_A, mPartsA_B" },
+        {
+            name: "With Weapon",
+            code: "show mPartsA_B, mUribou; hide mPartsA_A",
+        },
+        {
+            name: "With Weapon No Uribou",
+            code: "show mPartsA_B; hide mPartsA_A, mUribou",
+        },
+    ],
     h0080501: [
         {
             name: "Normal",

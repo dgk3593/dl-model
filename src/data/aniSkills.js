@@ -180,17 +180,20 @@ const skills = {
         },
         {
             icon: "advIcons/110313_03_r05.png",
-            name: "Skill 1",
+            name: "Unrelenting Waves",
+            subtitle: "Phase I",
             code: "SWD_SKL_01_01_11031303",
         },
         {
             icon: "advIcons/110313_03_r05.png",
-            name: "Skill 2",
+            name: "Unrelenting Waves",
+            subtitle: "Phase II",
             code: "SWD_SKL_02_01_11031303",
         },
         {
             icon: "advIcons/110313_03_r05.png",
-            name: "Skill 3",
+            name: "Unrelenting Waves",
+            subtitle: "Phase III",
             code: "SWD_SKL_03_01_11031303",
         },
     ],
@@ -500,6 +503,16 @@ const skills = {
             icon: "advIcons/110345_01_r05.png",
             name: "Calamity Drop",
             code: "DAG_SKL_02_01_11034501",
+        },
+        {
+            icon: "advIcons/110345_03_r05.png",
+            name: "Mouse's Summer Revenge",
+            code: "DAG_SKL_01_01_11034503>DAG_SKL_01_02_11034503>DAG_SKL_01_03_11034503",
+        },
+        {
+            icon: "advIcons/110345_03_r05.png",
+            name: "Mouse's Midsummer Revenge",
+            code: "DAG_SKL_02_01_11034503>DAG_SKL_02_02_11034503>DAG_SKL_02_03_11034503",
         },
         {
             icon: "advIcons/110360_01_r05.png",

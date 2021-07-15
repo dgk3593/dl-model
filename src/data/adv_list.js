@@ -5,10 +5,18 @@ const adv = [
     {
         id: "110313_03",
         name: "Summer Ieyasu",
-        title: "",
+        title: "Summertime Boar",
         rarity: "5",
-        element: "",
+        element: "Water",
         weapon: "Sword",
+    },
+    {
+        id: "110345_03",
+        name: "Summer Mitsuhide",
+        title: "Summertime Mouse",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Dagger",
     },
     {
         id: "110341_01",

@@ -3,11 +3,11 @@
  */
 const dragons = [
     {
-        id: "210155_01",
-        name: "Gala Reborn Nidhogg",
-        title: "Observer of Life and Death",
+        id: "210156_01",
+        name: "Summer Marishiten",
+        title: "Beachside Dawn Dragon",
         rarity: "5",
-        element: "Shadow",
+        element: "Water",
     },
     {
         id: "210117_01",
@@ -197,6 +197,13 @@ const dragons = [
         title: "Sacred Standard Bearer",
         rarity: "5",
         element: "Light",
+    },
+    {
+        id: "210155_01",
+        name: "Gala Reborn Nidhogg",
+        title: "Observer of Life and Death",
+        rarity: "5",
+        element: "Shadow",
     },
     {
         id: "210134_01",
