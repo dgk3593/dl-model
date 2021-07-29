@@ -3,20 +3,32 @@
  */
 const adv = [
     {
-        id: "110313_03",
-        name: "Summer Ieyasu",
-        title: "Summertime Boar",
+        id: "100001_12",
+        name: "Summer Prince",
+        title: "Prince of Summer",
         rarity: "5",
-        element: "Water",
-        weapon: "Sword",
+        element: "Shadow",
+        weapon: "Dagger",
     },
     {
-        id: "110345_03",
-        name: "Summer Mitsuhide",
-        title: "Summertime Mouse",
+        id: "100013_06",
+        name: "Summer Leonidas",
+        title: "Lord of the Summer Sun",
         rarity: "5",
-        element: "Flame",
-        weapon: "Dagger",
+        element: "Shadow",
+        weapon: "Lance",
+    },
+    {
+        id: "100015_08",
+        name: "Summer Chelle",
+        title: "",
+        rarity: "5",
+        element: "",
+        weapon: "Wand",
+    },
+    {
+        id: "100017_01",
+        name: "Emile",
     },
     {
         id: "110341_01",
@@ -955,6 +967,15 @@ const adv = [
         weapon: "Bow",
     },
     {
+        id: "110313_03",
+        name: "Summer Ieyasu",
+        title: "Summertime Boar",
+        rarity: "5",
+        element: "Water",
+        weapon: "Sword",
+    },
+
+    {
         id: "110042_02",
         name: "Summer Julietta",
         title: "Paladyn in Paradise",
@@ -969,6 +990,14 @@ const adv = [
         rarity: "5",
         element: "Light",
         weapon: "Bow",
+    },
+    {
+        id: "110345_03",
+        name: "Summer Mitsuhide",
+        title: "Summertime Mouse",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Dagger",
     },
     {
         id: "100010_10",
