@@ -114,6 +114,11 @@ const uniqueFS = {
             code: "AXE_CHR_01_10000611>AXE_CHR_02_10000611",
         },
         {
+            icon: "advIcons/110334_02_r05.png",
+            name: "Gala Audric",
+            code: "AXE_CHR_01_11033402>AXE_CHR_02_11033402>AXE_CHR_03_11033402",
+        },
+        {
             icon: "advIcons/110322_01_r05.png",
             name: "Zhu Bajie",
             code: "AXE_CHR_01_11032201>AXE_CHR_02_11032201>AXE_CHR_03_11032201",

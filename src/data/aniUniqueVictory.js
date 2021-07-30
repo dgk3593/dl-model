@@ -95,6 +95,11 @@ const uniqueVictory = {
             code: "AXE_WIN_01_10000213>AXE_WIN_02_10000213",
         },
         {
+            icon: "advIcons/110334_02_r05.png",
+            name: "Gala Audric",
+            code: "AXE_WIN_01_11033402>AXE_WIN_02_11033402",
+        },
+        {
             icon: "advIcons/110380_01_r05.png",
             name: "Sophie",
             code: "AXE_WIN_01_11038001>AXE_WIN_02_11038001>AXE_WIN_03_11038001",

@@ -3,6 +3,16 @@
  */
 const specialWeaponList = [
     {
+        id: "w399057_01",
+        name: "Gala Audric's Axe",
+        iconName: "w399057_01.png",
+    },
+    {
+        id: "w399058_01",
+        name: "Gala Audric's Sword",
+        iconName: "w399058_01.png",
+    },
+    {
         id: "w305020_01",
         name: "Elisanne's Lance",
         iconName: "w305020_01.png",

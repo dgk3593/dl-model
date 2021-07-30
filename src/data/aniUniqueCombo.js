@@ -129,6 +129,11 @@ const uniqueCombo = {
     ],
     Axe: [
         {
+            icon: "advIcons/110334_02_r05.png",
+            name: "Gala Audric",
+            code: "AXE_CMB_01_11033402>AXE_CMB_02_11033402>AXE_CMB_03_11033402>AXE_CMB_04_11033402>AXE_CMB_05_11033402",
+        },
+        {
             icon: "advIcons/110380_01_r05.png",
             name: "Sophie",
             code: "AXE_CMB_01_11038001>AXE_CMB_02_11038001>AXE_CMB_03_11038001>AXE_CMB_04_11038001>AXE_CMB_05_11038001>AXE_CMB_06_11038001",

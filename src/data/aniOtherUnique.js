@@ -355,6 +355,13 @@ const otherUnique = {
             ],
         },
         {
+            name: "Gala Audric",
+            icon: "advIcons/110334_02_r05.png",
+            animations: [
+                { name: "Force Strike Run", code: "AXE_RUN_05_11033402" },
+            ],
+        },
+        {
             name: "Sazanka",
             icon: "advIcons/110311_01_r04.png",
             animations: [
@@ -422,6 +429,17 @@ const otherUnique = {
         },
     ],
     Lance: [
+        {
+            name: "Summer Leonidas",
+            icon: "advIcons/100013_06_r05.png",
+            animations: [
+                { name: "Force Strike Run", code: "LAN_RUN_A_05_10001306" },
+                {
+                    name: "Dragondrive",
+                    code: "CMN_CTD_01_10001306>CMN_CTD_02_10001306>CMN_CTD_03_10001306",
+                },
+            ],
+        },
         {
             name: "Nadine",
             icon: "advIcons/110357_01_r05.png",

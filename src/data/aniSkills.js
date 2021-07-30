@@ -618,6 +618,16 @@ const skills = {
             code: "AXE_SKL_01_01_10001007",
         },
         {
+            icon: "advIcons/110334_02_r05.png",
+            name: "Overkarma",
+            code: "AXE_SKL_01_01_11033402",
+        },
+        {
+            icon: "advIcons/110334_02_r05.png",
+            name: "Circlet of Exaltation",
+            code: "AXE_SKL_02_01_11033402",
+        },
+        {
             icon: "advIcons/110027_02_r05.png",
             name: "Now You'll See What I'm Maid Of!",
             code: "AXE_SKL_01_01_11002702",
@@ -784,6 +794,11 @@ const skills = {
             code: "LAN_SKL_02_01_10001001",
         },
         {
+            icon: "advIcons/100013_06_r05.png",
+            name: "Exigent Vanquisher",
+            code: "LAN_SKL_01_01_10001306",
+        },
+        {
             icon: "advIcons/100002_01_r04.png",
             name: "Hallowed Waters",
             code: "LAN_SKL_01_01_10000201",
@@ -797,11 +812,6 @@ const skills = {
             icon: "advIcons/110021_01_r05.png",
             name: "Dragon Frostfang",
             code: "LAN_SKL_01_01_11002101",
-        },
-        {
-            icon: "advIcons/110039_01_r04.png",
-            name: "Unused",
-            code: "LAN_SKL_01_01_11003901",
         },
         {
             icon: "advIcons/110260_01_r04.png",
@@ -953,6 +963,11 @@ const skills = {
             icon: "advIcons/110352_03_r05.png",
             name: "Spiritual Purge",
             code: "LAN_SKL_02_01_11035203",
+        },
+        {
+            icon: "advIcons/110039_01_r04.png",
+            name: "Unused",
+            code: "LAN_SKL_01_01_11003901",
         },
     ],
     Bow: [
