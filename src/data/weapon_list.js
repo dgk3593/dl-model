@@ -3,10 +3,10 @@
  */
 const weapon_list = [
     {
-        id: "w304020_01",
-        iconName: "304020_01_59901.png",
-        name: "Rainbow Axe",
-        weapon: "Axe",
+        id: "w397005_01",
+        iconName: "397005_01_59901.png",
+        name: "Memento Futurum",
+        weapon: "Wand",
         rarity: "5",
         element: "None",
     },
@@ -3382,6 +3382,14 @@ const weapon_list = [
         id: "w397002_01",
         iconName: "397002_01_59901.png",
         name: "Divine Force",
+        weapon: "Axe",
+        rarity: "5",
+        element: "None",
+    },
+    {
+        id: "w304020_01",
+        iconName: "304020_01_59901.png",
+        name: "Rainbow Axe",
         weapon: "Axe",
         rarity: "5",
         element: "None",

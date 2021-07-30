@@ -3,6 +3,14 @@
  */
 const adv = [
     {
+        id: "110334_02",
+        name: "Gala Audric",
+        title: "The Paternal King",
+        rarity: "5",
+        element: "Light",
+        weapon: "Axe",
+    },
+    {
         id: "100001_12",
         name: "Summer Prince",
         title: "Prince of Summer",
