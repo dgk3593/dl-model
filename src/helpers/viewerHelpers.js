@@ -5,7 +5,8 @@ import { nanoid } from "nanoid";
 import textureOffsets, { idxOffsets } from "data/face_offset";
 import matcapList from "data/matcapList";
 
-import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { FBXLoader } from "./FBXLoader";
+// import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { callbackOnEach, getUpdated } from "helpers/helpers";
 import {
     matCommonParams,
@@ -246,7 +247,6 @@ export const disableFrustumCulling = model => {
  * @param {string} materialType - type of material to create
  * @param {Object} params
  * @param {THREE.Texture} params.map - texture for new material
- * @param {Boolean} params.skinning
  * @return {THREE.Material}
  */
 const createNewMaterial = (materialType, params) => {
@@ -290,7 +290,6 @@ export const changeMaterial = (
 
             const initParams = {
                 map: texture,
-                skinning: true,
             };
             const newMaterial = createNewMaterial(materialType, initParams);
             newMaterial.name = mat.name;
@@ -526,7 +525,6 @@ const applyTexture =
 
         const materialParams = {
             map: texture,
-            skinning: true,
         };
         const newMaterial = createNewMaterial(materialType, materialParams);
         target.traverse(child => {
