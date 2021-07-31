@@ -345,7 +345,7 @@ const adv = [
     {
         id: "100013_04",
         name: "Gala Leonidas",
-        title: "Bearer of the Skysplitter",
+        title: "Lord of the New Path",
         rarity: "5",
         element: "Flame",
         weapon: "Manacaster",
