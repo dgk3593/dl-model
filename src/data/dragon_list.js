@@ -3,11 +3,11 @@
  */
 const dragons = [
     {
-        id: "210156_01",
-        name: "Summer Marishiten",
-        title: "Beachside Dawn Dragon",
+        id: "210158_01",
+        name: "Summer Cat Sith",
+        title: "Mischievous Feline",
         rarity: "5",
-        element: "Water",
+        element: "Shadow",
     },
     {
         id: "210117_01",
@@ -582,6 +582,13 @@ const dragons = [
         title: "Beachside Flower",
         rarity: "5",
         element: "Wind",
+    },
+    {
+        id: "210156_01",
+        name: "Summer Marishiten",
+        title: "Beachside Dawn Dragon",
+        rarity: "5",
+        element: "Water",
     },
     {
         id: "210010_01",

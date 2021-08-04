@@ -29,9 +29,9 @@ const adv = [
     {
         id: "100015_08",
         name: "Summer Chelle",
-        title: "",
+        title: "Unrelenting Summer Beauty",
         rarity: "5",
-        element: "",
+        element: "Light",
         weapon: "Wand",
     },
     {

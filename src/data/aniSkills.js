@@ -1160,6 +1160,16 @@ const skills = {
             code: "ROD_SKL_01_01_10000907",
         },
         {
+            icon: "advIcons/100015_08_r05.png",
+            name: "Sole Estivo",
+            code: "ROD_SKL_01_01_10001508",
+        },
+        {
+            icon: "advIcons/100015_08_r05.png",
+            name: "Estate Brilliante",
+            code: "ROD_SKL_02_01_10001508",
+        },
+        {
             icon: "advIcons/110009_02_r05.png",
             name: "Chrono Trial",
             code: "ROD_SKL_01_01_11000902",
