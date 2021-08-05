@@ -18,7 +18,7 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "^4.0.3",
         "source-map-explorer": "^2.5.2",
-        "three": "^0.131.2"
+        "three": "^0.131.3"
     },
     "scripts": {
         "analyze": "source-map-explorer 'build/static/js/*.js'",
