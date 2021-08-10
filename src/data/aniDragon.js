@@ -1081,6 +1081,11 @@ const dragonAni = {
             name: "All-Encompassing Darkness",
             code: "D21004601_060_01",
         },
+        { name: "Defeated", code: "D21004601_011_01" },
+        { name: "Frozen", code: "D21004601_013_01" },
+        { name: "Boss Intro", code: "D21004601_090_02>D21004601_090_01" },
+        { name: "Broken", code: "D21004601_081_01>D21004601_081_02" },
+        { name: "Recover from Broken", code: "D21004601_081_03" },
     ],
     d210048_01: [
         { name: "Dragon's Roost", code: "DC_d210048_01_90_01" },
