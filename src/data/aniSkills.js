@@ -364,7 +364,7 @@ const skills = {
         },
         {
             icon: "advIcons/110349_04_r05.png",
-            name: "Summer Moon Howl",
+            name: "Haunter of the Festival",
             code: "KAT_SKL_01_01_11034904",
         },
     ],
