@@ -362,6 +362,11 @@ const skills = {
             name: "Blossom Dance",
             code: "KAT_SKL_01_01_11006402",
         },
+        {
+            icon: "advIcons/110349_04_r05.png",
+            name: "Summer Moon Howl",
+            code: "KAT_SKL_01_01_11034904",
+        },
     ],
     Dagger: [
         {

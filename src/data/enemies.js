@@ -7,6 +7,10 @@ const enemies = [
         name: "Valyx",
     },
     {
+        id: "100017_01",
+        name: "Emile",
+    },
+    {
         id: "100032_02",
         name: "Mad Laxi",
     },
