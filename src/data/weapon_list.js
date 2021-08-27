@@ -3,10 +3,10 @@
  */
 const weapon_list = [
     {
-        id: "w397005_01",
-        iconName: "397005_01_59901.png",
-        name: "Memento Futurum",
-        weapon: "Wand",
+        id: "w396002_01",
+        iconName: "396002_01_59901.png",
+        name: "Worthless Shot",
+        weapon: "Manacaster",
         rarity: "5",
         element: "None",
     },
@@ -3542,6 +3542,14 @@ const weapon_list = [
         id: "w307141_01",
         iconName: "307141_01_59901.png",
         name: "Fatalis Rhabdos",
+        weapon: "Wand",
+        rarity: "5",
+        element: "None",
+    },
+    {
+        id: "w397005_01",
+        iconName: "397005_01_59901.png",
+        name: "Memento Futurum",
         weapon: "Wand",
         rarity: "5",
         element: "None",
