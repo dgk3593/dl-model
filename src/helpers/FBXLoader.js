@@ -65,10 +65,6 @@ let connections;
 let sceneGraph;
 
 class FBXLoader extends Loader {
-    constructor(manager) {
-        super(manager);
-    }
-
     load(url, onLoad, onProgress, onError) {
         const scope = this;
 

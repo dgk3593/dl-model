@@ -3,11 +3,11 @@
  */
 const dragons = [
     {
-        id: "210158_01",
-        name: "Summer Cat Sith",
-        title: "Mischievous Feline",
+        id: "210161_01",
+        name: "Gala Beast Volk",
+        title: "Fangs of the Fangless",
         rarity: "5",
-        element: "Shadow",
+        element: "Wind",
     },
     {
         id: "210117_01",
@@ -575,6 +575,13 @@ const dragons = [
         title: "Mischievous Guardian",
         rarity: "5",
         element: "Water",
+    },
+    {
+        id: "210158_01",
+        name: "Summer Cat Sith",
+        title: "Mischievous Feline",
+        rarity: "5",
+        element: "Shadow",
     },
     {
         id: "210125_01",

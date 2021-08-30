@@ -3,10 +3,10 @@
  */
 const weapon_list = [
     {
-        id: "w396002_01",
-        iconName: "396002_01_59901.png",
-        name: "Worthless Shot",
-        weapon: "Manacaster",
+        id: "w397006_01",
+        iconName: "397006_01_59901.png",
+        name: "Howl of the Hungry Beast",
+        weapon: "Lance",
         rarity: "5",
         element: "None",
     },
@@ -3606,6 +3606,14 @@ const weapon_list = [
         id: "w396001_01",
         iconName: "396001_01_59901.png",
         name: "Alliance Trigger",
+        weapon: "Manacaster",
+        rarity: "5",
+        element: "None",
+    },
+    {
+        id: "w396002_01",
+        iconName: "396002_01_59901.png",
+        name: "Worthless Shot",
         weapon: "Manacaster",
         rarity: "5",
         element: "None",

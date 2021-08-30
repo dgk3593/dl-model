@@ -4222,6 +4222,40 @@ const dragonAni = {
             code: "D21015801_090_02>D21015801_090_01",
         },
     ],
+    d210161_01: [
+        { name: "Dragon's Roost", code: "DC_d210161_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210161_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210161_01_APPEAR_01>SMN_DRG_210161_01_LOOP_01",
+        },
+        { name: "Idle", code: "D21016101_000_01" },
+        { name: "Walk", code: "D21016101_002_01" },
+        { name: "Run", code: "D21016101_003_01" },
+        { name: "Brake", code: "D21016101_004_01" },
+        { name: "Dash Forward", code: "D21016101_020_01" },
+        { name: "Transform", code: "D21016101_030_01" },
+        {
+            name: "Combo",
+            code: "D21016101_040_01>D21016101_041_01>D21016101_042_01",
+        },
+        {
+            name: "Lunatic Deliverance",
+            code: "D21016101_060_01",
+        },
+        {
+            name: "Lunatic Desolation",
+            code: "D21016101_061_01",
+        },
+        {
+            name: "Dragon Strike",
+            code: "D21016101_070_01>D21016101_070_02>D21016101_070_03",
+        },
+        {
+            name: "Dragon Strike (Canceled)",
+            code: "D21016101_070_01>D21016101_070_02>D21016101_070_03",
+        },
+    ],
 };
 
 export default dragonAni;
