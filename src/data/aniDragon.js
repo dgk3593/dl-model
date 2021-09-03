@@ -4253,7 +4253,23 @@ const dragonAni = {
         },
         {
             name: "Dragon Strike (Canceled)",
-            code: "D21016101_070_01>D21016101_070_02>D21016101_070_03",
+            code: "D21016101_070_01>D21016101_070_02>D21016101_070_99",
+        },
+    ],
+    d210163_03: [
+        { name: "Idle", code: "D21016303_000_01" },
+        { name: "Move Forward", code: "D21016303_002_01" },
+        { name: "Defeated", code: "D21016303_011_01>D21016303_011_02" },
+        { name: "Frozen", code: "D21016303_013_01" },
+        { name: "Idle 2", code: "D21016303_014_01" },
+        { name: "Broken", code: "D21016303_081_01>D21016303_081_02" },
+        { name: "Recover from Broken", code: "D21016303_081_03" },
+        { name: "Boss Intro", code: "D21016303_090_02>D21016303_090_01" },
+        { name: "Right Slap", code: "D21016303_100_01" },
+        { name: "Left Slap", code: "D21016303_101_01" },
+        {
+            name: "Power Up",
+            code: "D21016303_102_01>D21016303_102_02>D21016303_102_03",
         },
     ],
 };

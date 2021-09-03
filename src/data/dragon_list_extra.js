@@ -64,6 +64,11 @@ const extraDragons = [
         title: "Fallen Angel",
     },
     {
+        id: "210163_03",
+        name: "Uriel",
+        title: "Fallen Angel",
+    },
+    {
         id: "210118_01",
         name: "Rush",
     },

@@ -16,6 +16,11 @@ const uniqueFS = {
             code: "SWD_CHR_01_10001802>SWD_CHR_02_10001802>SWD_CHR_03_10001802",
         },
         {
+            icon: "advIcons/100018_07_r05.png",
+            name: "Civilian Leif",
+            code: "SWD_CHR_01_10001807>SWD_CHR_02_10001807>SWD_CHR_03_10001807",
+        },
+        {
             icon: "advIcons/110315_01_r04.png",
             name: "Ku Hai",
             subtitle: "Apsaras Formation",

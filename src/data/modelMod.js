@@ -317,6 +317,16 @@ const modelMod = {
             code: "hide mPartsA, mPartsB; show mPartsA_BR, mPartsB_BR",
         },
     ],
+    h0120201: [
+        {
+            name: "Normal",
+            code: "show mPartsA_Extension; hide mPartsA_BR_Extension",
+        },
+        {
+            name: "Broken Cloak",
+            code: "hide mPartsA_Extension; show mPartsA_BR_Extension",
+        },
+    ],
 };
 
 export default modelMod;

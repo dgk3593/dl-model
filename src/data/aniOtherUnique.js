@@ -11,6 +11,14 @@ const otherUnique = {
             ],
         },
         {
+            name: "Harle",
+            icon: "advIcons/100019_02.png",
+            animations: [
+                { name: "Backflip", code: "A0740001_020_02" },
+                { name: "Boss Intro", code: "A0820001_090_02>A0820001_090_01" },
+            ],
+        },
+        {
             name: "Summer Ieyasu",
             icon: "advIcons/110313_03_r05.png",
             animations: [{ name: "Boss Intro", code: "a0030002_090_01" }],
@@ -801,6 +809,11 @@ const otherUnique = {
                 { name: "Boss Intro", code: "A0830001_090_02>A0830001_090_01" },
                 { name: "Multiple Shots", code: "A0830001_105_01" },
             ],
+        },
+        {
+            name: "Cecile",
+            icon: "advIcons/110394_01_r05.png",
+            animations: [{ name: "Dodge", code: "GUN_CHR_A_01_11039401" }],
         },
     ],
 };

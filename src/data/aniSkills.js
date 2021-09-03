@@ -64,6 +64,16 @@ const skills = {
             code: "SWD_SKL_04_01_10001802",
         },
         {
+            icon: "advIcons/100018_07_r05.png",
+            name: "Gallant Sparrow",
+            code: "SWD_SKL_01_01_10001807",
+        },
+        {
+            icon: "advIcons/100018_07_r05.png",
+            name: "Unfettered Loyalty",
+            code: "SWD_SKL_02_01_10001807",
+        },
+        {
             icon: "advIcons/100031_03_r05.png",
             name: "Circlet Dawn",
             code: "SWD_SKL_01_01_10003103>SWD_SKL_01_02_10003103",
@@ -1501,6 +1511,26 @@ const skills = {
             icon: "advIcons/100010_10_r05.png",
             name: "Twilit Memory",
             code: "GUN_SKL_01_01_10001010",
+        },
+        {
+            icon: "advIcons/110394_01_r05.png",
+            name: "Chomp Some Manachew",
+            code: "GUN_SKL_01_01_11039401",
+        },
+        {
+            icon: "advIcons/110394_01_r05.png",
+            name: "Munch on a Manachew",
+            code: "GUN_SKL_02_01_11039401",
+        },
+        {
+            icon: "advIcons/110394_01_r05.png",
+            name: "Scatterfall",
+            code: "GUN_SKL_03_01_11039401",
+        },
+        {
+            icon: "advIcons/110394_01_r05.png",
+            name: "Poisonblast",
+            code: "GUN_SKL_04_01_11039401",
         },
     ],
 };

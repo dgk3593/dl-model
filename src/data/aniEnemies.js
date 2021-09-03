@@ -488,6 +488,26 @@ const enemyAni = {
             code: "A0140001_103_01>A0140001_103_02>A0140001_103_03",
         },
     ],
+    h0120201: [
+        { name: "Idle", code: "h0120201_000_01" },
+        { name: "Move Forward", code: "h0120201_002_01" },
+        { name: "Defeated", code: "h0120201_011_01>h0120201_011_02" },
+        { name: "Idle 2", code: "h0120201_014_01" },
+        { name: "Wave", code: "h0120201_022_01" },
+        { name: "Spin Attack", code: "h0120201_030_01" },
+        { name: "Knocked Back", code: "h0120201_070_01" },
+        { name: "Broken", code: "h0120201_081_01>h0120201_081_02" },
+        { name: "Recover from Broken", code: "h0120201_081_03" },
+        { name: "Boss Intro", code: "h0120201_090_02>h0120201_090_01" },
+        {
+            name: "Blast Attack",
+            code: "h0120201_100_01>h0120201_100_02>h0120201_100_03>h0120201_100_04>h0120201_100_05",
+        },
+        {
+            name: "Charged Attack",
+            code: "h0120201_101_01>h0120201_101_02>h0120201_101_03",
+        },
+    ],
 };
 
 export default enemyAni;
