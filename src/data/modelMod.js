@@ -327,6 +327,16 @@ const modelMod = {
             code: "hide mPartsA_Extension; show mPartsA_BR_Extension",
         },
     ],
+    c110393_01: [
+        {
+            name: "Clenched Fist",
+            code: "show mPartsA_A; hide mPartsA_B",
+        },
+        {
+            name: "Claw Hand",
+            code: "hide mPartsA_A; show mPartsA_B",
+        },
+    ],
 };
 
 export default modelMod;

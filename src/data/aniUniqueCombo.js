@@ -95,6 +95,11 @@ const uniqueCombo = {
             name: "Joker",
             code: "DAG_CMB_01_11037701>DAG_CMB_02_11037701>DAG_CMB_03_11037701>DAG_CMB_04_11037701>DAG_CMB_05_11037701>DAG_CMB_06_11037701",
         },
+        {
+            icon: "advIcons/110393_01_r05.png",
+            name: "Farren",
+            code: "DAG_CMB_A_01_11039301>DAG_CMB_A_02_11039301>DAG_CMB_A_03_11039301>DAG_CMB_A_04_11039301",
+        },
     ],
     Blade: [
         {

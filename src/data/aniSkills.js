@@ -590,6 +590,16 @@ const skills = {
             name: "Aquatic Ruin",
             code: "DAG_SKL_01_01_11038501",
         },
+        {
+            icon: "advIcons/110393_01_r05.png",
+            name: "S1",
+            code: "DAG_SKL_01_01_11039301",
+        },
+        {
+            icon: "advIcons/110393_01_r05.png",
+            name: "S2",
+            code: "DAG_SKL_02_01_11039301",
+        },
     ],
     Axe: [
         {

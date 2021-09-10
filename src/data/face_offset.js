@@ -2,6 +2,7 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c110393_01: [0.05, -0.08], // Farren
     c110394_01: [0.05, -0.08], // Cecile
     c100019_02: [0.05, -0.08], // Harle
     c100018_07: [0.05, -0.08], // Leif

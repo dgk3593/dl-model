@@ -3,28 +3,12 @@
  */
 const adv = [
     {
-        id: "110394_01",
-        name: "Cecile",
-        title: "Disgraced Knight",
+        id: "110393_01",
+        name: "Farren",
+        title: "",
         rarity: "5",
-        element: "Wind",
-        weapon: "Manacaster",
-    },
-    {
-        id: "100018_07",
-        name: "Civilian Leif",
-        title: "Ambitious Knight",
-        rarity: "5",
-        element: "Light",
-        weapon: "Sword",
-    },
-    {
-        id: "100019_02",
-        name: "Harle",
-        title: "The Black Raven",
-        rarity: "",
-        element: "None",
-        weapon: "Sword",
+        element: "",
+        weapon: "Dagger",
     },
     {
         id: "110341_01",
@@ -107,6 +91,14 @@ const adv = [
         weapon: "Lance",
     },
     {
+        id: "110394_01",
+        name: "Cecile",
+        title: "Disgraced Knight",
+        rarity: "5",
+        element: "Wind",
+        weapon: "Manacaster",
+    },
+    {
         id: "100015_04",
         name: "Chelle",
         title: "Unrelenting Beauty",
@@ -136,6 +128,14 @@ const adv = [
         title: "Prince of Ylisse",
         rarity: "5",
         element: "Flame",
+        weapon: "Sword",
+    },
+    {
+        id: "100018_07",
+        name: "Civilian Leif",
+        title: "Ambitious Knight",
+        rarity: "5",
+        element: "Light",
         weapon: "Sword",
     },
     {

@@ -252,6 +252,20 @@ const otherUnique = {
             ],
         },
         {
+            name: "Farren",
+            icon: "advIcons/110393_01_r05.png",
+            animations: [
+                {
+                    name: "Dragondrive",
+                    code: "CMN_CTD_01_11039301",
+                },
+                {
+                    name: "Boss Intro",
+                    code: "A0860001_090_02>A0860001_090_01",
+                },
+            ],
+        },
+        {
             name: "Mitsuhide",
             icon: "advIcons/110345_01_r05.png",
             animations: [

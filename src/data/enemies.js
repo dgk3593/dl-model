@@ -11,6 +11,10 @@ const enemies = [
         name: "Emile",
     },
     {
+        id: "100019_02",
+        name: "Harle",
+    },
+    {
         id: "100032_02",
         name: "Mad Laxi",
     },
