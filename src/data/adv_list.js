@@ -5,10 +5,18 @@ const adv = [
     {
         id: "110393_01",
         name: "Farren",
-        title: "",
+        title: "Synced Wyrmbinder",
         rarity: "5",
-        element: "",
+        element: "Light",
         weapon: "Dagger",
+    },
+    {
+        id: "110059_02",
+        name: "Undercover Grace",
+        title: "Expiatory Researcher",
+        rarity: "5",
+        element: "Flame",
+        weapon: "Sword",
     },
     {
         id: "110341_01",

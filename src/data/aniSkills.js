@@ -206,6 +206,16 @@ const skills = {
             subtitle: "Phase III",
             code: "SWD_SKL_03_01_11031303",
         },
+        {
+            icon: "advIcons/110059_02_r05.png",
+            name: "Soul Deprivation",
+            code: "SWD_SKL_01_01_11005902",
+        },
+        {
+            icon: "advIcons/110059_02_r05.png",
+            name: "Flametongue Unbound",
+            code: "SWD_SKL_02_01_11005902",
+        },
     ],
     Blade: [
         {

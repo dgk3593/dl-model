@@ -3,6 +3,11 @@
  */
 const specialWeaponList = [
     {
+        id: "w399056_01",
+        name: "Undercover Grace's Sword",
+        iconName: "w399056_01.png",
+    },
+    {
         id: "w399057_01",
         name: "Gala Audric's Axe",
         iconName: "w399057_01.png",
