@@ -3,11 +3,11 @@
  */
 const dragons = [
     {
-        id: "210161_01",
-        name: "Gala Beast Volk",
-        title: "Fangs of the Fangless",
+        id: "210166_01",
+        name: "Mini Jupi",
+        title: "The Most Handsome Boy",
         rarity: "5",
-        element: "Wind",
+        element: "Light",
     },
     {
         id: "210117_01",
@@ -169,6 +169,13 @@ const dragons = [
         title: "Delightful Dreamer",
         rarity: "5",
         element: "Water",
+    },
+    {
+        id: "210161_01",
+        name: "Gala Beast Volk",
+        title: "Fangs of the Fangless",
+        rarity: "5",
+        element: "Wind",
     },
     {
         id: "200017_01",
