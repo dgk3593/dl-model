@@ -329,6 +329,9 @@ const enemyAni = {
             code: "H0110401_101_01>H0110401_101_02>H0110401_101_03",
         },
     ],
+    c100007_01: [{ name: "Fly", code: "CMN_MWM_23" }],
+    c100007_05: [{ name: "Fly", code: "CMN_MWM_23" }],
+    c100007_09: [{ name: "Fly", code: "CMN_MWM_23" }],
     c100034_01: [
         { name: "Ilde", code: "A0100001_000_01" },
         { name: "Run", code: "A0100001_002_01" },
