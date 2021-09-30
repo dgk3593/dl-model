@@ -229,6 +229,13 @@ function SettingBtns({ openModal }) {
                     alt="Buy Me a Coffee"
                 />
             </a>
+            <a
+                href="https://dgk3593.github.io/dl-model-test/#/"
+                rel="noreferrer"
+                target="_blank"
+            >
+                <Button variant="contained">Beta</Button>
+            </a>
         </>
     );
 }
