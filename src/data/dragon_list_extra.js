@@ -3,6 +3,11 @@
  */
 const extraDragons = [
     {
+        id: "210172_01",
+        name: "Summoned Bahamut",
+        title: "Gala Zethia",
+    },
+    {
         id: "210153_01",
         name: "Gala Notte",
         title: "Metamorphosis",

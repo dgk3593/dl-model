@@ -3,6 +3,11 @@
  */
 const specialWeaponList = [
     {
+        id: "w399060_01",
+        name: "Special Final Resistance",
+        iconName: "w399060_01.png",
+    },
+    {
         id: "w399056_01",
         name: "Undercover Grace's Sword",
         iconName: "w399056_01.png",

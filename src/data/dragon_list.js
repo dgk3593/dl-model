@@ -10,6 +10,20 @@ const dragons = [
         element: "Light",
     },
     {
+        id: "210162_01",
+        name: "Gala Bahamut",
+        title: "Imposing Wings of Black",
+        rarity: "5",
+        element: "Shadow",
+    },
+    {
+        id: "210168_01",
+        name: "Michael",
+        title: "",
+        rarity: "5",
+        element: "",
+    },
+    {
         id: "210117_01",
         name: "AC-011 Garland",
         title: "Revolutionary Warrior",

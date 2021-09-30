@@ -337,6 +337,16 @@ const modelMod = {
             code: "hide mPartsA_A; show mPartsA_B",
         },
     ],
+    d210168_01: [
+        {
+            name: "With Wings",
+            code: "show mPartsA_A; hide mPartsA_B",
+        },
+        {
+            name: "No Wings",
+            code: "hide mPartsA_A; show mPartsA_B",
+        },
+    ],
 };
 
 export default modelMod;

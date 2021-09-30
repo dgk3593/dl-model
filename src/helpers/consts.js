@@ -362,7 +362,7 @@ export const incompatibleModels = new Set([
     "c100041_01",
 ]);
 
-export const specialBlades = new Set(["w397004_01"]);
+export const specialBlades = new Set(["w397004_01", "w399059_01"]);
 
 /**
  * @type {{[colorName: string]: ColorCode}}

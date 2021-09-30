@@ -2,6 +2,9 @@
  * @type {{ [id:string]: xyCoordinate }}
  */
 const textureOffsets = {
+    c100054_01: [0.05, -0.08], // Gala Zethia
+    c110396_01: [0.05, -0.08], // Sandalphon
+    c110395_01: [0.05, -0.08], // Regina
     c110393_01: [0.05, -0.08], // Farren
     c110394_01: [0.05, -0.08], // Cecile
     c100019_02: [0.05, -0.08], // Harle

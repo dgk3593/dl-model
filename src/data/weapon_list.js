@@ -3,10 +3,10 @@
  */
 const weapon_list = [
     {
-        id: "w397006_01",
-        iconName: "397006_01_59901.png",
-        name: "Howl of the Hungry Beast",
-        weapon: "Lance",
+        id: "w399059_01",
+        iconName: "399059_01_59901.png",
+        name: "Final Resistance",
+        weapon: "Blade",
         rarity: "5",
         element: "None",
     },
@@ -3441,6 +3441,14 @@ const weapon_list = [
         weapon: "Lance",
         rarity: "5",
         element: "Wind",
+    },
+    {
+        id: "w397006_01",
+        iconName: "397006_01_59901.png",
+        name: "Howl of the Hungry Beast",
+        weapon: "Lance",
+        rarity: "5",
+        element: "None",
     },
     {
         id: "w306015_01",
