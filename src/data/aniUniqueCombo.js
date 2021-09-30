@@ -108,6 +108,11 @@ const uniqueCombo = {
             code: "KAT_CMB_01_10004501>KAT_CMB_02_10004501>KAT_CMB_03_10004501>KAT_CMB_04_10004501",
         },
         {
+            icon: "advIcons/100054_01_r05.png",
+            name: "Gala Zethia",
+            code: "KAT_CMB_01_10005401>KAT_CMB_02_10005401>KAT_CMB_03_10005401>KAT_CMB_04_10005401>KAT_CMB_05_10005401>KAT_CMB_06_10005401>KAT_CMB_07_10005401>KAT_CMB_08_10005401>KAT_CMB_09_10005401",
+        },
+        {
             icon: "advIcons/110295_01_r05.png",
             name: "Valerio",
             subtitle: "Appetizer Stance",

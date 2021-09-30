@@ -65,6 +65,11 @@ const uniqueVictory = {
             name: "Gala Mascula",
             code: "KAT_WIN_01_10004501>KAT_WIN_02_10004501>KAT_WIN_03_10004501",
         },
+        {
+            icon: "advIcons/100054_01_r05.png",
+            name: "Gala Zethia",
+            code: "KAT_WIN_01_10005401>KAT_WIN_02_10005401",
+        },
     ],
     Dagger: [
         {

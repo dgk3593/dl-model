@@ -11,14 +11,6 @@ const otherUnique = {
             ],
         },
         {
-            name: "Harle",
-            icon: "advIcons/100019_02.png",
-            animations: [
-                { name: "Backflip", code: "A0740001_020_02" },
-                { name: "Boss Intro", code: "A0820001_090_02>A0820001_090_01" },
-            ],
-        },
-        {
             name: "Summer Ieyasu",
             icon: "advIcons/110313_03_r05.png",
             animations: [{ name: "Boss Intro", code: "a0030002_090_01" }],
@@ -136,6 +128,32 @@ const otherUnique = {
         },
     ],
     Blade: [
+        {
+            name: "Gala Zethia",
+            icon: "advIcons/100054_01.png",
+            animations: [
+                {
+                    name: "Summon Bahamut",
+                    code: "CMN_CTD_01_10005401>CMN_CTD_02_10005401",
+                },
+                {
+                    name: "Summon Bahamut 2",
+                    code: "CMN_CTD_03_10005401",
+                },
+                {
+                    name: "Roll Attack",
+                    code: "KAT_ROL_A_01_10005401",
+                },
+            ],
+        },
+        {
+            name: "Harle",
+            icon: "advIcons/100019_02.png",
+            animations: [
+                { name: "Backflip", code: "A0740001_020_02" },
+                { name: "Boss Intro", code: "A0820001_090_02>A0820001_090_01" },
+            ],
+        },
         {
             name: "Laxi",
             icon: "advIcons/100032_02.png",

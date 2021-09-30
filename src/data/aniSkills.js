@@ -246,6 +246,21 @@ const skills = {
             code: "KAT_SKL_01_01_10000609",
         },
         {
+            icon: "advIcons/100054_01_r05.png",
+            name: "Genesis Circlet",
+            code: "KAT_SKL_01_01_10005401",
+        },
+        {
+            icon: "advIcons/100019_02_r05.png",
+            name: "Raven's Ridicule",
+            code: "KAT_SKL_01_01_10001902",
+        },
+        {
+            icon: "advIcons/100019_02_r05.png",
+            name: "Raven's Patsy",
+            code: "KAT_SKL_02_01_10001902",
+        },
+        {
             icon: "advIcons/110010_01_r05.png",
             name: "Ravenous Fire",
             code: "KAT_SKL_01_01_11001001",
