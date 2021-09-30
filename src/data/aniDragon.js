@@ -4290,6 +4290,63 @@ const dragonAni = {
             code: "D21016601_060_01",
         },
     ],
+    d210168_01: [
+        { name: "Idle", code: "D21016803_000_01" },
+        { name: "Fly", code: "D21016803_002_01" },
+        { name: "Fly Fast", code: "D21016803_003_01" },
+        { name: "Brake", code: "D21016803_010_01" },
+        { name: "Frozen", code: "D21016803_013_01" },
+        { name: "Idle 2", code: "D21016803_014_01" },
+        { name: "Dash Forward", code: "D21016803_020_01" },
+        { name: "Broken", code: "D21016803_081_01>D21016803_081_02" },
+        { name: "Recover from Broken", code: "D21016803_081_03" },
+        {
+            name: "Charged Attack",
+            code: "D21016803_100_01>D21016803_100_02>D21016803_100_03>D21016803_100_04>D21016803_100_05",
+        },
+    ],
+    d210162_01: [
+        { name: "Dragon's Roost", code: "DC_d210162_01_90_01" },
+        { name: "Receive Gift", code: "DC_d210162_01_90_04" },
+        {
+            name: "Summon",
+            code: "SMN_DRG_210162_01_APPEAR_01>SMN_DRG_210162_01_LOOP_01",
+        },
+        { name: "Idle", code: "D21016201_000_01" },
+        { name: "Fly", code: "D21016201_002_01" },
+        { name: "Fly Fast", code: "D21016201_003_01>D21016201_003_02" },
+        { name: "Brake", code: "D21016201_004_01" },
+        { name: "Dash Forward", code: "D21016201_020_01" },
+        { name: "Transform", code: "D21016201_030_01" },
+        {
+            name: "Combo",
+            code: "D21016201_040_01>D21016201_041_01>D21016201_042_01>D21016201_043_01",
+        },
+        {
+            name: "Cataclysm Beam",
+            code: "D21016201_060_01",
+        },
+        {
+            name: "Dragon Strike",
+            code: "D21016201_070_01>D21016201_070_02>D21016201_070_03",
+        },
+    ],
+    d210172_01: [
+        { name: "Idle", code: "D21016201_000_01" },
+        { name: "Fly", code: "D21016201_002_01" },
+        { name: "Fly Fast", code: "D21016201_003_01>D21016201_003_02" },
+        { name: "Brake", code: "D21016201_004_01" },
+        { name: "Dash Forward", code: "D21016201_020_01" },
+        { name: "Transform", code: "D21016201_030_01" },
+        {
+            name: "Combo",
+            code: "D21016201_040_01>D21016201_041_01>D21016201_042_01>D21016201_043_01",
+        },
+        {
+            name: "Cataclysm Beam",
+            code: "D21016201_060_01",
+        },
+    ],
 };
 
 export default dragonAni;
