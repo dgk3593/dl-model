@@ -252,12 +252,12 @@ const skills = {
         },
         {
             icon: "advIcons/100019_02_r05.png",
-            name: "Raven's Ridicule",
+            name: "Raven's Patsy",
             code: "KAT_SKL_01_01_10001902",
         },
         {
             icon: "advIcons/100019_02_r05.png",
-            name: "Raven's Patsy",
+            name: "Raven's Patsy 2",
             code: "KAT_SKL_02_01_10001902",
         },
         {
