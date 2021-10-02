@@ -4,7 +4,7 @@
 const specialWeaponList = [
     {
         id: "w399060_01",
-        name: "Special Final Resistance",
+        name: "Providential Blade",
         iconName: "w399060_01.png",
     },
     {

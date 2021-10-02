@@ -4337,7 +4337,7 @@ const dragonAni = {
         { name: "Fly Fast", code: "D21016201_003_01>D21016201_003_02" },
         { name: "Brake", code: "D21016201_004_01" },
         { name: "Dash Forward", code: "D21016201_020_01" },
-        { name: "Transform", code: "D21016201_030_01" },
+        { name: "Summon", code: "D21016201_030_01" },
         {
             name: "Combo",
             code: "D21016201_040_01>D21016201_041_01>D21016201_042_01>D21016201_043_01",
