@@ -1,0 +1,28 @@
+{
+    "data": {
+        "Long": [
+            { "name": "Combo", "code": "GUN_CMB_A_01" },
+            {
+                "name": "Force Strike",
+                "code": "GUN_CHR_A_01>GUN_CHR_A_02>GUN_CHR_A_03"
+            }
+        ],
+        "Close": [
+            { "name": "Combo", "code": "GUN_CMB_B_01" },
+            {
+                "name": "Force Strike",
+                "code": "GUN_CHR_B_01>GUN_CHR_B_02>GUN_CHR_B_03"
+            }
+        ],
+        "Rapid": [
+            {
+                "name": "Combo",
+                "code": "GUN_CMB_C_01>GUN_CMB_C_02>GUN_CMB_C_03"
+            },
+            {
+                "name": "Force Strike",
+                "code": "GUN_CHR_C_01>GUN_CHR_C_02>GUN_CHR_C_03"
+            }
+        ]
+    }
+}

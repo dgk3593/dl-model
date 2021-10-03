@@ -1,0 +1,254 @@
+{
+    "data": {
+        "Sword": [
+            {
+                "user": "c100003_07",
+                "name": "Gala Ranzal",
+                "subtitle": "Gale-Clad Sword",
+                "code": "SWD_CHR_11"
+            },
+            {
+                "user": "c100018_02",
+                "name": "Gala Leif",
+                "subtitle": "Shielding Stance",
+                "code": "SWD_CHR_01_10001802>SWD_CHR_02_10001802>SWD_CHR_03_10001802"
+            },
+            {
+                "user": "c100018_07",
+                "name": "Civilian Leif",
+                "code": "SWD_CHR_01_10001807>SWD_CHR_02_10001807>SWD_CHR_03_10001807"
+            },
+            {
+                "user": "c110315_01",
+                "name": "Ku Hai",
+                "subtitle": "Apsaras Formation",
+                "code": "SWD_CHR_10"
+            },
+            {
+                "user": "c110050_02",
+                "name": "Hunter Berserker",
+                "code": "SWD_CHR_01_11005002>SWD_CHR_02_11005002>SWD_CHR_03_11005002"
+            },
+            {
+                "user": "c110371_01",
+                "name": "Pecorine",
+                "code": "SWD_CHR_01_11037101>SWD_CHR_02_11037101>SWD_CHR_03_11037101"
+            },
+            {
+                "user": "c110371_01",
+                "name": "Pecorine",
+                "subtitle": "Enhanced",
+                "code": "SWD_CHR_A_01_11037101>SWD_CHR_A_02_11037101>SWD_CHR_A_03_11037101"
+            },
+            {
+                "user": "c110379_01",
+                "name": "Mona",
+                "code": "SWD_CHR_01_11037901>SWD_CHR_02_11037901>SWD_CHR_03_11037901"
+            }
+        ],
+        "Blade": [
+            {
+                "user": "c100045_01",
+                "name": "Gala Masula",
+                "code": "KAT_CHR_01_10004501>KAT_CHR_02_10004501>KAT_CHR_03_10004501"
+            },
+            {
+                "user": "c110027_01",
+                "name": "Melody",
+                "subtitle": "Maid's Soul",
+                "code": "KAT_CHR_A_01_11002701>KAT_CHR_A_02_11002701>KAT_CHR_A_03_11002701"
+            },
+            {
+                "user": "c110271_01",
+                "name": "Linnea",
+                "subtitle": "Cluster Amaryllis",
+                "code": "KAT_CHR_A_01_11027101>KAT_CHR_A_02_11027101>KAT_CHR_A_03_11027101"
+            },
+            {
+                "user": "c110064_02",
+                "name": "Armored Yachiyo",
+                "code": "KAT_CHR_01_11006402>KAT_CHR_02_11006402>KAT_CHR_03_11006402"
+            },
+            {
+                "user": "c110064_02",
+                "name": "Armored Yachiyo",
+                "subtitle": "Peerless Flourish",
+                "code": "KAT_CHR_01_11006402>KAT_CHR_02_11006402>KAT_CHR_A_03_11006402"
+            },
+            {
+                "user": "c110296_02",
+                "name": "Forager Mitsuba",
+                "subtitle": "Plucked Mandradish",
+                "code": "KAT_CHR_A_01_11029602>KAT_CHR_A_02_11029602>KAT_CHR_A_03_11029602"
+            }
+        ],
+        "Dagger": [
+            {
+                "user": "c100007_07",
+                "name": "Gala Notte",
+                "code": "DAG_CHR_01_10000707>DAG_CHR_02_10000707>DAG_CHR_03_10000707"
+            },
+            {
+                "user": "c100032_04",
+                "name": "Gala Laxi",
+                "code": "DAG_CHR_01_10003204>DAG_CHR_02_10003204>DAG_CHR_03_10003204"
+            },
+            {
+                "user": "c110306_01",
+                "name": "Bellina",
+                "subtitle": "Dragondrive",
+                "code": "DAG_CHR_01_11030601>DAG_CHR_02_11030601>DAG_CHR_03_11030601"
+            },
+            {
+                "user": "c110365_01",
+                "name": "Nevin",
+                "code": "DAG_CHR_01_11036501>DAG_CHR_02_11036501>DAG_CHR_03_11036501"
+            },
+            {
+                "user": "c110377_01",
+                "name": "Joker",
+                "code": "DAG_CHR_01_11037701>DAG_CHR_02_11037701>DAG_CHR_03_11037701"
+            }
+        ],
+        "Axe": [
+            {
+                "user": "c100006_11",
+                "name": "Kimono Luca",
+                "code": "AXE_CHR_01_10000611>AXE_CHR_02_10000611"
+            },
+            {
+                "user": "c110334_02",
+                "name": "Gala Audric",
+                "code": "AXE_CHR_01_11033402>AXE_CHR_02_11033402>AXE_CHR_03_11033402"
+            },
+            {
+                "user": "c110322_01",
+                "name": "Zhu Bajie",
+                "code": "AXE_CHR_01_11032201>AXE_CHR_02_11032201>AXE_CHR_03_11032201"
+            },
+            {
+                "user": "c110335_02",
+                "name": "Summer Patia",
+                "code": "AXE_CHR_01_11033502>AXE_CHR_02_11033502>AXE_CHR_03_11033502"
+            },
+            {
+                "user": "c110307_02",
+                "name": "Dragonyule Victor",
+                "subtitle": "Merry Mobilizer",
+                "code": "AXE_CHR_01>AXE_CHR_02>AXE_CHR_A_03_11030702"
+            },
+            {
+                "user": "c110380_01",
+                "name": "Sophie",
+                "code": "AXE_CHR_01_11038001>AXE_CHR_02_11038001>AXE_CHR_03_11038001"
+            }
+        ],
+        "Lance": [
+            {
+                "user": "c110358_01",
+                "name": "Sharena",
+                "code": "LAN_CHR_01_11035801>LAN_CHR_02_11035801>LAN_CHR_03_11035801"
+            },
+            {
+                "user": "c110358_01",
+                "name": "Sharena",
+                "subtitle": "Cancelled",
+                "code": "LAN_CHR_01_11035801>LAN_CHR_02_11035801>LAN_CHR_04_11035801"
+            },
+            {
+                "user": "c110357_01",
+                "name": "Nadine",
+                "code": "LAN_CHR_01_11035701>LAN_CHR_02_11035701>LAN_CHR_03_11035701"
+            },
+            {
+                "user": "c110364_01",
+                "name": "Catherine",
+                "code": "LAN_CHR_01_11036401>LAN_CHR_02_11036401>LAN_CHR_03_11036401"
+            },
+            {
+                "user": "c110007_02",
+                "name": "Hunter Vanessa",
+                "code": "LAN_CHR_01_11000702>LAN_CHR_02_11000702>LAN_CHR_03_11000702"
+            },
+            {
+                "user": "c110007_02",
+                "name": "Hunter Vanessa",
+                "subtitle": "Damaged while Charging",
+                "code": "LAN_CHR_01_11000702>LAN_CHR_02_11000702>LAN_CHR_04_11000702"
+            },
+            {
+                "user": "c110378_01",
+                "name": "Panther",
+                "code": "LAN_CHR_01_11037801>LAN_CHR_02_11037801>LAN_CHR_03_11037801"
+            },
+            {
+                "user": "c110381_01",
+                "name": "Ryszarda",
+                "code": "LAN_CHR_01_11038101>LAN_CHR_02_11038101>LAN_CHR_03_11038101"
+            }
+        ],
+        "Bow": [
+            {
+                "user": "c100029_03",
+                "name": "Hunter Sarisse",
+                "code": "BOW_CHR_01_10002903>BOW_CHR_02_10002903>BOW_CHR_03_10002903"
+            },
+            {
+                "user": "c110366_01",
+                "name": "Pinon",
+                "code": "BOW_CHR_01_11036601>BOW_CHR_02_11036601>BOW_CHR_03_11036601"
+            },
+            {
+                "user": "c110368_01",
+                "name": "Meene",
+                "code": "BOW_CHR_01_11036801>BOW_CHR_02_11036801>BOW_CHR_03_11036801"
+            }
+        ],
+        "Wand": [
+            {
+                "user": "c110354_01",
+                "name": "Mega Man",
+                "subtitle": "Charged Shot",
+                "code": "ROD_CHR_01_11035401>ROD_CHR_02_11035401>ROD_CHR_03_11035401"
+            },
+            {
+                "user": "c110361_01",
+                "name": "Peony",
+                "code": "ROD_CHR_01_11036101>ROD_CHR_02_11036101>ROD_CHR_03_11036101"
+            },
+            {
+                "user": "c110375_01",
+                "name": "Seimei",
+                "subtitle": "Banishing Strike",
+                "code": "ROD_CHR_01_11037501>ROD_CHR_02_11037501>ROD_CHR_03_11037501"
+            }
+        ],
+        "Staff": [
+            {
+                "user": "c100009_08",
+                "name": "Gala Zena",
+                "subtitle": "Twilight Moon",
+                "code": "CAN_CHR_A_01_10000908>CAN_CHR_A_02_10000908>CAN_CHR_A_03_10000908"
+            },
+            {
+                "user": "c110252_02",
+                "name": "Dragonyule Lily",
+                "subtitle": "Saint Starfall Lily",
+                "code": "CAN_CHR_A_01_11025202>CAN_CHR_A_02_11025202>CAN_CHR_A_03_11025202"
+            }
+        ],
+        "Manacaster": [
+            {
+                "user": "c110367_01",
+                "name": "Ilia",
+                "subtitle": "Alchemic Blast",
+                "code": "GUN_CHR_U_01_11036701>GUN_CHR_U_02_11036701>GUN_CHR_U_03_11036701"
+            },
+            {
+                "user": "c110382_01",
+                "name": "Faris",
+                "code": "GUN_CHR_A_01_11038201>GUN_CHR_A_02_11038201>GUN_CHR_A_03_11038201"
+            }
+        ]
+    }
+}

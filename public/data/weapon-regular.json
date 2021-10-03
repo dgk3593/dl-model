@@ -1,0 +1,6255 @@
+{
+    "data": [
+        {
+            "id": "w301138_01",
+            "name": "Nothung",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w302129_01",
+            "name": "Tyrfing",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w302129_02",
+            "name": "Tyrfing Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w303128_01",
+            "name": "Hrotti",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w304127_01",
+            "name": "Mjölnir",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w305135_01",
+            "name": "Gungnir",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w306127_01",
+            "name": "Ýdalir",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w307135_01",
+            "name": "Brísingr",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w308128_01",
+            "name": "Gjallarhorn",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w309026_01",
+            "name": "Draupnir",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w301139_01",
+            "name": "Ame no Murakumo",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w302130_01",
+            "name": "Ame no Habakiri",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w302130_02",
+            "name": "Ame no Habakiri Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w303129_01",
+            "name": "Futsu no Mitama",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w304128_01",
+            "name": "Ohohagari",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w305136_01",
+            "name": "Ame no Nuhoko",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w306128_01",
+            "name": "Ame no Hajiyumi",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w307136_01",
+            "name": "Omizununo",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w308129_01",
+            "name": "Kunado",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w309027_01",
+            "name": "Ame no Torifune ",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w301140_01",
+            "name": "Excalibur",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w302131_01",
+            "name": "Arondight",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w302131_02",
+            "name": "Arondight Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w303130_01",
+            "name": "Carnwennan",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w304129_01",
+            "name": "Marmyadose",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w305137_01",
+            "name": "Rhongomyniad",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w306129_01",
+            "name": "Failnaught",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w307137_01",
+            "name": "Camelot",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w308130_01",
+            "name": "Avalon",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w309028_01",
+            "name": "Gallatin",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w301141_01",
+            "name": "Caladbolg",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w302132_01",
+            "name": "Fragarach",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w302132_02",
+            "name": "Fragarach Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w303131_01",
+            "name": "Claíomh Solais",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w304130_01",
+            "name": "Rog Mol",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w305138_01",
+            "name": "Areadbhar",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w306130_01",
+            "name": "Tathlum",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w307138_01",
+            "name": "Brionac",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w308131_01",
+            "name": "Del Frith",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w309029_01",
+            "name": "Gae Assail",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w301142_01",
+            "name": "Yitian Jian",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302133_01",
+            "name": "Qixing Baodao",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302133_02",
+            "name": "Qixing Baodao Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303132_01",
+            "name": "Qinghong Jian",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304131_01",
+            "name": "Fangtian Huaji",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305139_01",
+            "name": "Qinglong Yanyuedao",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306131_01",
+            "name": "Longshe Gong",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307139_01",
+            "name": "Jiu Ci",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308132_01",
+            "name": "Li Zhang",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309030_01",
+            "name": "Wanli Qi Yunyan",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301056_01",
+            "name": "Inferno Apogee",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301080_01",
+            "name": "Blazing Judgment",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301079_01",
+            "name": "Flaming Savagetail",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301108_01",
+            "name": "Sword of Surging Flame",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301125_01",
+            "name": "Sword of Raging Souls",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301132_01",
+            "name": "Chimeratech Commander",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301122_01",
+            "name": "Absolute Crimson",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301032_01",
+            "name": "Levatein",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301143_01",
+            "name": "Rathalos Firesword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301148_01",
+            "name": "Falchion",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302045_01",
+            "name": "Skyrender",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302045_02",
+            "name": "Skyrender Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302057_01",
+            "name": "Ogreslayer Judgment",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302057_02",
+            "name": "Ogreslayer Judgment Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302076_01",
+            "name": "Great Direblade Kagachi",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302076_02",
+            "name": "Great Direblade Kagachi Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302099_01",
+            "name": "Liquefaction Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302099_02",
+            "name": "Liquefaction Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302116_01",
+            "name": "Furyblister",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302116_02",
+            "name": "Furyblister Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302123_01",
+            "name": "Chimeratech Lord",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302123_02",
+            "name": "Chimeratech Lord Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302113_01",
+            "name": "Blinding Conflagration",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302113_02",
+            "name": "Blinding Conflagration Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302013_01",
+            "name": "Heaven's Acuity",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302013_02",
+            "name": "Heaven's Acuity Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302134_01",
+            "name": "Wyvern Blade \"Maple\"",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w302134_02",
+            "name": "Wyvern Blade \"Maple\" Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303065_01",
+            "name": "Vermillion Pain",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303057_01",
+            "name": "Searing Stinger",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303082_01",
+            "name": "Blazesin",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303115_01",
+            "name": "Blazing Necrom",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303098_01",
+            "name": "Lavarush Edge",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303122_01",
+            "name": "Chimeratech Elite",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303112_01",
+            "name": "Flameruler's Maw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303013_01",
+            "name": "Aeternal Flame",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w303133_01",
+            "name": "Blazing Falchion",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304043_01",
+            "name": "Heavenwrath Gaze",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304068_01",
+            "name": "Blaze Crash",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304081_01",
+            "name": "Atrocity Crux",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304097_01",
+            "name": "Sun Flare Destroyer",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304114_01",
+            "name": "Hellfire Crash",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304121_01",
+            "name": "Chimeratech Warlord",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304111_01",
+            "name": "Royal Crimson Heat",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304027_01",
+            "name": "Axe of the Blazing King",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w304132_01",
+            "name": "Rath Blaze Splitter",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305077_01",
+            "name": "Flamedance Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305065_01",
+            "name": "Reiselfeld, the Solar Spray",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305088_01",
+            "name": "Ashen Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305104_01",
+            "name": "Combustion Flamelance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305121_01",
+            "name": "Underworld Sinner",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305128_01",
+            "name": "Chimeratech Lancemaster",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305118_01",
+            "name": "Pureflame Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305030_01",
+            "name": "Calamity Trigger",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w305140_01",
+            "name": "Spear of Prominence",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306061_01",
+            "name": "Vulcanrage",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306073_01",
+            "name": "Hellfire Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306072_01",
+            "name": "Detonation Dreadbow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306114_01",
+            "name": "Soul Corrupter",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306097_01",
+            "name": "Strifeblazer",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306121_01",
+            "name": "Chimeratech Sniper",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306111_01",
+            "name": "Valkyrie's Fire",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306027_01",
+            "name": "Lupis Solis",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w306132_01",
+            "name": "Dark Filament",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307066_01",
+            "name": "Scepter of Infinite Fire",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307079_01",
+            "name": "Infernal Conduit",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307089_01",
+            "name": "Hellwing",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307122_01",
+            "name": "Revenant of Annihilation",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307105_01",
+            "name": "Undying Flame",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307129_01",
+            "name": "Chimeratech Archmage",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307119_01",
+            "name": "Infernoblaze",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307015_01",
+            "name": "Terranigmus",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w307140_01",
+            "name": "Plage Rod",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308044_01",
+            "name": "Endless Demise",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308054_01",
+            "name": "Igniflare Core",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308072_01",
+            "name": "Fangflame Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308115_01",
+            "name": "Ruinous Eruption",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308098_01",
+            "name": "Flamma Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308122_01",
+            "name": "Chimeratech Cardinal",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w309016_01",
+            "name": "Chimeratech Gunner",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308112_01",
+            "name": "Blazegambol",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w309021_01",
+            "name": "Crimson Trigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308031_01",
+            "name": "Staff of the Red Emperor",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w309011_01",
+            "name": "Chanzelian Caster Mk. 65",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w308133_01",
+            "name": "Wyvern Staff \"Elsewhere\"",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "w301077_01",
+            "name": "Judge of Oceans",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301097_01",
+            "name": "Icy Absolution",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301073_01",
+            "name": "Raging Aquatail",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301109_01",
+            "name": "Eternal Metempsychosis",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301126_01",
+            "name": "Fearfrost Soulsword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301133_01",
+            "name": "Chimeratech Anomalocaris",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301120_01",
+            "name": "Absolute Aqua",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301010_01",
+            "name": "Eoantide",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302058_01",
+            "name": "Highwater Slicer",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302058_02",
+            "name": "Highwater Slicer Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302088_01",
+            "name": "Seaspout Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302088_02",
+            "name": "Seaspout Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302067_01",
+            "name": "Dark Direblade Mizuha",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302067_02",
+            "name": "Dark Direblade Mizuha Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302117_01",
+            "name": "Shadeflood Waveblade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302117_02",
+            "name": "Shadeflood Waveblade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302100_01",
+            "name": "Gush Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302100_02",
+            "name": "Gush Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302124_01",
+            "name": "Chimeratech Hadranax",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302124_02",
+            "name": "Chimeratech Hadranax Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302111_01",
+            "name": "Ruinous Torrent",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302111_02",
+            "name": "Ruinous Torrent Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302010_01",
+            "name": "Maar Oasis",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w302010_02",
+            "name": "Maar Oasis Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303051_01",
+            "name": "Gorelust",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303058_01",
+            "name": "Frigid Sting",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303087_01",
+            "name": "The Surge",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303116_01",
+            "name": "Hydroflow Necrom",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303099_01",
+            "name": "Chillgasp",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303123_01",
+            "name": "Chimeratech Vetulicola",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303110_01",
+            "name": "Tideruler's Maw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w303020_01",
+            "name": "Lux Lamina",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304050_01",
+            "name": "Maelstrom Crux",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304066_01",
+            "name": "Permafrost Crash",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304086_01",
+            "name": "Jagged Rainstorm",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304115_01",
+            "name": "Crusher of the Depths",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304098_01",
+            "name": "Icicle Destroyer",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304122_01",
+            "name": "Chimeratech Helmetia",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304109_01",
+            "name": "Mercy's Azure Tide",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w304028_01",
+            "name": "Grand Seadragon",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305058_01",
+            "name": "Vortex Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305066_01",
+            "name": "Strohm Mare",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305093_01",
+            "name": "Icesovereign Trident",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305122_01",
+            "name": "Lance of Frozen Depths",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305105_01",
+            "name": "Raging Tidelance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305129_01",
+            "name": "Chimeratech Takakkawia",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305116_01",
+            "name": "Limpid Rush",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w305014_01",
+            "name": "Ocean Lord",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306071_01",
+            "name": "Everfrost Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306086_01",
+            "name": "Peakbreaker Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306065_01",
+            "name": "Streamgorger Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306115_01",
+            "name": "Despair Spiral",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306098_01",
+            "name": "Vortex Tide",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306122_01",
+            "name": "Chimeratech Hallucigenia",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306109_01",
+            "name": "Azure Mercurius",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w306029_01",
+            "name": "Peacock's Whorl",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307055_01",
+            "name": "Tsunamiwing",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307077_01",
+            "name": "Spirit Breaker",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307094_01",
+            "name": "Seasovereign's Rule",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307123_01",
+            "name": "Revenant of Calamity",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307106_01",
+            "name": "Cascading Cataract",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307130_01",
+            "name": "Chimeratech Hurdia",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307117_01",
+            "name": "Aquatic Spiral",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w307032_01",
+            "name": "Ocean Monarch",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308055_01",
+            "name": "Endless Azure Core",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308087_01",
+            "name": "Drenching Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308064_01",
+            "name": "Riptide Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308116_01",
+            "name": "Breath Snuffer",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308099_01",
+            "name": "Flumen Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308123_01",
+            "name": "Chimeratech Metaldetes",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w309017_01",
+            "name": "Chimeratech Marella",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308110_01",
+            "name": "Ocean's Embrace",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w309022_01",
+            "name": "Aqua Trigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w308011_01",
+            "name": "Bracing Waters",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w309012_01",
+            "name": "Chanzelian Caster Mk. 72",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Water"
+        },
+        {
+            "id": "w301067_01",
+            "name": "Hurricane Apogee",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301098_01",
+            "name": "Roaring Weald",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301084_01",
+            "name": "Slaughtering Stormtail",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301110_01",
+            "name": "Cholergale",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301127_01",
+            "name": "Twistwind Soulsword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301134_01",
+            "name": "Chimeratech Cypress",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301119_01",
+            "name": "Absolute Tempest",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301033_01",
+            "name": "Durandal",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302053_01",
+            "name": "Heavenrend",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302053_02",
+            "name": "Heavenrend Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302089_01",
+            "name": "Stormsquall Crash",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302089_02",
+            "name": "Stormsquall Crash Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302079_01",
+            "name": "Swift Direblade Hayate",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302079_02",
+            "name": "Swift Direblade Hayate Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302101_01",
+            "name": "Gustnado Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302101_02",
+            "name": "Gustnado Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302118_01",
+            "name": "Galeshade Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302118_02",
+            "name": "Galeshade Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302125_01",
+            "name": "Chimeratech Benzoin",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302125_02",
+            "name": "Chimeratech Benzoin Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302110_01",
+            "name": "Endless Horizon",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302110_02",
+            "name": "Endless Horizon Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302023_01",
+            "name": "Anemone",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w302023_02",
+            "name": "Anemone Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303066_01",
+            "name": "Turbulent Agony",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303088_01",
+            "name": "The Gale",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303083_01",
+            "name": "Mutterfang",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303117_01",
+            "name": "Stormgale Necrom",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303100_01",
+            "name": "Stormbode",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303124_01",
+            "name": "Chimeratech Tea Tree",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303109_01",
+            "name": "Windruler's Maw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w303028_01",
+            "name": "Karlsnautr",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304054_01",
+            "name": "Stormwrath Gaze",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304087_01",
+            "name": "Jagged Bolt",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304082_01",
+            "name": "Squall Crux",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304099_01",
+            "name": "Cyclonic Destroyer",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304116_01",
+            "name": "Stella Wind Crash",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304123_01",
+            "name": "Chimeratech Palmarosa",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304108_01",
+            "name": "Glorystorm's Guide",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w304029_01",
+            "name": "Axe of the Southern Cross",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305078_01",
+            "name": "Stormpiercer Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305094_01",
+            "name": "Windsovereign Trident",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305089_01",
+            "name": "Flying Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305106_01",
+            "name": "Supercell",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305123_01",
+            "name": "Axiom Piercer",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305130_01",
+            "name": "Chimeratech Caraway",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305115_01",
+            "name": "Guiding Gale",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w305032_01",
+            "name": "Spear of the Northern Cross",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306062_01",
+            "name": "Windhoze, the Dustblaster",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306087_01",
+            "name": "Firmament Auger",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306076_01",
+            "name": "Deathwind Caller",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306116_01",
+            "name": "Windcut",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306099_01",
+            "name": "Vortex Fury",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306123_01",
+            "name": "Chimeratech Ajwain",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306108_01",
+            "name": "Jormungand's Fury",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w306030_01",
+            "name": "Stellar Pegasus",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307067_01",
+            "name": "Scepter of the Maelstrom",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307095_01",
+            "name": "Typhoon's Rule",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307090_01",
+            "name": "Tempestwing",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307124_01",
+            "name": "Revenant of Pollution",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307107_01",
+            "name": "The Inevitable Squall",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307131_01",
+            "name": "Chimeratech Frankin",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307116_01",
+            "name": "Grand Tempest",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w307014_01",
+            "name": "Phytalmios",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308052_01",
+            "name": "Rise and Fall",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308088_01",
+            "name": "Skypainter Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308075_01",
+            "name": "Whirlwind Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308117_01",
+            "name": "Blastphantom",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308100_01",
+            "name": "Staff of Ventus",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308124_01",
+            "name": "Chimeratech Marjoram",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w309018_01",
+            "name": "Chimeratech Fennel",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308109_01",
+            "name": "Stormruler",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w309023_01",
+            "name": "Tempest Trigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w308032_01",
+            "name": "Ancient Mage's Windcane",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w309013_01",
+            "name": "Chanzelian Caster Mk. 21",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "w301058_01",
+            "name": "Aureole Apogee",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301105_01",
+            "name": "Glintbringer",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301111_01",
+            "name": "Radiant Dominion",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301117_01",
+            "name": "Death Aeon",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301085_01",
+            "name": "Radiant Lighttail",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301128_01",
+            "name": "Heavenshaker Soulsword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301135_01",
+            "name": "Chimeratech Sirius",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301121_01",
+            "name": "Absolute Lightning",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301015_01",
+            "name": "Zex's End",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301081_01",
+            "name": "Fólkvangr",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302047_01",
+            "name": "Primal Thunder",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302047_02",
+            "name": "Primal Thunder Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302096_01",
+            "name": "Brightsheen",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302096_02",
+            "name": "Brightsheen Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302102_01",
+            "name": "Radiant Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302102_02",
+            "name": "Radiant Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302108_01",
+            "name": "Hollow Lightning",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302108_02",
+            "name": "Hollow Lightning Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302080_01",
+            "name": "Shining Direblade Nozuchi",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302080_02",
+            "name": "Shining Direblade Nozuchi Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302119_01",
+            "name": "Shadegleam Flashblade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302119_02",
+            "name": "Shadegleam Flashblade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302126_01",
+            "name": "Chimeratech Canopus",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302126_02",
+            "name": "Chimeratech Canopus Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302112_01",
+            "name": "Brilliant Flash",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302112_02",
+            "name": "Brilliant Flash Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302025_01",
+            "name": "Heavenwing",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w302025_02",
+            "name": "Heavenwing Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303095_01",
+            "name": "Salvation Seeker",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303107_01",
+            "name": "Merciful Claw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303084_01",
+            "name": "Fatetaker",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303118_01",
+            "name": "Luminospark Necrom",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303101_01",
+            "name": "Whiteout",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303125_01",
+            "name": "Chimeratech Capella",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303111_01",
+            "name": "Fulminator's Maw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w303030_01",
+            "name": "Thunderblade Sugaar",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304045_01",
+            "name": "Starwrath Gaze",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304094_01",
+            "name": "Cleaver of Despair",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304100_01",
+            "name": "Plasmareaver",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304106_01",
+            "name": "Blitzfang",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304083_01",
+            "name": "Arrogance Crux",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304117_01",
+            "name": "Crushdazzle",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304124_01",
+            "name": "Chimeratech Rigel",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304110_01",
+            "name": "Mighty Thundercrash",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w304013_01",
+            "name": "Radiant Swath",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305101_01",
+            "name": "Twilight Lost",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305107_01",
+            "name": "Biting Brightlance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305113_01",
+            "name": "Starpiercer",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305090_01",
+            "name": "Fulmination Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305124_01",
+            "name": "Lance of Bright Skies",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305131_01",
+            "name": "Chimeratech Arcturus",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305117_01",
+            "name": "Brilliant Lightflash",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305033_01",
+            "name": "Thunder King's Greatspear",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w305143_01",
+            "name": "Fensalir",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306094_01",
+            "name": "Tiger Lily Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306106_01",
+            "name": "Astral Echo",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306077_01",
+            "name": "Heavenbreaker Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306117_01",
+            "name": "Soulshine Splitter",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306100_01",
+            "name": "Lighttorrent Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306124_01",
+            "name": "Chimeratech Vega",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306110_01",
+            "name": "Jupiter's Sky",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w306031_01",
+            "name": "Thunderbow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307102_01",
+            "name": "Sacred Requiem",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307114_01",
+            "name": "Worldshaker",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307091_01",
+            "name": "Shinewing",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307125_01",
+            "name": "Revenant of Sol",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307108_01",
+            "name": "Ray of Perpetuity",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307132_01",
+            "name": "Chimeratech Betelgeuse",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307118_01",
+            "name": "Primeval Thunder",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w307034_01",
+            "name": "Twilight Shimmer",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308046_01",
+            "name": "Genesis Bringer",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308095_01",
+            "name": "Aria of Valor",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308107_01",
+            "name": "Dominus of Ever",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308076_01",
+            "name": "Beastblast Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308118_01",
+            "name": "Glintshine Grudge",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308101_01",
+            "name": "Everfulgor",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308125_01",
+            "name": "Chimeratech Procyon",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308111_01",
+            "name": "Heavensneer",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w308014_01",
+            "name": "Light of Judgment",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w309024_01",
+            "name": "Thundertrigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w309019_01",
+            "name": "Chimeratech Al Nasr",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w309014_01",
+            "name": "Chanzelian Caster Mk. 62",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w309010_01",
+            "name": "Chanzelian Caster Mk.73",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w309009_01",
+            "name": "Chanzelian Caster",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "w301106_01",
+            "name": "Abyssbringer",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301118_01",
+            "name": "Prevailing Evil",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301086_01",
+            "name": "Virulent Shadowtail",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301129_01",
+            "name": "Stained Soulsword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301136_01",
+            "name": "Chimeratech Nocturne",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301123_01",
+            "name": "Absolute Hex",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301037_01",
+            "name": "Dáinsleif",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302097_01",
+            "name": "Nightsky Ripper",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302097_02",
+            "name": "Nightsky Ripper Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302109_01",
+            "name": "Hollow Nightmare",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302109_02",
+            "name": "Hollow Nightmare Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302081_01",
+            "name": "Grim Direblade Yomotsu",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302081_02",
+            "name": "Grim Direblade Yomotsu Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302120_01",
+            "name": "Blade of Fell Visions",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302120_02",
+            "name": "Blade of Fell Visions Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302127_01",
+            "name": "Chimeratech Requiem",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302127_02",
+            "name": "Chimeratech Requiem Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302114_01",
+            "name": "True Abyss",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302114_02",
+            "name": "True Abyss Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302028_01",
+            "name": "Blackwing",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302028_02",
+            "name": "Blackwing Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303096_01",
+            "name": "Death Seeker",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303108_01",
+            "name": "Terrifying Claw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303048_01",
+            "name": "Soulstealer",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303119_01",
+            "name": "Damnation Necrom",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303126_01",
+            "name": "Chimeratech Rhapsody",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303113_01",
+            "name": "Shaderuler's Maw",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303031_01",
+            "name": "Honor Edge",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304095_01",
+            "name": "Genocide Cleaver",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304107_01",
+            "name": "Shadowfang",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304048_01",
+            "name": "Indignation Crux",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304118_01",
+            "name": "Perdition's Crusher",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304125_01",
+            "name": "Chimeratech Fugue",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304112_01",
+            "name": "Shadowy Darkbite Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304014_01",
+            "name": "Primordial Titan",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305102_01",
+            "name": "Final Eclipse",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305114_01",
+            "name": "Plaguepiercer",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305055_01",
+            "name": "Horrifying Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305125_01",
+            "name": "Rakshasan Gloomlance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305132_01",
+            "name": "Chimeratech Elegy",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305119_01",
+            "name": "Ebon Scourge Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305036_01",
+            "name": "Mistilteinn",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306095_01",
+            "name": "Black Dahlia Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306107_01",
+            "name": "Astral Cruelty",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306078_01",
+            "name": "Deathbinder Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306118_01",
+            "name": "Dreadbringer Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306125_01",
+            "name": "Chimeratech Concerto",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306112_01",
+            "name": "Hellish Prophecy",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306014_01",
+            "name": "Necro Arcus",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307103_01",
+            "name": "Dirge of Desperation",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307115_01",
+            "name": "Fateshaker",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307052_01",
+            "name": "Chaoswing",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307126_01",
+            "name": "Revenant of Corruption",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307133_01",
+            "name": "Chimeratech Oratorio",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307120_01",
+            "name": "Darkbinder",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307035_01",
+            "name": "Underworld Despair",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308096_01",
+            "name": "Aria of Lamentation",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308108_01",
+            "name": "Dominus of the Truedark",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308077_01",
+            "name": "Malevolence Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308119_01",
+            "name": "Creeping Rancor",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308126_01",
+            "name": "Chimeratech Coda",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309020_01",
+            "name": "Chimeratech Cantata",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308113_01",
+            "name": "Dark Hunger",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309025_01",
+            "name": "Curse Trigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308015_01",
+            "name": "Caduceus",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309015_01",
+            "name": "Chanzelian Caster Mk. 2",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301041_01",
+            "name": "Hero's Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301042_01",
+            "name": "Hauteclaire",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301043_01",
+            "name": "Gram",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301046_01",
+            "name": "Lucky Hanetsuki Paddle",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301130_01",
+            "name": "Mega Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301145_01",
+            "name": "Triumphal Breamblade",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301144_01",
+            "name": "Fatalis Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397001_01",
+            "name": "Ascendant Edge",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399016_01",
+            "name": "Princess Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399024_01",
+            "name": "Bandit Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302014_01",
+            "name": "Dane's Favor",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302014_02",
+            "name": "Dane's Favor Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302033_01",
+            "name": "Crimson Shade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302033_02",
+            "name": "Crimson Shade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302034_01",
+            "name": "Souleater",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302034_02",
+            "name": "Souleater Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302035_01",
+            "name": "Villagelight",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302035_02",
+            "name": "Villagelight Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302121_01",
+            "name": "Mega Blade",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302121_02",
+            "name": "Mega Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302136_01",
+            "name": "Evilsbane Kadomatsu",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302136_02",
+            "name": "Evilsbane Kadomatsu Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302135_01",
+            "name": "Fatalis Xiphos",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302135_02",
+            "name": "Fatalis Xiphos Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302040_01",
+            "name": "Sohaya no Tsurugi",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302040_02",
+            "name": "Sohaya no Tsurugi Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397004_01",
+            "name": "Azure Resolve",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397004_02",
+            "name": "Azure Resolve Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399059_01",
+            "name": "Final Resistance",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399059_02",
+            "name": "Final Resistance Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303035_01",
+            "name": "Kris Naga",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303014_01",
+            "name": "Treasure of the Iron Rose",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303036_01",
+            "name": "Hedgehog",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303120_01",
+            "name": "Mega Dagger",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303135_01",
+            "name": "The Big Cheese",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303134_01",
+            "name": "Black Dragon Blade",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399022_01",
+            "name": "Silver Dagger",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397003_01",
+            "name": "Faerie's Wish",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304012_01",
+            "name": "Victory Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304035_01",
+            "name": "Executioner Axe Strafe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304036_01",
+            "name": "Halfling's Broadaxe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304119_01",
+            "name": "Mega Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304133_01",
+            "name": "Black Dragon Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397002_01",
+            "name": "Divine Force",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304020_01",
+            "name": "Rainbow Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305015_01",
+            "name": "Pactspear",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305042_01",
+            "name": "Compass Needle",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305043_01",
+            "name": "Gae Bolg",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305126_01",
+            "name": "Mega Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305141_01",
+            "name": "Black Dragon Spear",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399051_01",
+            "name": "Last Storm Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397006_01",
+            "name": "Howl of the Hungry Beast",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306015_01",
+            "name": "Nitralica's Koto",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306034_01",
+            "name": "Accelerator",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306035_01",
+            "name": "Starchaser",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306036_01",
+            "name": "Chimera's Guilt",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306119_01",
+            "name": "Mega Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306133_01",
+            "name": "Black Dragon Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306021_01",
+            "name": "Eternal Bloom",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307031_01",
+            "name": "Wand of the Torrent",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307040_01",
+            "name": "Welkin Wand",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307041_01",
+            "name": "Chaotic Horizon",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307127_01",
+            "name": "Mega Wand",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307142_01",
+            "name": "Catspaw Rod",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307141_01",
+            "name": "Fatalis Rhabdos",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397005_01",
+            "name": "Memento Futurum",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308030_01",
+            "name": "Cane of Soul's Repose",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308038_01",
+            "name": "Rainbow Cane",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308039_01",
+            "name": "Otherworldly Bough",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308120_01",
+            "name": "Mega Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308134_01",
+            "name": "Black Dragon Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399023_01",
+            "name": "Replica Machine Gun",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w396001_01",
+            "name": "Alliance Trigger",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w396002_01",
+            "name": "Worthless Shot",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w301053_01",
+            "name": "Molten Ingot",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w301060_01",
+            "name": "Crimson Pyre",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w301014_01",
+            "name": "Crimson Cry",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302042_01",
+            "name": "Blazing Steel",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302042_02",
+            "name": "Blazing Steel Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302071_01",
+            "name": "Balefire Votive",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302071_02",
+            "name": "Balefire Votive Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302075_01",
+            "name": "Starcutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302075_02",
+            "name": "Starcutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302015_01",
+            "name": "Flametongue",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w302015_02",
+            "name": "Flametongue Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w303042_01",
+            "name": "Sizzling Enoki Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w303045_01",
+            "name": "Big Boy of Justice",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w303074_01",
+            "name": "Conflagrant Ruby Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w303015_01",
+            "name": "Scarlet Talon",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w304060_01",
+            "name": "Inferno Arms",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w304051_01",
+            "name": "Immolation Relic",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w304010_01",
+            "name": "Crimsonclaw",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w305047_01",
+            "name": "Triggerspore Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w305080_01",
+            "name": "Spiritflame Spear",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w305059_01",
+            "name": "Burning Fury Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w305031_01",
+            "name": "Flameserpent",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w306041_01",
+            "name": "Blazefungus",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w306066_01",
+            "name": "Wispfire Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w306049_01",
+            "name": "Scorchflame Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w306028_01",
+            "name": "Armored Inferno",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w307049_01",
+            "name": "The Second Wail",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w307062_01",
+            "name": "Volcano Cane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w307072_01",
+            "name": "Brightshimmer Wand",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w307016_01",
+            "name": "Firefiend's Howl",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w308041_01",
+            "name": "Ashchant",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w308021_01",
+            "name": "Ark Voyager",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w309004_01",
+            "name": "Antique Blaze",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Flame"
+        },
+        {
+            "id": "w301061_01",
+            "name": "Fervent Frost",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w301063_01",
+            "name": "Blizzard Ingot",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w301009_01",
+            "name": "Mercurius",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302049_01",
+            "name": "Obsidian Waterfall",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302049_02",
+            "name": "Obsidian Waterfall Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302069_01",
+            "name": "Spumecutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302069_02",
+            "name": "Spumecutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302072_01",
+            "name": "Crystalline Quietude",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302072_02",
+            "name": "Crystalline Quietude Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302022_01",
+            "name": "Sousui",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w302022_02",
+            "name": "Sousui Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w303040_01",
+            "name": "Chilly Chanterelle Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w303052_01",
+            "name": "Big Boy of Prudence",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w303069_01",
+            "name": "Aqueous Sapphire Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w303018_01",
+            "name": "Ultramarine Knife",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w303038_01",
+            "name": "Wishing Knife",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w304052_01",
+            "name": "Blizzard Relic",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w304061_01",
+            "name": "Frozen Arms",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w304011_01",
+            "name": "Aqua Labrys",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w305045_01",
+            "name": "Shatterspore Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w305060_01",
+            "name": "Callous Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w305081_01",
+            "name": "Gelid Grace",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w305016_01",
+            "name": "Abyssal Prize",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w306039_01",
+            "name": "Freezefungus",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w306050_01",
+            "name": "Frostbillow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w306067_01",
+            "name": "Wavefury Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w306010_01",
+            "name": "Frostslinger Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w307047_01",
+            "name": "The Second Scream",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w307063_01",
+            "name": "Frost Cane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w307073_01",
+            "name": "Lonesome Echodrip",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w307036_01",
+            "name": "Rod of Tears",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w307044_01",
+            "name": "Ringing Wand",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w308048_01",
+            "name": "Seachant",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w308022_01",
+            "name": "Marine Staff",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w309005_01",
+            "name": "Antique Flow",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Water"
+        },
+        {
+            "id": "w301048_01",
+            "name": "Tempest Ravager",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w301064_01",
+            "name": "Tornado Ingot",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w301034_01",
+            "name": "Wingblade",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302050_01",
+            "name": "Verdurewind Cutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302050_02",
+            "name": "Verdurewind Cutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302083_01",
+            "name": "Skycutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302083_02",
+            "name": "Skycutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302073_01",
+            "name": "Ignorant Bite",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302073_02",
+            "name": "Ignorant Bite Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302011_01",
+            "name": "Tempest Blade",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w302011_02",
+            "name": "Tempest Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w303050_01",
+            "name": "Stormy Shiitake Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w303053_01",
+            "name": "Big Boy of Fortitude",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w303078_01",
+            "name": "Zephyric Emerald Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w303029_01",
+            "name": "Queensflight",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w304038_01",
+            "name": "Tempest's Relic",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w304071_01",
+            "name": "Pulsing Arms",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w304016_01",
+            "name": "Winged Destruction",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w305050_01",
+            "name": "Melancholy Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w305057_01",
+            "name": "Tornadospore Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w305082_01",
+            "name": "Immortal Wind",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w305011_01",
+            "name": "Tempest Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w306044_01",
+            "name": "Windpiercer",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w306048_01",
+            "name": "Stormfungus",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w306068_01",
+            "name": "Ill Wind",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w306008_01",
+            "name": "Epidemic",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w307054_01",
+            "name": "The Fury",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w307074_01",
+            "name": "Stormsurge Wand",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w307080_01",
+            "name": "Storm Cane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w307018_01",
+            "name": "Tempest Wand",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w308049_01",
+            "name": "Stormchant",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w308033_01",
+            "name": "Windeater Staff",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w309006_01",
+            "name": "Antique Gale",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Wind"
+        },
+        {
+            "id": "w301065_01",
+            "name": "Plasma Ingot",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w301062_01",
+            "name": "Abandoned Roar",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w301036_01",
+            "name": "Astral Edge",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302051_01",
+            "name": "Obsidian Scintillation",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302051_02",
+            "name": "Obsidian Scintillation Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302070_01",
+            "name": "Glorycutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302070_02",
+            "name": "Glorycutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302074_01",
+            "name": "Faerielight Flash",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302074_02",
+            "name": "Faerielight Flash Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302026_01",
+            "name": "Thunderfang",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w302026_02",
+            "name": "Thunderfang Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w303054_01",
+            "name": "Big Boy of Temperance",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w303062_01",
+            "name": "Luminous Morel Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w303070_01",
+            "name": "Lucent Opal Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w303017_01",
+            "name": "Nightbreaker",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w304053_01",
+            "name": "Banished Relic",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w304062_01",
+            "name": "Crackling Arms",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w304015_01",
+            "name": "Shining Axe",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w305061_01",
+            "name": "Lonesome Wish",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w305070_01",
+            "name": "Shinespore Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w305083_01",
+            "name": "Highbright Grimspear",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w305012_01",
+            "name": "Thunderbolt",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w306051_01",
+            "name": "Heaven's Bouquet",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w306054_01",
+            "name": "Glowfungus",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w306069_01",
+            "name": "Lightshear Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w306037_01",
+            "name": "Holy Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w307059_01",
+            "name": "The Madness",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w307064_01",
+            "name": "Rainbow Cane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w307075_01",
+            "name": "Dazzling Ray of Hope",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w307010_01",
+            "name": "Conductor Rod",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w308050_01",
+            "name": "Luminchant",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w308018_01",
+            "name": "Tonitrus",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w309007_01",
+            "name": "Antique Ray",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w309003_01",
+            "name": "Antique Manacaster Mk. 2",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w309002_01",
+            "name": "Antique Manacaster",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Light"
+        },
+        {
+            "id": "w301050_01",
+            "name": "Doomfang",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301066_01",
+            "name": "Darkness Ingot",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301011_01",
+            "name": "Dark Dementia",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302054_01",
+            "name": "Unwelcome Meeting",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302054_02",
+            "name": "Unwelcome Meeting Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302082_01",
+            "name": "Gloomcutter",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302082_02",
+            "name": "Gloomcutter Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302052_01",
+            "name": "Dreadthirst",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302052_02",
+            "name": "Dreadthirst Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302029_01",
+            "name": "Ghizlam's Darkblade",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302029_02",
+            "name": "Ghizlam's Darkblade Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303077_01",
+            "name": "Tenebrous Jet Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303055_01",
+            "name": "Big Boy of Requiem",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303063_01",
+            "name": "Sinister Skullcap Dagger",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303011_01",
+            "name": "Dark Sacrifice",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304040_01",
+            "name": "Regretful Relic",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304072_01",
+            "name": "Punishing Arms",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304030_01",
+            "name": "Traitor's Despair",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305052_01",
+            "name": "Lance of Nightmares",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305062_01",
+            "name": "Spear of Tragedy",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305071_01",
+            "name": "Sablespore Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305035_01",
+            "name": "Hellish Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306046_01",
+            "name": "Seductive Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306052_01",
+            "name": "Howlshadow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306055_01",
+            "name": "Duskfungus",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306016_01",
+            "name": "Macabre Malediction",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307056_01",
+            "name": "Darkheart",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307081_01",
+            "name": "Abyssal Cane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307060_01",
+            "name": "The Lamentation",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307011_01",
+            "name": "Accursed Vare",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308051_01",
+            "name": "Ebonchant",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308019_01",
+            "name": "Sanity's Bane",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309008_01",
+            "name": "Antique Darkness",
+            "weapon": "Manacaster",
+            "rarity": "4",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301055_01",
+            "name": "Wind Apogee",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301076_01",
+            "name": "Judge of Souls",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301095_01",
+            "name": "Seascale",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301101_01",
+            "name": "Gracebringer",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301107_01",
+            "name": "Cryptid Sword",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301113_01",
+            "name": "Scorn Bringer",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301072_01",
+            "name": "Fiercetail",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301124_01",
+            "name": "Soulfeeder Sword",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301040_01",
+            "name": "Knights' Grace",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301031_01",
+            "name": "Blade of Glory",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301012_01",
+            "name": "Gilda Sword",
+            "weapon": "Sword",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302044_01",
+            "name": "Bladewing",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302044_02",
+            "name": "Bladewing Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302056_01",
+            "name": "Wildhaze",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302056_02",
+            "name": "Wildhaze Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302086_01",
+            "name": "Flash of the Hollow",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302086_02",
+            "name": "Flash of the Hollow Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302092_01",
+            "name": "Mist Blade",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302092_02",
+            "name": "Mist Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302098_01",
+            "name": "Dimension Edge",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302098_02",
+            "name": "Dimension Edge Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302104_01",
+            "name": "Hollow Beginning",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302104_02",
+            "name": "Hollow Beginning Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302066_01",
+            "name": "Direblade Mugatachi",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302066_02",
+            "name": "Direblade Mugatachi Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302115_01",
+            "name": "Shadehaze Blade",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302115_02",
+            "name": "Shadehaze Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302012_01",
+            "name": "Guardian Seal",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302012_02",
+            "name": "Guardian Seal Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302031_01",
+            "name": "Iron Blade",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302031_02",
+            "name": "Iron Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302032_01",
+            "name": "Masamura's Pride",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w302032_02",
+            "name": "Masamura's Pride Sheath",
+            "weapon": "Blade",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303047_01",
+            "name": "Slaughterlust",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303056_01",
+            "name": "Hellish Sting",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303064_01",
+            "name": "Impact Thrust",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303085_01",
+            "name": "The Breeze",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303091_01",
+            "name": "Rapture Seeker",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303103_01",
+            "name": "Spirit Claw",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303114_01",
+            "name": "Dread Necrom",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303097_01",
+            "name": "Dreadgaze",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303033_01",
+            "name": "Hardbreaker",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303012_01",
+            "name": "Wyrmfang",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w303034_01",
+            "name": "The Dreamer's Greatsword",
+            "weapon": "Dagger",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304042_01",
+            "name": "Unerring Gaze",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304047_01",
+            "name": "Fury Crux",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304065_01",
+            "name": "Unspeakable Crash",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304084_01",
+            "name": "Jagged Rage",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304090_01",
+            "name": "Great Cleaver",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304096_01",
+            "name": "The Great Destroyer",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304102_01",
+            "name": "Steelfang",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304113_01",
+            "name": "Soul Crusher",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304026_01",
+            "name": "Plain Axe",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304033_01",
+            "name": "The Tyrant",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w304034_01",
+            "name": "Souvenir Axe",
+            "weapon": "Axe",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305054_01",
+            "name": "Piercing Beast",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305064_01",
+            "name": "Attacker Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305076_01",
+            "name": "Great Aquila Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305091_01",
+            "name": "Sovereign Trident",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305097_01",
+            "name": "Clematis",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305103_01",
+            "name": "Phantom Truelance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305109_01",
+            "name": "Omnipiercer",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305120_01",
+            "name": "Lance of Lamentation",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305029_01",
+            "name": "Strong Halberd",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305040_01",
+            "name": "Lance of the Innocent",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w305041_01",
+            "name": "Ironside Lance",
+            "weapon": "Lance",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306060_01",
+            "name": "Falkyn",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306070_01",
+            "name": "The Perforator",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306084_01",
+            "name": "Edgepiercer Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306090_01",
+            "name": "Freesia Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306102_01",
+            "name": "Astral Abyss",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306064_01",
+            "name": "Ragebow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306113_01",
+            "name": "Hollow Scream",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306096_01",
+            "name": "Heavengaze Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306013_01",
+            "name": "Executor",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306033_01",
+            "name": "Faerie Bow",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w306011_01",
+            "name": "Duskhawk",
+            "weapon": "Bow",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307051_01",
+            "name": "Beastwing",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307065_01",
+            "name": "Scepter of Spirit",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307076_01",
+            "name": "Couragebane",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307092_01",
+            "name": "Elder's Rule",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307098_01",
+            "name": "Soul's Requiem",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307110_01",
+            "name": "Groundshaker",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307121_01",
+            "name": "Revenant of Desolation",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307104_01",
+            "name": "Wand of Whelming",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307012_01",
+            "name": "Latchkey",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307038_01",
+            "name": "Rod of Alchemy",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w307039_01",
+            "name": "Moonlight Rod",
+            "weapon": "Wand",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308043_01",
+            "name": "Forever Sky",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308053_01",
+            "name": "Soul Core",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308085_01",
+            "name": "World's Fulcrum",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308091_01",
+            "name": "Aria of Truth",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308103_01",
+            "name": "Abyssal Dominator",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308063_01",
+            "name": "Iratus Staff",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308114_01",
+            "name": "Rancor Staff",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308097_01",
+            "name": "Staff of Vanitas",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308005_01",
+            "name": "Staff of Life",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308013_01",
+            "name": "Staff of Fortune",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w308010_01",
+            "name": "Beauty's Balm",
+            "weapon": "Staff",
+            "rarity": "4",
+            "element": "None"
+        },
+        {
+            "id": "w301013_01",
+            "name": "Blazing Edge",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w302006_01",
+            "name": "Valkaheim Blade",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w302006_02",
+            "name": "Valkaheim Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w303027_01",
+            "name": "Cruel Kukri",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w304018_01",
+            "name": "Argent Battle-Axe",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w305006_01",
+            "name": "Unsung Hero's Lance",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w306006_01",
+            "name": "Flightfyre",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w307006_01",
+            "name": "Sunrise Scepter",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w308006_01",
+            "name": "Staff of Punishing Flame",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Flame"
+        },
+        {
+            "id": "w301006_01",
+            "name": "Rainbreaker",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w302007_01",
+            "name": "Alighting Butterfly",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w302007_02",
+            "name": "Alighting Butterfly Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w303021_01",
+            "name": "Water Dagger",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w304006_01",
+            "name": "Axe of the Waves",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w305007_01",
+            "name": "Azure Jewel",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w306007_01",
+            "name": "Tidal Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w307033_01",
+            "name": "Oceandweller",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w308007_01",
+            "name": "Scendecipher",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Water"
+        },
+        {
+            "id": "w301035_01",
+            "name": "Grassrunner",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w302024_01",
+            "name": "Dragon Commander",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w302024_02",
+            "name": "Dragon Commander Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w303007_01",
+            "name": "Stormspawn",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w304007_01",
+            "name": "Singing Cyclone",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w305017_01",
+            "name": "Gale Spear",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w306003_01",
+            "name": "Proof of the Wind",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w307007_01",
+            "name": "Menace of the Storm",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w308008_01",
+            "name": "Windreader",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Wind"
+        },
+        {
+            "id": "w301007_01",
+            "name": "Featherblade",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w302027_01",
+            "name": "Chanzelian Blade",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w302027_02",
+            "name": "Chanzelian Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w303008_01",
+            "name": "Conscience",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w304008_01",
+            "name": "Flash Axe",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w305008_01",
+            "name": "Moonpiercer",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w305028_01",
+            "name": "Jack-o'-Lance",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w306009_01",
+            "name": "Galvanic Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w307021_01",
+            "name": "Thunder Wand",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w308009_01",
+            "name": "Astrolabe",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w308026_01",
+            "name": "Vampire's Lantern",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Light"
+        },
+        {
+            "id": "w301008_01",
+            "name": "Blood Price",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302009_01",
+            "name": "Sanguine Rain",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302009_02",
+            "name": "Sanguine Rain Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303009_01",
+            "name": "Assassin's Knife",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304009_01",
+            "name": "Soulreaver",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305034_01",
+            "name": "Lance of the Dark",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306018_01",
+            "name": "Cimmerian Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307008_01",
+            "name": "Meggidoth Ruiner",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308020_01",
+            "name": "Meggidoth Wisp",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301047_01",
+            "name": "Lonely Ward",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w301052_01",
+            "name": "Hefty Ingot",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w301030_01",
+            "name": "Knight's Sword",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w301038_01",
+            "name": "Ensorcelled Sword",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w301039_01",
+            "name": "Broadedge",
+            "weapon": "Sword",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302041_01",
+            "name": "Goliath Splitter",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302041_02",
+            "name": "Goliath Splitter Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302055_01",
+            "name": "Rest Eternal",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302055_02",
+            "name": "Rest Eternal Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302068_01",
+            "name": "Fiendcutter",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302068_02",
+            "name": "Fiendcutter Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302021_01",
+            "name": "Subjugator",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302021_02",
+            "name": "Subjugator Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302030_01",
+            "name": "High Shamshir",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302030_02",
+            "name": "High Shamshir Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302008_01",
+            "name": "Fusion Blade",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w302008_02",
+            "name": "Fusion Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303039_01",
+            "name": "Mushroom Dagger",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303044_01",
+            "name": "Big Boy",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303068_01",
+            "name": "Gemstone Dagger",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303026_01",
+            "name": "Bejeweled Dagger",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303032_01",
+            "name": "Gear Knife",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w303003_01",
+            "name": "Lover's Ally",
+            "weapon": "Dagger",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w304037_01",
+            "name": "Reclusive Relic",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w304059_01",
+            "name": "Weighty Arms",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w304025_01",
+            "name": "Warrior's Axe",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w304031_01",
+            "name": "Ennobled Axe",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w304032_01",
+            "name": "Juggernaut",
+            "weapon": "Axe",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305044_01",
+            "name": "Leechspore Lance",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305049_01",
+            "name": "Solitary Desire",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305063_01",
+            "name": "Heartseeker",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305039_01",
+            "name": "Trident",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305013_01",
+            "name": "Mailbreaker",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w305010_01",
+            "name": "Drill Lance",
+            "weapon": "Lance",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306038_01",
+            "name": "Fungus Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306043_01",
+            "name": "Fragrant Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306053_01",
+            "name": "Mockery",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306026_01",
+            "name": "Composite Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306012_01",
+            "name": "Machine Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w306032_01",
+            "name": "Hunter's Bow",
+            "weapon": "Bow",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307046_01",
+            "name": "The Scent",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307057_01",
+            "name": "Clamor Wand",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307061_01",
+            "name": "Heavy Cane",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307042_01",
+            "name": "Wizard's Rod",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307004_01",
+            "name": "Sorcerer's Cudgel",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307037_01",
+            "name": "Conchoidal Rod",
+            "weapon": "Wand",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w308040_01",
+            "name": "Aurachant",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w308002_01",
+            "name": "Staff of Grace",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w307003_01",
+            "name": "Long Ankh",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w308036_01",
+            "name": "Staff of the Horned Snake",
+            "weapon": "Staff",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w309001_01",
+            "name": "Battleworn Manacaster",
+            "weapon": "Manacaster",
+            "rarity": "3",
+            "element": "None"
+        },
+        {
+            "id": "w301002_01",
+            "name": "Soldier's Brand",
+            "weapon": "Sword",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w302002_01",
+            "name": "Striker",
+            "weapon": "Blade",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w302002_02",
+            "name": "Striker Sheath",
+            "weapon": "Blade",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w303005_01",
+            "name": "Thief's Dagger",
+            "weapon": "Dagger",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w304003_01",
+            "name": "Soldier's Axe",
+            "weapon": "Axe",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w305003_01",
+            "name": "Adventurer's Lance",
+            "weapon": "Lance",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w306005_01",
+            "name": "Soldier's Bow",
+            "weapon": "Bow",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w307002_01",
+            "name": "Enchanted Wand",
+            "weapon": "Wand",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w308004_01",
+            "name": "Staff of Affection",
+            "weapon": "Staff",
+            "rarity": "2",
+            "element": "None"
+        },
+        {
+            "id": "w301001_01",
+            "name": "Battleworn Sword",
+            "weapon": "Sword",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w302001_01",
+            "name": "Battleworn Blade",
+            "weapon": "Blade",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w302001_02",
+            "name": "Battleworn Blade Sheath",
+            "weapon": "Blade",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w303001_01",
+            "name": "Battleworn Dagger",
+            "weapon": "Dagger",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w304001_01",
+            "name": "Battleworn Axe",
+            "weapon": "Axe",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w305001_01",
+            "name": "Battleworn Lance",
+            "weapon": "Lance",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w306001_01",
+            "name": "Battleworn Bow",
+            "weapon": "Bow",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w307001_01",
+            "name": "Battleworn Wand",
+            "weapon": "Wand",
+            "rarity": "1",
+            "element": "None"
+        },
+        {
+            "id": "w308001_01",
+            "name": "Battleworn Staff",
+            "weapon": "Staff",
+            "rarity": "1",
+            "element": "None"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "id": "c100009_01",
+            "name": "Zethia"
+        },
+        {
+            "id": "c100009_02_h",
+            "name": "Otherworld Zethia"
+        },
+        {
+            "id": "c100002_07",
+            "name": "Summer Elisanne"
+        },
+        {
+            "id": "c100012_01_h",
+            "name": "Aurelius"
+        },
+        {
+            "id": "c100018_01",
+            "name": "Leif"
+        },
+        {
+            "id": "c100018_06",
+            "name": "Chapter 13 Leif"
+        },
+        {
+            "id": "c100027_01",
+            "name": "Summoner"
+        },
+        {
+            "id": "c100029_01",
+            "name": "Sarisse"
+        },
+        {
+            "id": "c100007_01",
+            "name": "Notte"
+        },
+        {
+            "id": "c100007_05",
+            "name": "Anniversary Notte",
+            "noIcon": true
+        },
+        {
+            "id": "c100007_09",
+            "name": "2nd Anniversary Notte",
+            "noIcon": true
+        },
+        {
+            "id": "c110377_01_h",
+            "name": "Joker (Story)"
+        }
+    ]
+}

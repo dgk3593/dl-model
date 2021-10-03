@@ -1,0 +1,346 @@
+{
+    "data": {
+        "c110383_01": {
+            "A": {
+                "name": "Left Booster",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "B": {
+                "name": "Wheels",
+                "options": {
+                    "A": "Folded",
+                    "B": "Extended"
+                }
+            },
+            "C": {
+                "name": "Right Booster",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "c110281_02": {
+            "A": {
+                "name": "Mask",
+                "options": {
+                    "A": "Off",
+                    "B": "On"
+                }
+            }
+        },
+        "c110381_01": {
+            "A": {
+                "name": "Sigil",
+                "options": {
+                    "A": "Locked",
+                    "B": "Released"
+                }
+            }
+        },
+        "c110377_01": {
+            "A": {
+                "name": "Mask",
+                "options": {
+                    "A": "On",
+                    "B": "Off"
+                }
+            }
+        },
+        "c110378_01": {
+            "A": {
+                "name": "Mask",
+                "options": {
+                    "A": "On",
+                    "B": "Off"
+                }
+            },
+            "B": {
+                "name": "Whip",
+                "options": {
+                    "A": "Off",
+                    "B": "On"
+                }
+            }
+        },
+        "c110379_01": {
+            "A": {
+                "name": "Car",
+                "options": {
+                    "A": "Off",
+                    "B": "On"
+                }
+            },
+            "B": {
+                "name": "Lower Body",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "c110380_01": {
+            "A": {
+                "name": "Mode",
+                "options": {
+                    "A": "In Quest",
+                    "B": "Lobby",
+                    "C": "Pithos Summoned"
+                },
+                "default": "Lobby"
+            }
+        },
+        "c110354_01": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "A": "Normal",
+                    "B": "Buster"
+                }
+            },
+            "B": {
+                "name": "Face",
+                "options": {
+                    "A": "Shown"
+                }
+            }
+        },
+        "c110388_01": {
+            "A": {
+                "name": "Hands",
+                "options": {
+                    "A": "Fist",
+                    "B": "Claw"
+                }
+            }
+        },
+        "c110389_01": {
+            "A": {
+                "name": "Scarf",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            }
+        },
+        "d210144_01": {
+            "A": {
+                "name": "Lance",
+                "options": {
+                    "A": "No Flag",
+                    "B": "With Flag"
+                }
+            }
+        },
+        "d210145_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            },
+            "B": {
+                "name": "Plushie",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "d210145_02": {
+            "A": {
+                "name": "Book",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "d210145_03": {
+            "A": {
+                "name": "Book",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "d210132_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            }
+        },
+        "d210132_03": {
+            "A": {
+                "name": "Wings and Halo",
+                "options": {
+                    "A": "Halo",
+                    "B": "Both"
+                }
+            }
+        },
+        "d210118_01": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "A": "Normal",
+                    "B": "Buster"
+                }
+            }
+        },
+        "d210147_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Small",
+                    "B": "Large"
+                },
+                "default": "Large"
+            },
+            "B": {
+                "name": "Effect",
+                "options": {
+                    "A": "Small",
+                    "B": "Large"
+                },
+                "default": "None"
+            }
+        },
+        "d210154_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            }
+        },
+        "d210156_01": {
+            "A": {
+                "name": "Weapon",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            }
+        },
+        "h0080501": {
+            "A": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "h0090501": {
+            "A": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "h0100301": {
+            "A": {
+                "name": "Tome",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "h0110401": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0130001": {
+            "A": {
+                "name": "Blue Soul",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0130401": {
+            "A": {
+                "name": "Red Soul",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "h0120201": {
+            "A": {
+                "name": "Cloak",
+                "options": {
+                    "Extension": "Normal",
+                    "BR": "Broken"
+                },
+                "default": "Normal"
+            }
+        },
+        "c110393_01": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "A": "Fist",
+                    "B": "Claw"
+                }
+            }
+        },
+        "d210168_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        }
+    }
+}
