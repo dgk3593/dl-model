@@ -1,0 +1,1 @@
+.FaceBox{width:64px;height:64px;border-radius:8px;overflow:hidden}.MeshFaceButton{display:flex;flex-wrap:wrap;width:100%;gap:.5rem;justify-content:center}.MeshFaceButton>div{cursor:pointer}.MeshFaceButton>div:hover{border-color:#ffffff1a;transform:scale(1.01);box-shadow:.1rem .1rem .3rem #000}.MeshPartSelect h3{text-align:center;margin:.5rem}

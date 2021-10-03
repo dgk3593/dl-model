@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "id": "c100033_01",
+            "name": "Volk",
+            "element": "Wind"
+        },
+        {
+            "id": "h0020301",
+            "name": "Beast Volk",
+            "element": "Wind"
+        },
+        {
+            "id": "c100034_01",
+            "name": "Kai Yan",
+            "element": "Light"
+        },
+        {
+            "id": "h0030401",
+            "name": "Beast Kai Yan",
+            "element": "Light"
+        },
+        {
+            "id": "c100035_01",
+            "name": "Ciella",
+            "element": "Water"
+        },
+        {
+            "id": "h0050201",
+            "name": "Beast Ciella",
+            "element": "Water"
+        },
+        {
+            "id": "c100037_01",
+            "name": "Ayaha",
+            "element": "Flame"
+        },
+        {
+            "id": "c100036_01",
+            "name": "Otoha",
+            "element": "Flame"
+        },
+        {
+            "id": "h0060101",
+            "name": "Beast Ayaha and Otoha",
+            "element": "Flame"
+        },
+        {
+            "id": "c100041_01",
+            "name": "Tartarus",
+            "element": "Shadow"
+        },
+        {
+            "id": "h0070501",
+            "name": "Beast Tartarus",
+            "element": "Shadow"
+        }
+    ]
+}

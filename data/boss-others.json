@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "id": "b0010101",
+            "name": "Flame Manticore",
+            "noIcon": true
+        },
+        {
+            "id": "b0010201",
+            "name": "Water Manticore",
+            "noIcon": true
+        },
+        {
+            "id": "b0010301",
+            "name": "Wind Manticore",
+            "noIcon": true
+        },
+        {
+            "id": "b0010401",
+            "name": "Light Manticore",
+            "noIcon": true
+        },
+        {
+            "id": "b0010501",
+            "name": "Shadow Manticore",
+            "noIcon": true
+        }
+    ]
+}

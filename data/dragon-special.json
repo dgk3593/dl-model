@@ -1,0 +1,125 @@
+{
+    "data": [
+        {
+            "id": "d210153_01",
+            "name": "Gala Notte Metamorphosis",
+            "element": "Wind"
+        },
+        {
+            "id": "d210172_01",
+            "name": "Summoned Bahamut",
+            "title": "Gala Zethia"
+        },
+        {
+            "id": "d200001_01",
+            "name": "Elysium"
+        },
+        {
+            "id": "d200008_01",
+            "name": "Fafnir Roy III"
+        },
+        {
+            "id": "smith",
+            "name": "Smithwyrm"
+        },
+        {
+            "id": "d210113_01",
+            "name": "Halloween Brunhilda",
+            "element": "Flame"
+        },
+        {
+            "id": "d200011_01",
+            "name": "Cursed Chthonius",
+            "element": "Shadow"
+        },
+        {
+            "id": "d210071_01",
+            "name": "Lathna Nyarlathotep",
+            "element": "Shadow"
+        },
+        {
+            "id": "d210128_01",
+            "name": "Puppy"
+        },
+        {
+            "id": "d210132_02",
+            "name": "Otherworld Ramiel",
+            "element": "Light"
+        },
+        {
+            "id": "d210132_03",
+            "name": "Fallen Angel Ramiel",
+            "element": "Shadow"
+        },
+        {
+            "id": "d210145_02",
+            "name": "Otherworld Gabriel",
+            "element": "Wind"
+        },
+        {
+            "id": "d210145_03",
+            "name": "Fallen Angel Gabriel",
+            "element": "Wind"
+        },
+        {
+            "id": "d210154_03",
+            "name": "Fallen Angel Raphael",
+            "element": "Light"
+        },
+        {
+            "id": "d210163_03",
+            "name": "Fallen Angel Uriel",
+            "element": "Water"
+        },
+        {
+            "id": "d210118_01",
+            "name": "Rush",
+            "element": "Flame"
+        },
+        {
+            "id": "d210093_01",
+            "name": "Tiki Divine Dragon",
+            "element": "Water"
+        },
+        {
+            "id": "d210096_01",
+            "name": "Void Agni",
+            "element": "Flame"
+        },
+        {
+            "id": "d210102_01",
+            "name": "Void Jeanne d'Arc",
+            "element": "Light"
+        },
+        {
+            "id": "d210106_01",
+            "name": "Void Nidhogg",
+            "element": "Shadow"
+        },
+        {
+            "id": "d210101_01",
+            "name": "Void Poseidon",
+            "element": "Water"
+        },
+        {
+            "id": "d210088_01",
+            "name": "Void Zephyr",
+            "element": "Wind"
+        },
+        {
+            "id": "d210149_01",
+            "name": "Carmen",
+            "element": "Flame"
+        },
+        {
+            "id": "d210150_01",
+            "name": "Zorro",
+            "element": "Wind"
+        },
+        {
+            "id": "d210151_01",
+            "name": "Pithos",
+            "element": "Light"
+        }
+    ]
+}

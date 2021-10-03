@@ -1,0 +1,1 @@
+.Selector{display:flex;flex-wrap:wrap;flex-direction:row;align-items:center;justify-content:center;margin:.1rem 0;border-radius:.3rem;overflow:hidden}.Selector .GlowToggle:not(:first-of-type){border-left:.1rem solid rgba(238,238,238,.6)}

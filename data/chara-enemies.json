@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "id": "c100016_01",
+            "name": "Valyx",
+            "element": "Light"
+        },
+        {
+            "id": "c100017_01",
+            "name": "Emile"
+        },
+        {
+            "id": "c100032_02",
+            "name": "Mad Laxi",
+            "element": "Flame"
+        },
+        {
+            "id": "c100033_01",
+            "name": "Volk",
+            "element": "Wind"
+        },
+        {
+            "id": "c100034_01",
+            "name": "Kai Yan",
+            "element": "Light"
+        },
+        {
+            "id": "c100035_01",
+            "name": "Ciella",
+            "element": "Water"
+        },
+        {
+            "id": "c100037_01",
+            "name": "Ayaha",
+            "element": "Flame"
+        },
+        {
+            "id": "c100036_01",
+            "name": "Otoha",
+            "element": "Flame"
+        },
+        {
+            "id": "c100041_01",
+            "name": "Tartarus",
+            "element": "Shadow"
+        },
+        {
+            "id": "c130018_01",
+            "name": "Zombie Soldier (Flame)",
+            "noIcon": true,
+            "noPortrait": true
+        },
+        {
+            "id": "c130018_02",
+            "name": "Zombie Soldier (Water)",
+            "noIcon": true,
+            "noPortrait": true
+        },
+        {
+            "id": "c130019_01",
+            "name": "Zombie Archer",
+            "noIcon": true,
+            "noPortrait": true
+        },
+        {
+            "id": "c130021_01",
+            "name": "Zombie Healer",
+            "noIcon": true,
+            "noPortrait": true
+        },
+        {
+            "id": "c130020_01",
+            "name": "Zombie Mage (Flame)",
+            "noIcon": true,
+            "noPortrait": true
+        },
+        {
+            "id": "c130020_02",
+            "name": "Zombie Mage (Water)",
+            "noIcon": true,
+            "noPortrait": true
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "src": "img/thumbnail/bg/Login_Bonus.jpg",
+            "value": "img/bg/Login_Bonus.png",
+            "name": "Login Bonus"
+        },
+        {
+            "src": "img/thumbnail/bg/Roost.jpg",
+            "value": "img/bg/Roost.png",
+            "name": "Dragon's Roost"
+        },
+        {
+            "src": "img/thumbnail/bg/Max_Raid.jpg",
+            "value": "img/bg/Max_Raid.png",
+            "name": "Max Raid"
+        }
+    ]
+}

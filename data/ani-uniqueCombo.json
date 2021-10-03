@@ -1,0 +1,206 @@
+{
+    "data": {
+        "Sword": [
+            {
+                "user": "c100018_02",
+                "name": "Gala Leif",
+                "subtitle": "Striking Stance",
+                "code": "SWD_CMB_A_01_10001802&dur=50>SWD_CMB_A_02_10001802&dur=50>SWD_CMB_A_03_10001802"
+            },
+            {
+                "user": "c100018_02",
+                "name": "Gala Leif",
+                "subtitle": "Shielding Stance",
+                "code": "SWD_CMB_B_01_10001802&dur=50>SWD_CMB_B_02_10001802&dur=50>SWD_CMB_B_03_10001802"
+            },
+            {
+                "user": "c100005_02",
+                "name": "Gala Alex",
+                "code": "SWD_CMB_01_10000502&dur=50>SWD_CMB_02_10000502&dur=50>SWD_CMB_03_10000502&dur=50>SWD_CMB_04_10000502&dur=50>SWD_CMB_05_10000502"
+            },
+            {
+                "user": "c110371_01",
+                "name": "Pecorine",
+                "code": "SWD_CMB_01_11037101&dur=50>SWD_CMB_02_11037101&dur=50>SWD_CMB_03_11037101&dur=50>SWD_CMB_04_11037101&dur=50>SWD_CMB_05_11037101"
+            },
+            {
+                "user": "c110379_01",
+                "name": "Mona",
+                "code": "SWD_CMB_01_11037901&dur=50>SWD_CMB_02_11037901&dur=50>SWD_CMB_03_11037901&dur=50>SWD_CMB_04_11037901&dur=50>SWD_CMB_05_11037901&dur=50>SWD_CMB_06_11037901>SWD_CMB_07_11037901"
+            }
+        ],
+        "Blade": [
+            {
+                "user": "c100045_01",
+                "name": "Gala Mascula",
+                "code": "KAT_CMB_01_10004501&dur=50>KAT_CMB_02_10004501&dur=50>KAT_CMB_03_10004501&dur=50>KAT_CMB_04_10004501"
+            },
+            {
+                "user": "c100054_01",
+                "name": "Gala Zethia",
+                "code": "KAT_CMB_01_10005401&dur=50>KAT_CMB_02_10005401&dur=50>KAT_CMB_03_10005401&dur=50>KAT_CMB_04_10005401&dur=50>KAT_CMB_05_10005401&dur=50>KAT_CMB_06_10005401&dur=50>KAT_CMB_07_10005401&dur=50>KAT_CMB_08_10005401&dur=50>KAT_CMB_09_10005401"
+            },
+            {
+                "user": "c110295_01",
+                "name": "Valerio",
+                "subtitle": "Appetizer Stance",
+                "code": "KAT_CMB_A_01_11029501&dur=50>KAT_CMB_A_02_11029501&dur=50>KAT_CMB_A_03_11029501"
+            },
+            {
+                "user": "c110295_01",
+                "name": "Valerio",
+                "subtitle": "Entrée Stance",
+                "code": "KAT_CMB_B_01_11029501&dur=50>KAT_CMB_B_02_11029501&dur=50>KAT_CMB_B_03_11029501"
+            },
+            {
+                "user": "c110295_01",
+                "name": "Valerio",
+                "subtitle": "Dessert Stance",
+                "code": "KAT_CMB_C_01_11029501&dur=50>KAT_CMB_C_02_11029501&dur=50>KAT_CMB_C_03_11029501"
+            },
+            {
+                "user": "c110352_01",
+                "name": "Tobias",
+                "subtitle": "Sacred Blade",
+                "code": "KAT_CMB_A_01_11035201>KAT_CMB_A_02_11035201>KAT_CMB_A_03_11035201"
+            }
+        ],
+        "Dagger": [
+            {
+                "user": "c100007_07",
+                "name": "Gala Notte",
+                "code": "DAG_CMB_01_10000707&dur=90>DAG_CMB_02_10000707>DAG_CMB_03_10000707"
+            },
+            {
+                "user": "c100032_04",
+                "name": "Gala Laxi",
+                "code": "DAG_CMB_A_01_10003204&dur=50>DAG_CMB_A_02_10003204&dur=50>DAG_CMB_A_03_10003204&dur=50>DAG_CMB_A_04_10003204"
+            },
+            {
+                "user": "c100032_04",
+                "name": "Gala Laxi",
+                "subtitle": "Delayed",
+                "code": "DAG_CMB_B_04_10003204"
+            },
+            {
+                "user": "c110296_01",
+                "name": "Mitsuba",
+                "subtitle": "Sashimi Stance",
+                "code": "DAG_CMB_A_01_11029601&dur=50>DAG_CMB_A_02_11029601&dur=70>DAG_CMB_A_03_11029601"
+            },
+            {
+                "user": "c110296_01",
+                "name": "Mitsuba",
+                "subtitle": "Tempura Stance",
+                "code": "DAG_CMB_B_01_11029601&dur=50>DAG_CMB_B_02_11029601&dur=70>DAG_CMB_B_03_11029601"
+            },
+            {
+                "user": "c110306_01",
+                "name": "Bellina",
+                "subtitle": "Dragondrive",
+                "code": "DAG_CMB_A_01_11030601&dur=50>DAG_CMB_A_02_11030601&dur=50>DAG_CMB_A_03_11030601"
+            },
+            {
+                "user": "c110360_01",
+                "name": "Tiki",
+                "code": "DAG_CMB_A_01_11036001&dur=50>DAG_CMB_A_02_11036001&dur=50>DAG_CMB_A_03_11036001&dur=50>DAG_CMB_A_04_11036001&dur=50>DAG_CMB_A_05_11036001"
+            },
+            {
+                "user": "c110365_01",
+                "name": "Nevin",
+                "subtitle": "Revelation Sword",
+                "code": "DAG_CMB_06_11036501"
+            },
+            {
+                "user": "c110377_01",
+                "name": "Joker",
+                "code": "DAG_CMB_01_11037701&dur=50>DAG_CMB_02_11037701&dur=50>DAG_CMB_03_11037701&dur=50>DAG_CMB_04_11037701&dur=50>DAG_CMB_05_11037701&dur=50>DAG_CMB_06_11037701"
+            },
+            {
+                "user": "c110393_01",
+                "name": "Farren",
+                "subtitle": "Dragondrive",
+                "code": "DAG_CMB_A_01_11039301>DAG_CMB_A_02_11039301>DAG_CMB_A_03_11039301>DAG_CMB_A_04_11039301"
+            }
+        ],
+        "Axe": [
+            {
+                "user": "c110334_02",
+                "name": "Gala Audric",
+                "code": "AXE_CMB_01_11033402&dur=50>AXE_CMB_02_11033402&dur=50>AXE_CMB_03_11033402&dur=50>AXE_CMB_04_11033402&dur=50>AXE_CMB_05_11033402"
+            },
+            {
+                "user": "c110380_01",
+                "name": "Sophie",
+                "code": "AXE_CMB_01_11038001&dur=50>AXE_CMB_02_11038001&dur=50>AXE_CMB_03_11038001&dur=50>AXE_CMB_04_11038001&dur=50>AXE_CMB_05_11038001&dur=50>AXE_CMB_06_11038001"
+            }
+        ],
+        "Lance": [
+            {
+                "user": "c110357_01",
+                "name": "Nadine",
+                "code": "LAN_CMB_A_01_11035701&dur=50>LAN_CMB_A_02_11035701&dur=50>LAN_CMB_A_03_11035701&dur=50>LAN_CMB_A_04_11035701&dur=50>LAN_CMB_A_05_11035701"
+            },
+            {
+                "user": "c110364_01",
+                "name": "Catherine",
+                "code": "LAN_CMB_A_01_11036401&dur=50>LAN_CMB_A_02_11036401&dur=50>LAN_CMB_A_03_11036401"
+            },
+            {
+                "user": "c110378_01",
+                "name": "Panther",
+                "code": "LAN_CMB_01_11037801&dur=50>LAN_CMB_02_11037801&dur=50>LAN_CMB_03_11037801&dur=50>LAN_CMB_04_11037801&dur=50>LAN_CMB_05_11037801"
+            },
+            {
+                "user": "c110381_01",
+                "name": "Ryszarda",
+                "subtitle": "Sigil Released",
+                "code": "LAN_CMB_06_01_11038101>LAN_CMB_06_02_11038101>LAN_CMB_06_03_11038101"
+            },
+            {
+                "user": "c110352_03",
+                "name": "Faeblessed Tobias",
+                "subtitle": "Fae Lance",
+                "code": "LAN_CMB_A_01_11035203&dur=50>LAN_CMB_A_02_11035203"
+            },
+            {
+                "user": "c110285_01",
+                "name": "Grimnir",
+                "code": "LAN_CMB_01_11028501&dur=50>LAN_CMB_02_11028501&dur=50>LAN_CMB_03_11028501&dur=40>LAN_CMB_04_11028501&dur=50>LAN_CMB_05_01_11028501>LAN_CMB_05_02_11028501&r=2>LAN_CMB_05_03_11028501"
+            }
+        ],
+        "Bow": [
+            {
+                "user": "c110366_01",
+                "name": "Pinon",
+                "subtitle": "Sigil Released",
+                "code": "BOW_CMB_06_11036601"
+            },
+            {
+                "user": "c110368_01",
+                "name": "Meene",
+                "code": "BOW_CMB_A_01_11036801&dur=50>BOW_CMB_A_02_11036801&dur=50>BOW_CMB_A_03_11036801"
+            }
+        ],
+        "Wand": [
+            {
+                "user": "c110354_01",
+                "name": "Mega Man",
+                "code": "ROD_CMB_01_01_11035401>ROD_CMB_01_02_11035401>ROD_CMB_01_03_11035401"
+            },
+            {
+                "user": "c110361_01",
+                "name": "Peony",
+                "code": "ROD_CMB_01_11036101&dur=50>ROD_CMB_02_11036101&dur=50>ROD_CMB_03_11036101&dur=50>ROD_CMB_04_11036101&dur=50>ROD_CMB_05_11036101"
+            }
+        ],
+        "Manacaster": [
+            {
+                "user": "c100010_10",
+                "name": "Summer Mym",
+                "subtitle": "Dragondrive",
+                "code": "GUN_CMB_U_01_10001010"
+            }
+        ]
+    }
+}
