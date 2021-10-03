@@ -1,15 +1,26 @@
 import viewer from "@/viewer";
+import { inIframe } from "@/SceneController/helper/inIframe";
+
 let loopState = "";
 
+const isIframe = inIframe();
+const defaultShowSettings = isIframe
+    ? false
+    : !window.location.hash.includes("showSettings=false");
+
+const defaultShowTimeControl = isIframe
+    ? false
+    : !window.location.hash.includes("showAC=false");
+
 export const appStateConfig = set => ({
-    showSettings: !window.location.hash.includes("showSettings=false"),
+    showSettings: defaultShowSettings,
     toggleSettings: () =>
         set(state => void (state.showSettings = !state.showSettings)),
 
     loadingMsg: "",
     setLoadingMsg: msg => set(state => void (state.loadingMsg = msg)),
 
-    showTimeControl: !window.location.hash.includes("showControl=false"),
+    showTimeControl: defaultShowTimeControl,
     toggleTimeControl: () =>
         set(state => void (state.showTimeControl = !state.showTimeControl)),
 

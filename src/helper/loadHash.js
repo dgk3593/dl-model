@@ -3,7 +3,7 @@ import { parseCode } from "@/dl-viewer/utils/parseCode";
 import { useAppState } from "@/state";
 import * as DEFAULT from "./default";
 import viewer from "@/viewer";
-import { DLViewer, getDefaultCamera, getDefaultControl } from "../dl-viewer";
+import { getDefaultCamera, getDefaultControl } from "../dl-viewer";
 import { getDefaultAni } from "@/data/getPersonalAni";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 

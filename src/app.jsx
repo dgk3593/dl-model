@@ -33,8 +33,8 @@ export function App() {
     useEffect(() => {
         mainView.current?.appendChild(viewer.canvas);
 
-        viewer.stats.dom.style.position = "";
-        stats.current?.appendChild(viewer.stats.dom);
+        // viewer.stats.dom.style.position = "";
+        // stats.current?.appendChild(viewer.stats.dom);
     }, []);
 
     return (
