@@ -1,0 +1,64 @@
+.IconButton {
+    --color: #101010;
+    --icon-size: 3.5rem;
+    --min-height: 4.5rem;
+    --subIcon-size: 50%;
+    /* --subIcon-hover: 60%; */
+}
+
+.IconButton.MuiButton-root {
+    padding: 0.3rem 0.5rem;
+    min-width: 9.5rem;
+    max-width: 15rem;
+    min-height: var(--min-height);
+    align-self: stretch;
+    border-color: var(--color);
+}
+
+.IconButton.MuiButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.IconButton-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.IconButton-icons img {
+    max-width: var(--icon-size);
+    max-height: var(--icon-size);
+}
+
+.IconButton-subIcon {
+    width: var(--subIcon-size);
+    height: var(--subIcon-size);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .IconButton:hover .IconButton-subIcon {
+    width: var(--subIcon-hover);
+    height: var(--subIcon-hover);
+    bottom: -10%;
+    right: -10%;
+    filter: drop-shadow(0.1rem 0.1rem 0.2rem #101010);
+} */
+
+.IconButton-description {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: var(--color);
+}
+
+.IconButton-title,
+.IconButton-subtitle {
+    margin: 0.1rem;
+}

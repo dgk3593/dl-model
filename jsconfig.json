@@ -1,12 +1,17 @@
 {
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "components/*": ["src/SceneController/components/*"],
+            "hook/*": ["src/SceneController/hook/*"],
+            "data/*": ["src/data/*"]
+        },
         "checkJs": true,
         "target": "es2020",
-        "lib": ["es2020", "DOM"],
+        "lib": ["es2020", "DOM", "webworker"],
         "jsx": "react-jsx",
         "moduleResolution": "node",
         "module": "es2020"
-    },
-    "include": ["src"]
+    }
 }

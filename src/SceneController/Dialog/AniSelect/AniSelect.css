@@ -1,0 +1,48 @@
+.AniSelect-categories {
+    display: grid;
+    grid-template-columns: clamp(5rem, 10rem, 25%) auto;
+}
+
+.AniSelect-categories .MuiTabs-root button {
+    min-width: 0;
+}
+
+.AniSelect-categories div p {
+    width: 40rem;
+}
+
+.AniSelect-subCategory {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.AniSelect-subCategory button {
+    margin: 0.2rem;
+    flex: 1 1 auto;
+}
+
+.AniSelect hr {
+    color: #101010;
+}
+
+.AniSelect-simpleBtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.AniSelect-Btn {
+    background-color: #f2f2f2;
+    color: #101010;
+    max-width: 14rem;
+    align-self: stretch;
+    border: 1px solid rgba(16, 16, 16, 0.3);
+}
+
+.AniSelect-Btn:hover {
+    background-color: #ddd;
+    border: 1px solid rgba(16, 16, 16, 0.5);
+}

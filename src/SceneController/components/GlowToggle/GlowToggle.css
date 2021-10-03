@@ -1,0 +1,69 @@
+.GlowToggle {
+    --bg: #101010;
+    background-color: var(--bg);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
+.GlowToggle[data-type="text"] {
+    min-height: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.GlowToggle[data-type="text"] span {
+    opacity: 0.6;
+}
+
+.GlowToggle[data-type="text"]:hover span {
+    opacity: 0.8;
+}
+
+.GlowToggle[data-type="text"].checked span {
+    opacity: 1;
+    font-weight: 500;
+    filter: drop-shadow(0 0 0.2rem #eee) brightness(120%);
+}
+
+.GlowToggle[data-type="text"].checked:hover span {
+    filter: unset;
+}
+
+.GlowToggle[data-type="icon"] {
+    padding: 0.2rem;
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+.GlowToggle[data-type="icon"] img {
+    max-height: 1.5rem;
+    opacity: 0.8;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+.GlowToggle[data-type="icon"]:hover img {
+    border: 0.1rem solid #eee;
+    opacity: 1;
+}
+
+.GlowToggle[data-type="icon"].checked img {
+    opacity: 1;
+    filter: brightness(1.1);
+    border: 0.2rem solid white;
+    box-shadow: 0 0 10px rgba(33, 156, 243, 0.5),
+        0 0 20px rgba(33, 156, 243, 0.5), 0 0 30px rgba(33, 156, 243, 0.5),
+        inset 0 0 10px rgba(33, 156, 243, 1);
+}
+
+.GlowToggle[data-type="icon"].checked:hover img {
+    border: 0.15rem solid #eee;
+    filter: unset;
+    box-shadow: 0 0 5px rgba(33, 156, 243, 0.5),
+        0 0 10px rgba(33, 156, 243, 0.5), 0 0 15px rgba(33, 156, 243, 0.5),
+        inset 0 0 5px rgba(33, 156, 243, 1);
+}

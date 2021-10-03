@@ -1,0 +1,19 @@
+.BodyPartsController {
+    background-color: #10101077;
+}
+
+.BodyPartsController .Setters-label {
+    color: white;
+}
+
+.BodyPartsController .SetFromList fieldset.MuiOutlinedInput-notchedOutline {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.BodyPartsController .Accordion .Accordion-summary {
+    justify-content: center;
+}
+
+.BodyPartsController .Accordion .Accordion-details {
+    padding: 0;
+}

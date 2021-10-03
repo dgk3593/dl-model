@@ -1,0 +1,13 @@
+.DockButton svg {
+    animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.DockButton:hover svg {
+    animation: bounce 1200ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateX(25%);
+    }
+}

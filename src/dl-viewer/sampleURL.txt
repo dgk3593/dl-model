@@ -1,0 +1,34 @@
+: @ () [] * & ! + = / . ?
+
+bg=transparent/cam=1,,1/
+
+id=c100001_01/ei=1/mi=5/et=c100001_08/mt=c100001_08/
+mat=(type=Toon/color=eeeeee)/
+ol=(size=6/color=ff0000/enable=false)/
+@jWeaponL=(id=w301138_01/rot=0,PI,0/scale=0.5)+(id=w399051_01/pos=0.5,0,0)/@jWeaponR=(id=w302129_01)/
+ani=CMN_MWM_03&ts=0.5&r=2&@50=(ei=1/att.jWeaponL.1.visible=true/att.jWeaponL.2.visible=true/att.jWeaponR.0.visible=false)&@60=(mi=2)>SWD_CMB_01>fbx:Test>fbx:Test2+TestName/
+/// <- model separator
+
+
+scl=0.5 -> scale=0.5,0.5,0.5
+scl=0.5,1 -> scale=0.5,1,1
+scl=0.5,,0.5 -> scale=0.5,1,0.5
+
+ani
+@50=(ei=1/att.jWeaponL.1.visible=false/att.jWeaponL.2.visible=false/att.jWeaponR.0.visible=true)
+=> t = 50% -> eyeIdx = 1 | hide jWeaponL[1], jWeaponL[2] | show jWeaponR[0]
+
+ei = 1 --> setNestedObject(container, ['face','eyeIdx'] = 1)
+att.jWeaponL.1.visible=false --> setNestedObject(container, ['attachment', 'jWeaponL', '1', 'visible'], false)
+att.jWeaponL.2.visible=false --> setNestedObject(container, ['attachment', 'jWeaponL', '1', 'visible'], false)
+att.jWeaponR.0.visible=true --> setNestedObject(container, ['attachment', 'jWeaponR', '0', 'visible'], true)
+
+&dur=10-90 -> subclip 10% -> 90%
+&dur= 80 -> subclip 0% -> 80%
+
+fbx:Test -> Test.fbx -> animation[0]
+fbx:Test2+TestName -> Test.fbx -> animation.find(({name}) => name === TestName)
+
+bg=img:url
+
+SWD_CMB_01>SWD_CMB_02>SWD_CMB_03>SWD_CMB_04>SWD_CMB_05

@@ -1,0 +1,91 @@
+.ChainMaker-header {
+    position: sticky;
+    top: 2.75rem;
+    background-color: #101010ee;
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.5rem 0 0.5rem;
+    z-index: 6;
+}
+
+.ChainAniList {
+    margin-top: 0.5rem;
+}
+
+.ChainAni .Accordion-summary {
+    position: relative;
+    padding-right: 3rem;
+    min-height: 1.5rem;
+}
+
+.ChainAni .Accordion-summary svg {
+    color: white;
+}
+
+.ChainAni-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.ChainAni-advanced {
+    background-color: #ffffffdd;
+    display: flex;
+    width: 100%;
+    gap: 0.2rem;
+}
+
+.ChainAni .Accordion {
+    width: 100%;
+    background-color: #ffffff11;
+}
+
+.ChainAni .Accordion.open {
+    background-color: #ffffff33;
+}
+
+.ChainAni .Accordion:hover {
+    background-color: #ffffff55;
+}
+
+.ChainAni .Accordion:not(.open):hover {
+    background-color: #ffffff44;
+}
+
+.ChainAni .Accordion .Accordion-summary {
+    background-color: #ffffff33;
+    justify-content: center;
+}
+
+.ChainAni .Accordion .Accordion-details {
+    background-color: #ffffffcc;
+}
+
+.ChainAni .Accordion .SetNumbers {
+    width: 100%;
+}
+
+.ChainAni .Accordion .duration-slider {
+    min-width: 80%;
+    max-width: 100%;
+    padding: 0.2rem 0.5rem;
+}
+
+.ChainAniFace {
+    width: 100%;
+    padding: 0.2rem;
+    display: grid;
+    grid-template-columns: 2rem auto 64px 64px;
+    color: black;
+}
+
+.ChainAniFace > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

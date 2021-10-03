@@ -1,0 +1,3 @@
+.Setters-slider :where(.MuiSlider-track, .MuiSlider-thumb, .MuiSlider-rail) {
+    color: #0bb;
+}

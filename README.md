@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dgk3593/dl-model-test)
 
-## Available Scripts
+Sample terminal program:
 
-In the project directory, you can run:
+```js
+viewer.disposeAllModels();
+viewer.background = "img:img/bg/Roost.png";
+viewer.camera.position.set(0, 0.5, 2.33);
 
-### `npm start`
+const mascula = await viewer.loadDLModel("c100045_01");
+viewer.add(mascula);
+mascula.position.x = -0.5;
+mascula.particle.add("aura", { spread: 0, auraOpacity: 0.25 });
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+const masculaBlade = await viewer.loadDLModel("w397004_01");
+masculaBlade.attachTo(mascula, "jWeaponR");
+masculaBlade.particle.add("aura", { spread: 5, speed: 5, threshold: 0.7 });
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+const laxi = await viewer.loadDLModel("c100032_04");
+viewer.add(laxi);
+laxi.position.x = 0.5;
+const laxiAura = laxi.particle.add("aura", {
+    color: "#ff0000",
+    color2: "#ff0000",
+    spread: 0,
+});
+laxiAura.auraOpacity = 0.75;
 
-### `npm test`
+const laxiWeaponAuraParam = {
+    color: "#ff0000",
+    color2: "#ffff00",
+    spread: 5,
+    speed: 5,
+};
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const laxiWeaponL = await viewer.loadDLModel("w399012_01");
+laxiWeaponL.attachTo(laxi, "jWeaponL");
+laxiWeaponL.particle.add("aura", laxiWeaponAuraParam);
 
-### `npm run build`
+const laxiWeaponR = await viewer.loadDLModel("w399011_01");
+laxiWeaponR.attachTo(laxi, "jWeaponR");
+laxiWeaponR.particle.add("aura", laxiWeaponAuraParam);
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+await mascula.animation.addChain(
+    "KAT_WIN_01_10004501&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>KAT_WIN_02_10004501",
+    false
+);
+await laxi.animation.addChain(
+    "DAG_WIN_01_10003204&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>DAG_WIN_02_10003204",
+    false
+);
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+mascula.animation.play();
+laxi.animation.play();
+```

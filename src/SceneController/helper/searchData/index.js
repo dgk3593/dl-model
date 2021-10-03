@@ -1,0 +1,1 @@
+export { searchData } from "./searchData";

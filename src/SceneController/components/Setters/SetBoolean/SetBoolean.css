@@ -1,0 +1,17 @@
+.SetBoolean {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SetBoolean .MuiSwitch-track {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+.SetBoolean .Mui-checked + span.MuiSwitch-track {
+    background-color: #0bb;
+}
+
+.SetBoolean .MuiSwitch-thumb {
+    background-color: #0bb;
+}

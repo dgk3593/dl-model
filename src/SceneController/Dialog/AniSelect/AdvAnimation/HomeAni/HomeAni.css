@@ -1,0 +1,13 @@
+.HomeAni-groupTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0.2rem;
+    gap: 1rem;
+}
+
+.HomeAni-groupTitle h3 {
+    text-align: center;
+    margin: auto 0.5rem;
+    max-width: 30%;
+}

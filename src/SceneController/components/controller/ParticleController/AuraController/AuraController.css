@@ -1,0 +1,22 @@
+.AuraController {
+    width: 100%;
+}
+
+.AuraController .Accordion-summary {
+    justify-content: space-between;
+}
+
+.AuraController .Accordion-summary button.closeButton {
+    color: #eee;
+    right: 0.5rem;
+    top: 50%;
+    background-color: unset;
+}
+
+.AuraController .Setters .Setters-label {
+    padding: 0 0.5rem;
+}
+
+.AuraController .Setters .Setters-slider {
+    padding: 0 1rem;
+}

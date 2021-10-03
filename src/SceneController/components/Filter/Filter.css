@@ -1,0 +1,34 @@
+.Filter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0.1rem 0;
+}
+
+.Filter-reset {
+    padding: 0.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    min-height: 2.2rem;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.Filter-reset span {
+    opacity: 0.8;
+}
+
+.Filter-reset:hover span {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.5rem white);
+}
+
+.Filter[data-compact] .GlowToggle[data-type="icon"] {
+    padding: 0.1rem;
+    height: 2.1rem;
+    width: 2.1rem;
+}

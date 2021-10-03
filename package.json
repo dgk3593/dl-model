@@ -1,61 +1,34 @@
 {
     "name": "dl-model",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@material-ui/core": "^4.12.3",
-        "@material-ui/icons": "^4.11.2",
-        "@testing-library/jest-dom": "^5.11.9",
-        "@testing-library/react": "^12.1.1",
-        "@testing-library/user-event": "^13.2.0",
-        "@types/dom-mediacapture-record": "^1.0.7",
-        "fscreen": "^1.2.0",
-        "nanoid": "^3.1.28",
-        "qrcode.react": "^1.0.1",
-        "react": "^17.0.1",
-        "react-color": "^2.19.3",
-        "react-dom": "^17.0.1",
-        "react-router-dom": "^5.3.0",
-        "react-scripts": "^4.0.3",
-        "source-map-explorer": "^2.5.2",
-        "three": "^0.133.0"
-    },
+    "version": "2.0.0-beta",
+    "homepage": "http://dgk3593.github.com/dl-model-test/#/",
     "scripts": {
-        "analyze": "source-map-explorer 'build/static/js/*.js'",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
+        "dev": "vite --host",
+        "build": "vite build",
+        "serve": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d dist"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ],
-        "rules": {
-            "react/jsx-uses-react": "off",
-            "react/react-in-jsx-scope": "off"
-        },
-        "parserOptions": {
-            "ecmaVersion": 2020
-        }
-    },
-    "homepage": "http://dgk3593.github.com/dl-model/",
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+    "dependencies": {
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@mui/icons-material": "^5.0.1",
+        "@mui/material": "^5.0.2",
+        "file-saver": "^2.0.5",
+        "idb": "^6.1.4",
+        "immer": "^9.0.6",
+        "jszip": "^3.7.1",
+        "nanoid": "^3.1.28",
+        "preact": "^10.5.13",
+        "react-beautiful-dnd": "^13.1.0",
+        "react-color": "^2.19.3",
+        "stats.js": "^0.17.0",
+        "three": "^0.133.0",
+        "zustand": "^3.5.12"
     },
     "devDependencies": {
-        "gh-pages": "^3.2.3"
+        "@preact/preset-vite": "^2.1.2",
+        "gh-pages": "^3.2.3",
+        "vite": "^2.6.2"
     }
 }

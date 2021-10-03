@@ -1,0 +1,1 @@
+export { fetchDataList } from "./fetchDataList";

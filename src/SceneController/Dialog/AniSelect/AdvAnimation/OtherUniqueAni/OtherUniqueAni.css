@@ -1,0 +1,58 @@
+.OtherUniqueAni {
+    width: 100%;
+    height: 100%;
+}
+
+.OtherUniqueAni-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-auto-flow: dense;
+    cursor: pointer;
+}
+
+.UniqueAniGroup {
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: calc(100% - 1px);
+}
+
+.UniqueAniGroup:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.UniqueAniGroup h3 {
+    margin: 0.3rem;
+    color: #101010;
+}
+
+.UniqueAniGroup img {
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+    margin: 0.3rem;
+}
+
+.UniqueAniGroup.selected {
+    background-color: #ebebeb;
+    border-radius: 0.2rem 0.2rem 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: none;
+    position: relative;
+    bottom: -1px;
+}
+
+.UniqueAniGroup.selected img {
+    filter: drop-shadow(0 0 0.2rem #101010);
+}
+
+.UniqueAniGroup-details {
+    padding: 0.5rem;
+    grid-column: 1 / -1;
+    background-color: #ebebeb;
+    border-radius: 0 0 0.2rem 0.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    max-width: calc(100% - 1px);
+}

@@ -1,0 +1,46 @@
+.PersonalAnimation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+.PersonalAni-source {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    flex: 1 1 8rem;
+    margin: 0.3rem 0;
+}
+
+.PersonalAni-source img {
+    flex: 1 2;
+    align-self: center;
+    width: clamp(6rem, 9rem, 100%);
+    filter: drop-shadow(0 0 0.2rem #101010);
+}
+
+@media screen and (max-width: 375px) {
+    .PersonalAni-source img {
+        max-width: 6rem;
+        max-height: 6rem;
+        flex: 1;
+    }
+}
+
+.PersonalAni-source h3 {
+    margin: 0.5rem 0;
+}
+
+.PersonalAni-source > div {
+    text-align: center;
+    flex: 1;
+    padding: 0.5rem;
+    width: clamp(6rem, 10rem, 100%);
+    margin: auto;
+}
+
+.PersonalAnimation .Gallery {
+    flex: 5 5 20rem;
+}

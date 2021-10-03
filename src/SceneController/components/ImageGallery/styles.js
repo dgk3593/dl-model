@@ -1,0 +1,40 @@
+export const styles = {
+    gallery: {
+        gap: "1rem",
+    },
+    container: {
+        boxSizing: "border-box",
+        maxWidth: "8rem",
+        maxHeight: "8rem",
+        position: "relative",
+        cursor: "pointer",
+        borderRadius: "5%",
+        overflow: "hidden",
+        filter: "drop-shadow(0 0 2px rgba(0,0,0,0.5))",
+        objectFit: "cover",
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 8rem",
+        alignSelf: "stretch",
+        margin: "auto",
+        "&:hover": {
+            border: "1px solid white",
+            filter: "drop-shadow(0.1rem 0.1rem 0.2rem black)",
+        },
+        "&[data-name]::after": {
+            content: "attr(data-name)",
+            position: "absolute",
+            bottom: "0.25rem",
+            left: 0,
+            backgroundColor: "rgba(0,0,0,0.8)",
+            color: "#fff",
+            textAlign: "center",
+            padding: "0.1rem",
+            width: "100%",
+        },
+        "&[data-name]:hover::after": {
+            backgroundColor: "rgba(255,255,255,0.6)",
+            color: "black",
+        },
+    },
+    image: { maxWidth: "100%" },
+};

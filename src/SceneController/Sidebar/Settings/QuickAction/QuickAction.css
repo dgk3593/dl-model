@@ -1,0 +1,25 @@
+.QuickAction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    height: 2rem;
+}
+
+.QuickAction > button {
+    flex: 1;
+    border-radius: unset;
+}
+
+.QuickAction > button:not(:last-child) {
+    border-right: 1px solid #ffffff44;
+}
+
+.QuickAction svg {
+    color: #ffffffaa;
+}
+
+.QuickAction button:hover svg {
+    color: #ffffff;
+}

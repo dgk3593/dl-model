@@ -1,0 +1,98 @@
+.CharaCard {
+    --ele-color: var(--none);
+    width: 14rem;
+    min-height: 10rem;
+    max-width: 47%;
+    padding: 0.2rem 0;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.CharaCard:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.CharaCard[data-value]:hover::after {
+    content: attr(data-value);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.2s forwards ease-in 1s 1;
+}
+
+.CharaCard[data-element="Flame"] {
+    --ele-color: var(--flame);
+}
+
+.CharaCard[data-element="Water"] {
+    --ele-color: var(--water);
+}
+
+.CharaCard[data-element="Wind"] {
+    --ele-color: var(--wind);
+}
+
+.CharaCard[data-element="Light"] {
+    --ele-color: var(--light);
+}
+
+.CharaCard[data-element="Shadow"] {
+    --ele-color: var(--shadow);
+}
+
+.CharaCard-title {
+    font-size: medium;
+    opacity: 0.5;
+    color: black;
+    z-index: 2;
+    padding: 0 0.1rem;
+}
+
+.CharaCard-name {
+    font-size: x-large;
+    color: black;
+    padding: 0.2rem;
+}
+
+.CharaCard-portrait {
+    max-width: 100%;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+
+.CharaCard:hover .CharaCard-portrait {
+    filter: drop-shadow(0 0 0.1rem black)
+        drop-shadow(0 0 0.3rem var(--ele-color));
+}
+
+.CharaCard .RarityStars {
+    max-width: 50%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

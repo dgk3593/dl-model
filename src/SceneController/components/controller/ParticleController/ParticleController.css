@@ -1,0 +1,34 @@
+.ParticleController {
+    max-width: 20rem;
+}
+
+.ParticleController.Accordion .Accordion-summary {
+    justify-content: space-between;
+}
+
+.ParticleController.Accordion .Accordion-summary .title {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.ParticleController > .Accordion-summary button {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #ccc;
+    color: #101010;
+}
+
+.ParticleController > .Accordion-summary button:hover {
+    background-color: white;
+}
+
+.ParticleController > .Accordion-summary button svg {
+    color: #101010;
+}
+
+.ParticleController.Accordion > .Accordion-details {
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

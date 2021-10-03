@@ -1,0 +1,61 @@
+.EffectController {
+    width: 100%;
+    margin: 0;
+    background-color: rgba(16, 16, 16, 0.7);
+    color: #eee;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.1);
+}
+
+.EffectController:not(.open):hover {
+    background-color: rgba(16, 16, 16, 0.7);
+}
+
+.EffectController-summary,
+.EffectController-details {
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.2rem;
+    margin: 0;
+}
+
+.EffectController-summary {
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.EffectController-summary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.EffectController .EffectController-summary :is(button, button:hover) {
+    background-color: unset;
+}
+
+.EffectController .EffectController-summary svg {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.EffectController-details {
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+    background-color: rgba(16, 16, 16, 0.5);
+}
+
+.EffectController.open .EffectController-summary {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.EffectController.open .EffectController-summary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.EffectController-name {
+    flex: 1;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}

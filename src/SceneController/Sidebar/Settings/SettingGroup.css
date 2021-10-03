@@ -1,0 +1,88 @@
+.SettingGroup {
+    max-width: 20rem;
+}
+
+.SettingGroup .Accordion-summary {
+    justify-content: space-between;
+}
+
+.SettingGroup .Accordion-summary .title {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.SettingGroup .Accordion-details {
+    overflow: hidden;
+}
+
+.SettingGroup button:not(.ColorButton) {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #ccc;
+    color: #101010;
+}
+
+.SettingGroup button:not(.ColorButton):hover {
+    background-color: white;
+}
+
+.SettingGroup button svg {
+    color: #101010;
+}
+
+.SettingGroup-extra {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 0.3rem;
+    padding-top: 0.3rem;
+}
+
+.SettingGroup-extra .Accordion-summary {
+    min-height: unset;
+}
+
+.SettingGroup-extra button {
+    color: #101010;
+}
+
+.SettingGroup.with-subgroup .Accordion {
+    width: 100%;
+}
+
+.SettingGroup.with-subgroup .Accordion-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SettingGroup.with-subgroup .Accordion-summary button {
+    background-color: unset;
+}
+
+.SettingGroup.with-subgroup .Accordion-summary button svg {
+    color: #ccc;
+}
+
+.SettingGroup.with-subgroup > .Accordion-summary button {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #ccc;
+    color: #101010;
+}
+
+.SettingGroup.with-subgroup > .Accordion-summary button:hover {
+    background-color: white;
+}
+
+.SettingGroup.with-subgroup > .Accordion-summary button svg {
+    color: #101010;
+}
+
+.SettingGroup.with-subgroup.Accordion > .Accordion-details {
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

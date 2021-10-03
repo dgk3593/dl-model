@@ -1,0 +1,17 @@
+.MeshFaceButton {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.MeshFaceButton > div {
+    cursor: pointer;
+}
+
+.MeshFaceButton > div:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+}

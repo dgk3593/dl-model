@@ -1,0 +1,33 @@
+.ModelController {
+    width: 100%;
+}
+
+.ModelController :where(.SelectBox, .SetVector, .SetNumber) {
+    background-color: #ddd;
+}
+
+.ModelController .AuraController :where(.SelectBox, .SetVector, .SetNumber) {
+    background-color: unset;
+}
+
+.ModelController .SetVector {
+    width: 100%;
+}
+
+.ModelController > .SetNumber {
+    width: 100%;
+    text-align: center;
+}
+
+.ModelController button:not(.ColorButton, .closeButton) {
+    background-color: #ccc;
+    color: #101010;
+}
+
+.ModelController button:not(.ColorButton, .closeButton):hover {
+    background-color: white;
+}
+
+.ModelController > .SelectBox {
+    margin: 0.2rem 0;
+}

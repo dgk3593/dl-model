@@ -1,0 +1,46 @@
+.ModelSelect.Accordion {
+    background-color: rgba(16, 16, 16, 0.5);
+}
+
+.ModelSelect.Accordion.open {
+    border: none;
+}
+
+.ModelSelect.Accordion :is(.Accordion-summary, .Accordion-details) {
+    padding: 0;
+    margin: 0;
+    background-color: unset;
+}
+
+.ModelSelect button {
+    width: 100%;
+    background-color: unset;
+    min-height: 2.5rem;
+    border-radius: unset;
+}
+
+.ModelSelect button:hover {
+    background-color: rgba(16, 16, 16, 0.8);
+}
+
+.ModelSelect img {
+    height: 2rem;
+}
+
+.ModelSelect button:hover img {
+    filter: drop-shadow(0 0 0.1rem white);
+    transform: scale(1.1);
+}
+
+.ModelSelect-groups {
+    display: flex;
+    width: 100%;
+}
+
+.ModelSelect-groups > button {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ModelSelect-groups > :last-child {
+    border-color: #00000000;
+}

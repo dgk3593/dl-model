@@ -1,0 +1,71 @@
+.WeaponButton {
+    width: 15rem;
+    height: 5rem;
+    margin: 0.5rem 0.25rem;
+    padding: 0.1rem;
+    display: flex;
+    border: 1px solid #101010;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    content-visibility: auto;
+    contain-intrinsic-size: 15rem 5rem;
+    cursor: pointer;
+}
+
+.WeaponButton:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+
+.WeaponButton-icon {
+    max-width: 4.5rem;
+    margin: auto 0;
+}
+
+.WeaponButton-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: larger;
+    margin: 0.25rem 0.5rem;
+}
+
+.WeaponButton-add {
+    height: 100%;
+    width: 100%;
+}
+
+.WeaponButton-grip {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.WeaponButton-addBtnGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    padding: 0 0.5rem;
+}
+
+.WeaponButton-addBtnGroup div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.WeaponButton-addBtn {
+    cursor: pointer;
+    color: white;
+    background-color: #101010;
+}
+
+.WeaponButton-addBtn:hover {
+    background-color: #444;
+}
