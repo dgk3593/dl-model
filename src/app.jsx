@@ -21,10 +21,8 @@ export function App() {
     const { loadingMsg, showTimeControl, showSettings } = useAppState();
 
     useEffect(() => {
-        if (isMount) {
-            loadHash();
-            loadPersonalAni();
-        }
+        isMount && loadPersonalAni().then(loadHash);
+
         window.addEventListener("hashchange", loadHash);
 
         return () => window.removeEventListener("hashchange", loadHash);
