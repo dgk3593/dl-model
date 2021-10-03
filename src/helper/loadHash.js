@@ -18,12 +18,12 @@ export function loadHash() {
 function applySettings(settings) {
     const {
         bg = DEFAULT.BACKGROUND,
-        showControl = "true",
+        showAC = "true",
         showSettings = "true",
     } = settings;
 
     viewer.background = bg;
-    useAppState.setState({ showTimeControl: getBool(showControl) });
+    useAppState.setState({ showTimeControl: getBool(showAC) });
     useAppState.setState({ showSettings: getBool(showSettings) });
 }
 
