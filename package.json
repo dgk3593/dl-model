@@ -1,7 +1,7 @@
 {
     "name": "dl-model",
-    "version": "2.0.0-beta",
-    "homepage": "http://dgk3593.github.com/dl-model-test/#/",
+    "version": "2.0.0",
+    "homepage": "https://dgk3593.github.io/dl-model/#/",
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",

@@ -11,7 +11,7 @@ export const kofi = (
 );
 
 export const githubIcon = (
-    <a href="https://github.com/dgk3593/dl-model-test" target="_blank">
+    <a href="https://github.com/dgk3593/dl-model" target="_blank">
         <GitHub
             style={{
                 width: "2rem",

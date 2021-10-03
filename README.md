@@ -1,4 +1,4 @@
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dgk3593/dl-model-test)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dgk3593/dl-model)
 
 Sample terminal program:
 
