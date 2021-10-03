@@ -1,0 +1,1 @@
+import{aw as o}from"./vendor.fe894b4a.js";import{G as g}from"./GlowToggle.82bde0aa.js";function i({type:r,value:c,options:l,icons:t=[],onClick:s,labels:n=[]}){const m=e=>{e.stopPropagation();const{value:a}=e.currentTarget.dataset;s(a)},d=l.map((e,a)=>o(g,{type:r,value:e,name:n[a],icon:t[a],onClick:m,key:e,checked:c===e}));return o("div",{className:"Selector"},d)}export{i as S};
