@@ -7,7 +7,7 @@ import {
     SkipNext,
     Close,
 } from "@mui/icons-material";
-import { Button, ButtonGroup } from "@mui/material";
+import { Button, ButtonGroup, IconButton } from "@mui/material";
 import GlowToggle from "components/GlowToggle";
 import viewer from "@/viewer";
 
@@ -73,13 +73,9 @@ function TimeControl() {
 
             <TimeScaleControl />
 
-            <Button
-                variant="contained"
-                onClick={toggleTimeControl}
-                title="Close"
-            >
+            <IconButton onClick={toggleTimeControl} title="Close">
                 <Close />
-            </Button>
+            </IconButton>
         </div>
     );
 }
