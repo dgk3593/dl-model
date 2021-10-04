@@ -21,6 +21,11 @@
     color: white;
 }
 
+.TimeControl button[title="Close"] {
+    border-radius: unset;
+    border-left: 2px solid #eee7;
+}
+
 .TimeControl button:hover {
     background-color: #101010;
 }

@@ -26,19 +26,20 @@ function SceneSettings() {
         <>
             <DisplayControl />
             <AutoRotate />
-            <Button
-                variant="contained"
-                onClick={toggleTimeControl}
-                startIcon={showTimeControl ? <VisibilityOff /> : <Visibility />}
-            >
-                {showTimeControl ? "Hide Time Control" : "Show Time Control"}
-            </Button>
+
             <Button
                 variant="contained"
                 onClick={toggleFrameRate}
                 startIcon={<ShowChart />}
             >
                 {showFrameRate ? "Hide Frame Rate" : "Show Frame Rate"}
+            </Button>
+            <Button
+                variant="contained"
+                onClick={toggleTimeControl}
+                startIcon={showTimeControl ? <VisibilityOff /> : <Visibility />}
+            >
+                {showTimeControl ? "Hide Time Control" : "Show Time Control"}
             </Button>
             <span className="break" />
 

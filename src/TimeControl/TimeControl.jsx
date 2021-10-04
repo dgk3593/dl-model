@@ -1,5 +1,12 @@
 import { useToggleState } from "@/SceneController/hook";
-import { PlayArrow, Pause, SkipPrevious, SkipNext } from "@mui/icons-material";
+import { useAppState } from "@/state";
+import {
+    PlayArrow,
+    Pause,
+    SkipPrevious,
+    SkipNext,
+    Close,
+} from "@mui/icons-material";
 import { Button, ButtonGroup } from "@mui/material";
 import GlowToggle from "components/GlowToggle";
 import viewer from "@/viewer";
@@ -10,6 +17,7 @@ import TimeScaleControl from "./TimeScaleControl";
 function TimeControl() {
     const [isPaused, togglePaused] = useToggleState(viewer.loop.paused);
     const [isReverse, toggleIsReverse] = useToggleState(viewer.loop.reverse);
+    const { toggleTimeControl } = useAppState();
     const onTogglePause = () => {
         isPaused ? viewer.loop.resume() : viewer.loop.pause();
         togglePaused();
@@ -55,13 +63,23 @@ function TimeControl() {
                     <SkipNext />
                 </Button>
             </ButtonGroup>
+
             <GlowToggle
                 type="text"
                 value="Reverse"
                 checked={isReverse}
                 onClick={onToggleReverse}
             />
+
             <TimeScaleControl />
+
+            <Button
+                variant="contained"
+                onClick={toggleTimeControl}
+                title="Close"
+            >
+                <Close />
+            </Button>
         </div>
     );
 }
