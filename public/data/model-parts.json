@@ -126,6 +126,16 @@
                 }
             }
         },
+        "d210142_01": {
+            "A": {
+                "name": "Box",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                },
+                "default": "Shown"
+            }
+        },
         "d210144_01": {
             "A": {
                 "name": "Lance",
