@@ -24,6 +24,10 @@ export const appStateConfig = set => ({
     toggleTimeControl: () =>
         set(state => void (state.showTimeControl = !state.showTimeControl)),
 
+    showFrameRate: false,
+    toggleFrameRate: () =>
+        set(state => void (state.showFrameRate = !state.showFrameRate)),
+
     sidebar: {
         open: true,
         toggle: () => set(({ sidebar }) => void (sidebar.open = !sidebar.open)),

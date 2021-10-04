@@ -18,7 +18,8 @@ export function App() {
      * @type { React.MutableRefObject <HTMLDivElement> }
      */
     const stats = useRef();
-    const { loadingMsg, showTimeControl, showSettings } = useAppState();
+    const { loadingMsg, showTimeControl, showSettings, showFrameRate } =
+        useAppState();
 
     useEffect(() => {
         isMount && loadPersonalAni().then(loadHash);
@@ -31,8 +32,8 @@ export function App() {
     useEffect(() => {
         mainView.current?.appendChild(viewer.canvas);
 
-        // viewer.stats.dom.style.position = "";
-        // stats.current?.appendChild(viewer.stats.dom);
+        viewer.stats.dom.style.position = "";
+        stats.current?.appendChild(viewer.stats.dom);
     }, []);
 
     return (
@@ -43,7 +44,11 @@ export function App() {
                 </Suspense>
             )}
             <div className="mount" ref={el => (mainView.current = el)} />
-            <div className="stats" ref={el => (stats.current = el)} />
+            <div
+                className="stats"
+                style={{ display: showFrameRate ? "unset" : "none" }}
+                ref={el => (stats.current = el)}
+            />
 
             {loadingMsg && <div className="loading-msg">{loadingMsg}</div>}
             {showTimeControl && (

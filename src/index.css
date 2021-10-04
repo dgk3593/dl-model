@@ -31,9 +31,11 @@ body {
 }
 
 .stats {
+    display: none;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .loading-msg {

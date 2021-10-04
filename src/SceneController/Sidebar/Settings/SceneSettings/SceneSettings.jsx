@@ -6,11 +6,21 @@ import LightControl from "./LightControl";
 import PostProcessingControl from "./PostProcessingControl";
 
 import { Button } from "@mui/material";
-import { Panorama, Visibility, VisibilityOff } from "@mui/icons-material";
+import {
+    Panorama,
+    ShowChart,
+    Visibility,
+    VisibilityOff,
+} from "@mui/icons-material";
 
 function SceneSettings() {
     const openModal = useAppState(state => state.sidebar.modal.open);
-    const { showTimeControl, toggleTimeControl } = useAppState();
+    const {
+        showTimeControl,
+        toggleTimeControl,
+        showFrameRate,
+        toggleFrameRate,
+    } = useAppState();
 
     return (
         <>
@@ -22,6 +32,13 @@ function SceneSettings() {
                 startIcon={showTimeControl ? <VisibilityOff /> : <Visibility />}
             >
                 {showTimeControl ? "Hide Time Control" : "Show Time Control"}
+            </Button>
+            <Button
+                variant="contained"
+                onClick={toggleFrameRate}
+                startIcon={<ShowChart />}
+            >
+                {showFrameRate ? "Hide Frame Rate" : "Show Frame Rate"}
             </Button>
             <span className="break" />
 
