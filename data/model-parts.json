@@ -351,6 +351,66 @@
                     "B": "Hidden"
                 }
             }
+        },
+        "r0010101": {
+            "A": {
+                "name": "Head",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Right Leg",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Left Leg",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0010401": {
+            "A": {
+                "name": "Head",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Right Leg",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Left Leg",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
         }
     }
 }

@@ -5133,6 +5133,104 @@
                 "code": "D21016201_060_01",
                 "icon": "Icon_Skill_278"
             }
+        ],
+        "r0010101": [
+            { "name": "Idle", "code": "R0010101_000_01" },
+            { "name": "Idle 2", "code": "R0010101_014_01" },
+            { "name": "Walk", "code": "R0010101_002_01" },
+            { "name": "Slight Turn Right", "code": "R0010101_002_11" },
+            { "name": "Slight Turn Left", "code": "R0010101_002_12" },
+            { "name": "Turn Right", "code": "R0010101_002_21" },
+            { "name": "Turn Left", "code": "R0010101_002_22" },
+            { "name": "Flinch", "code": "R0010101_010_01" },
+            { "name": "Defeated", "code": "R0010101_011_01" },
+            { "name": "Frozen", "code": "R0010101_013_01" },
+            { "name": "Overdrive", "code": "R0010101_022_01" },
+            { "name": "Head Broken", "code": "R0010101_070_01" },
+            { "name": "Right Leg Broken", "code": "R0010101_070_02" },
+            { "name": "Left Leg Broken", "code": "R0010101_070_03" },
+            { "name": "Tail Broken", "code": "R0010101_070_04" },
+            { "name": "Broken", "code": "R0010101_081_01>R0010101_081_02" },
+            { "name": "Recover from Broken", "code": "R0010101_081_03" },
+            { "name": "Boss Intro", "code": "R0010101_090_02>R0010101_090_01" },
+            { "name": "Roar", "code": "R0010101_100_01" },
+            { "name": "Roar 2", "code": "R0010101_112_01" },
+            {
+                "name": "Roar 3",
+                "code": "R0010101_116_01>R0010101_116_02>R0010101_116_03"
+            },
+            { "name": "Right Leg Stomp", "code": "R0010101_101_01" },
+            { "name": "Left Leg Stomp", "code": "R0010101_102_01" },
+            { "name": "Right Left Stomp", "code": "R0010101_103_01" },
+            { "name": "Right Leg Swipe", "code": "R0010101_104_01" },
+            { "name": "Left Leg Swipe", "code": "R0010101_105_01" },
+            { "name": "Double Stomp", "code": "R0010101_106_01" },
+            { "name": "Multiple Stomp", "code": "R0010101_107_01" },
+            { "name": "Quick Attack", "code": "R0010101_108_01" },
+            { "name": "Front Blast", "code": "R0010101_109_01" },
+            { "name": "Triple Blast", "code": "R0010101_110_01" },
+            { "name": "Shake", "code": "R0010101_111_01" },
+            {
+                "name": "Shake 2",
+                "code": "R0010101_113_01>R0010101_113_02>R0010101_113_03"
+            },
+            {
+                "name": "Charge Forward",
+                "code": "R0010101_114_01>R0010101_114_02"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0010101_115_01>R0010101_115_02"
+            }
+        ],
+        "r0010401": [
+            { "name": "Idle", "code": "R0010101_000_01" },
+            { "name": "Idle 2", "code": "R0010101_014_01" },
+            { "name": "Walk", "code": "R0010101_002_01" },
+            { "name": "Slight Turn Right", "code": "R0010101_002_11" },
+            { "name": "Slight Turn Left", "code": "R0010101_002_12" },
+            { "name": "Turn Right", "code": "R0010101_002_21" },
+            { "name": "Turn Left", "code": "R0010101_002_22" },
+            { "name": "Flinch", "code": "R0010101_010_01" },
+            { "name": "Defeated", "code": "R0010101_011_01" },
+            { "name": "Frozen", "code": "R0010101_013_01" },
+            { "name": "Overdrive", "code": "R0010101_022_01" },
+            { "name": "Head Broken", "code": "R0010101_070_01" },
+            { "name": "Right Leg Broken", "code": "R0010101_070_02" },
+            { "name": "Left Leg Broken", "code": "R0010101_070_03" },
+            { "name": "Tail Broken", "code": "R0010101_070_04" },
+            { "name": "Broken", "code": "R0010101_081_01>R0010101_081_02" },
+            { "name": "Recover from Broken", "code": "R0010101_081_03" },
+            { "name": "Boss Intro", "code": "R0010101_090_02>R0010101_090_01" },
+            { "name": "Roar", "code": "R0010101_100_01" },
+            { "name": "Roar 2", "code": "R0010101_112_01" },
+            {
+                "name": "Roar 3",
+                "code": "R0010101_116_01>R0010101_116_02>R0010101_116_03"
+            },
+            { "name": "Right Leg Stomp", "code": "R0010101_101_01" },
+            { "name": "Left Leg Stomp", "code": "R0010101_102_01" },
+            { "name": "Right Left Stomp", "code": "R0010101_103_01" },
+            { "name": "Right Leg Swipe", "code": "R0010101_104_01" },
+            { "name": "Left Leg Swipe", "code": "R0010101_105_01" },
+            { "name": "Double Stomp", "code": "R0010101_106_01" },
+            { "name": "Multiple Stomp", "code": "R0010101_107_01" },
+            { "name": "Quick Attack", "code": "R0010101_108_01" },
+            { "name": "Front Blast", "code": "R0010101_109_01" },
+            { "name": "Triple Blast", "code": "R0010101_110_01" },
+            { "name": "Shake", "code": "R0010101_111_01" },
+            {
+                "name": "Shake 2",
+                "code": "R0010101_113_01>R0010101_113_02>R0010101_113_03"
+            },
+            {
+                "name": "Charge Forward",
+                "code": "R0010101_114_01>R0010101_114_02"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0010101_115_01>R0010101_115_02"
+            }
         ]
     }
 }
