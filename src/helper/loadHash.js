@@ -1,6 +1,6 @@
 import { getBool } from "./utils";
 import { parseCode } from "@/dl-viewer/utils/parseCode";
-import { useAppState } from "@/state";
+import { useAniSelectState, useAppState } from "@/state";
 import * as DEFAULT from "./default";
 import viewer from "@/viewer";
 import { getDefaultCamera, getDefaultControl } from "../dl-viewer";
@@ -27,8 +27,9 @@ function applySettings(settings) {
     useAppState.setState({ showSettings: getBool(showSettings) });
 }
 
-async function loadModel(hash) {
+async function loadModel(encodedHash) {
     viewer.disposeAllModels();
+    const hash = decodeURI(encodedHash);
 
     setTimeout(async () => {
         const code = hash.includes("id=")
@@ -36,6 +37,12 @@ async function loadModel(hash) {
             : hash + `/id=${DEFAULT.MODEL}`;
         const model = await viewer.loadModelFromCode(code);
         viewer.add(model);
+
+        useAniSelectState
+            .getState()
+            .setCategory(
+                model.type === "adventurer" ? "Adventurer" : "Personal"
+            );
 
         const { id } = model;
         if (!hash.includes("camPos=")) {

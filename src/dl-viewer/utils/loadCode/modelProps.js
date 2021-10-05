@@ -21,7 +21,6 @@ export const modelProps = {
     },
     tx: {
         keys: ["texture"],
-        valueMap: str => str.replace(/%3E/g, ">"),
     },
     scl: {
         keys: ["scale"],
