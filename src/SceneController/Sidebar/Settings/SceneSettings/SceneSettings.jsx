@@ -12,6 +12,7 @@ import {
     Visibility,
     VisibilityOff,
 } from "@mui/icons-material";
+import CameraControl from "./CameraControl";
 
 function SceneSettings() {
     const openModal = useAppState(state => state.sidebar.modal.open);
@@ -25,7 +26,9 @@ function SceneSettings() {
     return (
         <>
             <DisplayControl />
+            <CameraControl />
             <AutoRotate />
+            <span className="break" />
 
             <Button
                 variant="contained"
