@@ -1,12 +1,12 @@
 import fbxList from "./fileList";
-import { loadModel } from "helpers/viewerHelpers";
-import { fbxSource } from "App";
-import downloadBlob from "../downloadBlob";
+import { FBX_SOURCE } from "@/dl-viewer/path";
+import { loadModel } from "../loadModel";
+import { saveAs } from "file-saver";
 
 const DOWNLOAD_LIMIT = 10;
 
 const getModel = async fileName => {
-    const filePath = `${fbxSource}/fbx/${fileName}`;
+    const filePath = `${FBX_SOURCE}/${fileName}`;
     const model = await loadModel(filePath);
     return model;
 };
@@ -17,7 +17,7 @@ const exportAni = async ani => {
 
     const blob = new Blob([content], { type: "text/plain" });
 
-    downloadBlob(blob, fileName);
+    saveAs(blob, fileName);
 };
 
 const pause = async msec => {

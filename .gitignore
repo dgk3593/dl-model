@@ -4,6 +4,7 @@ node_modules
 dist
 dist-ssr
 *.local
+public/animations/todo
 
 # verification
 /public/googlea187144a43f2cf78.html

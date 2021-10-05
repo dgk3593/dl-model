@@ -1,5 +1,5 @@
 import { getDateTimeString } from ".";
-import { downloadBlob } from "./downloader";
+import { saveAs } from "file-saver";
 
 /** list of video mime types to check for */
 const videoMimeTypes = [
@@ -61,7 +61,7 @@ export default function createRecorder(canvas) {
                     : "";
                 const fullFileName = `${fileName || "ani"}${append}.${format}`;
 
-                downloadBlob(blob, fullFileName);
+                saveAs(blob, fullFileName);
             };
             recorder.start();
             this.recorder = recorder;

@@ -1,8 +1,9 @@
 import fbxList from "./fileList";
-import downloadBlob from "../downloadBlob";
+import { saveAs } from "file-saver";
+import { ANIMATION_SOURCE } from "@/dl-viewer/path";
 import * as THREE from "three";
 
-const dir = `${process.env.PUBLIC_URL}/animations/todo`;
+const dir = `${ANIMATION_SOURCE}/todo`;
 const DOWNLOAD_LIMIT = 10;
 
 const extraTranslate = new Float32Array([0, 0, 0]);
@@ -23,7 +24,7 @@ const exportAni = async ani => {
 
     const blob = new Blob([content], { type: "text/plain" });
 
-    downloadBlob(blob, fileName);
+    saveAs(blob, fileName);
 };
 
 const exportAllAni = async animations => {

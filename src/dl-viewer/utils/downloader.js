@@ -1,3 +1,5 @@
+import { saveAs } from "file-saver";
+
 /**
  * wait ms milliseconds
  * @param {number} ms
@@ -22,7 +24,7 @@ export function downloadBlob(blob, fileName) {
 }
 
 /** download data URL as the given file name
- * @param {string} url - data URI
+ * @param {string} url - data URL
  * @param {string} fileName
  */
 export function downloadURL(url, fileName) {
@@ -64,7 +66,7 @@ export async function pngUrlToZip(urls, baseName) {
  */
 export async function batchDownloadPNG(urls, baseName) {
     const file = await pngUrlToZip(urls, baseName);
-    downloadBlob(file, `${baseName}.zip`);
+    saveAs(file, `${baseName}.zip`);
 }
 
 /**
@@ -92,5 +94,5 @@ export async function pngBlobToZip(blobs, baseName) {
  */
 export async function downloadBlobsAsZip(blobs, baseName) {
     const file = await pngBlobToZip(blobs, baseName);
-    downloadBlob(file, `${baseName}.zip`);
+    saveAs(file, `${baseName}.zip`);
 }

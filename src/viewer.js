@@ -24,3 +24,13 @@ function toggleFullScreen() {
 
     fscreen.exitFullscreen();
 }
+
+window.fbx2json = async () => {
+    const { fbx2json } = await import("./utils/fbx2json");
+    fbx2json();
+};
+
+window.processSummonClips = async () => {
+    const { processSummonClips } = await import("./utils/processSummonClips");
+    processSummonClips();
+};

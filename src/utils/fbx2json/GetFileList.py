@@ -1,7 +1,7 @@
 import os
 
 directory = 'public/fbx'
-outputFile = 'src/helpers/fbx2json/fileList.js'
+outputFile = 'src/utils/fbx2json/fileList.js'
 
 if __name__ == '__main__':
     fileList = os.listdir(directory)
