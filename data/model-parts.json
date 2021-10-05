@@ -411,6 +411,392 @@
                     "BR": "Broken"
                 }
             }
+        },
+        "r0020301": {
+            "A": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0020501": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0020001": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "E": {
+                "name": "1st Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "F": {
+                "name": "2nd Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "G": {
+                "name": "3rd Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "H": {
+                "name": "4th Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "I": {
+                "name": "5th Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            },
+            "J": {
+                "name": "Great Sword",
+                "options": {
+                    "A": "Shown",
+                    "B": "Hidden"
+                }
+            }
+        },
+        "r0030201": {
+            "A": {
+                "name": "Right Arm",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Arm",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Goatee",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "D": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0030501": {
+            "A": {
+                "name": "Right Arm",
+                "options": {
+                    "default": "Normal"
+                }
+            },
+            "B": {
+                "name": "Left Arm",
+                "options": {
+                    "default": "Normal"
+                }
+            },
+            "C": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0040101": {
+            "A": {
+                "name": "Left Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Right Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0040201": {
+            "A": {
+                "name": "Left Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Right Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0040401": {
+            "A": {
+                "name": "Left Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Right Tentacles",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0050301": {
+            "A": {
+                "name": "Jingu Bang",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0050501": {
+            "B": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0060401": {
+            "A": {
+                "name": "Locks",
+                "options": {
+                    "default": "Shown",
+                    "BR": "Hidden"
+                }
+            }
+        },
+        "r0070401": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0070501": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0080401": {
+            "A": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0090501": {
+            "A": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0100501": {
+            "A": {
+                "name": "Head",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Right Wing",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0110001": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0110002": {
+            "A": {
+                "name": "Right Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Hand",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "C": {
+                "name": "Tail",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
+        },
+        "r0120301": {
+            "A": {
+                "name": "Armor",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
         }
     }
 }
