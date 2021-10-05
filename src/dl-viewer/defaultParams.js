@@ -14,7 +14,7 @@ export const PERSPECTIVE_CAM = {
     type: "Perspective",
     fov: 45,
     aspect: 1,
-    far: 100,
+    far: 300,
     near: 0.01,
 };
 

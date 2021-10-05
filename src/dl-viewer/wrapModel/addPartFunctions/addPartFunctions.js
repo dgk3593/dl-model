@@ -16,6 +16,10 @@ export default function addPartFunctions(container) {
         const { name } = mesh;
         if (!name?.match) return;
 
+        if (name.includes("Effect")) {
+            mesh.visible = false;
+        }
+
         if (name.match(/mParts/)) {
             partMeshes.push(mesh);
             return;
