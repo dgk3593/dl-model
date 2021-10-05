@@ -293,13 +293,14 @@
             },
             {
                 "user": "c100019_02",
-                "name": "Raven's Patsy",
+                "name": "Raven's Ridicule",
+                "subtitle": "Counter",
                 "code": "KAT_SKL_01_01_10001902",
                 "icon": "Icon_Skill_032"
             },
             {
                 "user": "c100019_02",
-                "name": "Raven's Patsy 2",
+                "name": "Raven's Patsy",
                 "code": "KAT_SKL_02_01_10001902",
                 "icon": "Icon_Skill_032"
             },
