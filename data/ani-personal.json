@@ -5488,6 +5488,84 @@
                 "code": "R0030501_108_01>R0030501_108_02>R0030501_108_03"
             },
             { "name": "Relax", "code": "R0030501_109_01" }
+        ],
+        "r0040101": [
+            { "name": "Idle", "code": "R0040001_000_01" },
+            { "name": "Idle 2", "code": "R0040001_014_01" },
+            { "name": "Move", "code": "R0040001_002_01" },
+            { "name": "Defeated", "code": "R0040001_011_01" },
+            { "name": "Frozen", "code": "R0040001_013_01" },
+            { "name": "Overdrive", "code": "R0040001_022_01" },
+            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            {
+                "name": "Front Right Tentacle Broken",
+                "code": "R0040001_070_01"
+            },
+            { "name": "Front Left Tentacle Broken", "code": "R0040001_070_02" },
+            { "name": "Back Right Tentacle Broken", "code": "R0040001_070_03" },
+            { "name": "Back Left Tentacle Broken", "code": "R0040001_070_04" },
+            { "name": "Broken", "code": "R0040001_081_01>R0040001_081_02" },
+            { "name": "Recover from Broken", "code": "R0040001_081_03" },
+            { "name": "Right Strike", "code": "R0040001_100_01" },
+            { "name": "Left Strike", "code": "R0040001_101_01" },
+            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            {
+                "name": "Dance",
+                "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            }
+        ],
+        "r0040201": [
+            { "name": "Idle", "code": "R0040001_000_01" },
+            { "name": "Idle 2", "code": "R0040001_014_01" },
+            { "name": "Move", "code": "R0040001_002_01" },
+            { "name": "Defeated", "code": "R0040001_011_01" },
+            { "name": "Frozen", "code": "R0040001_013_01" },
+            { "name": "Overdrive", "code": "R0040001_022_01" },
+            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            {
+                "name": "Front Right Tentacle Broken",
+                "code": "R0040001_070_01"
+            },
+            { "name": "Front Left Tentacle Broken", "code": "R0040001_070_02" },
+            { "name": "Back Right Tentacle Broken", "code": "R0040001_070_03" },
+            { "name": "Back Left Tentacle Broken", "code": "R0040001_070_04" },
+            { "name": "Broken", "code": "R0040001_081_01>R0040001_081_02" },
+            { "name": "Recover from Broken", "code": "R0040001_081_03" },
+            { "name": "Right Strike", "code": "R0040001_100_01" },
+            { "name": "Left Strike", "code": "R0040001_101_01" },
+            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            {
+                "name": "Dance",
+                "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            }
+        ],
+        "r0040401": [
+            { "name": "Idle", "code": "R0040001_000_01" },
+            { "name": "Idle 2", "code": "R0040001_014_01" },
+            { "name": "Move", "code": "R0040001_002_01" },
+            { "name": "Defeated", "code": "R0040001_011_01" },
+            { "name": "Frozen", "code": "R0040001_013_01" },
+            { "name": "Overdrive", "code": "R0040001_022_01" },
+            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            {
+                "name": "Front Right Tentacle Broken",
+                "code": "R0040001_070_01"
+            },
+            { "name": "Front Left Tentacle Broken", "code": "R0040001_070_02" },
+            { "name": "Back Right Tentacle Broken", "code": "R0040001_070_03" },
+            { "name": "Back Left Tentacle Broken", "code": "R0040001_070_04" },
+            { "name": "Broken", "code": "R0040001_081_01>R0040001_081_02" },
+            { "name": "Recover from Broken", "code": "R0040001_081_03" },
+            { "name": "Right Strike", "code": "R0040001_100_01" },
+            { "name": "Left Strike", "code": "R0040001_101_01" },
+            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            {
+                "name": "Dance",
+                "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            }
         ]
     }
 }
