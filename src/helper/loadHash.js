@@ -60,6 +60,10 @@ async function loadModel(encodedHash) {
                 model.animation.addChain(code);
                 model.userData.chain = chainCodeToList(code, name);
             }
+        } else {
+            const currentAni = model.animation.current.chainCode ?? "";
+            currentAni &&
+                (model.userData.chain = chainCodeToList(currentAni, "init"));
         }
     });
 }
