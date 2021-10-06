@@ -5253,11 +5253,11 @@
                 "code": "R0020001_100_01"
             },
             {
-                "name": "Shoot Projectiles",
+                "name": "Shoot Swords",
                 "code": "R0020001_101_01>R0020001_101_02>R0020001_101_03"
             },
             {
-                "name": "Weapon Formation",
+                "name": "Sword Formation",
                 "code": "R0020001_102_01>R0020001_102_02>R0020001_102_03>R0020001_102_04>R0020001_102_05"
             },
             {
@@ -5307,48 +5307,22 @@
             { "name": "Right Wing Broken", "code": "R0020001_070_04" },
             { "name": "Broken", "code": "R0020001_081_01>R0020001_081_02" },
             { "name": "Recover from Broken", "code": "R0020001_081_03" },
-            {
-                "name": "Right Hook",
-                "code": "R0020001_100_01"
-            },
-            {
-                "name": "Shoot Projectiles",
-                "code": "R0020001_101_01>R0020001_101_02>R0020001_101_03"
-            },
-            {
-                "name": "Weapon Formation",
-                "code": "R0020001_102_01>R0020001_102_02>R0020001_102_03>R0020001_102_04>R0020001_102_05"
-            },
-            {
-                "name": "Ground Attack",
-                "code": "R0020001_103_01>R0020001_103_02>R0020001_103_03>R0020001_103_04>R0020001_103_05"
-            },
-            {
-                "name": "Front Blast",
-                "code": "R0020001_104_01>R0020001_104_02>R0020001_104_03"
-            },
-            {
-                "name": "Upward Attack",
-                "code": "R0020001_105_01>R0020001_105_02>R0020001_105_03"
-            },
-            {
-                "name": "Thump Ground",
-                "code": "R0020001_106_01"
-            },
-            {
-                "name": "Wide Attack",
-                "code": "R0020001_107_01"
-            },
-            {
-                "name": "Charged Attack",
-                "code": "R0020001_108_01>R0020001_108_02>R0020001_108_03>R0020001_108_04>R0020001_108_05"
-            },
+            { "name": "Front Blast", "code": "R0020301_107_01" },
             {
                 "name": "Right Swipe",
                 "code": "R0020301_100_01>R0020301_100_02"
             },
             { "name": "Double Swipe", "code": "R0020301_101_01" },
-            { "name": "Open Right Hand", "code": "R0020301_105_01" }
+            { "name": "Right Hand Swipe", "code": "R0020301_102_01" },
+            { "name": "Open Right Hand", "code": "R0020301_105_01" },
+            { "name": "Upward Attack", "code": "R0020301_106_01" },
+            { "name": "Ground Attack", "code": "R0020301_108_01" },
+            { "name": "Cross Hands", "code": "R0020301_109_01" },
+            {
+                "name": "Charge",
+                "code": "R0020301_111_01>R0020301_111_02>R0020301_111_03"
+            },
+            { "name": "Breath Attack", "code": "R0020301_115_01" }
         ],
         "r0020501": [
             { "name": "Idle", "code": "R0020001_000_01" },
@@ -5371,20 +5345,16 @@
                 "code": "R0020001_100_01"
             },
             {
-                "name": "Shoot Projectiles",
-                "code": "R0020001_101_01>R0020001_101_02>R0020001_101_03"
-            },
-            {
                 "name": "Left Hand Swipe",
                 "code": "R0020501_102_01"
             },
             {
-                "name": "Double Swipe",
-                "code": "R0020501_103_01"
-            },
-            {
                 "name": "Right Hand Swipe",
                 "code": "R0020501_104_01"
+            },
+            {
+                "name": "Double Swipe",
+                "code": "R0020501_103_01"
             },
             {
                 "name": "Upward Attack",
