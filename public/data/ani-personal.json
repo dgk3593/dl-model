@@ -5334,6 +5334,10 @@
             { "name": "Frozen", "code": "R0020001_013_01" },
             { "name": "Overdrive", "code": "R0020001_022_01" },
             { "name": "Boss Intro", "code": "R0020301_090_01>R0020301_090_02" },
+            {
+                "name": "Raid Intro",
+                "code": "R0020501_090_01>R0020501_090_02>R0020501_090_03>R0020501_090_04>R0020501_090_05"
+            },
             { "name": "Left Hand Broken", "code": "R0020001_070_01" },
             { "name": "Right Hand Broken", "code": "R0020001_070_02" },
             { "name": "Left Wing Broken", "code": "R0020001_070_03" },
@@ -5406,6 +5410,10 @@
             { "name": "Recover from Broken", "code": "R0030001_081_03" },
             { "name": "Boss Intro", "code": "R0030001_090_01>R0030001_090_02" },
             {
+                "name": "Raid Intro",
+                "code": "R0030201_090_01>R0030201_090_02>R0030201_090_03>R0030201_090_04"
+            },
+            {
                 "name": "Right Hook",
                 "code": "R0030201_100_01>R0030201_100_02>R0030201_100_03"
             },
@@ -5455,6 +5463,10 @@
             { "name": "Recover from Broken", "code": "R0030001_081_03" },
             { "name": "Boss Intro", "code": "R0030001_090_01>R0030001_090_02" },
             {
+                "name": "Raid Intro",
+                "code": "R0030501_090_01>R0030501_090_02>R0030501_090_03>R0030501_090_04"
+            },
+            {
                 "name": "Right Thump",
                 "code": "R0030501_100_01>R0030501_100_02>R0030501_100_03"
             },
@@ -5496,7 +5508,7 @@
             { "name": "Defeated", "code": "R0040001_011_01" },
             { "name": "Frozen", "code": "R0040001_013_01" },
             { "name": "Overdrive", "code": "R0040001_022_01" },
-            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            { "name": "Boss Intro", "code": "R0040101_090_01" },
             {
                 "name": "Front Right Tentacle Broken",
                 "code": "R0040001_070_01"
@@ -5541,7 +5553,7 @@
             { "name": "Defeated", "code": "R0040001_011_01" },
             { "name": "Frozen", "code": "R0040001_013_01" },
             { "name": "Overdrive", "code": "R0040001_022_01" },
-            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            { "name": "Boss Intro", "code": "R0040101_090_01" },
             {
                 "name": "Front Right Tentacle Broken",
                 "code": "R0040001_070_01"
@@ -5586,7 +5598,7 @@
             { "name": "Defeated", "code": "R0040001_011_01" },
             { "name": "Frozen", "code": "R0040001_013_01" },
             { "name": "Overdrive", "code": "R0040001_022_01" },
-            { "name": "Boss Intro", "code": "R0040001_090_01" },
+            { "name": "Boss Intro", "code": "R0040101_090_01" },
             {
                 "name": "Front Right Tentacle Broken",
                 "code": "R0040001_070_01"
