@@ -72,6 +72,7 @@ export default function addPartFunctions(container) {
         const label = partData?.name.replace(/ /g, "_") ?? partName;
         const optionNames = partData?.options;
         const partMeshes = getPartMeshes(partName);
+        partMeshes.forEach(mesh => (mesh.frustumCulled = false));
 
         const optionList = partMeshes.map(({ name }) => {
             const subpartCode = optionRegex.exec(name)?.[1] ?? "default";
