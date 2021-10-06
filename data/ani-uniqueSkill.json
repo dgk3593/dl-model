@@ -473,6 +473,18 @@
                 "name": "Haunter of the Festival",
                 "code": "KAT_SKL_01_01_11034904",
                 "icon": "Icon_Skill_267"
+            },
+            {
+                "user": "c110395_01",
+                "name": "Tactical Skewer",
+                "code": "KAT_SKL_01_01_11039501",
+                "icon": "Icon_Skill_279"
+            },
+            {
+                "user": "c110395_01",
+                "name": "Imperial Castling",
+                "code": "KAT_SKL_02_01_11039501",
+                "icon": "Icon_Skill_281"
             }
         ],
         "Dagger": [
