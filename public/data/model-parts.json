@@ -541,7 +541,8 @@
                 "options": {
                     "A": "Shown",
                     "B": "Hidden"
-                }
+                },
+                "default": "Hidden"
             }
         },
         "r0030201": {
