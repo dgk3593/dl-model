@@ -5508,11 +5508,30 @@
             { "name": "Recover from Broken", "code": "R0040001_081_03" },
             { "name": "Right Strike", "code": "R0040001_100_01" },
             { "name": "Left Strike", "code": "R0040001_101_01" },
-            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Right Swipe", "code": "R0040201_103_01" },
+            { "name": "Left Swipe", "code": "R0040201_104_01" },
+            {
+                "name": "Stand on Tentacles",
+                "code": "R0040101_105_01>R0040101_105_02>R0040101_105_03"
+            },
+            {
+                "name": "Spin",
+                "code": "R0040101_107_01>R0040101_107_02>R0040101_107_03"
+            },
+            {
+                "name": "Dash Forward",
+                "code": "R0040101_109_01>R0040101_109_02>R0040101_109_03"
+            },
             { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            { "name": "Charge", "code": "R0040101_112_01" },
+            { "name": "Charged Attack", "code": "R0040101_113_01" },
             {
                 "name": "Dance",
                 "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "R0040101_114_01>R0040101_114_02>R0040101_114_03"
             }
         ],
         "r0040201": [
@@ -5534,11 +5553,30 @@
             { "name": "Recover from Broken", "code": "R0040001_081_03" },
             { "name": "Right Strike", "code": "R0040001_100_01" },
             { "name": "Left Strike", "code": "R0040001_101_01" },
-            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Right Swipe", "code": "R0040201_103_01" },
+            { "name": "Left Swipe", "code": "R0040201_104_01" },
+            {
+                "name": "Stand on Tentacles",
+                "code": "R0040101_105_01>R0040101_105_02>R0040101_105_03"
+            },
+            {
+                "name": "Spin",
+                "code": "R0040101_107_01>R0040101_107_02>R0040101_107_03"
+            },
+            {
+                "name": "Dash Forward",
+                "code": "R0040101_109_01>R0040101_109_02>R0040101_109_03"
+            },
             { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            { "name": "Charge", "code": "R0040101_112_01" },
+            { "name": "Charged Attack", "code": "R0040101_113_01" },
             {
                 "name": "Dance",
                 "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "R0040101_114_01>R0040101_114_02>R0040101_114_03"
             }
         ],
         "r0040401": [
@@ -5560,11 +5598,30 @@
             { "name": "Recover from Broken", "code": "R0040001_081_03" },
             { "name": "Right Strike", "code": "R0040001_100_01" },
             { "name": "Left Strike", "code": "R0040001_101_01" },
-            { "name": "Swipe", "code": "R0040201_104_01" },
+            { "name": "Right Swipe", "code": "R0040201_103_01" },
+            { "name": "Left Swipe", "code": "R0040201_104_01" },
+            {
+                "name": "Stand on Tentacles",
+                "code": "R0040101_105_01>R0040101_105_02>R0040101_105_03"
+            },
+            {
+                "name": "Spin",
+                "code": "R0040101_107_01>R0040101_107_02>R0040101_107_03"
+            },
+            {
+                "name": "Dash Forward",
+                "code": "R0040101_109_01>R0040101_109_02>R0040101_109_03"
+            },
             { "name": "Tentacle Attack", "code": "R0040201_108_01" },
+            { "name": "Charge", "code": "R0040101_112_01" },
+            { "name": "Charged Attack", "code": "R0040101_113_01" },
             {
                 "name": "Dance",
                 "code": "R0040201_111_01>R0040201_111_02>R0040201_111_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "R0040101_114_01>R0040101_114_02>R0040101_114_03"
             }
         ]
     }
