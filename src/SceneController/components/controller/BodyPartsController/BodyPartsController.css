@@ -17,3 +17,11 @@
 .BodyPartsController .Accordion .Accordion-details {
     padding: 0;
 }
+
+.BodyPartsController .ToggleGroup {
+    flex-wrap: wrap;
+}
+
+.BodyPartsController .ToggleGroup .GlowToggle {
+    flex: 1;
+}
