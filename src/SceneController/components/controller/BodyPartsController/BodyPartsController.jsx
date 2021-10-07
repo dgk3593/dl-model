@@ -5,7 +5,7 @@ import "./BodyPartsController.css";
 import MeshVisibilityController from "./MeshVisibilityController";
 
 function BodyPartsController({ target }) {
-    const { parts, meshes } = target;
+    const { parts } = target;
     if (!parts) return null;
 
     const { list, others } = parts;
@@ -17,7 +17,7 @@ function BodyPartsController({ target }) {
             ))}
             {others.length && (
                 <Accordion>
-                    <>Other Parts</>
+                    <>{list.length ? "Other Parts" : "Body Parts"}</>
                     <MeshVisibilityController list={others} />
                 </Accordion>
             )}
