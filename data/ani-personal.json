@@ -5792,6 +5792,132 @@
                 "code": "R0060401_105_01>R0060401_105_02"
             },
             { "name": "Roar", "code": "R0060401_106_01" }
+        ],
+        "r0070401": [
+            { "name": "Idle", "code": "R0070001_000_01" },
+            { "name": "Defeated", "code": "R0070001_011_01>R0070001_011_02" },
+            { "name": "Overdrive", "code": "R0070001_022_01" },
+            { "name": "Right Hand Broken", "code": "R0070001_070_01" },
+            { "name": "Left Hand Broken", "code": "R0070001_070_02" },
+            { "name": "Broken", "code": "R0070001_081_01>R0070001_081_02" },
+            { "name": "Recover from Broken", "code": "R0070001_081_03" },
+            {
+                "name": "Raid Intro",
+                "code": "R0070401_090_02>R0070401_090_03>R0070401_090_04"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0070401_100_01>R0070401_100_02>R0070401_100_03"
+            },
+            {
+                "name": "Right Hand Attack",
+                "code": "R0070401_101_01>R0070401_101_02>R0070401_101_03"
+            },
+            { "name": "Right Hand Attack Failed", "code": "R0070401_101_04" },
+            {
+                "name": "Left Hand Attack",
+                "code": "R0070401_102_01>R0070401_102_02>R0070401_102_03"
+            },
+            { "name": "Left Hand Attack Failed", "code": "R0070401_102_04" },
+            {
+                "name": "Double Handed Attack",
+                "code": "R0070401_103_01>R0070401_103_02>R0070401_103_03"
+            },
+            {
+                "name": "Double Handed Attack Failed",
+                "code": "R0070401_103_04"
+            },
+            {
+                "name": "Roar",
+                "code": "R0070401_107_01>R0070401_107_02>R0070401_107_03"
+            },
+            {
+                "name": "Right Thump",
+                "code": "R0070401_108_01>R0070401_108_02>R0070401_108_03"
+            },
+            {
+                "name": "Left Thump",
+                "code": "R0070401_109_01>R0070401_109_02>R0070401_109_03"
+            },
+            {
+                "name": "Blast Attack",
+                "code": "R0070401_110_01>R0070401_110_02>R0070401_110_03"
+            },
+            {
+                "name": "Right Hand Charge",
+                "code": "R0070401_111_01>R0070401_111_02>R0070401_111_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0070401_112_01>R0070401_112_02>R0070401_112_03"
+            },
+            {
+                "name": "Bite",
+                "code": "R0070401_113_01>R0070401_113_02>R0070401_113_03"
+            }
+        ],
+        "r0070501": [
+            { "name": "Idle", "code": "R0070001_000_01" },
+            { "name": "Defeated", "code": "R0070001_011_01>R0070001_011_02" },
+            { "name": "Overdrive", "code": "R0070001_022_01" },
+            { "name": "Right Hand Broken", "code": "R0070001_070_01" },
+            { "name": "Left Hand Broken", "code": "R0070001_070_02" },
+            { "name": "Broken", "code": "R0070001_081_01>R0070001_081_02" },
+            { "name": "Recover from Broken", "code": "R0070001_081_03" },
+            {
+                "name": "Raid Intro",
+                "code": "R0070401_090_02>R0070401_090_03>R0070401_090_04"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0070401_100_01>R0070401_100_02>R0070401_100_03"
+            },
+            {
+                "name": "Right Hand Attack",
+                "code": "R0070401_101_01>R0070401_101_02>R0070401_101_03"
+            },
+            { "name": "Right Hand Attack Failed", "code": "R0070401_101_04" },
+            {
+                "name": "Left Hand Attack",
+                "code": "R0070401_102_01>R0070401_102_02>R0070401_102_03"
+            },
+            { "name": "Left Hand Attack Failed", "code": "R0070401_102_04" },
+            {
+                "name": "Double Handed Attack",
+                "code": "R0070401_103_01>R0070401_103_02>R0070401_103_03"
+            },
+            {
+                "name": "Double Handed Attack Failed",
+                "code": "R0070401_103_04"
+            },
+            {
+                "name": "Roar",
+                "code": "R0070401_107_01>R0070401_107_02>R0070401_107_03"
+            },
+            {
+                "name": "Right Thump",
+                "code": "R0070401_108_01>R0070401_108_02>R0070401_108_03"
+            },
+            {
+                "name": "Left Thump",
+                "code": "R0070401_109_01>R0070401_109_02>R0070401_109_03"
+            },
+            {
+                "name": "Blast Attack",
+                "code": "R0070401_110_01>R0070401_110_02>R0070401_110_03"
+            },
+            {
+                "name": "Right Hand Charge",
+                "code": "R0070401_111_01>R0070401_111_02>R0070401_111_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "R0070401_112_01>R0070401_112_02>R0070401_112_03"
+            },
+            {
+                "name": "Bite",
+                "code": "R0070401_113_01>R0070401_113_02>R0070401_113_03"
+            }
         ]
     }
 }
