@@ -5757,6 +5757,41 @@
             },
             { "name": "Stand Up", "code": "R0050501_111_01" },
             { "name": "Stand Up 2", "code": "R0050501_111_02" }
+        ],
+        "r0060401": [
+            { "name": "Idle", "code": "R0060001_000_01" },
+            { "name": "Walk", "code": "R0060001_002_01" },
+            { "name": "Run", "code": "R0060001_003_01" },
+            { "name": "Defeated", "code": "R0060001_011_01" },
+            { "name": "Overdrive", "code": "R0060001_022_01" },
+            { "name": "Flinch", "code": "R0060001_070_01" },
+            { "name": "Flinch 2", "code": "R0060001_070_02" },
+            { "name": "Broken", "code": "R0060001_081_01>R0060001_081_02" },
+            { "name": "Recover from Broken", "code": "R0060001_081_03" },
+            {
+                "name": "Full Raid Intro",
+                "code": "R0060401_090_02>R0060401_090_03>R0060401_090_04"
+            },
+            { "name": "Raid Intro", "code": "R0060401_090_04" },
+            {
+                "name": "Dance",
+                "code": "R0060401_100_01>R0060401_100_02>R0060401_100_03"
+            },
+            { "name": "Charge Forward", "code": "R0060401_101_01" },
+            { "name": "Jump", "code": "R0060401_102_01" },
+            {
+                "name": "Bite",
+                "code": "R0060401_103_01>R0060401_103_02>R0060401_103_03"
+            },
+            {
+                "name": "Quick Turn",
+                "code": "R0060401_104_01>R0060401_104_02>R0060401_104_03"
+            },
+            {
+                "name": "Knocked Back",
+                "code": "R0060401_105_01>R0060401_105_02"
+            },
+            { "name": "Roar", "code": "R0060401_106_01" }
         ]
     }
 }
