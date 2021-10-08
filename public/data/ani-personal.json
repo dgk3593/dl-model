@@ -5918,6 +5918,36 @@
                 "name": "Bite",
                 "code": "R0070401_113_01>R0070401_113_02>R0070401_113_03"
             }
+        ],
+        "r0100501": [
+            { "name": "Idle", "code": "R0100001_000_01" },
+            { "name": "Walk", "code": "R0100001_001_01" },
+            { "name": "Walk Fast", "code": "R0100001_003_01" },
+            { "name": "Defeated", "code": "R0100001_011_01" },
+            {
+                "name": "Full Raid Intro",
+                "code": "R0100501_090_01>R0100501_090_02>R0100501_090_03>R0100501_090_04"
+            },
+            { "name": "Raid Intro", "code": "R0100501_090_03>R0100501_090_04" },
+            { "name": "Look Around", "code": "R0100001_014_01" },
+            { "name": "Look Around 2", "code": "R0100001_103_01" },
+            { "name": "Roar", "code": "R0100001_023_01" },
+            { "name": "Roar 2", "code": "R0100001_104_01" },
+            {
+                "name": "Roar 3",
+                "code": "R0100001_109_01>R0100001_109_02>R0100001_109_03"
+            },
+            { "name": "Knocked Back", "code": "R0100001_070_01" },
+            { "name": "Broken", "code": "R0100001_081_01>R0100001_081_02" },
+            { "name": "Recover from Broken", "code": "R0100001_081_03" },
+            { "name": "Lean Right", "code": "R0100001_100_01" },
+            { "name": "Lean Left", "code": "R0100001_101_01" },
+            { "name": "Right Swipe", "code": "R0100001_102_01" },
+            { "name": "Lie Down", "code": "R0100001_105_01" },
+            { "name": "Crawl", "code": "R0100001_106_01" },
+            { "name": "Quick Crawl", "code": "R0100001_108_01" },
+            { "name": "Breath Attack", "code": "R0100001_107_01" },
+            { "name": "Flying Attack", "code": "R0100001_110_01" }
         ]
     }
 }
