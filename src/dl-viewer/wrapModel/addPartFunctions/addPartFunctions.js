@@ -16,7 +16,7 @@ export default function addPartFunctions(container) {
         const { name } = mesh;
         if (!name?.match) return;
 
-        if (name.includes("Effect")) {
+        if (name.includes("Effect") || name.includes("Extension")) {
             mesh.visible = false;
         }
 
