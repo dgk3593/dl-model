@@ -1,5 +1,7 @@
 .BodyPartsController {
     background-color: #10101077;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .BodyPartsController .Setters-label {
