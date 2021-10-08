@@ -4942,9 +4942,15 @@
             { "name": "Idle", "code": "R0130001_000_01" },
             { "name": "Move Forward", "code": "R0130001_002_01" },
             { "name": "Defeated", "code": "R0130001_011_01>R0130001_011_02" },
-            { "name": "Flinched", "code": "R0130001_070_01>R0130001_070_02" },
+            { "name": "Soul Broken", "code": "R0130001_070_01" },
+            { "name": "Wings Broken", "code": "R0130001_070_02" },
             { "name": "Broken", "code": "R0130001_081_01>R0130001_081_02" },
             { "name": "Recover from Broken", "code": "R0130001_081_03" },
+            {
+                "name": "Full Raid Intro",
+                "code": "R0130001_090_01>R0130001_090_02>R0130001_090_03"
+            },
+            { "name": "Raid Intro", "code": "R0130001_090_03" },
             { "name": "Right Claw Attack", "code": "R0130001_100_01" },
             { "name": "Left Claw Attack", "code": "R0130001_101_01" },
             {
@@ -4962,9 +4968,15 @@
             { "name": "Idle", "code": "R0130001_000_01" },
             { "name": "Move Forward", "code": "R0130001_002_01" },
             { "name": "Defeated", "code": "R0130001_011_01>R0130001_011_02" },
-            { "name": "Flinched", "code": "R0130001_070_01>R0130001_070_02" },
+            { "name": "Soul Broken", "code": "R0130001_070_01" },
+            { "name": "Wings Broken", "code": "R0130001_070_02" },
             { "name": "Broken", "code": "R0130001_081_01>R0130001_081_02" },
             { "name": "Recover from Broken", "code": "R0130001_081_03" },
+            {
+                "name": "Full Raid Intro",
+                "code": "R0130001_090_01>R0130001_090_02>R0130001_090_03"
+            },
+            { "name": "Raid Intro", "code": "R0130001_090_03" },
             { "name": "Right Claw Attack", "code": "R0130001_100_01" },
             { "name": "Left Claw Attack", "code": "R0130001_101_01" },
             {
