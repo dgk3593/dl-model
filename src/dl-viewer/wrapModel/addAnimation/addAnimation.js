@@ -5,8 +5,9 @@ import eventDispatcher from "../../utils/eventDispatcher";
 import { setNestedProp } from "../../utils";
 
 export default function addAnimation(container) {
-    const { model, uniqueId } = container;
+    const { model, uniqueId, bones } = container;
     const mixer = new THREE.AnimationMixer(model);
+    const boneList = bones?.list ?? [];
 
     const animation = {
         ...eventDispatcher,
@@ -48,6 +49,10 @@ export default function addAnimation(container) {
             const chain = await createAniChain(chainCode);
             // change bone name to avoid collision when attaching something with identical bone name
             chain.clips.forEach(clip => {
+                clip.tracks = clip.tracks.filter(track => {
+                    const boneName = track.name.split(".")[0];
+                    return boneList.includes(boneName);
+                });
                 clip.tracks.forEach(track => {
                     track.name = `${uniqueId}|${track.name}`;
                 });
