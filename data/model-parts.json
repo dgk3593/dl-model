@@ -151,7 +151,8 @@
                 "options": {
                     "A": "Hidden",
                     "B": "Shown"
-                }
+                },
+                "default": "Shown"
             },
             "B": {
                 "name": "Plushie",
@@ -185,7 +186,8 @@
                 "options": {
                     "A": "Hidden",
                     "B": "Shown"
-                }
+                },
+                "default": "Shown"
             }
         },
         "d210132_03": {
@@ -194,7 +196,8 @@
                 "options": {
                     "A": "Halo",
                     "B": "Both"
-                }
+                },
+                "default": "Both"
             }
         },
         "d210118_01": {
@@ -230,7 +233,8 @@
                 "options": {
                     "A": "Hidden",
                     "B": "Shown"
-                }
+                },
+                "default": "Shown"
             }
         },
         "d210156_01": {
@@ -347,9 +351,10 @@
             "A": {
                 "name": "Wings",
                 "options": {
-                    "A": "Shown",
-                    "B": "Hidden"
-                }
+                    "A": "Hidden",
+                    "B": "Shown"
+                },
+                "default": "Shown"
             }
         },
         "r0010101": {
