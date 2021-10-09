@@ -49,13 +49,15 @@ export default function addAnimation(container) {
             const chain = await createAniChain(chainCode);
             // change bone name to avoid collision when attaching something with identical bone name
             chain.clips.forEach(clip => {
-                clip.tracks = clip.tracks.filter(track => {
+                clip.tracks = clip.tracks.reduce((acc, track) => {
                     const boneName = track.name.split(".")[0];
-                    return boneList.includes(boneName);
-                });
-                clip.tracks.forEach(track => {
-                    track.name = `${uniqueId}|${track.name}`;
-                });
+                    if (boneList.includes(boneName)) {
+                        track.name = `${uniqueId}|${track.name}`;
+                        acc.push(track);
+                    }
+
+                    return acc;
+                }, []);
             });
             this.chain[name] = chain;
 
