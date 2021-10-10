@@ -21,7 +21,7 @@ export default function addPartFunctions(container) {
             mesh.visible = false;
         }
 
-        if (partsData.custom?.[name]) {
+        if (partsData?.custom?.[name]) {
             name = mesh.name = partsData.custom[name];
         }
 
