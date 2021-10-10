@@ -1,11 +1,12 @@
 import { getPartsData } from "@/dl-viewer/utils/data/getPartsData";
 import { eyeRegex, mouthRegex } from "../addFaceFunctions/addFaceFunctions";
 
-const partRegex = /mParts([A-Z])/;
-const optionRegex = /mParts[A-Z]_([A-Za-z]*)/;
+const partRegex = /mParts([A-Za-z]+)/;
+const optionRegex = /mParts[A-Za-z]+_([A-Za-z]*)/;
 
 export default function addPartFunctions(container) {
     const { meshes, id } = container;
+    const partsData = getPartsData(id);
 
     /**
      * @type {THREE.Mesh[]}
@@ -13,11 +14,15 @@ export default function addPartFunctions(container) {
     const partMeshes = [];
     const otherMeshes = [];
     meshes.forEach(mesh => {
-        const { name } = mesh;
+        let { name } = mesh;
         if (!name?.match) return;
 
         if (name.includes("Effect") || name.includes("Extension")) {
             mesh.visible = false;
+        }
+
+        if (partsData.custom?.[name]) {
+            name = mesh.name = partsData.custom[name];
         }
 
         if (name.match(/mParts/)) {
@@ -55,7 +60,6 @@ export default function addPartFunctions(container) {
     container.parts = parts;
     if (!partMeshes.length) return container;
 
-    const partsData = getPartsData(id);
     const partNames = new Set(
         partMeshes.map(({ name }) => partRegex.exec(name)?.[1])
     );
@@ -69,7 +73,7 @@ export default function addPartFunctions(container) {
 
     partNames.forEach(partName => {
         const partData = partsData?.[partName];
-        const label = partData?.name.replace(/ /g, "_") ?? partName;
+        const label = partData?.name?.replace(/ /g, "_") ?? partName;
         const optionNames = partData?.options;
         const partMeshes = getPartMeshes(partName);
         partMeshes.forEach(mesh => (mesh.frustumCulled = false));

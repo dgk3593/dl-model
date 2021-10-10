@@ -288,12 +288,25 @@
             }
         },
         "h0110401": {
+            "custom": {
+                "mFace_01": "mPartsFace_A",
+                "mFace_02": "mPartsFace_B",
+                "mFace_03": "mPartsFace_C"
+            },
             "A": {
-                "name": "Wings",
+                "name": "Heavenly Wings",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
                 }
+            },
+            "Face": {
+                "options": {
+                    "A": "Nothingness",
+                    "B": "Sadness",
+                    "C": "Anger"
+                },
+                "default": "Nothingness"
             }
         },
         "r0130001": {
@@ -650,11 +663,21 @@
             }
         },
         "r0050301": {
+            "custom": {
+                "mHair": "mPartsHair",
+                "mHair_OD": "mPartsHair_OD"
+            },
             "A": {
                 "name": "Jingu Bang",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
+                }
+            },
+            "Hair": {
+                "options": {
+                    "default": "Normal",
+                    "OD": "Overdrive"
                 }
             }
         },
