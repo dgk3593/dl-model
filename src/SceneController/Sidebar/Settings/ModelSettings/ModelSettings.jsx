@@ -10,7 +10,7 @@ import MaterialSettings from "./MaterialSettings";
 import ParticleController from "components/controller/ParticleController";
 
 import { simpleHandler } from "../simpleHandler";
-import { DirectionsRun, Storage } from "@mui/icons-material";
+import { Attachment, DirectionsRun, Storage } from "@mui/icons-material";
 import BodyPartsController from "@/SceneController/components/controller/BodyPartsController";
 
 function ModelSettings() {
@@ -43,7 +43,16 @@ function ModelSettings() {
                     {activeModel?.face && (
                         <FaceSettings handleClick={handleClick} />
                     )}
+                    <span className="break" />
 
+                    <Button
+                        variant="contained"
+                        data-mode="attachment"
+                        onClick={handleClick}
+                        startIcon={<Attachment />}
+                    >
+                        Manage Attachments
+                    </Button>
                     <SimpleWeaponControl openModal={openModal} />
                     <span className="break" />
 

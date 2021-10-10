@@ -7,6 +7,7 @@ const AddWeapon = lazy(() => import("./AddWeapon"));
 const ColorSelect = lazy(() => import("./ColorSelect"));
 const FaceSelect = lazy(() => import("./FaceSelect"));
 const FaceTexture = lazy(() => import("./FaceTexture"));
+const AttachmentManager = lazy(() => import("./AttachmentManager"));
 const PartialFaceSelect = lazy(() => import("./FaceSelect/PartialFaceSelect"));
 
 export const dialogBody = {
@@ -17,6 +18,7 @@ export const dialogBody = {
     color: ColorSelect,
     face: FaceSelect,
     faceTexture: FaceTexture,
+    attachment: AttachmentManager,
     eye: ({ onSelect }) => <PartialFaceSelect part="eye" onSelect={onSelect} />,
     mouth: ({ onSelect }) => (
         <PartialFaceSelect part="mouth" onSelect={onSelect} />
