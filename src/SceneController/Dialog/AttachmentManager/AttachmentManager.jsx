@@ -1,17 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useKey } from "@/SceneController/hook";
-import { useActiveModel } from "@/state";
-import { DialogTitle, DialogContent } from "@mui/material";
+import { useActiveModel, useModalState } from "@/state";
+import {
+    DialogTitle,
+    DialogContent,
+    Box,
+    Select,
+    MenuItem,
+    Button,
+} from "@mui/material";
+import { Add } from "@mui/icons-material";
 import Stretcher from "components/Stretcher";
 import BoneManager from "./BoneManager";
+import { getUnique } from "@/dl-viewer/utils";
+import viewer from "@/viewer";
 
 import "./AttachmentManager.css";
-import { getUnique } from "@/dl-viewer/utils";
 
 function AttachmentManager() {
     const { activeModel } = useActiveModel();
     const [key, updateKey] = useKey();
-    const boneList = activeModel?.bones.list ?? [];
+    const { inputModel } = useModalState();
+
+    const boneList = ["root", ...(activeModel?.bones?.list ?? [])];
+    const [bone, setBone] = useState(boneList[0]);
+
     const activeBones = getUnique(
         activeModel.attachment.list.map(att => att.parentBone)
     );
@@ -25,20 +38,60 @@ function AttachmentManager() {
             updateKey
         );
         return () => current.removeEventListener("AttachmentChanged", listener);
-    });
+    }, [activeModel]);
+
+    const handleChange = event => {
+        setBone(event.target.value);
+    };
+
+    const addAttachment = async () => {
+        const attachment = await inputModel();
+        if (!attachment) return;
+
+        const [id, name] = attachment;
+        const att = await viewer.loadDLModel(id);
+        att.userData.name = name;
+
+        activeModel.attach(att, bone === "root" ? undefined : bone);
+
+        att.outline.code = activeModel.outline.code;
+        att.material.code = activeModel.material.code;
+        viewer.render();
+    };
 
     return (
-        <div className="AttachmentManager">
-            <DialogTitle sx={{ textAlign: "center" }}>
-                Manage Attachments
-            </DialogTitle>
-            <DialogContent className="AttachmentManager-body">
+        <Box className="AttachmentManager">
+            <Box className="AttachmentManager-top">
+                <DialogTitle>Manage Attachments</DialogTitle>
+                <Box className="AttachmentManager-add">
+                    <Select
+                        onChange={handleChange}
+                        value={bone}
+                        className="AttachmentManager-select"
+                    >
+                        {boneList.map(boneName => (
+                            <MenuItem key={boneName} value={boneName}>
+                                {boneName}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                    <Button
+                        title="Add Attachment"
+                        variant="contained"
+                        onClick={addAttachment}
+                    >
+                        <Add />
+                    </Button>
+                </Box>
+            </Box>
+
+            <DialogContent key={key} className="AttachmentManager-body">
                 <Stretcher />
-                {activeBones.map(bone => (
-                    <BoneManager bone={bone} />
+                {activeBones.map(boneName => (
+                    <BoneManager key={boneName} bone={boneName} />
                 ))}
             </DialogContent>
-        </div>
+        </Box>
     );
 }
 
