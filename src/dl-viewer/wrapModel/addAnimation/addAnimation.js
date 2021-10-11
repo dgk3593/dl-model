@@ -3,6 +3,7 @@ import { createAniChain } from "./helper";
 import { FPS } from "../../defaultParams";
 import eventDispatcher from "../../utils/eventDispatcher";
 import { setNestedProp } from "../../utils";
+const modelIdRegex = /[a-z][0-9]{6}/;
 
 export default function addAnimation(container) {
     const { model, uniqueId, bones, id } = container;
@@ -51,9 +52,9 @@ export default function addAnimation(container) {
             chain.clips.forEach(clip => {
                 clip.tracks = clip.tracks.reduce((acc, track) => {
                     let boneName = track.name.split(".")[0];
-                    if (boneName === "c110353_01") {
+                    if (modelIdRegex.test(boneName)) {
+                        track.name.replace(boneName, id);
                         boneName = id;
-                        track.name.replace("c110353_01", id);
                     }
                     if (boneList.includes(boneName)) {
                         track.name = `${uniqueId}|${track.name}`;
