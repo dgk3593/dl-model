@@ -1,3 +1,20 @@
 .AttachmentManager {
     display: flex;
+    flex-direction: column;
+}
+
+.AttachmentManager-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.AttachmentManager-body .BoneManager {
+    align-self: flex-start;
+}
+
+.AttachmentManager-body .Accordion {
+    width: 100%;
 }
