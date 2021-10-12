@@ -20,7 +20,7 @@
         "immer": "^9.0.6",
         "jszip": "^3.7.1",
         "nanoid": "^3.1.29",
-        "preact": "^10.5.13",
+        "preact": "^10.5.15",
         "react-beautiful-dnd": "^13.1.0",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
