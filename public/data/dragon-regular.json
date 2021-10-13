@@ -1,6 +1,13 @@
 {
     "data": [
         {
+            "id": "d210168_01",
+            "name": "Michael",
+            "title": "",
+            "rarity": "5",
+            "element": ""
+        },
+        {
             "id": "d210117_01",
             "name": "AC-011 Garland",
             "title": "Revolutionary Warrior",
@@ -405,14 +412,6 @@
             "title": "Raging Wind",
             "rarity": "5",
             "element": "Wind"
-        },
-        {
-            "id": "d210168_01",
-            "name": "Michael",
-            "title": "",
-            "rarity": "5",
-            "element": "",
-            "noIcon": true
         },
         {
             "id": "d210131_01",

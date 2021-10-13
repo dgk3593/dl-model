@@ -1,14 +1,18 @@
 {
     "data": [
         {
-            "id": "d210153_01",
-            "name": "Gala Notte Metamorphosis",
-            "element": "Wind"
+            "id": "d210176_01",
+            "name": "Carbuncle"
         },
         {
             "id": "d210172_01",
             "name": "Summoned Bahamut",
             "title": "Gala Zethia"
+        },
+        {
+            "id": "d210153_01",
+            "name": "Gala Notte Metamorphosis",
+            "element": "Wind"
         },
         {
             "id": "d200001_01",

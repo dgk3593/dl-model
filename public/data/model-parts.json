@@ -835,7 +835,7 @@
                 "mWingB_BR": "mPartsWingB_BR"
             },
             "A": {
-                "name": "OD Right Wings",
+                "name": "Right Wing",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
@@ -843,7 +843,7 @@
                 "default": "None"
             },
             "B": {
-                "name": "OD Left Wings",
+                "name": "Left Wing",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
@@ -858,14 +858,14 @@
                 }
             },
             "WingA": {
-                "name": "Right Wings",
+                "name": "OD Right Wings",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
                 }
             },
             "WingB": {
-                "name": "Left Wings",
+                "name": "OD Left Wings",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
