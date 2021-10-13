@@ -27,7 +27,7 @@ export const styles = {
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        paddingBottom: "3rem",
+
         scrollbarWidth: "thin",
         scrollbarColor: "rgba(255, 255, 255, 0.8) rgba(0, 0, 0, 0.3)",
         "&::-webkit-scrollbar": {
@@ -39,6 +39,7 @@ export const styles = {
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             borderRadius: "2px",
         },
+
         "& > .QuickAction": {
             position: "sticky",
             top: "2.75rem",
