@@ -1,6 +1,14 @@
 {
     "data": [
         {
+            "id": "c110397_01",
+            "name": "Basileus",
+            "title": "",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Wand"
+        },
+        {
             "id": "c110341_01",
             "name": "Akasha",
             "title": "Pursuer of Knowledge",

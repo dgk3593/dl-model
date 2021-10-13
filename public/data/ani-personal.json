@@ -6172,6 +6172,28 @@
                 "name": "Weakened",
                 "code": "R0080401_105_01>R0080401_105_02>R0080401_105_03"
             }
+        ],
+        "r0140001": [
+            { "name": "Idle", "code": "R0140001_000_01" },
+            { "name": "Move Forward", "code": "R0140001_002_01" },
+            { "name": "Defeated", "code": "R0140001_011_01" },
+            { "name": "Frozen", "code": "R0140001_013_01" },
+            { "name": "Phase Change", "code": "R0140001_030_01" },
+            { "name": "Boss Intro", "code": "R0140001_090_03>R0140001_090_02" },
+            { "name": "Left Wings Broken", "code": "R0140001_070_01" },
+            { "name": "Right Wings Broken", "code": "R0140001_070_02" },
+            { "name": "Tails Broken", "code": "R0140001_070_03" },
+            { "name": "Broken", "code": "R0140001_081_01>R0140001_081_02" },
+            { "name": "Recover from Broken", "code": "R0140001_081_03" },
+            {
+                "name": "Buff",
+                "code": "R0140001_100_01>R0140001_100_02>R0140001_100_03>R0140001_100_04"
+            },
+            {
+                "name": "Punch Ground",
+                "code": "R0140001_101_01>R0140001_101_02>R0140001_101_03"
+            },
+            { "name": "Roar", "code": "R0140001_102_01" }
         ]
     }
 }

@@ -826,6 +826,51 @@
                     "BR": "Broken"
                 }
             }
+        },
+        "r0140001": {
+            "custom": {
+                "mWingA": "mPartsWingA",
+                "mWingA_BR": "mPartsWingA_BR",
+                "mWingB": "mPartsWingB",
+                "mWingB_BR": "mPartsWingB_BR"
+            },
+            "A": {
+                "name": "OD Right Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                },
+                "default": "None"
+            },
+            "B": {
+                "name": "OD Left Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                },
+                "default": "None"
+            },
+            "C": {
+                "name": "Tails",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "WingA": {
+                "name": "Right Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "WingB": {
+                "name": "Left Wings",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
         }
     }
 }
