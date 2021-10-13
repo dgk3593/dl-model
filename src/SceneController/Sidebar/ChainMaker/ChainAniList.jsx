@@ -4,6 +4,8 @@ import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
 import { useActiveModel } from "@/state";
 import ChainAni from "./ChainAni";
 
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+
 function ChainAniList() {
     const { activeModel } = useActiveModel();
     const [key, updateKey] = useKey();
@@ -17,12 +19,31 @@ function ChainAniList() {
         return () => chain.removeEventListener("change", listener);
     }, []);
 
-    return (
-        <div className="ChainAniList" key={key}>
-            {chain.map(ani => (
-                <ChainAni ani={ani} key={ani.id} />
+    const aniList = provided => (
+        <div ref={provided.innerRef} {...provided.droppableProps}>
+            {chain.map((ani, i) => (
+                <ChainAni index={i} ani={ani} key={ani.id} />
             ))}
+            {provided.placeholder}
         </div>
+    );
+
+    const onDragEnd = result => {
+        const { destination, source } = result;
+        if (!destination || destination.index === source.index) return;
+
+        const newChain = [...chain];
+        const targetAni = newChain.splice(source.index, 1)[0];
+        newChain.splice(destination.index, 0, targetAni);
+
+        chain.length = 0;
+        chain.push(...newChain);
+    };
+
+    return (
+        <DragDropContext onDragEnd={onDragEnd}>
+            <Droppable droppableId="chainList">{aniList}</Droppable>
+        </DragDropContext>
     );
 }
 

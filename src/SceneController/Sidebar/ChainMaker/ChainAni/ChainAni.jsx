@@ -8,6 +8,8 @@ import ChainAniFace from "./ChainAniFace";
 import { IconButton } from "@mui/material";
 import { PlayArrow } from "@mui/icons-material";
 
+import { Draggable } from "react-beautiful-dnd";
+
 import { generateChainCode } from "../helper";
 
 const PlayButton = ({ onClick }) => (
@@ -16,7 +18,7 @@ const PlayButton = ({ onClick }) => (
     </IconButton>
 );
 
-function ChainAni({ ani }) {
+function ChainAni({ ani, index }) {
     const { activeModel } = useActiveModel();
     const { chain } = activeModel.userData;
 
@@ -31,11 +33,17 @@ function ChainAni({ ani }) {
         activeModel?.animation.addChain(code);
     };
 
-    return (
-        <Accordion className="ChainAni">
+    const body = provided => (
+        <Accordion
+            className="ChainAni"
+            {...provided.draggableProps}
+            ref={provided.innerRef}
+        >
             <>
                 <PlayButton onClick={play} />
-                <div className="ChainAni-name">{ani.name}</div>
+                <div {...provided.dragHandleProps} className="ChainAni-name">
+                    {ani.name}
+                </div>
                 <CloseButton onClick={remove} title="Delete" />
             </>
             <>
@@ -44,6 +52,12 @@ function ChainAni({ ani }) {
                 <ChainAniFace ani={ani} />
             </>
         </Accordion>
+    );
+
+    return (
+        <Draggable draggableId={ani.id} index={index}>
+            {body}
+        </Draggable>
     );
 }
 

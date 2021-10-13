@@ -1,21 +1,26 @@
+import { forwardRef } from "react";
 import { useToggleState } from "hook/useToggleState";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 import "./Accordion.css";
 
 /**
- * @param {object} props
- * @param {[summary: JSX.Element, details: JSX.Element]} props.children
- * @param {string} [props.className]
- * @param {boolean} [props.defaultOpen]
- * @param {boolean} [props.disableGutters]
+ * @typedef {object} AccordionProps
+ * @property {[summary: JSX.Element, details: JSX.Element]} props.children
+ * @property {string} [props.className]
+ * @property {boolean} [props.defaultOpen]
+ * @property {boolean} [props.disableGutters]
  */
-function Accordion({
-    children,
-    className = "",
-    defaultOpen = false,
-    disableGutters = false,
-    ...others
-}) {
+/**
+ * @type {React.FC<AccordionProps>}
+ */
+const Accordion = forwardRef((props, ref) => {
+    const {
+        children,
+        className = "",
+        defaultOpen = false,
+        disableGutters = false,
+        ...others
+    } = props;
     const [open, toggleOpen] = useToggleState(defaultOpen);
     const fullClassName = `Accordion ${disableGutters ? "noGutters" : ""} ${
         open ? "open" : ""
@@ -24,7 +29,7 @@ function Accordion({
     const arrow = open ? <ArrowDropUp /> : <ArrowDropDown />;
 
     return (
-        <div className={fullClassName} {...others}>
+        <div className={fullClassName} {...others} ref={ref}>
             {children[0] && (
                 <div onClick={toggleOpen} className="Accordion-summary">
                     {arrow}
@@ -36,6 +41,6 @@ function Accordion({
             )}
         </div>
     );
-}
+});
 
 export default Accordion;
