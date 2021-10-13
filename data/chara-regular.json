@@ -9,6 +9,14 @@
             "weapon": "Wand"
         },
         {
+            "id": "c110396_01",
+            "name": "Sandalphon",
+            "title": "",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Staff"
+        },
+        {
             "id": "c110341_01",
             "name": "Akasha",
             "title": "Pursuer of Knowledge",
@@ -927,15 +935,6 @@
             "rarity": "5",
             "element": "Wind",
             "weapon": "Manacaster"
-        },
-        {
-            "id": "c110396_01",
-            "name": "Sandalphon",
-            "title": "",
-            "rarity": "5",
-            "element": "",
-            "weapon": "Staff",
-            "noIcon": true
         },
         {
             "id": "c110375_01",
