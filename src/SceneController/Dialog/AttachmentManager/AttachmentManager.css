@@ -18,7 +18,7 @@
 
 .AttachmentManager-add {
     flex: 1;
-    margin: 0 3rem;
+    margin: 0.2rem 3rem;
     min-width: 8rem;
     display: flex;
 }
@@ -50,4 +50,8 @@
 
 .AttachmentManager-body .Accordion {
     width: 100%;
+}
+
+.AttachmentManager-body .Accordion:not(:last-child) {
+    border-bottom: 1px solid #eee6;
 }

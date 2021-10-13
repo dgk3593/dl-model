@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useKey } from "@/SceneController/hook";
 import { useActiveModel, useModalState } from "@/state";
 import {
@@ -19,8 +19,9 @@ import "./AttachmentManager.css";
 
 function AttachmentManager() {
     const { activeModel } = useActiveModel();
-    const [key, updateKey] = useKey();
+    const [key, update] = useKey();
     const { inputModel } = useModalState();
+    const removeListener = useRef(() => void 0);
 
     const boneList = ["root", ...(activeModel?.bones?.list ?? [])];
     const [bone, setBone] = useState(boneList[0]);
@@ -31,13 +32,18 @@ function AttachmentManager() {
 
     useEffect(() => {
         if (!activeModel) return;
-        const current = activeModel;
 
-        const listener = current.addEventListener(
+        // remove old listener
+        removeListener.current();
+
+        const listener = activeModel.addEventListener(
             "AttachmentChanged",
-            updateKey
+            update
         );
-        return () => current.removeEventListener("AttachmentChanged", listener);
+        removeListener.current = () =>
+            activeModel.removeEventListener("AttachmentChanged", listener);
+
+        return removeListener.current;
     }, [activeModel]);
 
     const handleChange = event => {

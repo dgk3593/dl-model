@@ -16,8 +16,8 @@ function SimpleWeaponControl({ openModal }) {
     const removeListener = useRef(() => void 0);
 
     const showWeapon = activeModel?.bones.list.includes("jWeaponR");
-    const weaponLeft = activeModel?.attachment.jWeaponL?.[0];
-    const weaponRight = activeModel?.attachment.jWeaponR?.[0];
+    const weaponLeft = activeModel?.attachment.jWeaponL;
+    const weaponRight = activeModel?.attachment.jWeaponR;
     const addWeapon = () => openModal("weapon", simpleHandler.weapon);
 
     useEffect(() => {
@@ -45,18 +45,20 @@ function SimpleWeaponControl({ openModal }) {
                 Add Weapon
             </Button>
             <React.Fragment key={key}>
-                {weaponLeft && (
+                {weaponLeft?.map(weapon => (
                     <AttachmentSetting
-                        target={weaponLeft}
+                        target={weapon}
+                        key={weapon.uniqueId}
                         label="Left Weapon"
                     />
-                )}
-                {weaponRight && (
+                ))}
+                {weaponRight?.map(weapon => (
                     <AttachmentSetting
-                        target={weaponRight}
+                        target={weapon}
+                        key={weapon.uniqueId}
                         label="Right Weapon"
                     />
-                )}
+                ))}
             </React.Fragment>
         </>
     ) : (
