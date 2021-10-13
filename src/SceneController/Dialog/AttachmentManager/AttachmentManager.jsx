@@ -50,7 +50,7 @@ function AttachmentManager() {
         setBone(event.target.value);
     };
 
-    const addAttachment = async () => {
+    const addAttachment = async (targetBone = bone) => {
         const attachment = await inputModel();
         if (!attachment) return;
 
@@ -58,12 +58,14 @@ function AttachmentManager() {
         const att = await viewer.loadDLModel(id);
         att.userData.name = name;
 
-        activeModel.attach(att, bone === "root" ? undefined : bone);
+        activeModel.attach(att, targetBone === "root" ? undefined : targetBone);
 
         att.outline.code = activeModel.outline.code;
         att.material.code = activeModel.material.code;
         viewer.render();
     };
+
+    const handleAdd = () => addAttachment();
 
     return (
         <Box className="AttachmentManager">
@@ -84,7 +86,7 @@ function AttachmentManager() {
                     <Button
                         title="Add Attachment"
                         variant="contained"
-                        onClick={addAttachment}
+                        onClick={handleAdd}
                     >
                         <Add />
                     </Button>
@@ -94,7 +96,11 @@ function AttachmentManager() {
             <DialogContent key={key} className="AttachmentManager-body">
                 <Stretcher />
                 {activeBones.map(boneName => (
-                    <BoneManager key={boneName} bone={boneName} />
+                    <BoneManager
+                        add={addAttachment}
+                        key={boneName}
+                        bone={boneName}
+                    />
                 ))}
             </DialogContent>
         </Box>

@@ -2,3 +2,16 @@
     min-width: 16rem;
     max-width: 20rem;
 }
+
+.BoneManager > .Accordion-summary {
+    justify-content: space-between;
+}
+
+button.BoneManager-add {
+    background-color: #ccc;
+    color: #101010;
+}
+
+button.BoneManager-add:hover {
+    background-color: #eee;
+}
