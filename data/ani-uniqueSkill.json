@@ -1616,6 +1616,16 @@
                 "name": "Scarlet Gift",
                 "code": "ROD_SKL_02_01_11038801",
                 "icon": "Icon_Skill_224"
+            },
+            {
+                "user": "c110397_01",
+                "name": "S1",
+                "code": "ROD_SKL_01_01_11039701"
+            },
+            {
+                "user": "c110397_01",
+                "name": "S2",
+                "code": "ROD_SKL_02_01_11039701"
             }
         ],
         "Staff": [
