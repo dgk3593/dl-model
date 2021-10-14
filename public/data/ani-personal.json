@@ -2630,6 +2630,19 @@
                 "name": "Angelic Declaration",
                 "code": "D21013201_060_01",
                 "icon": "Icon_Skill_014"
+            },
+            {
+                "name": "Satan Raid Assist",
+                "code": "d21013201_02_01>d21013201_02_02",
+                "icon": "Icon_QuestSkill2_005"
+            },
+            {
+                "name": "Satan Raid Finale",
+                "code": "d21013201_05_02"
+            },
+            {
+                "name": "Satan Raid Finale 2",
+                "code": "d21013201_05_06"
             }
         ],
         "d210132_02": [
