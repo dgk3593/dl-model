@@ -49,7 +49,8 @@ const handleFile = async fileName => {
     console.log(`exported ${fileName}`);
 };
 
-export async function fbx2json(list = fbxList) {
+export async function fbx2json(list) {
+    if (!list.length) list = fbxList;
     for (const fileName of list) {
         await handleFile(fileName);
     }

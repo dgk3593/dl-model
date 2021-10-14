@@ -26,7 +26,7 @@ function toggleFullScreen() {
 }
 
 if (import.meta.env.DEV) {
-    window.fbx2json = async list => {
+    window.fbx2json = async (...list) => {
         const { fbx2json } = await import("./utils/fbx2json");
         fbx2json(list);
     };
