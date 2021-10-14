@@ -7,6 +7,10 @@
         { "name": "Persona Raid Cutscene 2", "code": "r002_002_party_02_a_01" },
         { "name": "Persona Raid Cutscene 3", "code": "r002_002_party_03_a_01" },
         { "name": "Persona Raid Cutscene 4", "code": "r002_002_party_04_a_01" },
+        { "name": "Satan Raid Cutscene 1", "code": "r014_000_party_01_a_01" },
+        { "name": "Satan Raid Cutscene 2", "code": "r014_000_party_02_a_01" },
+        { "name": "Satan Raid Cutscene 3", "code": "r014_000_party_03_a_01" },
+        { "name": "Satan Raid Cutscene 4", "code": "r014_000_party_04_a_01" },
         {
             "name": "Lift and Throw",
             "code": "CMN_BAT_01>CMN_BAT_02>CMN_BAT_06>CMN_BAT_03"

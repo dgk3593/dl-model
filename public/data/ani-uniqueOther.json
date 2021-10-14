@@ -397,6 +397,29 @@
                         "code": "A0860001_090_02>A0860001_090_01"
                     }
                 ]
+            },
+            {
+                "name": "Nevin",
+                "user": "c110365_01",
+                "animations": [
+                    {
+                        "name": "Satan Raid Intro",
+                        "code": "r0140001_c110365"
+                    },
+                    {
+                        "name": "Satan Raid Assist",
+                        "code": "c11036501_02_01>c11036501_02_02",
+                        "icon": "Icon_QuestSkill2_005"
+                    },
+                    {
+                        "name": "Satan Raid Finale",
+                        "code": "c11036501_05_02"
+                    },
+                    {
+                        "name": "Satan Raid Finale 2",
+                        "code": "c11036501_05_06"
+                    }
+                ]
             }
         ],
         "Axe": [
@@ -634,6 +657,29 @@
                         "code": "A0080001_101_01>A0080001_101_02>A0080001_101_03"
                     }
                 ]
+            },
+            {
+                "name": "Ryszarda",
+                "user": "c110381_01",
+                "animations": [
+                    {
+                        "name": "Satan Raid Intro",
+                        "code": "r0140001_c110365"
+                    },
+                    {
+                        "name": "Satan Raid Assist",
+                        "code": "c11038101_01_01>c11038101_01_02",
+                        "icon": "Icon_QuestSkill2_005"
+                    },
+                    {
+                        "name": "Satan Raid Finale",
+                        "code": "c11038101_05_01"
+                    },
+                    {
+                        "name": "Satan Raid Finale 2",
+                        "code": "c11038101_05_06"
+                    }
+                ]
             }
         ],
         "Bow": [
@@ -644,6 +690,23 @@
                     {
                         "name": "Force Strike Run",
                         "code": "BOW_RUN_05_11036601"
+                    },
+                    {
+                        "name": "Satan Raid Intro",
+                        "code": "r0140001_c110366"
+                    },
+                    {
+                        "name": "Satan Raid Assist",
+                        "code": "c11036601_04_01>c11036601_04_02",
+                        "icon": "Icon_QuestSkill2_005"
+                    },
+                    {
+                        "name": "Satan Raid Finale",
+                        "code": "c11036601_05_01"
+                    },
+                    {
+                        "name": "Satan Raid Finale 2",
+                        "code": "c11036601_05_06"
                     }
                 ]
             },
@@ -877,6 +940,24 @@
                     },
                     { "name": "Boss Attack", "code": "A0170001_100_01" }
                 ]
+            },
+            {
+                "name": "Basileus",
+                "user": "c110397_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0880001_090_02>A0880001_090_01"
+                    },
+                    {
+                        "name": "Satan Raid Intro",
+                        "code": "r0140001_c110397"
+                    },
+                    {
+                        "name": "Satan Raid Finale",
+                        "code": "c11039701_05_05"
+                    }
+                ]
             }
         ],
         "Staff": [
@@ -1012,6 +1093,29 @@
                 "user": "c110394_01",
                 "animations": [
                     { "name": "Dodge", "code": "GUN_CHR_A_01_11039401" }
+                ]
+            },
+            {
+                "name": "Faris",
+                "user": "c110382_01",
+                "animations": [
+                    {
+                        "name": "Satan Raid Intro",
+                        "code": "r0140001_c110382"
+                    },
+                    {
+                        "name": "Satan Raid Assist",
+                        "code": "c11038201_03_01>c11038201_03_02",
+                        "icon": "Icon_QuestSkill2_005"
+                    },
+                    {
+                        "name": "Satan Raid Finale",
+                        "code": "c11038201_05_03"
+                    },
+                    {
+                        "name": "Satan Raid Finale 2",
+                        "code": "c11038201_05_06"
+                    }
                 ]
             }
         ]

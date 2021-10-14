@@ -221,6 +221,11 @@
                 "name": "Seimei",
                 "subtitle": "Banishing Strike",
                 "code": "ROD_CHR_01_11037501>ROD_CHR_02_11037501>ROD_CHR_03_11037501"
+            },
+            {
+                "user": "c110397_01",
+                "name": "Basileus",
+                "code": "ROD_CHR_01_11039701>ROD_CHR_02_11039701>ROD_CHR_03_11039701"
             }
         ],
         "Staff": [
