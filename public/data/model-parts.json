@@ -871,6 +871,16 @@
                     "BR": "Broken"
                 }
             }
+        },
+        "d210163_01": {
+            "A": {
+                "name": "Wings",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                },
+                "default": "Shown"
+            }
         }
     }
 }

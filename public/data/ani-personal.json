@@ -4166,6 +4166,19 @@
                 "name": "Angelic Devotion",
                 "code": "D21014501_060_01",
                 "icon": "Icon_Skill_015"
+            },
+            {
+                "name": "Satan Raid Assist",
+                "code": "d21014501_04_01>d21014501_04_02",
+                "icon": "Icon_QuestSkill2_005"
+            },
+            {
+                "name": "Satan Raid Finale",
+                "code": "d21014501_05_01"
+            },
+            {
+                "name": "Satan Raid Finale 2",
+                "code": "d21014501_05_06"
             }
         ],
         "d210145_02": [
@@ -4365,6 +4378,19 @@
                 "name": "Angelic Justice",
                 "code": "D21015401_060_01",
                 "icon": "Icon_Skill_013"
+            },
+            {
+                "name": "Satan Raid Assist",
+                "code": "d21015401_01_01>d21015401_01_02",
+                "icon": "Icon_QuestSkill2_005"
+            },
+            {
+                "name": "Satan Raid Finale",
+                "code": "d21015401_05_04"
+            },
+            {
+                "name": "Satan Raid Finale 2",
+                "code": "d21015401_05_06"
             }
         ],
         "d210154_03": [
@@ -5113,6 +5139,19 @@
             {
                 "name": "Charged Attack",
                 "code": "D21016803_100_01>D21016803_100_02>D21016803_100_03>D21016803_100_04>D21016803_100_05"
+            },
+            {
+                "name": "Satan Raid Assist",
+                "code": "d21016801_00_01>d21016801_00_02",
+                "icon": "Icon_QuestSkill2_005"
+            },
+            {
+                "name": "Satan Raid Finale",
+                "code": "d21016801_05_05"
+            },
+            {
+                "name": "Satan Raid Finale 2",
+                "code": "d21016801_05_06"
             }
         ],
         "d210162_01": [
@@ -6210,6 +6249,17 @@
             {
                 "name": "Struggle",
                 "code": "R0140001_05_06>R0140001_05_07>R0140001_05_08"
+            }
+        ],
+        "d210163_01": [
+            {
+                "name": "Satan Raid Assist",
+                "code": "d21016301_03_01>d21016301_03_02",
+                "icon": "Icon_QuestSkill2_005"
+            },
+            {
+                "name": "Satan Raid Finale",
+                "code": "d21016301_05_03"
             }
         ],
         "d210176_01": [{ "name": "Attack", "code": "d21017601_03_02" }]
