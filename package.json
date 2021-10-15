@@ -12,8 +12,8 @@
     "dependencies": {
         "@emotion/react": "^11.4.1",
         "@emotion/styled": "^11.3.0",
-        "@mui/icons-material": "^5.0.3",
-        "@mui/material": "^5.0.3",
+        "@mui/icons-material": "^5.0.4",
+        "@mui/material": "^5.0.4",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^6.1.4",
