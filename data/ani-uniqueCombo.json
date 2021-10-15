@@ -194,6 +194,13 @@
                 "code": "ROD_CMB_01_11036101&dur=50>ROD_CMB_02_11036101&dur=50>ROD_CMB_03_11036101&dur=50>ROD_CMB_04_11036101&dur=50>ROD_CMB_05_11036101"
             }
         ],
+        "Staff": [
+            {
+                "user": "c110396_01",
+                "name": "Sandalphon",
+                "code": "CAN_CMB_01_11039601&dur=50>CAN_CMB_02_11039601&dur=50>CAN_CMB_03_11039601"
+            }
+        ],
         "Manacaster": [
             {
                 "user": "c100010_10",

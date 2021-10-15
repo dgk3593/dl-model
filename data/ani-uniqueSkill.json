@@ -1620,12 +1620,14 @@
             {
                 "user": "c110397_01",
                 "name": "Ventus Impalement",
-                "code": "ROD_SKL_01_01_11039701"
+                "code": "ROD_SKL_01_01_11039701",
+                "icon": "Icon_Skill_282"
             },
             {
                 "user": "c110397_01",
                 "name": "Spiritus Sanction",
-                "code": "ROD_SKL_02_01_11039701"
+                "code": "ROD_SKL_02_01_11039701",
+                "icon": "Icon_Skill_283"
             }
         ],
         "Staff": [
@@ -1725,6 +1727,18 @@
                 "subtitle": "3 Starfall Strength",
                 "code": "CAN_SKL_03_01_11025202",
                 "icon": "Icon_Skill_192"
+            },
+            {
+                "user": "c110396_01",
+                "name": "Angelic Praise",
+                "code": "CAN_SKL_01_01_11039601",
+                "icon": "Icon_Skill_284"
+            },
+            {
+                "user": "c110396_01",
+                "name": "Angelic Wings",
+                "code": "CAN_SKL_01_01_11039601",
+                "icon": "Icon_Skill_285"
             }
         ],
         "Manacaster": [
