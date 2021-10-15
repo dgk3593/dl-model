@@ -1,6 +1,11 @@
 {
     "data": [
         {
+            "id": "d210165_01",
+            "name": "Heavenly Wings Sandalphon",
+            "element": "Water"
+        },
+        {
             "id": "d210176_01",
             "name": "Carbuncle"
         },

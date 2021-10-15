@@ -6262,6 +6262,28 @@
                 "code": "d21016301_05_03"
             }
         ],
-        "d210176_01": [{ "name": "Attack", "code": "d21017601_03_02" }]
+        "d210176_01": [{ "name": "Attack", "code": "d21017601_03_02" }],
+        "d210165_01": [
+            { "name": "Idle", "code": "D21016501_000_01" },
+            { "name": "Move Forward", "code": "D21016501_002_01" },
+            { "name": "Move Forward (Fast)", "code": "D21016501_003_01" },
+            { "name": "Brake", "code": "D21016501_004_01" },
+            { "name": "Dash Forward", "code": "D21016501_020_01" },
+            { "name": "Transform", "code": "D21016501_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21016501_040_01&dur=40>D21016501_041_01&dur=40>D21016501_042_01"
+            },
+            {
+                "name": "Celestial Skewer",
+                "code": "D21016501_060_01",
+                "icon": "Icon_Skill_286"
+            },
+            {
+                "name": "Celestial Castling",
+                "code": "D21016501_061_01",
+                "icon": "Icon_Skill_287"
+            }
+        ]
     }
 }
