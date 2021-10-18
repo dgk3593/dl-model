@@ -50,6 +50,7 @@ export default function addTextureFunctions(container) {
             (async function () {
                 const newTexture = await loadTexture(texturePath);
                 newTexture.name = newTextureName;
+                newTexture.encoding = THREE.sRGBEncoding;
 
                 matList.forEach(mat => {
                     if (mat.map) {
