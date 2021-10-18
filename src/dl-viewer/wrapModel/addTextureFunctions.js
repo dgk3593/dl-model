@@ -97,4 +97,4 @@ export default function addTextureFunctions(container) {
  * @param {string} id - model id
  */
 export const getDefaultTexture = id =>
-    id.match(/_[0-9]{2}/) || id.startsWith("h") ? id : `${id}_01`;
+    id.match(/_[0-9]{2}/) || id.startsWith("h") ? id : `>${id}_01`;

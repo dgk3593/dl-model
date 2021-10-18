@@ -839,16 +839,14 @@
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
-                },
-                "default": "None"
+                }
             },
             "B": {
                 "name": "Left Wing",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
-                },
-                "default": "None"
+                }
             },
             "C": {
                 "name": "Tails",
@@ -862,14 +860,16 @@
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
-                }
+                },
+                "default": "None"
             },
             "WingB": {
                 "name": "OD Left Wings",
                 "options": {
                     "default": "Normal",
                     "BR": "Broken"
-                }
+                },
+                "default": "None"
             }
         },
         "d210163_01": {
