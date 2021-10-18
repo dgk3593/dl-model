@@ -1,5 +1,6 @@
 import { SetVector, SetNumber } from "components/Setters";
 import { MaterialController, OutlineController } from "..";
+import BodyPartsController from "../BodyPartsController";
 import ParticleController from "../ParticleController";
 
 export const defaultOptions = [
@@ -58,6 +59,9 @@ export const Controller = ({ target, type, ...others }) => {
 
         case "Particle":
             return <ParticleController target={target} />;
+
+        case "Body Parts":
+            return <BodyPartsController target={target} />;
 
         default:
             return <></>;

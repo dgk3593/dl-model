@@ -4,11 +4,10 @@ import { getSelectOptions, defaultOptions, Controller } from "./helper";
 
 import "./ModelController.css";
 
-function ModelController({
-    target,
-    options = defaultOptions,
-    dataKey = "controller",
-}) {
+function ModelController({ target, dataKey = "controller" }) {
+    const options = [...defaultOptions];
+    if (target.parts) options.push("Body Parts");
+
     const [type, setType] = useState(target.userData[dataKey] ?? options[0]);
     const selectOptions = getSelectOptions(options);
 
