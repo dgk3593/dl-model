@@ -61,7 +61,9 @@ export default function addPartFunctions(container) {
     if (!partMeshes.length) return container;
 
     const partNames = new Set(
-        partMeshes.map(({ name }) => partRegex.exec(name)?.[1])
+        partMeshes
+            .map(({ name }) => partRegex.exec(name)?.[1])
+            .sort((a, b) => (a > b ? 1 : -1))
     );
     /**
      * @param {string} partName
