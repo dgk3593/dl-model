@@ -5019,6 +5019,67 @@
         "w398008_01": [
             { "label": "Default", "value": "w398008_01" },
             { "label": "Version 1", "value": ">w398008_01_old" }
+        ],
+        "r0010101": [
+            { "label": "Normal", "value": ">r0010101_01" },
+            { "label": "Overdrive", "value": ">r0010101_02" }
+        ],
+        "r0010401": [
+            { "label": "Normal", "value": ">r0010401_01" },
+            { "label": "Overdrive", "value": ">r0010401_02" }
+        ],
+        "r0020501": [
+            { "label": "Normal", "value": ">r0020501_01" },
+            { "label": "Overdrive", "value": ">r0020501_02" }
+        ],
+        "r0020301": [
+            { "label": "Normal", "value": ">r0020301_01" },
+            { "label": "Overdrive", "value": ">r0020301_02" }
+        ],
+        "r0030501": [
+            { "label": "Normal", "value": ">r0030501_01" },
+            { "label": "Overdrive", "value": ">r0030501_02" }
+        ],
+        "r0030201": [
+            { "label": "Normal", "value": ">r0030201_01" },
+            { "label": "Overdrive", "value": ">r0030201_02" }
+        ],
+        "r0040201": [
+            { "label": "Normal", "value": ">r0040201_01" },
+            { "label": "Overdrive", "value": ">r0040201_02" }
+        ],
+        "r0040101": [
+            { "label": "Normal", "value": ">r0040101_01" },
+            { "label": "Overdrive", "value": ">r0040101_02" }
+        ],
+        "r0050501": [
+            { "label": "Normal", "value": ">r0050501_01" },
+            { "label": "Overdrive", "value": ">r0050501_02" }
+        ],
+        "r0050301": [
+            { "label": "Normal", "value": ">r0050301_01" },
+            { "label": "Overdrive", "value": ">r0050301_02" }
+        ],
+        "r0060401": [
+            { "label": "Normal", "value": ">r0060401_01" },
+            { "label": "Overdrive", "value": ">r0060401_02" }
+        ],
+        "r0090501": [
+            { "label": "Normal", "value": ">r0090501_01" },
+            { "label": "Overdrive", "value": ">r0090501_02" }
+        ],
+        "r0100501": [
+            { "label": "Normal", "value": ">r0100501_01" },
+            { "label": "Overdrive", "value": ">r0100501_02" }
+        ],
+        "r0120301": [
+            { "label": "Normal", "value": ">r0120301_01" },
+            { "label": "Overdrive", "value": ">r0120301_02" },
+            { "label": "Gozu Tenno", "value": "d210136_01" }
+        ],
+        "r0140001": [
+            { "label": "Normal", "value": ">r0140001_01" },
+            { "label": "Overdrive", "value": ">r0140001_02" }
         ]
     }
 }
