@@ -31,7 +31,10 @@ function ModelSettings() {
 
             {activeModel && (
                 <>
-                    <TextureController target={activeModel} />
+                    <TextureController
+                        key={activeModel.uniqueId}
+                        target={activeModel}
+                    />
                     {activeModel?.parts && (
                         <>
                             <BodyPartsController
