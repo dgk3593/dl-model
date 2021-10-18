@@ -12,6 +12,7 @@ import ParticleController from "components/controller/ParticleController";
 import { simpleHandler } from "../simpleHandler";
 import { Attachment, DirectionsRun, Storage } from "@mui/icons-material";
 import BodyPartsController from "@/SceneController/components/controller/BodyPartsController";
+import TextureController from "@/SceneController/components/controller/TextureController";
 
 function ModelSettings() {
     const { activeModel } = useActiveModel();
@@ -30,6 +31,7 @@ function ModelSettings() {
 
             {activeModel && (
                 <>
+                    <TextureController target={activeModel} />
                     {activeModel?.parts && (
                         <>
                             <BodyPartsController

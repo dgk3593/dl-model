@@ -30,6 +30,10 @@ export const animation = [
     "ani-extra",
 ];
 
-export const others = ["background-image", "background-skybox"];
+export const others = [
+    "background-image",
+    "background-skybox",
+    "model-texture",
+];
 
 export const all = [...model, ...animation, ...others];
