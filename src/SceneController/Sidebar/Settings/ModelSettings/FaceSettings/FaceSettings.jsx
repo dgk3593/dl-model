@@ -1,5 +1,5 @@
 import { useActiveModel } from "@/state";
-import { EmojiEmotions, Face } from "@mui/icons-material";
+import { Mood, Face } from "@mui/icons-material";
 import { Button } from "@mui/material";
 
 function FaceSettings({ handleClick }) {
@@ -13,7 +13,7 @@ function FaceSettings({ handleClick }) {
                 variant="contained"
                 data-mode="face"
                 onClick={handleClick}
-                startIcon={<EmojiEmotions />}
+                startIcon={<Mood />}
             >
                 Facial Expression
             </Button>
