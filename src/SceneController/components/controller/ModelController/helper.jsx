@@ -9,7 +9,7 @@ export const defaultOptions = [
     "Scale",
     "Outline",
     "Material",
-    "Particle",
+    "Particles",
 ];
 
 export const getSelectOptions = optionList =>
@@ -57,7 +57,7 @@ export const Controller = ({ target, type, ...others }) => {
         case "Material":
             return <MaterialController target={target} />;
 
-        case "Particle":
+        case "Particles":
             return <ParticleController target={target} />;
 
         case "Body Parts":

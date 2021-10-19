@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SelectBox from "components/SelectBox";
 import { getSelectOptions, defaultOptions, Controller } from "./helper";
+import QuickAccess from "./QuickAccess";
 
 import "./ModelController.css";
 
@@ -18,6 +19,8 @@ function ModelController({ target, dataKey = "controller" }) {
 
     return (
         <div className="ModelController">
+            <QuickAccess value={type} onChange={handleTypeChange} />
+
             <SelectBox
                 options={selectOptions}
                 value={type}

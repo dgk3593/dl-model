@@ -1,0 +1,41 @@
+.IconTabBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #10101088;
+}
+
+.IconTabBar.horizontal {
+    flex-direction: row;
+}
+
+.IconTabBar.vertical {
+    flex-direction: column;
+}
+
+.IconTabBar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    flex: 1 1;
+    width: 2.5rem;
+    max-width: 2.5rem;
+    min-height: 100%;
+    border-left: 1px solid #eee4;
+    border-right: 1px solid #eee4;
+}
+
+.IconTabBar button svg {
+    color: #cccc;
+}
+
+.IconTabBar button.selected svg {
+    color: #fff;
+}
+
+.IconTabBar button:hover {
+    background-color: #fff3;
+}

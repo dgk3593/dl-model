@@ -28,6 +28,14 @@
     background-color: white;
 }
 
+.ModelController .QuickAccess button {
+    background-color: transparent;
+}
+
+.ModelController .QuickAccess button:hover {
+    background-color: #fff3;
+}
+
 .ModelController > .SelectBox {
     margin: 0.2rem 0;
 }
