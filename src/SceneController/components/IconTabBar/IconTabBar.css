@@ -21,8 +21,7 @@
     background-color: transparent;
     border: none;
     flex: 1 1;
-    width: 2.5rem;
-    max-width: 2.5rem;
+    min-width: 2.5rem;
     min-height: 2.5rem;
     border-left: 1px solid #eee4;
     border-right: 1px solid #eee4;
@@ -34,8 +33,13 @@
 
 .IconTabBar button.selected svg {
     color: #fff;
+    filter: drop-shadow(0 0 3px white);
 }
 
 .IconTabBar button:hover {
     background-color: #fff3;
+}
+
+.IconTabBar button:hover svg {
+    color: #eee;
 }
