@@ -1,15 +1,15 @@
 import IconTabBar from "components/IconTabBar";
-import { Position } from "./icons";
 import {
     ThreeSixty,
     OpenInFull,
     PersonOutlined,
     Texture,
     AutoAwesome,
+    ControlCamera,
 } from "@mui/icons-material";
 
 const tabs = [
-    { value: "Position", icon: <Position /> },
+    { value: "Position", icon: <ControlCamera /> },
     { value: "Rotation", icon: <ThreeSixty /> },
     { value: "Scale", icon: <OpenInFull /> },
     { value: "Outline", icon: <PersonOutlined /> },
