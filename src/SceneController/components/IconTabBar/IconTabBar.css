@@ -17,19 +17,20 @@
 .IconTabBar button {
     display: flex;
     gap: 0;
+    margin: 0;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: none;
     flex: 1 1;
     min-width: 2.3rem;
     min-height: 2.5rem;
+    border: none;
     border-left: 1px solid #eee4;
     border-right: 1px solid #eee4;
 }
 
 .IconTabBar button svg {
-    color: #cccc;
+    color: #ccca;
 }
 
 .IconTabBar button.selected svg {
@@ -38,9 +39,10 @@
 }
 
 .IconTabBar button:hover {
-    background-color: #fff3;
+    background-color: #fff2;
 }
 
 .IconTabBar button:hover svg {
     color: #eee;
+    transform: scale(1.05);
 }
