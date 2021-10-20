@@ -16,12 +16,13 @@
 
 .IconTabBar button {
     display: flex;
+    gap: 0;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     border: none;
     flex: 1 1;
-    min-width: 2.5rem;
+    min-width: 2.3rem;
     min-height: 2.5rem;
     border-left: 1px solid #eee4;
     border-right: 1px solid #eee4;

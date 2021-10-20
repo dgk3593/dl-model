@@ -1,7 +1,18 @@
+import { Fragment } from "react";
 import { SetVector, SetNumber } from "components/Setters";
 import { MaterialController, OutlineController } from "..";
 import BodyPartsController from "../BodyPartsController";
 import ParticleController from "../ParticleController";
+
+import {
+    ThreeSixty,
+    OpenInFull,
+    PersonOutlined,
+    Texture,
+    AutoAwesome,
+    ControlCamera,
+    Extension,
+} from "@mui/icons-material";
 
 export const defaultOptions = [
     "Position",
@@ -12,8 +23,15 @@ export const defaultOptions = [
     "Particles",
 ];
 
-export const getSelectOptions = optionList =>
-    optionList.map(value => ({ value }));
+const icons = {
+    Position: ControlCamera,
+    Rotation: ThreeSixty,
+    Scale: OpenInFull,
+    Outline: PersonOutlined,
+    Material: Texture,
+    Particles: AutoAwesome,
+    "Body Parts": Extension,
+};
 
 export const Controller = ({ target, type, ...others }) => {
     switch (type) {
@@ -67,3 +85,12 @@ export const Controller = ({ target, type, ...others }) => {
             return <></>;
     }
 };
+
+export const getSelectOptions = optionList =>
+    optionList.map(value => ({ value }));
+
+export const getTabs = list =>
+    list.map(value => {
+        const Icon = icons[value] ?? Fragment;
+        return { value, icon: <Icon /> };
+    });

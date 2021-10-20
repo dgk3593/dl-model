@@ -19,7 +19,11 @@ function ModelController({ target, dataKey = "controller" }) {
 
     return (
         <div className="ModelController">
-            <QuickAccess value={type} onChange={handleTypeChange} />
+            <QuickAccess
+                list={options}
+                value={type}
+                onChange={handleTypeChange}
+            />
 
             <SelectBox
                 options={selectOptions}
