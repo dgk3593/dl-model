@@ -6277,12 +6277,12 @@
             {
                 "name": "Celestial Skewer",
                 "code": "D21016501_060_01",
-                "icon": "Icon_Skill_285"
+                "icon": "Icon_Skill_004"
             },
             {
                 "name": "Celestial Castling",
                 "code": "D21016501_061_01",
-                "icon": "Icon_Skill_287"
+                "icon": "Icon_Skill_018"
             }
         ]
     }
