@@ -86,6 +86,13 @@ export const Controller = ({ target, type, ...others }) => {
     }
 };
 
+export const getControlList = target => {
+    const options = [...defaultOptions];
+    if (target.parts) options.push("Body Parts");
+
+    return options;
+};
+
 export const getSelectOptions = optionList =>
     optionList.map(value => ({ value }));
 

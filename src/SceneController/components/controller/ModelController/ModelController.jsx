@@ -1,13 +1,12 @@
 import { useState } from "react";
 import SelectBox from "components/SelectBox";
-import { getSelectOptions, defaultOptions, Controller } from "./helper";
+import { getControlList, getSelectOptions, Controller } from "./helper";
 import QuickAccess from "./QuickAccess";
 
 import "./ModelController.css";
 
 function ModelController({ target, dataKey = "controller" }) {
-    const options = [...defaultOptions];
-    if (target.parts) options.push("Body Parts");
+    const options = getControlList(target);
 
     const [type, setType] = useState(target.userData[dataKey] ?? options[0]);
     const selectOptions = getSelectOptions(options);
