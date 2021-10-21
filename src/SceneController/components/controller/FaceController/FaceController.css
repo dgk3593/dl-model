@@ -1,0 +1,11 @@
+.FaceController {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.FaceController button {
+    width: 12rem;
+    justify-content: flex-start;
+}

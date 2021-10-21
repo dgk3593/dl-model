@@ -31,6 +31,7 @@ export const styles = {
         },
     },
     listItem: {
+        cursor: "pointer",
         textAlign: "center",
         "&[data-multi]::after": {
             content: '"▼"',

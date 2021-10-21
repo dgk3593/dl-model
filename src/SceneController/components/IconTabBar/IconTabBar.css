@@ -23,6 +23,7 @@
     background-color: transparent;
     flex: 1 1;
     min-width: 2.3rem;
+    max-width: 3rem;
     min-height: 2.5rem;
     border: none;
     border-left: 1px solid #eee4;
