@@ -17,9 +17,10 @@ const unavailableStyle = {
     fontSize: "large",
 };
 
-function FaceSelect({ onSelect, onAfterSelect }) {
+function FaceSelect({ target, onSelect, onAfterSelect }) {
     const { activeModel } = useActiveModel();
-    const type = activeModel?.face?.type;
+    target ??= activeModel;
+    const type = target?.face?.type;
 
     const Selector = selector[type] ?? (() => <></>);
     const handleSelect = (...args) => {
@@ -27,11 +28,11 @@ function FaceSelect({ onSelect, onAfterSelect }) {
         onAfterSelect?.();
     };
 
-    return activeModel?.face ? (
+    return target?.face ? (
         <div className="FaceSelect">
             <DialogTitle sx={{ textAlign: "center" }}>Face Select</DialogTitle>
             <DialogContent sx={{ padding: "1rem" }}>
-                <Selector target={activeModel} onSelect={handleSelect} />
+                <Selector target={target} onSelect={handleSelect} />
             </DialogContent>
         </div>
     ) : (

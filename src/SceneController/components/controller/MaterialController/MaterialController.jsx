@@ -12,7 +12,7 @@ function MaterialController({ target }) {
     const skipRerender = useRef(false);
 
     useEffect(() => {
-        const listener = material.addEventListener("change", ({ propName }) => {
+        const listener = material.addEventListener("change", () => {
             if (skipRerender.current) {
                 skipRerender.current = false;
                 return;

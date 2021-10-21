@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 
 function FaceSettings({ handleClick }) {
     const { activeModel } = useActiveModel();
-    const { face } = activeModel;
+    const face = activeModel?.face;
     if (!face) return <></>;
 
     return (

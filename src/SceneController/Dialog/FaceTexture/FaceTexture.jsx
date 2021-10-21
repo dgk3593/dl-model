@@ -66,7 +66,7 @@ function FaceTexture({ compact, onSelect, onAfterSelect }) {
     );
 
     return (
-        <Box className="ModelCatalog" sx={styles.root}>
+        <Box className="FaceTexture" sx={styles.root}>
             <Box sx={topStyle}>
                 <DialogTitle sx={styles.title}>Select Texture</DialogTitle>
 

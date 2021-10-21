@@ -9,7 +9,9 @@ import "../../SettingGroup.css";
 
 function OutlineSettings() {
     const { activeModel } = useActiveModel();
-    const { outline } = activeModel;
+    const outline = activeModel?.outline;
+    if (!outline) return <></>;
+
     const [key, updateKey] = useKey();
 
     const propagate = () => {
@@ -27,24 +29,22 @@ function OutlineSettings() {
     };
 
     return (
-        outline && (
-            <Accordion disableGutters className="SettingGroup">
-                <>
-                    <div className="title">
-                        <PersonOutlined />
-                        Outline
-                    </div>
-                    <Button
-                        onClick={toggleOutline}
-                        title="Toggle Outline"
-                        variant="contained"
-                    >
-                        Toggle
-                    </Button>
-                </>
-                <OutlineController target={activeModel} key={key} />
-            </Accordion>
-        )
+        <Accordion disableGutters className="SettingGroup">
+            <>
+                <div className="title">
+                    <PersonOutlined />
+                    Outline
+                </div>
+                <Button
+                    onClick={toggleOutline}
+                    title="Toggle Outline"
+                    variant="contained"
+                >
+                    Toggle
+                </Button>
+            </>
+            <OutlineController target={activeModel} key={key} />
+        </Accordion>
     );
 }
 

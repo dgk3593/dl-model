@@ -12,7 +12,9 @@ import {
     AutoAwesome,
     ControlCamera,
     Extension,
+    Face,
 } from "@mui/icons-material";
+import FaceController from "../FaceController";
 
 export const defaultOptions = [
     "Position",
@@ -31,6 +33,7 @@ const icons = {
     Material: Texture,
     Particles: AutoAwesome,
     "Body Parts": Extension,
+    Face: Face,
 };
 
 export const Controller = ({ target, type, ...others }) => {
@@ -78,6 +81,9 @@ export const Controller = ({ target, type, ...others }) => {
         case "Particles":
             return <ParticleController target={target} />;
 
+        case "Face":
+            return <FaceController target={target} />;
+
         case "Body Parts":
             return <BodyPartsController target={target} />;
 
@@ -88,6 +94,7 @@ export const Controller = ({ target, type, ...others }) => {
 
 export const getControlList = target => {
     const options = [...defaultOptions];
+    if (target.face) options.push("Face");
     if (target.parts) options.push("Body Parts");
 
     return options;
