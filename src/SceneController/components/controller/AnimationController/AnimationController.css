@@ -1,0 +1,11 @@
+.AnimationController {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AnimationController button {
+    width: 12rem;
+    justify-content: flex-start;
+}

@@ -3,6 +3,8 @@ import { SetVector, SetNumber } from "components/Setters";
 import { MaterialController, OutlineController } from "..";
 import BodyPartsController from "../BodyPartsController";
 import ParticleController from "../ParticleController";
+import FaceController from "../FaceController";
+import AnimationController from "../AnimationController";
 
 import {
     ThreeSixty,
@@ -13,8 +15,8 @@ import {
     ControlCamera,
     Extension,
     Face,
+    DirectionsRun,
 } from "@mui/icons-material";
-import FaceController from "../FaceController";
 
 export const defaultOptions = [
     "Position",
@@ -23,6 +25,7 @@ export const defaultOptions = [
     "Outline",
     "Material",
     "Particles",
+    "Animation",
 ];
 
 const icons = {
@@ -34,6 +37,7 @@ const icons = {
     Particles: AutoAwesome,
     "Body Parts": Extension,
     Face: Face,
+    Animation: DirectionsRun,
 };
 
 export const Controller = ({ target, type, ...others }) => {
@@ -80,6 +84,9 @@ export const Controller = ({ target, type, ...others }) => {
 
         case "Particles":
             return <ParticleController target={target} />;
+
+        case "Animation":
+            return <AnimationController target={target} />;
 
         case "Face":
             return <FaceController target={target} />;
