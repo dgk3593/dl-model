@@ -1,5 +1,5 @@
 import { useModalState } from "@/state";
-import { DirectionsRun } from "@mui/icons-material";
+import { Close, DirectionsRun } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 
@@ -19,6 +19,11 @@ function AnimationController({ target }) {
         target?.userData && (target.userData.chain = chainList);
     };
 
+    const removeAni = () => {
+        target?.animation?.reset();
+        target?.userData?.chain.splice(0, Infinity);
+    };
+
     return (
         <div className="AnimationController">
             <Button
@@ -27,6 +32,13 @@ function AnimationController({ target }) {
                 onClick={addAni}
             >
                 Add Animation
+            </Button>
+            <Button
+                variant="contained"
+                startIcon={<Close />}
+                onClick={removeAni}
+            >
+                Reset
             </Button>
         </div>
     );

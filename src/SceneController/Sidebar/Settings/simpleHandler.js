@@ -11,7 +11,11 @@ const aniHandler = (code, name) => {
     activeModel?.animation.addChain(code);
 
     const chainList = chainCodeToList(code, name);
-    activeModel?.userData && (activeModel.userData.chain = chainList);
+    if (!activeModel?.userData) return;
+
+    activeModel.userData.chain
+        ? activeModel.userData.chain.splice(0, Infinity, ...chainList)
+        : (activeModel.userData.chain = chainList);
 };
 
 const modelHandler = async (id, name) => {

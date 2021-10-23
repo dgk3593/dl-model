@@ -4,6 +4,24 @@ import { ANIMATION_SOURCE, FBX_SOURCE } from "../../path";
 import { extractPair } from "../../utils";
 import { FPS } from "../../defaultParams";
 
+export const defaultCurrent = {
+    chainName: "",
+    chainCode: "",
+    chainLength: 0,
+    aniIdx: 0,
+    clipDuration: 0,
+    clipTimeScale: 1,
+    /**
+     * @type {THREE.AnimationAction}
+     */
+    action: null,
+    /**
+     * @type {Array}
+     */
+    aniAction: [], // list of actions for the current clip
+    aniActionPointer: 0, // index of next mod action
+};
+
 /**
  * @param {string} chainCode
  */

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { createAniChain } from "./helper";
+import { createAniChain, defaultCurrent } from "./helper";
 import { FPS } from "../../defaultParams";
 import eventDispatcher from "../../utils/eventDispatcher";
 import { setNestedProp } from "../../utils";
@@ -14,23 +14,7 @@ export default function addAnimation(container) {
         ...eventDispatcher,
         mixer,
         chain: {},
-        current: {
-            chainName: "",
-            chainCode: "",
-            chainLength: 0,
-            aniIdx: 0,
-            clipDuration: 0,
-            clipTimeScale: 1,
-            /**
-             * @type {THREE.AnimationAction}
-             */
-            action: null,
-            /**
-             * @type {Array}
-             */
-            aniAction: [], // list of actions for the current clip
-            aniActionPointer: 0, // index of next mod action
-        },
+        current: { ...defaultCurrent },
 
         toString() {
             const code = this.chain.default?.code;
@@ -90,6 +74,13 @@ export default function addAnimation(container) {
 
         stop() {
             mixer.stopAllAction();
+        },
+
+        reset() {
+            const currentChain = this.current.chainName;
+            this.stop();
+            this.current = { ...defaultCurrent };
+            this.chain[currentChain] = undefined;
         },
 
         /**
