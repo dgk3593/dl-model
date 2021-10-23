@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button, Popover, MenuItem } from "@mui/material";
-import viewer from "@/viewer";
 
 const sx = {
     backgroundColor: "#101010",
@@ -18,8 +17,11 @@ const sx = {
     },
 };
 
-function TimeScaleControl() {
-    const [timeScale, setTimeScale] = useState(viewer.loop.timeScale);
+function TimeScaleControl({ target, isReverse }) {
+    const { animation } = target;
+    const initTimeScale = Math.abs(animation.mixer.timeScale);
+    const [timeScale, setTimeScale] = useState(initTimeScale);
+
     const [anchorEl, setAnchorEl] = useState(null);
     const openPopover = event => {
         event.stopPropagation();
@@ -33,7 +35,7 @@ function TimeScaleControl() {
 
     const handleClick = event => {
         const { value } = event.target.dataset;
-        viewer.loop.timeScale = value;
+        animation.mixer.timeScale = isReverse ? -value : value;
         setTimeScale(parseFloat(value));
         closePopover();
     };

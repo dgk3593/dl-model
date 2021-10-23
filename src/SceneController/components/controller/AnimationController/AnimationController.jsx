@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 
 import "./AnimationController.css";
+import ModelTimeControl from "./ModelTimeControl";
 
 function AnimationController({ target }) {
     const { inputAni } = useModalState();
@@ -12,8 +13,12 @@ function AnimationController({ target }) {
         const ani = await inputAni();
         if (!ani) return;
 
+        const isPaused = target?.animation.isPaused;
+
         const [code, name] = ani;
-        target?.animation.addChain(code);
+        target?.animation
+            .addChain(code)
+            .then(() => isPaused && target.animation.pause());
 
         const chainList = chainCodeToList(code, name);
         target?.userData && (target.userData.chain = chainList);
@@ -26,6 +31,7 @@ function AnimationController({ target }) {
 
     return (
         <div className="AnimationController">
+            <ModelTimeControl target={target} />
             <Button
                 variant="contained"
                 startIcon={<DirectionsRun />}

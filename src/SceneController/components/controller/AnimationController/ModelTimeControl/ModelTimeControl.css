@@ -1,0 +1,44 @@
+.ModelTimeControl {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #101010;
+}
+
+.ModelTimeControl svg {
+    color: #eee;
+}
+
+.ModelTimeControl div.MuiButtonGroup-root button,
+.ModelTimeControl button.MuiButton-root[title="Time Scale"] {
+    max-width: 2.5rem;
+    background-color: transparent;
+    color: #eee;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.ModelTimeControl div.MuiButtonGroup-root button:hover,
+.ModelTimeControl button.MuiButton-root[title="Time Scale"]:hover {
+    background-color: #fff2;
+}
+
+.ModelTimeControl button:hover svg {
+    color: white;
+}
+
+.ModelTimeControl ul {
+    background-color: #101010;
+}
+
+.ModelTimeControl .GlowToggle {
+    flex: 0;
+}
+
+.ModelTimeControl .GlowToggle[data-type="text"] {
+    min-height: unset;
+}
