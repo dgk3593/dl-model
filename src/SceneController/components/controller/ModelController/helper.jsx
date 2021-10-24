@@ -16,7 +16,15 @@ import {
     Extension,
     Face,
     DirectionsRun,
+    CropOriginal,
 } from "@mui/icons-material";
+
+import { useAppData } from "@/data";
+import TextureController from "../TextureController";
+
+const hasTexture = id => {
+    return !!useAppData.getState()?.["model-texture"]?.[id];
+};
 
 export const defaultOptions = [
     "Position",
@@ -35,9 +43,10 @@ const icons = {
     Outline: PersonOutlined,
     Material: Texture,
     Particles: AutoAwesome,
+    Animation: DirectionsRun,
     "Body Parts": Extension,
     Face: Face,
-    Animation: DirectionsRun,
+    Texture: CropOriginal,
 };
 
 export const Controller = ({ target, type, ...others }) => {
@@ -94,6 +103,9 @@ export const Controller = ({ target, type, ...others }) => {
         case "Body Parts":
             return <BodyPartsController target={target} />;
 
+        case "Texture":
+            return <TextureController target={target} />;
+
         default:
             return <></>;
     }
@@ -103,6 +115,7 @@ export const getControlList = target => {
     const options = [...defaultOptions];
     if (target.face) options.push("Face");
     if (target.parts) options.push("Body Parts");
+    if (hasTexture(target.id)) options.push("Texture");
 
     return options;
 };
