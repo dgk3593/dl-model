@@ -1,6 +1,33 @@
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dgk3593/dl-model)
 
-Sample terminal program:
+Sample terminal programs:
+
+Gabriel and Pinon:
+
+```js
+viewer.disposeAllModels();
+
+const gabriel = await viewer.loadDLModel("d210145_01");
+viewer.add(gabriel);
+gabriel.animation.addChain("DC_d210145_01_90_01");
+gabriel.face.eyeBaseIdx = gabriel.face.mouthBaseIdx = 5;
+gabriel.parts.Plushie.current = "None";
+
+viewer.camera.position.set(-0.915, 3.135, 3.728);
+viewer.controls.target.set(0.087, 1.877, 0.017);
+
+const pinon = await viewer.loadDLModel("c110366_01");
+pinon.attachTo(gabriel, "jHandR");
+pinon.animation.addChain("ROD_SKL_02_01_11000902").then(() => {
+    pinon.animation.pause();
+    pinon.animation.setTime(1.085);
+});
+pinon.position.set(0.315, -0.19, 0.22);
+pinon.scale = 1.2;
+pinon.model.quaternion.set(-0.7071, 0, 0.2185, 0.6725);
+```
+
+Laxi and Mascula:
 
 ```js
 viewer.disposeAllModels();
