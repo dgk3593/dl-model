@@ -9,6 +9,7 @@ import viewer from "@/viewer";
 import { quickRecord } from "./helper";
 import { props } from "./props";
 import "../../SettingGroup.css";
+import ManualRecordControl from "./ManualRecordControl";
 
 function RecordControl() {
     const { activeModel } = useActiveModel();
@@ -36,8 +37,14 @@ function RecordControl() {
                     <RecordIcon />
                 </Button>
             </>
+            <>
+                <Setters target={record.settings} propList={props} />
 
-            <Setters target={record.settings} propList={props} />
+                <Accordion disableGutters className="SettingGroup-extra">
+                    <>Manual Record</>
+                    <ManualRecordControl />
+                </Accordion>
+            </>
         </Accordion>
     ) : (
         <></>
