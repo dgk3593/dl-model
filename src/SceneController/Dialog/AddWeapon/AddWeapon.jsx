@@ -1,5 +1,5 @@
 import { useDebounce } from "hook/useDebounce";
-import { useAddWeaponState } from "@/state";
+import { useActiveModel, useAddWeaponState } from "@/state";
 import { useState, useEffect } from "react";
 import { styles } from "./styles";
 import { categories } from "./categories";
@@ -18,7 +18,10 @@ import Body from "./Body";
 
 const defaultFilter = [];
 
-function AddWeapon() {
+function AddWeapon({ target }) {
+    const { activeModel } = useActiveModel();
+    target ??= activeModel;
+
     const {
         indices,
         setIndex,
@@ -89,6 +92,7 @@ function AddWeapon() {
 
             <DialogContent sx={styles.content}>
                 <Body
+                    target={target}
                     searchQuery={debouncedQuery}
                     filter={filterConditions}
                     content={contentName}

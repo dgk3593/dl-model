@@ -5,6 +5,7 @@ import BodyPartsController from "../BodyPartsController";
 import ParticleController from "../ParticleController";
 import FaceController from "../FaceController";
 import AnimationController from "../AnimationController";
+import AttachmentController from "../AttachmentController";
 
 import {
     ThreeSixty,
@@ -17,6 +18,7 @@ import {
     Face,
     DirectionsRun,
     CropOriginal,
+    Attachment,
 } from "@mui/icons-material";
 
 import { useAppData } from "@/data";
@@ -34,6 +36,7 @@ export const defaultOptions = [
     "Material",
     "Particles",
     "Animation",
+    "Attachment",
 ];
 
 const icons = {
@@ -44,6 +47,7 @@ const icons = {
     Material: Texture,
     Particles: AutoAwesome,
     Animation: DirectionsRun,
+    Attachment: Attachment,
     "Body Parts": Extension,
     Face: Face,
     Texture: CropOriginal,
@@ -96,6 +100,9 @@ export const Controller = ({ target, type, ...others }) => {
 
         case "Animation":
             return <AnimationController target={target} />;
+
+        case "Attachment":
+            return <AttachmentController target={target} />;
 
         case "Face":
             return <FaceController target={target} />;

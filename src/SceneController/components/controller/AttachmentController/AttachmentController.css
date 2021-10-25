@@ -1,0 +1,50 @@
+.AttachmentController {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.AttachmentController .btn-icon {
+    max-height: 1.5rem;
+}
+
+.AttachmentController-add {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem 0.5rem;
+    gap: 0.2rem;
+}
+
+.AttachmentController-select {
+    flex: 1;
+    background-color: #ccc;
+}
+
+.AttachmentController-add button {
+    flex: 0;
+}
+
+.AttachmentList {
+    width: 100%;
+}
+
+.AttachmentList .BoneManager {
+    align-self: flex-start;
+    border-top: 1px solid #ccc3;
+    border-bottom: 1px solid #ccc3;
+}
+
+.AttachmentList .BoneManager .Accordion-details {
+    background-color: #fff1;
+}
+
+.AttachmentList .Accordion {
+    width: 100%;
+}
+
+.AttachmentList .BoneManager .Accordion:not(:last-child) {
+    border-bottom: 1px solid #eee6;
+}

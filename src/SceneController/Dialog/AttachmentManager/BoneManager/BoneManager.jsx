@@ -6,9 +6,16 @@ import Accordion from "components/Accordion";
 
 import "./BoneManager.css";
 
-function BoneManager({ bone, add }) {
+/**
+ * @param {Object} props
+ * @param {string} props.bone
+ * @param {(boneName?: string) => void} props.add
+ * @param {DLModel} [props.target]
+ */
+function BoneManager({ bone, add, target }) {
     const { activeModel } = useActiveModel();
-    const attList = activeModel?.attachment[bone] ?? [];
+    target ??= activeModel;
+    const attList = target?.attachment[bone] ?? [];
     const handleAdd = event => {
         event.stopPropagation();
         add(bone);
