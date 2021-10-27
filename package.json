@@ -12,8 +12,8 @@
     "dependencies": {
         "@emotion/react": "^11.5.0",
         "@emotion/styled": "^11.3.0",
-        "@mui/icons-material": "^5.0.4",
-        "@mui/material": "^5.0.4",
+        "@mui/icons-material": "^5.0.5",
+        "@mui/material": "^5.0.5",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^6.1.5",
@@ -25,11 +25,11 @@
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
         "three": "^0.133.1",
-        "zustand": "^3.6.0"
+        "zustand": "^3.6.1"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.1.5",
         "gh-pages": "^3.2.3",
-        "vite": "^2.6.10"
+        "vite": "^2.6.12"
     }
 }
