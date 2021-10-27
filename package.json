@@ -13,7 +13,7 @@
         "@emotion/react": "^11.5.0",
         "@emotion/styled": "^11.3.0",
         "@mui/icons-material": "^5.0.5",
-        "@mui/material": "^5.0.5",
+        "@mui/material": "^5.0.6",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^6.1.5",
