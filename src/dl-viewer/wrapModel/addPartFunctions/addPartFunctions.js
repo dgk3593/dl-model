@@ -89,7 +89,7 @@ export default function addPartFunctions(container) {
         parts[label] = {
             _meshes: partMeshes,
             list: optionList,
-            default: defaultOption,
+            default: defaultOption ?? optionList[0],
         };
 
         Object.defineProperties(parts[label], {
@@ -104,7 +104,7 @@ export default function addPartFunctions(container) {
                     const active = partMeshes.find(({ visible }) => visible);
                     const subpartCode = active.name.match(optionRegex)?.[1];
                     const optionName =
-                        optionNames?.[subpartCode ?? "default"] || "default";
+                        optionNames?.[subpartCode ?? "default"] || subpartCode;
 
                     return optionName;
                 },
