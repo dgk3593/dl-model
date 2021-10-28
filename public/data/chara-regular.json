@@ -1,20 +1,20 @@
 {
     "data": [
         {
-            "id": "c110397_01",
-            "name": "Basileus",
-            "title": "The Wing of War",
+            "id": "c100032_07",
+            "name": "Halloween Laxi",
+            "title": "Mischievous Android",
             "rarity": "5",
-            "element": "Wind",
-            "weapon": "Wand"
+            "element": "Light",
+            "weapon": "Manacaster"
         },
         {
-            "id": "c110396_01",
-            "name": "Sandalphon",
-            "title": "Angel of Information",
+            "id": "c110318_02",
+            "name": "Halloween Sylas",
+            "title": "Enchanting Aromatherapist",
             "rarity": "5",
-            "element": "Water",
-            "weapon": "Staff"
+            "element": "Shadow",
+            "weapon": "Bow"
         },
         {
             "id": "c110341_01",
@@ -63,6 +63,14 @@
             "rarity": "5",
             "element": "Flame",
             "weapon": "Blade"
+        },
+        {
+            "id": "c110397_01",
+            "name": "Basileus",
+            "title": "The Wing of War",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Wand"
         },
         {
             "id": "c110015_02",
@@ -935,6 +943,14 @@
             "rarity": "5",
             "element": "Wind",
             "weapon": "Manacaster"
+        },
+        {
+            "id": "c110396_01",
+            "name": "Sandalphon",
+            "title": "Angel of Information",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Staff"
         },
         {
             "id": "c110375_01",

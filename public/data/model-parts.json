@@ -1,5 +1,14 @@
 {
     "data": {
+        "c100032_07": {
+            "A": {
+                "name": "Key",
+                "options": {
+                    "A": "Hidden",
+                    "B": "Shown"
+                }
+            }
+        },
         "c110383_01": {
             "A": {
                 "name": "Left Booster",
