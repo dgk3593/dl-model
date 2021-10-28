@@ -22,8 +22,7 @@ function ScreenshotControl() {
     };
 
     const getAllFrames = () => {
-        const modelIndex = viewer.model.indexOf(activeModel);
-        if (modelIndex === -1) {
+        if (!activeModel) {
             setLoadingMsg("no model");
             setTimeout(() => setLoadingMsg(""), 2000);
             return;
@@ -31,7 +30,7 @@ function ScreenshotControl() {
 
         setLoadingMsg("generating frames...");
         setTimeout(async () => {
-            const frames = screenshot.getAllFrames(modelIndex);
+            const frames = screenshot.getAllFrames(activeModel);
             if (!frames) {
                 setLoadingMsg("invalid animation...");
                 setTimeout(() => setLoadingMsg(""), 2000);
