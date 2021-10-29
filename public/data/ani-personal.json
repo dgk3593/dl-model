@@ -4495,8 +4495,12 @@
             { "name": "Idle 2", "code": "H0080501_014_01" },
             { "name": "Buff", "code": "H0080501_030_01" },
             {
-                "name": "Look Around",
-                "code": "H0080501_070_01>H0080501_070_02"
+                "name": "Right Wing Broken",
+                "code": "H0080501_070_01"
+            },
+            {
+                "name": "Left Wing Broken",
+                "code": "H0080501_070_02"
             },
             { "name": "Broken", "code": "H0080501_081_01>H0080501_081_02" },
             { "name": "Recover from Broken", "code": "H0080501_081_03" },
@@ -4772,9 +4776,9 @@
             { "name": "Fly", "code": "H0100301_002_01" },
             { "name": "Defeated", "code": "H0100301_011_01" },
             { "name": "Buff", "code": "H0100301_030_01" },
-            { "name": "Knocked Back", "code": "H0100301_070_01" },
+            { "name": "Tome Broken", "code": "H0100301_070_01" },
             {
-                "name": "Knocked Back 2",
+                "name": "Knocked Back",
                 "code": "H0100301_104_01>H0100301_104_02>H0100301_104_03"
             },
             {
@@ -4805,7 +4809,7 @@
             { "name": "Cross Leg Sit", "code": "H0110401_002_01" },
             { "name": "Defeated", "code": "H0110401_011_01" },
             { "name": "Spin Attack", "code": "H0110401_030_01" },
-            { "name": "Knocked Back", "code": "H0110401_070_01" },
+            { "name": "Wings Broken", "code": "H0110401_070_01" },
             { "name": "Broken", "code": "H0110401_081_01>H0110401_081_02" },
             { "name": "Recover from Broken", "code": "H0110401_081_03" },
             { "name": "Boss Intro", "code": "H0110401_090_02>H0110401_090_01" },
@@ -5091,7 +5095,7 @@
             { "name": "Idle 2", "code": "H0120201_014_01" },
             { "name": "Wave", "code": "H0120201_022_01" },
             { "name": "Spin Attack", "code": "H0120201_030_01" },
-            { "name": "Knocked Back", "code": "H0120201_070_01" },
+            { "name": "Cloak Broken", "code": "H0120201_070_01" },
             { "name": "Broken", "code": "H0120201_081_01>H0120201_081_02" },
             { "name": "Recover from Broken", "code": "H0120201_081_03" },
             { "name": "Boss Intro", "code": "H0120201_090_02>H0120201_090_01" },
@@ -5152,6 +5156,25 @@
             {
                 "name": "Satan Raid Finale 2",
                 "code": "d21016801_05_06"
+            }
+        ],
+        "d210168_03": [
+            { "name": "Idle", "code": "D21016803_000_01" },
+            { "name": "Fly", "code": "D21016803_002_01" },
+            { "name": "Fly Fast", "code": "D21016803_003_01" },
+            { "name": "Brake", "code": "D21016803_010_01" },
+            { "name": "Frozen", "code": "D21016803_013_01" },
+            { "name": "Idle 2", "code": "D21016803_014_01" },
+            { "name": "Dash Forward", "code": "D21016803_020_01" },
+            { "name": "Broken", "code": "D21016803_081_01>D21016803_081_02" },
+            { "name": "Recover from Broken", "code": "D21016803_081_03" },
+            {
+                "name": "Boss Intro",
+                "code": "D21016803_090_02>D21016803_090_01"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "D21016803_100_01>D21016803_100_02>D21016803_100_03>D21016803_100_04>D21016803_100_05"
             }
         ],
         "d210162_01": [
@@ -6252,6 +6275,8 @@
             }
         ],
         "d210163_01": [
+            { "name": "Idle", "code": "D21016303_000_01" },
+            { "name": "Move Forward", "code": "D21016303_002_01" },
             {
                 "name": "Satan Raid Assist",
                 "code": "d21016301_03_01>d21016301_03_02",
@@ -6283,6 +6308,53 @@
                 "name": "Celestial Castling",
                 "code": "D21016501_061_01",
                 "icon": "Icon_Skill_018"
+            }
+        ],
+        "d210164_01": [
+            { "name": "Dragon's Roost", "code": "DC_d210164_01_90_01" },
+            { "name": "Receive Gift", "code": "DC_d210164_01_90_04" },
+            {
+                "name": "Summon",
+                "code": "SMN_DRG_210164_01_APPEAR_01>SMN_DRG_210164_01_LOOP_01"
+            },
+            { "name": "Idle", "code": "D21016401_000_01" },
+            { "name": "Fly", "code": "D21016401_002_01" },
+            { "name": "Fly Fast", "code": "D21016401_003_01" },
+            { "name": "Brake", "code": "D21016401_004_01" },
+            { "name": "Dash Forward", "code": "D21016401_020_01" },
+            { "name": "Transform", "code": "D21016401_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21016401_040_01>D21016401_040_02>D21016401_040_03"
+            },
+            {
+                "name": "Dimensional Oblivion",
+                "code": "D21016401_060_01>D21016401_060_02>D21016401_060_03>D21016401_060_04>D21016401_060_05",
+                "icon": "Icon_Skill_019"
+            },
+            {
+                "name": "Dragon Strike",
+                "code": "D21016401_040_01>D21016401_040_02&r=3>D21016401_040_03"
+            }
+        ],
+        "h0130101": [
+            { "name": "Idle", "code": "H0130101_000_01" },
+            { "name": "Walk", "code": "H0130101_002_01" },
+            { "name": "Defeated", "code": "H0130101_011_01" },
+            {
+                "name": "Right Hand Broken",
+                "code": "H0130101_070_01"
+            },
+            {
+                "name": "Left Hand Broken",
+                "code": "H0130101_070_02"
+            },
+            { "name": "Broken", "code": "H0130101_081_01>H0130101_081_02" },
+            { "name": "Recover from Broken", "code": "H0130101_081_03" },
+            { "name": "Boss Intro", "code": "H0130101_090_02>H0130101_090_01" },
+            {
+                "name": "Uppercut",
+                "code": "H0130101_100_01>H0130101_100_02>H0130101_100_03>H0130101_100_04>H0130101_100_05"
             }
         ]
     }

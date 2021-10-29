@@ -1397,6 +1397,19 @@
                 "name": "Wealdfury",
                 "code": "BOW_SKL_01_01_11039101",
                 "icon": "Icon_Skill_243"
+            },
+            {
+                "user": "c110318_02",
+                "name": "Surgical Trick",
+                "code": "BOW_SKL_01_01_11031802>BOW_SKL_01_02_11031802",
+                "icon": "Icon_Skill_288"
+            },
+            {
+                "user": "c110318_02",
+                "name": "Surgical Trick",
+                "subtitle": "Enhanced",
+                "code": "BOW_SKL_01_01_11031802>BOW_SKL_02_01_11031802",
+                "icon": "Icon_Skill_289"
             }
         ],
         "Wand": [

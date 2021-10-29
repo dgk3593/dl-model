@@ -731,6 +731,16 @@
                 ]
             },
             {
+                "name": "Halloween Sylas",
+                "user": "c110318_02",
+                "animations": [
+                    {
+                        "name": "Dash Attack",
+                        "code": "BOW_DAS_03_11031802"
+                    }
+                ]
+            },
+            {
                 "name": "Meene",
                 "user": "c110368_01",
                 "animations": [
