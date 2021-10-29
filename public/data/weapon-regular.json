@@ -1,6 +1,13 @@
 {
     "data": [
         {
+            "id": "w397007_01",
+            "name": "Rhyse Sword",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w301138_01",
             "name": "Nothung",
             "weapon": "Sword",

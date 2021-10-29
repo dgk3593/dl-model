@@ -47,6 +47,16 @@
             "id": "h0120201",
             "name": "Iblis",
             "element": "Water"
+        },
+        {
+            "id": "d210168_03",
+            "name": "Fallen Angel Michael",
+            "element": "Flame"
+        },
+        {
+            "id": "h0130101",
+            "name": "Surtr",
+            "element": "Flame"
         }
     ]
 }

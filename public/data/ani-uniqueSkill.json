@@ -1769,12 +1769,14 @@
             {
                 "user": "c100032_07",
                 "name": "Trick 00: Ghost Fig",
-                "code": "GUN_SKL_01_01_10003207"
+                "code": "GUN_SKL_01_01_10003207",
+                "icon": "Icon_Skill_290"
             },
             {
                 "user": "c100032_07",
                 "name": "Trick 99: Clockwork",
-                "code": "GUN_SKL_02_01_10003207"
+                "code": "GUN_SKL_02_01_10003207",
+                "icon": "Icon_Skill_291"
             },
             {
                 "user": "c110367_01",

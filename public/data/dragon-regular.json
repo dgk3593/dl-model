@@ -1,18 +1,11 @@
 {
     "data": [
         {
-            "id": "d210168_01",
-            "name": "Michael",
-            "title": "",
+            "id": "d210164_01",
+            "name": "Gala Chronos Nyx",
+            "title": "Sovereign of Time",
             "rarity": "5",
-            "element": "Wind"
-        },
-        {
-            "id": "d210163_01",
-            "name": "Uriel",
-            "title": "",
-            "rarity": "5",
-            "element": "Flame"
+            "element": "Light"
         },
         {
             "id": "d210117_01",
@@ -421,6 +414,13 @@
             "element": "Wind"
         },
         {
+            "id": "d210168_01",
+            "name": "Michael",
+            "title": "",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
             "id": "d210131_01",
             "name": "Midgardsormr Zero",
             "title": "Primal Stormbearer",
@@ -643,6 +643,13 @@
             "title": "Ravishing Rakshesha",
             "rarity": "5",
             "element": "Light"
+        },
+        {
+            "id": "d210163_01",
+            "name": "Uriel",
+            "title": "",
+            "rarity": "5",
+            "element": "Flame"
         },
         {
             "id": "d210098_01",
