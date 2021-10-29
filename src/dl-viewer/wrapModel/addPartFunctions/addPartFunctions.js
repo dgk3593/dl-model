@@ -104,7 +104,9 @@ export default function addPartFunctions(container) {
                     const active = partMeshes.find(({ visible }) => visible);
                     const subpartCode = active.name.match(optionRegex)?.[1];
                     const optionName =
-                        optionNames?.[subpartCode ?? "default"] || subpartCode;
+                        optionNames?.[subpartCode ?? "default"] ??
+                        subpartCode ??
+                        "default";
 
                     return optionName;
                 },
