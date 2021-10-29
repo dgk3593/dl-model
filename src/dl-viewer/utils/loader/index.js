@@ -1,6 +1,6 @@
 import * as THREE from "three";
-// import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { FBXLoader } from "./FBXLoader";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+// import { FBXLoader } from "./FBXLoader";
 
 /** load a 3D model from an FBX file
  * @param {string} path
