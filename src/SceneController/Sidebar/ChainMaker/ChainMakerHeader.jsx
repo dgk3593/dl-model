@@ -10,7 +10,7 @@ function ChainMakerHeader() {
     );
     const { inputAni } = useModalState();
     const { activeModel } = useActiveModel();
-    const chain = activeModel.userData.chain ?? [];
+    const chain = activeModel?.userData?.chain ?? [];
 
     const playAll = () => {
         const code = generateChainCode(chain);

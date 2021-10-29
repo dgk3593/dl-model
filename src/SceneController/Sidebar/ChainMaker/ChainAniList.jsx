@@ -9,6 +9,7 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 function ChainAniList() {
     const { activeModel } = useActiveModel();
     const [key, updateKey] = useKey();
+    if (!activeModel) return null;
     const chain =
         activeModel.userData.chain ??
         (activeModel.userData.chain = new ArrayWithEvent());
