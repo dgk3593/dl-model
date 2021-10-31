@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { CameraAlt } from "@mui/icons-material";
 
 import viewer from "@/viewer";
-import { cameraProp } from "./props";
+import { cameraProp, controlProp } from "./props";
 import { PERSPECTIVE_CAM } from "@/dl-viewer/defaultParams";
 
 function DisplayControl() {
@@ -38,7 +38,10 @@ function DisplayControl() {
                     Reset
                 </Button>
             </>
-            <Setters key={key} target={camera} propList={cameraProp} />
+            <>
+                <Setters key={key} target={camera} propList={cameraProp} />
+                <Setters target={viewer.controls} propList={controlProp} />
+            </>
         </Accordion>
     );
 }

@@ -8,9 +8,9 @@ import { Camera as CameraIcon, Download } from "@mui/icons-material";
 import viewer from "@/viewer";
 import { basic, allFrames } from "./props";
 import { saveAs } from "file-saver";
+import { pngUrlToZip } from "@/dl-viewer/utils/downloader";
 
 import "../../SettingGroup.css";
-import { pngUrlToZip } from "@/dl-viewer/utils/downloader";
 
 function ScreenshotControl() {
     const { setLoadingMsg } = useAppState();
