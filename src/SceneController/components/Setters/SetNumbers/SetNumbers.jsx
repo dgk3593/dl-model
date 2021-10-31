@@ -29,8 +29,9 @@ function SetNumbers({
     const handleChange = event => {
         const index = parseInt(event.currentTarget.getAttribute("index"));
         const value = parseFloat(event.currentTarget.value);
-        let newValues;
+        if (isNaN(value)) return;
 
+        let newValues;
         setValues(oldValues => {
             newValues = [...oldValues];
             newValues[index] = value;
