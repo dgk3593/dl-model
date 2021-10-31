@@ -43,12 +43,9 @@ const downloadFile = async url => {
 export const downloadModel = async id => {
     const fileList = await getFileList(id);
     const list = fileList.map(name => {
-        const url = `https:/dgk3593.github.io/dl-model/fbx/${id}/${name}`;
+        const url = `https://dgk3593.github.io/dl-model/fbx/${id}/${name}`;
         const data = downloadFile(url);
-        return {
-            name,
-            data,
-        };
+        return { name, data };
     });
     const zip = await createZip(list);
     saveAs(zip, `${id}.zip`);
