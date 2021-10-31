@@ -5,10 +5,12 @@ import {
     Panorama as BackgroundIcon,
     Camera as CameraIcon,
     FiberManualRecord as RecordIcon,
+    Download,
 } from "@mui/icons-material";
 
 import viewer from "@/viewer";
 import "./QuickAction.css";
+import { downloadModel } from "./helper";
 
 function QuickAction() {
     const { activeModel } = useActiveModel();
@@ -35,6 +37,8 @@ function QuickAction() {
         record.start();
     };
 
+    const handleDownload = () => downloadModel(activeModel.id);
+
     return (
         <div className="QuickAction">
             <IconButton
@@ -56,6 +60,10 @@ function QuickAction() {
                     <RecordIcon />
                 </IconButton>
             )}
+
+            <IconButton title="Download Current Model" onClick={handleDownload}>
+                <Download />
+            </IconButton>
         </div>
     );
 }

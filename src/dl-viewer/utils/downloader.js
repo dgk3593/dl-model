@@ -70,21 +70,30 @@ export async function batchDownloadPNG(urls, baseName) {
 }
 
 /**
+ * create a zip file from a list of files
+ * @param {{name: String, data: string}[]} list
+ */
+export async function createZip(list) {
+    const JSZip = await import("jszip").then(module => module.default);
+    const zip = JSZip();
+    list.forEach(({ name, data }) => zip.file(name, data));
+    return zip.generateAsync({ type: "blob" });
+}
+
+/**
  * turn an array of png blobs to a zip blob
  * @param {string[]} blobs
  * @param {string} baseName
  */
-export async function pngBlobToZip(blobs, baseName) {
+export function pngBlobToZip(blobs, baseName = "ss") {
     const nDigits = blobs.length.toString().length;
 
-    const JSZip = await import("jszip").then(module => module.default);
-    const zip = JSZip();
-    blobs.forEach((blob, i) => {
+    const list = blobs.map((blob, i) => {
         const number = i.toString().padStart(nDigits, "0");
-        const fileName = `${baseName || "ss"}_${number}.png`;
-        zip.file(fileName, blob);
+        const fileName = `${baseName}_${number}.png`;
+        return { name: fileName, data: blob };
     });
-    return zip.generateAsync({ type: "blob" });
+    return createZip(list);
 }
 
 /**

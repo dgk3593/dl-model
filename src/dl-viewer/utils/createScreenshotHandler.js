@@ -62,7 +62,6 @@ export default function createScreenshotHandler(viewer) {
 
         // Main thread block
         getAllFrames(model) {
-            // const model = viewer.loadedModel[modelIndex];
             const currenChain = model?.animation.current.chainName;
             if (!currenChain) return;
 
