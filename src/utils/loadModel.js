@@ -1,4 +1,4 @@
-import { FBXLoader } from "@/dl-viewer/utils/loader/FBXLoader";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 /** load a 3D model
  * @param {string} url
