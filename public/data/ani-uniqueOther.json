@@ -1012,6 +1012,28 @@
         ],
         "Manacaster": [
             {
+                "name": "Halloweern Laxi",
+                "user": "c100032_07",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0110001_090_02>A0110001_090_01"
+                    },
+                    {
+                        "name": "Defeated",
+                        "code": "A0110001_015_01>A0110001_015_02"
+                    },
+                    {
+                        "name": "Broken",
+                        "code": "A0110001_081_01>A0110001_081_02"
+                    },
+                    {
+                        "name": "Combo",
+                        "code": "GUN_CHR_A_01>GUN_CHR_A_02>GUN_CHR_A_03_10003207"
+                    }
+                ]
+            },
+            {
                 "name": "Ilia",
                 "user": "c110367_01",
                 "animations": [
