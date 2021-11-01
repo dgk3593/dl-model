@@ -1,4 +1,4 @@
-import { createZip } from "@/dl-viewer/utils/downloader";
+import { createZip } from "@/dl-viewer/utils/createZip";
 import { saveAs } from "file-saver";
 
 function makeRequest(method, url) {

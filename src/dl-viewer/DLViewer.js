@@ -142,6 +142,7 @@ export class DLViewer {
     }
 
     // data
+    userData = {};
     dataLoaded = false;
     initData = async () => {
         await initViewerData();
@@ -374,8 +375,9 @@ export class DLViewer {
     render() {
         this.dispatchEvent({ type: "beforeRender" });
 
-        if (this.postProcessing.enabled) this.postProcessing.composer.render();
-        else this.renderer.render(this.scene, this.camera);
+        this.postProcessing.enabled
+            ? this.postProcessing.composer.render()
+            : this.renderer.render(this.scene, this.camera);
 
         this.dispatchEvent({ type: "afterRender" });
     }

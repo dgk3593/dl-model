@@ -1,13 +1,5 @@
 import { saveAs } from "file-saver";
-
-/**
- * wait ms milliseconds
- * @param {number} ms
- */
-const wait = (ms = 1000) => new Promise(resolve => setTimeout(resolve, ms));
-
-// browser download limit
-const DOWNLOAD_LIMIT = 10;
+import { pngBlobToZip, pngUrlToZip } from "./createZip";
 
 export function downloadBlob(blob, fileName) {
     const url = URL.createObjectURL(blob);
@@ -40,26 +32,6 @@ export function downloadURL(url, fileName) {
 }
 
 /**
- * turn an array of png data urls to a zip blob
- * @param {string[]} urls
- * @param {string} baseName
- */
-export async function pngUrlToZip(urls, baseName) {
-    const nDigits = urls.length.toString().length;
-
-    const JSZip = await import("jszip").then(module => module.default);
-    const zip = JSZip();
-    urls.forEach((url, i) => {
-        const number = i.toString().padStart(nDigits, "0");
-        const fileName = `${baseName || "ss"}_${number}.png`;
-        const sliceStart = "data:image/png;base64,".length;
-
-        zip.file(fileName, url.slice(sliceStart, Infinity), { base64: true });
-    });
-    return zip.generateAsync({ type: "blob" });
-}
-
-/**
  * batch download image url
  * @param {string[]} urls
  * @param {string} baseName
@@ -67,33 +39,6 @@ export async function pngUrlToZip(urls, baseName) {
 export async function batchDownloadPNG(urls, baseName) {
     const file = await pngUrlToZip(urls, baseName);
     saveAs(file, `${baseName}.zip`);
-}
-
-/**
- * create a zip file from a list of files
- * @param {{name: String, data: string}[]} list
- */
-export async function createZip(list) {
-    const JSZip = await import("jszip").then(module => module.default);
-    const zip = JSZip();
-    list.forEach(({ name, data }) => zip.file(name, data));
-    return zip.generateAsync({ type: "blob" });
-}
-
-/**
- * turn an array of png blobs to a zip blob
- * @param {string[]} blobs
- * @param {string} baseName
- */
-export function pngBlobToZip(blobs, baseName = "ss") {
-    const nDigits = blobs.length.toString().length;
-
-    const list = blobs.map((blob, i) => {
-        const number = i.toString().padStart(nDigits, "0");
-        const fileName = `${baseName}_${number}.png`;
-        return { name: fileName, data: blob };
-    });
-    return createZip(list);
 }
 
 /**

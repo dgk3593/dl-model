@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 import { Download } from "@mui/icons-material";
 
 import { saveAs } from "file-saver";
-import { pngUrlToZip } from "@/dl-viewer/utils/downloader";
+import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 import viewer from "@/viewer";
 
 import "./SpecialCapture.css";
