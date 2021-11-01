@@ -4,22 +4,33 @@ import { Box, DialogTitle, DialogContent } from "@mui/material";
 import Stretcher from "components/Stretcher";
 import Searchbox from "components/Searchbox";
 import TabBar from "components/TabBar";
+import { Upload } from "@mui/icons-material";
 
 import AniSearchResult from "./AniSearchResult";
 import AdvAnimation from "./AdvAnimation";
 import PersonalAnimation from "./PersonalAnimation";
 import ExtraAnimation from "./ExtraAnimation";
+import UploadedAni from "./UploadedAni";
 
 import { styles } from "./styles";
 import "./AniSelect.css";
 import { useAniSelectState } from "@/state";
 
-const types = ["Adventurer", "Personal", "Extra"].map(name => ({ name }));
+/**
+ * @type {{ name: string, icon?: JSX.Element, label?: string}[] }}
+ */
+const types = [
+    { name: "Adv" },
+    { name: "Personal" },
+    { name: "Extra" },
+    { name: "Upload", icon: <Upload />, label: "" },
+];
 
 const components = {
-    Adventurer: AdvAnimation,
+    Adv: AdvAnimation,
     Personal: PersonalAnimation,
     Extra: ExtraAnimation,
+    Upload: UploadedAni,
 };
 
 /**

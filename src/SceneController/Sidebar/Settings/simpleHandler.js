@@ -50,9 +50,7 @@ const modelHandler = async (id, name) => {
 
     useAniSelectState
         .getState()
-        .setCategory(
-            newModel.type === "adventurer" ? "Adventurer" : "Personal"
-        );
+        .setCategory(newModel.type === "adventurer" ? "Adv" : "Personal");
 
     setLoadingMsg("");
 };

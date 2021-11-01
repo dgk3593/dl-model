@@ -40,9 +40,7 @@ async function loadModel(encodedHash) {
 
         useAniSelectState
             .getState()
-            .setCategory(
-                model.type === "adventurer" ? "Adventurer" : "Personal"
-            );
+            .setCategory(model.type === "adventurer" ? "Adv" : "Personal");
 
         const { id } = model;
         if (!hash.includes("camPos=")) {

@@ -1,5 +1,5 @@
 export const aniSelectConfig = set => ({
-    category: "Adventurer",
+    category: "Adv",
     setCategory: category =>
         set(state => {
             state.category = category;

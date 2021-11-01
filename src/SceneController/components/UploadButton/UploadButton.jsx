@@ -9,6 +9,7 @@ import { styles } from "./styles";
  * @param {boolean} [props.multiple] - whether to allow multiple files
  * @param {string} [props.label] - label of the button
  * @param {string} [props.mimeType] - file types to accept
+ * @param {string} [props.accept] - file types to accept
  * @param {(files: FileList) => void} props.onChange - executed when input is changed
  * @param {object} [props.style] - styling for the button
  */
