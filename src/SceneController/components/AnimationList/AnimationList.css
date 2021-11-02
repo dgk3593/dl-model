@@ -4,7 +4,7 @@
     min-width: 15rem;
     max-width: 20rem;
     display: grid;
-    grid-template-columns: 4rem auto 4rem;
+    grid-template-columns: 4rem auto 4rem 2.5rem;
 }
 
 .AnimationList > *:nth-child(6n),
@@ -24,6 +24,7 @@
 
 .AnimationList-aniName {
     min-height: 3rem;
+    min-width: 5rem;
 }
 
 div.AnimationList-aniName {

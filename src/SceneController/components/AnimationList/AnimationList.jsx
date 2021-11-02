@@ -1,3 +1,4 @@
+import { Delete } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { AnimationClip } from "three";
 import "./AnimationList.css";
@@ -14,6 +15,12 @@ function AnimationList({ list, onSelect }) {
         const { uuid } = event.target.dataset;
         const clip = list.find(cl => cl.uuid === uuid);
         clip.name = value;
+    };
+
+    const handleDelete = event => {
+        const { uuid } = event.target.dataset;
+        const clip = list.find(cl => cl.uuid === uuid);
+        list.splice(list.indexOf(clip), 1);
     };
 
     return (
@@ -33,6 +40,13 @@ function AnimationList({ list, onSelect }) {
                         variant="contained"
                     >
                         Select
+                    </Button>
+                    <Button
+                        data-uuid={item.uuid}
+                        onClick={handleDelete}
+                        variant="contained"
+                    >
+                        <Delete />
                     </Button>
                 </>
             ))}
