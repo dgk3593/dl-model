@@ -25,7 +25,7 @@
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
         "three": "^0.134.0",
-        "zustand": "^3.6.2"
+        "zustand": "^3.6.3"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.1.5",
