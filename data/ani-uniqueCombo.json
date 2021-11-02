@@ -207,6 +207,11 @@
                 "name": "Summer Mym",
                 "subtitle": "Dragondrive",
                 "code": "GUN_CMB_U_01_10001010"
+            },
+            {
+                "user": "c100032_07",
+                "name": "Halloween Laxi",
+                "code": "GUN_CHR_A_01>GUN_CHR_A_02>GUN_CHR_A_03_10003207"
             }
         ]
     }
