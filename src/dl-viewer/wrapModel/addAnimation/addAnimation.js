@@ -3,10 +3,13 @@ import { createAniChain, defaultCurrent } from "./helper";
 import { FPS } from "../../defaultParams";
 import eventDispatcher from "../../utils/eventDispatcher";
 import { setNestedProp } from "../../utils";
+import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
 const modelIdRegex = /[a-z][0-9]{6}/;
 
 export default function addAnimation(container) {
-    const { model, uniqueId, bones, id } = container;
+    const { model, uniqueId, bones, id, viewer } = container;
+    const exSource = viewer.userData.ani;
+
     const mixer = new THREE.AnimationMixer(model);
     const boneList = bones?.list ?? [];
 
@@ -31,7 +34,7 @@ export default function addAnimation(container) {
             if (!chainCode || this.chain[name]?.code === chainCode) return;
             mixer.stopAllAction();
 
-            const chain = await createAniChain(chainCode);
+            const chain = await createAniChain(chainCode, exSource);
             // change bone name to avoid collision when attaching something with identical bone name
             chain.clips.forEach(clip => {
                 clip.tracks = clip.tracks.reduce((acc, track) => {

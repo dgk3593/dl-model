@@ -3,6 +3,7 @@ import { loadFBXModel } from "../../utils/loader";
 import { ANIMATION_SOURCE, FBX_SOURCE } from "../../path";
 import { extractPair } from "../../utils";
 import { FPS } from "../../defaultParams";
+import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
 
 export const defaultCurrent = {
     chainName: "",
@@ -162,14 +163,20 @@ const getFbxPath = name =>
     `${FBX_SOURCE}/${name}${name.endsWith(".fbx") ? "" : ".fbx"}`;
 
 /** load 1 animation clip
- * @param {string} clip
+ * @param {string} code
+ * @param {ArrayWithEvent} exSource
  * @return {Promise<THREE.AnimationClip>}
  */
-export function loadAniClip(clip) {
+export function loadAniClip(code, exSource) {
     // @ts-ignore
-    if (clip.startsWith("fbx:")) return loadFbxAni(clip);
+    if (code.startsWith("fbx:")) return loadFbxAni(code);
+    if (code.startsWith("ex:")) {
+        const [, uuid] = code.split(":");
+        const clip = exSource?.find(({ uuid: uuid2 }) => uuid === uuid2);
+        return Promise.resolve(clip.clone());
+    }
 
-    const path = getAniPath(clip);
+    const path = getAniPath(code);
     return new Promise(resolve =>
         fetch(path)
             .then(response => response.json())
@@ -196,8 +203,8 @@ async function loadFbxAni(clipCode) {
  * @param {string[]} clipList
  * @return {Promise<THREE.AnimationClip[]>}
  */
-export function loadAniFromList(clipList) {
-    return Promise.all(clipList.map(loadAniClip));
+export function loadAniFromList(clipList, exSource = null) {
+    return Promise.all(clipList.map(code => loadAniClip(code, exSource)));
 }
 
 /**
@@ -229,14 +236,14 @@ function createSubClips(rawClips, duration = []) {
 /**
  * @param {string} chainCode
  */
-export async function createAniChain(chainCode) {
+export async function createAniChain(chainCode, exSource = null) {
     const list = analyzeChainCode(chainCode);
 
     const clipNames = list.map(({ aniName }) => aniName);
     const durations = list.map(({ duration }) => duration);
     const mod = list.map(({ aniName, duration, ...others }) => ({ ...others }));
 
-    const rawClips = await loadAniFromList(clipNames);
+    const rawClips = await loadAniFromList(clipNames, exSource);
     const clips = createSubClips(rawClips, durations);
 
     const aniChain = {

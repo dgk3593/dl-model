@@ -1,0 +1,33 @@
+.AnimationList {
+    margin: 0.5rem 0;
+    width: 100%;
+    min-width: 15rem;
+    max-width: 20rem;
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+}
+
+.AnimationList > *:nth-child(6n),
+.AnimationList > *:nth-child(6n + 1),
+.AnimationList > *:nth-child(6n + 2) {
+    background-color: #00000007;
+}
+
+.AnimationList button.MuiButton-contained {
+    background-color: #ccc;
+    color: #101010;
+}
+
+.AnimationList button.MuiButton-contained:hover {
+    background-color: #eee;
+}
+
+.AnimationList-aniName {
+    min-height: 3rem;
+}
+
+div.AnimationList-aniName {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}

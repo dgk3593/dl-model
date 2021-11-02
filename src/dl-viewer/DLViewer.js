@@ -142,7 +142,7 @@ export class DLViewer {
     }
 
     // data
-    userData = {};
+    userData = { ani: new ArrayWithEvent() };
     dataLoaded = false;
     initData = async () => {
         await initViewerData();
