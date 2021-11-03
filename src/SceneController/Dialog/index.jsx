@@ -9,6 +9,7 @@ const FaceSelect = lazy(() => import("./FaceSelect"));
 const FaceTexture = lazy(() => import("./FaceTexture"));
 const AttachmentManager = lazy(() => import("./AttachmentManager"));
 const PartialFaceSelect = lazy(() => import("./FaceSelect/PartialFaceSelect"));
+const TargetPicker = lazy(() => import("./TargetPicker"));
 
 export const dialogBody = {
     background: BackgroundPicker,
@@ -19,6 +20,7 @@ export const dialogBody = {
     face: FaceSelect,
     faceTexture: FaceTexture,
     attachment: AttachmentManager,
+    target: TargetPicker,
     eye: ({ onSelect }) => <PartialFaceSelect part="eye" onSelect={onSelect} />,
     mouth: ({ onSelect }) => (
         <PartialFaceSelect part="mouth" onSelect={onSelect} />

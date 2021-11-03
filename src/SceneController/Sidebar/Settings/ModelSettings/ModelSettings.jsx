@@ -28,6 +28,13 @@ function ModelSettings() {
         <>
             <ModelSelect />
             <span className="break" />
+            {/* <Button
+                variant="contained"
+                data-mode="target"
+                onClick={handleClick}
+            >
+                Target
+            </Button> */}
 
             {activeModel && (
                 <>

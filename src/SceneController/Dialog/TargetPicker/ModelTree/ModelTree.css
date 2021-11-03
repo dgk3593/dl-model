@@ -1,0 +1,63 @@
+.ModelTree {
+    min-width: 16rem;
+    max-width: 22rem;
+    margin-top: 0.5rem;
+    background-color: rgba(16, 16, 16, 0.5);
+    align-self: stretch;
+}
+
+div.ModelTree:not(.Accordion),
+div.ModelTree .Accordion-summary {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    border-bottom: none;
+}
+
+.ModelTree .Accordion-details {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+div.ModelTree.Accordion.open {
+    background-color: rgba(16, 16, 16, 0.7);
+}
+
+div.ModelTree:not(.Accordion) {
+    min-height: 2rem;
+    padding: 0.2rem;
+    color: #eee;
+    display: flex;
+    padding-left: calc(0.5rem + 24px);
+}
+
+div.ModelTree:not(.Accordion):hover {
+    background-color: rgba(16, 16, 16, 0.7);
+}
+
+.ModelTree button {
+    margin-left: auto;
+    min-width: 1.5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #ccc;
+    color: #101010;
+}
+
+.ModelTree button:hover {
+    background-color: #ddd;
+}
+
+.ModelTree .BoneChildren {
+    width: 100%;
+}
+
+.BoneChildren .ModelTree {
+    margin: 0;
+    border-left: 2px solid #eee;
+}
+
+.target-name {
+    display: flex;
+    flex-wrap: wrap;
+}
