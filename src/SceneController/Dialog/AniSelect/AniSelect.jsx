@@ -48,7 +48,6 @@ function AniSelect({ onSelect = () => void 0, onAfterSelect }) {
     const handleTypeChange = (_, newType) => setCategory(newType);
     const handleSelect = event => {
         const { code, name } = event.currentTarget.dataset;
-        console.log(code, name);
         onSelect(code, name);
         onAfterSelect?.();
     };

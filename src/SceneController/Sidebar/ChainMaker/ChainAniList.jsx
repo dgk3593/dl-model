@@ -1,18 +1,14 @@
 import { useEffect } from "react";
 import { useKey } from "@/SceneController/hook";
-import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
-import { useActiveModel } from "@/state";
 import ChainAni from "./ChainAni";
 
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
-function ChainAniList() {
-    const { activeModel } = useActiveModel();
+function ChainAniList({ target }) {
+    if (!target?.userData?.chain) return null;
+
     const [key, updateKey] = useKey();
-    if (!activeModel) return null;
-    const chain =
-        activeModel.userData.chain ??
-        (activeModel.userData.chain = new ArrayWithEvent());
+    const chain = target.userData.chain;
 
     useEffect(() => {
         const listener = chain.addEventListener("change", updateKey);
@@ -21,9 +17,9 @@ function ChainAniList() {
     }, []);
 
     const aniList = provided => (
-        <div ref={provided.innerRef} {...provided.droppableProps}>
+        <div key={key} ref={provided.innerRef} {...provided.droppableProps}>
             {chain.map((ani, i) => (
-                <ChainAni index={i} ani={ani} key={ani.id} />
+                <ChainAni target={target} index={i} ani={ani} key={ani.id} />
             ))}
             {provided.placeholder}
         </div>

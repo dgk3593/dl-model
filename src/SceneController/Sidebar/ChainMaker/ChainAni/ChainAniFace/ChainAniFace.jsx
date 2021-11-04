@@ -1,4 +1,4 @@
-import { useActiveModel } from "@/state";
+import { useChainMakerState } from "@/state";
 import { useState } from "react";
 import Accordion from "components/Accordion";
 import ChainAniFaceChange from "./ChainAniFaceChange";
@@ -6,7 +6,7 @@ import { Add } from "@mui/icons-material";
 import { nanoid } from "nanoid";
 
 function ChainAniFace({ ani }) {
-    const { activeModel } = useActiveModel();
+    const { target } = useChainMakerState();
     const { aniAction } = ani;
 
     const initFaceChanges = [];
@@ -74,7 +74,7 @@ function ChainAniFace({ ani }) {
     ));
 
     return (
-        activeModel.face && (
+        target.face && (
             <Accordion disableGutters className="ChainAni-face">
                 <>Facial Expression</>
                 <div className="ChainAniFace">

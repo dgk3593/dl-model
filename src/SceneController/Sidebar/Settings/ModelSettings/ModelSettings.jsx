@@ -1,4 +1,4 @@
-import { useAppState, useActiveModel } from "@/state";
+import { useAppState, useActiveModel, useChainMakerState } from "@/state";
 
 import { Button } from "@mui/material";
 import SimpleWeaponControl from "./SimpleWeaponControl";
@@ -17,7 +17,7 @@ import TextureController from "@/SceneController/components/controller/TextureCo
 function ModelSettings() {
     const { activeModel } = useActiveModel();
     const openModal = useAppState(state => state.sidebar.modal.open);
-    const { toggleChainMaker } = useAppState(state => state.sidebar);
+    const { toggle: toggleChainMaker } = useChainMakerState();
 
     const handleClick = event => {
         const { mode } = event.currentTarget.dataset;
@@ -28,13 +28,6 @@ function ModelSettings() {
         <>
             <ModelSelect />
             <span className="break" />
-            {/* <Button
-                variant="contained"
-                data-mode="target"
-                onClick={handleClick}
-            >
-                Target
-            </Button> */}
 
             {activeModel && (
                 <>

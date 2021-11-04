@@ -2,7 +2,14 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 import produce from "immer";
 
-import { app, activeModel, modelCatalog, aniSelect, rootModal } from "./config";
+import {
+    app,
+    activeModel,
+    modelCatalog,
+    aniSelect,
+    rootModal,
+    chainMaker,
+} from "./config";
 
 // Turn the set method into an immer proxy
 const immer = config => (set, get, api) =>
@@ -16,6 +23,7 @@ const createPersistStore = (config, name) =>
 
 export const useAppState = createStore(app);
 export const useActiveModel = create(activeModel);
+export const useChainMakerState = create(chainMaker);
 export const useModelCatalogState = createStore(modelCatalog);
 export const useAddWeaponState = createStore(modelCatalog);
 export const useAniSelectState = createStore(aniSelect);

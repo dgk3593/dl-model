@@ -3,12 +3,43 @@
     top: 2.75rem;
     background-color: #101010ee;
     color: white;
-    height: 3rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+
+.ChainMaker-title {
+    display: flex;
+    height: 3rem;
+    padding-right: 3rem;
+    padding-left: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3.5rem 0 0.5rem;
-    z-index: 6;
+    align-self: stretch;
+}
+
+.ChainMaker-target {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    padding: 0.2rem;
+}
+
+.ChainMaker-target button {
+    display: flex;
+    flex-wrap: wrap;
+    color: #eee;
+    gap: 0.2rem;
+    flex: 1 0;
+    justify-content: flex-start;
+}
+
+.ChainMaker-target button img {
+    max-height: 2.5rem;
 }
 
 .ChainAniList {

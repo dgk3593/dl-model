@@ -1,4 +1,4 @@
-import { useAppState } from "@/state";
+import { useAppState, useChainMakerState } from "@/state";
 import { Drawer, Box } from "@mui/material";
 import { styles } from "./styles";
 
@@ -13,7 +13,7 @@ const PaperProps = { sx: styles.paper };
 
 function Sidebar({ open }) {
     const toggleSidebar = useAppState(state => state.sidebar.toggle);
-    const showChainMaker = useAppState(state => state.sidebar.chainMaker);
+    const showChainMaker = useChainMakerState(state => state.open);
 
     const header = (
         <Box sx={styles.sidebarHeader}>

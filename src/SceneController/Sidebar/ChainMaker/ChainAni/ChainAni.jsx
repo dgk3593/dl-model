@@ -1,5 +1,3 @@
-import { useActiveModel } from "@/state";
-
 import Accordion from "components/Accordion";
 import CloseButton from "components/CloseButton";
 import ChainAniAdvanced from "./ChainAniAdvanced";
@@ -18,9 +16,8 @@ const PlayButton = ({ onClick }) => (
     </IconButton>
 );
 
-function ChainAni({ ani, index }) {
-    const { activeModel } = useActiveModel();
-    const { chain } = activeModel.userData;
+function ChainAni({ target, ani, index }) {
+    const { chain } = target.userData;
 
     const remove = event => {
         event.stopPropagation();
@@ -30,7 +27,7 @@ function ChainAni({ ani, index }) {
     const play = event => {
         event.stopPropagation();
         const code = generateChainCode([ani]);
-        activeModel?.animation.addChain(code);
+        target?.animation.addChain(code);
     };
 
     const body = provided => (

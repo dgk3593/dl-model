@@ -31,11 +31,6 @@ export const appStateConfig = set => ({
     sidebar: {
         open: true,
         toggle: () => set(({ sidebar }) => void (sidebar.open = !sidebar.open)),
-        chainMaker: false,
-        toggleChainMaker: () =>
-            set(
-                ({ sidebar }) => void (sidebar.chainMaker = !sidebar.chainMaker)
-            ),
 
         settings: {
             tab: "Model",
@@ -63,6 +58,12 @@ export const appStateConfig = set => ({
                 });
             },
         },
+    },
+
+    chainMaker: {
+        target: null,
+        setTarget: target =>
+            set(({ chainMaker }) => void (chainMaker.target = target)),
     },
 
     dock: {

@@ -48,6 +48,7 @@ export const rootModalConfig = (set, get) => ({
         const newColor = await get().getInput("color");
         return newColor?.[0];
     },
+    inputTarget: () => get().getInput("target"),
     inputEye: () => get().getInput("eye"),
     inputMouth: () => get().getInput("mouth"),
 });

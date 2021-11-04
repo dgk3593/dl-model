@@ -1,14 +1,14 @@
 import MouthBox from "@/SceneController/Dialog/FaceSelect/UvFaceSelect/FaceBox/MouthBox";
 import EyeBox from "@/SceneController/Dialog/FaceSelect/UvFaceSelect/FaceBox/EyeBox";
-import { useActiveModel } from "@/state";
+import { useChainMakerState } from "@/state";
 import MeshFaceBox from "./MeshFaceBox";
 
 const UvPart = ({ part, ...others }) =>
     part === "eye" ? <EyeBox {...others} /> : <MouthBox {...others} />;
 
 function FacePartBox({ part, index, ...others }) {
-    const { activeModel } = useActiveModel();
-    const face = activeModel?.face;
+    const { target } = useChainMakerState();
+    const face = target?.face;
 
     switch (face?.type) {
         case "uv":
