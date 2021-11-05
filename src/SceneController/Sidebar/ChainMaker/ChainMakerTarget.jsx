@@ -23,7 +23,6 @@ function ChainMakerTarget() {
     }, [target]);
 
     const modelTitle = name ?? id;
-    const icon = <ModelIcon modelId={id} alt={modelTitle} />;
 
     const changeTarget = async () => {
         const newTarget = await inputTarget();
@@ -36,12 +35,9 @@ function ChainMakerTarget() {
         target && (
             <div className="ChainMaker-target">
                 Target
-                <Button
-                    onClick={changeTarget}
-                    startIcon={icon}
-                    title="Click to change"
-                >
-                    {modelTitle}
+                <Button onClick={changeTarget} title="Click to change">
+                    <ModelIcon modelId={id} alt={modelTitle} />
+                    <span className="name">{modelTitle}</span>
                 </Button>
             </div>
         )

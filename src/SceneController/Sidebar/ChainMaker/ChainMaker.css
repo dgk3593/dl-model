@@ -38,6 +38,14 @@
     justify-content: flex-start;
 }
 
+.ChainMaker-target button .name {
+    flex: 1 0;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
 .ChainMaker-target button img {
     max-height: 2.5rem;
 }

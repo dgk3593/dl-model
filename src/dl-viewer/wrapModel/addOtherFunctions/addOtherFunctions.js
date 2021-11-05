@@ -35,6 +35,7 @@ export default function addOtherFunctions(container) {
         }),
 
         dispose() {
+            this.dispatchEvent({ type: "dispose" });
             const { attachment, parent, parentBone } = this;
             attachment.list.forEach(att => att.dispose());
 
