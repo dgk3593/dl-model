@@ -15,6 +15,9 @@ function SpecialCapture() {
     const getRotateFrames = () => {
         setLoadingMsg("generating frames...");
         setTimeout(async () => {
+            let tmp = viewer.scene.background;
+            viewer.scene.background = null;
+
             let { x, y, z } = viewer.camera.position;
             const { x: xT, z: zT } = viewer.controls.target;
             const { sqrt, sin, cos, atan, PI } = Math;
@@ -26,7 +29,6 @@ function SpecialCapture() {
             const dphi = (2 * PI) / nFrames;
             const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
             const frames = [];
-            viewer.background = "transparent";
             let phi = phi0;
             for (let i = 0; i < nFrames; i++) {
                 x = xT + r * sin(phi);
@@ -38,6 +40,7 @@ function SpecialCapture() {
                 frames.push(frame);
                 phi += dphi;
             }
+            viewer.scene.background = tmp;
 
             setLoadingMsg("creating zip...");
             const fileName = "frames";

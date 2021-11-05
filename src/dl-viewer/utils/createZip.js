@@ -1,12 +1,54 @@
+import { zip } from "fflate";
+
+/**
+ * @param {{[name: string]: Uint8Array | [Uint8Array, object]}} zipObj
+ * @return {Promise<Blob>}
+ */
+const makeZip = zipObj =>
+    new Promise(resolve =>
+        zip(zipObj, {}, (err, out) => resolve(new Blob([out])))
+    );
+/**
+ * get base64 from data url
+ * @param {string} str
+ * @return {string}
+ */
+const getBase64 = str => {
+    const index = str.indexOf(",");
+    return str.slice(index + 1, Infinity);
+};
+
+/**
+ * @param {string | Blob | ArrayBuffer} data
+ * @return {Promise<Uint8Array>}
+ */
+const createBuffer = async data => {
+    data = await data;
+    if (data instanceof Blob) data = await data.arrayBuffer();
+    if (data instanceof ArrayBuffer) return new Uint8Array(data);
+
+    if (typeof data === "string") {
+        const b64 = getBase64(data);
+        const bin = window.atob(b64);
+        return Uint8Array.from(bin, c => c.charCodeAt(0));
+    }
+};
 /**
  * create a zip file from a list of files
- * @param {{name: String, data: string}[]} list
+ * @param {{name: String, data: string | Blob | ArrayBuffer}[]} list
+ * @return {Promise<Blob>}
  */
 export async function createZip(list) {
-    const JSZip = await import("jszip").then(module => module.default);
-    const zip = JSZip();
-    list.forEach(({ name, data }) => zip.file(name, data));
-    return zip.generateAsync({ type: "blob" });
+    const buffer = await Promise.all(
+        list.map(({ data }) => createBuffer(data))
+    );
+    /**
+     * @type {{[name: string]: [Uint8Array, object]}}
+     */
+    const zipObj = Object.fromEntries(
+        list.map(({ name }, i) => [name, [buffer[i], { level: 0 }]])
+    );
+    return makeZip(zipObj);
 }
 
 /**
@@ -33,14 +75,10 @@ export function pngBlobToZip(blobs, baseName = "ss") {
 export async function pngUrlToZip(urls, baseName) {
     const nDigits = urls.length.toString().length;
 
-    const JSZip = await import("jszip").then(module => module.default);
-    const zip = JSZip();
-    urls.forEach((url, i) => {
+    const list = urls.map((data, i) => {
         const number = i.toString().padStart(nDigits, "0");
-        const fileName = `${baseName || "ss"}_${number}.png`;
-        const sliceStart = "data:image/png;base64,".length;
-
-        zip.file(fileName, url.slice(sliceStart, Infinity), { base64: true });
+        const name = `${baseName || "ss"}_${number}.png`;
+        return { name, data };
     });
-    return zip.generateAsync({ type: "blob" });
+    return createZip(list);
 }

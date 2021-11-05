@@ -34,10 +34,15 @@ const getFileList = async id => {
     return json.map(item => item.name);
 };
 
+/**
+ * download from url as ArrayBuffer
+ * @param {string} url
+ * @return {Promise<ArrayBuffer>}
+ */
 const downloadFile = async url => {
     const response = await fetch(url);
-    const blob = await response.blob();
-    return blob;
+    const buffer = await response.arrayBuffer();
+    return buffer;
 };
 
 export const downloadModel = async id => {
