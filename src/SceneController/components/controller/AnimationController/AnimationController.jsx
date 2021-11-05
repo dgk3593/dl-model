@@ -21,7 +21,10 @@ function AnimationController({ target }) {
             .then(() => isPaused && target.animation.pause());
 
         const chainList = chainCodeToList(code, name);
-        target?.userData && (target.userData.chain = chainList);
+        if (target?.userData) {
+            target.userData.chain?.splice(0, Infinity, ...chainList) ??
+                (target.userData.chain = chainList);
+        }
     };
 
     const removeAni = () => {
