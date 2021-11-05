@@ -1,13 +1,13 @@
-import { zip } from "fflate";
-
 /**
  * @param {{[name: string]: Uint8Array | [Uint8Array, object]}} zipObj
  * @return {Promise<Blob>}
  */
-const makeZip = zipObj =>
-    new Promise(resolve =>
+const makeZip = async zipObj => {
+    const { zip } = await import("fflate");
+    return new Promise(resolve =>
         zip(zipObj, {}, (err, out) => resolve(new Blob([out])))
     );
+};
 /**
  * get base64 from data url
  * @param {string} str
