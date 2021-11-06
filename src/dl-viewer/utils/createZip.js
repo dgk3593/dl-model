@@ -28,7 +28,7 @@ const createBuffer = async data => {
     if (data instanceof ArrayBuffer) return new Uint8Array(data);
 
     if (typeof data === "string") {
-        const b64 = getBase64(data);
+        const b64 = data.startsWith("data") ? getBase64(data) : data;
         const bin = window.atob(b64);
         return Uint8Array.from(bin, c => c.charCodeAt(0));
     }
@@ -46,7 +46,10 @@ export async function createZip(list) {
      * @type {{[name: string]: [Uint8Array, object]}}
      */
     const zipObj = Object.fromEntries(
-        list.map(({ name }, i) => [name, [buffer[i], { level: 0 }]])
+        list.map(({ name }, i) => [
+            name,
+            [buffer[i], { level: 0, consume: true }],
+        ])
     );
     return makeZip(zipObj);
 }
@@ -61,8 +64,8 @@ export function pngBlobToZip(blobs, baseName = "ss") {
 
     const list = blobs.map((blob, i) => {
         const number = i.toString().padStart(nDigits, "0");
-        const fileName = `${baseName}_${number}.png`;
-        return { name: fileName, data: blob };
+        const name = `${baseName}_${number}.png`;
+        return { name, data: blob };
     });
     return createZip(list);
 }
@@ -75,10 +78,10 @@ export function pngBlobToZip(blobs, baseName = "ss") {
 export async function pngUrlToZip(urls, baseName) {
     const nDigits = urls.length.toString().length;
 
-    const list = urls.map((data, i) => {
+    const list = urls.map((url, i) => {
         const number = i.toString().padStart(nDigits, "0");
         const name = `${baseName || "ss"}_${number}.png`;
-        return { name, data };
+        return { name, data: url };
     });
     return createZip(list);
 }
