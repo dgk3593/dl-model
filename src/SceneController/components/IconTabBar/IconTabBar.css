@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: #10101088;
+    cursor: pointer;
 }
 
 .IconTabBar.horizontal {
