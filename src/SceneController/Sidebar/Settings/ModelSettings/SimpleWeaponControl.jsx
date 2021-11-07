@@ -3,8 +3,8 @@ import { useKey } from "@/SceneController/hook";
 import { useActiveModel } from "@/state";
 
 import { Button } from "@mui/material";
-import AttachmentSetting from "./AttachmentSetting";
 import { simpleHandler } from "../simpleHandler";
+import FullModelController from "@/SceneController/components/controller/FullModelController";
 
 const weaponIcon = (
     <img className="btn-icon" src="img/appIcon/weapon.png" alt="Add Weapon" />
@@ -46,14 +46,14 @@ function SimpleWeaponControl({ openModal }) {
             </Button>
             <React.Fragment key={key}>
                 {weaponLeft?.map(weapon => (
-                    <AttachmentSetting
+                    <FullModelController
                         target={weapon}
                         key={weapon.uniqueId}
                         label="Left Weapon"
                     />
                 ))}
                 {weaponRight?.map(weapon => (
-                    <AttachmentSetting
+                    <FullModelController
                         target={weapon}
                         key={weapon.uniqueId}
                         label="Right Weapon"

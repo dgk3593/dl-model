@@ -58,6 +58,10 @@ export const appStateConfig = set => ({
                 });
             },
         },
+
+        manageMode: "single",
+        setManageMode: mode =>
+            set(({ sidebar }) => void (sidebar.manageMode = mode)),
     },
 
     chainMaker: {

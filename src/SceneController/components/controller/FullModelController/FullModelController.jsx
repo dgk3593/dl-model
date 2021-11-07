@@ -1,11 +1,15 @@
 import { ModelIcon } from "components/DLIcon";
 import Accordion from "components/Accordion";
-import { ModelController } from "components/controller";
+import { ModelController } from "..";
 import { IconButton } from "@mui/material";
 import { Close } from "@mui/icons-material";
-import "./AttachmentSetting.css";
 
-function AttachmentSetting({ target, label }) {
+import "./FullModelController.css";
+
+function FullModelController({
+    target,
+    label = target?.userData?.name ?? target.id,
+}) {
     const remove = e => {
         e.stopPropagation();
         target.dispose();
@@ -15,7 +19,7 @@ function AttachmentSetting({ target, label }) {
         <ModelIcon
             modelId={target.id}
             alt={target?.userData.name}
-            className="AttachmentIcon"
+            className="FullModelController-icon"
         />
     );
 
@@ -31,7 +35,7 @@ function AttachmentSetting({ target, label }) {
     );
 
     return (
-        <Accordion className="AttachmentSetting">
+        <Accordion className="FullModelController">
             <>
                 {modelIcon}
                 {label}
@@ -44,4 +48,4 @@ function AttachmentSetting({ target, label }) {
     );
 }
 
-export default AttachmentSetting;
+export default FullModelController;

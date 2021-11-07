@@ -1,88 +1,60 @@
-import { useAppState, useActiveModel, useChainMakerState } from "@/state";
+import { useAppState } from "@/state";
+import React from "react";
 
-import { Button } from "@mui/material";
-import SimpleWeaponControl from "./SimpleWeaponControl";
-import FaceSettings from "./FaceSettings";
-import ModelSelect from "./ModelSelect";
+import { People, Person } from "@mui/icons-material";
 
-import OutlineSettings from "./OutlineSettings";
-import MaterialSettings from "./MaterialSettings";
-import ParticleController from "components/controller/ParticleController";
+import IconTabBar from "@/SceneController/components/IconTabBar";
+import { Box } from "@mui/material";
+import SingleMode from "./SingleMode";
+import MultiMode from "./MultiMode";
 
-import { simpleHandler } from "../simpleHandler";
-import { Attachment, DirectionsRun, Storage } from "@mui/icons-material";
-import BodyPartsController from "@/SceneController/components/controller/BodyPartsController";
-import TextureController from "@/SceneController/components/controller/TextureController";
+const tabs = [
+    {
+        title: "Single Model",
+        value: "single",
+        icon: <Person />,
+    },
+    {
+        title: "Multiple Model",
+        value: "multi",
+        icon: <People />,
+    },
+];
+
+const components = {
+    single: SingleMode,
+    multi: MultiMode,
+};
+
+const styles = {
+    ModeSelect: {
+        backgroundColor: "#10101078",
+        color: "#eee",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        gap: "2rem",
+        marginBottom: "0.3rem",
+    },
+};
 
 function ModelSettings() {
-    const { activeModel } = useActiveModel();
-    const openModal = useAppState(state => state.sidebar.modal.open);
-    const { toggle: toggleChainMaker } = useChainMakerState();
-
-    const handleClick = event => {
-        const { mode } = event.currentTarget.dataset;
-        openModal(mode, simpleHandler[mode]);
-    };
+    const { manageMode, setManageMode } = useAppState(state => state.sidebar);
+    const Component = components[manageMode] ?? React.Fragment;
 
     return (
         <>
-            <ModelSelect />
-            <span className="break" />
-
-            {activeModel && (
-                <>
-                    <TextureController
-                        key={activeModel.uniqueId}
-                        target={activeModel}
-                    />
-                    {activeModel?.parts && (
-                        <>
-                            <BodyPartsController
-                                target={activeModel}
-                                key={activeModel.uniqueId}
-                            />
-                            <span className="break" />
-                        </>
-                    )}
-
-                    {activeModel?.face && (
-                        <FaceSettings handleClick={handleClick} />
-                    )}
-                    <span className="break" />
-
-                    <Button
-                        variant="contained"
-                        data-mode="attachment"
-                        onClick={handleClick}
-                        startIcon={<Attachment />}
-                    >
-                        Manage Attachments
-                    </Button>
-                    <SimpleWeaponControl openModal={openModal} />
-                    <span className="break" />
-
-                    <Button
-                        variant="contained"
-                        data-mode="animation"
-                        onClick={handleClick}
-                        startIcon={<DirectionsRun />}
-                    >
-                        Animation Select
-                    </Button>
-                    <Button
-                        variant="contained"
-                        onClick={toggleChainMaker}
-                        startIcon={<Storage />}
-                    >
-                        Chain Maker
-                    </Button>
-
-                    <span className="break" />
-                    <OutlineSettings />
-                    <MaterialSettings />
-                    <ParticleController target={activeModel} />
-                </>
-            )}
+            <Box className="ModeSelect" sx={styles.ModeSelect}>
+                Mode
+                <IconTabBar
+                    tabs={tabs}
+                    className="ModeSelect-tabs"
+                    value={manageMode}
+                    onChange={setManageMode}
+                />
+            </Box>
+            <Component />
         </>
     );
 }

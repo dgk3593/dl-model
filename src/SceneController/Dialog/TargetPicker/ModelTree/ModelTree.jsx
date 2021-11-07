@@ -33,7 +33,7 @@ function ModelTree({ target, onSelect }) {
     const name = target?.userData.name;
     const label = name ?? id;
     const modelIcon = (
-        <ModelIcon modelId={id} alt={name ?? id} className="AttachmentIcon" />
+        <ModelIcon modelId={id} alt={name ?? id} className="ModelTree-icon" />
     );
     const activeBones = getUnique(
         target.attachment.list.map(att => att.parentBone)

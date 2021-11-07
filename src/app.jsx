@@ -30,10 +30,10 @@ export function App() {
     });
 
     useEffect(() => {
-        mainView.current?.appendChild(viewer.canvas);
+        mainView.current.appendChild(viewer.canvas);
 
         viewer.stats.dom.style.position = "";
-        stats.current?.appendChild(viewer.stats.dom);
+        stats.current.appendChild(viewer.stats.dom);
     }, []);
 
     return (

@@ -1,0 +1,35 @@
+.ModelSettings-target {
+    background-color: #101010aa;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    padding: 0.2rem;
+    color: #eee;
+}
+
+.ModelSettings-target button {
+    display: flex;
+    flex-wrap: wrap;
+    color: #eee;
+    gap: 0.2rem;
+    flex: 1 0;
+    justify-content: flex-start;
+}
+
+.ModelSettings-target button:hover {
+    background-color: #10101078;
+}
+
+.ModelSettings-target button .name {
+    flex: 1 0;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.ModelSettings-target button img {
+    max-height: 2.5rem;
+}

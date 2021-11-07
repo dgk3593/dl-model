@@ -1,19 +1,11 @@
 import { Button } from "@mui/material";
 import { useAppState, useModelCatalogState } from "@/state";
-import { useActiveModel } from "@/state";
-import { simpleHandler } from "../../simpleHandler";
 import Accordion from "components/Accordion";
 
 import { categories } from "@/SceneController/Dialog/ModelCatalog/categories";
 import "./ModelSelect.css";
 
-const label = {
-    change: "Change Model",
-    select: "Select Model",
-};
-
-function ModelSelect() {
-    const { activeModel } = useActiveModel();
+function ModelSelect({ label, handleSelect }) {
     const openModal = useAppState(state => state.sidebar.modal.open);
     const { setIndex } = useModelCatalogState();
 
@@ -23,7 +15,7 @@ function ModelSelect() {
         if (index !== undefined) {
             setIndex(0, index);
         }
-        openModal("model", simpleHandler.model);
+        openModal("model", handleSelect);
     };
 
     const groupButtons = categories.map((cat, index) => {
@@ -38,7 +30,7 @@ function ModelSelect() {
     return (
         <Accordion className="ModelSelect" defaultOpen disableGutters>
             <Button variant="contained" onClick={handleClick}>
-                {activeModel ? label.change : label.select}
+                {label}
             </Button>
 
             <div className="ModelSelect-groups">{groupButtons}</div>

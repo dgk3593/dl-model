@@ -1,4 +1,4 @@
-import AttachmentSetting from "@/SceneController/Sidebar/Settings/ModelSettings/AttachmentSetting";
+import FullModelController from "components/controller/FullModelController";
 import { useActiveModel } from "@/state";
 import { Add } from "@mui/icons-material";
 import { Button } from "@mui/material";
@@ -35,10 +35,7 @@ function BoneManager({ bone, add, target }) {
             </>
             <>
                 {attList.map(att => (
-                    <AttachmentSetting
-                        target={att}
-                        label={att?.userData?.name ?? att.id}
-                    />
+                    <FullModelController target={att} />
                 ))}
             </>
         </Accordion>

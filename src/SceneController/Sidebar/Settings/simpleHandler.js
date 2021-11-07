@@ -20,9 +20,11 @@ const aniHandler = (code, name) => {
 
 const modelHandler = async (id, name) => {
     setLoadingMsg("Loading");
+    const setActiveModel = useActiveModel.getState().setActiveModel;
     const oldModel = useActiveModel.getState().activeModel;
     const newModel = await viewer.loadDLModel(id);
     newModel.userData.name = name;
+    const { parent, parentBone } = oldModel ?? {};
 
     if (oldModel?.type === "adventurer" && newModel.type === "adventurer") {
         newModel.userData.chain = oldModel.userData.chain;
@@ -31,7 +33,7 @@ const modelHandler = async (id, name) => {
         oldModel.attachment.list.forEach(att =>
             newModel.attach(att, att.parentBone)
         );
-    } else {
+    } else if (oldModel?.animation.current.chainCode || !parentBone) {
         const ani = getDefaultAni(id);
         if (ani) {
             const { code, name } = ani;
@@ -41,16 +43,21 @@ const modelHandler = async (id, name) => {
     }
 
     oldModel?.dispose();
-    viewer.add(newModel);
-    const camera = getDefaultCamera(id);
-    viewer.camera.position.set(...camera);
+    if (parentBone) {
+        parent.attach(newModel, parentBone);
+    } else {
+        viewer.add(newModel);
+        const camera = getDefaultCamera(id);
+        viewer.camera.position.set(...camera);
 
-    const control = getDefaultControl(id);
-    viewer.controls.target.set(...control);
+        const control = getDefaultControl(id);
+        viewer.controls.target.set(...control);
 
-    useAniSelectState
-        .getState()
-        .setCategory(newModel.type === "adventurer" ? "Adv" : "Personal");
+        useAniSelectState
+            .getState()
+            .setCategory(newModel.type === "adventurer" ? "Adv" : "Personal");
+    }
+    setActiveModel(newModel);
 
     setLoadingMsg("");
 };

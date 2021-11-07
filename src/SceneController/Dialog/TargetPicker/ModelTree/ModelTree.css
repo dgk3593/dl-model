@@ -47,6 +47,9 @@ div.ModelTree:not(.Accordion):hover {
 .ModelTree button:hover {
     background-color: #ddd;
 }
+.ModelTree-icon {
+    max-width: 2.5rem;
+}
 
 .ModelTree .BoneChildren {
     width: 100%;
