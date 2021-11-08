@@ -1,5 +1,5 @@
-import { useModalState } from "@/state";
-import { Close, DirectionsRun } from "@mui/icons-material";
+import { useChainMakerState, useModalState } from "@/state";
+import { Close, DirectionsRun, Storage } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 
@@ -8,6 +8,7 @@ import ModelTimeControl from "./ModelTimeControl";
 
 function AnimationController({ target }) {
     const { inputAni } = useModalState();
+    const { toggle, setTarget } = useChainMakerState();
 
     const addAni = async () => {
         const ani = await inputAni();
@@ -32,6 +33,11 @@ function AnimationController({ target }) {
         target?.userData?.chain.splice(0, Infinity);
     };
 
+    const openChainMaker = () => {
+        setTarget(target);
+        toggle();
+    };
+
     return (
         <div className="AnimationController">
             <ModelTimeControl target={target} />
@@ -41,6 +47,13 @@ function AnimationController({ target }) {
                 onClick={addAni}
             >
                 Add Animation
+            </Button>
+            <Button
+                variant="contained"
+                startIcon={<Storage />}
+                onClick={openChainMaker}
+            >
+                Chain Maker
             </Button>
             <Button
                 variant="contained"
