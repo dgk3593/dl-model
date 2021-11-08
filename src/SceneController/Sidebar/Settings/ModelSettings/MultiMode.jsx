@@ -3,8 +3,10 @@ import { useKey } from "@/SceneController/hook";
 import { useAppState } from "@/state";
 
 import ModelSelect from "./ModelSelect";
-import viewer from "@/viewer";
 import FullModelController from "components/controller/FullModelController";
+import { Button } from "@mui/material";
+import { RestartAlt } from "@mui/icons-material";
+import viewer from "@/viewer";
 
 const { setLoadingMsg } = useAppState.getState();
 
@@ -27,9 +29,25 @@ function MultiMode() {
         };
     }, []);
 
+    const restartAllAni = () => {
+        viewer.loadedModel.forEach(({ animation }) => {
+            animation.stop();
+            animation.play();
+        });
+    };
+
     return (
         <>
             <ModelSelect label="Add Model" handleSelect={handleSelect} />
+            <span className="break" />
+
+            <Button
+                variant="contained"
+                onClick={restartAllAni}
+                startIcon={<RestartAlt />}
+            >
+                Restart All Animation
+            </Button>
             <span className="break" />
 
             <React.Fragment key={key}>
