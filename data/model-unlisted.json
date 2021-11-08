@@ -4,6 +4,18 @@
             "id": "d210104_01",
             "name": "Gala Mym Brunhilda",
             "element": "Flame"
+        },
+        {
+            "id": "w399020_01",
+            "name": "Lapis' Revolver (Large)"
+        },
+        {
+            "id": "w399047_01",
+            "name": "Hunter Sarisse's Bow (Large)"
+        },
+        {
+            "id": "w399043_01",
+            "name": "Hunter Berserker's Greatsword (reverse)"
         }
     ]
 }

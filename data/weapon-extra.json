@@ -1,6 +1,3 @@
 {
-    "data": [
-        { "id": "wHandgun", "name": "Handgun", "noIcon": true },
-        { "id": "wHandgunS", "name": "Handgun (Small)", "noIcon": true }
-    ]
+    "data": [{ "id": "wHandgun", "name": "Handgun", "noIcon": true }]
 }
