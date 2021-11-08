@@ -36,6 +36,7 @@ const styles = {
         textAlign: "center",
         gap: "2rem",
         marginBottom: "0.3rem",
+        cursor: "default",
     },
 };
 

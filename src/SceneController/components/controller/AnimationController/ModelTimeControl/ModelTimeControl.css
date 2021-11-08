@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: center;
     background-color: #101010;
+    align-self: stretch;
+    margin-bottom: 0.3rem;
+    border: 1px solid #eee7;
 }
 
 .ModelTimeControl svg {
