@@ -57,7 +57,7 @@ const addMaterialFunctions =
                     if (current !== defaultValue)
                         parts.push(`${prop}=${current}`);
                 });
-                const code = parts.join("/").replace(/#/g, "");
+                const code = parts.join("/").replaceAll("#", "");
                 return code;
             },
 

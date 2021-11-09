@@ -230,11 +230,11 @@ export function createRenderTarget(method = "SMAA") {
 /** generate date time string */
 export const getDateTimeString = () => {
     const date = new Date();
-    const dateStr = date.toDateString().replace(/ /g, "_");
+    const dateStr = date.toDateString().replaceAll(" ", "_");
     const timeStr = date
         .toLocaleTimeString()
-        .replace(/:/g, "-")
-        .replace(/ /g, "");
+        .replaceAll(":", "-")
+        .replaceAll(" ", "");
     return `${dateStr}_${timeStr}`;
 };
 

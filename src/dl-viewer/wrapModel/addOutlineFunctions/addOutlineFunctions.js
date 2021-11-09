@@ -64,7 +64,7 @@ const addOutlineFunctions =
                         parts.push(`${key}=${current}`);
                     }
                 });
-                return parts.join("/").replace(/#/g, "");
+                return parts.join("/").replaceAll("#", "");
             },
 
             /**

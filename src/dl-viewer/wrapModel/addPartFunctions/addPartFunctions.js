@@ -75,7 +75,7 @@ export default function addPartFunctions(container) {
 
     partNames.forEach(partName => {
         const partData = partsData?.[partName];
-        const label = partData?.name?.replace(/ /g, "_") ?? partName;
+        const label = partData?.name?.replaceAll(" ", "_") ?? partName;
         const optionNames = partData?.options;
         const partMeshes = getPartMeshes(partName);
         partMeshes.forEach(mesh => (mesh.frustumCulled = false));

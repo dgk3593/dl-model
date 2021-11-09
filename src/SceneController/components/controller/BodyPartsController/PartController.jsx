@@ -10,7 +10,7 @@ function PartController({ target, name }) {
     const props = [
         {
             propName: "current",
-            label: name.replace(/_/g, " "),
+            label: name.replaceAll("_", " "),
             type: "select",
             options,
         },
