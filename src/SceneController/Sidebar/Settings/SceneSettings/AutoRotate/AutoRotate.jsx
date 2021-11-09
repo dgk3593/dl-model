@@ -25,7 +25,11 @@ function AutoRotate() {
                     <ThreeSixty />
                     Auto Rotate
                 </div>
-                <Button onClick={reset} title="Reset" variant="contained">
+                <Button
+                    onClick={reset}
+                    title="Reset Auto Rotate Settings"
+                    variant="contained"
+                >
                     Reset
                 </Button>
             </>

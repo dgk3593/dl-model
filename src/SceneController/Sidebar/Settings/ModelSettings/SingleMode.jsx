@@ -87,6 +87,7 @@ function SingleMode() {
                         variant="contained"
                         onClick={openChainMaker}
                         startIcon={<Storage />}
+                        title="Create Animation Chain"
                     >
                         Chain Maker
                     </Button>

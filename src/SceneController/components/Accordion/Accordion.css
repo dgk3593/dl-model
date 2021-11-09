@@ -21,6 +21,10 @@
     margin: 0.5rem 0;
 }
 
+.Accordion.open:first-of-type {
+    margin-top: 0;
+}
+
 .Accordion.open .Accordion-summary {
     background-color: rgba(255, 255, 255, 0.1);
 }

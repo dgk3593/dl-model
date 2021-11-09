@@ -36,7 +36,11 @@ function LightControl() {
                     <LightMode />
                     Light
                 </div>
-                <MenuButton onClick={addLight} options={lightTypes}>
+                <MenuButton
+                    title="Add Light"
+                    onClick={addLight}
+                    options={lightTypes}
+                >
                     <Add />
                 </MenuButton>
             </>

@@ -61,7 +61,11 @@ function PostProcessingControl() {
         >
             <>
                 <div>Post-Processing</div>
-                <MenuButton onClick={addPass} options={passTypes}>
+                <MenuButton
+                    onClick={addPass}
+                    options={passTypes}
+                    title="Add Pass"
+                >
                     <Add />
                 </MenuButton>
             </>

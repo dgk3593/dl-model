@@ -20,17 +20,26 @@ function ManualRecordControl() {
         <Button
             onClick={handleClick}
             data-action={state === "idle" ? "start" : "resume"}
+            title={state === "idle" ? "Start recording" : "Resume recording"}
         >
             <RecordIcon />
         </Button>
     );
     const pauseButton = (
-        <Button onClick={handleClick} data-action="pause">
+        <Button
+            onClick={handleClick}
+            data-action="pause"
+            title="Pause Recording"
+        >
             <Pause />
         </Button>
     );
     const stopButton = (
-        <Button onClick={handleClick} data-action="stop">
+        <Button
+            onClick={handleClick}
+            data-action="stop"
+            title="Finish Recording"
+        >
             <Stop />
         </Button>
     );

@@ -7,8 +7,9 @@ import { Button, Menu, MenuItem } from "@mui/material";
  * @param {*} props.children
  * @param { (value: string) => void} props.onClick
  * @param {{ value: string, label: string }[]} props.options
+ * @param {string} [props.title]
  */
-function MenuButton({ children, onClick, options }) {
+function MenuButton({ children, onClick, options, title }) {
     const [anchorEl, setAnchorEl] = useState(null);
     const openMenu = event => {
         event.stopPropagation();
@@ -25,7 +26,7 @@ function MenuButton({ children, onClick, options }) {
 
     return (
         <>
-            <Button onClick={openMenu} title="Add light" variant="contained">
+            <Button onClick={openMenu} title={title} variant="contained">
                 {children}
             </Button>
             <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={closeMenu}>

@@ -18,6 +18,7 @@ export const githubIcon = (
                 margin: "0.5rem 1rem",
                 color: "white",
             }}
+            titleAccess="Source Code"
         />
     </a>
 );
