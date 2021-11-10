@@ -5,6 +5,10 @@ import fscreen from "fscreen";
 const viewer = new DLViewer();
 viewer.initData();
 viewer.setViewport();
+viewer.userData.specialCapture = {
+    frameRate: 30,
+    duration: 5,
+};
 
 window.addEventListener("resize", () => viewer.setViewport());
 viewer.canvas.addEventListener("dblclick", toggleFullScreen);

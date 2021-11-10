@@ -28,20 +28,20 @@ function ScreenshotControl() {
             return;
         }
 
-        setLoadingMsg("generating frames...");
+        setLoadingMsg("Generating frames...");
         setTimeout(async () => {
             const frames = screenshot.getAllFrames(activeModel);
             if (!frames) {
-                setLoadingMsg("invalid animation...");
+                setLoadingMsg("Invalid animation...");
                 setTimeout(() => setLoadingMsg(""), 2000);
                 return;
             }
 
-            setLoadingMsg("creating zip...");
+            setLoadingMsg("Creating zip...");
             const fileName = screenshot.settings.fileName || "frames";
             const zip = await pngUrlToZip(frames, fileName);
 
-            setLoadingMsg("finished");
+            setLoadingMsg("Finished");
             saveAs(zip, `${fileName}.zip`);
             setTimeout(() => setLoadingMsg(""), 1000);
         });
