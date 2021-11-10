@@ -1,10 +1,10 @@
 import Accordion from "components/Accordion";
 import Setters from "components/Setters";
 import { Button } from "@mui/material";
-import { Download } from "@mui/icons-material";
+import { Download, FiberManualRecord as RecordIcon } from "@mui/icons-material";
 
 import { commonProps } from "./props";
-import { getRotateFrames } from "./helper";
+import { getRotateClip, getRotateFrames } from "./helper";
 import viewer from "@/viewer";
 
 import "./SpecialCapture.css";
@@ -26,6 +26,13 @@ function SpecialCapture() {
                     startIcon={<Download />}
                 >
                     Get Rotate Frames
+                </Button>
+                <Button
+                    onClick={getRotateClip}
+                    title="Get all frames as zip"
+                    startIcon={<RecordIcon />}
+                >
+                    Get Rotate Clip
                 </Button>
             </>
         </Accordion>

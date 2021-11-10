@@ -362,6 +362,7 @@ export class DLViewer {
         this.animation?.update(dt);
         this.model.forEach(model => model.update?.(dt));
         this.loop.state === "inactive" && this.render();
+        this.dispatchEvent({ type: "timeUpdate", dt });
     }
 
     stopAll() {
