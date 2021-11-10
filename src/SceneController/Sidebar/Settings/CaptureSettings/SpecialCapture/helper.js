@@ -55,48 +55,46 @@ export const getRotateFrames = () => {
 
 export const getRotateClip = () => {
     setLoadingMsg("Recording...");
-    setTimeout(async () => {
-        const { frameRate = 30, duration = 5 } =
-            viewer.userData.specialCapture ?? {};
-        const isPaused = viewer.loop.paused;
+    const { frameRate = 30, duration = 5 } =
+        viewer.userData.specialCapture ?? {};
+    const isPaused = viewer.loop.paused;
 
-        // overwrite record settings
-        const tmp = viewer.record.settings.frameRate;
-        viewer.record.settings.frameRate = frameRate;
+    // overwrite record settings
+    const tmp = viewer.record.settings.frameRate;
+    viewer.record.settings.frameRate = frameRate;
 
-        let elapsedTime = 0;
+    let elapsedTime = 0;
 
-        const { sqrt, sin, cos, atan, PI } = Math;
-        let { x, y, z } = viewer.camera.position;
-        const { x: xT, z: zT } = viewer.controls.target;
-        const r = sqrt((x - xT) ** 2 + (z - zT) ** 2);
-        if (r === 0) {
-            setLoadingMsg("Invalid camera settings");
+    const { sqrt, sin, cos, atan, PI } = Math;
+    let { x, y, z } = viewer.camera.position;
+    const { x: xT, z: zT } = viewer.controls.target;
+    const r = sqrt((x - xT) ** 2 + (z - zT) ** 2);
+    if (r === 0) {
+        setLoadingMsg("Invalid camera settings");
+        setTimeout(() => setLoadingMsg(""), 1000);
+        return;
+    }
+
+    const angularVelocity = (2 * PI) / duration;
+    const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
+    let phi = phi0;
+    const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
+        elapsedTime += dt;
+        if (elapsedTime > duration) {
+            viewer.record.stop();
             setTimeout(() => setLoadingMsg(""), 1000);
-            return;
+
+            viewer.removeEventListener("timeUpdate", listener);
+            isPaused && viewer.loop.pause();
+            viewer.record.settings.frameRate = tmp; // restore old settings
         }
-
-        const angularVelocity = (2 * PI) / duration;
-        const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
-        let phi = phi0;
-        const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
-            elapsedTime += dt;
-            if (elapsedTime > duration) {
-                viewer.record.stop();
-                setTimeout(() => setLoadingMsg(""), 1000);
-
-                viewer.removeEventListener("timeUpdate", listener);
-                isPaused && viewer.loop.pause();
-                viewer.record.settings.frameRate = tmp; // restore old settings
-            }
-            x = xT + r * sin(phi);
-            z = zT + r * cos(phi);
-            viewer.camera.position.set(x, y, z);
-            phi += angularVelocity * dt;
-        });
-        isPaused && viewer.loop.resume();
-        viewer.record.start();
+        x = xT + r * sin(phi);
+        z = zT + r * cos(phi);
+        viewer.camera.position.set(x, y, z);
+        phi += angularVelocity * dt;
     });
+    isPaused && viewer.loop.resume();
+    viewer.record.start();
 };
 
 /**
@@ -132,21 +130,22 @@ export const speedDraw = model => {
     // overwrite record settings
     const tmp = viewer.record.settings.frameRate;
     viewer.record.settings.frameRate = frameRate;
-    const { ceil, max } = Math;
 
     let meshIndex = 0,
         currentPoints = 0;
     list.forEach(({ geometry }) => (geometry.drawRange.count = 0));
+
+    const { ceil, max } = Math;
     const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
         const dpoints = ceil((totalPoints * dt) / duration);
         currentPoints += max(dpoints, 1);
         list[meshIndex].geometry.drawRange.count =
-            currentPoints - threshold.at(meshIndex);
+            currentPoints - threshold[meshIndex];
 
-        const overshoot = currentPoints - threshold.at(meshIndex + 1);
+        const overshoot = currentPoints - threshold[meshIndex + 1];
         if (overshoot >= 0) {
             list[meshIndex++].geometry.drawRange.count = Infinity;
-            if (meshIndex >= list.length - 1) {
+            if (meshIndex >= list.length) {
                 viewer.removeEventListener("timeUpdate", listener);
                 setTimeout(() => {
                     setLoadingMsg("");
