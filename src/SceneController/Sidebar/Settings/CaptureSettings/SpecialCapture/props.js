@@ -12,7 +12,7 @@ export const commonProps = [
         label: "Duration (s)",
         type: "number",
         min: 1,
-        max: 10,
+        max: 30,
         step: 0.1,
     },
 ];

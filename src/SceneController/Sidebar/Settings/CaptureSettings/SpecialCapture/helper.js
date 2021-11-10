@@ -98,3 +98,66 @@ export const getRotateClip = () => {
         viewer.record.start();
     });
 };
+
+/**
+ * @param {THREE.Mesh} mesh
+ * @return {{ geometry: THREE.BufferGeometry, count: number }}
+ */
+const getPointCount = mesh => {
+    const { geometry } = mesh;
+    const { start, count } = geometry.groups.at(-1);
+    return { geometry, count: start + count };
+};
+
+/**
+ * @param {DLModel} model
+ * @return {{ geometry: THREE.BufferGeometry, count: number }[]}[]
+ */
+const getPointCounts = model => model.meshes.visible.map(getPointCount);
+
+export const speedDraw = model => {
+    setLoadingMsg("Recording...");
+    const list = getPointCounts(model).sort((a, b) => b.count - a.count);
+    const count = list.map(({ count }) => count);
+    const threshold = count.map((_, i) =>
+        count.slice(0, i + 1).reduce((a, b) => a + b, 0)
+    );
+    threshold.unshift(0);
+    const totalPoints = threshold.at(-1);
+
+    const { frameRate = 30, duration = 5 } =
+        viewer.userData.specialCapture ?? {};
+    const isPaused = viewer.loop.paused;
+
+    // overwrite record settings
+    const tmp = viewer.record.settings.frameRate;
+    viewer.record.settings.frameRate = frameRate;
+    const { ceil, max } = Math;
+
+    let meshIndex = 0,
+        currentPoints = 0;
+    list.forEach(({ geometry }) => (geometry.drawRange.count = 0));
+    const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
+        const dpoints = ceil((totalPoints * dt) / duration);
+        currentPoints += max(dpoints, 1);
+        list[meshIndex].geometry.drawRange.count =
+            currentPoints - threshold.at(meshIndex);
+
+        const overshoot = currentPoints - threshold.at(meshIndex + 1);
+        if (overshoot >= 0) {
+            list[meshIndex++].geometry.drawRange.count = Infinity;
+            if (meshIndex >= list.length - 1) {
+                viewer.removeEventListener("timeUpdate", listener);
+                setTimeout(() => {
+                    setLoadingMsg("");
+                    viewer.record.stop();
+
+                    isPaused && viewer.loop.pause();
+                    viewer.record.settings.frameRate = tmp; // restore old settings
+                }, 1000);
+            }
+        }
+    });
+    isPaused && viewer.loop.resume();
+    viewer.record.start();
+};

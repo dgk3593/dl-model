@@ -1,15 +1,19 @@
+import { useActiveModel } from "@/state";
+
 import Accordion from "components/Accordion";
 import Setters from "components/Setters";
 import { Button } from "@mui/material";
 import { Download, FiberManualRecord as RecordIcon } from "@mui/icons-material";
 
 import { commonProps } from "./props";
-import { getRotateClip, getRotateFrames } from "./helper";
+import { getRotateClip, getRotateFrames, speedDraw } from "./helper";
 import viewer from "@/viewer";
 
 import "./SpecialCapture.css";
 
 function SpecialCapture() {
+    const { activeModel } = useActiveModel();
+    const handleDraw = () => speedDraw(activeModel);
     return (
         <Accordion className="SpecialCapture SettingGroup">
             <>
@@ -27,12 +31,11 @@ function SpecialCapture() {
                 >
                     Get Rotate Frames
                 </Button>
-                <Button
-                    onClick={getRotateClip}
-                    title="Get all frames as zip"
-                    startIcon={<RecordIcon />}
-                >
+                <Button onClick={getRotateClip} startIcon={<RecordIcon />}>
                     Get Rotate Clip
+                </Button>
+                <Button onClick={handleDraw} startIcon={<RecordIcon />}>
+                    Get Speed Draw Clip
                 </Button>
             </>
         </Accordion>
