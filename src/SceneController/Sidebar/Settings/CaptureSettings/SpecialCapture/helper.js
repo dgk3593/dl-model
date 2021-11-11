@@ -130,7 +130,13 @@ const getPointCount = mesh => {
  * @param {DLModel} model
  * @return {{ geometry: THREE.BufferGeometry, count: number }[]}[]
  */
-const getPointCounts = model => model.meshes.visible.map(getPointCount);
+const getPointCounts = model => {
+    const modelMeshes = model.meshes.visible;
+    const attachmentMeshes = model.attachment.list
+        .map(a => a.meshes.visible)
+        .flat();
+    return [...modelMeshes, ...attachmentMeshes].map(getPointCount);
+};
 
 function getSpeedDrawFrames() {
     const model = useActiveModel.getState().activeModel;
