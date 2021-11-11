@@ -18,7 +18,7 @@ function ScreenshotControl() {
     const { screenshot } = viewer;
     const takeScreenshot = event => {
         event.stopPropagation();
-        screenshot.get();
+        screenshot.downloadFrame();
     };
 
     const getAllFrames = () => {

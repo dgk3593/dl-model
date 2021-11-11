@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { DLViewer } from "./dl-viewer";
 import fscreen from "fscreen";
+import { batchDownloadPNG } from "./dl-viewer/utils/downloader";
 
 const viewer = new DLViewer();
 viewer.initData();
@@ -13,10 +14,12 @@ viewer.userData.specialCapture = {
 window.addEventListener("resize", () => viewer.setViewport());
 viewer.canvas.addEventListener("dblclick", toggleFullScreen);
 
+export default viewer;
+
 window.viewer = viewer;
 window.model = viewer.model;
-
-export default viewer;
+window.getFrame = viewer.screenshot.getFrame;
+window.downloadFrames = batchDownloadPNG;
 
 function toggleFullScreen() {
     if (!fscreen.fullscreenEnabled) return;

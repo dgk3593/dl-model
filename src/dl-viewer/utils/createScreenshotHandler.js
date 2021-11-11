@@ -13,7 +13,7 @@ export default function createScreenshotHandler(viewer) {
          * get screenshots
          * @param {number} nFrames - number of frames to capture if animation loop is active
          */
-        get(nFrames = 1) {
+        downloadFrame(nFrames = 1) {
             const { noBackground, fileName } = this.settings;
             const removeBG = noBackground && !viewer.postProcessing.enabled;
 
@@ -58,6 +58,10 @@ export default function createScreenshotHandler(viewer) {
                 getScreenshot,
                 nFrames
             );
+        },
+        getFrame() {
+            viewer.render();
+            return canvas.toDataURL("image/png");
         },
 
         // Main thread block

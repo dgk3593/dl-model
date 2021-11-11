@@ -36,7 +36,7 @@ export function downloadURL(url, fileName) {
  * @param {string[]} urls
  * @param {string} baseName
  */
-export async function batchDownloadPNG(urls, baseName) {
+export async function batchDownloadPNG(urls, baseName = "frames") {
     const file = await pngUrlToZip(urls, baseName);
     saveAs(file, `${baseName}.zip`);
 }

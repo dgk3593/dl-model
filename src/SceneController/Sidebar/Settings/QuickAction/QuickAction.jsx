@@ -19,7 +19,7 @@ function QuickAction() {
 
     const takeScreenshot = event => {
         event.stopPropagation();
-        screenshot.get();
+        screenshot.downloadFrame();
     };
 
     const handleQuickRecord = event => {
