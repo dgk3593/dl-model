@@ -2,3 +2,9 @@
     justify-content: flex-start;
     gap: 2rem;
 }
+
+.SpecialCapture-actions {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-around;
+}

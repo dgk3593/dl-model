@@ -1,19 +1,21 @@
-import { useActiveModel } from "@/state";
-
 import Accordion from "components/Accordion";
 import Setters from "components/Setters";
 import { Button } from "@mui/material";
 import { Download, FiberManualRecord as RecordIcon } from "@mui/icons-material";
 
 import { commonProps } from "./props";
-import { getRotateClip, getRotateFrames, speedDraw } from "./helper";
+import { programs } from "./helper";
 import viewer from "@/viewer";
 
 import "./SpecialCapture.css";
 
 function SpecialCapture() {
-    const { activeModel } = useActiveModel();
-    const handleDraw = () => speedDraw(activeModel);
+    const handleCapture = event => {
+        const { type } = event.currentTarget.dataset;
+        const { program = "rotate" } = viewer.userData.specialCapture ?? {};
+        programs.find(p => p.value === program)?.[type]?.();
+    };
+
     return (
         <Accordion className="SpecialCapture SettingGroup">
             <>
@@ -24,25 +26,25 @@ function SpecialCapture() {
                     target={viewer.userData.specialCapture}
                     propList={commonProps}
                 />
-                <Button
-                    onClick={getRotateFrames}
-                    title="Get all frames as zip"
-                    startIcon={<Download />}
-                >
-                    Get Rotate Frames
-                </Button>
-
-                {viewer.record && (
-                    <Button onClick={getRotateClip} startIcon={<RecordIcon />}>
-                        Get Rotate Clip
+                <div className="SpecialCapture-actions">
+                    <Button
+                        data-type="frames"
+                        onClick={handleCapture}
+                        title="Get all frames as zip"
+                        startIcon={<Download />}
+                    >
+                        Get Frames
                     </Button>
-                )}
-
-                {viewer.record && (
-                    <Button onClick={handleDraw} startIcon={<RecordIcon />}>
-                        Get Speed Draw Clip
-                    </Button>
-                )}
+                    {viewer.record && (
+                        <Button
+                            data-type="clip"
+                            onClick={handleCapture}
+                            startIcon={<RecordIcon />}
+                        >
+                            Get Clip
+                        </Button>
+                    )}
+                </div>
             </>
         </Accordion>
     );

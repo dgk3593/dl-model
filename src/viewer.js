@@ -9,6 +9,7 @@ viewer.setViewport();
 viewer.userData.specialCapture = {
     frameRate: 30,
     duration: 5,
+    program: "rotate",
 };
 
 window.addEventListener("resize", () => viewer.setViewport());

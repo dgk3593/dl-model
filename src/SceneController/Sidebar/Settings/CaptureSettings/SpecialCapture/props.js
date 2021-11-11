@@ -1,4 +1,12 @@
+import { programs } from "./helper";
+
 export const commonProps = [
+    {
+        propName: "program",
+        label: "Program",
+        type: "select",
+        options: programs,
+    },
     {
         propName: "frameRate",
         label: "Frame Rate",
