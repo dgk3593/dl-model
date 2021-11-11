@@ -17,7 +17,7 @@ function SpecialCapture() {
     return (
         <Accordion className="SpecialCapture SettingGroup">
             <>
-                <div>Special</div>
+                <div>Special Capture</div>
             </>
             <>
                 <Setters
@@ -31,12 +31,18 @@ function SpecialCapture() {
                 >
                     Get Rotate Frames
                 </Button>
-                <Button onClick={getRotateClip} startIcon={<RecordIcon />}>
-                    Get Rotate Clip
-                </Button>
-                <Button onClick={handleDraw} startIcon={<RecordIcon />}>
-                    Get Speed Draw Clip
-                </Button>
+
+                {viewer.record && (
+                    <Button onClick={getRotateClip} startIcon={<RecordIcon />}>
+                        Get Rotate Clip
+                    </Button>
+                )}
+
+                {viewer.record && (
+                    <Button onClick={handleDraw} startIcon={<RecordIcon />}>
+                        Get Speed Draw Clip
+                    </Button>
+                )}
             </>
         </Accordion>
     );
