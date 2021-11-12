@@ -47,7 +47,7 @@ function ScreenshotControl() {
         });
     };
 
-    const createGif = async () => {
+    const createGif = () => {
         if (!activeModel) {
             setLoadingMsg("No model");
             setTimeout(() => setLoadingMsg(""), 2000);
@@ -66,7 +66,7 @@ function ScreenshotControl() {
 
             setLoadingMsg(`Creating gif from ${frames.length} frames...`);
             const { frameRate } = screenshot.settings;
-            const { makeGif } = await import("./makeGif");
+            const { makeGif } = await import("@/helper/makeGif");
             const gif = await makeGif({
                 frames,
                 width: viewer.viewport.width,
@@ -75,7 +75,8 @@ function ScreenshotControl() {
             });
 
             setLoadingMsg("Finished");
-            const { fileName } = screenshot.settings;
+            const fileName =
+                activeModel.userData.name ?? activeModel.id ?? "ani";
             saveAs(gif, `${fileName}.gif`);
             setTimeout(() => setLoadingMsg(""), 1000);
         });

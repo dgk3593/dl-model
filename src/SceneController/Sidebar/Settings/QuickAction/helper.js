@@ -1,4 +1,6 @@
 import { createZip } from "@/dl-viewer/utils/createZip";
+import { useActiveModel, useAppState } from "@/state";
+import viewer from "@/viewer";
 import { saveAs } from "file-saver";
 
 function makeRequest(method, url) {
@@ -54,4 +56,41 @@ export const downloadModel = async id => {
     });
     const zip = await createZip(list);
     saveAs(zip, `${id}.zip`);
+};
+
+export const quickGif = () => {
+    const { activeModel } = useActiveModel.getState();
+    const { setLoadingMsg } = useAppState.getState();
+    const { screenshot } = viewer;
+    if (!activeModel) {
+        setLoadingMsg("No model");
+        setTimeout(() => setLoadingMsg(""), 2000);
+        return;
+    }
+
+    setLoadingMsg("Generating frames...");
+    setTimeout(async () => {
+        const frames = screenshot.getAllFrames(activeModel);
+
+        if (!frames) {
+            setLoadingMsg("Invalid animation");
+            setTimeout(() => setLoadingMsg(""), 2000);
+            return;
+        }
+
+        setLoadingMsg(`Creating gif from ${frames.length} frames...`);
+        const { frameRate } = screenshot.settings;
+        const { makeGif } = await import("@/helper/makeGif");
+        const gif = await makeGif({
+            frames,
+            width: viewer.viewport.width,
+            height: viewer.viewport.height,
+            delay: Math.ceil(1000 / frameRate),
+        });
+
+        setLoadingMsg("Finished");
+        const fileName = activeModel.userData.name ?? activeModel.id ?? "ani";
+        saveAs(gif, `${fileName}.gif`);
+        setTimeout(() => setLoadingMsg(""), 1000);
+    });
 };

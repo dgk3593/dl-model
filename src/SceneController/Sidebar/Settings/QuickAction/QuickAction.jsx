@@ -6,11 +6,12 @@ import {
     Camera as CameraIcon,
     FiberManualRecord as RecordIcon,
     Download,
+    Gif,
 } from "@mui/icons-material";
 
 import viewer from "@/viewer";
 import "./QuickAction.css";
-import { downloadModel } from "./helper";
+import { downloadModel, quickGif } from "./helper";
 
 function QuickAction() {
     const { activeModel } = useActiveModel();
@@ -50,6 +51,10 @@ function QuickAction() {
 
             <IconButton title="Get Screenshot" onClick={takeScreenshot}>
                 <CameraIcon />
+            </IconButton>
+
+            <IconButton title="Create GIF" onClick={quickGif}>
+                <Gif />
             </IconButton>
 
             {record && (

@@ -1,0 +1,1 @@
+export { makeGif } from "./makeGif";

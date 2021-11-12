@@ -27,6 +27,10 @@
     background-color: white;
 }
 
+.SettingGroup button + button {
+    margin-top: 0.3rem;
+}
+
 .SettingGroup button svg {
     color: #101010;
 }
