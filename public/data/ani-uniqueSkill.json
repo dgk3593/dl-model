@@ -485,6 +485,25 @@
                 "name": "Imperial Castling",
                 "code": "KAT_SKL_02_01_11039501",
                 "icon": "Icon_Skill_281"
+            },
+            {
+                "user": "c110398_01",
+                "name": "Thunder Strike",
+                "code": "KAT_SKL_01_01_11039801",
+                "icon": "Icon_Skill_025"
+            },
+            {
+                "user": "c110398_01",
+                "name": "Spark Ignition",
+                "code": "KAT_SKL_02_01_11039801>KAT_SKL_02_02_11039801>KAT_SKL_02_03_11039801",
+                "icon": "Icon_Skill_053"
+            },
+            {
+                "user": "c110398_01",
+                "name": "Spark Ignition",
+                "subtitle": "Counter",
+                "code": "KAT_SKL_02_01_11039801>KAT_SKL_02_02_11039801>KAT_SKL_02_04_11039801",
+                "icon": "Icon_Skill_053"
             }
         ],
         "Dagger": [

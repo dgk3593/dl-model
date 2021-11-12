@@ -1,20 +1,12 @@
 {
     "data": [
         {
-            "id": "c100032_07",
-            "name": "Halloween Laxi",
-            "title": "Mischievous Android",
+            "id": "c110398_01",
+            "name": "Humanoid Jupiter",
+            "title": "Capricious Luminary",
             "rarity": "5",
             "element": "Light",
-            "weapon": "Manacaster"
-        },
-        {
-            "id": "c110318_02",
-            "name": "Halloween Sylas",
-            "title": "Enchanting Aromatherapist",
-            "rarity": "5",
-            "element": "Shadow",
-            "weapon": "Bow"
+            "weapon": "Blade"
         },
         {
             "id": "c110341_01",
@@ -473,6 +465,14 @@
             "weapon": "Lance"
         },
         {
+            "id": "c100032_07",
+            "name": "Halloween Laxi",
+            "title": "Mischievous Android",
+            "rarity": "5",
+            "element": "Light",
+            "weapon": "Manacaster"
+        },
+        {
             "id": "c110270_02",
             "name": "Halloween Melsa",
             "title": "Spirited Corpse",
@@ -487,6 +487,14 @@
             "rarity": "5",
             "element": "Flame",
             "weapon": "Axe"
+        },
+        {
+            "id": "c110318_02",
+            "name": "Halloween Sylas",
+            "title": "Enchanting Aromatherapist",
+            "rarity": "5",
+            "element": "Shadow",
+            "weapon": "Bow"
         },
         {
             "id": "c100019_02",

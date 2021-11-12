@@ -6278,8 +6278,27 @@
             }
         ],
         "d210163_01": [
-            { "name": "Idle", "code": "D21016303_000_01" },
-            { "name": "Move Forward", "code": "D21016303_002_01" },
+            { "name": "Dragon's Roost", "code": "DC_d210163_01_90_01" },
+            { "name": "Receive Gift", "code": "DC_d210163_01_90_04" },
+            {
+                "name": "Summon",
+                "code": "SMN_DRG_210163_01_APPEAR_01>SMN_DRG_210163_01_LOOP_01"
+            },
+            { "name": "Idle", "code": "D21016301_000_01" },
+            { "name": "Move Forward", "code": "D21016301_002_01" },
+            { "name": "Move Forward (Fast)", "code": "D21016301_003_01" },
+            { "name": "Brake", "code": "D21016301_004_01" },
+            { "name": "Dash Forward", "code": "D21016301_020_01" },
+            { "name": "Transform", "code": "D21016301_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21016301_040_01>D21016301_040_02>D21016301_040_03&dur=5>D21016301_041_01&dur=50>D21016301_042_01"
+            },
+            {
+                "name": "Angelic Blaze",
+                "code": "D21016301_060_01",
+                "icon": "Icon_Skill_020"
+            },
             {
                 "name": "Satan Raid Assist",
                 "code": "d21016301_03_01>d21016301_03_02",
