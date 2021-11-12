@@ -30,7 +30,10 @@ export const makeGif = ({
             img.src = frame;
             gif.addFrame(img, { delay });
         });
-        gif.on("finished", resolve);
+        gif.on("finished", blob => {
+            gif.freeWorkers.forEach(w => w.terminate());
+            resolve(blob);
+        });
         gif.render();
         console.log(`Rendering gif from ${gif.frames.length} frames`);
     });

@@ -64,7 +64,7 @@ function ScreenshotControl() {
                 return;
             }
 
-            setLoadingMsg("Creating gif...");
+            setLoadingMsg(`Creating gif from ${frames.length} frames...`);
             const { frameRate } = screenshot.settings;
             const { makeGif } = await import("./makeGif");
             const gif = await makeGif({
