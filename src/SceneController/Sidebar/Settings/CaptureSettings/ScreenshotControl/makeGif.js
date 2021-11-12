@@ -21,8 +21,8 @@ export const makeGif = ({
             workers: 2,
             quality: 10,
             repeat: 0,
-            width: width,
-            height: height,
+            width,
+            height,
             transparent: "#00000000",
         });
         frames.forEach(frame => {
@@ -32,4 +32,5 @@ export const makeGif = ({
         });
         gif.on("finished", resolve);
         gif.render();
+        console.log(`Rendering gif from ${gif.frames.length} frames`);
     });
