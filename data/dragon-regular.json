@@ -1,11 +1,11 @@
 {
     "data": [
         {
-            "id": "d210164_01",
-            "name": "Gala Chronos Nyx",
-            "title": "Sovereign of Time",
+            "id": "d210163_01",
+            "name": "Uriel",
+            "title": "Angel of Judgment",
             "rarity": "5",
-            "element": "Light"
+            "element": "Flame"
         },
         {
             "id": "d210117_01",
@@ -188,6 +188,13 @@
             "title": "Capricious Feline",
             "rarity": "5",
             "element": "Shadow"
+        },
+        {
+            "id": "d210164_01",
+            "name": "Gala Chronos Nyx",
+            "title": "Sovereign of Time",
+            "rarity": "5",
+            "element": "Light"
         },
         {
             "id": "d200009_01",
@@ -643,13 +650,6 @@
             "title": "Ravishing Rakshesha",
             "rarity": "5",
             "element": "Light"
-        },
-        {
-            "id": "d210163_01",
-            "name": "Uriel",
-            "title": "",
-            "rarity": "5",
-            "element": "Flame"
         },
         {
             "id": "d210098_01",
