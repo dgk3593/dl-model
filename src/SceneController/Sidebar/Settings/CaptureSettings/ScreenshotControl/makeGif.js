@@ -1,5 +1,12 @@
 import "./gif";
 
+const createImg = dataUrl =>
+    new Promise(resolve => {
+        const img = new Image();
+        img.src = dataUrl;
+        img.onload = () => resolve(img);
+    });
+
 /**
  *
  * @param {object} params
@@ -15,7 +22,7 @@ export const makeGif = ({
     height = window.innerHeight,
     delay = 30,
 }) =>
-    new Promise(resolve => {
+    new Promise(async resolve => {
         const gif = new GIF({
             workerScript: "assets/gif.worker.js",
             workers: 2,
@@ -25,11 +32,10 @@ export const makeGif = ({
             height,
             transparent: "#00000000",
         });
-        frames.forEach(frame => {
-            const img = new Image();
-            img.src = frame;
+        for (let i = 0; i < frames.length; i++) {
+            const img = await createImg(frames[i]);
             gif.addFrame(img, { delay });
-        });
+        }
         gif.on("finished", blob => {
             gif.freeWorkers.forEach(w => w.terminate());
             resolve(blob);

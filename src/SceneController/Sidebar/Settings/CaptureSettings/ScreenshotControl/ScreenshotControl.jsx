@@ -104,11 +104,11 @@ function ScreenshotControl() {
                 </Button>
 
                 <Button
-                    title="Create GIF (Experimental)"
+                    title="Create GIF"
                     startIcon={<Gif />}
                     onClick={createGif}
                 >
-                    Create GIF (Buggy)
+                    Create GIF
                 </Button>
             </>
         </Accordion>
