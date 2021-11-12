@@ -27,12 +27,10 @@ const processor = {
 };
 
 addEventListener("message", ({ data }) => {
-    const output = dataList
-        .map(group => {
-            const groupData = data[group];
-            return processor[group]?.(groupData) ?? processSimpleAni(groupData);
-        })
-        .flat();
+    const output = dataList.flatMap(group => {
+        const groupData = data[group];
+        return processor[group]?.(groupData) ?? processSimpleAni(groupData);
+    });
 
     postMessage(output);
 });

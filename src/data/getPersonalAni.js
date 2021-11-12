@@ -26,15 +26,13 @@ export const getDefaultAni = id =>
 
 export const processPersonalAni = async () => {
     const id2Name = await getIdNameMap();
-    const dbData = Object.entries(dataMap)
-        .map(([user, aniList]) => {
-            const userName = id2Name.get(user);
-            return aniList.map(ani => ({
-                ...ani,
-                user,
-                fullName: `${userName} ${ani.name}`,
-            }));
-        })
-        .flat();
+    const dbData = Object.entries(dataMap).flatMap(([user, aniList]) => {
+        const userName = id2Name.get(user);
+        return aniList.map(ani => ({
+            ...ani,
+            user,
+            fullName: `${userName} ${ani.name}`,
+        }));
+    });
     await putItems(dbData, "animation");
 };

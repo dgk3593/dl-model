@@ -34,15 +34,13 @@ export const processHomeAni = data => {
 };
 
 export const processWeaponAni = data => {
-    const output = Object.entries(data)
-        .map(([type, aniList]) =>
-            aniList.map(ani => ({
-                ...ani,
-                fullName: `${type} ${ani.name}`,
-                icon: `weapon_${type}`,
-            }))
-        )
-        .flat();
+    const output = Object.entries(data).flatMap(([type, aniList]) =>
+        aniList.map(ani => ({
+            ...ani,
+            fullName: `${type} ${ani.name}`,
+            icon: `weapon_${type}`,
+        }))
+    );
 
     return output;
 };
@@ -53,15 +51,13 @@ export const gunMode = {
     Rapid: "Rapid Fire",
 };
 export const processGunAni = data => {
-    const output = Object.entries(data)
-        .map(([type, aniList]) =>
-            aniList.map(ani => ({
-                ...ani,
-                fullName: `${gunMode[type]} Manacaster ${ani.name}`,
-                icon: `gun_${type}`,
-            }))
-        )
-        .flat();
+    const output = Object.entries(data).flatMap(([type, aniList]) =>
+        aniList.map(ani => ({
+            ...ani,
+            fullName: `${gunMode[type]} Manacaster ${ani.name}`,
+            icon: `gun_${type}`,
+        }))
+    );
 
     return output;
 };
@@ -115,14 +111,13 @@ export const processSkill = data => {
 export const processOtherUnique = data => {
     const output = Object.values(data)
         .flat()
-        .map(({ user, name, animations }) =>
+        .flatMap(({ user, name, animations }) =>
             animations.map(ani => ({
                 ...ani,
                 user,
                 fullName: `${name} ${ani.name}`,
             }))
-        )
-        .flat();
+        );
     return output;
 };
 

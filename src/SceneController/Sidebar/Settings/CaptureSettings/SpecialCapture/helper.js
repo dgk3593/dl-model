@@ -132,9 +132,9 @@ const getPointCount = mesh => {
  */
 const getPointCounts = model => {
     const modelMeshes = model.meshes.visible;
-    const attachmentMeshes = model.attachment.list
-        .map(a => a.meshes.visible)
-        .flat();
+    const attachmentMeshes = model.attachment.list.flatMap(
+        a => a.meshes.visible
+    );
     return [...modelMeshes, ...attachmentMeshes].map(getPointCount);
 };
 

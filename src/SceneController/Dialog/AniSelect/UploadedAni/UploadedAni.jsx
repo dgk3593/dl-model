@@ -25,7 +25,7 @@ function UploadedAni({ onSelect }) {
         const list = Array.from(files);
         const urls = await Promise.all(list.map(file2DataURL));
         const models = await Promise.all(urls.map(loadModel));
-        const newAni = models.map(model => model.animations).flat();
+        const newAni = models.flatMap(model => model.animations);
         userData.ani.push(...newAni);
     };
 
