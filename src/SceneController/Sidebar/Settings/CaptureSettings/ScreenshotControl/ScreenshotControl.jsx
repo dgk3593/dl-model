@@ -3,10 +3,10 @@ import { useActiveModel, useAppState } from "@/state";
 import Accordion from "components/Accordion";
 import { Button } from "@mui/material";
 import Setters from "components/Setters";
-import { Camera as CameraIcon, Download } from "@mui/icons-material";
+import { Camera as CameraIcon, Download, Gif } from "@mui/icons-material";
 
 import viewer from "@/viewer";
-import { basic, allFrames } from "./props";
+import { props } from "./props";
 import { saveAs } from "file-saver";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 
@@ -23,7 +23,7 @@ function ScreenshotControl() {
 
     const getAllFrames = () => {
         if (!activeModel) {
-            setLoadingMsg("no model");
+            setLoadingMsg("No model");
             setTimeout(() => setLoadingMsg(""), 2000);
             return;
         }
@@ -47,10 +47,44 @@ function ScreenshotControl() {
         });
     };
 
+    const createGif = async () => {
+        if (!activeModel) {
+            setLoadingMsg("No model");
+            setTimeout(() => setLoadingMsg(""), 2000);
+            return;
+        }
+
+        setLoadingMsg("Generating frames...");
+        setTimeout(async () => {
+            const frames = screenshot.getAllFrames(activeModel);
+
+            if (!frames) {
+                setLoadingMsg("Invalid animation");
+                setTimeout(() => setLoadingMsg(""), 2000);
+                return;
+            }
+
+            setLoadingMsg("Creating gif...");
+            const { frameRate } = screenshot.settings;
+            const { makeGif } = await import("./makeGif");
+            const gif = await makeGif({
+                frames,
+                width: viewer.viewport.width,
+                height: viewer.viewport.height,
+                delay: Math.ceil(1000 / frameRate),
+            });
+
+            setLoadingMsg("Finished");
+            const { fileName } = screenshot.settings;
+            saveAs(gif, `${fileName}.gif`);
+            setTimeout(() => setLoadingMsg(""), 1000);
+        });
+    };
+
     return (
         <Accordion className="SettingGroup">
             <>
-                <div>Screenshot</div>
+                <div>Screenshot / GIF</div>
                 <Button
                     onClick={takeScreenshot}
                     title="Take screenshot"
@@ -60,27 +94,22 @@ function ScreenshotControl() {
                 </Button>
             </>
             <>
-                <Setters target={screenshot.settings} propList={basic} />
+                <Setters target={screenshot.settings} propList={props} />
+                <Button
+                    onClick={getAllFrames}
+                    title="Get all frames as zip"
+                    startIcon={<Download />}
+                >
+                    Get All Frames
+                </Button>
 
-                <Accordion disableGutters className="SettingGroup-extra">
-                    <>Capture All Frames</>
-                    <>
-                        <div className="SettingGroup-grid">
-                            <Setters
-                                target={screenshot.settings}
-                                propList={allFrames}
-                            />
-                        </div>
-
-                        <Button
-                            onClick={getAllFrames}
-                            title="Get all frames as zip"
-                            startIcon={<Download />}
-                        >
-                            Get All Frames
-                        </Button>
-                    </>
-                </Accordion>
+                <Button
+                    title="Create GIF (Experimental)"
+                    startIcon={<Gif />}
+                    onClick={createGif}
+                >
+                    Create GIF (Buggy)
+                </Button>
             </>
         </Accordion>
     );

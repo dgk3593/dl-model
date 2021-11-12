@@ -1,7 +1,7 @@
 /**
  * @type {import("components/Setters/Setters").PropDetails[]}
  */
-export const basic = [
+export const props = [
     {
         propName: "fileName",
         label: "File Name",
@@ -13,18 +13,13 @@ export const basic = [
         label: "Remove BG",
         type: "boolean",
     },
-];
-
-/**
- * @type {import("components/Setters/Setters").PropDetails[]}
- */
-export const allFrames = [
     {
         propName: "frameRate",
         label: "Frame Rate",
         type: "number",
         fullWidth: true,
         min: 1,
+        max: 120,
         step: 10,
     },
 ];
