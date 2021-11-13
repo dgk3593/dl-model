@@ -6,6 +6,7 @@ import SetWithSlider from "./SetWithSlider";
  * @typedef {{
  *      propName: string,
  *      label?: string,
+ *      title?: string,
  *      type: 'string' | 'number' | 'boolean' | 'slider' | 'color' | 'select' | 'vector',
  *      onBeforeChange?: (newValue: *) => void,
  *      onChange?: (newValue: *) => void,
@@ -19,7 +20,7 @@ import SetWithSlider from "./SetWithSlider";
  */
 function Setters({ target, propList }) {
     const setters = propList.map(prop => {
-        const { propName, label = propName, type, ...others } = prop;
+        const { propName, label = propName, title, type, ...others } = prop;
         const Setter = setterMap[type];
 
         switch (type) {
@@ -29,13 +30,16 @@ function Setters({ target, propList }) {
                         target={target}
                         propName={propName}
                         label={label}
+                        title={title}
                         {...others}
                     />
                 );
             case "vector":
                 return (
                     <>
-                        <div className="Setters-label vector">{label}</div>
+                        <div className="Setters-label vector" {...title}>
+                            {label}
+                        </div>
                         <SetVector target={target[propName]} {...others} />
                     </>
                 );
@@ -43,7 +47,9 @@ function Setters({ target, propList }) {
             default:
                 return (
                     <>
-                        <div className="Setters-label">{label}</div>
+                        <div className="Setters-label" {...title}>
+                            {label}
+                        </div>
                         <Setter
                             target={target}
                             propName={propName}

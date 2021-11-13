@@ -7,6 +7,7 @@ import "./SetWithSlider.css";
  * @param {object} props.target
  * @param {string} props.propName
  * @param {string} [props.label]
+ * @param {string} [props.title]
  * @param {(currentValue: number) => string} [props.valueMap]
  * @param {number} [props.min]
  * @param {number} [props.max]
@@ -19,6 +20,7 @@ function SetWithSlider({
     target,
     propName,
     label = propName,
+    title,
     valueMap = String,
     min = 0,
     max = 1,
@@ -40,7 +42,9 @@ function SetWithSlider({
 
     return (
         <>
-            <div className="Setters-label">{fullLabel}</div>
+            <div className="Setters-label" {...title}>
+                {fullLabel}
+            </div>
             <div className="Setters-slider">
                 <Slider
                     size="small"
