@@ -28,7 +28,7 @@ const components = {
 
 const styles = {
     ModeSelect: {
-        backgroundColor: "#10101078",
+        backgroundColor: "#101010",
         color: "#eee",
         display: "flex",
         alignItems: "center",
@@ -37,6 +37,9 @@ const styles = {
         gap: "2rem",
         marginBottom: "0.3rem",
         cursor: "default",
+        position: "sticky",
+        top: "7.75rem",
+        zIndex: "6",
     },
 };
 
