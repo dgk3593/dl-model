@@ -7,4 +7,5 @@
     align-self: stretch;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }

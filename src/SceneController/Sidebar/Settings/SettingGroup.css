@@ -21,14 +21,11 @@
     border-radius: 0.3rem;
     background-color: #ccc;
     color: #101010;
+    margin: 0.1rem;
 }
 
 .SettingGroup button:not(.ColorButton):hover {
     background-color: white;
-}
-
-.SettingGroup button + button {
-    margin-top: 0.3rem;
 }
 
 .SettingGroup button svg {

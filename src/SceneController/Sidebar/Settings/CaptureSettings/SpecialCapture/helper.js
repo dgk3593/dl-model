@@ -1,67 +1,20 @@
 import { useAppState, useActiveModel } from "@/state";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 import { saveAs } from "file-saver";
-
 import viewer from "@/viewer";
 
 const { setLoadingMsg } = useAppState.getState();
 
-export const programs = [
-    {
-        value: "rotate",
-        label: "Rotate",
-        frames: getRotateFrames,
-        clip: getRotateClip,
-    },
-    {
-        value: "speedDraw",
-        label: "Speed Draw",
-        frames: getSpeedDrawFrames,
-        clip: getSpeedDrawClip,
-    },
-];
-
-function getRotateFrames() {
+/**
+ * get frames function
+ * @param {()=> Promise<Array<string>>} getFrames
+ * @return {() => void}
+ */
+const downloadFrames = getFrames => () => {
     setLoadingMsg("Generating frames...");
     setTimeout(async () => {
-        const { frameRate = 30, duration = 5 } =
-            viewer.userData.specialCapture ?? {};
+        const frames = await getFrames();
 
-        let tmp = viewer.scene.background;
-        viewer.scene.background = null;
-
-        const { sqrt, sin, cos, atan, PI } = Math;
-        let { x, y, z } = viewer.camera.position;
-        const { x: xT, z: zT } = viewer.controls.target;
-        const r = sqrt((x - xT) ** 2 + (z - zT) ** 2);
-        if (r === 0) {
-            setLoadingMsg("Invalid camera settings");
-            setTimeout(() => setLoadingMsg(""), 1000);
-            return;
-        }
-
-        const nFrames = duration * frameRate;
-        const dphi = (2 * PI) / nFrames;
-        const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
-        const frames = [];
-
-        let phi = phi0;
-        for (let i = 0; i < nFrames; i++) {
-            viewer.update(1 / frameRate);
-
-            x = xT + r * sin(phi);
-            z = zT + r * cos(phi);
-            viewer.camera.position.set(x, y, z);
-            viewer.controls.update();
-
-            viewer.render();
-            const frame = viewer.canvas.toDataURL();
-            frames.push(frame);
-
-            phi += dphi;
-        }
-
-        viewer.scene.background = tmp;
         setLoadingMsg("Creating zip...");
         const fileName = "frames";
         const zip = await pngUrlToZip(frames, fileName);
@@ -70,6 +23,91 @@ function getRotateFrames() {
         saveAs(zip, `${fileName}.zip`);
         setTimeout(() => setLoadingMsg(""), 1000);
     });
+};
+
+/**
+ * get frames function
+ * @param {()=> Promise<Array<string>>} getFrames
+ * @return {() => void}
+ */
+const getGif = getFrames => async () => {
+    setLoadingMsg("Generating frames...");
+    const { frameRate } = viewer.screenshot.settings;
+    setTimeout(async () => {
+        const frames = await getFrames();
+
+        setLoadingMsg("Creating gif...");
+        const { makeGif } = await import("@/helper/makeGif");
+        const gif = await makeGif({
+            frames,
+            width: viewer.viewport.width,
+            height: viewer.viewport.height,
+            delay: Math.ceil(1000 / frameRate),
+        });
+
+        setLoadingMsg("Finished");
+        saveAs(gif, "spCapture.gif");
+        setTimeout(() => setLoadingMsg(""), 1000);
+    });
+};
+
+export const programs = [
+    {
+        value: "rotate",
+        label: "Rotate",
+        frames: downloadFrames(getRotateFrames),
+        gif: getGif(getRotateFrames),
+        clip: getRotateClip,
+    },
+    {
+        value: "speedDraw",
+        label: "Speed Draw",
+        frames: downloadFrames(getSpeedDrawFrames),
+        gif: getGif(getSpeedDrawFrames),
+        clip: getSpeedDrawClip,
+    },
+];
+
+async function getRotateFrames() {
+    const { frameRate = 30, duration = 5 } =
+        viewer.userData.specialCapture ?? {};
+
+    let tmp = viewer.scene.background;
+    viewer.scene.background = null;
+
+    const { sqrt, sin, cos, atan, PI } = Math;
+    let { x, y, z } = viewer.camera.position;
+    const { x: xT, z: zT } = viewer.controls.target;
+    const r = sqrt((x - xT) ** 2 + (z - zT) ** 2);
+    if (r === 0) {
+        setLoadingMsg("Invalid camera settings");
+        setTimeout(() => setLoadingMsg(""), 1000);
+        return;
+    }
+
+    const nFrames = duration * frameRate;
+    const dphi = (2 * PI) / nFrames;
+    const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
+    const frames = [];
+
+    let phi = phi0;
+    for (let i = 0; i < nFrames; i++) {
+        viewer.update(1 / frameRate);
+
+        x = xT + r * sin(phi);
+        z = zT + r * cos(phi);
+        viewer.camera.position.set(x, y, z);
+        viewer.controls.update();
+
+        viewer.render();
+        const frame = viewer.canvas.toDataURL();
+        frames.push(frame);
+
+        phi += dphi;
+    }
+
+    viewer.scene.background = tmp;
+    return frames;
 }
 
 function getRotateClip() {
@@ -138,9 +176,8 @@ const getPointCounts = model => {
     return [...modelMeshes, ...attachmentMeshes].map(getPointCount);
 };
 
-function getSpeedDrawFrames() {
+async function getSpeedDrawFrames() {
     const model = useActiveModel.getState().activeModel;
-    setLoadingMsg("Generating frames...");
     const list = getPointCounts(model).sort((a, b) => b.count - a.count);
     const count = list.map(({ count }) => count);
     const threshold = count.map((_, i) =>
@@ -149,46 +186,38 @@ function getSpeedDrawFrames() {
     threshold.unshift(0);
     const totalPoints = threshold.at(-1);
 
-    setTimeout(async () => {
-        const { frameRate = 30, duration = 5 } =
-            viewer.userData.specialCapture ?? {};
+    const { frameRate = 30, duration = 5 } =
+        viewer.userData.specialCapture ?? {};
 
-        let tmp = viewer.scene.background;
-        viewer.scene.background = null;
+    let tmp = viewer.scene.background;
+    viewer.scene.background = null;
 
-        const nFrames = duration * frameRate;
-        const frames = [];
-        let meshIndex = 0,
-            currentPoints = 0;
-        list.forEach(({ geometry }) => (geometry.drawRange.count = 0));
+    const nFrames = duration * frameRate;
+    const frames = [];
+    let meshIndex = 0,
+        currentPoints = 0;
+    list.forEach(({ geometry }) => (geometry.drawRange.count = 0));
 
-        for (let i = 0; i <= nFrames; i++) {
-            model.update(1 / frameRate);
+    for (let i = 0; i <= nFrames; i++) {
+        model.update(1 / frameRate);
 
-            currentPoints = Math.ceil((totalPoints * i) / nFrames);
-            list[meshIndex].geometry.drawRange.count =
-                currentPoints - threshold[meshIndex];
+        currentPoints = Math.ceil((totalPoints * i) / nFrames);
+        list[meshIndex].geometry.drawRange.count =
+            currentPoints - threshold[meshIndex];
 
-            const overshoot = currentPoints - threshold[meshIndex + 1];
-            if (overshoot >= 0) {
-                list[meshIndex++].geometry.drawRange.count = Infinity;
-                if (meshIndex < list.length)
-                    list[meshIndex].geometry.drawRange.count = overshoot;
-            }
-
-            viewer.render();
-            const frame = viewer.canvas.toDataURL();
-            frames.push(frame);
+        const overshoot = currentPoints - threshold[meshIndex + 1];
+        if (overshoot >= 0) {
+            list[meshIndex++].geometry.drawRange.count = Infinity;
+            if (meshIndex < list.length)
+                list[meshIndex].geometry.drawRange.count = overshoot;
         }
-        viewer.scene.background = tmp;
-        setLoadingMsg("Creating zip...");
-        const fileName = "frames";
-        const zip = await pngUrlToZip(frames, fileName);
 
-        setLoadingMsg("Finished");
-        saveAs(zip, `${fileName}.zip`);
-        setTimeout(() => setLoadingMsg(""), 1000);
-    });
+        viewer.render();
+        const frame = viewer.canvas.toDataURL();
+        frames.push(frame);
+    }
+    viewer.scene.background = tmp;
+    return frames;
 }
 
 function getSpeedDrawClip() {

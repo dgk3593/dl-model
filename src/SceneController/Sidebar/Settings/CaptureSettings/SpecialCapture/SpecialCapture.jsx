@@ -1,7 +1,11 @@
 import Accordion from "components/Accordion";
 import Setters from "components/Setters";
 import { Button } from "@mui/material";
-import { Download, FiberManualRecord as RecordIcon } from "@mui/icons-material";
+import {
+    Download,
+    FiberManualRecord as RecordIcon,
+    Gif,
+} from "@mui/icons-material";
 
 import { commonProps } from "./props";
 import { programs } from "./helper";
@@ -34,6 +38,14 @@ function SpecialCapture() {
                         startIcon={<Download />}
                     >
                         Get Frames
+                    </Button>
+                    <Button
+                        data-type="gif"
+                        onClick={handleCapture}
+                        title="Download as GIF"
+                        startIcon={<Gif />}
+                    >
+                        Get GIF
                     </Button>
                     {viewer.record && (
                         <Button
