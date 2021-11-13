@@ -2,6 +2,7 @@
 import { DLViewer } from "./dl-viewer";
 import fscreen from "fscreen";
 import { batchDownloadPNG } from "./dl-viewer/utils/downloader";
+import { saveAs } from "file-saver";
 
 const viewer = new DLViewer();
 viewer.initData();
@@ -17,10 +18,16 @@ viewer.canvas.addEventListener("dblclick", toggleFullScreen);
 
 export default viewer;
 
+// for console / bookmarklet
 window.viewer = viewer;
 window.model = viewer.model;
 window.getFrame = viewer.screenshot.getFrame;
 window.downloadFrames = batchDownloadPNG;
+window.saveAs = saveAs;
+window.makeGif = async params => {
+    const { makeGif } = await import("./helper/makeGif");
+    return await makeGif(params);
+};
 
 function toggleFullScreen() {
     if (!fscreen.fullscreenEnabled) return;
