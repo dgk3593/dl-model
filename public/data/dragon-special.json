@@ -20,6 +20,21 @@
             "element": "Wind"
         },
         {
+            "id": "d210104_01",
+            "name": "Gala Mym Brunhilda",
+            "element": "Flame"
+        },
+        {
+            "id": "d210174_01",
+            "name": "Jupiter (Humanoid)",
+            "element": "Light"
+        },
+        {
+            "id": "d210160_01",
+            "name": "Mercury (Humanoid)",
+            "element": "Water"
+        },
+        {
             "id": "d200001_01",
             "name": "Elysium"
         },

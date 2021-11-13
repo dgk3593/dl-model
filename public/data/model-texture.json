@@ -5080,6 +5080,18 @@
         "r0140001": [
             { "label": "Normal", "value": ">r0140001_01" },
             { "label": "Overdrive", "value": ">r0140001_02" }
+        ],
+        "d210104_01": [
+            { "label": "Brunhilda", "value": "d210104_01" },
+            { "label": "High Brunhilda", "value": ">d210104_02" }
+        ],
+        "d210160_01": [
+            { "label": "Mercury", "value": "d210160_01" },
+            { "label": "High Mercury", "value": ">d210160_02" }
+        ],
+        "d210174_01": [
+            { "label": "Jupiter", "value": "d210174_01" },
+            { "label": "High Jupiter", "value": ">d210174_02" }
         ]
     }
 }
