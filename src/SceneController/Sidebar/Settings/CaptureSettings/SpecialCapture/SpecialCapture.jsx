@@ -52,6 +52,7 @@ function SpecialCapture() {
                             data-type="clip"
                             onClick={handleCapture}
                             startIcon={<RecordIcon />}
+                            title="Record Clip"
                         >
                             Get Clip
                         </Button>
