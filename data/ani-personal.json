@@ -2882,8 +2882,17 @@
             }
         ],
         "d210104_01": [
-            { "name": "Dragon's Roost", "code": "DC_d210002_01_90_01" },
-            { "name": "Receive Gift", "code": "DC_d210002_01_90_04" },
+            { "name": "Idle", "code": "D21000201_000_01" },
+            { "name": "Walk", "code": "D21000201_002_01" },
+            { "name": "Run", "code": "D21000201_003_01" },
+            { "name": "Brake", "code": "D21000201_004_01" },
+            { "name": "Dash Forward", "code": "D21000201_020_01" },
+            { "name": "Jump Backward", "code": "D21000201_021_01" },
+            { "name": "Transform", "code": "D21000201_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21000201_040_01&dur=40>D21000201_041_01&dur=50>D21000201_042_01"
+            },
             {
                 "name": "Infernal Ray",
                 "code": "D21010401_60_01",
@@ -6377,6 +6386,40 @@
             {
                 "name": "Uppercut",
                 "code": "H0130101_100_01>H0130101_100_02>H0130101_100_03>H0130101_100_04>H0130101_100_05"
+            }
+        ],
+        "d210160_01": [
+            { "name": "Idle", "code": "D21000301_000_01" },
+            { "name": "Walk", "code": "D21000301_002_01" },
+            { "name": "Run", "code": "D21000301_003_01" },
+            { "name": "Brake", "code": "D21000301_004_01" },
+            { "name": "Dash Forward", "code": "D21000301_020_01" },
+            { "name": "Transform", "code": "D21000301_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21000301_040_01&dur=40>D21000301_041_01&dur=50>D21000301_042_01"
+            },
+            {
+                "name": "Aqua Spiral",
+                "code": "D21004001_107_01>D21004001_107_02>D21004001_107_03",
+                "icon": "Icon_Skill_018"
+            }
+        ],
+        "d210174_01": [
+            { "name": "Idle", "code": "D21000401_000_01" },
+            { "name": "Run", "code": "D21000401_002_01" },
+            { "name": "Run Fast", "code": "D21005001_003_01" },
+            { "name": "Brake", "code": "D21000401_004_01" },
+            { "name": "Dash Forward", "code": "D21000401_020_01" },
+            { "name": "Transform", "code": "D21000401_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21000401_040_01&dur=40>D21000401_041_01&dur=50>D21000401_042_01"
+            },
+            {
+                "name": "Lightning Rood",
+                "code": "D21000401_061_01",
+                "icon": "Icon_Skill_018"
             }
         ]
     }
