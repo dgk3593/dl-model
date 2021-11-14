@@ -105,8 +105,8 @@ function ScreenshotControl() {
                 </Button>
 
                 <Button
-                    title="Create GIF"
-                    startIcon={<Gif />}
+                    title="Create GIF of current animation"
+                    startIcon={<Gif viewBox="4 4 16 16" />}
                     onClick={createGif}
                 >
                     Create GIF

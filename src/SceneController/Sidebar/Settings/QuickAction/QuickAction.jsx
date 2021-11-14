@@ -54,7 +54,7 @@ function QuickAction() {
             </IconButton>
 
             <IconButton title="Create GIF" onClick={quickGif}>
-                <Gif />
+                <Gif fontSize="large" />
             </IconButton>
 
             {record && (
