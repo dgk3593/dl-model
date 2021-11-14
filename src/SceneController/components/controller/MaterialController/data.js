@@ -4,6 +4,7 @@ const matTypes = [
     "Lambert",
     "Phong",
     "Standard",
+    "Physical",
     "Matcap",
 ].map(type => ({ value: type }));
 

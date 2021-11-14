@@ -77,4 +77,26 @@ export const props = [
         type: "select",
         options: matcapList,
     },
+    {
+        propName: "transmission",
+        label: "Transmission",
+        type: "slider",
+        min: 0,
+        max: 1,
+        valueMap: percentageMap,
+    },
+    {
+        propName: "thickness",
+        label: "Thickness",
+        type: "slider",
+        min: 0,
+        max: 10,
+    },
+    {
+        propName: "ior",
+        label: "Index of Refraction",
+        type: "slider",
+        min: 1,
+        max: 2.333,
+    },
 ];

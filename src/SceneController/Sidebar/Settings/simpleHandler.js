@@ -24,6 +24,8 @@ const modelHandler = async (id, name) => {
     const oldModel = useActiveModel.getState().activeModel;
     const newModel = await viewer.loadDLModel(id);
     newModel.userData.name = name;
+    newModel.material.code = oldModel?.material.code ?? "";
+    newModel.outline.code = oldModel?.outline.code ?? "";
     const { parent, parentBone } = oldModel ?? {};
 
     if (oldModel?.type === "adventurer" && newModel.type === "adventurer") {

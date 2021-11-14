@@ -1,12 +1,14 @@
 /**
- * @typedef {"Basic" | "Toon" | "Lambert" | "Phong" | "Standard" | "Matcap"} MaterialType
+ * @typedef {"Basic" | "Toon" | "Lambert" | "Phong" | "Standard" | "Matcap" | "Physical" | "MMDToon"} MaterialType
  *
  * @typedef {THREE.MeshBasicMaterial |
  *           THREE.MeshToonMaterial |
  *           THREE.MeshLambertMaterial |
  *           THREE.MeshPhongMaterial |
  *           THREE.MeshStandardMaterial |
- *           THREE.MeshMatcapMaterial } Material
+ *           THREE.MeshMatcapMaterial |
+ *           THREE.MeshPhysicalMaterial |
+ *           import("./MMDToonMaterial").MMDToonMaterial } Material
  *
  * @typedef {object} MaterialParams
  * @property {string} type

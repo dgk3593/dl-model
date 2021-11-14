@@ -12,6 +12,9 @@ export const otherProps = [
     "shininess",
     "transparent",
     "emissiveIntensity",
+    "transmission",
+    "thickness",
+    "ior",
 ];
 
 export const spProps = [
@@ -49,6 +52,16 @@ const matExtraParams = {
         "metalness",
         "roughness",
         "flatShading",
+    ],
+    Physical: [
+        "emissive",
+        "emissiveIntensity",
+        "metalness",
+        "roughness",
+        "flatShading",
+        "transmission",
+        "thickness",
+        "ior",
     ],
     Matcap: ["flatShading", "matcap"],
     MMDToon: [
@@ -185,6 +198,33 @@ export const matParamsDetails = {
         type: "select",
         default: "matcap_fresnel.jpg",
         valueMap: loadMatcap,
+        toString,
+    },
+    transmission: {
+        name: "Transmission",
+        type: "number",
+        default: 1,
+        min: 0,
+        max: 1,
+        valueMap: parseFloat,
+        toString,
+    },
+    thickness: {
+        name: "Thickness",
+        type: "number",
+        default: 0.01,
+        min: 0,
+        max: 10,
+        valueMap: parseFloat,
+        toString,
+    },
+    ior: {
+        name: "Index-of-refraction",
+        type: "number",
+        default: 1.5,
+        min: 1,
+        max: 2.333,
+        valueMap: parseFloat,
         toString,
     },
 };
