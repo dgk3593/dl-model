@@ -9,8 +9,10 @@ function SelectBox({ options, value, onChange, ...others }) {
             onChange={handleChange}
             {...others}
         >
-            {options.map(({ value, label = value }) => (
-                <MenuItem value={value}>{label}</MenuItem>
+            {options.map(({ value, label = value, title }) => (
+                <MenuItem value={value} {...{ title }}>
+                    {label}
+                </MenuItem>
             ))}
         </Select>
     );

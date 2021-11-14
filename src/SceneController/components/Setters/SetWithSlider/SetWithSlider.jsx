@@ -42,7 +42,7 @@ function SetWithSlider({
 
     return (
         <>
-            <div className="Setters-label" {...title}>
+            <div className="Setters-label" {...{ title }}>
                 {fullLabel}
             </div>
             <div className="Setters-slider">

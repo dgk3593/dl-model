@@ -37,7 +37,7 @@ function Setters({ target, propList }) {
             case "vector":
                 return (
                     <>
-                        <div className="Setters-label vector" {...title}>
+                        <div className="Setters-label vector" {...{ title }}>
                             {label}
                         </div>
                         <SetVector target={target[propName]} {...others} />
@@ -47,7 +47,7 @@ function Setters({ target, propList }) {
             default:
                 return (
                     <>
-                        <div className="Setters-label" {...title}>
+                        <div className="Setters-label" {...{ title }}>
                             {label}
                         </div>
                         <Setter

@@ -18,6 +18,7 @@ export const props = {
         {
             propName: "threshold",
             label: "Threshold",
+            title: "Brightness threshold to start applying effect",
             type: "slider",
             min: 0,
             max: 1,
@@ -26,6 +27,7 @@ export const props = {
         {
             propName: "strength",
             label: "Strength",
+            title: "Strength of the effect",
             type: "slider",
             min: 0,
             max: 2,
@@ -34,6 +36,7 @@ export const props = {
         {
             propName: "radius",
             label: "Radius",
+            title: "Blur radius",
             type: "number",
             step: 0.5,
         },

@@ -1,16 +1,37 @@
-const matTypes = [
-    "Basic",
-    "Toon",
-    "Lambert",
-    "Phong",
-    "Standard",
-    "Physical",
-    "Matcap",
-].map(type => ({ value: type }));
-
 export const allMatTypes = [
-    ...matTypes,
-    { value: "MMDToon", label: "MMD Toon" },
+    {
+        value: "Basic",
+        title: "Most basic, doesn't respond to light",
+    },
+    {
+        value: "Toon",
+        title: "Toon shading, also called cell shading",
+    },
+    {
+        value: "Lambert",
+        title: "For matte or diffusely reflecting surface",
+    },
+    {
+        value: "Phong",
+        title: "For shiny surface",
+    },
+    {
+        value: "Standard",
+        title: "For physically based rendering",
+    },
+    {
+        value: "Physical",
+        title: "For physically based rendering, can simulate transparency like water or glass",
+    },
+    {
+        value: "Matcap",
+        title: "Material capture, doesn't respond to light",
+    },
+    {
+        value: "MMDToon",
+        label: "MMD Toon",
+        title: "Combination of Phong, Toon, and Matcap material",
+    },
 ];
 
 export const gradientMapList = [
