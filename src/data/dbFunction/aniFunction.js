@@ -21,6 +21,10 @@ export const searchAniByName = name =>
         value: name,
     });
 
+/**
+ * @param {string} id
+ * @return {Promise<Array>}
+ */
 export const getAniByUser = id =>
     dbRequest({
         type: "getAllByIndex",

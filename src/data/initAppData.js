@@ -1,13 +1,12 @@
 import { useAppData } from ".";
 import { initModelDB, initAniDB } from "./dbFunction";
 import { fetchDataGroup } from "./fetch";
-import { loadPersonalAni, processPersonalAni } from "./getPersonalAni";
+import { personalAniPromise, processPersonalAni } from "./getPersonalAni";
 
 const setData = useAppData.getState().set;
 const idbAvailable = !!indexedDB;
 
 export const initAppData = async () => {
-    const personalAniPromise = loadPersonalAni();
     const otherDataPromise = fetchDataGroup("others");
     const modelDataPromise = fetchDataGroup("model");
     const aniDataPromise = fetchDataGroup("animation");

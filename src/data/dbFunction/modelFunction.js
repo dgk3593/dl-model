@@ -46,6 +46,7 @@ export const searchModelByName = name =>
         index: "name",
         value: name,
     });
+
 /**
  * @param {string} name
  * @return {Promise<ModelData[]>}

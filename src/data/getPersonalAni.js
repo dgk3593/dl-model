@@ -4,13 +4,15 @@ import { getIdNameMap } from "./dbFunction";
 
 const dataMap = {};
 
-export const loadPersonalAni = async () => {
+const loadPersonalAni = async () => {
     if (Object.keys(dataMap).length) return;
 
     const key = "ani-personal";
     const data = (await fetchDataList([key]))[key];
     Object.assign(dataMap, data);
 };
+
+export const personalAniPromise = loadPersonalAni();
 
 /**
  * @param {string} id
@@ -26,6 +28,7 @@ export const getDefaultAni = id =>
 
 export const processPersonalAni = async () => {
     const id2Name = await getIdNameMap();
+    await personalAniPromise;
     const dbData = Object.entries(dataMap).flatMap(([user, aniList]) => {
         const userName = id2Name.get(user);
         return aniList.map(ani => ({

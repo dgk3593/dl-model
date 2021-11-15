@@ -1,9 +1,11 @@
 import { useRef, useEffect, lazy, Suspense } from "react";
-import { loadPersonalAni } from "./data/getPersonalAni";
-import { loadHash } from "./helper/loadHash";
 import { useIsMount } from "./SceneController/hook";
 import { useAppState } from "./state";
+
+import { personalAniPromise } from "./data/getPersonalAni";
+import { loadHash } from "./helper/loadHash";
 import viewer from "./viewer";
+
 const SceneController = lazy(() => import("./SceneController"));
 const TimeControl = lazy(() => import("./TimeControl"));
 
@@ -22,7 +24,7 @@ export function App() {
         useAppState();
 
     useEffect(() => {
-        isMount && loadPersonalAni().then(loadHash);
+        isMount && personalAniPromise.then(loadHash);
 
         window.addEventListener("hashchange", loadHash);
 
