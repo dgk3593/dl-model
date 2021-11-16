@@ -1,4 +1,9 @@
-import { useAppState, useActiveModel, useChainMakerState } from "@/state";
+import {
+    useAppState,
+    useActiveModel,
+    useChainMakerState,
+    useAniSelectState,
+} from "@/state";
 
 import { Button } from "@mui/material";
 import SimpleWeaponControl from "./SimpleWeaponControl";
@@ -22,12 +27,18 @@ const label = {
 
 function SingleMode() {
     const { activeModel } = useActiveModel();
+    const { loadState } = useAniSelectState();
     const openModal = useAppState(state => state.sidebar.modal.open);
     const { toggle: toggleChainMaker, setTarget } = useChainMakerState();
 
     const handleClick = event => {
         const { mode } = event.currentTarget.dataset;
         openModal(mode, simpleHandler[mode]);
+    };
+
+    const addAnimation = () => {
+        loadState(activeModel?.userData.aniSelectState);
+        openModal("animation", simpleHandler.animation);
     };
 
     const openChainMaker = () => {
@@ -78,7 +89,7 @@ function SingleMode() {
                     <Button
                         variant="contained"
                         data-mode="animation"
-                        onClick={handleClick}
+                        onClick={addAnimation}
                         startIcon={<DirectionsRun />}
                     >
                         Animation Select
