@@ -19,6 +19,8 @@ import "./AttachmentManager.css";
 
 function AttachmentManager() {
     const { activeModel } = useActiveModel();
+    if (!activeModel) return null;
+
     const [key, update] = useKey();
     const { inputModel } = useModalState();
     const removeListener = useRef(() => void 0);

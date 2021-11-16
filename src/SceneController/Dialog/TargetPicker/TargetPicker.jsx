@@ -20,13 +20,15 @@ function TargetPicker({ onSelect = console.log, onAfterSelect }) {
             <DialogTitle sx={styles.title}>Select Target</DialogTitle>
 
             <DialogContent sx={styles.content}>
-                {list.map(model => (
-                    <ModelTree
-                        key={model.uniqueId}
-                        target={model}
-                        onSelect={handleSelect}
-                    />
-                ))}
+                {list.length
+                    ? list.map(model => (
+                          <ModelTree
+                              key={model.uniqueId}
+                              target={model}
+                              onSelect={handleSelect}
+                          />
+                      ))
+                    : "No model"}
             </DialogContent>
         </Box>
     );
