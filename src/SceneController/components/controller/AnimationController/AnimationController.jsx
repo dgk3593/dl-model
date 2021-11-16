@@ -1,4 +1,4 @@
-import { useChainMakerState, useModalState } from "@/state";
+import { useAniSelectState, useChainMakerState, useModalState } from "@/state";
 import { Close, DirectionsRun, Storage } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
@@ -9,8 +9,10 @@ import ModelTimeControl from "./ModelTimeControl";
 function AnimationController({ target }) {
     const { inputAni } = useModalState();
     const { toggle, setTarget } = useChainMakerState();
+    const { loadState } = useAniSelectState();
 
     const addAni = async () => {
+        loadState(target?.userData.aniSelectState);
         const ani = await inputAni();
         if (!ani) return;
 
@@ -35,6 +37,7 @@ function AnimationController({ target }) {
 
     const openChainMaker = () => {
         setTarget(target);
+        loadState(target?.userData.aniSelectState);
         toggle();
     };
 

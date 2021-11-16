@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useChainMakerState, useModalState } from "@/state";
+import { useAniSelectState, useChainMakerState, useModalState } from "@/state";
 import { ModelIcon } from "components/DLIcon";
 import { Button } from "@mui/material";
 import { getModelById } from "@/data/dbFunction";
@@ -7,7 +7,9 @@ import { getModelById } from "@/data/dbFunction";
 function ChainMakerTarget() {
     const { target, setTarget } = useChainMakerState();
     if (!target) return null;
+
     const { inputTarget } = useModalState();
+    const { loadState } = useAniSelectState();
 
     const id = target?.id;
     const [name, setName] = useState(target?.userData?.name);
@@ -25,10 +27,12 @@ function ChainMakerTarget() {
     const modelTitle = name ?? id;
 
     const changeTarget = async () => {
-        const newTarget = await inputTarget();
-        if (!newTarget) return;
+        const selection = await inputTarget();
+        if (!selection) return;
 
-        setTarget(newTarget[0]);
+        const target = selection[0];
+        loadState(target.userData?.aniSelectState);
+        setTarget(target);
     };
 
     return (

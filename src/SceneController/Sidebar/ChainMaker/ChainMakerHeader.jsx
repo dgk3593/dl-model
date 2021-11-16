@@ -1,4 +1,9 @@
-import { useChainMakerState, useModalState } from "@/state";
+import {
+    useActiveModel,
+    useAniSelectState,
+    useChainMakerState,
+    useModalState,
+} from "@/state";
 
 import CloseButton from "components/CloseButton";
 import ChainMakerTarget from "./ChainMakerTarget";
@@ -10,6 +15,7 @@ import { chainCodeToList, generateChainCode } from "./helper";
 function ChainMakerHeader({ target }) {
     const { toggle } = useChainMakerState();
     const { inputAni } = useModalState();
+    const { activeModel } = useActiveModel();
 
     const chain = target?.userData?.chain ?? [];
 
@@ -19,17 +25,26 @@ function ChainMakerHeader({ target }) {
     };
 
     const addAniToChain = async () => {
-        const [code, name] = await inputAni();
-        if (!code) return;
+        const ani = await inputAni();
+        if (!ani) return;
+        const [code, name, state] = ani;
 
         const chainToAdd = chainCodeToList(code, name);
-        target?.userData?.chain.push(...chainToAdd);
+        target.userData?.chain.push(...chainToAdd);
+        target.userData.aniSelectState = state;
+    };
+
+    const closeChainMaker = () => {
+        toggle();
+        useAniSelectState
+            .getState()
+            .loadState(activeModel?.userData?.aniSelectState);
     };
 
     return (
         <div className="ChainMaker-header">
             <div className="ChainMaker-title">
-                <ButtonGroup>
+                <ButtonGroup disabled={!target}>
                     <Button
                         variant="contained"
                         title="Play All"
@@ -51,7 +66,7 @@ function ChainMakerHeader({ target }) {
             <ChainMakerTarget />
 
             <CloseButton
-                onClick={toggle}
+                onClick={closeChainMaker}
                 color="white"
                 title="Close Chain Maker"
             />

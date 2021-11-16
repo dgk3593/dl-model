@@ -6,6 +6,7 @@ import viewer from "@/viewer";
 import { getDefaultCamera, getDefaultControl } from "../dl-viewer";
 import { getDefaultAni } from "@/data/getPersonalAni";
 import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
+import { initAniSelectState } from "./initAniSelectState";
 
 export function loadHash() {
     const { hash } = window.location;
@@ -38,9 +39,10 @@ async function loadModel(encodedHash) {
         const model = await viewer.loadModelFromCode(code);
         viewer.add(model);
 
-        useAniSelectState
-            .getState()
-            .setCategory(model.type === "adventurer" ? "Adv" : "Personal");
+        const aniCategory = model.type === "adventurer" ? "Adv" : "Personal";
+
+        useAniSelectState.getState().setCategory(aniCategory);
+        initAniSelectState(model);
 
         const { id } = model;
         if (!hash.includes("camPos=")) {

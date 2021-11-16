@@ -1,4 +1,6 @@
-export const aniSelectConfig = set => ({
+import { mergeObject } from "@/helper/mergeObject";
+
+export const aniSelectConfig = (set, get) => ({
     category: "Adv",
     setCategory: category =>
         set(state => {
@@ -78,5 +80,13 @@ export const aniSelectConfig = set => ({
             set(state => {
                 state.personalAni.sourceName = name;
             }),
+    },
+
+    getCurrentState: () => {
+        const state = get();
+        return JSON.parse(JSON.stringify(state));
+    },
+    loadState: (state = {}) => {
+        set(current => mergeObject(current, state));
     },
 });

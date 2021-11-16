@@ -8,6 +8,7 @@ import { filterData } from "@/SceneController/helper/filterData";
 import { searchData } from "@/SceneController/helper/searchData";
 import { searchModelByName } from "data/dbFunction";
 import viewer from "@/viewer";
+import { initAniSelectState } from "@/helper/initAniSelectState";
 
 const defaultFilter = [];
 
@@ -65,6 +66,7 @@ function Body({
 
         weapon.outline.code = target.outline.code;
         weapon.material.code = target.material.code;
+        initAniSelectState(weapon);
     };
 
     return data.length && !loading ? (

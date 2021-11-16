@@ -35,11 +35,11 @@ export default function addOtherFunctions(container) {
         }),
 
         dispose() {
-            this.dispatchEvent({ type: "dispose" });
             const { attachment, parent, parentBone } = this;
             attachment.list.forEach(att => att.dispose());
-
             parent?.remove(this, parentBone);
+
+            this.dispatchEvent({ type: "dispose" });
             disposeContainerObject(this);
         },
     });

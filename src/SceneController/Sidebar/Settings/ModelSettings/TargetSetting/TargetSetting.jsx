@@ -7,10 +7,10 @@ import { getModelById } from "@/data/dbFunction";
 import "./TargetSetting.css";
 
 const changeActiveModel = target => {
+    const { setCategory, loadState } = useAniSelectState.getState();
     useActiveModel.getState().setActiveModel(target);
-    useAniSelectState
-        .getState()
-        .setCategory(target.type === "adventurer" ? "Adv" : "Personal");
+    setCategory(target.type === "adventurer" ? "Adv" : "Personal");
+    loadState(target.userData.aniSelectState);
 };
 
 function TargetSetting() {

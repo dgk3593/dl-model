@@ -51,7 +51,6 @@ export default function SceneController() {
 
         setSourceName(activeModel?.userData.name);
         setSource(activeModel?.id);
-        // setChainMakerTarget(activeModel);
     }, [activeModel]);
 
     return (

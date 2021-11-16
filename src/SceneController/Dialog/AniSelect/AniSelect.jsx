@@ -35,11 +35,11 @@ const components = {
 
 /**
  * @param {object} props
- * @param {(code: string, name: string) => void} props.onSelect
+ * @param {(code: string, name: string, state: object) => void} props.onSelect
  * @param {() => void} [props.onAfterSelect]
  */
 function AniSelect({ onSelect = () => void 0, onAfterSelect }) {
-    const { category, setCategory } = useAniSelectState();
+    const { category, setCategory, getCurrentState } = useAniSelectState();
     const idbAvailable = !!indexedDB;
 
     const [query, setQuery] = useState("");
@@ -48,7 +48,8 @@ function AniSelect({ onSelect = () => void 0, onAfterSelect }) {
     const handleTypeChange = (_, newType) => setCategory(newType);
     const handleSelect = event => {
         const { code, name } = event.currentTarget.dataset;
-        onSelect(code, name);
+        const state = getCurrentState();
+        onSelect(code, name, state);
         onAfterSelect?.();
     };
 

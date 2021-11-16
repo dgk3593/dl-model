@@ -7,6 +7,7 @@ import FullModelController from "components/controller/FullModelController";
 import { Button } from "@mui/material";
 import { RestartAlt } from "@mui/icons-material";
 import viewer from "@/viewer";
+import { initAniSelectState } from "@/helper/initAniSelectState";
 
 const { setLoadingMsg } = useAppState.getState();
 
@@ -14,6 +15,7 @@ const handleSelect = async (id, name) => {
     setLoadingMsg("Loading");
     const newModel = await viewer.loadDLModel(id);
     newModel.userData.name = name;
+    initAniSelectState(newModel);
     viewer.add(newModel);
 
     setLoadingMsg("");

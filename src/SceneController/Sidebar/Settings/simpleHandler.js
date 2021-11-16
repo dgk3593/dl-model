@@ -3,15 +3,18 @@ import { getDefaultAni } from "@/data/getPersonalAni";
 import viewer from "@/viewer";
 import { getDefaultCamera, getDefaultControl } from "@/dl-viewer";
 import { chainCodeToList } from "../ChainMaker/helper";
+import { initAniSelectState } from "@/helper/initAniSelectState";
 
 const { setLoadingMsg } = useAppState.getState();
 
-const aniHandler = (code, name) => {
+const aniHandler = (code, name, state) => {
     const activeModel = useActiveModel.getState().activeModel;
     activeModel?.animation.addChain(code);
 
     const chainList = chainCodeToList(code, name);
     if (!activeModel?.userData) return;
+
+    activeModel.userData.aniSelectState = state;
 
     activeModel.userData.chain
         ? activeModel.userData.chain.splice(0, Infinity, ...chainList)
@@ -26,6 +29,8 @@ const modelHandler = async (id, name) => {
     newModel.userData.name = name;
     newModel.material.code = oldModel?.material.code ?? "";
     newModel.outline.code = oldModel?.outline.code ?? "";
+    initAniSelectState(newModel);
+
     const { parent, parentBone } = oldModel ?? {};
 
     if (oldModel?.type === "adventurer" && newModel.type === "adventurer") {
@@ -55,9 +60,8 @@ const modelHandler = async (id, name) => {
         const control = getDefaultControl(id);
         viewer.controls.target.set(...control);
 
-        useAniSelectState
-            .getState()
-            .setCategory(newModel.type === "adventurer" ? "Adv" : "Personal");
+        const aniCategory = newModel.type === "adventurer" ? "Adv" : "Personal";
+        useAniSelectState.getState().setCategory(aniCategory);
     }
     setActiveModel(newModel);
 
