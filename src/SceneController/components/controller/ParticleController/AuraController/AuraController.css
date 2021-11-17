@@ -1,5 +1,6 @@
 .AuraController {
     width: 100%;
+    overflow-x: hidden;
 }
 
 .AuraController .Accordion-summary {
