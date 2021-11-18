@@ -5,6 +5,7 @@ import {
     Download,
     FiberManualRecord as RecordIcon,
     Gif,
+    PlayArrow,
 } from "@mui/icons-material";
 
 import { commonProps } from "./props";
@@ -32,6 +33,15 @@ function SpecialCapture() {
                 />
                 <div className="SpecialCapture-actions">
                     <Button
+                        data-type="preview"
+                        onClick={handleCapture}
+                        title="Preview"
+                        startIcon={<PlayArrow />}
+                    >
+                        Preview
+                    </Button>
+
+                    <Button
                         data-type="frames"
                         onClick={handleCapture}
                         title="Get all frames as zip"
@@ -39,6 +49,7 @@ function SpecialCapture() {
                     >
                         Get Frames
                     </Button>
+
                     <Button
                         data-type="gif"
                         onClick={handleCapture}
@@ -47,6 +58,7 @@ function SpecialCapture() {
                     >
                         Get GIF
                     </Button>
+
                     {viewer.record && (
                         <Button
                             data-type="clip"

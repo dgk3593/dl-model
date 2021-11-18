@@ -58,6 +58,7 @@ export const programs = [
         frames: downloadFrames(getRotateFrames),
         gif: getGif(getRotateFrames),
         clip: getRotateClip,
+        preview: previewRotate,
     },
     {
         value: "speedDraw",
@@ -65,6 +66,7 @@ export const programs = [
         frames: downloadFrames(getSpeedDrawFrames),
         gif: getGif(getSpeedDrawFrames),
         clip: getSpeedDrawClip,
+        preview: previewSpeedDraw,
     },
 ];
 
@@ -152,6 +154,39 @@ function getRotateClip() {
     });
     isPaused && viewer.loop.resume();
     viewer.record.start();
+}
+
+function previewRotate() {
+    const { duration = 5 } = viewer.userData.specialCapture ?? {};
+    const isPaused = viewer.loop.paused;
+
+    let elapsedTime = 0;
+
+    const { sqrt, sin, cos, atan, PI } = Math;
+    let { x, y, z } = viewer.camera.position;
+    const { x: xT, z: zT } = viewer.controls.target;
+    const r = sqrt((x - xT) ** 2 + (z - zT) ** 2);
+    if (r === 0) {
+        setLoadingMsg("Invalid camera settings");
+        setTimeout(() => setLoadingMsg(""), 1000);
+        return;
+    }
+
+    const angularVelocity = (2 * PI) / duration;
+    const phi0 = z === zT ? PI / 4 : atan((x - xT) / (z - zT));
+    let phi = phi0;
+    const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
+        elapsedTime += dt;
+        if (elapsedTime > duration) {
+            viewer.removeEventListener("timeUpdate", listener);
+            isPaused && viewer.loop.pause();
+        }
+        x = xT + r * sin(phi);
+        z = zT + r * cos(phi);
+        viewer.camera.position.set(x, y, z);
+        phi += angularVelocity * dt;
+    });
+    isPaused && viewer.loop.resume();
 }
 
 /**
@@ -267,4 +302,42 @@ function getSpeedDrawClip() {
     });
     isPaused && viewer.loop.resume();
     viewer.record.start();
+}
+
+function previewSpeedDraw() {
+    const model = useActiveModel.getState().activeModel;
+    const list = getPointCounts(model).sort((a, b) => b.count - a.count);
+    const count = list.map(({ count }) => count);
+    const threshold = count.map((_, i) =>
+        count.slice(0, i + 1).reduce((a, b) => a + b, 0)
+    );
+    threshold.unshift(0);
+    const totalPoints = threshold.at(-1);
+
+    const { duration = 5 } = viewer.userData.specialCapture ?? {};
+    const isPaused = viewer.loop.paused;
+
+    let meshIndex = 0,
+        currentPoints = 0;
+    list.forEach(({ geometry }) => (geometry.drawRange.count = 0));
+
+    const { ceil, max } = Math;
+    const listener = viewer.addEventListener("timeUpdate", ({ dt }) => {
+        const dpoints = ceil((totalPoints * dt) / duration);
+        currentPoints += max(dpoints, 1);
+        list[meshIndex].geometry.drawRange.count =
+            currentPoints - threshold[meshIndex];
+
+        const overshoot = currentPoints - threshold[meshIndex + 1];
+        if (overshoot >= 0) {
+            list[meshIndex++].geometry.drawRange.count = Infinity;
+            if (meshIndex >= list.length) {
+                viewer.removeEventListener("timeUpdate", listener);
+                setTimeout(() => {
+                    isPaused && viewer.loop.pause();
+                }, 1000);
+            }
+        }
+    });
+    isPaused && viewer.loop.resume();
 }
