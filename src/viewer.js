@@ -1,4 +1,5 @@
 // @ts-nocheck
+import * as THREE from "three";
 import { DLViewer } from "./dl-viewer";
 import fscreen from "fscreen";
 import { batchDownloadPNG } from "./dl-viewer/utils/downloader";
@@ -24,6 +25,7 @@ window.model = viewer.model;
 window.getFrame = viewer.screenshot.getFrame;
 window.downloadFrames = batchDownloadPNG;
 window.saveAs = saveAs;
+window.THREE = THREE;
 window.makeGif = async params => {
     const { makeGif } = await import("./helper/makeGif");
     return await makeGif(params);
@@ -32,12 +34,9 @@ window.makeGif = async params => {
 function toggleFullScreen() {
     if (!fscreen.fullscreenEnabled) return;
 
-    if (!fscreen.fullscreenElement) {
-        fscreen.requestFullscreen(viewer.canvas);
-        return;
-    }
-
-    fscreen.exitFullscreen();
+    fscreen.fullscreenElement
+        ? fscreen.exitFullscreen()
+        : fscreen.requestFullscreen(viewer.canvas);
 }
 
 if (import.meta.env.DEV) {
