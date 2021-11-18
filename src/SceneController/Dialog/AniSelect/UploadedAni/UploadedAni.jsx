@@ -31,7 +31,13 @@ function UploadedAni({ onSelect }) {
 
     return (
         <div className="UploadedAni">
-            <UploadButton multiple mimeType=".fbx" onChange={handleUpload} />
+            <UploadButton
+                title="Upload fbx files containing animations applied on DL models"
+                label="Upload Animations"
+                multiple
+                mimeType=".fbx"
+                onChange={handleUpload}
+            />
             <AnimationList key={key} list={userData.ani} onSelect={onSelect} />
         </div>
     );

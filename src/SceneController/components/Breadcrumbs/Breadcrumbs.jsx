@@ -10,6 +10,8 @@ import {
 
 import { styles } from "./styles";
 
+const Icon = props => <img {...props} style={styles.icon} />;
+
 /**
  * @param {object} props
  * @param {number} [props.level]
@@ -40,8 +42,6 @@ function Breadcrumbs({ level = 0, selectedIndices, options, setIndex }) {
     }
     const selectedIndex = selectedIndices[level] ?? 0;
     const { label, value, icon, options: subOptions } = options[selectedIndex];
-
-    const Icon = props => <img {...props} style={styles.icon} />;
 
     const body = (
         <>

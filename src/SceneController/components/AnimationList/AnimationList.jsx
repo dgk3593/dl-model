@@ -19,8 +19,8 @@ function AnimationList({ list, onSelect }) {
 
     const handleDelete = event => {
         const { uuid } = event.target.dataset;
-        const clip = list.find(cl => cl.uuid === uuid);
-        list.splice(list.indexOf(clip), 1);
+        const index = list.findIndex(cl => cl.uuid === uuid);
+        index !== -1 && list.splice(index, 1);
     };
 
     return (
@@ -38,6 +38,7 @@ function AnimationList({ list, onSelect }) {
                         data-name={item.name}
                         onClick={onSelect}
                         variant="contained"
+                        title="Select this animation"
                     >
                         Select
                     </Button>
@@ -45,6 +46,7 @@ function AnimationList({ list, onSelect }) {
                         data-uuid={item.uuid}
                         onClick={handleDelete}
                         variant="contained"
+                        title="Delete this animation"
                     >
                         <Delete />
                     </Button>

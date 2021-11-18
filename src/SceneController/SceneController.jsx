@@ -17,9 +17,6 @@ import "@/fonts.css";
 
 export default function SceneController() {
     const sidebar = useAppState(state => state.sidebar);
-    const setChainMakerTarget = useAppState(
-        state => state.chainMaker.setTarget
-    );
     const setLoadingMsg = useAppState(state => state.setLoadingMsg);
     const isMount = useIsMount();
     const { activeModel, setActiveModel } = useActiveModel();

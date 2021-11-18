@@ -1,4 +1,4 @@
-import { mergeObject } from "@/helper/mergeObject";
+import { mergeObject } from "@/helper/utils";
 
 export const aniSelectConfig = (set, get) => ({
     category: "Adv",

@@ -1,5 +1,10 @@
 import "./gif";
 
+/**
+ * create HTMLImageElement from data url
+ * @param {string} dataUrl
+ * @return {Promise<HTMLImageElement>}
+ */
 const createImg = dataUrl =>
     new Promise(resolve => {
         const img = new Image();
@@ -30,16 +35,16 @@ export const makeGif = ({
             repeat: 0,
             width,
             height,
-            transparent: "#00000000",
+            transparent: "#0000",
         });
         for (let i = 0; i < frames.length; i++) {
             const img = await createImg(frames[i]);
             gif.addFrame(img, { delay });
         }
         gif.on("finished", blob => {
-            gif.freeWorkers.forEach(w => w.terminate());
+            gif.freeWorkers.forEach(worker => worker.terminate());
             resolve(blob);
         });
         gif.render();
-        console.log(`Rendering gif from ${gif.frames.length} frames`);
+        console.log(`Render gif from ${gif.frames.length} frames`);
     });

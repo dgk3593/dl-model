@@ -15,7 +15,7 @@ import "./Accordion.css";
  */
 const Accordion = forwardRef((props, ref) => {
     const {
-        children,
+        children = [],
         className = "",
         defaultOpen = false,
         disableGutters = false,
@@ -26,18 +26,19 @@ const Accordion = forwardRef((props, ref) => {
         open ? "open" : ""
     } ${className}`;
 
+    const [summary, details] = children;
     const arrow = open ? <ArrowDropUp /> : <ArrowDropDown />;
 
     return (
         <div className={fullClassName} {...others} ref={ref}>
-            {children[0] && (
+            {summary && (
                 <div onClick={toggleOpen} className="Accordion-summary">
                     {arrow}
-                    {children[0]}
+                    {summary}
                 </div>
             )}
-            {open && children[1] && (
-                <div className="Accordion-details">{children[1]}</div>
+            {open && details && (
+                <div className="Accordion-details">{details}</div>
             )}
         </div>
     );

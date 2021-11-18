@@ -12,6 +12,7 @@ import { styles } from "./styles";
  * @param {string} [props.accept] - file types to accept
  * @param {(files: FileList) => void} props.onChange - executed when input is changed
  * @param {object} [props.style] - styling for the button
+ * @param {object} [props.title] - button title
  */
 function UploadButton({
     id = "upload",
