@@ -1,28 +1,38 @@
 {
     "data": [
         {
+            "id": "h0010001",
+            "name": "Wily Machine 2",
+            "element": "None"
+        },
+        {
             "id": "b0010101",
             "name": "Flame Manticore",
+            "element": "Flame",
             "noIcon": true
         },
         {
             "id": "b0010201",
             "name": "Water Manticore",
+            "element": "Water",
             "noIcon": true
         },
         {
             "id": "b0010301",
             "name": "Wind Manticore",
+            "element": "Wind",
             "noIcon": true
         },
         {
             "id": "b0010401",
             "name": "Light Manticore",
+            "element": "Light",
             "noIcon": true
         },
         {
             "id": "b0010501",
             "name": "Shadow Manticore",
+            "element": "Shadow",
             "noIcon": true
         }
     ]
