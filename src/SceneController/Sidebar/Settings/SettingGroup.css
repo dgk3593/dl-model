@@ -6,6 +6,14 @@
     justify-content: space-between;
 }
 
+.SettingGroup.open .Accordion-summary {
+    background-color: #fff3;
+}
+
+.SettingGroup.open .Accordion-summary:hover {
+    background-color: #fff4;
+}
+
 .SettingGroup .Accordion-summary .title {
     display: flex;
     align-items: center;
