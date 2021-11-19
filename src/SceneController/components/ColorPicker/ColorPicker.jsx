@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import ColorButton from "./ColorButton";
+import ColorButton from "../ColorButton";
 
 import commonColors from "./commonColors";
 import "./styles.css";
@@ -15,7 +15,7 @@ function ColorPicker({ initColor = "#cccccc", onSelect }) {
     const handleButtonClick = event => setColor(event.target.value);
     const applyColor = () => onSelect(color);
 
-    const CommonColor = () => (
+    const commonColorBtns = (
         <div className="ColorPicker-common">
             {commonColors.map(({ name, hex, title }) => (
                 <ColorButton
@@ -34,7 +34,8 @@ function ColorPicker({ initColor = "#cccccc", onSelect }) {
     return (
         <div className="ColorPicker">
             <div className="ColorPicker-select">
-                <CommonColor />
+                {commonColorBtns}
+
                 <Suspense fallback={null}>
                     <ChromePicker
                         color={color}

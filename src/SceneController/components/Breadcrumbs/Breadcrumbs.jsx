@@ -22,6 +22,7 @@ const Icon = props => <img {...props} style={styles.icon} />;
 function Breadcrumbs({ level = 0, selectedIndices, options, setIndex }) {
     const [anchorEl, setAnchorEl] = useState(null);
     const multiOptions = options.length > 1;
+    selectedIndices[level] ?? setIndex(level, 0);
 
     const handleListItem = event => {
         setAnchorEl(event.currentTarget);
@@ -37,9 +38,6 @@ function Breadcrumbs({ level = 0, selectedIndices, options, setIndex }) {
         setAnchorEl(null);
     };
 
-    if (selectedIndices[level] === undefined) {
-        setIndex(level, 0);
-    }
     const selectedIndex = selectedIndices[level] ?? 0;
     const { label, value, icon, options: subOptions } = options[selectedIndex];
 

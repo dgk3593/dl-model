@@ -1,6 +1,6 @@
 import { useModalState } from "@/state";
 import { useState } from "react";
-import ColorButton from "../ColorPicker/ColorButton";
+import ColorButton from "components/ColorButton";
 
 /**
  * @param {object} props

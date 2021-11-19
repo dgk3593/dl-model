@@ -1,3 +1,4 @@
+import { useAppData } from "@/data";
 import { Fragment } from "react";
 import { SetVector, SetNumber } from "components/Setters";
 import { MaterialController, OutlineController } from "..";
@@ -6,6 +7,7 @@ import ParticleController from "../ParticleController";
 import FaceController from "../FaceController";
 import AnimationController from "../AnimationController";
 import AttachmentController from "../AttachmentController";
+import TextureController from "../TextureController";
 
 import {
     ThreeSixty,
@@ -21,13 +23,17 @@ import {
     Attachment,
 } from "@mui/icons-material";
 
-import { useAppData } from "@/data";
-import TextureController from "../TextureController";
-
+/**
+ * Check if the model has choices of texture
+ * @param {string} id
+ */
 const hasTexture = id => {
     return !!useAppData.getState()?.["model-texture"]?.[id];
 };
 
+/**
+ * controller options common to all models
+ */
 export const defaultOptions = [
     "Position",
     "Rotation",
@@ -39,6 +45,9 @@ export const defaultOptions = [
     "Attachment",
 ];
 
+/**
+ * icon for controller
+ */
 const icons = {
     Position: ControlCamera,
     Rotation: ThreeSixty,
@@ -53,6 +62,9 @@ const icons = {
     Texture: CropOriginal,
 };
 
+/**
+ * @param {{ target: DLModel, type: string, [key: string]: * }} props
+ */
 export const Controller = ({ target, type, ...others }) => {
     switch (type) {
         case "Position":
@@ -118,6 +130,11 @@ export const Controller = ({ target, type, ...others }) => {
     }
 };
 
+/**
+ * get the controller options for a DL model
+ * @param {DLModel} target
+ * @return {string[]}
+ */
 export const getControlList = target => {
     const options = [...defaultOptions];
     if (target.face) options.push("Face");
@@ -127,9 +144,18 @@ export const getControlList = target => {
     return options;
 };
 
-export const getSelectOptions = optionList =>
-    optionList.map(value => ({ value }));
+/**
+ * convert a list of control options to list of SelectBox options
+ * @param {string[]} list
+ * @return {import("components/SelectBox/SelectBox").SelectBoxOption[]}
+ */
+export const getSelectOptions = list => list.map(value => ({ value }));
 
+/**
+ * convert a list of control options to list of tabs for IconTabBar
+ * @param {string[]} list
+ * @return {import("components/IconTabBar/IconTabBar").IconTabDetail[]}
+ */
 export const getTabs = list =>
     list.map(value => {
         const Icon = icons[value] ?? Fragment;

@@ -7,8 +7,8 @@ import "./Accordion.css";
  * @typedef {object} AccordionProps
  * @property {[summary: JSX.Element, details: JSX.Element]} props.children
  * @property {string} [props.className]
- * @property {boolean} [props.defaultOpen]
- * @property {boolean} [props.disableGutters]
+ * @property {boolean} [props.defaultOpen] - default open state
+ * @property {boolean} [props.disableGutters] - disable gutters
  */
 /**
  * @type {React.FC<AccordionProps>}

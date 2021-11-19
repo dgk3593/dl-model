@@ -1,18 +1,23 @@
 import { useState } from "react";
 import SelectBox from "components/SelectBox";
-import { getControlList, getSelectOptions, Controller } from "./helper";
 import QuickAccess from "./QuickAccess";
+import { getControlList, getSelectOptions, Controller } from "./helper";
 
 import "./ModelController.css";
 
-function ModelController({ target, dataKey = "controller" }) {
+/**
+ * Render a controller for a DL model
+ * @param {object} props
+ * @param {DLModel} props.target - The DL model to control
+ */
+function ModelController({ target }) {
     const options = getControlList(target);
 
-    const [type, setType] = useState(target.userData[dataKey] ?? options[0]);
+    const [type, setType] = useState(target.userData.controller ?? options[0]);
     const selectOptions = getSelectOptions(options);
 
     const handleTypeChange = newType => {
-        target.userData[dataKey] = newType;
+        target.userData.controller = newType;
         setType(newType);
     };
 
