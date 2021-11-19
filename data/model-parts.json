@@ -255,6 +255,37 @@
                 }
             }
         },
+        "h0010001": {
+            "custom": {
+                "mFaceA": "mPartsFace_A",
+                "mFaceB": "mPartsFace_B"
+            },
+            "Face": {
+                "name": "Wily Face",
+                "options": {
+                    "A": "Laugh",
+                    "B": "Cry"
+                }
+            },
+            "A": {
+                "name": "Front Shield",
+                "options": {
+                    "default": "Shown"
+                }
+            },
+            "B": {
+                "name": "Wind Shield",
+                "options": {
+                    "default": "Shown"
+                }
+            },
+            "C": {
+                "name": "Top Shield",
+                "options": {
+                    "default": "Shown"
+                }
+            }
+        },
         "h0080501": {
             "A": {
                 "name": "Right Wing",
