@@ -66,7 +66,7 @@ export const props = [
         type: "slider",
         title: "Higher value means less aura, more particles",
         min: 0,
-        max: 1,
+        max: 0.7,
         step: 0.05,
     },
     {

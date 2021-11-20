@@ -7,6 +7,9 @@ import { props } from "./props";
 
 import viewer from "@/viewer";
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function OutlineController({ target }) {
     const { outline } = target;
     const [key, updateKey] = useKey();
@@ -29,6 +32,7 @@ function OutlineController({ target }) {
         const { code } = outline;
         target.attachment.traverse(att => (att.outline.code = code));
     };
+
     props.forEach(prop => {
         prop.onBeforeChange = () => (skipRerender.current = true);
         prop.onChange = propagate;

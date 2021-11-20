@@ -26,9 +26,7 @@ function AuraController({ target }) {
                 {name}
                 {removeButton}
             </>
-            <>
-                <Setters target={target} propList={props} />
-            </>
+            <Setters target={target} propList={props} />
         </Accordion>
     );
 }

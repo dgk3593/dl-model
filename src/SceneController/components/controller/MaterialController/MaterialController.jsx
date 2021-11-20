@@ -4,6 +4,9 @@ import { useKey } from "hook/useKey";
 import Setters from "components/Setters";
 import { props, matType } from "./props";
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function MaterialController({ target }) {
     const { material } = target;
     const { propList } = material;
@@ -29,6 +32,7 @@ function MaterialController({ target }) {
             att.material.code = code;
         });
     };
+
     matType[0].onChange = () => {
         updateKey();
         propagate();
