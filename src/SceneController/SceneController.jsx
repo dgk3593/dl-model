@@ -52,7 +52,11 @@ export default function SceneController() {
 
     return (
         <>
-            <button className="sidebar-toggle" onClick={sidebar.toggle}>
+            <button
+                title="Settings"
+                className="sidebar-toggle"
+                onClick={sidebar.toggle}
+            >
                 <Menu />
             </button>
 

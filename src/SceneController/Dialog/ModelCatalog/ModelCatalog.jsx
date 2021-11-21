@@ -88,6 +88,7 @@ function ModelCatalog({ compact, onSelect = () => void 0, onAfterSelect }) {
                                 value="All"
                                 checked={searchAll}
                                 onClick={toggleSearchAll}
+                                title="Whether to search all model"
                             />
                         )}
                         <Searchbox
@@ -96,7 +97,11 @@ function ModelCatalog({ compact, onSelect = () => void 0, onAfterSelect }) {
                             onChange={setSearchQuery}
                         />
                         {filterConfig && !searchAll && (
-                            <IconButton onClick={toggleFilter} size="large">
+                            <IconButton
+                                title="Toggle Filter"
+                                onClick={toggleFilter}
+                                size="large"
+                            >
                                 <FilterAlt />
                             </IconButton>
                         )}

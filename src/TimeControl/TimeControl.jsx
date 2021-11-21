@@ -69,6 +69,7 @@ function TimeControl() {
                 value="Reverse"
                 checked={isReverse}
                 onClick={onToggleReverse}
+                title="Click to change animation direction"
             />
 
             <TimeScaleControl />
