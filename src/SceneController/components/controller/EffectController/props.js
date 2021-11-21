@@ -6,7 +6,7 @@ const halftoneShape = [
 ];
 
 /**
- * @type {{ [type: string]: import("components/Setters/Setters").PropDetails[]}}
+ * @type {{ [type: string]: import("components/Setters").PropDetails[]}}
  */
 export const props = {
     bloom: [

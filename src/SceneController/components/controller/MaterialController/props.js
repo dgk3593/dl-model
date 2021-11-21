@@ -3,7 +3,7 @@ import { allMatTypes, gradientMapList, matcapList } from "./data";
 const percentageMap = value => `${~~(value * 100)}%`;
 
 /**
- * @type {import("components/Setters/Setters").PropDetails[]}
+ * @type {import("components/Setters").PropDetails[]}
  */
 export const matType = [
     {
@@ -15,7 +15,7 @@ export const matType = [
 ];
 
 /**
- * @type {import("components/Setters/Setters").PropDetails[]}
+ * @type {import("components/Setters").PropDetails[]}
  */
 export const props = [
     {

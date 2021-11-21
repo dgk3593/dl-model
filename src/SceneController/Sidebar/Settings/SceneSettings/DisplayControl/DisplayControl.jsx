@@ -41,7 +41,7 @@ function DisplayControl() {
     }, []);
 
     /**
-     * @type {import("components/Setters/Setters").PropDetails[]}
+     * @type {import("components/Setters").PropDetails[]}
      */
     const viewportProps = [
         {

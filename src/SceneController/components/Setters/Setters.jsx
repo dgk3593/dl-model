@@ -3,20 +3,9 @@ import "./Setters.css";
 import SetWithSlider from "./SetWithSlider";
 
 /**
- * @typedef {{
- *      propName: string,
- *      label?: string,
- *      title?: string,
- *      type: 'string' | 'number' | 'boolean' | 'slider' | 'color' | 'select' | 'vector',
- *      onBeforeChange?: (newValue: *) => void,
- *      onChange?: (newValue: *) => void,
- *      [key: string]: *
- * }} PropDetails
- */
-/**
  * @param {object} props
  * @param {object} props.target
- * @param {PropDetails[]} props.propList
+ * @param {import(".").PropDetails[]} props.propList
  */
 function Setters({ target, propList }) {
     const setters = propList.map(prop => {

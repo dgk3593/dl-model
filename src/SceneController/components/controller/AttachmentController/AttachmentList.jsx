@@ -9,6 +9,9 @@ import { Add } from "@mui/icons-material";
 import { getUnique } from "@/dl-viewer/utils";
 import viewer from "@/viewer";
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function AttachmentList({ target }) {
     if (!target) return <></>;
 
@@ -22,9 +25,8 @@ function AttachmentList({ target }) {
 
     useEffect(() => target?.addEventListener("AttachmentChanged", update), []);
 
-    const handleChange = event => {
-        setBone(event.target.value);
-    };
+    const handleChange = event => setBone(event.target.value);
+
     const addAttachment = async (targetBone = bone) => {
         const attachment = await inputModel();
         if (!attachment) return;
@@ -57,7 +59,7 @@ function AttachmentList({ target }) {
                     ))}
                 </Select>
                 <Button
-                    title="Add Attachment"
+                    title="Add attachment to selected joint"
                     variant="contained"
                     onClick={handleAdd}
                 >

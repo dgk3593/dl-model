@@ -6,13 +6,16 @@ import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 import "./AnimationController.css";
 import ModelTimeControl from "./ModelTimeControl";
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function AnimationController({ target }) {
     const { inputAni } = useModalState();
     const { toggle, setTarget } = useChainMakerState();
-    const { loadState } = useAniSelectState();
+    const { loadState: loadAniSelectState } = useAniSelectState();
 
     const addAni = async () => {
-        loadState(target?.userData.aniSelectState);
+        loadAniSelectState(target?.userData.aniSelectState);
         const ani = await inputAni();
         if (!ani) return;
 
@@ -37,7 +40,7 @@ function AnimationController({ target }) {
 
     const openChainMaker = () => {
         setTarget(target);
-        loadState(target?.userData.aniSelectState);
+        loadAniSelectState(target?.userData.aniSelectState);
         toggle();
     };
 
@@ -48,6 +51,7 @@ function AnimationController({ target }) {
                 variant="contained"
                 startIcon={<DirectionsRun />}
                 onClick={addAni}
+                title="Add Animation"
             >
                 Add Animation
             </Button>
@@ -55,6 +59,7 @@ function AnimationController({ target }) {
                 variant="contained"
                 startIcon={<Storage />}
                 onClick={openChainMaker}
+                title="Open Chain Maker"
             >
                 Chain Maker
             </Button>
@@ -62,6 +67,7 @@ function AnimationController({ target }) {
                 variant="contained"
                 startIcon={<Close />}
                 onClick={removeAni}
+                title="Remove Animation"
             >
                 Reset
             </Button>

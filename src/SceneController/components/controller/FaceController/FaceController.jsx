@@ -12,6 +12,9 @@ const component = {
     faceTexture: FaceTexture,
 };
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function FaceController({ target }) {
     const face = target?.face;
     if (!face) return <Fragment />;

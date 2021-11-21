@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.FullModelController > .Accordion-details {
+    overflow-x: hidden;
+}
+
 .FullModelController > .Accordion-summary > .closeButton {
     color: #eee;
     position: absolute;

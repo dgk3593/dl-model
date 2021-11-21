@@ -5,6 +5,9 @@ import { Close } from "@mui/icons-material";
 
 import { props } from "./props";
 
+/**
+ * @param {{ target: THREE.Light }} props
+ */
 function LightController({ target }) {
     const { type, name } = target;
 
@@ -18,6 +21,7 @@ function LightController({ target }) {
             <Close />
         </IconButton>
     );
+
     const propList = props[type];
     if (type === "DirectionalLight") {
         propList.find(prop => prop.propName === "position").onChange = () =>

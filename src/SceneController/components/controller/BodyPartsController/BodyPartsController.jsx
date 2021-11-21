@@ -4,6 +4,9 @@ import Accordion from "components/Accordion";
 import "./BodyPartsController.css";
 import MeshVisibilityController from "./MeshVisibilityController";
 
+/**
+ * @param {{ target: DLModel }} props
+ */
 function BodyPartsController({ target }) {
     const { parts } = target;
     if (!parts) return null;
@@ -15,6 +18,7 @@ function BodyPartsController({ target }) {
             {list.map(part => (
                 <PartController target={parts[part]} name={part} />
             ))}
+
             {others.length && (
                 <Accordion>
                     <>{list.length ? "Other Parts" : "Body Parts"}</>

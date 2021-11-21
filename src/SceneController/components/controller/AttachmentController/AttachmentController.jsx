@@ -20,7 +20,11 @@ function AttachmentController({ target }) {
     return (
         <div className="AttachmentController">
             {hasWeapon && (
-                <Button startIcon={weaponIcon} onClick={addWeapon}>
+                <Button
+                    title="Add Weapon"
+                    startIcon={weaponIcon}
+                    onClick={addWeapon}
+                >
                     Add Weapon
                 </Button>
             )}

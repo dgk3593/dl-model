@@ -1,7 +1,7 @@
 import viewer from "@/viewer";
 
 /**
- * @type {import("components/Setters/Setters").PropDetails[]}
+ * @type {import("components/Setters").PropDetails[]}
  */
 export const cameraProp = [
     {

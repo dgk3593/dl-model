@@ -18,3 +18,15 @@ export const setterMap = {
 };
 
 export { default } from "./Setters";
+
+/**
+ * @typedef {{
+ *      propName: string,
+ *      label?: string,
+ *      title?: string,
+ *      type: 'string' | 'number' | 'boolean' | 'slider' | 'color' | 'select' | 'vector',
+ *      onBeforeChange?: (newValue: *) => void,
+ *      onChange?: (newValue: *) => void,
+ *      [key: string]: *
+ * }} PropDetails
+ */

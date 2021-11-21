@@ -5,7 +5,7 @@ const toneMappingOptions = Object.keys(toneMappings).map(label => ({
     label,
 }));
 /**
- * @type {import("components/Setters/Setters").PropDetails[]}
+ * @type {import("components/Setters").PropDetails[]}
  */
 export const displayProp = [
     {
