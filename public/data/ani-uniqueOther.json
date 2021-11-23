@@ -12,6 +12,16 @@
                 ]
             },
             {
+                "name": "Nedrick",
+                "user": "c100039_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0870001_090_02>A0870001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Summer Ieyasu",
                 "user": "c110313_03",
                 "animations": [
