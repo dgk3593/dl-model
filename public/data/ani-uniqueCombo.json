@@ -130,6 +130,18 @@
                 "code": "AXE_CMB_01_11033402&dur=50>AXE_CMB_02_11033402&dur=50>AXE_CMB_03_11033402&dur=50>AXE_CMB_04_11033402&dur=50>AXE_CMB_05_11033402"
             },
             {
+                "user": "c100042_02",
+                "name": "Gala Gatov",
+                "subtitle": "Axe",
+                "code": "AXE_CMB_01_10004202&dur=50>AXE_CMB_02_10004202&dur=50>AXE_CMB_03_10004202&dur=50>AXE_CMB_04_10004202&dur=50>AXE_CMB_05_10004202"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Gala Gatov",
+                "subtitle": "Dual Swords",
+                "code": "AXE_CMB_A_01_10004202&dur=50>AXE_CMB_A_02_10004202&dur=50>AXE_CMB_A_03_10004202&dur=50>AXE_CMB_A_04_10004202&dur=50>AXE_CMB_A_05_10004202&dur=50>AXE_CMB_A_06_10004202&dur=50>AXE_CMB_A_07_10004202"
+            },
+            {
                 "user": "c110380_01",
                 "name": "Sophie",
                 "code": "AXE_CMB_01_11038001&dur=50>AXE_CMB_02_11038001&dur=50>AXE_CMB_03_11038001&dur=50>AXE_CMB_04_11038001&dur=50>AXE_CMB_05_11038001&dur=50>AXE_CMB_06_11038001"
