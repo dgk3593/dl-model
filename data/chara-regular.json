@@ -1,12 +1,28 @@
 {
     "data": [
         {
-            "id": "c110398_01",
-            "name": "Humanoid Jupiter",
-            "title": "Capricious Luminary",
+            "id": "c100042_02",
+            "name": "Gala Gatov",
+            "title": "The Blazewolf",
             "rarity": "5",
-            "element": "Light",
-            "weapon": "Blade"
+            "element": "Flame",
+            "weapon": "Axe"
+        },
+        {
+            "id": "c110365_03",
+            "name": "Dragonyule Nevin",
+            "title": "The Wintry Wing of Revelation",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Dagger"
+        },
+        {
+            "id": "c110367_03",
+            "name": "Dragonyule Ilia",
+            "title": "",
+            "rarity": "5",
+            "element": "Flame",
+            "weapon": "Manacaster"
         },
         {
             "id": "c110341_01",
@@ -527,6 +543,14 @@
             "rarity": "5",
             "element": "Light",
             "weapon": "Staff"
+        },
+        {
+            "id": "c110398_01",
+            "name": "Humanoid Jupiter",
+            "title": "Capricious Luminary",
+            "rarity": "5",
+            "element": "Light",
+            "weapon": "Blade"
         },
         {
             "id": "c110385_01",

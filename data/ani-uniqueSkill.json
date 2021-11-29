@@ -712,6 +712,18 @@
                 "icon": "Icon_Skill_152"
             },
             {
+                "user": "c110365_02",
+                "name": "Stellar Knives",
+                "code": "DAG_SKL_01_01_11036502",
+                "icon": "Icon_Skill_298"
+            },
+            {
+                "user": "c110365_02",
+                "name": "Vertex Apocalypse",
+                "code": "DAG_SKL_02_01_11036502",
+                "icon": "Icon_Skill_300"
+            },
+            {
                 "user": "c110377_01",
                 "name": "Marking Shot",
                 "code": "DAG_SKL_01_01_11037701",
@@ -833,6 +845,49 @@
                 "name": "Circlet of Exaltation",
                 "code": "AXE_SKL_02_01_11033402",
                 "icon": "Icon_Skill_260"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Charge Blade",
+                "code": "AXE_SKL_01_01_10004202",
+                "icon": "Icon_Skill_292"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Crimson Rush",
+                "code": "AXE_SKL_03_01_10004202>AXE_SKL_03_02_10004202>AXE_SKL_03_03_10004202",
+                "icon": "Icon_Skill_293"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Double Flame",
+                "code": "AXE_SKL_03_01_10004202>AXE_SKL_03_02_10004202>AXE_SKL_03_03_10004202",
+                "icon": "Icon_Skill_294"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Counter Fang",
+                "subtitle": "No Counter",
+                "code": "AXE_SKL_02_01_10004202>AXE_SKL_02_02_10004202>AXE_SKL_02_04_10004202",
+                "icon": "Icon_Skill_295"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Counter Fang",
+                "code": "AXE_SKL_02_01_10004202>AXE_SKL_02_02_10004202>AXE_SKL_02_03_10004202",
+                "icon": "Icon_Skill_295"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Azure Raid",
+                "code": "AXE_SKL_05_01_10004202>AXE_SKL_05_02_10004202",
+                "icon": "Icon_Skill_296"
+            },
+            {
+                "user": "c100042_02",
+                "name": "Dual Demolition",
+                "code": "AXE_SKL_05_01_10004202>AXE_SKL_05_02_10004202",
+                "icon": "Icon_Skill_297"
             },
             {
                 "user": "c110027_02",
