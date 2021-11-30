@@ -1,4 +1,3 @@
-![Logo](https://dgk3593.github.io/dl-model/logo192.png)
 <img src="https://dgk3593.github.io/dl-model/logo192.png" title="Dragalia Lost Model Viewer" alt="Logo" width="128" height="128" />
 
 # Dragalia Lost Model Viewer
@@ -34,7 +33,7 @@ A web app to view 3D models from the game Dragalia Lost
 
 -   [@dgk3593](https://www.github.com/dgk3593)
 
-[!["Buy me a coffee"](https://cdn.ko-fi.com/cdn/kofi5.png?v=2 | height = 48)](https://ko-fi.com/L4L83VOAP)
+<a href="https://ko-fi.com/L4L83VOAP" title="Buy me a coffee"><img src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2" alt="Ko-fi" height="48" /></a>
 
 ## Sample terminal programs:
 
