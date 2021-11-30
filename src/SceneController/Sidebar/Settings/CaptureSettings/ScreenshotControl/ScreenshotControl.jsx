@@ -3,12 +3,18 @@ import { useActiveModel, useAppState } from "@/state";
 import Accordion from "components/Accordion";
 import { Button } from "@mui/material";
 import Setters from "components/Setters";
-import { Camera as CameraIcon, Download, Gif } from "@mui/icons-material";
+import {
+    Camera as CameraIcon,
+    Download,
+    Gif,
+    ContentCopy,
+} from "@mui/icons-material";
 
 import viewer from "@/viewer";
 import { props } from "./props";
 import { saveAs } from "file-saver";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
+import { dataUrlToBlob } from "@/SceneController/helper/dataUrlToBlob";
 
 import "../../SettingGroup.css";
 
@@ -16,9 +22,11 @@ function ScreenshotControl() {
     const { setLoadingMsg } = useAppState();
     const { activeModel } = useActiveModel();
     const { screenshot } = viewer;
-    const takeScreenshot = event => {
+    const copyScreenshot = async event => {
         event.stopPropagation();
-        screenshot.downloadFrame();
+        const url = screenshot.getFrame();
+        const blob = dataUrlToBlob(url);
+        navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
     };
 
     const getAllFrames = () => {
@@ -87,11 +95,11 @@ function ScreenshotControl() {
             <>
                 <div>Screenshot / GIF</div>
                 <Button
-                    onClick={takeScreenshot}
-                    title="Take screenshot"
+                    onClick={copyScreenshot}
+                    title="Copy screenshot to clipboard"
                     variant="contained"
                 >
-                    <CameraIcon />
+                    <ContentCopy />
                 </Button>
             </>
             <>

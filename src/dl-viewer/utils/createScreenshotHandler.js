@@ -60,8 +60,24 @@ export default function createScreenshotHandler(viewer) {
             );
         },
         getFrame() {
-            viewer.render();
-            return canvas.toDataURL("image/png");
+            let url;
+            const { noBackground } = this.settings;
+            const removeBG = noBackground && !viewer.postProcessing.enabled;
+            if (removeBG) {
+                let tmp = null;
+                // remove background and get screenshot
+                [scene.background, tmp] = [tmp, scene.background];
+                viewer.render();
+                url = canvas.toDataURL("image/png");
+
+                // restore background
+                [scene.background, tmp] = [tmp, scene.background];
+                viewer.render();
+            } else {
+                viewer.render();
+                url = canvas.toDataURL("image/png");
+            }
+            return url;
         },
 
         // Main thread block
