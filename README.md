@@ -1,8 +1,43 @@
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/dgk3593/dl-model)
+![Logo](https://dgk3593.github.io/dl-model/logo192.png | width=128)
 
-Sample terminal programs:
+# Dragalia Lost Model Viewer
 
-Gabriel and Pinon:
+A web app to view 3D models from the game Dragalia Lost
+
+## Features
+
+-   All adventurers, dragons, weapons, bosses, and more with their animations
+-   Apply arbitrary animations on any model and chaining them together
+-   Customizable body parts if available
+-   Customizable body texture (overdrive, version 1, etc.)
+-   Change facial expression of adventurer and dragon models
+-   Swap face texture between adventurer models
+-   Attach fully customizable models to any joint of another model
+-   Customizable outline and material
+-   Add aura particles
+-   Upload and use animations from FBX files
+-   Scene time control
+-   Auto rotate
+-   Download models as FBX
+-   Record video of current animation or custom record
+-   Get screenshot or get all frames of current animation with or without background
+-   Make GIF of current animation
+-   Special capture (rotate, speed draw)
+-   Customizable background (solid color, image, or skybox)
+-   Customizable lighting
+-   Post processing effects
+-   Transparent background when loaded in an iframe
+-   Add to homescreen to use like a native app on mobile
+
+## Authors
+
+-   [@dgk3593](https://www.github.com/dgk3593)
+
+[!["Buy me a coffee"](https://cdn.ko-fi.com/cdn/kofi5.png?v=2 | height = 48)](https://ko-fi.com/L4L83VOAP)
+
+## Sample terminal programs:
+
+### Gabriel and Pinon:
 
 ```js
 viewer.disposeAllModels();
@@ -27,7 +62,7 @@ pinon.scale = 1.2;
 pinon.model.quaternion.set(-0.7071, 0, 0.2185, 0.6725);
 ```
 
-Laxi and Mascula:
+### Laxi and Mascula:
 
 ```js
 viewer.disposeAllModels();
