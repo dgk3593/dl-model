@@ -1,4 +1,5 @@
-![Logo](https://dgk3593.github.io/dl-model/logo192.png | width=128)
+![Logo](https://dgk3593.github.io/dl-model/logo192.png)
+<img src="https://dgk3593.github.io/dl-model/logo192.png" title="Dragalia Lost Model Viewer" alt="Logo" width="128" height="128" />
 
 # Dragalia Lost Model Viewer
 
