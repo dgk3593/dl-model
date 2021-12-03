@@ -1047,6 +1047,13 @@
                 ]
             },
             {
+                "name": "Dragonyule Ilia",
+                "user": "c110367_03",
+                "animations": [
+                    { "name": "Roll", "code": "GUN_ROL_01_11036703" }
+                ]
+            },
+            {
                 "name": "Summer Mym",
                 "user": "c100010_10",
                 "animations": [

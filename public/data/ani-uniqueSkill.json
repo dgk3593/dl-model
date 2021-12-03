@@ -1890,6 +1890,18 @@
                 "icon": "Icon_Skill_174"
             },
             {
+                "user": "c110367_03",
+                "name": "Full Throttle Ride",
+                "code": "GUN_SKL_01_01_11036703>GUN_SKL_01_02_11036703>GUN_SKL_01_03_11036703",
+                "icon": "Icon_Skill_302"
+            },
+            {
+                "user": "c110367_03",
+                "name": "Dragonyule Boost",
+                "code": "GUN_SKL_02_01_11036703",
+                "icon": "Icon_Skill_032"
+            },
+            {
                 "user": "c110370_01",
                 "name": "Fantastic Flight",
                 "code": "GUN_SKL_01_01_11037001",
