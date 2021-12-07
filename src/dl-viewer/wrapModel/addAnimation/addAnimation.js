@@ -3,7 +3,6 @@ import { createAniChain, defaultCurrent } from "./helper";
 import { FPS } from "../../defaultParams";
 import eventDispatcher from "../../utils/eventDispatcher";
 import { setNestedProp } from "../../utils";
-import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
 const modelIdRegex = /[a-z][0-9]{6}/;
 
 export default function addAnimation(container) {
