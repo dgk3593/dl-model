@@ -1,6 +1,7 @@
 {
     "name": "dl-model",
     "version": "2.0.0",
+    "author": "dgk3593",
     "homepage": "https://dgk3593.github.io/dl-model/#/",
     "scripts": {
         "dev": "vite --host",
@@ -20,7 +21,7 @@
         "idb": "^7.0.0",
         "immer": "^9.0.7",
         "nanoid": "^3.1.30",
-        "preact": "^10.6.2",
+        "preact": "^10.6.3",
         "react-beautiful-dnd": "^13.1.0",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
