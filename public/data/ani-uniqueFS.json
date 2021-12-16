@@ -250,6 +250,12 @@
             {
                 "user": "c110399_01",
                 "name": "Ayaha & Otoha",
+                "subtitle": "Ayaha",
+                "code": "DAG_CHR_01>DAG_CHR_02>DAG_CHR_03"
+            },
+            {
+                "user": "c110399_01",
+                "name": "Ayaha & Otoha",
                 "subtitle": "Otoha",
                 "code": "CAN_CHR_A_01_11039901>CAN_CHR_A_02_11039901>CAN_CHR_A_03_11039901>CAN_CHR_A_04_11039901>CAN_CHR_A_05_11039901"
             }
