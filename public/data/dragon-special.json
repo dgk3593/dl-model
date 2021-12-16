@@ -1,6 +1,11 @@
 {
     "data": [
         {
+            "id": "d210178_01",
+            "name": "Beast Ayaha & Otoha",
+            "element": "Flame"
+        },
+        {
             "id": "d210165_01",
             "name": "Heavenly Wings Sandalphon",
             "element": "Water"

@@ -937,6 +937,15 @@
                     "BR": "Broken"
                 }
             }
+        },
+        "c110399_01": {
+            "A": {
+                "name": "Current",
+                "options": {
+                    "A": "Ayaha",
+                    "B": "Otoha"
+                }
+            }
         }
     }
 }

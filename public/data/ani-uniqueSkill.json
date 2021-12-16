@@ -1826,6 +1826,24 @@
                 "name": "Angelic Wings",
                 "code": "CAN_SKL_01_01_11039601",
                 "icon": "Icon_Skill_286"
+            },
+            {
+                "user": "c110399_01",
+                "name": "Nabe Nabe Sokonuke",
+                "code": "CAN_SKL_01_01_11039901>CAN_SKL_01_02_11039901>CAN_SKL_01_03_11039901",
+                "icon": "Icon_Skill_303"
+            },
+            {
+                "user": "c110399_01",
+                "name": "Onigokko",
+                "code": "CAN_SKL_02_01_11039901>CAN_SKL_02_02_11039901>CAN_SKL_02_03_11039901>CAN_SKL_02_04_11039901>CAN_SKL_02_05_11039901",
+                "icon": "Icon_Skill_305"
+            },
+            {
+                "user": "c110399_01",
+                "name": "Kagome Kagome",
+                "code": "CAN_SKL_03_01_11039901",
+                "icon": "Icon_Skill_306"
             }
         ],
         "Manacaster": [
