@@ -4334,7 +4334,7 @@
                 "icon": "Icon_Skill_018"
             },
             {
-                "name": "Faerie Glory ",
+                "name": "Faerie Glory",
                 "code": "D21015301_061_01",
                 "icon": "Icon_Skill_004"
             }
@@ -6441,6 +6441,31 @@
             {
                 "name": "Move Vertically",
                 "code": "H0010001_102_01>H0010001_102_02>H0010001_102_03"
+            }
+        ],
+        "d210178_01": [
+            { "name": "Idle", "code": "D21017801_000_01" },
+            { "name": "Fly", "code": "D21017801_002_01" },
+            { "name": "Fly Fast", "code": "D21017801_003_01" },
+            { "name": "Brake", "code": "D21017801_004_01" },
+            { "name": "Dash Forward", "code": "D21017801_020_01" },
+            { "name": "Transform", "code": "D21017801_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21017801_040_01&dur=28>D21017801_041_01&dur=28>D21017801_042_01>D21017801_042_02"
+            },
+            {
+                "name": "Hana Ichi Monme",
+                "code": "D21017801_060_01>D21017801_060_02>D21017801_060_03",
+                "icon": "Icon_Skill_025"
+            },
+            {
+                "name": "Dragon Strike",
+                "code": "D21017801_070_01>D21017801_070_02>D21017801_070_03>D21017801_070_04>D21017801_070_05"
+            },
+            {
+                "name": "Dragon Strike (Canceled)",
+                "code": "D21017801_070_01>D21017801_070_02>D21017801_070_99"
             }
         ]
     }

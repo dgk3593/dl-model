@@ -246,6 +246,12 @@
                 "name": "Dragonyule Lily",
                 "subtitle": "Saint Starfall Lily",
                 "code": "CAN_CHR_A_01_11025202>CAN_CHR_A_02_11025202>CAN_CHR_A_03_11025202"
+            },
+            {
+                "user": "c110399_01",
+                "name": "Ayaha & Otoha",
+                "subtitle": "Otoha",
+                "code": "CAN_CHR_A_01_11039901>CAN_CHR_A_02_11039901>CAN_CHR_A_03_11039901>CAN_CHR_A_04_11039901>CAN_CHR_A_05_11039901"
             }
         ],
         "Manacaster": [

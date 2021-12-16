@@ -1,28 +1,12 @@
 {
     "data": [
         {
-            "id": "c100042_02",
-            "name": "Gala Gatov",
-            "title": "The Blazewolf",
+            "id": "c110399_01",
+            "name": "Ayaha & Otoha",
+            "title": "Twin Wings of Freedom",
             "rarity": "5",
             "element": "Flame",
-            "weapon": "Axe"
-        },
-        {
-            "id": "c110365_03",
-            "name": "Dragonyule Nevin",
-            "title": "The Wintry Wing of Revelation",
-            "rarity": "5",
-            "element": "Wind",
-            "weapon": "Dagger"
-        },
-        {
-            "id": "c110367_03",
-            "name": "Dragonyule Ilia",
-            "title": "",
-            "rarity": "5",
-            "element": "Flame",
-            "weapon": "Manacaster"
+            "weapon": "Staff"
         },
         {
             "id": "c110341_01",
@@ -185,6 +169,14 @@
             "weapon": "Dagger"
         },
         {
+            "id": "c110367_03",
+            "name": "Dragonyule Ilia",
+            "title": "",
+            "rarity": "5",
+            "element": "Flame",
+            "weapon": "Manacaster"
+        },
+        {
             "id": "c110252_02",
             "name": "Dragonyule Lily",
             "title": "Princess Starfall",
@@ -199,6 +191,14 @@
             "rarity": "5",
             "element": "Light",
             "weapon": "Axe"
+        },
+        {
+            "id": "c110365_03",
+            "name": "Dragonyule Nevin",
+            "title": "The Wintry Wing of Revelation",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Dagger"
         },
         {
             "id": "c110307_02",
@@ -350,6 +350,14 @@
             "title": "Godly Guide",
             "rarity": "5",
             "element": "Water",
+            "weapon": "Axe"
+        },
+        {
+            "id": "c100042_02",
+            "name": "Gala Gatov",
+            "title": "The Blazewolf",
+            "rarity": "5",
+            "element": "Flame",
             "weapon": "Axe"
         },
         {

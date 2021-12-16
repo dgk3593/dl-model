@@ -1018,6 +1018,36 @@
                         "code": "A0760001_090_02>A0760001_090_01"
                     }
                 ]
+            },
+            {
+                "name": "Ayaha & Otoha",
+                "user": "c110399_01",
+                "animations": [
+                    {
+                        "name": "Ayaha Transform",
+                        "code": "CMN_CTD_01_11039901>CMN_CTD_02_11039901"
+                    },
+                    {
+                        "name": "Otoha Transform",
+                        "code": "CMN_CTD_01_11040001>CMN_CTD_02_11040001"
+                    },
+                    {
+                        "name": "Ayaha Summon",
+                        "code": "SMN_CHR_CAN_APPEAR_01_11039901>SMN_CHR_CAN_LOOP_01_11039901"
+                    },
+                    {
+                        "name": "Otoha Summon",
+                        "code": "SMN_CHR_CAN_APPEAR_01_11040001>SMN_CHR_CAN_LOOP_01_11040001"
+                    },
+                    {
+                        "name": "Ayaha Eldwater",
+                        "code": "SMN_CHR_MOON_APPEAR_02_11039901>SMN_CHR_MOON_LOOP_02_11039901"
+                    },
+                    {
+                        "name": "Otoha Eldwater",
+                        "code": "SMN_CHR_MOON_APPEAR_02_11040001>SMN_CHR_MOON_LOOP_02_11040001"
+                    }
+                ]
             }
         ],
         "Manacaster": [

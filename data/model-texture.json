@@ -904,6 +904,10 @@
             { "label": "Default", "value": "c110366_01" },
             { "label": "Version 1", "value": ">c110366_01_old" }
         ],
+        "c110399_01": [
+            { "label": "Ayaha", "value": "c110399_01" },
+            { "label": "Otoha", "value": ">c110399_02" }
+        ],
         "c120018_01": [
             { "label": "Default", "value": "c120018_01" },
             { "label": "Version 1", "value": ">c120018_01_old" }
