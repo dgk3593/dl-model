@@ -135,7 +135,7 @@ export class DLViewer {
         this.loop = createLoop(this);
         this.loop.start();
 
-        console.log(
+        console.info(
             "%cDragalia Lost Model Viewer",
             "color:yellow;background-color:black;font-size:1.5rem;text-shadow: 0 0 0.5rem white"
         );

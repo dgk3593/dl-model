@@ -46,5 +46,5 @@ export const makeGif = ({
             resolve(blob);
         });
         gif.render();
-        console.log(`Render gif from ${gif.frames.length} frames`);
+        console.info(`Render gif from ${gif.frames.length} frames`);
     });

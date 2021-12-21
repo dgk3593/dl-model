@@ -26,5 +26,5 @@ export const initAppData = async () => {
     await initModelDbPromise;
     idbAvailable && (await processPersonalAni());
 
-    console.log("Data Load Complete");
+    console.info("Data Load Complete");
 };

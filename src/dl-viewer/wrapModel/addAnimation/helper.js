@@ -191,7 +191,6 @@ export function loadAniClip(code, exSource) {
 async function loadFbxAni(clipCode) {
     const code = clipCode.replace("fbx:", "");
     const [filePath, aniName] = code.split("+");
-    console.log(filePath);
 
     const { animations } = await loadFBXModel(filePath);
     return aniName

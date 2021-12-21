@@ -54,7 +54,7 @@ const processClip = clip => {
         findFirstTrack("jGameRoot.position") || findFirstTrack("position");
 
     if (!rootPosition) {
-        console.log(`Failed ${clip.name}`);
+        console.error(`Failed ${clip.name}`);
         return clip;
     }
 

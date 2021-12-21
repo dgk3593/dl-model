@@ -9,7 +9,7 @@ export const initModelDB = async modelData => {
     const entries = Object.values(modelData).flat();
     await putItems(entries, "model");
 
-    console.log("Model DB Initialized");
+    console.info("Model DB Initialized");
 };
 
 /**

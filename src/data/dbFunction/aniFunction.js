@@ -6,7 +6,7 @@ export const initAniDB = async aniData => {
     const processed = await processAniData(aniData);
     await putItems(processed, "animation");
 
-    console.log("Animation DB Initialized");
+    console.info("Animation DB Initialized");
 };
 
 /**

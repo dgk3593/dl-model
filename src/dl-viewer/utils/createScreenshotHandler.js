@@ -88,7 +88,7 @@ export default function createScreenshotHandler(viewer) {
             const duration = model.animation.chain[currenChain].duration;
             if (duration === Infinity) return;
 
-            console.log("main thread locked");
+            console.warn("main thread locked");
 
             const loopState = viewer.loop.state;
             viewer.loop.stop();
@@ -114,7 +114,7 @@ export default function createScreenshotHandler(viewer) {
                 frames.push(frame);
             }
 
-            console.log("main thread unlocked");
+            console.info("main thread unlocked");
 
             if (noBackground) [scene.background, tmp] = [tmp, scene.background];
             if (loopState === "active") viewer.loop.start();
