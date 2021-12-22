@@ -147,7 +147,7 @@ export const getControlList = target => {
 /**
  * convert a list of control options to list of SelectBox options
  * @param {string[]} list
- * @return {import("components/SelectBox/SelectBox").SelectBoxOption[]}
+ * @return {import("components/SelectBox").SelectBoxOption[]}
  */
 export const getSelectOptions = list => list.map(value => ({ value }));
 

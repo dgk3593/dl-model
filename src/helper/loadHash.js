@@ -9,7 +9,7 @@ import { chainCodeToList } from "@/SceneController/Sidebar/ChainMaker/helper";
 import { initAniSelectState } from "./initAniSelectState";
 
 export function loadHash() {
-    const { hash } = window.location;
+    const hash = decodeURI(window.location.hash);
     const params = parseCode(hash);
     const settings = Object.fromEntries(params);
     applySettings(settings);
@@ -28,9 +28,8 @@ function applySettings(settings) {
     useAppState.setState({ showSettings: getBool(showSettings) });
 }
 
-async function loadModel(encodedHash) {
+async function loadModel(hash) {
     viewer.disposeAllModels();
-    const hash = decodeURI(encodedHash);
 
     setTimeout(async () => {
         const code = hash.includes("id=")

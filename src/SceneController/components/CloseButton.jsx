@@ -3,7 +3,7 @@ import { Close } from "@mui/icons-material";
 
 /**
  * @param {object} props
- * @param {()=> void} props.onClick
+ * @param {() => void} props.onClick
  * @param {string} [props.color]
  * @param {string} [props.title]
  */

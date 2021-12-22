@@ -29,9 +29,14 @@ function MenuButton({ children, onClick, options, title }) {
             <Button onClick={openMenu} title={title} variant="contained">
                 {children}
             </Button>
+
             <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={closeMenu}>
                 {options.map(({ value, label }) => (
-                    <MenuItem onClick={handleClick} data-value={value}>
+                    <MenuItem
+                        key={value}
+                        data-value={value}
+                        onClick={handleClick}
+                    >
                         {label ?? value}
                     </MenuItem>
                 ))}
