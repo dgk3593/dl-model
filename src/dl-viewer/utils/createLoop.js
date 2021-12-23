@@ -1,16 +1,15 @@
 export default function createLoop(viewer) {
-    let timeScale = 1;
-    let reverse = false;
-    let paused = false;
+    let timeScale = 1,
+        reverse = false,
+        paused = false;
+
     const animationLoop = () => {
         viewer.stats.begin();
 
         viewer.controls.update();
         const effectiveTimeScale = reverse ? -timeScale : timeScale;
         const dt = viewer.clock.getDelta() * effectiveTimeScale;
-        if (!paused) {
-            viewer.update(dt);
-        }
+        paused || viewer.update(dt);
         viewer.render();
 
         viewer.stats.end();

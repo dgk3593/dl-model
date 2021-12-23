@@ -56,6 +56,10 @@ export default function addAnimation(container) {
             autoplay && this.play(name);
         },
 
+        /**
+         * Play animation chain
+         * @param {string} chainName - animation chain name
+         */
         play(chainName = this.current.chainName || "default") {
             const chain = this.chain[chainName];
             if (!chain) return;

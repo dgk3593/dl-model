@@ -1,5 +1,6 @@
 import { getDateTimeString } from ".";
 import { saveAs } from "file-saver";
+import { DEFAULT_RECORD_SETTINGS } from "../defaultParams";
 
 /** list of video mime types to check for */
 const videoMimeTypes = [
@@ -22,12 +23,10 @@ export default function createRecorder(canvas) {
     const chunks = [];
     const mimeType = supportedMimeTypes[0];
 
-    const record = {
+    const recordHandler = {
         settings: {
-            frameRate: 30,
-            fileName: "ani",
+            ...DEFAULT_RECORD_SETTINGS,
             mimeType,
-            appendDate: true,
         },
         get supportedMimeTypes() {
             return supportedMimeTypes;
@@ -36,7 +35,7 @@ export default function createRecorder(canvas) {
             return this.settings.mimeType;
         },
         set mimeType(type) {
-            this.supportedMimeTypes.includes(type) &&
+            supportedMimeTypes.includes(type) &&
                 (this.settings.mimeType = type);
         },
         start() {
@@ -72,10 +71,10 @@ export default function createRecorder(canvas) {
     };
 
     ["pause", "resume", "stop"].forEach(fn => {
-        Object.defineProperty(record, fn, {
-            value: () => record.recorder?.[fn](),
+        Object.defineProperty(recordHandler, fn, {
+            value: () => recordHandler.recorder?.[fn](),
         });
     });
 
-    return record;
+    return recordHandler;
 }

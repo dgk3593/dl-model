@@ -7,8 +7,9 @@ import { downloadURL, batchDownloadPNG } from "./downloader";
 export default function createScreenshotHandler(viewer) {
     const { canvas, scene } = viewer;
 
-    const screenshot = {
+    const screenshotHandler = {
         settings: DEFAULT_SCREENSHOT_SETTINGS,
+
         /**
          * get screenshots
          * @param {number} nFrames - number of frames to capture if animation loop is active
@@ -17,15 +18,16 @@ export default function createScreenshotHandler(viewer) {
             const { noBackground, fileName } = this.settings;
             const removeBG = noBackground && !viewer.postProcessing.enabled;
 
-            let tmp;
+            let tmp = null;
+            const swapBackground = () =>
+                ([scene.background, tmp] = [tmp, scene.background]);
             if (viewer.loop.state === "inactive" || nFrames === 1) {
-                if (removeBG)
-                    [scene.background, tmp] = [null, scene.background];
+                if (removeBG) swapBackground();
 
                 viewer.render();
                 const ss = canvas.toDataURL();
 
-                if (removeBG) scene.background = tmp;
+                if (removeBG) swapBackground();
 
                 downloadURL(ss, `${fileName}.png`);
                 viewer.render();
@@ -35,23 +37,19 @@ export default function createScreenshotHandler(viewer) {
             let counter = 0;
             const ssList = [];
             removeBG &&
-                viewer.addCountedEventListener(
-                    "beforeRender",
-                    () => ([tmp, scene.background] = [scene.background, null])
-                );
+                viewer.addCountedEventListener("beforeRender", swapBackground);
 
             function getScreenshot() {
                 const screenshot = canvas.toDataURL("image/png");
                 ssList.push(screenshot);
+                if (++counter !== nFrames) return;
 
-                if (++counter === nFrames) {
-                    removeBG &&
-                        viewer.addCountedEventListener(
-                            "beforeRender",
-                            () => ([tmp, scene.background] = [null, tmp])
-                        );
-                    batchDownloadPNG(ssList, fileName);
-                }
+                removeBG &&
+                    viewer.addCountedEventListener(
+                        "beforeRender",
+                        swapBackground
+                    );
+                batchDownloadPNG(ssList, fileName);
             }
             viewer.addCountedEventListener(
                 "afterRender",
@@ -59,19 +57,19 @@ export default function createScreenshotHandler(viewer) {
                 nFrames
             );
         },
+
         getFrame() {
             let url;
             const { noBackground } = this.settings;
             const removeBG = noBackground && !viewer.postProcessing.enabled;
             if (removeBG) {
                 let tmp = null;
-                // remove background and get screenshot
-                [scene.background, tmp] = [tmp, scene.background];
+                [scene.background, tmp] = [tmp, scene.background]; // remove background and get screenshot
+
                 viewer.render();
                 url = canvas.toDataURL("image/png");
 
-                // restore background
-                [scene.background, tmp] = [tmp, scene.background];
+                [scene.background, tmp] = [tmp, scene.background]; // restore background
                 viewer.render();
             } else {
                 viewer.render();
@@ -80,7 +78,7 @@ export default function createScreenshotHandler(viewer) {
             return url;
         },
 
-        // Main thread block
+        // Will block main thread
         getAllFrames(model) {
             const currenChain = model?.animation.current.chainName;
             if (!currenChain) return;
@@ -88,7 +86,7 @@ export default function createScreenshotHandler(viewer) {
             const duration = model.animation.chain[currenChain].duration;
             if (duration === Infinity) return;
 
-            console.warn("main thread locked");
+            console.info("main thread locked");
 
             const loopState = viewer.loop.state;
             viewer.loop.stop();
@@ -106,8 +104,8 @@ export default function createScreenshotHandler(viewer) {
                 "chainFinished",
                 () => (capturing = false)
             );
-            model.animation.play();
 
+            model.animation.play();
             while (capturing) {
                 viewer.update(frameTime);
                 const frame = canvas.toDataURL();
@@ -122,11 +120,13 @@ export default function createScreenshotHandler(viewer) {
         },
 
         downloadAllFrames(modelIndex = 0) {
+            const model = viewer.model[modelIndex];
+            const frames = this.getAllFrames(model);
+
             const { fileName } = this.settings;
-            const frames = this.getAllFrames(modelIndex);
             batchDownloadPNG(frames, fileName);
         },
     };
 
-    return screenshot;
+    return screenshotHandler;
 }

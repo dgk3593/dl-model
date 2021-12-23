@@ -13,16 +13,18 @@ const helperContructor = {
 };
 
 export const createLight = type => {
-    if (!lightConstructor[type]) return null;
+    const Light = lightConstructor[type];
+    if (!Light) return null;
 
     const defaultParams = DEFAULT_LIGHT_PARAMS[type];
-    const { color, intensity, ...others } = defaultParams;
+    const { color, intensity, ...otherParams } = defaultParams;
 
-    const light = new lightConstructor[type](color, intensity);
+    const light = new Light(color, intensity);
     light.name = light.type?.replace?.("Light", "");
 
-    if (helperContructor[type]) {
-        light.helper = new helperContructor[type](light);
+    const Helper = helperContructor[type];
+    if (Helper) {
+        light.helper = new Helper(light);
         Object.defineProperty(light, "showHelper", {
             get() {
                 return light.helper.visible;
@@ -45,7 +47,7 @@ export const createLight = type => {
         },
     });
 
-    Object.entries(others).forEach(([prop, value]) => {
+    Object.entries(otherParams).forEach(([prop, value]) => {
         if (light[prop].isVector3) {
             light[prop].set(...value);
         } else {

@@ -46,9 +46,9 @@ export class DLViewer {
 
         // Light
         const light = createLightHandler(this);
-        this.light = light;
         light.add("directional");
         light.add("ambient");
+        this.light = light;
 
         // Renderer
         const renderer = createRenderer();
@@ -105,15 +105,15 @@ export class DLViewer {
                     scene,
                     camera,
                 });
-                const passData = this.passes.map(({ type, params }) => ({
+                const passList = this.passes.map(({ type, params }) => ({
                     type,
                     params: Object.entries(params),
                 }));
                 this.passes.length = 0;
 
-                const { length } = passData;
+                const { length } = passList;
                 for (let i = 0; i < length; i++) {
-                    const { type, params } = passData[i];
+                    const { type, params } = passList[i];
                     const newPass = await this.addPass(type);
                     params.forEach(
                         ([prop, value]) => void (newPass[prop] = value)
@@ -264,7 +264,7 @@ export class DLViewer {
      * @param { object } object
      */
     add(object) {
-        object.detach();
+        object.detach?.();
         this.model.push(object);
         this.scene.add(object.model);
         object.parent = this;

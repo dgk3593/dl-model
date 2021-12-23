@@ -17,12 +17,12 @@ export function createEffectComposer({
 }
 
 function createRenderTarget(method = "SMAA") {
-    const RenderTargetClass =
+    const RenderTargetContructor =
         method === "SMAA"
             ? THREE.WebGLRenderTarget
             : THREE.WebGLMultisampleRenderTarget;
 
-    return new RenderTargetClass(800, 600, {
+    return new RenderTargetContructor(800, 600, {
         minFilter: THREE.LinearFilter,
         magFilter: THREE.LinearFilter,
         format: THREE.RGBAFormat,

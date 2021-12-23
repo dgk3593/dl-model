@@ -120,7 +120,7 @@ export function getModelType(id) {
 }
 
 /**
- * @param {{}} params
+ * @param {{ [key: string]: * }} params
  * @return {THREE.WebGLRenderer}
  */
 export function createRenderer(params = defaultRendererParams) {

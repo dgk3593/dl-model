@@ -17,7 +17,8 @@ const passMap = {
  * @param {{}} params
  */
 export async function createPass(type, params) {
-    const newPass = await passMap[type.toLowerCase()]?.(params);
+    type = type.toLowerCase();
+    const newPass = await passMap[type]?.(params);
     newPass.type = type;
     newPass.name = passData[type].name;
 

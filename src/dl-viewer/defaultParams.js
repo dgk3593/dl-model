@@ -38,6 +38,12 @@ export const DEFAULT_SCREENSHOT_SETTINGS = {
     frameRate: 30,
 };
 
+export const DEFAULT_RECORD_SETTINGS = {
+    frameRate: 30,
+    fileName: "ani",
+    appendDate: true,
+};
+
 export const DEFAULT_DRAGON_FACE = 1;
 
 export const FPS = 30;

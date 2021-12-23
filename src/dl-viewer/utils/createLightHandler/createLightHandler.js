@@ -5,7 +5,7 @@ import { createLight } from "./helper";
  * @param {import('@/dl-viewer/DLViewer').DLViewer} viewer
  */
 export function createLightHandler(viewer) {
-    const light = {
+    const lightHandler = {
         list: new ArrayWithEvent(),
 
         add: type => {
@@ -17,10 +17,10 @@ export function createLightHandler(viewer) {
                 viewer.scene.add(newLight.helper);
                 newLight.helper.update();
             }
-            light.list.push(newLight);
+            lightHandler.list.push(newLight);
 
             newLight.remove = () => {
-                light.list.remove(newLight);
+                lightHandler.list.remove(newLight);
                 if (newLight.helper) {
                     newLight.parent?.remove(newLight.helper);
                     newLight.helper.dispose?.();
@@ -32,5 +32,5 @@ export function createLightHandler(viewer) {
             return newLight;
         },
     };
-    return light;
+    return lightHandler;
 }
