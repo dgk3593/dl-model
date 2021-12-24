@@ -1,6 +1,11 @@
 {
     "data": [
         {
+            "id": "d210179_01",
+            "name": "Primal Midgardsormr",
+            "element": "Wind"
+        },
+        {
             "id": "d210178_01",
             "name": "Beast Ayaha & Otoha",
             "element": "Flame"
