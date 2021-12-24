@@ -731,6 +731,16 @@
                 ]
             },
             {
+                "name": "Primal Midgardsormr (Humanoid)",
+                "user": "c110387_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0890001_090_02>A0890001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Isaac",
                 "user": "c110391_01",
                 "animations": [
