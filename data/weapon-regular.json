@@ -1,25 +1,74 @@
 {
     "data": [
         {
-            "id": "w307013_01",
-            "name": "Crystalian Protector",
+            "id": "w301161_01",
+            "name": "Primal Tempest",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w302150_01",
+            "name": "Noble Horizon",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w302150_02",
+            "name": "Noble Horizon Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w303149_01",
+            "name": "Windruler's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w304146_01",
+            "name": "Tempest's Guide",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w305156_01",
+            "name": "Gale's Aid",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w306148_01",
+            "name": "Jormungand's Wrath",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Wind"
+        },
+        {
+            "id": "w307155_01",
+            "name": "Storm Chaser",
             "weapon": "Wand",
-            "rarity": "5",
-            "element": "None"
+            "rarity": "6",
+            "element": "Wind"
         },
         {
-            "id": "w399062_01",
-            "name": "Zealous Armament",
-            "weapon": "Sword",
-            "rarity": "5",
-            "element": "None"
+            "id": "w308147_01",
+            "name": "Squallruler",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Wind"
         },
         {
-            "id": "w399063_01",
-            "name": "Wise Defender",
-            "weapon": "Sword",
-            "rarity": "5",
-            "element": "None"
+            "id": "w309043_01",
+            "name": "Cyclone Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Wind"
         },
         {
             "id": "w301138_01",
@@ -3144,6 +3193,20 @@
             "element": "None"
         },
         {
+            "id": "w399062_01",
+            "name": "Zealous Armament",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399063_01",
+            "name": "Wise Defender",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w302014_01",
             "name": "Dane's Favor",
             "weapon": "Blade",
@@ -3531,6 +3594,13 @@
         {
             "id": "w397005_01",
             "name": "Memento Futurum",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w307013_01",
+            "name": "Crystalian Protector",
             "weapon": "Wand",
             "rarity": "5",
             "element": "None"
