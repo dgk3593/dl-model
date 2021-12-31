@@ -956,6 +956,15 @@
                     "C": "Bald"
                 }
             }
+        },
+        "r0150001": {
+            "A": {
+                "name": "Moon",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
         }
     }
 }

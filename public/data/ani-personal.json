@@ -6557,6 +6557,32 @@
                 "icon": "Icon_Skill_025",
                 "code": "D21016701_060_01>D21016701_060_02"
             }
+        ],
+        "r0150001": [
+            { "name": "Idle", "code": "R0150001_000_01" },
+            { "name": "Move Forward", "code": "R0150001_002_01" },
+            { "name": "Dash Forward", "code": "R0150001_020_01" },
+            { "name": "Defeated", "code": "R0150001_011_01>R0150001_011_02" },
+            { "name": "Frozen", "code": "R0150001_013_01" },
+            { "name": "Right Hit", "code": "R0150001_040_01" },
+            { "name": "Double Hit", "code": "R0150001_041_01" },
+            {
+                "name": "Moon Broken",
+                "code": "R0150001_070_01>R0150001_070_02>R0150001_070_03"
+            },
+            { "name": "Broken", "code": "R0150001_081_01>R0150001_081_02" },
+            { "name": "Recover from Broken", "code": "R0150001_081_03" },
+            { "name": "Raid Intro", "code": "R0150001_90_03>R0150001_90_04" },
+            {
+                "name": "Attack",
+                "code": "R0150001_100_01>R0150001_100_02>R0150001_100_03"
+            },
+            {
+                "name": "Charge Attack",
+                "code": "R0150001_101_01>R0150001_101_02>R0150001_101_03>R0150001_101_04>R0150001_101_05"
+            },
+            { "name": "Move Right Hand", "code": "R0150001_102_01" },
+            { "name": "Buff", "code": "R0150001_103_01" }
         ]
     }
 }
