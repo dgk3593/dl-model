@@ -147,6 +147,11 @@
                 "user": "c110380_01",
                 "name": "Sophie",
                 "code": "AXE_CHR_01_11038001>AXE_CHR_02_11038001>AXE_CHR_03_11038001"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Shingen",
+                "code": "AXE_CHR_01_11040101>AXE_CHR_02_11040101>AXE_CHR_03_11040101"
             }
         ],
         "Lance": [
