@@ -19,7 +19,7 @@ const BUTTON_WIDTH = 160;
  * @param {React.MouseEventHandler} props.onClick
  */
 function MeshFaceButton({ id, uvList, onClick, part }) {
-    const texturePath = getTexturePath(id);
+    const texturePath = getTexturePath(id).replace(">", "");
 
     const [u0Min, u0Max] = uvList[0].u;
     const [v0Min, v0Max] = uvList[0].v;
