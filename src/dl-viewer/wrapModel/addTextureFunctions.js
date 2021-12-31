@@ -96,5 +96,8 @@ export default function addTextureFunctions(container) {
 /** get the name of the default texture file of a model from id
  * @param {string} id - model id
  */
-export const getDefaultTexture = id =>
-    id.match(/_[0-9]{2}/) || id.startsWith("h") ? id : `>${id}_01`;
+export const getDefaultTexture = id => {
+    if (id.startsWith("r")) return `${id}_01`;
+
+    return id.match(/_[0-9]{2}/) || id.startsWith("h") ? id : `>${id}_01`;
+};
