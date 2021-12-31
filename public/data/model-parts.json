@@ -946,6 +946,16 @@
                     "B": "Otoha"
                 }
             }
+        },
+        "c110402_01": {
+            "A": {
+                "name": "Hair",
+                "options": {
+                    "A": "Short",
+                    "B": "Long",
+                    "C": "Bald"
+                }
+            }
         }
     }
 }

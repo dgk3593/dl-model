@@ -1,72 +1,9 @@
 {
     "data": [
         {
-            "id": "w301020_01",
-            "name": "Burning Shamshir",
-            "weapon": "Sword",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w302016_01",
-            "name": "Sword of Perseverance",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w302016_02",
-            "name": "Sword of Perseverance Sheath",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w303016_01",
-            "name": "Dazzling Star",
-            "weapon": "Dagger",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w304024_01",
-            "name": "Inquisitor's Mercy",
+            "id": "w399064_01",
+            "name": "Victor's Harmony",
             "weapon": "Axe",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w305025_01",
-            "name": "Khakkhara Lance",
-            "weapon": "Lance",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w306022_01",
-            "name": "Raptor's Beak",
-            "weapon": "Bow",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w307019_01",
-            "name": "Grim Apparatus",
-            "weapon": "Wand",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w308017_01",
-            "name": "Fate's Fulcrum",
-            "weapon": "Staff",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w395001_01",
-            "name": "Magnum Opus",
-            "weapon": "Manacaster",
             "rarity": "5",
             "element": "None"
         },
@@ -3277,6 +3214,13 @@
             "element": "None"
         },
         {
+            "id": "w301020_01",
+            "name": "Burning Shamshir",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w302014_01",
             "name": "Dane's Favor",
             "weapon": "Blade",
@@ -3417,6 +3361,20 @@
             "element": "None"
         },
         {
+            "id": "w302016_01",
+            "name": "Sword of Perseverance",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302016_02",
+            "name": "Sword of Perseverance Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w303035_01",
             "name": "Kris Naga",
             "weapon": "Dagger",
@@ -3473,6 +3431,13 @@
             "element": "None"
         },
         {
+            "id": "w303016_01",
+            "name": "Dazzling Star",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w304012_01",
             "name": "Victory Axe",
             "weapon": "Axe",
@@ -3517,6 +3482,13 @@
         {
             "id": "w304020_01",
             "name": "Rainbow Axe",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304024_01",
+            "name": "Inquisitor's Mercy",
             "weapon": "Axe",
             "rarity": "5",
             "element": "None"
@@ -3571,6 +3543,13 @@
             "element": "None"
         },
         {
+            "id": "w305025_01",
+            "name": "Khakkhara Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w306015_01",
             "name": "Nitralica's Koto",
             "weapon": "Bow",
@@ -3615,6 +3594,13 @@
         {
             "id": "w306021_01",
             "name": "Eternal Bloom",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306022_01",
+            "name": "Raptor's Beak",
             "weapon": "Bow",
             "rarity": "5",
             "element": "None"
@@ -3676,6 +3662,13 @@
             "element": "None"
         },
         {
+            "id": "w307019_01",
+            "name": "Grim Apparatus",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w308030_01",
             "name": "Cane of Soul's Repose",
             "weapon": "Staff",
@@ -3711,6 +3704,13 @@
             "element": "None"
         },
         {
+            "id": "w308017_01",
+            "name": "Fate's Fulcrum",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w399023_01",
             "name": "Replica Machine Gun",
             "weapon": "Manacaster",
@@ -3727,6 +3727,13 @@
         {
             "id": "w396002_01",
             "name": "Worthless Shot",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w395001_01",
+            "name": "Magnum Opus",
             "weapon": "Manacaster",
             "rarity": "5",
             "element": "None"

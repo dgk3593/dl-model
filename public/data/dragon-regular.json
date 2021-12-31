@@ -1,11 +1,18 @@
 {
     "data": [
         {
-            "id": "d210163_01",
-            "name": "Uriel",
-            "title": "Angel of Judgment",
+            "id": "d210167_01",
+            "name": "Gala Beast Ciella",
+            "title": "Wings of Judgment",
             "rarity": "5",
-            "element": "Flame"
+            "element": "Water"
+        },
+        {
+            "id": "d210169_01",
+            "name": "Fudo Myo-o",
+            "title": "Unwavering Guardian",
+            "rarity": "5",
+            "element": "Wind"
         },
         {
             "id": "d210117_01",
@@ -650,6 +657,13 @@
             "title": "Ravishing Rakshesha",
             "rarity": "5",
             "element": "Light"
+        },
+        {
+            "id": "d210163_01",
+            "name": "Uriel",
+            "title": "Angel of Judgment",
+            "rarity": "5",
+            "element": "Flame"
         },
         {
             "id": "d210098_01",

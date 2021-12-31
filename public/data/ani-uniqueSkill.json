@@ -1033,6 +1033,39 @@
                 "name": "Armed 24: Astroburst",
                 "code": "AXE_SKL_02_01_11038301>AXE_SKL_02_02_11038301>AXE_SKL_02_03_11038301",
                 "icon": "Icon_Skill_221"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Furinkazan",
+                "code": "AXE_SKL_01_01_11040101>AXE_SKL_01_02_11040101>AXE_SKL_01_03_11040101>AXE_SKL_01_07_11040101",
+                "icon": "Icon_Skill_307"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Furinkazan",
+                "subtitle": "1 Veteran's Mettle",
+                "code": "AXE_SKL_01_01_11040101>AXE_SKL_01_02_11040101>AXE_SKL_01_03_11040101>AXE_SKL_01_04_11040101",
+                "icon": "Icon_Skill_307"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Furinkazan",
+                "subtitle": "2 Veteran's Mettle",
+                "code": "AXE_SKL_01_01_11040101>AXE_SKL_01_02_11040101>AXE_SKL_01_03_11040101>AXE_SKL_01_04_11040101&dur=50>AXE_SKL_01_05_11040101",
+                "icon": "Icon_Skill_307"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Furinkazan",
+                "subtitle": "3 Veteran's Mettle",
+                "code": "AXE_SKL_01_01_11040101>AXE_SKL_01_02_11040101>AXE_SKL_01_03_11040101>AXE_SKL_01_04_11040101&dur=50>AXE_SKL_01_05_11040101&dur=50>AXE_SKL_01_06_11040101",
+                "icon": "Icon_Skill_307"
+            },
+            {
+                "user": "c110401_01",
+                "name": "Fearless Tiger",
+                "code": "AXE_SKL_02_01_11040101",
+                "icon": "Icon_Skill_032"
             }
         ],
         "Lance": [
@@ -1289,6 +1322,31 @@
                 "name": "Spiritual Purge",
                 "code": "LAN_SKL_02_01_11035203",
                 "icon": "Icon_Skill_247"
+            },
+            {
+                "user": "c110402_01",
+                "name": "Monkey Overdrive",
+                "code": "LAN_SKL_01_01_11040201",
+                "icon": "Icon_Skill_020"
+            },
+            {
+                "user": "c110402_01",
+                "name": "Monkey Overdrive",
+                "subtitle": "Phase III",
+                "code": "LAN_SKL_03_01_11040201",
+                "icon": "Icon_Skill_308"
+            },
+            {
+                "user": "c110402_01",
+                "name": "Monkey-Tiger Wrath",
+                "code": "LAN_SKL_04_01_11040201>LAN_SKL_04_02_11040201",
+                "icon": "Icon_Skill_309"
+            },
+            {
+                "user": "c110402_01",
+                "name": "Monkey-Tiger Chaos",
+                "code": "LAN_SKL_05_01_11040201>LAN_SKL_05_02_11040201",
+                "icon": "Icon_Skill_310"
             },
             {
                 "user": "c110039_01",

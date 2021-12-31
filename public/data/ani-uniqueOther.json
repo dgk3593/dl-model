@@ -690,6 +690,33 @@
                         "code": "c11038101_05_06"
                     }
                 ]
+            },
+            {
+                "name": "Yukimura",
+                "user": "c110402_01",
+                "animations": [
+                    {
+                        "name": "Roll",
+                        "subtitle": "Fighting Spirit Unleashed",
+                        "code": "LAN_ROL_A_01_01_11040201&ts=0.5>LAN_ROL_A_01_02_11040201&ts=0.5>LAN_ROL_A_01_03_11040201&ts=0.5"
+                    },
+                    {
+                        "name": "Roll Attack",
+                        "subtitle": "Fighting Spirit Unleashed",
+                        "code": "LAN_ROL_A_01_01_11040201&ts=0.5>LAN_ROL_02_11040201"
+                    }
+                ]
+            },
+            {
+                "name": "Izumo",
+                "user": "c110403_01",
+                "animations": [
+                    {
+                        "name": "Dragondrive",
+                        "icon": "Icon_UniqueTransform_0014",
+                        "code": "CMN_CTD_01_11040301>CMN_CTD_02_11040301"
+                    }
+                ]
             }
         ],
         "Bow": [
