@@ -14,7 +14,7 @@
         "@emotion/react": "^11.7.1",
         "@emotion/styled": "^11.6.0",
         "@mui/icons-material": "^5.2.5",
-        "@mui/material": "^5.2.6",
+        "@mui/material": "^5.2.7",
         "fflate": "^0.7.2",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
