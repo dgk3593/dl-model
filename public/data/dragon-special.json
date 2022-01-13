@@ -1,6 +1,16 @@
 {
     "data": [
         {
+            "id": "d210170_01",
+            "name": "Yukata Notte Metamorphosis",
+            "element": "Light"
+        },
+        {
+            "id": "d210153_01",
+            "name": "Gala Notte Metamorphosis",
+            "element": "Wind"
+        },
+        {
             "id": "d210179_01",
             "name": "Primal Midgardsormr",
             "element": "Wind"
@@ -24,11 +34,7 @@
             "name": "Summoned Bahamut",
             "title": "Gala Zethia"
         },
-        {
-            "id": "d210153_01",
-            "name": "Gala Notte Metamorphosis",
-            "element": "Wind"
-        },
+
         {
             "id": "d210104_01",
             "name": "Brunhilda (Gala Mym)",

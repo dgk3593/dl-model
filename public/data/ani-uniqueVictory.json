@@ -184,6 +184,11 @@
                 "user": "c100009_08",
                 "name": "Gala Zena",
                 "code": "CAN_WIN_01_10000908>CAN_WIN_02_10000908"
+            },
+            {
+                "user": "c100007_10",
+                "name": "Gala Zena",
+                "code": "CAN_WIN_01_10000710>CAN_WIN_02_10000710"
             }
         ],
         "Manacaster": [

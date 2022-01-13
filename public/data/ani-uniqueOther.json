@@ -1085,6 +1085,57 @@
                         "code": "SMN_CHR_MOON_APPEAR_02_11040001>SMN_CHR_MOON_LOOP_02_11040001"
                     }
                 ]
+            },
+            {
+                "name": "Yukata Notte",
+                "user": "c100007_10",
+                "animations": [
+                    {
+                        "name": "Summon",
+                        "code": "SMN_CHR_CAN_APPEAR_01_10000710>SMN_CHR_CAN_LOOP_01_10000710"
+                    },
+                    {
+                        "name": "Eldwater",
+                        "code": "SMN_CHR_MOON_APPEAR_02_11036801>SMN_CHR_MOON_LOOP_02_11036801",
+                        "icon": "Eldwater"
+                    },
+                    { "name": "Bob", "code": "CMN_MWM_03_11036101" },
+                    { "name": "Stroll", "code": "CMN_MWM_21_11036101" },
+                    {
+                        "name": "Join Room",
+                        "code": "BOW_ONT_06_11036801&ts=-0.5>CAN_ONT_04_10000710>CAN_ONT_09_10000710>CAN_ONT_10_10000710>DAG_ONT_23_10000707"
+                    },
+                    { "name": "Standby", "code": "DAG_ONT_03_10000707" },
+                    { "name": "Fly Slow", "code": "CMN_RUN_01_10000707" },
+                    { "name": "Fly Fast", "code": "CMN_RUN_05_10000710" },
+                    { "name": "Idle", "code": "CMN_INT_01_10000707" },
+                    { "name": "Dash", "code": "DAG_ROL_01_10000707" },
+                    { "name": "Dash Attack", "code": "DAG_DAS_02_10000707" },
+                    { "name": "Quick Turn", "code": "CMN_QTN_01_10000707" },
+                    {
+                        "name": "Knocked Away",
+                        "code": "CMN_BST_01_10000707>CMN_BST_02_10000707>CMN_BST_03_10000707>CMN_BST_04_10000707>CMN_BST_07_10000707"
+                    },
+                    { "name": "Fall to Ground", "code": "CMN_BST_05_10000707" },
+                    { "name": "Stand back up", "code": "CMN_BST_06_10000707" },
+                    {
+                        "name": "Ukemi",
+                        "code": "CMN_UKM_01_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707"
+                    },
+                    {
+                        "name": "Ukemi 2",
+                        "code": "CMN_UKM_11_10000707&ts=0.5>CMN_UKM_02_10000707>CMN_UKM_03_10000707"
+                    },
+                    { "name": "Stun", "code": "CMN_SWN_01_10000707" },
+                    { "name": "Frozen", "code": "CMN_FRZ_01_10000707" },
+                    { "name": "Take Damage", "code": "CMN_KNB_01_10000707" },
+                    { "name": "Die", "code": "CMN_DIE_02_10000707" },
+                    {
+                        "name": "Transform",
+                        "code": "CMN_CTD_01_10000707>CMN_CTD_02_10000707",
+                        "icon": "Icon_UniqueTransform_0015"
+                    }
+                ]
             }
         ],
         "Manacaster": [
