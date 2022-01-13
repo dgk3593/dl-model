@@ -147,6 +147,7 @@ export class DLViewer {
     initData = async () => {
         await initViewerData();
         this.dataLoaded = true;
+        this.dispatchEvent({ type: "dataLoaded" });
     };
 
     /**Background
@@ -222,7 +223,10 @@ export class DLViewer {
      * @return {Promise<DLModel>}
      */
     async loadDLModel(id = DEFAULT_MODEL) {
-        if (!this.dataLoaded) await this.initData();
+        if (!this.dataLoaded)
+            await new Promise(resolve =>
+                this.addCountedEventListener("dataLoaded", resolve)
+            );
 
         const fbxPath = DLViewer.getModelPath(id);
         const model = await loadFBXModel(fbxPath);
