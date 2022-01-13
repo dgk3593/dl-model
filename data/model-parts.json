@@ -957,6 +957,15 @@
                 }
             }
         },
+        "c100007_07": {
+            "A": {
+                "name": "Right Arm",
+                "options": {
+                    "A": "Show",
+                    "B": "Hide"
+                }
+            }
+        },
         "r0150001": {
             "A": {
                 "name": "Moon",

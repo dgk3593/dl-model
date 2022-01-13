@@ -1,28 +1,12 @@
 {
     "data": [
         {
-            "id": "c110401_01",
-            "name": "Shingen",
-            "title": "Leader of the Tiger Clan",
+            "id": "c100007_10",
+            "name": "Yukata Notte",
+            "title": "Celebrating Cutie",
             "rarity": "5",
-            "element": "Wind",
-            "weapon": "Axe"
-        },
-        {
-            "id": "c110402_01",
-            "name": "Yukimura",
-            "title": "Leader of the Monkey Clan",
-            "rarity": "5",
-            "element": "Shadow",
-            "weapon": "Lance"
-        },
-        {
-            "id": "c110403_01",
-            "name": "Izumo",
-            "title": "Emissary of Amaterasu",
-            "rarity": "5",
-            "element": "Wind",
-            "weapon": "Lance"
+            "element": "Light",
+            "weapon": "Staff"
         },
         {
             "id": "c110341_01",
@@ -657,6 +641,14 @@
             "weapon": "Bow"
         },
         {
+            "id": "c110403_01",
+            "name": "Izumo",
+            "title": "Emissary of Amaterasu",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Lance"
+        },
+        {
             "id": "c110351_01",
             "name": "Jiang Ziya",
             "title": "Quirky Qilin",
@@ -1041,6 +1033,14 @@
             "weapon": "Manacaster"
         },
         {
+            "id": "c110401_01",
+            "name": "Shingen",
+            "title": "Leader of the Tiger Clan",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Axe"
+        },
+        {
             "id": "c110380_01",
             "name": "Sophie",
             "title": "Humanity's Companion",
@@ -1367,6 +1367,14 @@
             "rarity": "5",
             "element": "Wind",
             "weapon": "Blade"
+        },
+        {
+            "id": "c110402_01",
+            "name": "Yukimura",
+            "title": "Leader of the Monkey Clan",
+            "rarity": "5",
+            "element": "Shadow",
+            "weapon": "Lance"
         },
         {
             "id": "c110362_01",

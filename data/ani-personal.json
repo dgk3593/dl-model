@@ -6583,6 +6583,28 @@
             },
             { "name": "Move Right Hand", "code": "R0150001_102_01" },
             { "name": "Buff", "code": "R0150001_103_01" }
+        ],
+        "d210170_01": [
+            { "name": "Idle", "code": "D21017001_000_01" },
+            { "name": "Fly", "code": "D21017001_002_01" },
+            { "name": "Fly Fast", "code": "D21017001_003_01" },
+            { "name": "Brake", "code": "D21017001_004_01" },
+            { "name": "Dash Forward", "code": "D21017001_020_01" },
+            { "name": "Transform", "code": "D21017001_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21017001_040_01&dur=50>D21017001_041_01&dur=50>D21017001_042_01"
+            },
+            {
+                "name": "Faerie Sunset",
+                "code": "D21017001_060_01",
+                "icon": "Icon_Skill_312"
+            },
+            {
+                "name": "Faerie Fantasy",
+                "code": "D21017001_061_01",
+                "icon": "Icon_Skill_314"
+            }
         ]
     }
 }

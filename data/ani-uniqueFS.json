@@ -263,6 +263,11 @@
                 "name": "Ayaha & Otoha",
                 "subtitle": "Otoha",
                 "code": "CAN_CHR_A_01_11039901>CAN_CHR_A_02_11039901>CAN_CHR_A_03_11039901>CAN_CHR_A_04_11039901>CAN_CHR_A_05_11039901"
+            },
+            {
+                "user": "c100007_10",
+                "name": "Yukata Notte",
+                "code": "CAN_CHR_01_10000710>CAN_CHR_02_10000710>CAN_CHR_03_10000710"
             }
         ],
         "Manacaster": [

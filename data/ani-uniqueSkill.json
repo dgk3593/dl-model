@@ -1789,6 +1789,18 @@
                 "icon": "Icon_Skill_167"
             },
             {
+                "user": "c100007_10",
+                "name": "Faerie Sunrise",
+                "code": "CAN_SKL_01_01_10000710",
+                "icon": "Icon_Skill_029"
+            },
+            {
+                "user": "c100007_10",
+                "name": "Faerie Fortune",
+                "code": "CAN_SKL_02_01_10000710",
+                "icon": "Icon_Skill_051"
+            },
+            {
                 "user": "c110043_01",
                 "name": "Radiant Savior",
                 "code": "CAN_SKL_01_01_11004301",
