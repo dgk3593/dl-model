@@ -1,9 +1,9 @@
 {
     "data": [
         {
-            "id": "w399064_01",
-            "name": "Victor's Harmony",
-            "weapon": "Axe",
+            "id": "w395003_01",
+            "name": "Drifting Future",
+            "weapon": "Staff",
             "rarity": "5",
             "element": "None"
         },
@@ -3494,6 +3494,13 @@
             "element": "None"
         },
         {
+            "id": "w399064_01",
+            "name": "Victor's Harmony",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w305015_01",
             "name": "Pactspear",
             "weapon": "Lance",
@@ -3669,6 +3676,13 @@
             "element": "None"
         },
         {
+            "id": "w308017_01",
+            "name": "Fate's Fulcrum",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w308030_01",
             "name": "Cane of Soul's Repose",
             "weapon": "Staff",
@@ -3699,13 +3713,6 @@
         {
             "id": "w308134_01",
             "name": "Black Dragon Staff",
-            "weapon": "Staff",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w308017_01",
-            "name": "Fate's Fulcrum",
             "weapon": "Staff",
             "rarity": "5",
             "element": "None"
