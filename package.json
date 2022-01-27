@@ -25,7 +25,7 @@
         "react-beautiful-dnd": "^13.1.0",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
-        "three": "^0.136.0",
+        "three": "^0.137.0",
         "zustand": "^3.6.9"
     },
     "devDependencies": {
