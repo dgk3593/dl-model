@@ -21,11 +21,11 @@
         "idb": "^7.0.0",
         "immer": "^9.0.12",
         "nanoid": "^3.2.0",
-        "preact": "^10.6.4",
+        "preact": "^10.6.5",
         "react-beautiful-dnd": "^13.1.0",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
-        "three": "^0.137.0",
+        "three": "^0.137.4",
         "zustand": "^3.6.9"
     },
     "devDependencies": {
