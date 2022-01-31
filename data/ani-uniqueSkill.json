@@ -1606,6 +1606,18 @@
                 "icon": "Icon_Skill_264"
             },
             {
+                "user": "c100017_03",
+                "name": "Follow Me, Minions!",
+                "code": "ROD_SKL_01_01_10001703",
+                "icon": "Icon_Skill_316"
+            },
+            {
+                "user": "c100017_03",
+                "name": "Protect Me, Peons!",
+                "code": "ROD_SKL_02_01_10001703",
+                "icon": "Icon_Skill_317"
+            },
+            {
                 "user": "c110009_02",
                 "name": "Chrono Trial",
                 "code": "ROD_SKL_01_01_11000902",

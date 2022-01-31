@@ -2,6 +2,16 @@
     "data": {
         "Sword": [
             {
+                "name": "Alberius",
+                "user": "c100031_03",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0940001_090_02>A0940001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Gala Leif",
                 "user": "c100018_02",
                 "animations": [
@@ -843,6 +853,17 @@
             }
         ],
         "Wand": [
+            {
+                "name": "Gala Emile",
+                "user": "c100017_03",
+                "animations": [
+                    {
+                        "name": "Dragondrive",
+                        "code": "CMN_CTD_01_10001703>CMN_CTD_02_10001703>CMN_CTD_03_10001703",
+                        "icon": "Icon_UniqueTransform_0017"
+                    }
+                ]
+            },
             {
                 "name": "Yurius",
                 "user": "c110362_01",
