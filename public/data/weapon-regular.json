@@ -1,9 +1,16 @@
 {
     "data": [
         {
-            "id": "w395003_01",
-            "name": "Drifting Future",
-            "weapon": "Staff",
+            "id": "w397008_01",
+            "name": "Royal Dominator",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399067_01",
+            "name": "Conviction Striker",
+            "weapon": "Axe",
             "rarity": "5",
             "element": "None"
         },
@@ -3713,6 +3720,13 @@
         {
             "id": "w308134_01",
             "name": "Black Dragon Staff",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w395003_01",
+            "name": "Drifting Future",
             "weapon": "Staff",
             "rarity": "5",
             "element": "None"

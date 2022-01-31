@@ -1,12 +1,28 @@
 {
     "data": [
         {
-            "id": "c100007_10",
-            "name": "Yukata Notte",
-            "title": "Celebrating Cutie",
+            "id": "c100017_03",
+            "name": "Gala Emile",
+            "title": "Artistry's Pinnacle",
             "rarity": "5",
-            "element": "Light",
-            "weapon": "Staff"
+            "element": "Water",
+            "weapon": "Wand"
+        },
+        {
+            "id": "c100014_03",
+            "name": "Phares",
+            "title": "",
+            "rarity": "5",
+            "element": "",
+            "weapon": ""
+        },
+        {
+            "id": "c100016_03",
+            "name": "Valyx",
+            "title": "",
+            "rarity": "5",
+            "element": "",
+            "weapon": ""
         },
         {
             "id": "c110341_01",
@@ -1367,6 +1383,14 @@
             "rarity": "5",
             "element": "Wind",
             "weapon": "Blade"
+        },
+        {
+            "id": "c100007_10",
+            "name": "Yukata Notte",
+            "title": "Celebrating Cutie",
+            "rarity": "5",
+            "element": "Light",
+            "weapon": "Staff"
         },
         {
             "id": "c110402_01",
