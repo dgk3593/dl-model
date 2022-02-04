@@ -7,8 +7,6 @@ const dir = `${ANIMATION_SOURCE}/todo`;
 const DOWNLOAD_LIMIT = 10;
 
 const extraTranslate = new Float32Array([0, 0, 0]);
-const rotateYbyPI = new THREE.Quaternion(0, 1, 0, 0);
-const rotateZbyPI = new THREE.Quaternion(0, 0, 1, 0);
 
 const setScale = false;
 const scale = 1;
@@ -66,6 +64,7 @@ const processClip = clip => {
 
     const rootQuaternion =
         findFirstTrack("jGameRoot.quaternion") || findFirstTrack("quaternion");
+    // rotateTrackX(rootQuaternion);
     rotateTrackY(rootQuaternion);
     // rotateTrackZ(rootQuaternion);
 
@@ -146,6 +145,8 @@ const rotatePositionY = track => {
 //         values[i * 4 + 1] -= 1;
 //     }
 // };
+
+const rotateYbyPI = new THREE.Quaternion(0, 1, 0, 0);
 /**
  * rotate animation by 180 degrees on y axis
  * @param {THREE.QuaternionKeyframeTrack} track
@@ -165,6 +166,7 @@ const rotateTrackY = track => {
     }
 };
 
+const rotateZbyPI = new THREE.Quaternion(0, 0, 1, 0);
 /**
  * rotate animation by 180 degrees on y axis
  * @param {THREE.QuaternionKeyframeTrack} track
@@ -177,6 +179,26 @@ const rotateTrackZ = track => {
             ...values.slice(i * 4, i * 4 + 4)
         );
         const newQ = currentQ.multiply(rotateZbyPI);
+        values[i * 4] = newQ.x;
+        values[i * 4 + 1] = newQ.y;
+        values[i * 4 + 2] = newQ.z;
+        values[i * 4 + 3] = newQ.w;
+    }
+};
+
+const rotateXbyPI = new THREE.Quaternion(1, 0, 0, 0);
+/**
+ * rotate animation by 180 degrees on x axis
+ * @param {THREE.QuaternionKeyframeTrack} track
+ */
+const rotateTrackX = track => {
+    const nKeyFrames = track.times.length;
+    const { values } = track;
+    for (let i = 0; i < nKeyFrames; i++) {
+        const currentQ = new THREE.Quaternion(
+            ...values.slice(i * 4, i * 4 + 4)
+        );
+        const newQ = currentQ.multiply(rotateXbyPI);
         values[i * 4] = newQ.x;
         values[i * 4 + 1] = newQ.y;
         values[i * 4 + 2] = newQ.z;
