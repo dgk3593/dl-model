@@ -409,18 +409,6 @@
                 "name": "Summon",
                 "code": "SMN_DRG_210020_01_APPEAR_01>SMN_DRG_210020_01_LOOP_01"
             },
-            {
-                "name": "Dragon's Roost (Tsukuyomi)",
-                "code": "DC_d210028_01_90_01"
-            },
-            {
-                "name": "Receive Gift (Tsukuyomi)",
-                "code": "DC_d210028_01_90_04"
-            },
-            {
-                "name": "Summon (Tsukuyomi)",
-                "code": "SMN_DRG_210028_01_APPEAR_01>SMN_DRG_210028_01_LOOP_01"
-            },
             { "name": "Idle", "code": "D21002001_000_01" },
             { "name": "Move Forward", "code": "D21002001_002_01" },
             { "name": "Move Forward (Fast)", "code": "D21002001_003_01" },
@@ -5140,6 +5128,12 @@
         "c100007_05": [{ "name": "Fly", "code": "CMN_MWM_23" }],
         "c100007_09": [{ "name": "Fly", "code": "CMN_MWM_23" }],
         "d210168_01": [
+            { "name": "Dragon's Roost", "code": "DC_d210168_01_90_01" },
+            { "name": "Receive Gift", "code": "DC_d210168_01_90_04" },
+            {
+                "name": "Summon",
+                "code": "SMN_DRG_210168_01_APPEAR_01>SMN_DRG_210168_01_LOOP_01"
+            },
             { "name": "Idle", "code": "D21016803_000_01" },
             { "name": "Fly", "code": "D21016803_002_01" },
             { "name": "Fly Fast", "code": "D21016803_003_01" },
@@ -6559,6 +6553,18 @@
             }
         ],
         "r0150001": [
+            {
+                "name": "Dragon's Roost",
+                "code": "DC_d210028_01_90_01"
+            },
+            {
+                "name": "Receive Gift",
+                "code": "DC_d210028_01_90_04"
+            },
+            {
+                "name": "Summon",
+                "code": "SMN_DRG_210028_01_APPEAR_01>SMN_DRG_210028_01_LOOP_01"
+            },
             { "name": "Idle", "code": "R0150001_000_01" },
             { "name": "Move Forward", "code": "R0150001_002_01" },
             { "name": "Dash Forward", "code": "R0150001_020_01" },

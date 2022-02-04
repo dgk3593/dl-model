@@ -599,6 +599,21 @@
                 ]
             },
             {
+                "name": "Phares",
+                "user": "c100014_03",
+                "animations": [
+                    {
+                        "name": "Dragondrive",
+                        "code": "CMN_CTD_01_10001403>CMN_CTD_02_10001403",
+                        "icon": "Icon_UniqueTransform_0016"
+                    },
+                    {
+                        "name": "Dragondrive Run",
+                        "code": "LAN_RUN_A_05_10001403"
+                    }
+                ]
+            },
+            {
                 "name": "Nadine",
                 "user": "c110357_01",
                 "animations": [

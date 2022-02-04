@@ -117,6 +117,11 @@
                 "code": "AXE_CHR_01_10000611>AXE_CHR_02_10000611"
             },
             {
+                "user": "c100016_03",
+                "name": "Valyx",
+                "code": "AXE_CHR_01_10001603>AXE_CHR_02_10001603>AXE_CHR_03_10001603>AXE_CHR_04_10001603>AXE_CHR_05_10001603"
+            },
+            {
                 "user": "c100042_02",
                 "name": "Gala Gatov",
                 "subtitle": "Dual Swords",
@@ -155,6 +160,12 @@
             }
         ],
         "Lance": [
+            {
+                "user": "c100014_03",
+                "name": "Phares",
+                "subtitle": "Dragondrive",
+                "code": "LAN_CHR_A_01_10001403>LAN_CHR_A_02_10001403>LAN_CHR_A_03_10001403"
+            },
             {
                 "user": "c110358_01",
                 "name": "Sharena",

@@ -1,16 +1,9 @@
 {
     "data": [
         {
-            "id": "d210167_01",
-            "name": "Gala Beast Ciella",
-            "title": "Wings of Judgment",
-            "rarity": "5",
-            "element": "Water"
-        },
-        {
-            "id": "d210169_01",
-            "name": "Fudo Myo-o",
-            "title": "Unwavering Guardian",
+            "id": "d210168_01",
+            "name": "Michael",
+            "title": "Angel of Lost Souls",
             "rarity": "5",
             "element": "Wind"
         },
@@ -162,6 +155,13 @@
             "element": "Wind"
         },
         {
+            "id": "d210169_01",
+            "name": "Fudo Myo-o",
+            "title": "Unwavering Guardian",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
             "id": "d210145_01",
             "name": "Gabriel",
             "title": "Blessed Angel",
@@ -181,6 +181,13 @@
             "title": "Imposing Wings of Black",
             "rarity": "5",
             "element": "Shadow"
+        },
+        {
+            "id": "d210167_01",
+            "name": "Gala Beast Ciella",
+            "title": "Wings of Judgment",
+            "rarity": "5",
+            "element": "Water"
         },
         {
             "id": "d210161_01",
@@ -424,13 +431,6 @@
             "id": "d210137_01",
             "name": "Menoetius",
             "title": "Raging Wind",
-            "rarity": "5",
-            "element": "Wind"
-        },
-        {
-            "id": "d210168_01",
-            "name": "Michael",
-            "title": "",
             "rarity": "5",
             "element": "Wind"
         },

@@ -11,18 +11,18 @@
         {
             "id": "c100014_03",
             "name": "Phares",
-            "title": "",
+            "title": "The Dawning Wind",
             "rarity": "5",
-            "element": "",
-            "weapon": ""
+            "element": "Wind",
+            "weapon": "Lance"
         },
         {
             "id": "c100016_03",
             "name": "Valyx",
-            "title": "",
+            "title": "The Unbending",
             "rarity": "5",
-            "element": "",
-            "weapon": ""
+            "element": "Light",
+            "weapon": "Axe"
         },
         {
             "id": "c110341_01",
