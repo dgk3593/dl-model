@@ -835,6 +835,18 @@
                 "icon": "Icon_Skill_066"
             },
             {
+                "user": "c100016_03",
+                "name": "Royal Blitz",
+                "code": "AXE_SKL_01_01_10001603",
+                "icon": "Icon_Skill_321"
+            },
+            {
+                "user": "c100016_03",
+                "name": "Lightning Rampage",
+                "code": "AXE_SKL_02_01_10001603",
+                "icon": "Icon_Skill_322"
+            },
+            {
                 "user": "c110334_02",
                 "name": "Overkarma",
                 "code": "AXE_SKL_01_01_11033402",
@@ -1123,6 +1135,30 @@
                 "name": "Exigent Vanquisher",
                 "code": "LAN_SKL_01_01_10001306",
                 "icon": "Icon_Skill_265"
+            },
+            {
+                "user": "c100014_03",
+                "name": "Wisdom Talisman",
+                "code": "LAN_SKL_05_01_10001403",
+                "icon": "Icon_Skill_032"
+            },
+            {
+                "user": "c100014_03",
+                "name": "Punishment of Heaven",
+                "code": "LAN_SKL_04_01_10001403",
+                "icon": "Icon_Skill_319"
+            },
+            {
+                "user": "c100014_03",
+                "name": "Oath of Bonds",
+                "code": "LAN_SKL_02_01_10001403",
+                "icon": "Icon_Skill_318"
+            },
+            {
+                "user": "c100014_03",
+                "name": "Uranus's Claw",
+                "code": "LAN_SKL_03_01_10001403",
+                "icon": "Icon_Skill_320"
             },
             {
                 "user": "c100002_01",
