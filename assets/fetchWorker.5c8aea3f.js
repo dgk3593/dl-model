@@ -1,0 +1,1 @@
+(function(){"use strict";const a=async t=>await(await fetch(t)).json(),o=async t=>(await a(t)).data,e="https://dgk3593.github.io/dl-model",c=t=>`${e}/data/${t}.json`,i=t=>{const s=t.map(o);return Promise.all(s)};addEventListener("message",async t=>{const s=t.data,n=s.map(c),r=await i(n),p=s.map((h,m)=>[h,r[m]]),d=Object.fromEntries(p);postMessage(d)})})();
