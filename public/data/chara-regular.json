@@ -1,28 +1,12 @@
 {
     "data": [
         {
-            "id": "c100017_03",
-            "name": "Gala Emile",
-            "title": "Artistry's Pinnacle",
-            "rarity": "5",
-            "element": "Water",
-            "weapon": "Wand"
-        },
-        {
-            "id": "c100014_03",
-            "name": "Phares",
-            "title": "The Dawning Wind",
+            "id": "c100008_04",
+            "name": "Nina",
+            "title": "Spirited Shopkeeper",
             "rarity": "5",
             "element": "Wind",
-            "weapon": "Lance"
-        },
-        {
-            "id": "c100016_03",
-            "name": "Valyx",
-            "title": "The Unbending",
-            "rarity": "5",
-            "element": "Light",
-            "weapon": "Axe"
+            "weapon": "Staff"
         },
         {
             "id": "c110341_01",
@@ -375,6 +359,14 @@
             "rarity": "5",
             "element": "Water",
             "weapon": "Axe"
+        },
+        {
+            "id": "c100017_03",
+            "name": "Gala Emile",
+            "title": "Artistry's Pinnacle",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Wand"
         },
         {
             "id": "c100042_02",
@@ -969,6 +961,14 @@
             "weapon": "Wand"
         },
         {
+            "id": "c100014_03",
+            "name": "Phares",
+            "title": "The Dawning Wind",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Lance"
+        },
+        {
             "id": "c110366_01",
             "name": "Pinon",
             "title": "The Wing of Purity",
@@ -1271,6 +1271,14 @@
             "rarity": "5",
             "element": "Water",
             "weapon": "Blade"
+        },
+        {
+            "id": "c100016_03",
+            "name": "Valyx",
+            "title": "The Unbending",
+            "rarity": "5",
+            "element": "Light",
+            "weapon": "Axe"
         },
         {
             "id": "c110388_01",
