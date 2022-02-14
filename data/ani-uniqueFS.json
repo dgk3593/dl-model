@@ -252,6 +252,11 @@
         ],
         "Staff": [
             {
+                "user": "c100008_04",
+                "name": "Nina",
+                "code": "CAN_CHR_A_01_10000804>CAN_CHR_A_02_10000804>CAN_CHR_A_03_10000804"
+            },
+            {
                 "user": "c100009_08",
                 "name": "Gala Zena",
                 "subtitle": "Twilight Moon",

@@ -1849,6 +1849,18 @@
                 "icon": "Icon_Skill_051"
             },
             {
+                "user": "c100008_04",
+                "name": "Pop-up Shop",
+                "code": "CAN_SKL_01_01_10000804",
+                "icon": "Icon_Skill_323"
+            },
+            {
+                "user": "c100008_04",
+                "name": "Everything Must Go!",
+                "code": "CAN_SKL_02_01_10000804",
+                "icon": "Icon_Skill_327"
+            },
+            {
                 "user": "c110043_01",
                 "name": "Radiant Savior",
                 "code": "CAN_SKL_01_01_11004301",

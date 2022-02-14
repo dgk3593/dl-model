@@ -5134,19 +5134,32 @@
                 "name": "Summon",
                 "code": "SMN_DRG_210168_01_APPEAR_01>SMN_DRG_210168_01_LOOP_01"
             },
-            { "name": "Idle", "code": "D21016803_000_01" },
-            { "name": "Fly", "code": "D21016803_002_01" },
-            { "name": "Fly Fast", "code": "D21016803_003_01" },
-            { "name": "Brake", "code": "D21016803_010_01" },
-            { "name": "Frozen", "code": "D21016803_013_01" },
-            { "name": "Idle 2", "code": "D21016803_014_01" },
-            { "name": "Dash Forward", "code": "D21016803_020_01" },
+            { "name": "Idle", "code": "D21016801_000_01" },
+            { "name": "Fly", "code": "D21016801_002_01" },
+            { "name": "Fly Fast", "code": "D21016801_003_01" },
+            { "name": "Brake", "code": "D21016801_004_01" },
+            { "name": "Dash Forward", "code": "D21016801_020_01" },
+            { "name": "Palm Strike", "code": "D21016801_030_01" },
+            {
+                "name": "Close-quarters Combo",
+                "code": "D21016801_040_01&dur=40>D21016801_041_01&dur=40>D21016801_042_01"
+            },
+            {
+                "name": "Ranged Combo",
+                "code": "D21016801_040_01&dur=40>D21016801_041_01&dur=40>D21016801_043_01"
+            },
+            {
+                "name": "Close-quarters Angelic Storm",
+                "code": "D21016801_060_01",
+                "icon": "Icon_Skill_020"
+            },
+            {
+                "name": "Ranged Angelic Storm",
+                "code": "D21016801_061_01",
+                "icon": "Icon_Skill_020"
+            },
             { "name": "Broken", "code": "D21016803_081_01>D21016803_081_02" },
             { "name": "Recover from Broken", "code": "D21016803_081_03" },
-            {
-                "name": "Charged Attack",
-                "code": "D21016803_100_01>D21016803_100_02>D21016803_100_03>D21016803_100_04>D21016803_100_05"
-            },
             {
                 "name": "Satan Raid Assist",
                 "code": "d21016801_00_01>d21016801_00_02",
