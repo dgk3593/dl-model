@@ -214,19 +214,6 @@ export function disposeMesh(mesh) {
     mesh.geometry?.dispose?.();
 }
 
-export function createRenderTarget(method = "SMAA") {
-    const RenderTargetClass =
-        method === "SMAA"
-            ? THREE.WebGLRenderTarget
-            : THREE.WebGLMultisampleRenderTarget;
-    return new RenderTargetClass(800, 600, {
-        minFilter: THREE.LinearFilter,
-        magFilter: THREE.LinearFilter,
-        format: THREE.RGBAFormat,
-        encoding: THREE.sRGBEncoding,
-    });
-}
-
 /** generate date time string */
 export const getDateTimeString = () => {
     const date = new Date();
