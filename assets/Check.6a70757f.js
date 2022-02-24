@@ -1,0 +1,1 @@
+import"./vendor.9c73d94e.js";import{j as r}from"./index.cbe7e9a1.js";import{c as o}from"./createSvgIcon.3649f2ca.js";var e=o(r("path",{d:"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"}),"Check");export{e as C};
