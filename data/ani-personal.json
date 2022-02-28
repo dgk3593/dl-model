@@ -6624,6 +6624,33 @@
                 "code": "D21017001_061_01",
                 "icon": "Icon_Skill_314"
             }
+        ],
+        "d210173_01": [
+            { "name": "Dragon's Roost", "code": "DC_d210173_01_90_01" },
+            { "name": "Receive Gift", "code": "DC_d210173_01_90_04" },
+            {
+                "name": "Summon",
+                "code": "SMN_DRG_210173_01_APPEAR_01>SMN_DRG_210173_01_LOOP_01"
+            },
+            { "name": "Idle", "code": "D21017301_000_01" },
+            { "name": "Fly", "code": "D21017301_002_01" },
+            { "name": "Fly Fast", "code": "D21017301_003_01" },
+            { "name": "Brake", "code": "D21017301_004_01" },
+            { "name": "Dash Forward", "code": "D21017301_020_01" },
+            { "name": "Transform", "code": "D21017301_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21017301_040_01&dur=50>D21017301_041_01&dur=40>D21017301_042_01"
+            },
+            {
+                "name": "Dragon Strike",
+                "code": "D21017301_070_01>D21017301_070_02>D21017301_070_03"
+            },
+            {
+                "name": "Holy Bastion",
+                "code": "D21017301_060_01",
+                "icon": "Icon_Skill_330"
+            }
         ]
     }
 }

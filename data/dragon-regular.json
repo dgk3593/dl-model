@@ -1,11 +1,11 @@
 {
     "data": [
         {
-            "id": "d210168_01",
-            "name": "Michael",
-            "title": "Angel of Lost Souls",
+            "id": "d210173_01",
+            "name": "Gala Elysium",
+            "title": "Custodian of the World",
             "rarity": "5",
-            "element": "Wind"
+            "element": "Light"
         },
         {
             "id": "d210117_01",
@@ -431,6 +431,13 @@
             "id": "d210137_01",
             "name": "Menoetius",
             "title": "Raging Wind",
+            "rarity": "5",
+            "element": "Wind"
+        },
+        {
+            "id": "d210168_01",
+            "name": "Michael",
+            "title": "Angel of Lost Souls",
             "rarity": "5",
             "element": "Wind"
         },

@@ -1,12 +1,20 @@
 {
     "data": [
         {
-            "id": "c100008_04",
-            "name": "Nina",
-            "title": "Spirited Shopkeeper",
+            "id": "c110302_04",
+            "name": "Housekeeper Pia",
+            "title": "",
             "rarity": "5",
-            "element": "Wind",
-            "weapon": "Staff"
+            "element": "",
+            "weapon": "Bow"
+        },
+        {
+            "id": "c110404_01",
+            "name": "Humanoid Zodiark",
+            "title": "Embracing Shadow",
+            "rarity": "5",
+            "element": "Shadow",
+            "weapon": "Manacaster"
         },
         {
             "id": "c110341_01",
@@ -911,6 +919,14 @@
             "rarity": "5",
             "element": "Shadow",
             "weapon": "Dagger"
+        },
+        {
+            "id": "c100008_04",
+            "name": "Nina",
+            "title": "Spirited Shopkeeper",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Staff"
         },
         {
             "id": "c110392_01",
