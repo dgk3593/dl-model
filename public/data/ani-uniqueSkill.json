@@ -2158,6 +2158,18 @@
                 "name": "Poisonblast",
                 "code": "GUN_SKL_04_01_11039401",
                 "icon": "Icon_Skill_158"
+            },
+            {
+                "user": "c110404_01",
+                "name": "Hatecluster",
+                "code": "GUN_SKL_01_01_11040401",
+                "icon": "Icon_Skill_328"
+            },
+            {
+                "user": "c110404_01",
+                "name": "Death's Torrent",
+                "code": "GUN_SKL_02_01_11040401",
+                "icon": "Icon_Skill_329"
             }
         ]
     }

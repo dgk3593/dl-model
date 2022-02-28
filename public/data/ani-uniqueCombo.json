@@ -253,6 +253,12 @@
                 "user": "c100032_07",
                 "name": "Halloween Laxi",
                 "code": "GUN_CHR_A_01>GUN_CHR_A_02>GUN_CHR_A_03_10003207"
+            },
+            {
+                "user": "c110404_01",
+                "name": "Humanoid Zodiark",
+                "subtitle": "Malevolent Rush",
+                "code": "GUN_CMB_A_01_11040401"
             }
         ]
     }

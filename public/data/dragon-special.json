@@ -41,14 +41,19 @@
             "element": "Flame"
         },
         {
+            "id": "d210160_01",
+            "name": "Mercury (Humanoid)",
+            "element": "Water"
+        },
+        {
             "id": "d210174_01",
             "name": "Jupiter (Humanoid)",
             "element": "Light"
         },
         {
-            "id": "d210160_01",
-            "name": "Mercury (Humanoid)",
-            "element": "Water"
+            "id": "d210175_01",
+            "name": "Zodiark (Humanoid)",
+            "element": "Shadow"
         },
         {
             "id": "d200001_01",
