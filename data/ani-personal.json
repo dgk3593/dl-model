@@ -6651,6 +6651,23 @@
                 "code": "D21017301_060_01",
                 "icon": "Icon_Skill_330"
             }
+        ],
+        "d210175_01": [
+            { "name": "Idle", "code": "D21000501_000_01" },
+            { "name": "Walk", "code": "D21000501_002_01" },
+            { "name": "Run", "code": "D21000501_003_01" },
+            { "name": "Brake", "code": "D21000501_004_01" },
+            { "name": "Dash Forward", "code": "D21000501_020_01" },
+            { "name": "Transform", "code": "D21000501_030_01" },
+            {
+                "name": "Combo",
+                "code": "D21000501_040_01&dur=33>D21000501_041_01&dur=25>D21000501_042_01"
+            },
+            {
+                "name": "Accursed Venom",
+                "code": "D21000501_060_01",
+                "icon": "Icon_Skill_026"
+            }
         ]
     }
 }
