@@ -5096,6 +5096,10 @@
         "d210174_01": [
             { "label": "Jupiter", "value": "d210174_01" },
             { "label": "High Jupiter", "value": ">d210174_02" }
+        ],
+        "d210175_01": [
+            { "label": "Zodiark", "value": "d210175_01" },
+            { "label": "High Zodiark", "value": ">d210175_02" }
         ]
     }
 }
