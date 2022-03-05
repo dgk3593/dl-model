@@ -27,5 +27,6 @@ export const styles = {
     },
     content: {
         padding: "0.5rem 1rem",
+        overflowX: "hidden",
     },
 };
