@@ -1578,6 +1578,25 @@
                 "subtitle": "Enhanced",
                 "code": "BOW_SKL_01_01_11031802>BOW_SKL_02_01_11031802",
                 "icon": "Icon_Skill_289"
+            },
+            {
+                "user": "c110302_04",
+                "name": "Heart of Devotion",
+                "code": "BOW_SKL_01_01_11030204",
+                "icon": "Icon_Skill_331"
+            },
+            {
+                "user": "c110302_04",
+                "name": "Shiny and New!",
+                "code": "BOW_SKL_02_01_11030204>BOW_SKL_02_02_11030204>BOW_SKL_02_03_11030204",
+                "icon": "Icon_Skill_332"
+            },
+            {
+                "user": "c110302_04",
+                "name": "Shiny and New!",
+                "subtitle": "Counter",
+                "code": "BOW_SKL_02_01_11030204>BOW_SKL_02_02_11030204>BOW_SKL_02_04_11030204",
+                "icon": "Icon_Skill_332"
             }
         ],
         "Wand": [
