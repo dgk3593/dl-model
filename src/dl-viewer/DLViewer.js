@@ -64,15 +64,11 @@ export class DLViewer {
         // Controls
         this.controls = new OrbitControls(this.camera, this.canvas);
 
-        // Antialiasing
-        const antialias = this.renderer.capabilities.isWebGL2 ? "MSAA" : "SMAA";
-
         // post-processing
         this.postProcessing = {
             enabled: false,
             passes: new ArrayWithEvent(),
             composer: createEffectComposer({
-                antialias,
                 renderer,
                 scene,
                 camera,
@@ -100,7 +96,6 @@ export class DLViewer {
 
             async refresh() {
                 this.composer = createEffectComposer({
-                    antialias,
                     renderer,
                     scene,
                     camera,
