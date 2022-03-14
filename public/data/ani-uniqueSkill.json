@@ -556,6 +556,30 @@
                 "icon": "Icon_Skill_138"
             },
             {
+                "user": "c100044_02",
+                "name": "Carmine Rush",
+                "code": "DAG_SKL_01_01_10004402>DAG_SKL_01_02_10004402>DAG_SKL_01_03_10004402>DAG_SKL_01_04_10004402>DAG_SKL_01_05_10004402",
+                "icon": "Icon_Skill_333"
+            },
+            {
+                "user": "c100044_02",
+                "name": "Bright Carmine Rush",
+                "code": "DAG_SKL_01_01_10004402>DAG_SKL_01_02_10004402>DAG_SKL_01_03_10004402>DAG_SKL_01_04_10004402>DAG_SKL_01_05_10004402",
+                "icon": "Icon_Skill_334"
+            },
+            {
+                "user": "c100044_02",
+                "name": "Flame Raid",
+                "code": "DAG_SKL_03_01_10004402>DAG_SKL_03_02_10004402",
+                "icon": "Icon_Skill_335"
+            },
+            {
+                "user": "c100044_02",
+                "name": "Savage Flame Raid",
+                "code": "DAG_SKL_03_01_10004402>DAG_SKL_03_02_10004402",
+                "icon": "Icon_Skill_336"
+            },
+            {
                 "user": "c110002_02",
                 "name": "Ninja Bride Sweep",
                 "code": "DAG_SKL_01_01_11000202",
@@ -712,13 +736,13 @@
                 "icon": "Icon_Skill_152"
             },
             {
-                "user": "c110365_02",
+                "user": "c110365_03",
                 "name": "Stellar Knives",
                 "code": "DAG_SKL_01_01_11036502",
                 "icon": "Icon_Skill_298"
             },
             {
-                "user": "c110365_02",
+                "user": "c110365_03",
                 "name": "Vertex Apocalypse",
                 "code": "DAG_SKL_02_01_11036502",
                 "icon": "Icon_Skill_300"
