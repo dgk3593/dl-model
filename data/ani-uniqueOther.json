@@ -321,6 +321,16 @@
                 ]
             },
             {
+                "name": "Sheila",
+                "user": "c100044_02",
+                "animations": [
+                    {
+                        "name": "Roll Attack",
+                        "code": "DAG_ROL_A_01_01_10004402>DAG_ROL_A_01_02_10004402>DAG_ROL_A_01_03_10004402"
+                    }
+                ]
+            },
+            {
                 "name": "Mitsuhide",
                 "user": "c110345_01",
                 "animations": [

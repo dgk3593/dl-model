@@ -1,20 +1,12 @@
 {
     "data": [
         {
-            "id": "c110302_04",
-            "name": "Housekeeper Pia",
-            "title": "Small Singing Helper",
+            "id": "c100044_02",
+            "name": "Sheila",
+            "title": "Blazing Auspex",
             "rarity": "5",
-            "element": "Water",
-            "weapon": "Bow"
-        },
-        {
-            "id": "c110404_01",
-            "name": "Humanoid Zodiark",
-            "title": "Embracing Shadow",
-            "rarity": "5",
-            "element": "Shadow",
-            "weapon": "Manacaster"
+            "element": "Flame",
+            "weapon": "Dagger"
         },
         {
             "id": "c110341_01",
@@ -577,6 +569,14 @@
             "weapon": "Staff"
         },
         {
+            "id": "c110302_04",
+            "name": "Housekeeper Pia",
+            "title": "Small Singing Helper",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Bow"
+        },
+        {
             "id": "c110398_01",
             "name": "Humanoid Jupiter",
             "title": "Capricious Luminary",
@@ -599,6 +599,14 @@
             "rarity": "5",
             "element": "Wind",
             "weapon": "Bow"
+        },
+        {
+            "id": "c110404_01",
+            "name": "Humanoid Zodiark",
+            "title": "Embracing Shadow",
+            "rarity": "5",
+            "element": "Shadow",
+            "weapon": "Manacaster"
         },
         {
             "id": "c110050_02",
