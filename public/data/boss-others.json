@@ -8,32 +8,27 @@
         {
             "id": "b0010101",
             "name": "Flame Manticore",
-            "element": "Flame",
-            "noIcon": true
+            "element": "Flame"
         },
         {
             "id": "b0010201",
             "name": "Water Manticore",
-            "element": "Water",
-            "noIcon": true
+            "element": "Water"
         },
         {
             "id": "b0010301",
             "name": "Wind Manticore",
-            "element": "Wind",
-            "noIcon": true
+            "element": "Wind"
         },
         {
             "id": "b0010401",
             "name": "Light Manticore",
-            "element": "Light",
-            "noIcon": true
+            "element": "Light"
         },
         {
             "id": "b0010501",
-            "name": "Shadow Manticore",
-            "element": "Shadow",
-            "noIcon": true
+            "name": "Manticore",
+            "element": "Shadow"
         }
     ]
 }

@@ -6838,6 +6838,366 @@
                 "name": "Prepare to Pounce",
                 "code": "B0180001_106_01>B0180001_106_02>B0180001_106_03"
             }
+        ],
+        "b0010101": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0010201": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0010301": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0010401": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0010501": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0130101": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0130201": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0130301": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0130401": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
+        ],
+        "b0130501": [
+            { "name": "Idle", "code": "B0010101_000_01" },
+            { "name": "Front Leg Kick Back", "code": "B0010101_001_01" },
+            { "name": "Howl", "code": "B0010101_001_02" },
+            { "name": "Walk", "code": "B0010101_002_01" },
+            { "name": "Flinch", "code": "B0010101_010_01" },
+            { "name": "Frozen", "code": "B0010101_013_01" },
+            { "name": "Weakened", "code": "B0010101_014_01" },
+            {
+                "name": "Sleep",
+                "code": "B0010101_080_01>B0010101_080_02>B0010101_080_03"
+            },
+            { "name": "Broken", "code": "B0010101_081_01>B0010101_081_02" },
+            { "name": "Recover from Broken", "code": "B0010101_081_03" },
+            { "name": "Boss Intro", "code": "B0010101_090_02>B0010101_090_01" },
+            { "name": "Slap", "code": "B0010101_100_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0010101_101_01>B0010101_101_02>B0010101_101_03"
+            },
+            {
+                "name": "Breath Attack",
+                "code": "B0010101_102_01>B0010101_102_02>B0010101_102_03"
+            },
+            { "name": "Tail Whip", "code": "B0010101_103_01" },
+            { "name": "Roar", "code": "B0010101_105_01" },
+            {
+                "name": "Standing Attack",
+                "code": "B0010101_106_01>B0010101_106_02>B0010101_106_03"
+            },
+            { "name": "Stand on Hind Legs", "code": "B0010101_107_01" },
+            {
+                "name": "Flying Attack",
+                "code": "B0010101_108_01>B0010101_108_02"
+            }
         ]
     }
 }

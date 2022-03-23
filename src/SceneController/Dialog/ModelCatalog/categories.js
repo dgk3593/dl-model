@@ -33,7 +33,7 @@ export const categories = [
     },
     {
         value: "boss",
-        label: "Boss",
+        label: "Enemy",
         icon: "img/appIcon/boss.png",
         options: [
             {
