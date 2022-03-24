@@ -4,6 +4,8 @@
 
 A web app to view 3D models from the game Dragalia Lost
 
+### Note: This will stay up for as long as possible
+
 ## Features
 
 -   All adventurers, dragons, weapons, bosses, and more with their animations
