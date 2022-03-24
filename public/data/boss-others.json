@@ -29,6 +29,31 @@
             "id": "b0010501",
             "name": "Manticore",
             "element": "Shadow"
+        },
+        {
+            "id": "b0020201",
+            "name": "Coastal Sentinel",
+            "element": "Water"
+        },
+        {
+            "id": "b0020301",
+            "name": "Storm Sentinel",
+            "element": "Wind"
+        },
+        {
+            "id": "b0020401",
+            "name": "Radiant Sentinel",
+            "element": "Light"
+        },
+        {
+            "id": "b0020402",
+            "name": "Halloween Sentinel",
+            "element": "Light"
+        },
+        {
+            "id": "b0020501",
+            "name": "Guardian Sentinel",
+            "element": "Shadow"
         }
     ]
 }

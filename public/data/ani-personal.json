@@ -7198,6 +7198,96 @@
                 "name": "Flying Attack",
                 "code": "B0010101_108_01>B0010101_108_02"
             }
+        ],
+        "b0020201": [
+            { "name": "Idle", "code": "B0020101_000_01" },
+            { "name": "Spin Parts", "code": "B0020101_001_01" },
+            { "name": "Defeated", "code": "B0020101_011_01" },
+            { "name": "Weakened", "code": "B0020101_014_01" },
+            { "name": "Broken", "code": "B0020101_081_01>B0020101_081_02" },
+            { "name": "Recover from Broken", "code": "B0020101_081_03" },
+            { "name": "Boss Intro", "code": "B0020101_090_02>B0020101_090_01" },
+            {
+                "name": "Spin Top",
+                "code": "B0020101_101_01>B0020101_101_02>B0020101_101_03"
+            },
+            {
+                "name": "Attack",
+                "code": "B0020101_102_01>B0020101_102_02>B0020101_102_03"
+            },
+            { "name": "Body Spin", "code": "B0020101_106_01" }
+        ],
+        "b0020301": [
+            { "name": "Idle", "code": "B0020101_000_01" },
+            { "name": "Spin Parts", "code": "B0020101_001_01" },
+            { "name": "Defeated", "code": "B0020101_011_01" },
+            { "name": "Weakened", "code": "B0020101_014_01" },
+            { "name": "Broken", "code": "B0020101_081_01>B0020101_081_02" },
+            { "name": "Recover from Broken", "code": "B0020101_081_03" },
+            { "name": "Boss Intro", "code": "B0020101_090_02>B0020101_090_01" },
+            {
+                "name": "Spin Top",
+                "code": "B0020101_101_01>B0020101_101_02>B0020101_101_03"
+            },
+            {
+                "name": "Attack",
+                "code": "B0020101_102_01>B0020101_102_02>B0020101_102_03"
+            },
+            { "name": "Body Spin", "code": "B0020101_106_01" }
+        ],
+        "b0020401": [
+            { "name": "Idle", "code": "B0020101_000_01" },
+            { "name": "Spin Parts", "code": "B0020101_001_01" },
+            { "name": "Defeated", "code": "B0020101_011_01" },
+            { "name": "Weakened", "code": "B0020101_014_01" },
+            { "name": "Broken", "code": "B0020101_081_01>B0020101_081_02" },
+            { "name": "Recover from Broken", "code": "B0020101_081_03" },
+            { "name": "Boss Intro", "code": "B0020101_090_02>B0020101_090_01" },
+            {
+                "name": "Spin Top",
+                "code": "B0020101_101_01>B0020101_101_02>B0020101_101_03"
+            },
+            {
+                "name": "Attack",
+                "code": "B0020101_102_01>B0020101_102_02>B0020101_102_03"
+            },
+            { "name": "Body Spin", "code": "B0020101_106_01" }
+        ],
+        "b0020402": [
+            { "name": "Idle", "code": "B0020101_000_01" },
+            { "name": "Spin Parts", "code": "B0020101_001_01" },
+            { "name": "Defeated", "code": "B0020101_011_01" },
+            { "name": "Weakened", "code": "B0020101_014_01" },
+            { "name": "Broken", "code": "B0020101_081_01>B0020101_081_02" },
+            { "name": "Recover from Broken", "code": "B0020101_081_03" },
+            { "name": "Boss Intro", "code": "B0020101_090_02>B0020101_090_01" },
+            {
+                "name": "Spin Top",
+                "code": "B0020101_101_01>B0020101_101_02>B0020101_101_03"
+            },
+            {
+                "name": "Attack",
+                "code": "B0020101_102_01>B0020101_102_02>B0020101_102_03"
+            },
+            { "name": "Body Spin", "code": "B0020101_106_01" }
+        ],
+        "b0020501": [
+            { "name": "Idle", "code": "B0020101_000_01" },
+            { "name": "Spin Parts", "code": "B0020101_001_01" },
+            { "name": "Defeated", "code": "B0020101_011_01" },
+            { "name": "Weakened", "code": "B0020101_014_01" },
+            { "name": "Broken", "code": "B0020101_081_01>B0020101_081_02" },
+            { "name": "Recover from Broken", "code": "B0020101_081_03" },
+            { "name": "Boss Intro", "code": "B0020101_090_02>B0020101_090_01" },
+            {
+                "name": "Spin Top",
+                "code": "B0020101_101_01>B0020101_101_02>B0020101_101_03"
+            },
+            {
+                "name": "Attack",
+                "code": "B0020101_102_01>B0020101_102_02>B0020101_102_03"
+            },
+            { "name": "Body Spin", "code": "B0020101_106_01" }
         ]
     }
 }
