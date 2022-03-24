@@ -54,6 +54,36 @@
             "id": "b0020501",
             "name": "Guardian Sentinel",
             "element": "Shadow"
+        },
+        {
+            "id": "b0030101",
+            "name": "Volcanic Cyclops",
+            "element": "Flame"
+        },
+        {
+            "id": "b0030201",
+            "name": "Aquatic Cyclops",
+            "element": "Water"
+        },
+        {
+            "id": "b0030301",
+            "name": "Cyclops",
+            "element": "Wind"
+        },
+        {
+            "id": "b0030401",
+            "name": "Shining Cyclops",
+            "element": "Light"
+        },
+        {
+            "id": "b0030501",
+            "name": "Shadow Cyclops",
+            "element": "Shadow"
+        },
+        {
+            "id": "b0030502",
+            "name": "Pumpking",
+            "element": "Shadow"
         }
     ]
 }
