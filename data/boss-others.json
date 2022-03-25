@@ -84,6 +84,21 @@
             "id": "b0030502",
             "name": "Pumpking",
             "element": "Shadow"
+        },
+        {
+            "id": "b0040201",
+            "name": "Water Troll King",
+            "element": "Water"
+        },
+        {
+            "id": "b0040301",
+            "name": "Troll King",
+            "element": "Wind"
+        },
+        {
+            "id": "b0040302",
+            "name": "Troll Smith",
+            "element": "Wind"
         }
     ]
 }
