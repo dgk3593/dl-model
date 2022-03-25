@@ -7747,6 +7747,74 @@
                 "name": "Wide Hammer Swing",
                 "code": "B0030101_107_01>B0030101_107_02>B0030101_108_03"
             }
+        ],
+        "b0070201": [
+            { "name": "Idle", "code": "B0070001_000_01" },
+            { "name": "Walk", "code": "B0070001_002_01" },
+            { "name": "Flinch", "code": "B0070001_010_01" },
+            { "name": "Defeated", "code": "B0070001_011_01" },
+            { "name": "Frozen", "code": "B0070001_013_01" },
+            { "name": "Weakened", "code": "B0070001_014_01" },
+            { "name": "Broken", "code": "B0070001_081_01>B0070001_081_02" },
+            { "name": "Recover from Broken", "code": "B0070001_081_03" },
+            { "name": "Boss Intro", "code": "B0070001_090_02>B0070001_090_01" },
+            { "name": "Claw Attack", "code": "B0070001_100_01" },
+            {
+                "name": "Spin Attack",
+                "code": "B0070001_101_01>B0070001_101_02>B0070001_101_03"
+            },
+            {
+                "name": "Charge Forward",
+                "code": "B0070001_102_01>B0070001_102_02>B0070001_102_03"
+            },
+            { "name": "Front Attack", "code": "B0070001_103_01" },
+            {
+                "name": "Claw Strike",
+                "code": "B0070001_105_01>B0070001_105_02>B0070001_105_03"
+            },
+            { "name": "Double Claw Strike", "code": "B0070001_104_01" },
+            {
+                "name": "Spit Attack",
+                "code": "B0070001_106_01>B0070001_106_02>B0070001_106_03"
+            },
+            {
+                "name": "Spit Attack 2",
+                "code": "B0070001_107_01>B0070001_107_02>B0070001_107_03"
+            }
+        ],
+        "b0070401": [
+            { "name": "Idle", "code": "B0070001_000_01" },
+            { "name": "Walk", "code": "B0070001_002_01" },
+            { "name": "Flinch", "code": "B0070001_010_01" },
+            { "name": "Defeated", "code": "B0070001_011_01" },
+            { "name": "Frozen", "code": "B0070001_013_01" },
+            { "name": "Weakened", "code": "B0070001_014_01" },
+            { "name": "Broken", "code": "B0070001_081_01>B0070001_081_02" },
+            { "name": "Recover from Broken", "code": "B0070001_081_03" },
+            { "name": "Boss Intro", "code": "B0070001_090_02>B0070001_090_01" },
+            { "name": "Claw Attack", "code": "B0070001_100_01" },
+            {
+                "name": "Spin Attack",
+                "code": "B0070001_101_01>B0070001_101_02>B0070001_101_03"
+            },
+            {
+                "name": "Charge Forward",
+                "code": "B0070001_102_01>B0070001_102_02>B0070001_102_03"
+            },
+            { "name": "Front Attack", "code": "B0070001_103_01" },
+            {
+                "name": "Claw Strike",
+                "code": "B0070001_105_01>B0070001_105_02>B0070001_105_03"
+            },
+            { "name": "Double Claw Strike", "code": "B0070001_104_01" },
+            {
+                "name": "Spit Attack",
+                "code": "B0070001_106_01>B0070001_106_02>B0070001_106_03"
+            },
+            {
+                "name": "Spit Attack 2",
+                "code": "B0070001_107_01>B0070001_107_02>B0070001_107_03"
+            }
         ]
     }
 }
