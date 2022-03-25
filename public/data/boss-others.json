@@ -99,6 +99,16 @@
             "id": "b0040302",
             "name": "Troll Smith",
             "element": "Wind"
+        },
+        {
+            "id": "b0070201",
+            "name": "Admiral Pincers",
+            "element": "Water"
+        },
+        {
+            "id": "b0070401",
+            "name": "Commodore Pincers",
+            "element": "Light"
         }
     ]
 }
