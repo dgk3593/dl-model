@@ -2,6 +2,7 @@ import { createZip } from "@/dl-viewer/utils/createZip";
 import { useActiveModel, useAppState } from "@/state";
 import viewer from "@/viewer";
 import { saveAs } from "file-saver";
+import { encode as makeApng } from "upng-js";
 
 function makeRequest(method, url) {
     return new Promise(function (resolve, reject) {
@@ -94,3 +95,40 @@ export const quickGif = () => {
         setTimeout(() => setLoadingMsg(""), 1000);
     });
 };
+
+export const quickApng = () => {
+    const { activeModel } = useActiveModel.getState();
+    const { setLoadingMsg } = useAppState.getState();
+    const { screenshot } = viewer;
+    if (!activeModel) {
+        setLoadingMsg("No model");
+        setTimeout(() => setLoadingMsg(""), 2000);
+        return;
+    }
+
+    setLoadingMsg("Generating frames...");
+    setTimeout(async () => {
+        const buffer = screenshot.getAllFramesAsArrayBuffer(activeModel);
+
+        if (!buffer) {
+            setLoadingMsg("Invalid animation");
+            setTimeout(() => setLoadingMsg(""), 2000);
+            return;
+        }
+
+        setLoadingMsg(`Creating apng from ${buffer.length} frames...`);
+        const { frameRate } = screenshot.settings;
+        const delay = Math.ceil(1000 / frameRate);
+        const dels = Array(buffer.length - 1).fill(delay);
+        const { width, height } = viewer.viewport;
+        const apngBuffer = makeApng(buffer, width, height, 0, dels);
+        const apng = new Blob([apngBuffer], { type: "image/apng" });
+
+        setLoadingMsg("Finished");
+        const fileName = activeModel.userData.name ?? activeModel.id ?? "ani";
+        saveAs(apng, `${fileName}.png`);
+        setTimeout(() => setLoadingMsg(""), 1000);
+    });
+};
+
+window.quickApng = quickApng;

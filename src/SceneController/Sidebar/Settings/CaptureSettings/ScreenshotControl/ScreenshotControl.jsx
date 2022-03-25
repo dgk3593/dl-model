@@ -3,18 +3,14 @@ import { useActiveModel, useAppState } from "@/state";
 import Accordion from "components/Accordion";
 import { Button } from "@mui/material";
 import Setters from "components/Setters";
-import {
-    Camera as CameraIcon,
-    Download,
-    Gif,
-    ContentCopy,
-} from "@mui/icons-material";
+import { Download, Gif, ContentCopy } from "@mui/icons-material";
 
 import viewer from "@/viewer";
 import { props } from "./props";
 import { saveAs } from "file-saver";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 import { dataUrlToBlob } from "@/SceneController/helper/dataUrlToBlob";
+import { encode as makeApng } from "upng-js";
 
 import "../../SettingGroup.css";
 
@@ -90,10 +86,43 @@ function ScreenshotControl() {
         });
     };
 
+    const createApng = () => {
+        if (!activeModel) {
+            setLoadingMsg("No model");
+            setTimeout(() => setLoadingMsg(""), 2000);
+            return;
+        }
+
+        setLoadingMsg("Generating frames...");
+        setTimeout(async () => {
+            const buffer = screenshot.getAllFramesAsArrayBuffer(activeModel);
+
+            if (!buffer) {
+                setLoadingMsg("Invalid animation");
+                setTimeout(() => setLoadingMsg(""), 2000);
+                return;
+            }
+
+            setLoadingMsg(`Creating apng from ${buffer.length} frames...`);
+            const { frameRate } = screenshot.settings;
+            const delay = Math.ceil(1000 / frameRate);
+            const dels = Array(buffer.length - 1).fill(delay);
+            const { width, height } = viewer.viewport;
+            const apngBuffer = makeApng(buffer, width, height, 0, dels);
+            const apng = new Blob([apngBuffer], { type: "image/apng" });
+
+            setLoadingMsg("Finished");
+            const fileName =
+                activeModel.userData.name ?? activeModel.id ?? "ani";
+            saveAs(apng, `${fileName}.png`);
+            setTimeout(() => setLoadingMsg(""), 1000);
+        });
+    };
+
     return (
         <Accordion className="SettingGroup">
             <>
-                <div>Screenshot / GIF</div>
+                <div>Screenshot/GIF/APNG</div>
                 <Button
                     onClick={copyScreenshot}
                     title="Copy screenshot to clipboard"
@@ -118,6 +147,14 @@ function ScreenshotControl() {
                     onClick={createGif}
                 >
                     Create GIF
+                </Button>
+
+                <Button
+                    onClick={createApng}
+                    title="Create APNG of current animation"
+                    startIcon={<Download />}
+                >
+                    Create APNG
                 </Button>
             </>
         </Accordion>
