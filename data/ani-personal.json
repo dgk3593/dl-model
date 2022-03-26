@@ -7815,6 +7815,114 @@
                 "name": "Spit Attack 2",
                 "code": "B0070001_107_01>B0070001_107_02>B0070001_107_03"
             }
+        ],
+        "b0140101": [
+            { "name": "Idle", "code": "B0140101_000_01" },
+            { "name": "Fly", "code": "B0140101_002_01" },
+            { "name": "Flinch", "code": "B0140101_010_01" },
+            { "name": "Defeated", "code": "B0140101_011_01" },
+            { "name": "Dash Forward", "code": "B0140101_012_07" },
+            { "name": "Drop to Ground", "code": "B0140101_012_05" },
+            { "name": "Frozen", "code": "B0140101_013_01" },
+            { "name": "Weakened", "code": "B0140101_014_01" },
+            { "name": "Quick Attack", "code": "B0140101_021_01" },
+            { "name": "Backflip", "code": "B0140101_022_01" },
+            {
+                "name": "Broken",
+                "code": "B0140101_012_01>B0140101_012_02>B0140101_012_03>B0140101_012_04>B0140101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "B0140101_012_06" },
+            { "name": "Boss Intro", "code": "B0140101_090_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0140101_100_01>B0140101_100_02>B0140101_100_03"
+            },
+            { "name": "Fly in Circle", "code": "B0140101_101_01" },
+            {
+                "name": "Roar",
+                "code": "B0140101_102_01>B0140101_102_02>B0140101_102_03"
+            }
+        ],
+        "b0140201": [
+            { "name": "Idle", "code": "B0140101_000_01" },
+            { "name": "Fly", "code": "B0140101_002_01" },
+            { "name": "Flinch", "code": "B0140101_010_01" },
+            { "name": "Defeated", "code": "B0140101_011_01" },
+            { "name": "Dash Forward", "code": "B0140101_012_07" },
+            { "name": "Drop to Ground", "code": "B0140101_012_05" },
+            { "name": "Frozen", "code": "B0140101_013_01" },
+            { "name": "Weakened", "code": "B0140101_014_01" },
+            { "name": "Quick Attack", "code": "B0140101_021_01" },
+            { "name": "Backflip", "code": "B0140101_022_01" },
+            {
+                "name": "Broken",
+                "code": "B0140101_012_01>B0140101_012_02>B0140101_012_03>B0140101_012_04>B0140101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "B0140101_012_06" },
+            { "name": "Boss Intro", "code": "B0140101_090_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0140101_100_01>B0140101_100_02>B0140101_100_03"
+            },
+            { "name": "Fly in Circle", "code": "B0140101_101_01" },
+            {
+                "name": "Roar",
+                "code": "B0140101_102_01>B0140101_102_02>B0140101_102_03"
+            }
+        ],
+        "b0140401": [
+            { "name": "Idle", "code": "B0140101_000_01" },
+            { "name": "Fly", "code": "B0140101_002_01" },
+            { "name": "Flinch", "code": "B0140101_010_01" },
+            { "name": "Defeated", "code": "B0140101_011_01" },
+            { "name": "Dash Forward", "code": "B0140101_012_07" },
+            { "name": "Drop to Ground", "code": "B0140101_012_05" },
+            { "name": "Frozen", "code": "B0140101_013_01" },
+            { "name": "Weakened", "code": "B0140101_014_01" },
+            { "name": "Quick Attack", "code": "B0140101_021_01" },
+            { "name": "Backflip", "code": "B0140101_022_01" },
+            {
+                "name": "Broken",
+                "code": "B0140101_012_01>B0140101_012_02>B0140101_012_03>B0140101_012_04>B0140101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "B0140101_012_06" },
+            { "name": "Boss Intro", "code": "B0140101_090_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0140101_100_01>B0140101_100_02>B0140101_100_03"
+            },
+            { "name": "Fly in Circle", "code": "B0140101_101_01" },
+            {
+                "name": "Roar",
+                "code": "B0140101_102_01>B0140101_102_02>B0140101_102_03"
+            }
+        ],
+        "b0140501": [
+            { "name": "Idle", "code": "B0140101_000_01" },
+            { "name": "Fly", "code": "B0140101_002_01" },
+            { "name": "Flinch", "code": "B0140101_010_01" },
+            { "name": "Defeated", "code": "B0140101_011_01" },
+            { "name": "Dash Forward", "code": "B0140101_012_07" },
+            { "name": "Drop to Ground", "code": "B0140101_012_05" },
+            { "name": "Frozen", "code": "B0140101_013_01" },
+            { "name": "Weakened", "code": "B0140101_014_01" },
+            { "name": "Quick Attack", "code": "B0140101_021_01" },
+            { "name": "Backflip", "code": "B0140101_022_01" },
+            {
+                "name": "Broken",
+                "code": "B0140101_012_01>B0140101_012_02>B0140101_012_03>B0140101_012_04>B0140101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "B0140101_012_06" },
+            { "name": "Boss Intro", "code": "B0140101_090_01" },
+            {
+                "name": "Charged Attack",
+                "code": "B0140101_100_01>B0140101_100_02>B0140101_100_03"
+            },
+            { "name": "Fly in Circle", "code": "B0140101_101_01" },
+            {
+                "name": "Roar",
+                "code": "B0140101_102_01>B0140101_102_02>B0140101_102_03"
+            }
         ]
     }
 }
