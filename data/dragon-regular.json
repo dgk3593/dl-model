@@ -1,13 +1,6 @@
 {
     "data": [
         {
-            "id": "d210173_01",
-            "name": "Gala Elysium",
-            "title": "Custodian of the World",
-            "rarity": "5",
-            "element": "Light"
-        },
-        {
             "id": "d210117_01",
             "name": "AC-011 Garland",
             "title": "Revolutionary Warrior",
@@ -207,6 +200,13 @@
             "id": "d210164_01",
             "name": "Gala Chronos Nyx",
             "title": "Sovereign of Time",
+            "rarity": "5",
+            "element": "Light"
+        },
+        {
+            "id": "d210173_01",
+            "name": "Gala Elysium",
+            "title": "Custodian of the World",
             "rarity": "5",
             "element": "Light"
         },
