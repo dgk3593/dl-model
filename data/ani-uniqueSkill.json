@@ -104,6 +104,12 @@
                 "icon": "Icon_Skill_339"
             },
             {
+                "user": "c100039_03",
+                "name": "Animus Inferno",
+                "code": "SWD_SKL_02_01_10003903",
+                "icon": "Icon_Skill_340"
+            },
+            {
                 "user": "c110022_01",
                 "name": "Majestic Tide",
                 "code": "SWD_SKL_01_01_11002201",
