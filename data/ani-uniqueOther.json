@@ -894,6 +894,17 @@
                 ]
             },
             {
+                "name": "Origa",
+                "user": "c100043_02",
+                "animations": [
+                    {
+                        "name": "Dragondrive",
+                        "code": "CMN_CTD_01_10004302>CMN_CTD_02_10004302",
+                        "icon": "Icon_UniqueTransform_0018"
+                    }
+                ]
+            },
+            {
                 "name": "Yurius",
                 "user": "c110362_01",
                 "animations": [
