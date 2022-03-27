@@ -11,7 +11,7 @@ import { searchModelByName } from "data/dbFunction";
 
 const defaultFilter = [];
 
-const buttonTypes = ["w", "b"];
+const buttonTypes = ["w", "b", "e"];
 
 /**
  * @param {string} id

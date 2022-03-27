@@ -29,7 +29,7 @@ function PersonalAniSource() {
         });
     }, [source]);
 
-    const imagePath = ["b", "w"].includes(source?.[0])
+    const imagePath = ["b", "w", "e"].includes(source?.[0])
         ? `img/icon/${source}.png`
         : `img/portrait/${source}.png`;
 
