@@ -8217,6 +8217,106 @@
                 "name": "Front Attack",
                 "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
             }
+        ],
+        "e0020101": [
+            { "name": "Idle", "code": "E0020101_002_01" },
+            { "name": "Flinch", "code": "E0020101_010_01" },
+            { "name": "Defeated", "code": "E0020101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0020101_012_01>E0020101_012_02>E0020101_012_03>E0020101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0020101_012_05" },
+            { "name": "Stand Up", "code": "E0020101_012_06" },
+            { "name": "Frozen", "code": "E0020101_013_01" },
+            { "name": "Weakened", "code": "E0020101_014_01" },
+            { "name": "Buff", "code": "E0020101_022_01" },
+            { "name": "Broken", "code": "E0020101_081_01" },
+            { "name": "Boss Intro", "code": "E0020101_002_01>E0020101_090_01" },
+            { "name": "Quick Attack", "code": "E0020101_100_01" },
+            {
+                "name": "Spit Attack",
+                "code": "E0020101_101_01>E0020101_101_02>E0020101_101_03"
+            },
+            {
+                "name": "Biting Attack",
+                "code": "E0020101_102_01>E0020101_102_02>E0020101_102_03"
+            }
+        ],
+        "e0020201": [
+            { "name": "Idle", "code": "E0020101_002_01" },
+            { "name": "Flinch", "code": "E0020101_010_01" },
+            { "name": "Defeated", "code": "E0020101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0020101_012_01>E0020101_012_02>E0020101_012_03>E0020101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0020101_012_05" },
+            { "name": "Stand Up", "code": "E0020101_012_06" },
+            { "name": "Frozen", "code": "E0020101_013_01" },
+            { "name": "Weakened", "code": "E0020101_014_01" },
+            { "name": "Buff", "code": "E0020101_022_01" },
+            { "name": "Broken", "code": "E0020101_081_01" },
+            { "name": "Boss Intro", "code": "E0020101_002_01>E0020101_090_01" },
+            { "name": "Quick Attack", "code": "E0020101_100_01" },
+            {
+                "name": "Spit Attack",
+                "code": "E0020101_101_01>E0020101_101_02>E0020101_101_03"
+            },
+            {
+                "name": "Biting Attack",
+                "code": "E0020101_102_01>E0020101_102_02>E0020101_102_03"
+            }
+        ],
+        "e0020301": [
+            { "name": "Idle", "code": "E0020101_002_01" },
+            { "name": "Flinch", "code": "E0020101_010_01" },
+            { "name": "Defeated", "code": "E0020101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0020101_012_01>E0020101_012_02>E0020101_012_03>E0020101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0020101_012_05" },
+            { "name": "Stand Up", "code": "E0020101_012_06" },
+            { "name": "Frozen", "code": "E0020101_013_01" },
+            { "name": "Weakened", "code": "E0020101_014_01" },
+            { "name": "Buff", "code": "E0020101_022_01" },
+            { "name": "Broken", "code": "E0020101_081_01" },
+            { "name": "Boss Intro", "code": "E0020101_002_01>E0020101_090_01" },
+            { "name": "Quick Attack", "code": "E0020101_100_01" },
+            {
+                "name": "Spit Attack",
+                "code": "E0020101_101_01>E0020101_101_02>E0020101_101_03"
+            },
+            {
+                "name": "Biting Attack",
+                "code": "E0020101_102_01>E0020101_102_02>E0020101_102_03"
+            }
+        ],
+        "e0020501": [
+            { "name": "Idle", "code": "E0020101_002_01" },
+            { "name": "Flinch", "code": "E0020101_010_01" },
+            { "name": "Defeated", "code": "E0020101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0020101_012_01>E0020101_012_02>E0020101_012_03>E0020101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0020101_012_05" },
+            { "name": "Stand Up", "code": "E0020101_012_06" },
+            { "name": "Frozen", "code": "E0020101_013_01" },
+            { "name": "Weakened", "code": "E0020101_014_01" },
+            { "name": "Buff", "code": "E0020101_022_01" },
+            { "name": "Broken", "code": "E0020101_081_01" },
+            { "name": "Boss Intro", "code": "E0020101_002_01>E0020101_090_01" },
+            { "name": "Quick Attack", "code": "E0020101_100_01" },
+            {
+                "name": "Spit Attack",
+                "code": "E0020101_101_01>E0020101_101_02>E0020101_101_03"
+            },
+            {
+                "name": "Biting Attack",
+                "code": "E0020101_102_01>E0020101_102_02>E0020101_102_03"
+            }
         ]
     }
 }
