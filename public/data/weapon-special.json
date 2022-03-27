@@ -1,12 +1,28 @@
 {
     "data": [
         {
-            "id": "w399065_01",
-            "name": "Shingen's Gunbai"
+            "id": "w397010_01",
+            "name": "Gala Mym's Lance"
         },
         {
             "id": "w399071_01",
             "name": "Primal Midgardsormr's Bow"
+        },
+        {
+            "id": "w399072_01",
+            "name": "Bondforged Prince's Sword"
+        },
+        {
+            "id": "w399070_01",
+            "name": "Bondforged Zethia's Staff"
+        },
+        {
+            "id": "w399069_01",
+            "name": "Gala Nedrick's Sword"
+        },
+        {
+            "id": "w399065_01",
+            "name": "Shingen's Gunbai"
         },
         {
             "id": "w399068_01",

@@ -1,6 +1,76 @@
 {
     "data": [
         {
+            "id": "w301159_01",
+            "name": "Primal Crimson",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w302148_01",
+            "name": "Raging Conflagration",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w302148_02",
+            "name": "Raging Conflagration Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w303147_01",
+            "name": "Flameruler's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w304144_01",
+            "name": "Noble Crimson Heat",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w305154_01",
+            "name": "Omniflame Lance",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w306146_01",
+            "name": "Valkyrie's Hellfire",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w307153_01",
+            "name": "Hellblaze",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w308145_01",
+            "name": "Flamerollick",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
+            "id": "w309041_01",
+            "name": "Big Bang Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Flame"
+        },
+        {
             "id": "w301161_01",
             "name": "Primal Tempest",
             "weapon": "Sword",
