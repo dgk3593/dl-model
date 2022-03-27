@@ -974,6 +974,22 @@
                     "BR": "Broken"
                 }
             }
+        },
+        "r0160001": {
+            "A": {
+                "name": "Right Arm",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            },
+            "B": {
+                "name": "Left Arm",
+                "options": {
+                    "default": "Normal",
+                    "BR": "Broken"
+                }
+            }
         }
     }
 }
