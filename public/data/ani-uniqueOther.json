@@ -594,6 +594,16 @@
         ],
         "Lance": [
             {
+                "name": "Gala Mym",
+                "user": "c100010_04",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0900001_090_02>A0900001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Summer Leonidas",
                 "user": "c100013_06",
                 "animations": [
