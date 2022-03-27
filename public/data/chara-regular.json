@@ -1,12 +1,36 @@
 {
     "data": [
         {
-            "id": "c100044_02",
-            "name": "Sheila",
-            "title": "Blazing Auspex",
+            "id": "c100039_03",
+            "name": "Gala Nedrick",
+            "title": "Shadow of Genesis",
             "rarity": "5",
-            "element": "Flame",
-            "weapon": "Dagger"
+            "element": "Shadow",
+            "weapon": "Sword"
+        },
+        {
+            "id": "c100043_02",
+            "name": "Origa",
+            "title": "Aqueous Auspex",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Wand"
+        },
+        {
+            "id": "c100001_14",
+            "name": "Bondforged Prince",
+            "title": "",
+            "rarity": "5",
+            "element": "",
+            "weapon": ""
+        },
+        {
+            "id": "c100054_02",
+            "name": "Bondforged Zethia",
+            "title": "",
+            "rarity": "5",
+            "element": "",
+            "weapon": ""
         },
         {
             "id": "c110341_01",
@@ -1071,6 +1095,14 @@
             "rarity": "5",
             "element": "Water",
             "weapon": "Manacaster"
+        },
+        {
+            "id": "c100044_02",
+            "name": "Sheila",
+            "title": "Blazing Auspex",
+            "rarity": "5",
+            "element": "Flame",
+            "weapon": "Dagger"
         },
         {
             "id": "c110401_01",

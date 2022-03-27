@@ -1,20 +1,6 @@
 {
     "data": [
         {
-            "id": "w308024_01",
-            "name": "Eternal Breeze",
-            "weapon": "Staff",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w396003_01",
-            "name": "Devotion Bow",
-            "weapon": "Bow",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
             "id": "w301161_01",
             "name": "Primal Tempest",
             "weapon": "Sword",
@@ -3627,6 +3613,13 @@
             "element": "None"
         },
         {
+            "id": "w396003_01",
+            "name": "Devotion Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w307031_01",
             "name": "Wand of the Torrent",
             "weapon": "Wand",
@@ -3734,6 +3727,13 @@
         {
             "id": "w395003_01",
             "name": "Drifting Future",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w308024_01",
+            "name": "Eternal Breeze",
             "weapon": "Staff",
             "rarity": "5",
             "element": "None"
