@@ -109,6 +109,76 @@
             "id": "b0070401",
             "name": "Commodore Pincers",
             "element": "Light"
+        },
+        {
+            "id": "e0010101",
+            "name": "Magma Slime",
+            "element": "Flame"
+        },
+        {
+            "id": "e0010102",
+            "name": "Snow Slime",
+            "element": "Flame"
+        },
+        {
+            "id": "e0010103",
+            "name": "Tropical Slime",
+            "element": "Flame"
+        },
+        {
+            "id": "e0010201",
+            "name": "Aqua Slime",
+            "element": "Water"
+        },
+        {
+            "id": "e0010301",
+            "name": "Slime",
+            "element": "Wind"
+        },
+        {
+            "id": "e0010302",
+            "name": "Valentine's Slime",
+            "element": "Wind"
+        },
+        {
+            "id": "e0010401",
+            "name": "Spark Slime",
+            "element": "Light"
+        },
+        {
+            "id": "e0010601",
+            "name": "Gold Slime",
+            "element": "Light"
+        },
+        {
+            "id": "e0010602",
+            "name": "Silver Slime",
+            "element": "Light"
+        },
+        {
+            "id": "e0010602",
+            "name": "Treasure Slime",
+            "element": "Light"
+        },
+        {
+            "id": "e0019001",
+            "name": "Pot o' Miracles",
+            "element": "Light"
+        },
+        {
+            "id": "e0010501",
+            "name": "Poison Slime",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0010502",
+            "name": "Grape Slime",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0019101",
+            "name": "Halloween Slime",
+            "element": "Shadow"
         }
     ]
 }
