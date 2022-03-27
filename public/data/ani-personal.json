@@ -7923,6 +7923,300 @@
                 "name": "Roar",
                 "code": "B0140101_102_01>B0140101_102_02>B0140101_102_03"
             }
+        ],
+        "e0010101": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010102": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010103": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010201": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010301": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010302": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010401": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010501": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010502": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010601": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010602": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0010603": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0019001": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
+        ],
+        "e0019101": [
+            { "name": "Idle", "code": "E0010101_002_01" },
+            { "name": "Flinch", "code": "E0010101_010_01" },
+            { "name": "Defeated", "code": "E0010101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0010101_012_01>E0010101_012_02>E0010101_012_03>E0010101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0010101_012_05" },
+            { "name": "Stand Up", "code": "E0010101_012_06" },
+            { "name": "Frozen", "code": "E0010101_013_01" },
+            { "name": "Weakened", "code": "E0010101_014_01" },
+            { "name": "Buff", "code": "E0010101_022_01" },
+            { "name": "Broken", "code": "E0010101_081_01" },
+            { "name": "Boss Intro", "code": "E0010101_002_01>E0010101_090_01" },
+            { "name": "Quick Attack", "code": "E0010101_100_01" },
+            {
+                "name": "Front Attack",
+                "code": "E0010101_101_01>E0010101_101_02>E0010101_101_03"
+            }
         ]
     }
 }
