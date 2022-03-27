@@ -179,6 +179,26 @@
             "id": "e0019101",
             "name": "Halloween Slime",
             "element": "Shadow"
+        },
+        {
+            "id": "e0020101",
+            "name": "Burning Basilisk",
+            "element": "Flame"
+        },
+        {
+            "id": "e0020201",
+            "name": "Drowned Basilisk",
+            "element": "Water"
+        },
+        {
+            "id": "e0020301",
+            "name": "Basilisk",
+            "element": "Wind"
+        },
+        {
+            "id": "e0020501",
+            "name": "Sinister Basilisk",
+            "element": "Shadow"
         }
     ]
 }
