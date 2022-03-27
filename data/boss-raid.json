@@ -1,6 +1,11 @@
 {
     "data": [
         {
+            "id": "r0160001",
+            "name": "True Bahamut",
+            "element": "None"
+        },
+        {
             "id": "r0150001",
             "name": "Tsukuyomi",
             "element": "None"

@@ -1,6 +1,13 @@
 {
     "data": [
         {
+            "id": "d210177_01",
+            "name": "Primal Brunhilda",
+            "title": "Awakened Flamewyrm",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
             "id": "d210117_01",
             "name": "AC-011 Garland",
             "title": "Revolutionary Warrior",
