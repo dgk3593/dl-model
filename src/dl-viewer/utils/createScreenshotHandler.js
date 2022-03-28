@@ -90,6 +90,7 @@ export default function createScreenshotHandler(viewer) {
 
             const loopState = viewer.loop.state;
             viewer.loop.stop();
+            model.face?.reset?.();
             model.animation.stop();
 
             const frames = [];
@@ -139,6 +140,7 @@ export default function createScreenshotHandler(viewer) {
 
             const ctx = viewer.renderer.getContext();
             const loopState = viewer.loop.state;
+            model.face?.reset?.();
             viewer.loop.stop();
             model.animation.stop();
 

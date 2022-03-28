@@ -44,6 +44,10 @@ function addAdvFace(container) {
     };
     const face = {
         type: "uv",
+        reset: function () {
+            this.eyeIdx = this.eyeBaseIdx;
+            this.mouthIdx = this.mouthBaseIdx;
+        },
     };
 
     /**
@@ -178,6 +182,10 @@ function addMeshFace(container) {
         eyeList,
         mouthList,
         type: "meshes",
+        reset: function () {
+            this.eyeIdx = this.eyeBaseIdx;
+            this.mouthIdx = this.mouthBaseIdx;
+        },
     };
 
     /**
