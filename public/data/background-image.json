@@ -14,6 +14,41 @@
             "src": "img/thumbnail/bg/Max_Raid.jpg",
             "value": "img/bg/Max_Raid.png",
             "name": "Max Raid"
+        },
+        {
+            "src": "img/thumbnail/bg/Prince_Bedroom.jpg",
+            "value": "img/bg/Prince_Bedroom.png",
+            "name": "Prince's Bedroom"
+        },
+        {
+            "src": "img/thumbnail/bg/Sylvan_Village.jpg",
+            "value": "img/bg/Sylvan_Village.png",
+            "name": "Sylvan Village"
+        },
+        {
+            "src": "img/thumbnail/bg/Vernal_Banquet.jpg",
+            "value": "img/bg/Vernal_Banquet.png",
+            "name": "Vernal Banquet"
+        },
+        {
+            "src": "img/thumbnail/bg/Castle.jpg",
+            "value": "img/bg/Castle.png",
+            "name": "Castle"
+        },
+        {
+            "src": "img/thumbnail/bg/Plains.jpg",
+            "value": "img/bg/Plains.png",
+            "name": "Plains"
+        },
+        {
+            "src": "img/thumbnail/bg/Castle_Hall.jpg",
+            "value": "img/bg/Castle_Hall.png",
+            "name": "Castle Hall"
+        },
+        {
+            "src": "img/thumbnail/bg/Sweet_Retreat.jpg",
+            "value": "img/bg/Sweet_Retreat.png",
+            "name": "Sweet Retreat"
         }
     ]
 }
