@@ -32,8 +32,10 @@ const modelHandler = async (id, name) => {
     initAniSelectState(newModel);
 
     const { parent, parentBone } = oldModel ?? {};
+    const isAvdToAdv =
+        oldModel?.type === "adventurer" && newModel.type === "adventurer";
 
-    if (oldModel?.type === "adventurer" && newModel.type === "adventurer") {
+    if (isAvdToAdv) {
         newModel.userData.chain = oldModel.userData.chain;
         newModel.animation.addChain(oldModel.animation.current.chainCode);
         // move attachments
@@ -54,11 +56,13 @@ const modelHandler = async (id, name) => {
         parent.attach(newModel, parentBone);
     } else {
         viewer.add(newModel);
-        const camera = getDefaultCamera(id);
-        viewer.camera.position.set(...camera);
+        if (!isAvdToAdv) {
+            const camera = getDefaultCamera(id);
+            viewer.camera.position.set(...camera);
 
-        const control = getDefaultControl(id);
-        viewer.controls.target.set(...control);
+            const control = getDefaultControl(id);
+            viewer.controls.target.set(...control);
+        }
 
         const aniCategory = newModel.type === "adventurer" ? "Adv" : "Personal";
         useAniSelectState.getState().setCategory(aniCategory);
