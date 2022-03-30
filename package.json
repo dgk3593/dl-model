@@ -21,7 +21,7 @@
         "idb": "^7.0.1",
         "immer": "^9.0.12",
         "nanoid": "^3.3.2",
-        "preact": "^10.6.6",
+        "preact": "^10.7.0",
         "react-beautiful-dnd": "^13.1.0",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
@@ -30,8 +30,8 @@
         "zustand": "^3.7.1"
     },
     "devDependencies": {
-        "@preact/preset-vite": "^2.1.7",
+        "@preact/preset-vite": "^2.2.0",
         "gh-pages": "^3.2.3",
-        "vite": "^2.8.6"
+        "vite": "^2.9.0"
     }
 }
