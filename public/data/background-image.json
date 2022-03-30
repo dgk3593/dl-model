@@ -49,6 +49,16 @@
             "src": "img/thumbnail/bg/Sweet_Retreat.jpg",
             "value": "img/bg/Sweet_Retreat.png",
             "name": "Sweet Retreat"
+        },
+        {
+            "src": "img/thumbnail/bg/Dragonyule.jpg",
+            "value": "img/bg/Dragonyule.png",
+            "name": "Dragonyule"
+        },
+        {
+            "src": "img/thumbnail/bg/Circus_Tent.jpg",
+            "value": "img/bg/Circus_Tent.png",
+            "name": "CircusTent"
         }
     ]
 }
