@@ -58,7 +58,17 @@
         {
             "src": "img/thumbnail/bg/Circus_Tent.jpg",
             "value": "img/bg/Circus_Tent.png",
-            "name": "CircusTent"
+            "name": "Circus Tent"
+        },
+        {
+            "src": "img/thumbnail/bg/Castle_Kitchen.jpg",
+            "value": "img/bg/Castle_Kitchen.png",
+            "name": "Castle Kitchen"
+        },
+        {
+            "src": "img/thumbnail/bg/Lake.jpg",
+            "value": "img/bg/Lake.png",
+            "name": "Lake"
         }
     ]
 }
