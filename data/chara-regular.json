@@ -19,18 +19,18 @@
         {
             "id": "c100001_14",
             "name": "Bondforged Prince",
-            "title": "",
+            "title": "Bondforged Scion",
             "rarity": "5",
-            "element": "",
-            "weapon": ""
+            "element": "Wind",
+            "weapon": "Sword"
         },
         {
             "id": "c100054_02",
             "name": "Bondforged Zethia",
-            "title": "",
+            "title": "Radiant Auspex",
             "rarity": "5",
-            "element": "",
-            "weapon": ""
+            "element": "Light",
+            "weapon": "Wand"
         },
         {
             "id": "c110341_01",
