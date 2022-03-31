@@ -4,6 +4,7 @@ import TabBar from "components/TabBar";
 import ColorPicker from "components/ColorPicker";
 import BackgroundImagePicker from "./BackgroundImagePicker";
 import SkyboxPicker from "./SkyboxPicker";
+import "./BackgroundPicker.css";
 import viewer from "@/viewer";
 
 const types = ["Color", "Image", "Skybox"].map(name => ({ name }));
