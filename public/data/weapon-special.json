@@ -13,10 +13,6 @@
             "name": "Bondforged Prince's Sword"
         },
         {
-            "id": "w399070_01",
-            "name": "Bondforged Zethia's Staff"
-        },
-        {
             "id": "w399069_01",
             "name": "Gala Nedrick's Sword"
         },
@@ -271,6 +267,10 @@
         { "id": "w398007_01", "name": "Share Wand", "noIcon": true },
         { "id": "w398008_01", "name": "Share Staff", "noIcon": true },
         { "id": "w398009_01", "name": "Share Manacaster", "noIcon": true },
+        {
+            "id": "wCG00004",
+            "name": "Mochi Kine"
+        },
         {
             "id": "w399002_01",
             "name": "Wagabond Pupper Shovel",

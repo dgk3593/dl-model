@@ -2,6 +2,11 @@
     "data": {
         "Sword": [
             {
+                "user": "c100001_14",
+                "name": "Bondforged Prince",
+                "code": "SWD_CMB_01_10000114&dur=50>SWD_CMB_02_10000114&dur=50>SWD_CMB_03_10000114&dur=50>SWD_CMB_04_10000114&dur=50>SWD_CMB_05_10000114&dur=50>SWD_CMB_06_10000114>SWD_CMB_07_10000114"
+            },
+            {
                 "user": "c100018_02",
                 "name": "Gala Leif",
                 "subtitle": "Striking Stance",
@@ -229,6 +234,11 @@
             }
         ],
         "Wand": [
+            {
+                "user": "c100054_02",
+                "name": "Bondforged Zethia",
+                "code": "ROD_CMB_01_10005402&dur=50>ROD_CMB_02_10005402&dur=50>ROD_CMB_03_10005402&dur=50>ROD_CMB_04_10005402&dur=50>ROD_CMB_05_10005402"
+            },
             {
                 "user": "c110354_01",
                 "name": "Mega Man",

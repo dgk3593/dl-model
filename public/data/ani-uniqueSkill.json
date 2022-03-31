@@ -2,6 +2,12 @@
     "data": {
         "Sword": [
             {
+                "user": "c100001_01",
+                "name": "Exalted Fire",
+                "code": "SWD_SKL_01_01_10000101",
+                "icon": "Icon_Skill_005"
+            },
+            {
                 "user": "c100001_08",
                 "name": "Rising Circlet",
                 "code": "SWD_SKL_01_01_10000108",
@@ -14,10 +20,16 @@
                 "icon": "Icon_Skill_062"
             },
             {
-                "user": "c100001_01",
-                "name": "Exalted Fire",
-                "code": "SWD_SKL_01_01_10000101",
-                "icon": "Icon_Skill_005"
+                "user": "c100001_14",
+                "name": "Blazing Tempest",
+                "code": "SWD_SKL_01_01_10000114>SWD_SKL_01_02_10000114>SWD_SKL_01_03_10000114",
+                "icon": "Icon_Skill_343"
+            },
+            {
+                "user": "c100001_14",
+                "name": "Vortex Circlet",
+                "code": "SWD_SKL_02_01_10000114>SWD_SKL_02_02_10000114>SWD_SKL_02_03_10000114",
+                "icon": "Icon_Skill_344"
             },
             {
                 "user": "c100002_06",
@@ -1713,6 +1725,18 @@
                 "name": "Protect Me, Peons!",
                 "code": "ROD_SKL_02_01_10001703",
                 "icon": "Icon_Skill_317"
+            },
+            {
+                "user": "c100054_02",
+                "name": "Blazing Consecration",
+                "code": "ROD_SKL_01_01_10005402",
+                "icon": "Icon_Skill_346"
+            },
+            {
+                "user": "c100054_02",
+                "name": "Ring of Affection",
+                "code": "ROD_SKL_02_01_10005402",
+                "icon": "Icon_Skill_347"
             },
             {
                 "user": "c110009_02",
