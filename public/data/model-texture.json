@@ -850,8 +850,8 @@
         ],
         "c110354_01": [
             { "label": "Default", "value": "c110354_01" },
-            { "label": "Metal Blade", "value": "c110354_02" },
-            { "label": "Leaf Shield", "value": "c110354_03" },
+            { "label": "Metal Blade", "value": ">c110354_02" },
+            { "label": "Leaf Shield", "value": ">c110354_03" },
             { "label": "Version 1", "value": ">c110354_01_old" }
         ],
         "c110355_01": [
