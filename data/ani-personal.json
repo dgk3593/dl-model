@@ -8403,6 +8403,366 @@
                 "name": "Flap Wings",
                 "code": "R0160001_103_01>R0160001_103_02>R0160001_103_03"
             }
+        ],
+        "e0030101": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030201": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030202": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030301": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030302": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030401": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030501": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0030502": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "e0039001": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "b0120101": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "b0120401": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
+        ],
+        "b0120501": [
+            { "name": "Idle", "code": "E0030101_000_01" },
+            { "name": "Walk", "code": "E0030101_002_01" },
+            { "name": "Flinch", "code": "E0030101_010_01" },
+            { "name": "Defeated", "code": "E0030101_011_01" },
+            { "name": "Frozen", "code": "E0030101_013_01" },
+            { "name": "Weakened", "code": "E0030101_014_01" },
+            { "name": "Roar", "code": "E0030101_022_01" },
+            { "name": "Broken", "code": "E0030101_081_01" },
+            { "name": "Recover from Broken", "code": "E0030101_081_02" },
+            { "name": "Boss Intro", "code": "E0030101_090_01" },
+            { "name": "Hook Punch", "code": "E0030101_100_01" },
+            {
+                "name": "Front Smash",
+                "code": "E0030101_101_01>E0030101_101_02>E0030101_101_03"
+            },
+            {
+                "name": "Stomp",
+                "code": "E0030101_102_01>E0030101_102_02>E0030101_102_03"
+            },
+            {
+                "name": "Roll",
+                "code": "E0030101_103_01>E0030101_103_02>E0030101_103_03"
+            },
+            { "name": "Flex", "code": "E0030101_104_01" },
+            {
+                "name": "Jump Smash",
+                "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
+            }
         ]
     }
 }

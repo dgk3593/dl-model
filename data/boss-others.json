@@ -199,6 +199,51 @@
             "id": "e0020501",
             "name": "Sinister Basilisk",
             "element": "Shadow"
+        },
+        {
+            "id": "e0030101",
+            "name": "Igneous Golem",
+            "element": "Flame"
+        },
+        {
+            "id": "e0039001",
+            "name": "Devil's Puppet",
+            "element": "Flame"
+        },
+        {
+            "id": "e0030201",
+            "name": "Snow Golem",
+            "element": "Water"
+        },
+        {
+            "id": "e0030202",
+            "name": "Tidal Golem",
+            "element": "Water"
+        },
+        {
+            "id": "e0030301",
+            "name": "Golem",
+            "element": "Wind"
+        },
+        {
+            "id": "e0030302",
+            "name": "Choco Golem",
+            "element": "Wind"
+        },
+        {
+            "id": "e0030401",
+            "name": "Gleaming Golem",
+            "element": "Light"
+        },
+        {
+            "id": "e0030501",
+            "name": "Nightmare Golem",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0030502",
+            "name": "Nightmare Golem (Ch. 18)",
+            "element": "Shadow"
         }
     ]
 }
