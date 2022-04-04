@@ -269,6 +269,31 @@
             "id": "e0040401",
             "name": "Shining Raptor",
             "element": "Light"
+        },
+        {
+            "id": "e0050101",
+            "name": "Crimson Rat",
+            "element": "Flame"
+        },
+        {
+            "id": "e0050201",
+            "name": "Water Rat",
+            "element": "Water"
+        },
+        {
+            "id": "e0050301",
+            "name": "Meadow Rat",
+            "element": "Wind"
+        },
+        {
+            "id": "e0050401",
+            "name": "Shock Rat",
+            "element": "Light"
+        },
+        {
+            "id": "e0050501",
+            "name": "Vile Rat",
+            "element": "Shadow"
         }
     ]
 }
