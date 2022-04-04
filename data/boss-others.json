@@ -294,6 +294,11 @@
             "id": "e0050501",
             "name": "Vile Rat",
             "element": "Shadow"
+        },
+        {
+            "id": "e0180501",
+            "name": "Wererat",
+            "element": "Shadow"
         }
     ]
 }
