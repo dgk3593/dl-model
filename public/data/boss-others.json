@@ -244,6 +244,31 @@
             "id": "e0030502",
             "name": "Nightmare Golem (Ch. 18)",
             "element": "Shadow"
+        },
+        {
+            "id": "e0040101",
+            "name": "Flame Raptor",
+            "element": "Flame"
+        },
+        {
+            "id": "e0040201",
+            "name": "Coursing Raptor",
+            "element": "Water"
+        },
+        {
+            "id": "e0049001",
+            "name": "Hued Harrier",
+            "element": "Water"
+        },
+        {
+            "id": "e0040301",
+            "name": "Arrow Raptor",
+            "element": "Wind"
+        },
+        {
+            "id": "e0040401",
+            "name": "Shining Raptor",
+            "element": "Light"
         }
     ]
 }

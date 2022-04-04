@@ -8781,6 +8781,136 @@
                 "name": "Jump Smash",
                 "code": "E0030101_105_01>E0030101_105_02>E0030101_105_03"
             }
+        ],
+        "e0040101": [
+            { "name": "Idle", "code": "E0040101_000_01" },
+            { "name": "Fly", "code": "E0040101_002_01" },
+            { "name": "Flinch", "code": "E0040101_010_01" },
+            { "name": "Defeated", "code": "E0040101_011_01" },
+            { "name": "Frozen", "code": "E0040101_013_01" },
+            { "name": "Weakened", "code": "E0040101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0040101_012_01>E0040101_012_02>E0040101_012_03>E0040101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0040101_012_05" },
+            { "name": "Fly Backward", "code": "E0040101_021_01" },
+            { "name": "Broken", "code": "E0040101_012_01>E0040101_081_01" },
+            { "name": "Recover from Broken", "code": "E0040101_012_06" },
+            { "name": "Boss Intro", "code": "E0040101_090_01" },
+            { "name": "Wing Attack", "code": "E0040101_100_01" },
+            {
+                "name": "Dash Attack",
+                "code": "E0040101_101_01>E0040101_101_02>E0040101_101_03"
+            },
+            {
+                "name": "Spin Attack",
+                "code": "E0040101_102_01>E0040101_102_02>E0040101_102_03"
+            }
+        ],
+        "e0040201": [
+            { "name": "Idle", "code": "E0040101_000_01" },
+            { "name": "Fly", "code": "E0040101_002_01" },
+            { "name": "Flinch", "code": "E0040101_010_01" },
+            { "name": "Defeated", "code": "E0040101_011_01" },
+            { "name": "Frozen", "code": "E0040101_013_01" },
+            { "name": "Weakened", "code": "E0040101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0040101_012_01>E0040101_012_02>E0040101_012_03>E0040101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0040101_012_05" },
+            { "name": "Fly Backward", "code": "E0040101_021_01" },
+            { "name": "Broken", "code": "E0040101_012_01>E0040101_081_01" },
+            { "name": "Recover from Broken", "code": "E0040101_012_06" },
+            { "name": "Boss Intro", "code": "E0040101_090_01" },
+            { "name": "Wing Attack", "code": "E0040101_100_01" },
+            {
+                "name": "Dash Attack",
+                "code": "E0040101_101_01>E0040101_101_02>E0040101_101_03"
+            },
+            {
+                "name": "Spin Attack",
+                "code": "E0040101_102_01>E0040101_102_02>E0040101_102_03"
+            }
+        ],
+        "e0049001": [
+            { "name": "Idle", "code": "E0040101_000_01" },
+            { "name": "Fly", "code": "E0040101_002_01" },
+            { "name": "Flinch", "code": "E0040101_010_01" },
+            { "name": "Defeated", "code": "E0040101_011_01" },
+            { "name": "Frozen", "code": "E0040101_013_01" },
+            { "name": "Weakened", "code": "E0040101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0040101_012_01>E0040101_012_02>E0040101_012_03>E0040101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0040101_012_05" },
+            { "name": "Fly Backward", "code": "E0040101_021_01" },
+            { "name": "Broken", "code": "E0040101_012_01>E0040101_081_01" },
+            { "name": "Recover from Broken", "code": "E0040101_012_06" },
+            { "name": "Boss Intro", "code": "E0040101_090_01" },
+            { "name": "Wing Attack", "code": "E0040101_100_01" },
+            {
+                "name": "Dash Attack",
+                "code": "E0040101_101_01>E0040101_101_02>E0040101_101_03"
+            },
+            {
+                "name": "Spin Attack",
+                "code": "E0040101_102_01>E0040101_102_02>E0040101_102_03"
+            }
+        ],
+        "e0040301": [
+            { "name": "Idle", "code": "E0040101_000_01" },
+            { "name": "Fly", "code": "E0040101_002_01" },
+            { "name": "Flinch", "code": "E0040101_010_01" },
+            { "name": "Defeated", "code": "E0040101_011_01" },
+            { "name": "Frozen", "code": "E0040101_013_01" },
+            { "name": "Weakened", "code": "E0040101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0040101_012_01>E0040101_012_02>E0040101_012_03>E0040101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0040101_012_05" },
+            { "name": "Fly Backward", "code": "E0040101_021_01" },
+            { "name": "Broken", "code": "E0040101_012_01>E0040101_081_01" },
+            { "name": "Recover from Broken", "code": "E0040101_012_06" },
+            { "name": "Boss Intro", "code": "E0040101_090_01" },
+            { "name": "Wing Attack", "code": "E0040101_100_01" },
+            {
+                "name": "Dash Attack",
+                "code": "E0040101_101_01>E0040101_101_02>E0040101_101_03"
+            },
+            {
+                "name": "Spin Attack",
+                "code": "E0040101_102_01>E0040101_102_02>E0040101_102_03"
+            }
+        ],
+        "e0040401": [
+            { "name": "Idle", "code": "E0040101_000_01" },
+            { "name": "Fly", "code": "E0040101_002_01" },
+            { "name": "Flinch", "code": "E0040101_010_01" },
+            { "name": "Defeated", "code": "E0040101_011_01" },
+            { "name": "Frozen", "code": "E0040101_013_01" },
+            { "name": "Weakened", "code": "E0040101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0040101_012_01>E0040101_012_02>E0040101_012_03>E0040101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0040101_012_05" },
+            { "name": "Fly Backward", "code": "E0040101_021_01" },
+            { "name": "Broken", "code": "E0040101_012_01>E0040101_081_01" },
+            { "name": "Recover from Broken", "code": "E0040101_012_06" },
+            { "name": "Boss Intro", "code": "E0040101_090_01" },
+            { "name": "Wing Attack", "code": "E0040101_100_01" },
+            {
+                "name": "Dash Attack",
+                "code": "E0040101_101_01>E0040101_101_02>E0040101_101_03"
+            },
+            {
+                "name": "Spin Attack",
+                "code": "E0040101_102_01>E0040101_102_02>E0040101_102_03"
+            }
         ]
     }
 }
