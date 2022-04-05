@@ -299,6 +299,61 @@
             "id": "e0180501",
             "name": "Wererat",
             "element": "Shadow"
+        },
+        {
+            "id": "e0060101",
+            "name": "Flame Gobmancer",
+            "element": "Flame"
+        },
+        {
+            "id": "e0060201",
+            "name": "Sea Gobmancer",
+            "element": "Water"
+        },
+        {
+            "id": "e0060301",
+            "name": "Gobmancer",
+            "element": "Wind"
+        },
+        {
+            "id": "e0060401",
+            "name": "Lustrous Gobmancer",
+            "element": "Light"
+        },
+        {
+            "id": "e0060501",
+            "name": "Shadow Gobmancer",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0069001",
+            "name": "Twilight Warlock",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0350101",
+            "name": "Flame Gobhealer",
+            "element": "Flame"
+        },
+        {
+            "id": "e0350201",
+            "name": "Sea Gobhealer",
+            "element": "Water"
+        },
+        {
+            "id": "e0350301",
+            "name": "Gobhealer",
+            "element": "Wind"
+        },
+        {
+            "id": "e0350401",
+            "name": "Lustrous Gobhealer",
+            "element": "Light"
+        },
+        {
+            "id": "e0350501",
+            "name": "Shadow Gobhealer",
+            "element": "Shadow"
         }
     ]
 }
