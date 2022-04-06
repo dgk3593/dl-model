@@ -414,6 +414,26 @@
             "id": "e0070502",
             "name": "Shadow Goblin (Faewood)",
             "element": "Shadow"
+        },
+        {
+            "id": "e0080101",
+            "name": "Flare Bones",
+            "element": "Flame"
+        },
+        {
+            "id": "e0080501",
+            "name": "Bare Bones",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0190101",
+            "name": "Blood Skeleton",
+            "element": "Flame"
+        },
+        {
+            "id": "e0190501",
+            "name": "Skeleton Knight",
+            "element": "Shadow"
         }
     ]
 }
