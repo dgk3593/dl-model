@@ -9927,6 +9927,216 @@
                 "name": "Dance 2",
                 "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
             }
+        ],
+        "e0080101": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "e0080501": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "e0190101": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "e0190501": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "b0160101": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "b0160201": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
+        ],
+        "b0160301": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_011_01" },
+            { "name": "Weakened", "code": "E0080101_011_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
         ]
     }
 }
