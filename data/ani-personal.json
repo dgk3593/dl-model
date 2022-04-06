@@ -5124,9 +5124,30 @@
                 "icon": "Icon_Skill_018"
             }
         ],
-        "c100007_01": [{ "name": "Fly", "code": "CMN_MWM_23" }],
-        "c100007_05": [{ "name": "Fly", "code": "CMN_MWM_23" }],
-        "c100007_09": [{ "name": "Fly", "code": "CMN_MWM_23" }],
+        "c100007_01": [
+            { "name": "Idle", "code": "CMN_LOG_01" },
+            { "name": "Jump", "code": "CMN_LOG_02" },
+            { "name": "Daily Bonus", "code": "CMN_LOG_03>CMN_LOG_04" },
+            { "name": "Skip Ticket", "code": "CMN_LOG_06" },
+            { "name": "Fly Away", "code": "CMN_LOG_05" },
+            { "name": "Fly", "code": "CMN_MWM_23" }
+        ],
+        "c100007_05": [
+            { "name": "Fly", "code": "CMN_MWM_23" },
+            { "name": "Jump", "code": "CMN_LOG_02" },
+            { "name": "Daily Bonus", "code": "CMN_LOG_03>CMN_LOG_04" },
+            { "name": "Skip Ticket", "code": "CMN_LOG_06" },
+            { "name": "Fly Away", "code": "CMN_LOG_05" },
+            { "name": "Fly", "code": "CMN_MWM_23" }
+        ],
+        "c100007_09": [
+            { "name": "Fly", "code": "CMN_MWM_23" },
+            { "name": "Jump", "code": "CMN_LOG_02" },
+            { "name": "Daily Bonus", "code": "CMN_LOG_03>CMN_LOG_04" },
+            { "name": "Skip Ticket", "code": "CMN_LOG_06" },
+            { "name": "Fly Away", "code": "CMN_LOG_05" },
+            { "name": "Fly", "code": "CMN_MWM_23" }
+        ],
         "d210168_01": [
             { "name": "Dragon's Roost", "code": "DC_d210168_01_90_01" },
             { "name": "Receive Gift", "code": "DC_d210168_01_90_04" },
