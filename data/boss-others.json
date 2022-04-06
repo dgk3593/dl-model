@@ -217,7 +217,7 @@
         },
         {
             "id": "e0030202",
-            "name": "Tidal Golem (Ch. 18)",
+            "name": "Tidal Golem (Faewood)",
             "element": "Water"
         },
         {
@@ -242,7 +242,7 @@
         },
         {
             "id": "e0030502",
-            "name": "Nightmare Golem (Ch. 18)",
+            "name": "Nightmare Golem (Faewood)",
             "element": "Shadow"
         },
         {
@@ -353,6 +353,66 @@
         {
             "id": "e0350501",
             "name": "Shadow Gobhealer",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0070101",
+            "name": "Flame Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070102",
+            "name": "Festival Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070103",
+            "name": "Masked Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070104",
+            "name": "Flame Goblin (Faewood)",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070201",
+            "name": "Sea Goblin",
+            "element": "Water"
+        },
+        {
+            "id": "e0070202",
+            "name": "Sea Goblin (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0070301",
+            "name": "Goblin",
+            "element": "Wind"
+        },
+        {
+            "id": "e0079001",
+            "name": "Grim Chief",
+            "element": "Wind"
+        },
+        {
+            "id": "e0070401",
+            "name": "Lustrous Goblin",
+            "element": "Light"
+        },
+        {
+            "id": "e0070404",
+            "name": "Lustrous Goblin (Faewood)",
+            "element": "Light"
+        },
+        {
+            "id": "e0070501",
+            "name": "Shadow Goblin",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0070502",
+            "name": "Shadow Goblin (Faewood)",
             "element": "Shadow"
         }
     ]

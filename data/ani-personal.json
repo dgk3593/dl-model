@@ -9474,6 +9474,438 @@
                 "name": "Charged Attack",
                 "code": "E0060101_105_01>E0060101_105_02>E0060101_105_03"
             }
+        ],
+        "e0070101": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070102": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070103": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070104": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070201": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070202": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070301": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0079001": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070401": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070404": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070501": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
+        ],
+        "e0070502": [
+            { "name": "Idle", "code": "E0070101_000_01" },
+            { "name": "Jump", "code": "E0070101_001_01" },
+            { "name": "Hop", "code": "E0070101_002_01" },
+            { "name": "Flinch", "code": "E0070101_010_01" },
+            { "name": "Defeated", "code": "E0070101_011_01" },
+            { "name": "Frozen", "code": "E0070101_013_01" },
+            { "name": "Weakened", "code": "E0070101_014_01" },
+            { "name": "Roll", "code": "E0070101_020_01" },
+            { "name": "Buff", "code": "E0070101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0070101_012_01>E0070101_012_02>E0070101_012_03>E0070101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0070101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0070101_012_01>E0070101_012_04>E0070101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0070101_012_06" },
+            { "name": "Boss Intro", "code": "E0070101_090_01" },
+            { "name": "Front Smash", "code": "E0070101_100_01" },
+            {
+                "name": "Triple Hit",
+                "code": "E0070101_101_01>E0070101_101_02>E0070101_101_03"
+            },
+            { "name": "Spin Attack", "code": "E0070101_102_01" },
+            {
+                "name": "Dance",
+                "code": "E0070101_103_01>E0070101_103_02>E0070101_103_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0070101_104_01>E0070101_104_02>E0070101_103_03"
+            }
         ]
     }
 }
