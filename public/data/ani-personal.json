@@ -9416,6 +9416,64 @@
                 "name": "Charged Attack",
                 "code": "E0060101_105_01>E0060101_105_02>E0060101_105_03"
             }
+        ],
+        "b0110201": [
+            { "name": "Idle", "code": "E0060101_000_01" },
+            { "name": "Walk", "code": "E0060101_002_01" },
+            { "name": "Flinch", "code": "E0060101_010_01" },
+            { "name": "Defeated", "code": "E0060101_011_01" },
+            { "name": "Frozen", "code": "E0060101_013_01" },
+            { "name": "Weakened", "code": "E0060101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0060101_012_01>E0060101_012_02>E0060101_012_03>E0060101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0060101_012_05" },
+            { "name": "Jump", "code": "E0060101_021_01" },
+            {
+                "name": "Broken",
+                "code": "E0060101_012_01>E0060101_012_04>E0060101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0060101_012_06" },
+            { "name": "Boss Intro", "code": "E0060101_090_01" },
+            { "name": "Front Attack", "code": "E0060101_100_01" },
+            {
+                "name": "Charged Swing",
+                "code": "E0060101_101_01>E0060101_101_02>E0060101_101_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0060101_105_01>E0060101_105_02>E0060101_105_03"
+            }
+        ],
+        "b0110501": [
+            { "name": "Idle", "code": "E0060101_000_01" },
+            { "name": "Walk", "code": "E0060101_002_01" },
+            { "name": "Flinch", "code": "E0060101_010_01" },
+            { "name": "Defeated", "code": "E0060101_011_01" },
+            { "name": "Frozen", "code": "E0060101_013_01" },
+            { "name": "Weakened", "code": "E0060101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0060101_012_01>E0060101_012_02>E0060101_012_03>E0060101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0060101_012_05" },
+            { "name": "Jump", "code": "E0060101_021_01" },
+            {
+                "name": "Broken",
+                "code": "E0060101_012_01>E0060101_012_04>E0060101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0060101_012_06" },
+            { "name": "Boss Intro", "code": "E0060101_090_01" },
+            { "name": "Front Attack", "code": "E0060101_100_01" },
+            {
+                "name": "Charged Swing",
+                "code": "E0060101_101_01>E0060101_101_02>E0060101_101_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0060101_105_01>E0060101_105_02>E0060101_105_03"
+            }
         ]
     }
 }
