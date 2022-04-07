@@ -49,40 +49,240 @@
             "element": "Shadow"
         },
         {
+            "id": "c130005_01",
+            "name": "Imperial Soldier (Flame)"
+        },
+        {
+            "id": "c130005_02",
+            "name": "Imperial Soldier (Water)"
+        },
+        {
+            "id": "c130005_03",
+            "name": "Imperial Soldier (Wind)"
+        },
+        {
+            "id": "c130005_04",
+            "name": "Imperial Soldier (Light)"
+        },
+        {
+            "id": "c130005_05",
+            "name": "Imperial Soldier (Shadow)"
+        },
+        {
+            "id": "c130007_01",
+            "name": "Imperial Archer (Flame)"
+        },
+        {
+            "id": "c130007_02",
+            "name": "Imperial Archer (Water)"
+        },
+        {
+            "id": "c130007_03",
+            "name": "Imperial Archer (Wind)"
+        },
+        {
+            "id": "c130007_04",
+            "name": "Imperial Archer (Light)"
+        },
+        {
+            "id": "c130007_05",
+            "name": "Imperial Archer (Shadow)"
+        },
+        {
+            "id": "c130008_01",
+            "name": "Imperial Mage (Flame)"
+        },
+        {
+            "id": "c130008_02",
+            "name": "Imperial Mage (Water)"
+        },
+        {
+            "id": "c130008_03",
+            "name": "Imperial Mage (Wind)"
+        },
+        {
+            "id": "c130008_04",
+            "name": "Imperial Mage (Light)"
+        },
+        {
+            "id": "c130008_05",
+            "name": "Imperial Mage (Shadow)"
+        },
+        {
+            "id": "c130009_01",
+            "name": "Imperial Healer (Flame)"
+        },
+        {
+            "id": "c130009_02",
+            "name": "Imperial Healer (Water)"
+        },
+        {
+            "id": "c130009_03",
+            "name": "Imperial Healer (Wind)"
+        },
+        {
+            "id": "c130009_04",
+            "name": "Imperial Healer (Light)"
+        },
+        {
+            "id": "c130009_05",
+            "name": "Imperial Healer (Shadow)"
+        },
+        {
+            "id": "c130006_01",
+            "name": "Imperial Commander (Flame)"
+        },
+        {
+            "id": "c130006_02",
+            "name": "Imperial Commander (Water)"
+        },
+        {
+            "id": "c130006_03",
+            "name": "Imperial Commander (Wind)"
+        },
+        {
+            "id": "c130006_04",
+            "name": "Imperial Commander (Light)"
+        },
+        {
+            "id": "c130006_05",
+            "name": "Imperial Commander (Shadow)"
+        },
+        {
+            "id": "c130017_01",
+            "name": "Android Soldier (Flame)"
+        },
+        {
+            "id": "c130017_02",
+            "name": "Android Soldier (Water)"
+        },
+        {
+            "id": "c130017_03",
+            "name": "Android Soldier (Wind)"
+        },
+        {
+            "id": "c130017_04",
+            "name": "Android Soldier (Light)"
+        },
+        {
+            "id": "c130017_05",
+            "name": "Android Soldier (Shadow)"
+        },
+        {
             "id": "c130018_01",
-            "name": "Zombie Soldier (Flame)",
-            "noIcon": true,
-            "noPortrait": true
+            "name": "Zombie Soldier (Flame)"
         },
         {
             "id": "c130018_02",
-            "name": "Zombie Soldier (Water)",
-            "noIcon": true,
-            "noPortrait": true
+            "name": "Zombie Soldier (Water)"
+        },
+        {
+            "id": "c130018_03",
+            "name": "Zombie Soldier (Wind)"
+        },
+        {
+            "id": "c130018_04",
+            "name": "Zombie Soldier (Light)"
+        },
+        {
+            "id": "c130018_05",
+            "name": "Zombie Soldier (Shadow)"
         },
         {
             "id": "c130019_01",
-            "name": "Zombie Archer",
-            "noIcon": true,
-            "noPortrait": true
+            "name": "Zombie Archer (Flame)"
         },
         {
-            "id": "c130021_01",
-            "name": "Zombie Healer",
-            "noIcon": true,
-            "noPortrait": true
+            "id": "c130019_02",
+            "name": "Zombie Archer (Water)"
+        },
+        {
+            "id": "c130019_03",
+            "name": "Zombie Archer (Wind)"
+        },
+        {
+            "id": "c130019_04",
+            "name": "Zombie Archer (Light)"
+        },
+        {
+            "id": "c130019_05",
+            "name": "Zombie Archer (Shadow)"
         },
         {
             "id": "c130020_01",
-            "name": "Zombie Mage (Flame)",
-            "noIcon": true,
-            "noPortrait": true
+            "name": "Zombie Mage (Flame)"
         },
         {
             "id": "c130020_02",
-            "name": "Zombie Mage (Water)",
-            "noIcon": true,
-            "noPortrait": true
+            "name": "Zombie Mage (Water)"
+        },
+        {
+            "id": "c130020_03",
+            "name": "Zombie Mage (Wind)"
+        },
+        {
+            "id": "c130020_04",
+            "name": "Zombie Mage (Light)"
+        },
+        {
+            "id": "c130020_05",
+            "name": "Zombie Mage (Shadow)"
+        },
+        {
+            "id": "c130021_01",
+            "name": "Zombie Healer (Flame)"
+        },
+        {
+            "id": "c130021_02",
+            "name": "Zombie Healer (Water)"
+        },
+        {
+            "id": "c130021_03",
+            "name": "Zombie Healer (Wind)"
+        },
+        {
+            "id": "c130021_04",
+            "name": "Zombie Healer (Light)"
+        },
+        {
+            "id": "c130021_05",
+            "name": "Zombie Healer (Shadow)"
+        },
+        {
+            "id": "c130022_01",
+            "name": "Templar (Flame)"
+        },
+        {
+            "id": "c130022_02",
+            "name": "Templar (Water)"
+        },
+        {
+            "id": "c130022_03",
+            "name": "Templar (Wind)"
+        },
+        {
+            "id": "c130022_04",
+            "name": "Templar (Light)"
+        },
+        {
+            "id": "c130022_05",
+            "name": "Templar (Shadow)"
+        },
+        {
+            "id": "c130023_01",
+            "name": "Chief Templar (Flame)"
+        },
+        {
+            "id": "c130023_02",
+            "name": "Chief Templar (Water)"
+        },
+        {
+            "id": "c130023_03",
+            "name": "Chief Templar (Wind)"
+        },
+        {
+            "id": "c130023_05",
+            "name": "Chief Templar (Shadow)"
         }
     ]
 }
