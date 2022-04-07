@@ -434,6 +434,41 @@
             "id": "e0190501",
             "name": "Skeleton Knight",
             "element": "Shadow"
+        },
+        {
+            "id": "e0090101",
+            "name": "Scarlet Eyefly",
+            "element": "Flame"
+        },
+        {
+            "id": "e0090201",
+            "name": "Azure Eyefly",
+            "element": "Water"
+        },
+        {
+            "id": "e0090202",
+            "name": "Azure Eyefly (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0090301",
+            "name": "Green Eyefly",
+            "element": "Wind"
+        },
+        {
+            "id": "e0090401",
+            "name": "Bright Eyefly",
+            "element": "Light"
+        },
+        {
+            "id": "e0090501",
+            "name": "Dark Eyefly",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0090502",
+            "name": "Dark Eyefly (Faewood)",
+            "element": "Shadow"
         }
     ]
 }
