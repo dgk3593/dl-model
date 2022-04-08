@@ -481,6 +481,11 @@
             "element": "Water"
         },
         {
+            "id": "e0510301",
+            "name": "Festering Wolf",
+            "element": "Wind"
+        },
+        {
             "id": "e0100401",
             "name": "Spark Hound",
             "element": "Light"
