@@ -469,6 +469,21 @@
             "id": "e0090502",
             "name": "Dark Eyefly (Faewood)",
             "element": "Shadow"
+        },
+        {
+            "id": "e0100101",
+            "name": "Black Hound",
+            "element": "Flame"
+        },
+        {
+            "id": "e0100201",
+            "name": "Sapphire Hound",
+            "element": "Water"
+        },
+        {
+            "id": "e0100401",
+            "name": "Spark Hound",
+            "element": "Light"
         }
     ]
 }
