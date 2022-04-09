@@ -10508,6 +10508,227 @@
                 "name": "Spin Attack",
                 "code": "E0100101_104_01>E0100101_104_02>E0100101_104_03"
             }
+        ],
+        "e0110101": [
+            { "name": "Idle", "code": "E0110101_000_01" },
+            { "name": "Walk", "code": "E0110101_002_01" },
+            { "name": "Flinch", "code": "E0110101_010_01" },
+            { "name": "Strong Flinch", "code": "E0110101_102_01" },
+            { "name": "Defeated", "code": "E0110101_011_01" },
+            { "name": "Frozen", "code": "E0110101_013_01" },
+            { "name": "Weakened", "code": "E0110101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0110101_012_01>E0110101_012_02>E0110101_012_03>E0110101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0110101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0110101_012_01>E0110101_012_04>E0110101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0110101_012_06" },
+            { "name": "Boss Intro", "code": "E0110101_090_01" },
+            { "name": "Double Swipe", "code": "E0110101_100_01" },
+            {
+                "name": "Breath Attach",
+                "code": "E0110101_101_01>E0110101_101_02>E0110101_101_03"
+            },
+            { "name": "Wide Swipe", "code": "E0110101_103_01>E0110101_103_03" },
+            { "name": "Mid Swipe", "code": "E0110101_103_02" }
+        ],
+        "e0110301": [
+            { "name": "Idle", "code": "E0110101_000_01" },
+            { "name": "Walk", "code": "E0110101_002_01" },
+            { "name": "Flinch", "code": "E0110101_010_01" },
+            { "name": "Strong Flinch", "code": "E0110101_102_01" },
+            { "name": "Defeated", "code": "E0110101_011_01" },
+            { "name": "Frozen", "code": "E0110101_013_01" },
+            { "name": "Weakened", "code": "E0110101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0110101_012_01>E0110101_012_02>E0110101_012_03>E0110101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0110101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0110101_012_01>E0110101_012_04>E0110101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0110101_012_06" },
+            { "name": "Boss Intro", "code": "E0110101_090_01" },
+            { "name": "Double Swipe", "code": "E0110101_100_01" },
+            {
+                "name": "Breath Attach",
+                "code": "E0110101_101_01>E0110101_101_02>E0110101_101_03"
+            },
+            { "name": "Wide Swipe", "code": "E0110101_103_01>E0110101_103_03" },
+            { "name": "Mid Swipe", "code": "E0110101_103_02" }
+        ],
+        "e0110501": [
+            { "name": "Idle", "code": "E0110101_000_01" },
+            { "name": "Walk", "code": "E0110101_002_01" },
+            { "name": "Flinch", "code": "E0110101_010_01" },
+            { "name": "Strong Flinch", "code": "E0110101_102_01" },
+            { "name": "Defeated", "code": "E0110101_011_01" },
+            { "name": "Frozen", "code": "E0110101_013_01" },
+            { "name": "Weakened", "code": "E0110101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0110101_012_01>E0110101_012_02>E0110101_012_03>E0110101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0110101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0110101_012_01>E0110101_012_04>E0110101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0110101_012_06" },
+            { "name": "Boss Intro", "code": "E0110101_090_01" },
+            { "name": "Double Swipe", "code": "E0110101_100_01" },
+            {
+                "name": "Breath Attach",
+                "code": "E0110101_101_01>E0110101_101_02>E0110101_101_03"
+            },
+            { "name": "Wide Swipe", "code": "E0110101_103_01>E0110101_103_03" },
+            { "name": "Mid Swipe", "code": "E0110101_103_02" }
+        ],
+        "e0120101": [
+            { "name": "Idle", "code": "E0120101_000_01" },
+            { "name": "Move Forward", "code": "E0120101_002_01" },
+            { "name": "Move Forward (Fast)", "code": "E0120101_002_02" },
+            { "name": "Move Backward", "code": "E0120101_002_03" },
+            { "name": "Move Right", "code": "E0120101_002_04" },
+            { "name": "Move Left", "code": "E0120101_002_05" },
+            { "name": "Flinch", "code": "E0120101_010_01" },
+            { "name": "Defeated", "code": "E0120101_011_01" },
+            { "name": "Frozen", "code": "E0120101_013_01" },
+            { "name": "Weakened", "code": "E0120101_014_01" },
+            { "name": "Buff", "code": "E0120101_021_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0120101_012_01>E0120101_012_02>E0120101_012_03>E0120101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0120101_012_05" },
+            { "name": "Recover from Ground", "code": "E0120101_012_06" },
+            { "name": "Boss Intro", "code": "E0120101_090_01" },
+            {
+                "name": "Spin",
+                "code": "E0120101_100_01>E0120101_100_02>E0120101_100_03"
+            },
+            {
+                "name": "Jerk",
+                "code": "E0120101_101_01>E0120101_101_02>E0120101_101_03"
+            }
+        ],
+        "e0120201": [
+            { "name": "Idle", "code": "E0120101_000_01" },
+            { "name": "Move Forward", "code": "E0120101_002_01" },
+            { "name": "Move Forward (Fast)", "code": "E0120101_002_02" },
+            { "name": "Move Backward", "code": "E0120101_002_03" },
+            { "name": "Move Right", "code": "E0120101_002_04" },
+            { "name": "Move Left", "code": "E0120101_002_05" },
+            { "name": "Flinch", "code": "E0120101_010_01" },
+            { "name": "Defeated", "code": "E0120101_011_01" },
+            { "name": "Frozen", "code": "E0120101_013_01" },
+            { "name": "Weakened", "code": "E0120101_014_01" },
+            { "name": "Buff", "code": "E0120101_021_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0120101_012_01>E0120101_012_02>E0120101_012_03>E0120101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0120101_012_05" },
+            { "name": "Recover from Ground", "code": "E0120101_012_06" },
+            { "name": "Boss Intro", "code": "E0120101_090_01" },
+            {
+                "name": "Spin",
+                "code": "E0120101_100_01>E0120101_100_02>E0120101_100_03"
+            },
+            {
+                "name": "Jerk",
+                "code": "E0120101_101_01>E0120101_101_02>E0120101_101_03"
+            }
+        ],
+        "e0120301": [
+            { "name": "Idle", "code": "E0120101_000_01" },
+            { "name": "Move Forward", "code": "E0120101_002_01" },
+            { "name": "Move Forward (Fast)", "code": "E0120101_002_02" },
+            { "name": "Move Backward", "code": "E0120101_002_03" },
+            { "name": "Move Right", "code": "E0120101_002_04" },
+            { "name": "Move Left", "code": "E0120101_002_05" },
+            { "name": "Flinch", "code": "E0120101_010_01" },
+            { "name": "Defeated", "code": "E0120101_011_01" },
+            { "name": "Frozen", "code": "E0120101_013_01" },
+            { "name": "Weakened", "code": "E0120101_014_01" },
+            { "name": "Buff", "code": "E0120101_021_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0120101_012_01>E0120101_012_02>E0120101_012_03>E0120101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0120101_012_05" },
+            { "name": "Recover from Ground", "code": "E0120101_012_06" },
+            { "name": "Boss Intro", "code": "E0120101_090_01" },
+            {
+                "name": "Spin",
+                "code": "E0120101_100_01>E0120101_100_02>E0120101_100_03"
+            },
+            {
+                "name": "Jerk",
+                "code": "E0120101_101_01>E0120101_101_02>E0120101_101_03"
+            }
+        ],
+        "e0120401": [
+            { "name": "Idle", "code": "E0120101_000_01" },
+            { "name": "Move Forward", "code": "E0120101_002_01" },
+            { "name": "Move Forward (Fast)", "code": "E0120101_002_02" },
+            { "name": "Move Backward", "code": "E0120101_002_03" },
+            { "name": "Move Right", "code": "E0120101_002_04" },
+            { "name": "Move Left", "code": "E0120101_002_05" },
+            { "name": "Flinch", "code": "E0120101_010_01" },
+            { "name": "Defeated", "code": "E0120101_011_01" },
+            { "name": "Frozen", "code": "E0120101_013_01" },
+            { "name": "Weakened", "code": "E0120101_014_01" },
+            { "name": "Buff", "code": "E0120101_021_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0120101_012_01>E0120101_012_02>E0120101_012_03>E0120101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0120101_012_05" },
+            { "name": "Recover from Ground", "code": "E0120101_012_06" },
+            { "name": "Boss Intro", "code": "E0120101_090_01" },
+            {
+                "name": "Spin",
+                "code": "E0120101_100_01>E0120101_100_02>E0120101_100_03"
+            },
+            {
+                "name": "Jerk",
+                "code": "E0120101_101_01>E0120101_101_02>E0120101_101_03"
+            }
+        ],
+        "e0120501": [
+            { "name": "Idle", "code": "E0120101_000_01" },
+            { "name": "Move Forward", "code": "E0120101_002_01" },
+            { "name": "Move Forward (Fast)", "code": "E0120101_002_02" },
+            { "name": "Move Backward", "code": "E0120101_002_03" },
+            { "name": "Move Right", "code": "E0120101_002_04" },
+            { "name": "Move Left", "code": "E0120101_002_05" },
+            { "name": "Flinch", "code": "E0120101_010_01" },
+            { "name": "Defeated", "code": "E0120101_011_01" },
+            { "name": "Frozen", "code": "E0120101_013_01" },
+            { "name": "Weakened", "code": "E0120101_014_01" },
+            { "name": "Buff", "code": "E0120101_021_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0120101_012_01>E0120101_012_02>E0120101_012_03>E0120101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0120101_012_05" },
+            { "name": "Recover from Ground", "code": "E0120101_012_06" },
+            { "name": "Boss Intro", "code": "E0120101_090_01" },
+            {
+                "name": "Spin",
+                "code": "E0120101_100_01>E0120101_100_02>E0120101_100_03"
+            },
+            {
+                "name": "Jerk",
+                "code": "E0120101_101_01>E0120101_101_02>E0120101_101_03"
+            }
         ]
     }
 }

@@ -489,6 +489,46 @@
             "id": "e0100401",
             "name": "Spark Hound",
             "element": "Light"
+        },
+        {
+            "id": "e0110101",
+            "name": "Pyre Ghoul",
+            "element": "Flame"
+        },
+        {
+            "id": "e0110301",
+            "name": "Forest Ghoul",
+            "element": "Wind"
+        },
+        {
+            "id": "e0110501",
+            "name": "Ghoul",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0120101",
+            "name": "Rage Relic",
+            "element": "Flame"
+        },
+        {
+            "id": "e0120201",
+            "name": "Float Relic",
+            "element": "Water"
+        },
+        {
+            "id": "e0120301",
+            "name": "Squall Relic",
+            "element": "Wind"
+        },
+        {
+            "id": "e0120401",
+            "name": "Fortune Relic",
+            "element": "Light"
+        },
+        {
+            "id": "e0120501",
+            "name": "Disaster Relic",
+            "element": "Shadow"
         }
     ]
 }
