@@ -11026,6 +11026,195 @@
                 "name": "Charge Forward 2",
                 "code": "E0130101_102_01>E0130101_102_02>E0130101_102_03>E0130101_102_04>E0130101_102_05"
             }
+        ],
+        "e0140101": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0140102": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0140201": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0140301": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0140401": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0140501": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "b0150101": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "b0150301": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "b0150501": [
+            { "name": "Idle", "code": "E0140101_000_01" },
+            { "name": "Walk", "code": "E0140101_002_01" },
+            { "name": "Flinch", "code": "E0140101_010_01" },
+            { "name": "Defeated", "code": "E0140101_011_01" },
+            { "name": "Frozen", "code": "E0140101_013_01" },
+            { "name": "Weakened", "code": "E0140101_014_01" },
+            { "name": "Buff", "code": "E0140101_022_01" },
+            { "name": "Broken", "code": "E0140101_011_01>E0140101_081_01" },
+            { "name": "Recover from Broken", "code": "E0140101_081_02" },
+            { "name": "Boss Intro", "code": "E0140101_090_01" },
+            { "name": "Quick Attack", "code": "E0140101_100_01" },
+            {
+                "name": "Charge Forward",
+                "code": "E0140101_101_01>E0140101_101_02>E0140101_101_03>E0140101_101_04"
+            },
+            {
+                "name": "Horn Attack",
+                "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
         ]
     }
 }

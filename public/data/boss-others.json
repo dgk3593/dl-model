@@ -31,6 +31,36 @@
             "element": "Shadow"
         },
         {
+            "id": "e0140101",
+            "name": "Roving Bison",
+            "element": "Flame"
+        },
+        {
+            "id": "e0140102",
+            "name": "Winter Bison",
+            "element": "Flame"
+        },
+        {
+            "id": "e0140201",
+            "name": "Water Bison",
+            "element": "Water"
+        },
+        {
+            "id": "e0140301",
+            "name": "Nimble Bison",
+            "element": "Wind"
+        },
+        {
+            "id": "e0140401",
+            "name": "Bearded Bison",
+            "element": "Light"
+        },
+        {
+            "id": "e0140501",
+            "name": "Doomed Bison",
+            "element": "Shadow"
+        },
+        {
             "id": "e0130101",
             "name": "Red Shroom",
             "element": "Flame"
