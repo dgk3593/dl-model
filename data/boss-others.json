@@ -31,84 +31,384 @@
             "element": "Shadow"
         },
         {
-            "id": "b0020201",
-            "name": "Coastal Sentinel",
-            "element": "Water"
-        },
-        {
-            "id": "b0020301",
-            "name": "Storm Sentinel",
-            "element": "Wind"
-        },
-        {
-            "id": "b0020401",
-            "name": "Radiant Sentinel",
-            "element": "Light"
-        },
-        {
-            "id": "b0020402",
-            "name": "Halloween Sentinel",
-            "element": "Light"
-        },
-        {
-            "id": "b0020501",
-            "name": "Guardian Sentinel",
-            "element": "Shadow"
-        },
-        {
-            "id": "b0030101",
-            "name": "Volcanic Cyclops",
+            "id": "e0130101",
+            "name": "Red Shroom",
             "element": "Flame"
         },
         {
-            "id": "b0030201",
-            "name": "Aquatic Cyclops",
+            "id": "e0130201",
+            "name": "Blue Shroom",
             "element": "Water"
         },
         {
-            "id": "b0030301",
-            "name": "Cyclops",
+            "id": "e0130301",
+            "name": "Green Shroom",
             "element": "Wind"
         },
         {
-            "id": "b0030401",
-            "name": "Shining Cyclops",
+            "id": "e0130401",
+            "name": "Yellow Shroom",
             "element": "Light"
         },
         {
-            "id": "b0030501",
-            "name": "Shadow Cyclops",
-            "element": "Shadow"
-        },
-        {
-            "id": "b0030502",
-            "name": "Pumpking",
-            "element": "Shadow"
-        },
-        {
-            "id": "b0040201",
-            "name": "Water Troll King",
-            "element": "Water"
-        },
-        {
-            "id": "b0040301",
-            "name": "Troll King",
-            "element": "Wind"
-        },
-        {
-            "id": "b0040302",
-            "name": "Troll Smith",
-            "element": "Wind"
-        },
-        {
-            "id": "b0070201",
-            "name": "Admiral Pincers",
-            "element": "Water"
-        },
-        {
-            "id": "b0070401",
-            "name": "Commodore Pincers",
+            "id": "e0139001",
+            "name": "Rainbow Cap",
             "element": "Light"
+        },
+        {
+            "id": "e0130501",
+            "name": "Purple Shroom",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0120101",
+            "name": "Rage Relic",
+            "element": "Flame"
+        },
+        {
+            "id": "e0120201",
+            "name": "Flood Relic",
+            "element": "Water"
+        },
+        {
+            "id": "e0120301",
+            "name": "Squall Relic",
+            "element": "Wind"
+        },
+        {
+            "id": "e0120401",
+            "name": "Fortune Relic",
+            "element": "Light"
+        },
+        {
+            "id": "e0120501",
+            "name": "Disaster Relic",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0110101",
+            "name": "Pyre Ghoul",
+            "element": "Flame"
+        },
+        {
+            "id": "e0110301",
+            "name": "Forest Ghoul",
+            "element": "Wind"
+        },
+        {
+            "id": "e0110501",
+            "name": "Ghoul",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0510301",
+            "name": "Festering Wolf",
+            "element": "Wind"
+        },
+        {
+            "id": "e0100101",
+            "name": "Black Hound",
+            "element": "Flame"
+        },
+        {
+            "id": "e0100201",
+            "name": "Sapphire Hound",
+            "element": "Water"
+        },
+        {
+            "id": "e0100401",
+            "name": "Spark Hound",
+            "element": "Light"
+        },
+        {
+            "id": "e0090101",
+            "name": "Scarlet Eyefly",
+            "element": "Flame"
+        },
+        {
+            "id": "e0090201",
+            "name": "Azure Eyefly",
+            "element": "Water"
+        },
+        {
+            "id": "e0090202",
+            "name": "Azure Eyefly (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0090301",
+            "name": "Green Eyefly",
+            "element": "Wind"
+        },
+        {
+            "id": "e0090401",
+            "name": "Bright Eyefly",
+            "element": "Light"
+        },
+        {
+            "id": "e0090501",
+            "name": "Dark Eyefly",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0090502",
+            "name": "Dark Eyefly (Faewood)",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0190101",
+            "name": "Blood Skeleton",
+            "element": "Flame"
+        },
+        {
+            "id": "e0190501",
+            "name": "Skeleton Knight",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0080101",
+            "name": "Flare Bones",
+            "element": "Flame"
+        },
+        {
+            "id": "e0080501",
+            "name": "Bare Bones",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0070101",
+            "name": "Flame Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070102",
+            "name": "Festival Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070103",
+            "name": "Masked Goblin",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070104",
+            "name": "Flame Goblin (Faewood)",
+            "element": "Flame"
+        },
+        {
+            "id": "e0070201",
+            "name": "Sea Goblin",
+            "element": "Water"
+        },
+        {
+            "id": "e0070202",
+            "name": "Sea Goblin (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0070301",
+            "name": "Goblin",
+            "element": "Wind"
+        },
+        {
+            "id": "e0079001",
+            "name": "Grim Chief",
+            "element": "Wind"
+        },
+        {
+            "id": "e0070401",
+            "name": "Lustrous Goblin",
+            "element": "Light"
+        },
+        {
+            "id": "e0070404",
+            "name": "Lustrous Goblin (Faewood)",
+            "element": "Light"
+        },
+        {
+            "id": "e0070501",
+            "name": "Shadow Goblin",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0070502",
+            "name": "Shadow Goblin (Faewood)",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0350101",
+            "name": "Flame Gobhealer",
+            "element": "Flame"
+        },
+        {
+            "id": "e0350201",
+            "name": "Sea Gobhealer",
+            "element": "Water"
+        },
+        {
+            "id": "e0350301",
+            "name": "Gobhealer",
+            "element": "Wind"
+        },
+        {
+            "id": "e0350401",
+            "name": "Lustrous Gobhealer",
+            "element": "Light"
+        },
+        {
+            "id": "e0350501",
+            "name": "Shadow Gobhealer",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0060101",
+            "name": "Flame Gobmancer",
+            "element": "Flame"
+        },
+        {
+            "id": "e0060201",
+            "name": "Sea Gobmancer",
+            "element": "Water"
+        },
+        {
+            "id": "e0060301",
+            "name": "Gobmancer",
+            "element": "Wind"
+        },
+        {
+            "id": "e0060401",
+            "name": "Lustrous Gobmancer",
+            "element": "Light"
+        },
+        {
+            "id": "e0060501",
+            "name": "Shadow Gobmancer",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0069001",
+            "name": "Twilight Warlock",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0050101",
+            "name": "Crimson Rat",
+            "element": "Flame"
+        },
+        {
+            "id": "e0050201",
+            "name": "Water Rat",
+            "element": "Water"
+        },
+        {
+            "id": "e0050301",
+            "name": "Meadow Rat",
+            "element": "Wind"
+        },
+        {
+            "id": "e0050401",
+            "name": "Shock Rat",
+            "element": "Light"
+        },
+        {
+            "id": "e0050501",
+            "name": "Vile Rat",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0180501",
+            "name": "Wererat",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0040101",
+            "name": "Flame Raptor",
+            "element": "Flame"
+        },
+        {
+            "id": "e0040201",
+            "name": "Coursing Raptor",
+            "element": "Water"
+        },
+        {
+            "id": "e0049001",
+            "name": "Hued Harrier",
+            "element": "Water"
+        },
+        {
+            "id": "e0040301",
+            "name": "Arrow Raptor",
+            "element": "Wind"
+        },
+        {
+            "id": "e0040401",
+            "name": "Shining Raptor",
+            "element": "Light"
+        },
+        {
+            "id": "e0030101",
+            "name": "Igneous Golem",
+            "element": "Flame"
+        },
+        {
+            "id": "e0039001",
+            "name": "Devil's Puppet",
+            "element": "Flame"
+        },
+        {
+            "id": "e0030201",
+            "name": "Tidal Golem",
+            "element": "Water"
+        },
+        {
+            "id": "e0030202",
+            "name": "Tidal Golem (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0030301",
+            "name": "Golem",
+            "element": "Wind"
+        },
+        {
+            "id": "e0030302",
+            "name": "Choco Golem",
+            "element": "Wind"
+        },
+        {
+            "id": "e0030401",
+            "name": "Gleaming Golem",
+            "element": "Light"
+        },
+        {
+            "id": "e0030501",
+            "name": "Nightmare Golem",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0030502",
+            "name": "Nightmare Golem (Faewood)",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0020101",
+            "name": "Burning Basilisk",
+            "element": "Flame"
+        },
+        {
+            "id": "e0020201",
+            "name": "Drowned Basilisk",
+            "element": "Water"
+        },
+        {
+            "id": "e0020301",
+            "name": "Basilisk",
+            "element": "Wind"
+        },
+        {
+            "id": "e0020501",
+            "name": "Sinister Basilisk",
+            "element": "Shadow"
         },
         {
             "id": "e0010101",
@@ -181,353 +481,83 @@
             "element": "Shadow"
         },
         {
-            "id": "e0020101",
-            "name": "Burning Basilisk",
-            "element": "Flame"
-        },
-        {
-            "id": "e0020201",
-            "name": "Drowned Basilisk",
+            "id": "b0070201",
+            "name": "Admiral Pincers",
             "element": "Water"
         },
         {
-            "id": "e0020301",
-            "name": "Basilisk",
-            "element": "Wind"
-        },
-        {
-            "id": "e0020501",
-            "name": "Sinister Basilisk",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0030101",
-            "name": "Igneous Golem",
-            "element": "Flame"
-        },
-        {
-            "id": "e0039001",
-            "name": "Devil's Puppet",
-            "element": "Flame"
-        },
-        {
-            "id": "e0030201",
-            "name": "Tidal Golem",
-            "element": "Water"
-        },
-        {
-            "id": "e0030202",
-            "name": "Tidal Golem (Faewood)",
-            "element": "Water"
-        },
-        {
-            "id": "e0030301",
-            "name": "Golem",
-            "element": "Wind"
-        },
-        {
-            "id": "e0030302",
-            "name": "Choco Golem",
-            "element": "Wind"
-        },
-        {
-            "id": "e0030401",
-            "name": "Gleaming Golem",
+            "id": "b0070401",
+            "name": "Commodore Pincers",
             "element": "Light"
         },
         {
-            "id": "e0030501",
-            "name": "Nightmare Golem",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0030502",
-            "name": "Nightmare Golem (Faewood)",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0040101",
-            "name": "Flame Raptor",
-            "element": "Flame"
-        },
-        {
-            "id": "e0040201",
-            "name": "Coursing Raptor",
+            "id": "b0040201",
+            "name": "Water Troll King",
             "element": "Water"
         },
         {
-            "id": "e0049001",
-            "name": "Hued Harrier",
-            "element": "Water"
-        },
-        {
-            "id": "e0040301",
-            "name": "Arrow Raptor",
+            "id": "b0040301",
+            "name": "Troll King",
             "element": "Wind"
         },
         {
-            "id": "e0040401",
-            "name": "Shining Raptor",
+            "id": "b0040302",
+            "name": "Troll Smith",
+            "element": "Wind"
+        },
+        {
+            "id": "b0030101",
+            "name": "Volcanic Cyclops",
+            "element": "Flame"
+        },
+        {
+            "id": "b0030201",
+            "name": "Aquatic Cyclops",
+            "element": "Water"
+        },
+        {
+            "id": "b0030301",
+            "name": "Cyclops",
+            "element": "Wind"
+        },
+        {
+            "id": "b0030401",
+            "name": "Shining Cyclops",
             "element": "Light"
         },
         {
-            "id": "e0050101",
-            "name": "Crimson Rat",
-            "element": "Flame"
+            "id": "b0030501",
+            "name": "Shadow Cyclops",
+            "element": "Shadow"
         },
         {
-            "id": "e0050201",
-            "name": "Water Rat",
+            "id": "b0030502",
+            "name": "Pumpking",
+            "element": "Shadow"
+        },
+        {
+            "id": "b0020201",
+            "name": "Coastal Sentinel",
             "element": "Water"
         },
         {
-            "id": "e0050301",
-            "name": "Meadow Rat",
+            "id": "b0020301",
+            "name": "Storm Sentinel",
             "element": "Wind"
         },
         {
-            "id": "e0050401",
-            "name": "Shock Rat",
+            "id": "b0020401",
+            "name": "Radiant Sentinel",
             "element": "Light"
         },
         {
-            "id": "e0050501",
-            "name": "Vile Rat",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0180501",
-            "name": "Wererat",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0060101",
-            "name": "Flame Gobmancer",
-            "element": "Flame"
-        },
-        {
-            "id": "e0060201",
-            "name": "Sea Gobmancer",
-            "element": "Water"
-        },
-        {
-            "id": "e0060301",
-            "name": "Gobmancer",
-            "element": "Wind"
-        },
-        {
-            "id": "e0060401",
-            "name": "Lustrous Gobmancer",
+            "id": "b0020402",
+            "name": "Halloween Sentinel",
             "element": "Light"
         },
         {
-            "id": "e0060501",
-            "name": "Shadow Gobmancer",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0069001",
-            "name": "Twilight Warlock",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0350101",
-            "name": "Flame Gobhealer",
-            "element": "Flame"
-        },
-        {
-            "id": "e0350201",
-            "name": "Sea Gobhealer",
-            "element": "Water"
-        },
-        {
-            "id": "e0350301",
-            "name": "Gobhealer",
-            "element": "Wind"
-        },
-        {
-            "id": "e0350401",
-            "name": "Lustrous Gobhealer",
-            "element": "Light"
-        },
-        {
-            "id": "e0350501",
-            "name": "Shadow Gobhealer",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0070101",
-            "name": "Flame Goblin",
-            "element": "Flame"
-        },
-        {
-            "id": "e0070102",
-            "name": "Festival Goblin",
-            "element": "Flame"
-        },
-        {
-            "id": "e0070103",
-            "name": "Masked Goblin",
-            "element": "Flame"
-        },
-        {
-            "id": "e0070104",
-            "name": "Flame Goblin (Faewood)",
-            "element": "Flame"
-        },
-        {
-            "id": "e0070201",
-            "name": "Sea Goblin",
-            "element": "Water"
-        },
-        {
-            "id": "e0070202",
-            "name": "Sea Goblin (Faewood)",
-            "element": "Water"
-        },
-        {
-            "id": "e0070301",
-            "name": "Goblin",
-            "element": "Wind"
-        },
-        {
-            "id": "e0079001",
-            "name": "Grim Chief",
-            "element": "Wind"
-        },
-        {
-            "id": "e0070401",
-            "name": "Lustrous Goblin",
-            "element": "Light"
-        },
-        {
-            "id": "e0070404",
-            "name": "Lustrous Goblin (Faewood)",
-            "element": "Light"
-        },
-        {
-            "id": "e0070501",
-            "name": "Shadow Goblin",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0070502",
-            "name": "Shadow Goblin (Faewood)",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0080101",
-            "name": "Flare Bones",
-            "element": "Flame"
-        },
-        {
-            "id": "e0080501",
-            "name": "Bare Bones",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0190101",
-            "name": "Blood Skeleton",
-            "element": "Flame"
-        },
-        {
-            "id": "e0190501",
-            "name": "Skeleton Knight",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0090101",
-            "name": "Scarlet Eyefly",
-            "element": "Flame"
-        },
-        {
-            "id": "e0090201",
-            "name": "Azure Eyefly",
-            "element": "Water"
-        },
-        {
-            "id": "e0090202",
-            "name": "Azure Eyefly (Faewood)",
-            "element": "Water"
-        },
-        {
-            "id": "e0090301",
-            "name": "Green Eyefly",
-            "element": "Wind"
-        },
-        {
-            "id": "e0090401",
-            "name": "Bright Eyefly",
-            "element": "Light"
-        },
-        {
-            "id": "e0090501",
-            "name": "Dark Eyefly",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0090502",
-            "name": "Dark Eyefly (Faewood)",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0100101",
-            "name": "Black Hound",
-            "element": "Flame"
-        },
-        {
-            "id": "e0100201",
-            "name": "Sapphire Hound",
-            "element": "Water"
-        },
-        {
-            "id": "e0510301",
-            "name": "Festering Wolf",
-            "element": "Wind"
-        },
-        {
-            "id": "e0100401",
-            "name": "Spark Hound",
-            "element": "Light"
-        },
-        {
-            "id": "e0110101",
-            "name": "Pyre Ghoul",
-            "element": "Flame"
-        },
-        {
-            "id": "e0110301",
-            "name": "Forest Ghoul",
-            "element": "Wind"
-        },
-        {
-            "id": "e0110501",
-            "name": "Ghoul",
-            "element": "Shadow"
-        },
-        {
-            "id": "e0120101",
-            "name": "Rage Relic",
-            "element": "Flame"
-        },
-        {
-            "id": "e0120201",
-            "name": "Float Relic",
-            "element": "Water"
-        },
-        {
-            "id": "e0120301",
-            "name": "Squall Relic",
-            "element": "Wind"
-        },
-        {
-            "id": "e0120401",
-            "name": "Fortune Relic",
-            "element": "Light"
-        },
-        {
-            "id": "e0120501",
-            "name": "Disaster Relic",
+            "id": "b0020501",
+            "name": "Guardian Sentinel",
             "element": "Shadow"
         }
     ]
