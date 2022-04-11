@@ -1724,6 +1724,54 @@
                 "icon": "Icon_Skill_029"
             }
         ],
+        "e0290601": [
+            { "name": "Idle", "code": "D21002201_000_01" },
+            { "name": "Move Forward", "code": "D21002201_002_01" },
+            { "name": "Move Forward (Fast)", "code": "D21002201_003_01" },
+            { "name": "Brake", "code": "D21002201_004_01" },
+            { "name": "Dash Forward", "code": "D21002201_020_01" },
+            { "name": "Jump Backward", "code": "D21002201_021_01" },
+            {
+                "name": "Combo",
+                "code": "D21002201_040_01&dur=40>D21002201_041_01&dur=40>D21002201_042_01"
+            },
+            {
+                "name": "Buff",
+                "code": "D21009101_060_01"
+            }
+        ],
+        "e0300601": [
+            { "name": "Idle", "code": "D21002201_000_01" },
+            { "name": "Move Forward", "code": "D21002201_002_01" },
+            { "name": "Move Forward (Fast)", "code": "D21002201_003_01" },
+            { "name": "Brake", "code": "D21002201_004_01" },
+            { "name": "Dash Forward", "code": "D21002201_020_01" },
+            { "name": "Jump Backward", "code": "D21002201_021_01" },
+            {
+                "name": "Combo",
+                "code": "D21002201_040_01&dur=40>D21002201_041_01&dur=40>D21002201_042_01"
+            },
+            {
+                "name": "Buff",
+                "code": "D21009101_060_01"
+            }
+        ],
+        "e0310601": [
+            { "name": "Idle", "code": "D21002201_000_01" },
+            { "name": "Move Forward", "code": "D21002201_002_01" },
+            { "name": "Move Forward (Fast)", "code": "D21002201_003_01" },
+            { "name": "Brake", "code": "D21002201_004_01" },
+            { "name": "Dash Forward", "code": "D21002201_020_01" },
+            { "name": "Jump Backward", "code": "D21002201_021_01" },
+            {
+                "name": "Combo",
+                "code": "D21002201_040_01&dur=40>D21002201_041_01&dur=40>D21002201_042_01"
+            },
+            {
+                "name": "Buff",
+                "code": "D21009101_060_01"
+            }
+        ],
         "d210094_01": [
             { "name": "Dragon's Roost", "code": "DC_d210094_01_90_01" },
             { "name": "Receive Gift", "code": "DC_d210094_01_90_04" },
@@ -9088,6 +9136,37 @@
             },
             { "name": "Jump Attack", "code": "E0050101_106_01" }
         ],
+        "e0180201": [
+            { "name": "Idle", "code": "E0050101_000_01" },
+            { "name": "Jump", "code": "E0050101_001_01" },
+            { "name": "Run", "code": "E0050101_002_01" },
+            { "name": "Flinch", "code": "E0050101_010_01" },
+            { "name": "Defeated", "code": "E0050101_011_01" },
+            { "name": "Frozen", "code": "E0050101_013_01" },
+            { "name": "Weakened", "code": "E0050101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0050101_012_01>E0050101_012_02>E0050101_012_03>E0050101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0050101_012_05" },
+            { "name": "Roll", "code": "E0050101_020_01" },
+            { "name": "Buff", "code": "E0050101_022_01" },
+            { "name": "Broken", "code": "E0050101_012_04>E0050101_081_01" },
+            { "name": "Recover from Broken", "code": "E0050101_012_06" },
+            { "name": "Boss Intro", "code": "E0050101_090_01" },
+            { "name": "Scratch", "code": "E0050101_100_01" },
+            { "name": "Slap", "code": "E0050101_101_01" },
+            { "name": "Claw Attack", "code": "E0050101_102_01" },
+            {
+                "name": "Quick Right Attack",
+                "code": "E0050101_104_01>E0050101_104_02>E0050101_104_03"
+            },
+            {
+                "name": "Quick Left Attack",
+                "code": "E0050101_105_01>E0050101_105_02>E0050101_105_03"
+            },
+            { "name": "Jump Attack", "code": "E0050101_106_01" }
+        ],
         "e0180501": [
             { "name": "Idle", "code": "E0050101_000_01" },
             { "name": "Jump", "code": "E0050101_001_01" },
@@ -11214,6 +11293,196 @@
             {
                 "name": "Horn Attack",
                 "code": "E0140101_102_01>E0140101_102_02>E0140101_102_03"
+            }
+        ],
+        "e0150101": [
+            { "name": "Idle", "code": "E0150101_000_01" },
+            { "name": "Fly", "code": "E0150101_002_01" },
+            { "name": "Flinch", "code": "E0150101_010_01" },
+            { "name": "Defeated", "code": "E0150101_011_01" },
+            { "name": "Frozen", "code": "E0150101_013_01" },
+            { "name": "Weakened", "code": "E0150101_014_01" },
+            { "name": "Buff", "code": "E0150101_021_01" },
+            { "name": "Move Backward", "code": "E0150101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0150101_012_01>E0150101_012_02>E0150101_012_03>E0150101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0150101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0150101_011_01>E0150101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0150101_012_06" },
+            { "name": "Boss Intro", "code": "E0150101_090_01" },
+            { "name": "Quick Attack", "code": "E0150101_100_01" },
+            {
+                "name": "Dance",
+                "code": "E0150101_101_01>E0150101_101_02>E0150101_101_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0150101_102_01>E0150101_102_02>E0150101_102_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0150101_103_01>E0150101_103_02>E0150101_103_03"
+            },
+            {
+                "name": "Sky Attack",
+                "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
+            }
+        ],
+        "e0150201": [
+            { "name": "Idle", "code": "E0150101_000_01" },
+            { "name": "Fly", "code": "E0150101_002_01" },
+            { "name": "Flinch", "code": "E0150101_010_01" },
+            { "name": "Defeated", "code": "E0150101_011_01" },
+            { "name": "Frozen", "code": "E0150101_013_01" },
+            { "name": "Weakened", "code": "E0150101_014_01" },
+            { "name": "Buff", "code": "E0150101_021_01" },
+            { "name": "Move Backward", "code": "E0150101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0150101_012_01>E0150101_012_02>E0150101_012_03>E0150101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0150101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0150101_011_01>E0150101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0150101_012_06" },
+            { "name": "Boss Intro", "code": "E0150101_090_01" },
+            { "name": "Quick Attack", "code": "E0150101_100_01" },
+            {
+                "name": "Dance",
+                "code": "E0150101_101_01>E0150101_101_02>E0150101_101_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0150101_102_01>E0150101_102_02>E0150101_102_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0150101_103_01>E0150101_103_02>E0150101_103_03"
+            },
+            {
+                "name": "Sky Attack",
+                "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
+            }
+        ],
+        "e0150301": [
+            { "name": "Idle", "code": "E0150101_000_01" },
+            { "name": "Fly", "code": "E0150101_002_01" },
+            { "name": "Flinch", "code": "E0150101_010_01" },
+            { "name": "Defeated", "code": "E0150101_011_01" },
+            { "name": "Frozen", "code": "E0150101_013_01" },
+            { "name": "Weakened", "code": "E0150101_014_01" },
+            { "name": "Buff", "code": "E0150101_021_01" },
+            { "name": "Move Backward", "code": "E0150101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0150101_012_01>E0150101_012_02>E0150101_012_03>E0150101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0150101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0150101_011_01>E0150101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0150101_012_06" },
+            { "name": "Boss Intro", "code": "E0150101_090_01" },
+            { "name": "Quick Attack", "code": "E0150101_100_01" },
+            {
+                "name": "Dance",
+                "code": "E0150101_101_01>E0150101_101_02>E0150101_101_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0150101_102_01>E0150101_102_02>E0150101_102_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0150101_103_01>E0150101_103_02>E0150101_103_03"
+            },
+            {
+                "name": "Sky Attack",
+                "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
+            }
+        ],
+        "e0150401": [
+            { "name": "Idle", "code": "E0150101_000_01" },
+            { "name": "Fly", "code": "E0150101_002_01" },
+            { "name": "Flinch", "code": "E0150101_010_01" },
+            { "name": "Defeated", "code": "E0150101_011_01" },
+            { "name": "Frozen", "code": "E0150101_013_01" },
+            { "name": "Weakened", "code": "E0150101_014_01" },
+            { "name": "Buff", "code": "E0150101_021_01" },
+            { "name": "Move Backward", "code": "E0150101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0150101_012_01>E0150101_012_02>E0150101_012_03>E0150101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0150101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0150101_011_01>E0150101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0150101_012_06" },
+            { "name": "Boss Intro", "code": "E0150101_090_01" },
+            { "name": "Quick Attack", "code": "E0150101_100_01" },
+            {
+                "name": "Dance",
+                "code": "E0150101_101_01>E0150101_101_02>E0150101_101_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0150101_102_01>E0150101_102_02>E0150101_102_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0150101_103_01>E0150101_103_02>E0150101_103_03"
+            },
+            {
+                "name": "Sky Attack",
+                "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
+            }
+        ],
+        "e0150501": [
+            { "name": "Idle", "code": "E0150101_000_01" },
+            { "name": "Fly", "code": "E0150101_002_01" },
+            { "name": "Flinch", "code": "E0150101_010_01" },
+            { "name": "Defeated", "code": "E0150101_011_01" },
+            { "name": "Frozen", "code": "E0150101_013_01" },
+            { "name": "Weakened", "code": "E0150101_014_01" },
+            { "name": "Buff", "code": "E0150101_021_01" },
+            { "name": "Move Backward", "code": "E0150101_022_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0150101_012_01>E0150101_012_02>E0150101_012_03>E0150101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0150101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0150101_011_01>E0150101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0150101_012_06" },
+            { "name": "Boss Intro", "code": "E0150101_090_01" },
+            { "name": "Quick Attack", "code": "E0150101_100_01" },
+            {
+                "name": "Dance",
+                "code": "E0150101_101_01>E0150101_101_02>E0150101_101_03"
+            },
+            {
+                "name": "Dance 2",
+                "code": "E0150101_102_01>E0150101_102_02>E0150101_102_03"
+            },
+            {
+                "name": "Charged Attack",
+                "code": "E0150101_103_01>E0150101_103_02>E0150101_103_03"
+            },
+            {
+                "name": "Sky Attack",
+                "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
             }
         ]
     }
