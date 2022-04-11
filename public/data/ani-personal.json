@@ -11484,6 +11484,41 @@
                 "name": "Sky Attack",
                 "code": "E0150101_104_01>E0150101_104_02>E0150101_104_03>E0150101_104_04"
             }
+        ],
+        "e0170201": [
+            { "name": "Idle", "code": "E0170101_000_01" },
+            { "name": "Defeated", "code": "E0170101_011_01" },
+            { "name": "Defeated 2", "code": "E0170101_011_02" },
+            { "name": "Flinch", "code": "E0170201_010_01" },
+            { "name": "Frozen", "code": "E0170201_013_01" }
+        ],
+        "e0170301": [
+            { "name": "Idle", "code": "E0170101_000_01" },
+            { "name": "Defeated", "code": "E0170101_011_01" },
+            { "name": "Defeated 2", "code": "E0170101_011_02" },
+            { "name": "Flinch", "code": "E0170201_010_01" },
+            { "name": "Frozen", "code": "E0170201_013_01" }
+        ],
+        "e0170401": [
+            { "name": "Idle", "code": "E0170101_000_01" },
+            { "name": "Defeated", "code": "E0170101_011_01" },
+            { "name": "Defeated 2", "code": "E0170101_011_02" },
+            { "name": "Flinch", "code": "E0170201_010_01" },
+            { "name": "Frozen", "code": "E0170201_013_01" }
+        ],
+        "e0170402": [
+            { "name": "Idle", "code": "E0170101_000_01" },
+            { "name": "Defeated", "code": "E0170101_011_01" },
+            { "name": "Defeated 2", "code": "E0170101_011_02" },
+            { "name": "Flinch", "code": "E0170201_010_01" },
+            { "name": "Frozen", "code": "E0170201_013_01" }
+        ],
+        "e0170501": [
+            { "name": "Idle", "code": "E0170101_000_01" },
+            { "name": "Defeated", "code": "E0170101_011_01" },
+            { "name": "Defeated 2", "code": "E0170101_011_02" },
+            { "name": "Flinch", "code": "E0170201_010_01" },
+            { "name": "Frozen", "code": "E0170201_013_01" }
         ]
     }
 }

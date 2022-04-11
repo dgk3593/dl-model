@@ -619,6 +619,31 @@
             "id": "b0020501",
             "name": "Guardian Sentinel",
             "element": "Shadow"
+        },
+        {
+            "id": "e0170201",
+            "name": "Coastal Bit",
+            "element": "Water"
+        },
+        {
+            "id": "e0170301",
+            "name": "Storm Bit",
+            "element": "Water"
+        },
+        {
+            "id": "e0170401",
+            "name": "Radiant Bit",
+            "element": "Light"
+        },
+        {
+            "id": "e0170402",
+            "name": "Halloween Bit",
+            "element": "Light"
+        },
+        {
+            "id": "e0170501",
+            "name": "Guardian Bit",
+            "element": "Shadow"
         }
     ]
 }
