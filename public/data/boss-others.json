@@ -31,6 +31,31 @@
             "element": "Shadow"
         },
         {
+            "id": "e0150101",
+            "name": "Lesser Demon",
+            "element": "Flame"
+        },
+        {
+            "id": "e0150201",
+            "name": "Frigid Demon",
+            "element": "Water"
+        },
+        {
+            "id": "e0150301",
+            "name": "Gale Demon",
+            "element": "Wind"
+        },
+        {
+            "id": "e0150401",
+            "name": "Rascally Demon",
+            "element": "Light"
+        },
+        {
+            "id": "e0150501",
+            "name": "Wicked Demon",
+            "element": "Shadow"
+        },
+        {
             "id": "e0140101",
             "name": "Roving Bison",
             "element": "Flame"
@@ -42,7 +67,7 @@
         },
         {
             "id": "e0140201",
-            "name": "Water Bison",
+            "name": "Rushing Bison",
             "element": "Water"
         },
         {
@@ -344,6 +369,11 @@
             "id": "e0050501",
             "name": "Vile Rat",
             "element": "Shadow"
+        },
+        {
+            "id": "e0180201",
+            "name": "Water Wererat",
+            "element": "Water"
         },
         {
             "id": "e0180501",
