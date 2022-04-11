@@ -31,6 +31,31 @@
             "element": "Shadow"
         },
         {
+            "id": "e0200101",
+            "name": "Rouge Lizardman",
+            "element": "Flame"
+        },
+        {
+            "id": "e0200201",
+            "name": "Lizardman",
+            "element": "Water"
+        },
+        {
+            "id": "e0200301",
+            "name": "Wind Lizardman",
+            "element": "Wind"
+        },
+        {
+            "id": "e0200401",
+            "name": "Tawny Lizardman",
+            "element": "Light"
+        },
+        {
+            "id": "e0200501",
+            "name": "Shadow Lizardman",
+            "element": "Shadow"
+        },
+        {
             "id": "e0150101",
             "name": "Lesser Demon",
             "element": "Flame"

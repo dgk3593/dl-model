@@ -11519,6 +11519,226 @@
             { "name": "Defeated 2", "code": "E0170101_011_02" },
             { "name": "Flinch", "code": "E0170201_010_01" },
             { "name": "Frozen", "code": "E0170201_013_01" }
+        ],
+        "e0200101": [
+            { "name": "Idle", "code": "E0200101_000_01" },
+            { "name": "Walk", "code": "E0200101_002_01" },
+            { "name": "Flinch", "code": "E0200101_010_01" },
+            { "name": "Defeated", "code": "E0200101_011_01" },
+            { "name": "Frozen", "code": "E0200101_013_01" },
+            { "name": "Weakened", "code": "E0200101_014_01" },
+            { "name": "Jump", "code": "E0200101_021_01" },
+            { "name": "Sword Dance", "code": "E0200101_022_01" },
+            {
+                "name": "Guard",
+                "code": "E0200101_032_01>E0200101_032_02>E0200101_032_03"
+            },
+            {
+                "name": "Knocked Away",
+                "code": "E0200101_012_01>E0200101_012_02>E0200101_012_03>E0200101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0200101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0200101_012_01>E0200101_012_04>E0200101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0200101_012_06" },
+            { "name": "Boss Intro", "code": "E0200101_090_01" },
+            { "name": "Quick Attack", "code": "E0200101_100_01" },
+            {
+                "name": "Strong Slash",
+                "code": "E0200101_101_01>E0200101_101_02>E0200101_101_03"
+            },
+            { "name": "Shield Bash", "code": "E0200101_102_01" },
+            { "name": "Sword Boost", "code": "E0200101_103_01" },
+            {
+                "name": "Intimidate",
+                "code": "E0200101_104_01>E0200101_104_02>E0200101_104_03"
+            },
+            {
+                "name": "Horizontal Slash",
+                "code": "E0200101_105_01>E0200101_105_02>E0200101_105_03"
+            },
+            {
+                "name": "Charge and Slash",
+                "code": "E0200101_106_01>E0200101_106_02>E0200101_106_03>E0200101_106_04>E0200101_106_05"
+            }
+        ],
+        "e0200201": [
+            { "name": "Idle", "code": "E0200101_000_01" },
+            { "name": "Walk", "code": "E0200101_002_01" },
+            { "name": "Flinch", "code": "E0200101_010_01" },
+            { "name": "Defeated", "code": "E0200101_011_01" },
+            { "name": "Frozen", "code": "E0200101_013_01" },
+            { "name": "Weakened", "code": "E0200101_014_01" },
+            { "name": "Jump", "code": "E0200101_021_01" },
+            { "name": "Sword Dance", "code": "E0200101_022_01" },
+            {
+                "name": "Guard",
+                "code": "E0200101_032_01>E0200101_032_02>E0200101_032_03"
+            },
+            {
+                "name": "Knocked Away",
+                "code": "E0200101_012_01>E0200101_012_02>E0200101_012_03>E0200101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0200101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0200101_012_01>E0200101_012_04>E0200101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0200101_012_06" },
+            { "name": "Boss Intro", "code": "E0200101_090_01" },
+            { "name": "Quick Attack", "code": "E0200101_100_01" },
+            {
+                "name": "Strong Slash",
+                "code": "E0200101_101_01>E0200101_101_02>E0200101_101_03"
+            },
+            { "name": "Shield Bash", "code": "E0200101_102_01" },
+            { "name": "Sword Boost", "code": "E0200101_103_01" },
+            {
+                "name": "Intimidate",
+                "code": "E0200101_104_01>E0200101_104_02>E0200101_104_03"
+            },
+            {
+                "name": "Horizontal Slash",
+                "code": "E0200101_105_01>E0200101_105_02>E0200101_105_03"
+            },
+            {
+                "name": "Charge and Slash",
+                "code": "E0200101_106_01>E0200101_106_02>E0200101_106_03>E0200101_106_04>E0200101_106_05"
+            }
+        ],
+        "e0200301": [
+            { "name": "Idle", "code": "E0200101_000_01" },
+            { "name": "Walk", "code": "E0200101_002_01" },
+            { "name": "Flinch", "code": "E0200101_010_01" },
+            { "name": "Defeated", "code": "E0200101_011_01" },
+            { "name": "Frozen", "code": "E0200101_013_01" },
+            { "name": "Weakened", "code": "E0200101_014_01" },
+            { "name": "Jump", "code": "E0200101_021_01" },
+            { "name": "Sword Dance", "code": "E0200101_022_01" },
+            {
+                "name": "Guard",
+                "code": "E0200101_032_01>E0200101_032_02>E0200101_032_03"
+            },
+            {
+                "name": "Knocked Away",
+                "code": "E0200101_012_01>E0200101_012_02>E0200101_012_03>E0200101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0200101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0200101_012_01>E0200101_012_04>E0200101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0200101_012_06" },
+            { "name": "Boss Intro", "code": "E0200101_090_01" },
+            { "name": "Quick Attack", "code": "E0200101_100_01" },
+            {
+                "name": "Strong Slash",
+                "code": "E0200101_101_01>E0200101_101_02>E0200101_101_03"
+            },
+            { "name": "Shield Bash", "code": "E0200101_102_01" },
+            { "name": "Sword Boost", "code": "E0200101_103_01" },
+            {
+                "name": "Intimidate",
+                "code": "E0200101_104_01>E0200101_104_02>E0200101_104_03"
+            },
+            {
+                "name": "Horizontal Slash",
+                "code": "E0200101_105_01>E0200101_105_02>E0200101_105_03"
+            },
+            {
+                "name": "Charge and Slash",
+                "code": "E0200101_106_01>E0200101_106_02>E0200101_106_03>E0200101_106_04>E0200101_106_05"
+            }
+        ],
+        "e0200401": [
+            { "name": "Idle", "code": "E0200101_000_01" },
+            { "name": "Walk", "code": "E0200101_002_01" },
+            { "name": "Flinch", "code": "E0200101_010_01" },
+            { "name": "Defeated", "code": "E0200101_011_01" },
+            { "name": "Frozen", "code": "E0200101_013_01" },
+            { "name": "Weakened", "code": "E0200101_014_01" },
+            { "name": "Jump", "code": "E0200101_021_01" },
+            { "name": "Sword Dance", "code": "E0200101_022_01" },
+            {
+                "name": "Guard",
+                "code": "E0200101_032_01>E0200101_032_02>E0200101_032_03"
+            },
+            {
+                "name": "Knocked Away",
+                "code": "E0200101_012_01>E0200101_012_02>E0200101_012_03>E0200101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0200101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0200101_012_01>E0200101_012_04>E0200101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0200101_012_06" },
+            { "name": "Boss Intro", "code": "E0200101_090_01" },
+            { "name": "Quick Attack", "code": "E0200101_100_01" },
+            {
+                "name": "Strong Slash",
+                "code": "E0200101_101_01>E0200101_101_02>E0200101_101_03"
+            },
+            { "name": "Shield Bash", "code": "E0200101_102_01" },
+            { "name": "Sword Boost", "code": "E0200101_103_01" },
+            {
+                "name": "Intimidate",
+                "code": "E0200101_104_01>E0200101_104_02>E0200101_104_03"
+            },
+            {
+                "name": "Horizontal Slash",
+                "code": "E0200101_105_01>E0200101_105_02>E0200101_105_03"
+            },
+            {
+                "name": "Charge and Slash",
+                "code": "E0200101_106_01>E0200101_106_02>E0200101_106_03>E0200101_106_04>E0200101_106_05"
+            }
+        ],
+        "e0200501": [
+            { "name": "Idle", "code": "E0200101_000_01" },
+            { "name": "Walk", "code": "E0200101_002_01" },
+            { "name": "Flinch", "code": "E0200101_010_01" },
+            { "name": "Defeated", "code": "E0200101_011_01" },
+            { "name": "Frozen", "code": "E0200101_013_01" },
+            { "name": "Weakened", "code": "E0200101_014_01" },
+            { "name": "Jump", "code": "E0200101_021_01" },
+            { "name": "Sword Dance", "code": "E0200101_022_01" },
+            {
+                "name": "Guard",
+                "code": "E0200101_032_01>E0200101_032_02>E0200101_032_03"
+            },
+            {
+                "name": "Knocked Away",
+                "code": "E0200101_012_01>E0200101_012_02>E0200101_012_03>E0200101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0200101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0200101_012_01>E0200101_012_04>E0200101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0200101_012_06" },
+            { "name": "Boss Intro", "code": "E0200101_090_01" },
+            { "name": "Quick Attack", "code": "E0200101_100_01" },
+            {
+                "name": "Strong Slash",
+                "code": "E0200101_101_01>E0200101_101_02>E0200101_101_03"
+            },
+            { "name": "Shield Bash", "code": "E0200101_102_01" },
+            { "name": "Sword Boost", "code": "E0200101_103_01" },
+            {
+                "name": "Intimidate",
+                "code": "E0200101_104_01>E0200101_104_02>E0200101_104_03"
+            },
+            {
+                "name": "Horizontal Slash",
+                "code": "E0200101_105_01>E0200101_105_02>E0200101_105_03"
+            },
+            {
+                "name": "Charge and Slash",
+                "code": "E0200101_106_01>E0200101_106_02>E0200101_106_03>E0200101_106_04>E0200101_106_05"
+            }
         ]
     }
 }
