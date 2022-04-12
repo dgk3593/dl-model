@@ -31,6 +31,26 @@
             "element": "Shadow"
         },
         {
+            "id": "e0230101",
+            "name": "Ember Toad",
+            "element": "Flame"
+        },
+        {
+            "id": "e0230201",
+            "name": "Aqua Toad",
+            "element": "Water"
+        },
+        {
+            "id": "e0230401",
+            "name": "Voltaic Toad",
+            "element": "Light"
+        },
+        {
+            "id": "e0230501",
+            "name": "Toxic Toad",
+            "element": "Shadow"
+        },
+        {
             "id": "e0220101",
             "name": "Fire Treant",
             "element": "Flame"
