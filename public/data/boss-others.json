@@ -31,6 +31,61 @@
             "element": "Shadow"
         },
         {
+            "id": "e0220101",
+            "name": "Fire Treant",
+            "element": "Flame"
+        },
+        {
+            "id": "e0220102",
+            "name": "Festive Treant",
+            "element": "Flame"
+        },
+        {
+            "id": "e0220103",
+            "name": "Fire Treant (Faewood)",
+            "element": "Flame"
+        },
+        {
+            "id": "e0220201",
+            "name": "Mist Treant",
+            "element": "Water"
+        },
+        {
+            "id": "e0220202",
+            "name": "Mist Treant (Faewood)",
+            "element": "Water"
+        },
+        {
+            "id": "e0220301",
+            "name": "Treant",
+            "element": "Wind"
+        },
+        {
+            "id": "e0220401",
+            "name": "Runic Treant",
+            "element": "Light"
+        },
+        {
+            "id": "e0220402",
+            "name": "Runic Treant (Faewood)",
+            "element": "Light"
+        },
+        {
+            "id": "e0220501",
+            "name": "Hollow Treant",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0220502",
+            "name": "Palm Treant",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0220503",
+            "name": "Hollow Treant (Faewood)",
+            "element": "Shadow"
+        },
+        {
             "id": "e0200101",
             "name": "Rouge Lizardman",
             "element": "Flame"
