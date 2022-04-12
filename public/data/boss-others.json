@@ -31,6 +31,31 @@
             "element": "Shadow"
         },
         {
+            "id": "e0240101",
+            "name": "Bloody Troll",
+            "element": "Flame"
+        },
+        {
+            "id": "e0240201",
+            "name": "Water Troll",
+            "element": "Water"
+        },
+        {
+            "id": "e0240301",
+            "name": "Troll",
+            "element": "Wind"
+        },
+        {
+            "id": "e0240401",
+            "name": "Shiny Troll",
+            "element": "Light"
+        },
+        {
+            "id": "e0240501",
+            "name": "Vile Troll",
+            "element": "Shadow"
+        },
+        {
             "id": "e0230101",
             "name": "Ember Toad",
             "element": "Flame"
