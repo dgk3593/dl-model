@@ -31,6 +31,16 @@
             "element": "Shadow"
         },
         {
+            "id": "e0530201",
+            "name": "Tidal Orge",
+            "element": "Water"
+        },
+        {
+            "id": "e0530501",
+            "name": "Obsidian Orge",
+            "element": "Shadow"
+        },
+        {
             "id": "e0240101",
             "name": "Bloody Troll",
             "element": "Flame"
