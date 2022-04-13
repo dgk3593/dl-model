@@ -6,6 +6,11 @@
             "element": "None"
         },
         {
+            "id": "e0370301",
+            "name": "Mini Dasheng",
+            "element": "Wind"
+        },
+        {
             "id": "b0010101",
             "name": "Flame Manticore",
             "element": "Flame"
@@ -32,12 +37,12 @@
         },
         {
             "id": "e0530201",
-            "name": "Tidal Orge",
+            "name": "Tidal Ogre",
             "element": "Water"
         },
         {
             "id": "e0530501",
-            "name": "Obsidian Orge",
+            "name": "Obsidian Ogre",
             "element": "Shadow"
         },
         {
