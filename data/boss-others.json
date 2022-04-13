@@ -11,6 +11,21 @@
             "element": "Wind"
         },
         {
+            "id": "e0500501",
+            "name": "Sunrise Snapper",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0500502",
+            "name": "Golden Snapper",
+            "element": "Shadow"
+        },
+        {
+            "id": "e0500503",
+            "name": "Taiyaki",
+            "element": "Shadow"
+        },
+        {
             "id": "b0010101",
             "name": "Flame Manticore",
             "element": "Flame"
