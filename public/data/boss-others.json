@@ -26,6 +26,11 @@
             "element": "Shadow"
         },
         {
+            "id": "e0550001",
+            "name": "Bat of Scorn",
+            "element": "Water"
+        },
+        {
             "id": "b0010101",
             "name": "Flame Manticore",
             "element": "Flame"
