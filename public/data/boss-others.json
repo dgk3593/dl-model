@@ -6,6 +6,16 @@
             "element": "None"
         },
         {
+            "id": "e0490001",
+            "name": "Metall",
+            "element": "None"
+        },
+        {
+            "id": "e0540001",
+            "name": "Shadow Guard",
+            "element": "None"
+        },
+        {
             "id": "e0370301",
             "name": "Mini Dasheng",
             "element": "Wind"
