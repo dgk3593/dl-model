@@ -12504,6 +12504,51 @@
             { "name": "Frozen", "code": "e0550001_013_01" },
             { "name": "Afflicted", "code": "e0550001_014_01" },
             { "name": "Attack", "code": "e0550001_100_01" }
+        ],
+        "e0490001": [
+            { "name": "Idle", "code": "E0490001_000_01" },
+            { "name": "Walk", "code": "E0490001_002_01" },
+            { "name": "Flinch", "code": "E0490001_010_01" },
+            { "name": "Defeated", "code": "E0490001_011_01" },
+            { "name": "Frozen", "code": "E0490001_013_01" },
+            { "name": "Weakened", "code": "E0490001_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0490001_012_01>E0490001_012_02>E0490001_012_03>E0490001_012_04>E0490001_012_05"
+            },
+            { "name": "Stand Up", "code": "E0490001_012_06" },
+            { "name": "Defend", "code": "E0490001_100_01" },
+            { "name": "Jump", "code": "E0490001_101_01" }
+        ],
+        "e0540001": [
+            { "name": "Idle", "code": "E0080101_000_01" },
+            { "name": "Walk", "code": "E0080101_002_01" },
+            { "name": "Flinch", "code": "E0080101_010_01" },
+            { "name": "Defeated", "code": "E0080101_011_01" },
+            { "name": "Frozen", "code": "E0080101_013_01" },
+            { "name": "Weakened", "code": "E0080101_014_01" },
+            {
+                "name": "Knocked Away",
+                "code": "E0080101_012_01>E0080101_012_02>E0080101_012_03>E0080101_012_04"
+            },
+            { "name": "Drop to Ground", "code": "E0080101_012_05" },
+            {
+                "name": "Broken",
+                "code": "E0080101_012_01>E0080101_012_04>E0080101_081_01"
+            },
+            { "name": "Recover from Broken", "code": "E0080101_012_06" },
+            { "name": "Boss Intro", "code": "E0080101_090_01" },
+            {
+                "name": "On Guard",
+                "code": "E0080101_032_01>E0080101_032_02>E0080101_032_03"
+            },
+            { "name": "Smack", "code": "E0080101_100_01" },
+            { "name": "Smash", "code": "E0080101_101_01" },
+            { "name": "Spin", "code": "E0080101_102_01" },
+            {
+                "name": "Strong Smash",
+                "code": "E0080101_103_01>E0080101_103_02>E0080101_103_03"
+            }
         ]
     }
 }
