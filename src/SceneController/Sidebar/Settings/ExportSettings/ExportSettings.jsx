@@ -1,4 +1,5 @@
 import TargetSetting from "../ModelSettings/TargetSetting";
+import ExportGltf from "./ExportGltf";
 import RecordControl from "./RecordControl";
 import ScreenshotControl from "./ScreenshotControl";
 import SpecialCapture from "./SpecialCapture";
@@ -12,7 +13,11 @@ function CaptureSettings() {
             <RecordControl />
             <ScreenshotControl />
 
+            <span className="break" />
             <SpecialCapture />
+
+            <span className="break" />
+            <ExportGltf />
         </>
     );
 }

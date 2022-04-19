@@ -2,16 +2,16 @@ import { useAppState } from "@/state";
 
 import ModelSettings from "./ModelSettings";
 import SceneSettings from "./SceneSettings";
-import CaptureSettings from "./CaptureSettings";
+import ExportSettings from "./ExportSettings";
 import TabBar from "components/TabBar";
 import QuickAction from "./QuickAction";
 
-const tabs = ["Model", "Scene", "Capture"].map(name => ({ name }));
+const tabs = ["Model", "Scene", "Export"].map(name => ({ name }));
 
 const settingGroup = {
     Model: ModelSettings,
     Scene: SceneSettings,
-    Capture: CaptureSettings,
+    Export: ExportSettings,
 };
 
 function Settings() {
