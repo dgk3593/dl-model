@@ -16,6 +16,11 @@
             "element": "Wind"
         },
         {
+            "id": "d210182_01",
+            "name": "Primal Zodiark",
+            "element": "Shadow"
+        },
+        {
             "id": "d210178_01",
             "name": "Beast Ayaha & Otoha",
             "element": "Flame"

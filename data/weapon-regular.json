@@ -1,18 +1,11 @@
 {
     "data": [
         {
-            "id": "w399070_01",
-            "name": "Bondforged Resistance",
-            "weapon": "Wand",
+            "id": "w399038_01",
+            "name": "ExMM109 \"Orestes\"",
+            "weapon": "Manacaster",
             "rarity": "5",
             "element": "None"
-        },
-        {
-            "id": "w301159_01",
-            "name": "Primal Crimson",
-            "weapon": "Sword",
-            "rarity": "6",
-            "element": "Flame"
         },
         {
             "id": "w302148_01",
@@ -3765,6 +3758,13 @@
             "weapon": "Wand",
             "rarity": "5",
             "element": "None"
+        },
+        {
+            "id": "w301159_01",
+            "name": "Primal Crimson",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Flame"
         },
         {
             "id": "w308030_01",
