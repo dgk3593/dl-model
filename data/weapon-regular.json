@@ -1,11 +1,165 @@
 {
     "data": [
         {
+            "id": "w395004_01",
+            "name": "Vio Rhyse Alberia",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302019_01",
+            "name": "Rain of Sorrow",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302019_02",
+            "name": "Rain of Sorrow Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397009_01",
+            "name": "Harmonic Resolve",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397009_02",
+            "name": "Harmonic Resolve Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303025_01",
+            "name": "Capriccio",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305023_01",
+            "name": "Gemini",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w395002_01",
+            "name": "Nine-Toothed Rake",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399071_01",
+            "name": "Tempest",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w395005_01",
+            "name": "Heavenly Light",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w395006_01",
+            "name": "Elegant Waltz",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w399038_01",
             "name": "ExMM109 \"Orestes\"",
             "weapon": "Manacaster",
             "rarity": "5",
             "element": "None"
+        },
+        {
+            "id": "w301163_01",
+            "name": "Primal Hex",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302152_01",
+            "name": "Eternal Abyss",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302152_02",
+            "name": "Eternal Abyss Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303151_01",
+            "name": "Shaderuler's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304148_01",
+            "name": "Nightfall's Darkbite Axe",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305158_01",
+            "name": "Ebon Plague Lance",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306150_01",
+            "name": "Nightmare Prophecy",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307157_01",
+            "name": "Umbral Chaser",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308149_01",
+            "name": "Consuming Darkness",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309045_01",
+            "name": "Dusk Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w301159_01",
+            "name": "Primal Crimson",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Flame"
         },
         {
             "id": "w302148_01",

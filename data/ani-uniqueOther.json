@@ -1211,6 +1211,16 @@
         ],
         "Manacaster": [
             {
+                "name": "Humanoid Zodiark",
+                "user": "c110404_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0930001_090_02>A0930001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Halloweern Laxi",
                 "user": "c100032_07",
                 "animations": [
