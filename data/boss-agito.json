@@ -46,6 +46,16 @@
             "element": "Flame"
         },
         {
+            "id": "c100037_02",
+            "name": "Black Phantom",
+            "element": "Flame"
+        },
+        {
+            "id": "c100036_02",
+            "name": "White Phantom",
+            "element": "Flame"
+        },
+        {
             "id": "c100041_01",
             "name": "Tartarus",
             "element": "Shadow"

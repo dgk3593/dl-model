@@ -867,6 +867,62 @@
                 }
             }
         },
+        "o0640001": {
+            "custom": {
+                "crystalA_core": "mPartsCore_A",
+                "crystalB_core": "mPartsCore_B",
+                "crystalA_Effect": "mPartsEffect_A",
+                "crystalB_Effect": "mPartsEffect_B",
+                "crystalC_Effect": "mPartsEffect_C",
+                "crystalA_pedestal": "mPartsPedestal_A",
+                "crystalB_pedestal": "mPartsPedestal_B",
+                "crystalC_pedestal": "mPartsPedestal_C",
+                "crystalA_up": "mPartsUp_A",
+                "crystalB_up": "mPartsUp_B",
+                "crystalC_up": "mPartsUp_C",
+                "crystalA_out": "mPartsRing_A",
+                "crystalB_out": "mPartsRing_B"
+            },
+            "Core": {
+                "options": {
+                    "A": "Inactive",
+                    "B": "Active"
+                },
+                "default": "Active"
+            },
+            "Pedestal": {
+                "options": {
+                    "A": "Inactive",
+                    "B": "Active",
+                    "C": "Destroyed"
+                },
+                "default": "Active"
+            },
+            "Up": {
+                "name": "Upper Ring",
+                "options": {
+                    "A": "Inactive",
+                    "B": "Active",
+                    "C": "Destroyed"
+                },
+                "default": "Active"
+            },
+            "Ring": {
+                "options": {
+                    "A": "Inactive",
+                    "B": "Active"
+                },
+                "default": "Active"
+            },
+            "Effect": {
+                "options": {
+                    "A": "Inactive",
+                    "B": "Active",
+                    "C": "Destroyed"
+                },
+                "default": "Active"
+            }
+        },
         "r0140001": {
             "custom": {
                 "mWingA": "mPartsWingA",
