@@ -12,7 +12,6 @@ function BodyPartsController({ target }) {
     if (!parts) return null;
 
     const { list, others } = parts;
-    console.log(others.length);
 
     return (
         <div className="BodyPartsController">
