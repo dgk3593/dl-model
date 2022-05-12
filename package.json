@@ -19,7 +19,7 @@
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^7.0.1",
-        "immer": "^9.0.12",
+        "immer": "^9.0.13",
         "nanoid": "^3.3.4",
         "preact": "^10.7.2",
         "react-beautiful-dnd": "^13.1.0",
@@ -32,6 +32,6 @@
     "devDependencies": {
         "@preact/preset-vite": "^2.2.0",
         "gh-pages": "^4.0.0",
-        "vite": "^2.9.8"
+        "vite": "^2.9.9"
     }
 }
