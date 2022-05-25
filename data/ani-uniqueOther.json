@@ -12,6 +12,16 @@
                 ]
             },
             {
+                "name": "Gala Prince",
+                "user": "c100001_08",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A1030001_090_02>A1030001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Gala Leif",
                 "user": "c100018_02",
                 "animations": [
@@ -180,16 +190,6 @@
                     {
                         "name": "Roll Attack",
                         "code": "KAT_ROL_A_01_10005401"
-                    }
-                ]
-            },
-            {
-                "name": "Humanoid Jupiter",
-                "user": "c110398_01",
-                "animations": [
-                    {
-                        "name": "Boss Intro",
-                        "code": "A1030001_090_02>A1030001_090_01"
                     }
                 ]
             },
