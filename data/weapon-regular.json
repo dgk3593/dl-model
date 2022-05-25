@@ -1,158 +1,81 @@
 {
     "data": [
         {
-            "id": "w395004_01",
-            "name": "Vio Rhyse Alberia",
-            "weapon": "Sword",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w302019_01",
-            "name": "Rain of Sorrow",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w302019_02",
-            "name": "Rain of Sorrow Sheath",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w397009_01",
-            "name": "Harmonic Resolve",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w397009_02",
-            "name": "Harmonic Resolve Sheath",
-            "weapon": "Blade",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w303025_01",
-            "name": "Capriccio",
-            "weapon": "Dagger",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w305023_01",
-            "name": "Gemini",
+            "id": "w397010_01",
+            "name": "Passion Piercer",
             "weapon": "Lance",
             "rarity": "5",
             "element": "None"
         },
         {
-            "id": "w395002_01",
-            "name": "Nine-Toothed Rake",
-            "weapon": "Axe",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w399071_01",
-            "name": "Tempest",
-            "weapon": "Bow",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w395005_01",
-            "name": "Heavenly Light",
-            "weapon": "Wand",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w395006_01",
-            "name": "Elegant Waltz",
-            "weapon": "Staff",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w399038_01",
-            "name": "ExMM109 \"Orestes\"",
-            "weapon": "Manacaster",
-            "rarity": "5",
-            "element": "None"
-        },
-        {
-            "id": "w301163_01",
-            "name": "Primal Hex",
+            "id": "w301160_01",
+            "name": "Primal Aqua",
             "weapon": "Sword",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w302152_01",
-            "name": "Eternal Abyss",
+            "id": "w302149_01",
+            "name": "Calamitous Torrent",
             "weapon": "Blade",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w302152_02",
-            "name": "Eternal Abyss Sheath",
+            "id": "w302149_02",
+            "name": "Calamitous Torrent Sheath",
             "weapon": "Blade",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w303151_01",
-            "name": "Shaderuler's Fang",
+            "id": "w303148_01",
+            "name": "Tideruler's Fang",
             "weapon": "Dagger",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w304148_01",
-            "name": "Nightfall's Darkbite Axe",
+            "id": "w304145_01",
+            "name": "Mercy's Jeweled Tide",
             "weapon": "Axe",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w305158_01",
-            "name": "Ebon Plague Lance",
+            "id": "w305155_01",
+            "name": "Limpid Cascade",
             "weapon": "Lance",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w306150_01",
-            "name": "Nightmare Prophecy",
+            "id": "w306147_01",
+            "name": "Sapphire Mecurius",
             "weapon": "Bow",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w307157_01",
-            "name": "Umbral Chaser",
+            "id": "w307154_01",
+            "name": "Aqueous Prison",
             "weapon": "Wand",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w308149_01",
-            "name": "Consuming Darkness",
+            "id": "w308146_01",
+            "name": "Ruler of the Jeweled Tide",
             "weapon": "Staff",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
-            "id": "w309045_01",
-            "name": "Dusk Trigger",
+            "id": "w309042_01",
+            "name": "Aquamarine Trigger",
             "weapon": "Manacaster",
             "rarity": "6",
-            "element": "Shadow"
+            "element": "Water"
         },
         {
             "id": "w301159_01",
@@ -293,6 +216,76 @@
             "weapon": "Manacaster",
             "rarity": "6",
             "element": "Wind"
+        },
+        {
+            "id": "w301163_01",
+            "name": "Primal Hex",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302152_01",
+            "name": "Eternal Abyss",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w302152_02",
+            "name": "Eternal Abyss Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w303151_01",
+            "name": "Shaderuler's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w304148_01",
+            "name": "Nightfall's Darkbite Axe",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w305158_01",
+            "name": "Ebon Plague Lance",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w306150_01",
+            "name": "Nightmare Prophecy",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w307157_01",
+            "name": "Umbral Chaser",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w308149_01",
+            "name": "Consuming Darkness",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Shadow"
+        },
+        {
+            "id": "w309045_01",
+            "name": "Dusk Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Shadow"
         },
         {
             "id": "w301138_01",
@@ -3438,6 +3431,13 @@
             "element": "None"
         },
         {
+            "id": "w395004_01",
+            "name": "Vio Rhyse Alberia",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w302014_01",
             "name": "Dane's Favor",
             "weapon": "Blade",
@@ -3592,6 +3592,34 @@
             "element": "None"
         },
         {
+            "id": "w302019_01",
+            "name": "Rain of Sorrow",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w302019_02",
+            "name": "Rain of Sorrow Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397009_01",
+            "name": "Harmonic Resolve",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397009_02",
+            "name": "Harmonic Resolve Sheath",
+            "weapon": "Blade",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w303035_01",
             "name": "Kris Naga",
             "weapon": "Dagger",
@@ -3650,6 +3678,13 @@
         {
             "id": "w303016_01",
             "name": "Dazzling Star",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303025_01",
+            "name": "Capriccio",
             "weapon": "Dagger",
             "rarity": "5",
             "element": "None"
@@ -3725,6 +3760,13 @@
             "element": "None"
         },
         {
+            "id": "w395002_01",
+            "name": "Nine-Toothed Rake",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w305015_01",
             "name": "Pactspear",
             "weapon": "Lance",
@@ -3776,6 +3818,13 @@
         {
             "id": "w305025_01",
             "name": "Khakkhara Lance",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w305023_01",
+            "name": "Gemini",
             "weapon": "Lance",
             "rarity": "5",
             "element": "None"
@@ -3839,6 +3888,13 @@
         {
             "id": "w396003_01",
             "name": "Devotion Bow",
+            "weapon": "Bow",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399071_01",
+            "name": "Tempest",
             "weapon": "Bow",
             "rarity": "5",
             "element": "None"
@@ -3921,11 +3977,11 @@
             "element": "None"
         },
         {
-            "id": "w301159_01",
-            "name": "Primal Crimson",
-            "weapon": "Sword",
-            "rarity": "6",
-            "element": "Flame"
+            "id": "w395005_01",
+            "name": "Heavenly Light",
+            "weapon": "Wand",
+            "rarity": "5",
+            "element": "None"
         },
         {
             "id": "w308030_01",
@@ -3977,6 +4033,13 @@
             "element": "None"
         },
         {
+            "id": "w395006_01",
+            "name": "Elegant Waltz",
+            "weapon": "Staff",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
             "id": "w399023_01",
             "name": "Replica Machine Gun",
             "weapon": "Manacaster",
@@ -4007,6 +4070,13 @@
         {
             "id": "w397008_01",
             "name": "Royal Dominator",
+            "weapon": "Manacaster",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w399038_01",
+            "name": "ExMM109 \"Orestes\"",
             "weapon": "Manacaster",
             "rarity": "5",
             "element": "None"

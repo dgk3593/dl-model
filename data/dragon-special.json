@@ -16,6 +16,16 @@
             "element": "Wind"
         },
         {
+            "id": "d210180_01",
+            "name": "Primal Mercury",
+            "element": "Water"
+        },
+        {
+            "id": "d210181_01",
+            "name": "Primal Jupiter",
+            "element": "Light"
+        },
+        {
             "id": "d210182_01",
             "name": "Primal Zodiark",
             "element": "Shadow"

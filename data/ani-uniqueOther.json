@@ -184,6 +184,16 @@
                 ]
             },
             {
+                "name": "Humanoid Jupiter",
+                "user": "c110398_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A1030001_090_02>A1030001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Laxi",
                 "user": "c100032_02",
                 "animations": [
@@ -318,6 +328,16 @@
                     { "name": "Dash Attack", "code": "DAG_DAS_02_10003204" },
                     { "name": "Slow Run", "code": "CMN_RUN_01_10003204" },
                     { "name": "Fast Run", "code": "CMN_RUN_02_10003204" }
+                ]
+            },
+            {
+                "name": "Humanoid Mercury",
+                "user": "c110385_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0910001_090_02>A0910001_090_01"
+                    }
                 ]
             },
             {
