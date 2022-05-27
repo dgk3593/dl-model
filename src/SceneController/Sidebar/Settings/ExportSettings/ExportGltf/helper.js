@@ -32,7 +32,6 @@ export async function exportGltf({ binary = false }) {
     const blob = await createGltf(model, {
         binary,
         animations,
-        embedImages: true,
         onlyVisible: true,
     });
     saveAs(blob, fileName);
