@@ -19,7 +19,7 @@
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^7.0.1",
-        "immer": "^9.0.14",
+        "immer": "^9.0.15",
         "nanoid": "^4.0.0",
         "preact": "^10.7.3",
         "react-beautiful-dnd": "^13.1.0",
