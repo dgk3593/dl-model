@@ -40,7 +40,7 @@ export default function SceneController() {
         );
         setLoadingMsg("");
 
-        return () => viewer.model.removeEventListener(listener);
+        return () => viewer.model.removeEventListener("change", listener);
     }, []);
 
     useEffect(() => {
