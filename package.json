@@ -3,6 +3,7 @@
     "version": "2.0.0",
     "author": "dgk3593",
     "homepage": "https://dgk3593.github.io/dl-model/#/",
+    "description": "Dragalia Lost Model Viewer",
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",
@@ -18,7 +19,7 @@
         "fflate": "^0.7.3",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
-        "idb": "^7.0.1",
+        "idb": "^7.0.2",
         "immer": "^9.0.15",
         "nanoid": "^4.0.0",
         "preact": "10.7.3",
