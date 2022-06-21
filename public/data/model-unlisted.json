@@ -11,6 +11,18 @@
         {
             "id": "w399043_01",
             "name": "Hunter Berserker's Greatsword (reverse)"
+        },
+        {
+            "id": "e0310601",
+            "name": "Bronze Fafnir (Enemy)"
+        },
+        {
+            "id": "e0300601",
+            "name": "Silver Fafnir (Enemy)"
+        },
+        {
+            "id": "e0290601",
+            "name": "Gold Fafnir (Enemy)"
         }
     ]
 }
