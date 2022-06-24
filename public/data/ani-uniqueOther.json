@@ -235,6 +235,16 @@
                 ]
             },
             {
+                "name": "Humanoid Jupiter",
+                "user": "c110398_01",
+                "animations": [
+                    {
+                        "name": "Boss Intro",
+                        "code": "A0920001_090_02>A0920001_090_01"
+                    }
+                ]
+            },
+            {
                 "name": "Ieyasu",
                 "user": "c110313_01",
                 "animations": [

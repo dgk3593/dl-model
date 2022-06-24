@@ -1,38 +1,6 @@
 {
     "data": [
         {
-            "id": "c100039_03",
-            "name": "Gala Nedrick",
-            "title": "Shadow of Genesis",
-            "rarity": "5",
-            "element": "Shadow",
-            "weapon": "Sword"
-        },
-        {
-            "id": "c100043_02",
-            "name": "Origa",
-            "title": "Aqueous Auspex",
-            "rarity": "5",
-            "element": "Water",
-            "weapon": "Wand"
-        },
-        {
-            "id": "c100001_14",
-            "name": "Bondforged Prince",
-            "title": "Bondforged Scion",
-            "rarity": "5",
-            "element": "Wind",
-            "weapon": "Sword"
-        },
-        {
-            "id": "c100054_02",
-            "name": "Bondforged Zethia",
-            "title": "Radiant Auspex",
-            "rarity": "5",
-            "element": "Light",
-            "weapon": "Wand"
-        },
-        {
             "id": "c110341_01",
             "name": "Akasha",
             "title": "Pursuer of Knowledge",
@@ -111,6 +79,22 @@
             "rarity": "5",
             "element": "Shadow",
             "weapon": "Dagger"
+        },
+        {
+            "id": "c100001_14",
+            "name": "Bondforged Prince",
+            "title": "Bondforged Scion",
+            "rarity": "5",
+            "element": "Wind",
+            "weapon": "Sword"
+        },
+        {
+            "id": "c100054_02",
+            "name": "Bondforged Zethia",
+            "title": "Radiant Auspex",
+            "rarity": "5",
+            "element": "Light",
+            "weapon": "Wand"
         },
         {
             "id": "c110337_01",
@@ -447,6 +431,14 @@
             "rarity": "5",
             "element": "Flame",
             "weapon": "Lance"
+        },
+        {
+            "id": "c100039_03",
+            "name": "Gala Nedrick",
+            "title": "Shadow of Genesis",
+            "rarity": "5",
+            "element": "Shadow",
+            "weapon": "Sword"
         },
         {
             "id": "c100007_07",
@@ -983,6 +975,14 @@
             "rarity": "5",
             "element": "Shadow",
             "weapon": "Bow"
+        },
+        {
+            "id": "c100043_02",
+            "name": "Origa",
+            "title": "Aqueous Auspex",
+            "rarity": "5",
+            "element": "Water",
+            "weapon": "Wand"
         },
         {
             "id": "c110378_01",
