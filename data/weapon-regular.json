@@ -1,81 +1,11 @@
 {
     "data": [
         {
-            "id": "w397010_01",
-            "name": "Passion Piercer",
-            "weapon": "Lance",
+            "id": "w397011_01",
+            "name": "Valor's Edge",
+            "weapon": "Sword",
             "rarity": "5",
             "element": "None"
-        },
-        {
-            "id": "w301160_01",
-            "name": "Primal Aqua",
-            "weapon": "Sword",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w302149_01",
-            "name": "Calamitous Torrent",
-            "weapon": "Blade",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w302149_02",
-            "name": "Calamitous Torrent Sheath",
-            "weapon": "Blade",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w303148_01",
-            "name": "Tideruler's Fang",
-            "weapon": "Dagger",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w304145_01",
-            "name": "Mercy's Jeweled Tide",
-            "weapon": "Axe",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w305155_01",
-            "name": "Limpid Cascade",
-            "weapon": "Lance",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w306147_01",
-            "name": "Sapphire Mecurius",
-            "weapon": "Bow",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w307154_01",
-            "name": "Aqueous Prison",
-            "weapon": "Wand",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w308146_01",
-            "name": "Ruler of the Jeweled Tide",
-            "weapon": "Staff",
-            "rarity": "6",
-            "element": "Water"
-        },
-        {
-            "id": "w309042_01",
-            "name": "Aquamarine Trigger",
-            "weapon": "Manacaster",
-            "rarity": "6",
-            "element": "Water"
         },
         {
             "id": "w301159_01",
@@ -148,6 +78,76 @@
             "element": "Flame"
         },
         {
+            "id": "w301160_01",
+            "name": "Primal Aqua",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w302149_01",
+            "name": "Calamitous Torrent",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w302149_02",
+            "name": "Calamitous Torrent Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w303148_01",
+            "name": "Tideruler's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w304145_01",
+            "name": "Mercy's Jeweled Tide",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w305155_01",
+            "name": "Limpid Cascade",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w306147_01",
+            "name": "Sapphire Mecurius",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w307154_01",
+            "name": "Aqueous Prison",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w308146_01",
+            "name": "Ruler of the Jeweled Tide",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
+            "id": "w309042_01",
+            "name": "Aquamarine Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Water"
+        },
+        {
             "id": "w301161_01",
             "name": "Primal Tempest",
             "weapon": "Sword",
@@ -216,6 +216,76 @@
             "weapon": "Manacaster",
             "rarity": "6",
             "element": "Wind"
+        },
+        {
+            "id": "w301162_01",
+            "name": "Primal Lightning",
+            "weapon": "Sword",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w302151_01",
+            "name": "Daunting Flash",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w302151_02",
+            "name": "Daunting Flash Sheath",
+            "weapon": "Blade",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w303150_01",
+            "name": "Fulminator's Fang",
+            "weapon": "Dagger",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w304147_01",
+            "name": "Indomitable Thundercrash",
+            "weapon": "Axe",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w305157_01",
+            "name": "Radiant Lightflash",
+            "weapon": "Lance",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w306149_01",
+            "name": "Jupiter's Shimmer",
+            "weapon": "Bow",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w307156_01",
+            "name": "Electron Burst",
+            "weapon": "Wand",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w308148_01",
+            "name": "Cosmic Ruler",
+            "weapon": "Staff",
+            "rarity": "6",
+            "element": "Light"
+        },
+        {
+            "id": "w309044_01",
+            "name": "Divine Trigger",
+            "weapon": "Manacaster",
+            "rarity": "6",
+            "element": "Light"
         },
         {
             "id": "w301163_01",
@@ -3825,6 +3895,13 @@
         {
             "id": "w305023_01",
             "name": "Gemini",
+            "weapon": "Lance",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397010_01",
+            "name": "Passion Piercer",
             "weapon": "Lance",
             "rarity": "5",
             "element": "None"
