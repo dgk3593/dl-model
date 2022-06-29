@@ -1,0 +1,1 @@
+import{e}from"./index.bbdc88de.js";function p({type:o,value:t,icon:a,checked:r=!1,name:i=t,onClick:g=()=>{},...c}){const l=`GlowToggle ${r?"checked":""}`,n=o==="icon"?e("img",{src:a,alt:i}):e("span",{children:i});return e("div",{className:l,"data-type":o,"data-value":t,onClick:g,...c,children:n})}export{p as G};
