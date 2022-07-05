@@ -34,6 +34,7 @@ function AttachmentManager() {
 
     useEffect(() => {
         if (!activeModel) return;
+        setBone("root");
 
         // remove old listener
         removeListener.current();
