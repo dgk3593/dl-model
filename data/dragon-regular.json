@@ -71,6 +71,18 @@
             "element": "Flame"
         },
         {
+            "id": "d210024_01_01",
+            "name": "Coco",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
+            "id": "d210024_01_02",
+            "name": "Mimi",
+            "rarity": "5",
+            "element": "Flame"
+        },
+        {
             "id": "d200010_01",
             "name": "Chthonius",
             "title": "Devoted Dragon",
