@@ -1,0 +1,1 @@
+import{e as o}from"./index.00b83f8a.js";function g({type:e,value:l,icon:c,checked:r=!1,name:a=l,onClick:t=()=>{},...d}){const i=`GlowToggle ${r?"checked":""}`,n=e==="icon"?o("img",{src:c,alt:a}):o("span",{children:a});return o("div",{className:i,"data-type":e,"data-value":l,onClick:t,...d,children:n})}export{g as G};
