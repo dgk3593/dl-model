@@ -8,7 +8,10 @@ export const rootModalConfig = (set, get) => ({
             state.props = props;
             state.Component = component;
         }),
-    close: () => set(state => (state.Component = undefined)),
+    close: () =>
+        set(state => {
+            state.Component = undefined;
+        }),
     onClose: undefined,
     reset: () =>
         set(state => {

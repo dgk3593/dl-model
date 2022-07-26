@@ -15,27 +15,41 @@ const defaultShowTimeControl = isIframe
 export const appStateConfig = set => ({
     showSettings: defaultShowSettings,
     toggleSettings: () =>
-        set(state => void (state.showSettings = !state.showSettings)),
+        set(state => {
+            state.showSettings = !state.showSettings;
+        }),
 
     loadingMsg: "",
-    setLoadingMsg: msg => set(state => void (state.loadingMsg = msg)),
+    setLoadingMsg: msg =>
+        set(state => {
+            state.loadingMsg = msg;
+        }),
 
     showTimeControl: defaultShowTimeControl,
     toggleTimeControl: () =>
-        set(state => void (state.showTimeControl = !state.showTimeControl)),
+        set(state => {
+            state.showTimeControl = !state.showTimeControl;
+        }),
 
     showFrameRate: false,
     toggleFrameRate: () =>
-        set(state => void (state.showFrameRate = !state.showFrameRate)),
+        set(state => {
+            state.showFrameRate = !state.showFrameRate;
+        }),
 
     sidebar: {
         open: true,
-        toggle: () => set(({ sidebar }) => void (sidebar.open = !sidebar.open)),
+        toggle: () =>
+            set(state => {
+                state.sidebar.open = !state.sidebar.open;
+            }),
 
         settings: {
             tab: "Model",
             setTab: tab =>
-                set(({ sidebar }) => void (sidebar.settings.tab = tab)),
+                set(state => {
+                    state.sidebar.settings.tab = tab;
+                }),
         },
         modal: {
             mode: "",
@@ -43,45 +57,47 @@ export const appStateConfig = set => ({
             open: (mode, handleSelect) => {
                 loopState = viewer.loop.state;
                 viewer.loop.stop();
-                set(({ sidebar }) => {
-                    const { modal } = sidebar;
-                    modal.mode = mode;
-                    modal.handleSelect = handleSelect;
+                set(state => {
+                    state.sidebar.modal.mode = mode;
+                    state.sidebar.modal.handleSelect = handleSelect;
                 });
             },
             close: () => {
                 loopState === "active" && viewer.loop.start();
-                set(({ sidebar }) => {
-                    const { modal } = sidebar;
-                    modal.mode = "";
-                    modal.handleSelect = undefined;
+                set(state => {
+                    state.sidebar.modal.mode = "";
+                    state.sidebar.modal.handleSelect = undefined;
                 });
             },
         },
 
         manageMode: "single",
         setManageMode: mode =>
-            set(({ sidebar }) => void (sidebar.manageMode = mode)),
+            set(state => {
+                state.sidebar.manageMode = mode;
+            }),
     },
 
     chainMaker: {
         target: null,
         setTarget: target =>
-            set(({ chainMaker }) => void (chainMaker.target = target)),
+            set(state => {
+                state.chainMaker.target = target;
+            }),
     },
 
     dock: {
         mode: "",
         handleSelect: undefined,
         open: (mode = "", handleSelect) =>
-            set(({ dock }) => {
-                dock.mode = mode;
-                dock.handleSelect = handleSelect;
+            set(state => {
+                state.dock.mode = mode;
+                state.dock.handleSelect = handleSelect;
             }),
         close: () =>
-            set(({ dock }) => {
-                dock.mode = "";
-                dock.handleSelect = undefined;
+            set(state => {
+                state.dock.mode = "";
+                state.dock.handleSelect = undefined;
             }),
     },
 });
