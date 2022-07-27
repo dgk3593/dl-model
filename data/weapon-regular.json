@@ -1,9 +1,37 @@
 {
     "data": [
         {
-            "id": "w397011_01",
-            "name": "Valor's Edge",
+            "id": "w399072_01",
+            "name": "Bondforged Edge",
             "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397012_01",
+            "name": "Dragalia",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w303024_01",
+            "name": "Silent Sting",
+            "weapon": "Dagger",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w304019_01",
+            "name": "Ol' Reliable",
+            "weapon": "Axe",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w306020_01",
+            "name": "Crimson Piercer",
+            "weapon": "Bow",
             "rarity": "5",
             "element": "None"
         },
@@ -3503,6 +3531,13 @@
         {
             "id": "w395004_01",
             "name": "Vio Rhyse Alberia",
+            "weapon": "Sword",
+            "rarity": "5",
+            "element": "None"
+        },
+        {
+            "id": "w397011_01",
+            "name": "Valor's Edge",
             "weapon": "Sword",
             "rarity": "5",
             "element": "None"

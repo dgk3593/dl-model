@@ -1,6 +1,26 @@
 {
     "data": [
         {
+            "id": "h0140001",
+            "name": "Xenos",
+            "element": "None"
+        },
+        {
+            "id": "h0140004",
+            "name": "Xenos (2nd form)",
+            "element": "None"
+        },
+        {
+            "id": "r0170001",
+            "name": "Xenos (3rd form)",
+            "element": "None"
+        },
+        {
+            "id": "h0140003",
+            "name": "Xenos (Inside 3rd form)",
+            "element": "None"
+        },
+        {
             "id": "r0160001",
             "name": "True Bahamut",
             "element": "None"
