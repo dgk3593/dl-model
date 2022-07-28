@@ -22,6 +22,120 @@
                 ]
             },
             {
+                "name": "Bondforged Prince",
+                "user": "c100001_14",
+                "animations": [
+                    {
+                        "name": "Facing Xenos",
+                        "code": "CT_HBOSS_002_000_c10000114_c01"
+                    },
+                    {
+                        "name": "Facing Xenos 2",
+                        "code": "CT_HBOSS_002_000_c10000114_c02"
+                    },
+                    {
+                        "name": "VS Xenos",
+                        "code": "CT_HBOSS_002_000_c10000114_c03"
+                    },
+                    {
+                        "name": "VS Xenos 2",
+                        "code": "CT_HBOSS_002_000_c10000114_c04"
+                    },
+                    {
+                        "name": "Ready Sword",
+                        "code": "CT_HBOSS_002_002_C10000114_c01>CT_HBOSS_002_002_C10000114_c03"
+                    },
+                    {
+                        "name": "Ready Sword 2",
+                        "code": "CT_INGAME_003_001_c10000114_c01"
+                    },
+                    {
+                        "name": "Ready Sword 3",
+                        "code": "CT_INGAME_003_001_c10000114_c04>CT_INGAME_003_001_c10000114_c04_loop"
+                    },
+                    {
+                        "name": "Block Xenos' Attack",
+                        "code": "CT_INGAME_003_001_c10000114_c05>CT_INGAME_003_001_c10000114_c07_loop"
+                    },
+                    {
+                        "name": "Look at Zethia",
+                        "code": "CT_INGAME_003_001_c10000114_c08"
+                    },
+                    {
+                        "name": "Look at Zethia 2",
+                        "code": "CT_INGAME_003_001_c10000114_c09"
+                    },
+                    {
+                        "name": "Ready to Attack",
+                        "code": "CT_INGAME_003_001_c10000114_c10"
+                    },
+                    {
+                        "name": "Leap Forward",
+                        "code": "CT_INGAME_003_001_c10000114_c11>CT_INGAME_003_001_c10000114_c12>CT_INGAME_003_001_c10000114_c12_loop"
+                    },
+                    {
+                        "name": "Slash",
+                        "code": "CT_INGAME_003_001_c10000114_c13"
+                    },
+                    {
+                        "name": "Jump",
+                        "code": "CT_INGAME_003_001_c10000114_c15"
+                    },
+                    {
+                        "name": "Jump 2",
+                        "code": "CT_INGAME_003_001_c10000114_c16"
+                    },
+                    {
+                        "name": "Slash 2",
+                        "code": "CT_INGAME_003_001_c10000114_c17"
+                    },
+                    {
+                        "name": "Jump 3",
+                        "code": "CT_INGAME_003_001_c10000114_c18"
+                    },
+                    {
+                        "name": "Slash 3",
+                        "code": "CT_INGAME_003_001_c10000114_c19"
+                    },
+                    {
+                        "name": "Fly Forward",
+                        "code": "CT_INGAME_003_001_c10000114_c21"
+                    },
+                    {
+                        "name": "Ready to Slash",
+                        "code": "CT_INGAME_003_001_c10000114_c22"
+                    },
+                    {
+                        "name": "Slash 4",
+                        "code": "CT_INGAME_003_001_c10000114_c23"
+                    },
+                    {
+                        "name": "Slash 5",
+                        "code": "CT_INGAME_003_001_c10000114_c25"
+                    },
+                    {
+                        "name": "Fly Up",
+                        "code": "CT_INGAME_003_002_c100001_14_c01"
+                    },
+                    {
+                        "name": "Ready Weapon",
+                        "code": "CT_INGAME_003_002_c100001_14_c02"
+                    },
+                    {
+                        "name": "Ready to Attack 2",
+                        "code": "CT_INGAME_003_002_c100001_14_c03"
+                    },
+                    {
+                        "name": "Ready to Attack 3",
+                        "code": "CT_INGAME_003_002_c100001_14_c05"
+                    },
+                    {
+                        "name": "Slash 6",
+                        "code": "CT_INGAME_003_002_c100001_14_c07"
+                    }
+                ]
+            },
+            {
                 "name": "Gala Leif",
                 "user": "c100018_02",
                 "animations": [
@@ -918,6 +1032,40 @@
             }
         ],
         "Wand": [
+            {
+                "name": "Bondforged Zethia",
+                "user": "c100054_02",
+                "animations": [
+                    {
+                        "name": "Facing Xenos",
+                        "code": "CT_HBOSS_002_000_c10005402_c02"
+                    },
+                    {
+                        "name": "VS Xenos",
+                        "code": "CT_HBOSS_002_000_c10005402_c04"
+                    },
+                    {
+                        "name": "Block Xenos",
+                        "code": "CT_INGAME_003_001_c10005402_c08"
+                    },
+                    {
+                        "name": "Look at Prince",
+                        "code": "CT_INGAME_003_001_c10005402_c09"
+                    },
+                    {
+                        "name": "Ready to Leap",
+                        "code": "CT_INGAME_003_001_c10005402_c11"
+                    },
+                    {
+                        "name": "Leap Forward",
+                        "code": "CT_INGAME_003_001_c10005402_c12>CT_INGAME_003_001_c10005402_c12_loop"
+                    },
+                    {
+                        "name": "Swing Wand",
+                        "code": "CT_INGAME_003_001_c10005402_c13"
+                    }
+                ]
+            },
             {
                 "name": "Gala Emile",
                 "user": "c100017_03",
