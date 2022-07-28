@@ -49,24 +49,33 @@ const processClip = clip => {
     const findFirstTrack = trackName =>
         tracks.find(({ name }) => name.includes(trackName));
 
-    const rootPosition =
+    const gameRootPosition =
         findFirstTrack("jGameRoot.position") || findFirstTrack("position");
 
-    if (!rootPosition) {
+    if (!gameRootPosition) {
         console.error(`Failed ${clip.name}`);
         return clip;
     }
 
-    const endPosition = rootPosition.values.slice(-3).map(v => -v);
-    translateTrack(rootPosition, endPosition);
+    const endPosition = gameRootPosition.values.slice(-3).map(v => -v);
+    translateTrack(gameRootPosition, endPosition);
     // rotatePositionY(rootPosition);
-    translateTrack(rootPosition, extraTranslate);
+    translateTrack(gameRootPosition, extraTranslate);
+
+    const rootPosition = findFirstTrack("jRoot.position");
+    if (rootPosition) {
+        const e = rootPosition.values.slice(-3).map(v => -v);
+        const [eX, eY, eZ] = e;
+        if (eX ** 2 + eY ** 2 + eZ ** 2 > 1) {
+            translateTrack(rootPosition, e);
+        }
+    }
 
     const rootQuaternion =
         findFirstTrack("jGameRoot.quaternion") || findFirstTrack("quaternion");
 
     // rotateTrack(rootQuaternion, "x");
-    rotateTrack(rootQuaternion, "y");
+    // rotateTrack(rootQuaternion, "y");
     // rotateTrack(rootQuaternion,'z');
 
     if (setScale) {
@@ -97,7 +106,7 @@ const getAniPath = name =>
  * @param {string} name
  * @return {Promise<THREE.AnimationClip>}
  */
-const loadClip = name => {
+function loadClip(name) {
     const path = getAniPath(name);
     return new Promise(resolve =>
         fetch(path)
@@ -105,7 +114,7 @@ const loadClip = name => {
             .then(json => THREE.AnimationClip.parse(json))
             .then(resolve)
     );
-};
+}
 
 /**
  *
@@ -158,7 +167,7 @@ const quaternion = {
  * @param {THREE.QuaternionKeyframeTrack} track
  * @param {'x' | 'y' | 'z'} axis
  */
-const rotateTrack = (track, axis = "y") => {
+function rotateTrack(track, axis = "y") {
     const nKeyFrames = track.times.length;
     const { values } = track;
     const q = quaternion[axis] ?? quaternion.y;
@@ -173,4 +182,4 @@ const rotateTrack = (track, axis = "y") => {
         values[i * 4 + 2] = newQ.z;
         values[i * 4 + 3] = newQ.w;
     }
-};
+}
