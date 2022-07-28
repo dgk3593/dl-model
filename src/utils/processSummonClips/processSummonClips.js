@@ -59,14 +59,15 @@ const processClip = clip => {
 
     const endPosition = rootPosition.values.slice(-3).map(v => -v);
     translateTrack(rootPosition, endPosition);
-    rotatePositionY(rootPosition);
+    // rotatePositionY(rootPosition);
     translateTrack(rootPosition, extraTranslate);
 
     const rootQuaternion =
         findFirstTrack("jGameRoot.quaternion") || findFirstTrack("quaternion");
-    // rotateTrackX(rootQuaternion);
-    rotateTrackY(rootQuaternion);
-    // rotateTrackZ(rootQuaternion);
+
+    // rotateTrack(rootQuaternion, "x");
+    rotateTrack(rootQuaternion, "y");
+    // rotateTrack(rootQuaternion,'z');
 
     if (setScale) {
         const scaleTrack =
@@ -146,59 +147,27 @@ const rotatePositionY = track => {
 //     }
 // };
 
-const rotateYbyPI = new THREE.Quaternion(0, 1, 0, 0);
-/**
- * rotate animation by 180 degrees on y axis
- * @param {THREE.QuaternionKeyframeTrack} track
- */
-const rotateTrackY = track => {
-    const nKeyFrames = track.times.length;
-    const { values } = track;
-    for (let i = 0; i < nKeyFrames; i++) {
-        const currentQ = new THREE.Quaternion(
-            ...values.slice(i * 4, i * 4 + 4)
-        );
-        const newQ = currentQ.multiply(rotateYbyPI);
-        values[i * 4] = newQ.x;
-        values[i * 4 + 1] = newQ.y;
-        values[i * 4 + 2] = newQ.z;
-        values[i * 4 + 3] = newQ.w;
-    }
+const quaternion = {
+    x: new THREE.Quaternion(1, 0, 0, 0),
+    y: new THREE.Quaternion(0, 1, 0, 0),
+    z: new THREE.Quaternion(0, 0, 1, 0),
 };
 
-const rotateZbyPI = new THREE.Quaternion(0, 0, 1, 0);
 /**
- * rotate animation by 180 degrees on y axis
+ * rotate animation by 180 degrees on specified axis
  * @param {THREE.QuaternionKeyframeTrack} track
+ * @param {'x' | 'y' | 'z'} axis
  */
-const rotateTrackZ = track => {
+const rotateTrack = (track, axis = "y") => {
     const nKeyFrames = track.times.length;
     const { values } = track;
-    for (let i = 0; i < nKeyFrames; i++) {
-        const currentQ = new THREE.Quaternion(
-            ...values.slice(i * 4, i * 4 + 4)
-        );
-        const newQ = currentQ.multiply(rotateZbyPI);
-        values[i * 4] = newQ.x;
-        values[i * 4 + 1] = newQ.y;
-        values[i * 4 + 2] = newQ.z;
-        values[i * 4 + 3] = newQ.w;
-    }
-};
+    const q = quaternion[axis] ?? quaternion.y;
 
-const rotateXbyPI = new THREE.Quaternion(1, 0, 0, 0);
-/**
- * rotate animation by 180 degrees on x axis
- * @param {THREE.QuaternionKeyframeTrack} track
- */
-const rotateTrackX = track => {
-    const nKeyFrames = track.times.length;
-    const { values } = track;
     for (let i = 0; i < nKeyFrames; i++) {
         const currentQ = new THREE.Quaternion(
             ...values.slice(i * 4, i * 4 + 4)
         );
-        const newQ = currentQ.multiply(rotateXbyPI);
+        const newQ = currentQ.multiply(q);
         values[i * 4] = newQ.x;
         values[i * 4 + 1] = newQ.y;
         values[i * 4 + 2] = newQ.z;
