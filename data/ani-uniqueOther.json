@@ -437,6 +437,18 @@
                         "name": "Transform",
                         "code": "CMN_CTD_01_10000707>CMN_CTD_02_10000707",
                         "icon": "Icon_UniqueTransform_0008"
+                    },
+                    {
+                        "name": "Face Xenos",
+                        "code": "CT_HBOSS_002_000_c10000707_c01"
+                    },
+                    {
+                        "name": "Face Xenos 2",
+                        "code": "CT_HBOSS_002_000_c10000707_c02"
+                    },
+                    {
+                        "name": "Fly Up",
+                        "code": "CT_HBOSS_002_000_c10000707_c04"
                     }
                 ]
             },
