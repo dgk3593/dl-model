@@ -27,8 +27,11 @@ function SetNumbers({
     const [values, setValues] = useState(initValues);
 
     const handleChange = event => {
+        const newValue = event.currentTarget.value;
+        if (newValue.endsWith(".")) return;
+
         const index = parseInt(event.currentTarget.getAttribute("index"));
-        const value = parseFloat(event.currentTarget.value);
+        const value = parseFloat(newValue);
         if (isNaN(value)) return;
 
         let newValues;
@@ -46,6 +49,8 @@ function SetNumbers({
         onChange?.(newValues);
     };
 
+    const handleFocus = event => event.currentTarget.select();
+
     return (
         <div className="SetNumbers" {...others}>
             {keyList.map((objKey, i) => (
@@ -61,6 +66,7 @@ function SetNumbers({
                     inputProps={{
                         type: "number",
                         index: i,
+                        onFocus: handleFocus,
                         ...inputProps,
                     }}
                 />
