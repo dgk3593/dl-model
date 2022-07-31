@@ -6,10 +6,15 @@ import * as THREE from "three";
 const dir = `${ANIMATION_SOURCE}/todo`;
 const DOWNLOAD_LIMIT = 10;
 
-const extraTranslate = new Float32Array([0, 0, 0]);
+let extraTranslate; // = new Float32Array([0, -2.5, -1]);
 
 const setScale = false;
 const scale = 1;
+const rotate = {
+    // x: true,
+    // y: true,
+    // z: true,
+};
 
 export async function processSummonClips() {
     const clips = await Promise.all(fbxList.map(loadClip));
@@ -59,8 +64,8 @@ const processClip = clip => {
 
     const endPosition = gameRootPosition.values.slice(-3).map(v => -v);
     translateTrack(gameRootPosition, endPosition);
-    // rotatePositionY(rootPosition);
-    translateTrack(gameRootPosition, extraTranslate);
+    // rotatePositionY(gameRootPosition);
+    extraTranslate && translateTrack(gameRootPosition, extraTranslate);
 
     const rootPosition = findFirstTrack("jRoot.position");
     if (rootPosition) {
@@ -74,9 +79,9 @@ const processClip = clip => {
     const rootQuaternion =
         findFirstTrack("jGameRoot.quaternion") || findFirstTrack("quaternion");
 
-    // rotateTrack(rootQuaternion, "x");
-    // rotateTrack(rootQuaternion, "y");
-    // rotateTrack(rootQuaternion,'z');
+    rotate.x && rotateTrack(rootQuaternion, "x");
+    rotate.y && rotateTrack(rootQuaternion, "y");
+    rotate.z && rotateTrack(rootQuaternion, "z");
 
     if (setScale) {
         const scaleTrack =
