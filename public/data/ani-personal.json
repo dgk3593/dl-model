@@ -12654,7 +12654,87 @@
         ],
         "h0140001": [
             { "name": "Idle", "code": "H0140001_000_01" },
+            {
+                "name": "Cutscene Idle",
+                "code": "CT_HBOSS_002_000_H0140001_c01"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_HBOSS_002_000_H0140001_c04>CT_HBOSS_002_000_H0140001_c05"
+            },
             { "name": "Weakened", "code": "H0140002_000_01" },
+            {
+                "name": "Weakened 2",
+                "code": "CT_HBOSS_002_001_H0140001_c01>CT_HBOSS_002_001_H0140001_c02>CT_HBOSS_002_001_H0140001_c03>CT_HBOSS_002_001_H0140001_c04"
+            },
+            {
+                "name": "Taunt",
+                "code": "CT_INGAME_003_001_h0140001_c03"
+            },
+            {
+                "name": "Taunt 2",
+                "code": "CT_INGAME_003_001_h0140001_c04"
+            },
+            {
+                "name": "Intimidate",
+                "code": "CT_INGAME_003_001_h0140001_c06"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_INGAME_003_001_h0140001_c13>CT_INGAME_003_001_h0140001_c14>CT_INGAME_003_001_h0140001_c15"
+            },
+            {
+                "name": "Nod",
+                "code": "CT_INGAME_003_001_h0140001_c17>CT_INGAME_003_001_h0140001_c18"
+            },
+            {
+                "name": "Arm Spread",
+                "code": "CT_INGAME_003_001_h0140001_c19"
+            },
+            {
+                "name": "Arm Spread 2",
+                "code": "CT_INGAME_003_001_h0140001_c20"
+            },
+            {
+                "name": "Arm Spread 3",
+                "code": "CT_INGAME_003_001_h0140001_c21"
+            },
+            {
+                "name": "Arm Spread 4",
+                "code": "CT_INGAME_003_001_h0140001_c23"
+            },
+            {
+                "name": "Arm Spread 5",
+                "code": "CT_INGAME_003_001_h0140001_c24"
+            },
+            {
+                "name": "Arm Spread 6",
+                "code": "CT_INGAME_003_001_h0140001_c25"
+            },
+            {
+                "name": "Look Up",
+                "code": "CT_INGAME_003_002_h0140001_c01>CT_INGAME_003_002_h0140001_c06>CT_INGAME_003_002_h0140001_c07"
+            },
+            {
+                "name": "Roar",
+                "code": "CT_HBOSS_002_001_H0140001_c05>CT_HBOSS_002_001_H0140001_c06"
+            },
+            {
+                "name": "Look Up",
+                "code": "CT_HBOSS_002_001_H0140001_c07"
+            },
+            {
+                "name": "Knocked Back",
+                "code": "H0140001_001_01>H0140001_002_01>H0140001_003_01>H0140001_004_01"
+            },
+            {
+                "name": "Attack Upward",
+                "code": "H0140001_005_01"
+            },
+            {
+                "name": "Angered",
+                "code": "h0140001_02_01>h0140001_02_02>h0140001_02_03>h0140001_02_04>h0140001_02_05"
+            },
             { "name": "Broken", "code": "H0140001_081_01>H0140001_081_02" },
             { "name": "Broken 2", "code": "H0140002_081_01>H0140002_081_02" },
             {
@@ -12709,7 +12789,79 @@
         ],
         "h0140003": [
             { "name": "Idle", "code": "H0140001_000_01" },
+            {
+                "name": "Cutscene Idle",
+                "code": "CT_HBOSS_002_000_H0140001_c01"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_HBOSS_002_000_H0140001_c04>CT_HBOSS_002_000_H0140001_c05"
+            },
             { "name": "Weakened", "code": "H0140002_000_01" },
+            {
+                "name": "Weakened 2",
+                "code": "CT_HBOSS_002_001_H0140001_c01>CT_HBOSS_002_001_H0140001_c02>CT_HBOSS_002_001_H0140001_c03>CT_HBOSS_002_001_H0140001_c04"
+            },
+            {
+                "name": "Left Arm Attack",
+                "code": "CT_HBOSS_002_002_H0140001_c02>CT_HBOSS_002_002_H0140001_c03"
+            },
+            {
+                "name": "Taunt",
+                "code": "CT_INGAME_003_001_h0140001_c03"
+            },
+            {
+                "name": "Taunt 2",
+                "code": "CT_INGAME_003_001_h0140001_c04"
+            },
+            {
+                "name": "Intimidate",
+                "code": "CT_INGAME_003_001_h0140001_c06"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_INGAME_003_001_h0140001_c13>CT_INGAME_003_001_h0140001_c14>CT_INGAME_003_001_h0140001_c16"
+            },
+            {
+                "name": "Nod",
+                "code": "CT_INGAME_003_001_h0140001_c17>CT_INGAME_003_001_h0140001_c18"
+            },
+            {
+                "name": "Arm Spread",
+                "code": "CT_INGAME_003_001_h0140001_c19"
+            },
+            {
+                "name": "Arm Spread 2",
+                "code": "CT_INGAME_003_001_h0140001_c20"
+            },
+            {
+                "name": "Arm Spread 3",
+                "code": "CT_INGAME_003_001_h0140001_c21"
+            },
+            {
+                "name": "Arm Spread 4",
+                "code": "CT_INGAME_003_001_h0140001_c23"
+            },
+            {
+                "name": "Arm Spread 5",
+                "code": "CT_INGAME_003_001_h0140001_c24"
+            },
+            {
+                "name": "Arm Spread 6",
+                "code": "CT_INGAME_003_001_h0140001_c25"
+            },
+            {
+                "name": "Knocked Back",
+                "code": "H0140001_001_01>H0140001_002_01>H0140001_003_01>H0140001_004_01"
+            },
+            {
+                "name": "Attack Upward",
+                "code": "H0140001_005_01"
+            },
+            {
+                "name": "Roar",
+                "code": "CT_HBOSS_002_001_H0140001_c05>CT_HBOSS_002_001_H0140001_c06"
+            },
             { "name": "Broken", "code": "H0140001_081_01>H0140001_081_02" },
             { "name": "Broken 2", "code": "H0140002_081_01>H0140002_081_02" },
             {
@@ -12764,7 +12916,79 @@
         ],
         "h0140004": [
             { "name": "Idle", "code": "H0140001_000_01" },
+            {
+                "name": "Cutscene Idle",
+                "code": "CT_HBOSS_002_000_H0140001_c01"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_HBOSS_002_000_H0140001_c04>CT_HBOSS_002_000_H0140001_c05"
+            },
             { "name": "Weakened", "code": "H0140002_000_01" },
+            {
+                "name": "Weakened 2",
+                "code": "CT_HBOSS_002_001_H0140001_c01>CT_HBOSS_002_001_H0140001_c02>CT_HBOSS_002_001_H0140001_c03>CT_HBOSS_002_001_H0140001_c04"
+            },
+            {
+                "name": "Left Arm Attack",
+                "code": "CT_HBOSS_002_002_H0140001_c02>CT_HBOSS_002_002_H0140001_c03"
+            },
+            {
+                "name": "Taunt",
+                "code": "CT_INGAME_003_001_h0140001_c03"
+            },
+            {
+                "name": "Taunt 2",
+                "code": "CT_INGAME_003_001_h0140001_c04"
+            },
+            {
+                "name": "Intimidate",
+                "code": "CT_INGAME_003_001_h0140001_c06"
+            },
+            {
+                "name": "Boss Intro",
+                "code": "CT_INGAME_003_001_h0140001_c13>CT_INGAME_003_001_h0140001_c14>CT_INGAME_003_001_h0140001_c16"
+            },
+            {
+                "name": "Nod",
+                "code": "CT_INGAME_003_001_h0140001_c17>CT_INGAME_003_001_h0140001_c18"
+            },
+            {
+                "name": "Arm Spread",
+                "code": "CT_INGAME_003_001_h0140001_c19"
+            },
+            {
+                "name": "Arm Spread 2",
+                "code": "CT_INGAME_003_001_h0140001_c20"
+            },
+            {
+                "name": "Arm Spread 3",
+                "code": "CT_INGAME_003_001_h0140001_c21"
+            },
+            {
+                "name": "Arm Spread 4",
+                "code": "CT_INGAME_003_001_h0140001_c23"
+            },
+            {
+                "name": "Arm Spread 5",
+                "code": "CT_INGAME_003_001_h0140001_c24"
+            },
+            {
+                "name": "Arm Spread 6",
+                "code": "CT_INGAME_003_001_h0140001_c25"
+            },
+            {
+                "name": "Knocked Back",
+                "code": "H0140001_001_01>H0140001_002_01>H0140001_003_01>H0140001_004_01"
+            },
+            {
+                "name": "Attack Upward",
+                "code": "H0140001_005_01"
+            },
+            {
+                "name": "Roar",
+                "code": "CT_HBOSS_002_001_H0140001_c05>CT_HBOSS_002_001_H0140001_c06"
+            },
             { "name": "Broken", "code": "H0140001_081_01>H0140001_081_02" },
             { "name": "Broken 2", "code": "H0140002_081_01>H0140002_081_02" },
             {
