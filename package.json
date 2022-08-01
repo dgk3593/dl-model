@@ -12,8 +12,8 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
-        "@emotion/react": "^11.9.3",
-        "@emotion/styled": "^11.9.3",
+        "@emotion/react": "^11.10.0",
+        "@emotion/styled": "^11.10.0",
         "@mui/icons-material": "^5.8.4",
         "@mui/material": "^5.9.2",
         "fflate": "^0.7.3",
