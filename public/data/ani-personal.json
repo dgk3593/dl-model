@@ -13044,6 +13044,16 @@
         "r0170001": [
             { "name": "Idle", "code": "R0170001_000_01" },
             { "name": "Frozen", "code": "R0170001_013_01" },
+            { "name": "Roar", "code": "CT_HBOSS_002_001_R0170001_c06" },
+            {
+                "name": "Look Up",
+                "code": "CT_INGAME_003_001_r0170001_c21"
+            },
+            { "name": "Weakened", "code": "CT_HBOSS_002_001_R0170001_c05" },
+            { "name": "Weakened 2", "code": "R0170001_02_01>R0170001_02_02" },
+            { "name": "Weakened 3", "code": "R0170001_02_03" },
+            { "name": "Last Cry", "code": "R0170001_02_04" },
+            { "name": "Last Cry 2", "code": "R0170001_02_05" },
             { "name": "Broken", "code": "R0170001_081_01>R0170001_081_02" },
             {
                 "name": "Recover from Broken",
@@ -13064,6 +13074,67 @@
             {
                 "name": "Left Claw Swipe",
                 "code": "R0170001_103_01>R0170001_103_02>R0170001_103_03"
+            },
+            { "name": "Arm Spread", "code": "CT_HBOSS_002_001_R0170001_c07" },
+            {
+                "name": "Arm Spread 2",
+                "code": "CT_INGAME_003_001_r0170001_c02"
+            },
+            {
+                "name": "Arm Spread 3",
+                "code": "CT_INGAME_003_001_r0170001_c03"
+            },
+            {
+                "name": "Arm Spread 4",
+                "code": "CT_INGAME_003_001_r0170001_c04"
+            },
+            {
+                "name": "Arm Spread 5",
+                "code": "CT_INGAME_003_001_r0170001_c06"
+            },
+            {
+                "name": "Arm Spread 6",
+                "code": "CT_INGAME_003_001_r0170001_c13"
+            },
+            {
+                "name": "Arm Spread 7",
+                "code": "CT_INGAME_003_001_r0170001_c14"
+            },
+            {
+                "name": "Arm Spread 8",
+                "code": "CT_INGAME_003_001_r0170001_c15"
+            },
+            {
+                "name": "Arm Spread 9",
+                "code": "CT_INGAME_003_001_r0170001_c16"
+            },
+            {
+                "name": "Arm Spread 10",
+                "code": "CT_INGAME_003_001_r0170001_c17"
+            },
+            {
+                "name": "Arm Spread 11",
+                "code": "CT_INGAME_003_001_r0170001_c18"
+            },
+            {
+                "name": "Arm Spread 12",
+                "code": "CT_INGAME_003_001_r0170001_c19"
+            },
+            {
+                "name": "Arm Spread 13",
+                "code": "CT_INGAME_003_001_r0170001_c20"
+            },
+            {
+                "name": "Arm Spread 14",
+                "code": "CT_INGAME_003_001_r0170001_c23"
+            },
+            {
+                "name": "Arm Spread 15",
+                "code": "CT_INGAME_003_001_r0170001_c24"
+            },
+            {
+                "name": "Arm Spread 16",
+                "code": "CT_INGAME_003_001_r0170001_c15"
             }
         ],
         "e0560001": [
