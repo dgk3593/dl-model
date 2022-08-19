@@ -17,14 +17,14 @@ const buttonTypes = ["w", "b", "e"];
  * @param {string} id
  * @return {Boolean}
  */
-const useButton = id => buttonTypes.some(type => id.startsWith(type));
+const useButton = (id) => buttonTypes.some((type) => id.startsWith(type));
 
-const GalleryComponent = props => {
-    return useButton(props.id) ? (
-        <ModelButton {...props} />
-    ) : (
-        <CharaCard {...props} />
-    );
+const GalleryComponent = (props) => {
+  return useButton(props.id) ? (
+    <ModelButton {...props} />
+  ) : (
+    <CharaCard {...props} />
+  );
 };
 
 /**
@@ -37,47 +37,45 @@ const GalleryComponent = props => {
  * @param { (code: string) => void} props.onSelect
  */
 function CatalogBody({
-    compact,
-    content,
-    searchQuery,
-    searchAll,
-    filter = defaultFilter,
-    onSelect,
+  compact,
+  content,
+  searchQuery,
+  searchAll,
+  filter = defaultFilter,
+  onSelect,
 }) {
-    const data = useAppData(data => data[content]) ?? [];
-    const [list, setList] = useState([]);
-    const [loading, setLoading] = useState(false);
+  const data = useAppData((data) => data[content]) ?? [];
+  const [list, setList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-    useEffect(() => setList(data), [content]);
+  useEffect(() => setList(data), [content]);
 
-    useEffect(() => {
-        setLoading(true);
-        async function getNewList() {
-            if (searchAll)
-                return searchQuery
-                    ? await searchModelByName(searchQuery)
-                    : data;
+  useEffect(() => {
+    setLoading(true);
+    async function getNewList() {
+      if (searchAll)
+        return searchQuery ? await searchModelByName(searchQuery) : data;
 
-            const searchResult = await searchData(data, searchQuery);
-            return await filterData(searchResult, filter);
-        }
+      const searchResult = await searchData(data, searchQuery);
+      return await filterData(searchResult, filter);
+    }
 
-        setTimeout(async () => {
-            const newList = await getNewList();
-            setList(newList);
-            setLoading(false);
-        });
-    }, [searchQuery, filter, searchAll]);
+    setTimeout(async () => {
+      const newList = await getNewList();
+      setList(newList);
+      setLoading(false);
+    });
+  }, [searchQuery, filter, searchAll]);
 
-    return data.length && !loading ? (
-        <Gallery
-            list={list}
-            component={compact ? ModelButton : GalleryComponent}
-            onClick={onSelect}
-        />
-    ) : (
-        <LoadSpinner />
-    );
+  return loading ? (
+    <LoadSpinner />
+  ) : (
+    <Gallery
+      list={list}
+      component={compact ? ModelButton : GalleryComponent}
+      onClick={onSelect}
+    />
+  );
 }
 
 export default memo(CatalogBody);

@@ -69,10 +69,10 @@ function Body({
         initAniSelectState(weapon);
     };
 
-    return data.length && !loading ? (
-        <Gallery list={list} component={WeaponButton} onClick={onSelect} />
-    ) : (
+    return loading ? (
         <LoadSpinner />
+        ) : (
+        <Gallery list={list} component={WeaponButton} onClick={onSelect} />
     );
 }
 
