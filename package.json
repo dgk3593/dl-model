@@ -14,8 +14,8 @@
     "dependencies": {
         "@emotion/react": "^11.10.0",
         "@emotion/styled": "^11.10.0",
-        "@mui/icons-material": "^5.8.4",
-        "@mui/material": "^5.10.1",
+        "@mui/icons-material": "^5.10.2",
+        "@mui/material": "^5.10.2",
         "fflate": "^0.7.3",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
@@ -28,7 +28,7 @@
         "stats.js": "^0.17.0",
         "three": "^0.143.0",
         "upng-js": "^2.1.0",
-        "zustand": "^4.1.0"
+        "zustand": "^4.1.1"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.3.0",
