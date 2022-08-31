@@ -12,10 +12,10 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
-        "@emotion/react": "^11.10.0",
-        "@emotion/styled": "^11.10.0",
-        "@mui/icons-material": "^5.10.2",
-        "@mui/material": "^5.10.2",
+        "@emotion/react": "^11.10.4",
+        "@emotion/styled": "^11.10.4",
+        "@mui/icons-material": "^5.10.3",
+        "@mui/material": "^5.10.3",
         "fflate": "^0.7.3",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
@@ -23,7 +23,7 @@
         "immer": "^9.0.15",
         "nanoid": "^4.0.0",
         "preact": "^10.10.6",
-        "react-beautiful-dnd": "^13.1.0",
+        "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
         "three": "^0.143.0",
