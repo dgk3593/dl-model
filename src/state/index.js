@@ -17,9 +17,10 @@ const immer = config => (set, get, api) =>
 const createStore = config => create(immer(config));
 
 export const useAppState = createStore(app);
-export const useActiveModel = create(activeModel);
-export const useChainMakerState = create(chainMaker);
 export const useModelCatalogState = createStore(modelCatalog);
 export const useAddWeaponState = createStore(modelCatalog);
 export const useAniSelectState = createStore(aniSelect);
 export const useModalState = createStore(rootModal);
+
+export const useActiveModel = create(activeModel);
+export const useChainMakerState = create(chainMaker);

@@ -1,16 +1,16 @@
 import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
 
+// no immer
 export const chainMakerConfig = set => ({
     open: false,
-    toggle: () => set(state => (state.open = !state.open)),
+    toggle: () => set(state => ({ open: !state.open })),
 
     target: null,
-    setTarget: target =>
-        set(state => {
-            if (!target) return;
-            if (!target.userData.chain) {
-                target.userData.chain = new ArrayWithEvent();
-            }
-            state.target = target;
-        }),
+    setTarget: target => {
+        if (!target) return;
+        if (!target.userData.chain) {
+            target.userData.chain = new ArrayWithEvent();
+        }
+        set({ target });
+    },
 });
