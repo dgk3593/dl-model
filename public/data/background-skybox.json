@@ -1,14 +1,1 @@
-{
-    "data": [
-        {
-            "src": "img/thumbnail/skybox/Nebula.gif",
-            "value": "img/skybox/Nebula",
-            "name": "Nebula"
-        },
-        {
-            "src": "img/thumbnail/skybox/Nightsky.jpg",
-            "value": "img/skybox/Nightsky",
-            "name": "Nightsky"
-        }
-    ]
-}
+{"data":[{"src":"img/thumbnail/skybox/Nebula.gif","value":"img/skybox/Nebula","name":"Nebula"},{"src":"img/thumbnail/skybox/Nightsky.jpg","value":"img/skybox/Nightsky","name":"Nightsky"}]}
