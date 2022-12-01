@@ -13,7 +13,7 @@ export const passData = {
     },
     pixel: {
         name: "Pixelate",
-        propList: ["enabled", "pixelSize"],
+        propList: ["enabled", "size"],
     },
     afterimage: {
         name: "Afterimage",

@@ -48,7 +48,7 @@ export const props = {
             type: "boolean",
         },
         {
-            propName: "pixelSize",
+            propName: "size",
             label: "Pixel Size",
             type: "number",
             min: 1,

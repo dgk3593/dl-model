@@ -79,24 +79,26 @@ async function createSMAAPass({ renderer }) {
     return pass;
 }
 
-async function createPixelPass({ renderer }) {
-    const { ShaderPass } = await import(
-        "three/examples/jsm/postprocessing/ShaderPass"
-    );
-    const { PixelShader } = await import(
-        "three/examples/jsm/shaders/PixelShader"
+async function createPixelPass({ scene, camera }) {
+    const { RenderPixelatedPass } = await import(
+        "three/examples/jsm/postprocessing/RenderPixelatedPass"
     );
 
-    const pixelPass = new ShaderPass(PixelShader);
-    const resolution = new THREE.Vector2();
-    renderer.getSize(resolution);
-    resolution.multiplyScalar(window.devicePixelRatio);
+    const pass = new RenderPixelatedPass(5, scene, camera);
+    Object.defineProperty(pass, "propList", {
+        value: ["size"],
+        writable: false,
+    });
+    Object.defineProperty(pass, "size", {
+        get() {
+            return this.pixelSize;
+        },
+        set(value) {
+            this.setPixelSize(value);
+        },
+    });
 
-    pixelPass.uniforms["resolution"].value = resolution;
-    exposeUniforms(pixelPass, ["pixelSize"]);
-    pixelPass.pixelSize = 10;
-
-    return pixelPass;
+    return pass;
 }
 
 async function createSobelPass({ renderer }) {
