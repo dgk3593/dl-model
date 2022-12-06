@@ -28,11 +28,11 @@
         "stats.js": "^0.17.0",
         "three": "^0.147.0",
         "upng-js": "^2.1.0",
-        "zustand": "^4.1.4"
+        "zustand": "^4.1.5"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.4.0",
         "gh-pages": "^4.0.0",
-        "vite": "^3.2.4"
+        "vite": "^3.2.5"
     }
 }
