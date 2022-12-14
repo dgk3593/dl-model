@@ -1,4 +1,4 @@
-import{a as x,aj as l,f,al as h,a3 as u,X as d,Z as n}from"./three-95e0c7cb.js";import{P as v,F as A}from"./Pass-b3525e48.js";const r={defines:{SMAA_THRESHOLD:"0.1"},uniforms:{tDiffuse:{value:null},resolution:{value:new x(1/1024,1/512)}},vertexShader:`
+import{a as x,aj as l,f,al as h,a3 as u,X as d,Z as n}from"./three.module-95e0c7cb.js";import{P as v,F as A}from"./Pass-2e948f01.js";const r={defines:{SMAA_THRESHOLD:"0.1"},uniforms:{tDiffuse:{value:null},resolution:{value:new x(1/1024,1/512)}},vertexShader:`
 
 		uniform vec2 resolution;
 

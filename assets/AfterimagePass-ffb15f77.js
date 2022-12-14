@@ -1,4 +1,4 @@
-import{X as d,aj as s,a3 as i,Z as n,aq as h}from"./three-95e0c7cb.js";import{P as u,F as r}from"./Pass-b3525e48.js";const a={uniforms:{damp:{value:.96},tOld:{value:null},tNew:{value:null}},vertexShader:`
+import{X as d,aj as s,a3 as i,Z as n,aq as h}from"./three.module-95e0c7cb.js";import{P as u,F as r}from"./Pass-2e948f01.js";const a={uniforms:{damp:{value:.96},tOld:{value:null},tNew:{value:null}},vertexShader:`
 
 		varying vec2 vUv;
 

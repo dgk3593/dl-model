@@ -1,4 +1,4 @@
-import{a as r,X as n,Z as o}from"./three-95e0c7cb.js";import{P as l,F as u}from"./Pass-b3525e48.js";const a={uniforms:{tDiffuse:{value:null},tSize:{value:new r(256,256)},center:{value:new r(.5,.5)},angle:{value:1.57},scale:{value:1}},vertexShader:`
+import{a as r,X as n,Z as o}from"./three.module-95e0c7cb.js";import{P as l,F as u}from"./Pass-2e948f01.js";const a={uniforms:{tDiffuse:{value:null},tSize:{value:new r(256,256)},center:{value:new r(.5,.5)},angle:{value:1.57},scale:{value:1}},vertexShader:`
 
 		varying vec2 vUv;
 

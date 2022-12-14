@@ -1,4 +1,4 @@
-import{aj as f,a3 as s,at as p,au as n,av as d,X as x,Z as h,i as C}from"./three-95e0c7cb.js";import{P as D,F as b}from"./Pass-b3525e48.js";const u={defines:{DEPTH_PACKING:1,PERSPECTIVE_CAMERA:1},uniforms:{tColor:{value:null},tDepth:{value:null},focus:{value:1},aspect:{value:1},aperture:{value:.025},maxblur:{value:.01},nearClip:{value:1},farClip:{value:1e3}},vertexShader:`
+import{aj as f,a3 as s,at as p,au as n,av as d,X as x,Z as h,i as C}from"./three.module-95e0c7cb.js";import{P as D,F as b}from"./Pass-2e948f01.js";const u={defines:{DEPTH_PACKING:1,PERSPECTIVE_CAMERA:1},uniforms:{tColor:{value:null},tDepth:{value:null},focus:{value:1},aspect:{value:1},aperture:{value:.025},maxblur:{value:.01},nearClip:{value:1},farClip:{value:1e3}},vertexShader:`
 
 		varying vec2 vUv;
 
