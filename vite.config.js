@@ -28,6 +28,8 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: { three: ["three"] },
+                chunkFileNames: "assets/[hash]-[name].js",
+                assetFileNames: "assets/[hash]-[name][extname]",
             },
         },
     },
