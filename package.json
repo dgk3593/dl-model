@@ -21,7 +21,7 @@
         "fscreen": "^1.2.0",
         "idb": "^7.1.1",
         "immer": "^9.0.19",
-        "nanoid": "^4.0.0",
+        "nanoid": "^4.0.1",
         "preact": "^10.11.3",
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
