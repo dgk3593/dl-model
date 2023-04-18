@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import produce from "immer";
+import { produce } from "immer";
 
 /**
  * @param {string} group
