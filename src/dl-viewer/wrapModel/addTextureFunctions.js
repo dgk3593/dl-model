@@ -13,7 +13,7 @@ export default function addTextureFunctions(container) {
         (async function () {
             const texturePath = getTexturePath(defaultTexture);
             const texture = new THREE.TextureLoader().load(texturePath);
-            texture.encoding = THREE.sRGBEncoding;
+            texture.colorSpace = THREE.SRGBColorSpace;
             texture.name = defaultTexture;
             material.list.forEach(mat => (mat.map = mat.map ?? texture));
         })();
@@ -50,7 +50,7 @@ export default function addTextureFunctions(container) {
             (async function () {
                 const newTexture = await loadTexture(texturePath);
                 newTexture.name = newTextureName;
-                newTexture.encoding = THREE.sRGBEncoding;
+                newTexture.colorSpace = THREE.SRGBColorSpace;
 
                 matList.forEach(mat => {
                     if (mat.map) {

@@ -293,7 +293,7 @@ export const changeMaterial = (
                 ? new THREE.TextureLoader().load(texturePath)
                 : materials[i].map;
 
-            texturePath && (texture.encoding = THREE.sRGBEncoding);
+            texturePath && (texture.colorSpace = THREE.SRGBColorSpace);
 
             const newMat = createNewMaterial(matType);
             newMat.name = oldMat.name;

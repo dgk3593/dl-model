@@ -16,5 +16,5 @@ const createRenderTarget = () =>
         minFilter: THREE.LinearFilter,
         magFilter: THREE.LinearFilter,
         format: THREE.RGBAFormat,
-        encoding: THREE.sRGBEncoding,
+        colorSpace: THREE.SRGBColorSpace,
     });

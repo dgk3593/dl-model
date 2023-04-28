@@ -125,7 +125,7 @@ export function getModelType(id) {
  */
 export function createRenderer(params = defaultRendererParams) {
     const renderer = new THREE.WebGLRenderer(params);
-    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     return renderer;
 }
@@ -146,7 +146,7 @@ export async function createBackground(bg) {
     if (bg.startsWith("img:")) {
         const path = bg.replace("img:", "");
         const background = await loadTexture(path);
-        background.encoding = THREE.sRGBEncoding;
+        background.colorSpace = THREE.SRGBColorSpace;
         background.center.set(0.5, 0);
         return background;
     }
@@ -154,7 +154,7 @@ export async function createBackground(bg) {
     if (bg.startsWith("sky:")) {
         const path = bg.replace("sky:", "");
         const background = await loadSkybox(path);
-        background.encoding = THREE.sRGBEncoding;
+        background.colorSpace = THREE.SRGBColorSpace;
         return background;
     }
 
@@ -180,7 +180,7 @@ export function disposeMaterial(material) {
  */
 export const syncLoadDispTexture = path => {
     const texture = new THREE.TextureLoader().load(path);
-    texture.encoding = THREE.sRGBEncoding;
+    texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
 };
 
