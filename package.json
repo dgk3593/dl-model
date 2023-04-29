@@ -12,8 +12,8 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
-        "@emotion/react": "^11.10.6",
-        "@emotion/styled": "^11.10.6",
+        "@emotion/react": "^11.10.8",
+        "@emotion/styled": "^11.10.8",
         "@mui/icons-material": "^5.11.16",
         "@mui/material": "^5.12.2",
         "fflate": "^0.7.4",
@@ -26,7 +26,7 @@
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
-        "three": "^0.152.0",
+        "three": "^0.152.2",
         "upng-js": "^2.1.0",
         "zustand": "^4.3.7"
     },
