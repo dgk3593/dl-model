@@ -1,1 +1,0 @@
-import{o}from"./index-1c149695.js";function g({type:c,value:l,icon:t,checked:a=!1,name:e=l,onClick:n=()=>{},...s}){const d=`GlowToggle ${a?"checked":""}`,i=c==="icon"?o("img",{src:t,alt:e}):o("span",{children:e});return o("div",{className:d,"data-type":c,"data-value":l,onClick:n,...s,children:i})}export{g as G};
