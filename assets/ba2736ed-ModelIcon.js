@@ -1,0 +1,1 @@
+import{o as t}from"./index-7c7dfa1b.js";const a=n=>n&&["b","c","d","h","r","w","e"].includes(n[0]);function r({modelId:n,...c}){const o=a(n)?`img/icon/${n}.png`:"";return o&&t("img",{src:o,alt:n,loading:"lazy",...c})}export{r as M,a as h};
