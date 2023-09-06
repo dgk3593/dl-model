@@ -14,8 +14,8 @@
     "dependencies": {
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
-        "@mui/icons-material": "^5.14.7",
-        "@mui/material": "^5.14.7",
+        "@mui/icons-material": "^5.14.8",
+        "@mui/material": "^5.14.8",
         "fflate": "^0.8.0",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
@@ -26,7 +26,7 @@
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
-        "three": "^0.156.0",
+        "three": "^0.156.1",
         "upng-js": "^2.1.0",
         "zustand": "^4.4.1"
     },
