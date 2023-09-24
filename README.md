@@ -55,10 +55,9 @@ viewer.controls.target.set(0.087, 1.877, 0.017);
 
 const pinon = await viewer.loadDLModel("c110366_01");
 pinon.attachTo(gabriel, "jHandR");
-pinon.animation.addChain("ROD_SKL_02_01_11000902").then(() => {
-    pinon.animation.pause();
-    pinon.animation.setTime(1.085);
-});
+await pinon.animation.addChain("ROD_SKL_02_01_11000902");
+pinon.animation.pause();
+pinon.animation.setTime(1.085);
 pinon.position.set(0.315, -0.19, 0.22);
 pinon.scale = 1.2;
 pinon.model.quaternion.set(-0.7071, 0, 0.2185, 0.6725);
