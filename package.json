@@ -20,7 +20,7 @@
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^7.1.1",
-        "immer": "^10.0.2",
+        "immer": "^10.0.3",
         "nanoid": "^5.0.1",
         "preact": "^10.18.1",
         "react-beautiful-dnd": "^13.1.1",
@@ -28,7 +28,7 @@
         "stats.js": "^0.17.0",
         "three": "^0.157.0",
         "upng-js": "^2.1.0",
-        "zustand": "^4.4.1"
+        "zustand": "^4.4.2"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.5.0",
