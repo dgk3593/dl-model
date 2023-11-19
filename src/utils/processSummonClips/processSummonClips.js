@@ -2,6 +2,7 @@ import fbxList from "./fileList";
 import { saveAs } from "file-saver";
 import { ANIMATION_SOURCE } from "@/dl-viewer/path";
 import * as THREE from "three";
+import { myFetch } from "@/helper/myFetch";
 
 const dir = `${ANIMATION_SOURCE}/todo`;
 const DOWNLOAD_LIMIT = 10;
@@ -114,7 +115,7 @@ const getAniPath = name =>
 function loadClip(name) {
     const path = getAniPath(name);
     return new Promise(resolve =>
-        fetch(path)
+        myFetch(path)
             .then(response => response.json())
             .then(json => THREE.AnimationClip.parse(json))
             .then(resolve)

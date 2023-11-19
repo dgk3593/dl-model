@@ -11,7 +11,7 @@ export const fetchJsonData = async url => {
 };
 
 const BASE_URL = import.meta.env.DEV
-    ? "http://localhost:3000"
+    ? "http://localhost:3000/dl-model"
     : "https://dgk3593.github.io/dl-model";
 
 /**

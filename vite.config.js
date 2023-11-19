@@ -3,6 +3,7 @@ import preact from "@preact/preset-vite";
 import path from "path";
 
 // https://vitejs.dev/config/
+/** @type {import('vite').UserConfig} */
 export default defineConfig({
     base: "/dl-model/",
     plugins: [preact()],

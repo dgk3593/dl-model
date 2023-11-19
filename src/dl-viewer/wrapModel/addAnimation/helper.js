@@ -4,6 +4,7 @@ import { ANIMATION_SOURCE, FBX_SOURCE } from "../../path";
 import { extractPair } from "../../utils";
 import { FPS } from "../../defaultParams";
 import { ArrayWithEvent } from "@/dl-viewer/utils/ArrayWithEvent";
+import { myFetch } from "@/helper/myFetch";
 
 export const defaultCurrent = {
     chainName: "",
@@ -178,7 +179,7 @@ export function loadAniClip(code, exSource) {
 
     const path = getAniPath(code);
     return new Promise(resolve =>
-        fetch(path)
+        myFetch(path)
             .then(response => response.json())
             .then(json => THREE.AnimationClip.parse(json))
             .then(resolve)
