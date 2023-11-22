@@ -1,1 +1,0 @@
-import{S as e}from"./gxAtdKK7-Selector.js";import{u as r}from"./index-Bim4H6cd.js";const c=["Eyes","Mouth","Both"];function s({value:t,onClick:o}){return r(e,{type:"text",options:c,value:t,onClick:o})}export{s as F};
