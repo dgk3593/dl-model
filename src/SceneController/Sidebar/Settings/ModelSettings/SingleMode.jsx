@@ -45,7 +45,7 @@ function SingleMode() {
         setTarget(activeModel);
         toggleChainMaker();
     };
-    
+
     return (
         <>
             <TargetSetting />
@@ -93,7 +93,7 @@ function SingleMode() {
                         onClick={addAnimation}
                         startIcon={<DirectionsRun />}
                     >
-                        Animation Select
+                        Select Animation
                     </Button>
                     <Button
                         variant="contained"
@@ -101,7 +101,7 @@ function SingleMode() {
                         startIcon={<Storage />}
                         title="Create Animation Chain"
                     >
-                        Chain Maker
+                        Animation Chain
                     </Button>
 
                     <span className="break" />

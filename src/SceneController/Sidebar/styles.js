@@ -1,5 +1,7 @@
 // @ts-ignore
-import bg from "./Rose-Petals.svg";
+
+/* background by SVGBackgrounds.com */
+const bg = 'url("img/Rose-Petals.svg")';
 
 const SIDEBAR_WIDTH = "17rem";
 const SIDEBAR_BG = "#1f0000";
@@ -23,8 +25,7 @@ export const styles = {
         width: SIDEBAR_WIDTH,
         backgroundColor: SIDEBAR_BG,
         border: "none",
-        /* background by SVGBackgrounds.com */
-        backgroundImage: `url(${bg})`,
+        backgroundImage: bg,
         backgroundSize: "cover",
         backgroundPosition: "center",
 
