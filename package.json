@@ -32,7 +32,7 @@
         "zustand": "^4.4.7"
     },
     "devDependencies": {
-        "@preact/preset-vite": "^2.7.0",
+        "@preact/preset-vite": "^2.8.1",
         "gh-pages": "^6.1.1",
         "vite": "^5.0.10"
     }
