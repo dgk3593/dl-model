@@ -9,7 +9,7 @@ import Setters from "components/Setters";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import viewer from "@/viewer";
-import { passTypes } from "@/dl-viewer/utils/postprocessing/passData";
+import { passTypes } from "@/dl-viewer/utils/postProcessing/passData";
 import "../../SettingGroup.css";
 import "./PostProcessingControl.css";
 
