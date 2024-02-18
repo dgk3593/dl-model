@@ -23,13 +23,13 @@
         "idb": "^8.0.0",
         "immer": "^10.0.3",
         "nanoid": "^5.0.5",
-        "preact": "10.19.3",
+        "preact": "^10.19.5",
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
         "three": "^0.161.0",
         "upng-js": "^2.1.0",
-        "zustand": "^4.5.0"
+        "zustand": "^4.5.1"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.8.1",
