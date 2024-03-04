@@ -29,7 +29,7 @@
         "stats.js": "^0.17.0",
         "three": "^0.162.0",
         "upng-js": "^2.1.0",
-        "zustand": "^4.5.1"
+        "zustand": "^4.5.2"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.8.1",
