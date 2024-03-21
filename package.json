@@ -15,15 +15,15 @@
     "dependencies": {
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.0",
-        "@mui/icons-material": "^5.15.13",
-        "@mui/material": "^5.15.13",
+        "@mui/icons-material": "^5.15.14",
+        "@mui/material": "^5.15.14",
         "fflate": "^0.8.2",
         "file-saver": "^2.0.5",
         "fscreen": "^1.2.0",
         "idb": "^8.0.0",
         "immer": "^10.0.4",
         "nanoid": "^5.0.6",
-        "preact": "^10.19.7",
+        "preact": "^10.20.0",
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
@@ -34,6 +34,6 @@
     "devDependencies": {
         "@preact/preset-vite": "^2.8.2",
         "gh-pages": "^6.1.1",
-        "vite": "^5.1.6"
+        "vite": "^5.2.2"
     }
 }
