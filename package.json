@@ -22,7 +22,7 @@
         "fscreen": "^1.2.0",
         "idb": "^8.0.0",
         "immer": "^10.0.4",
-        "nanoid": "^5.0.6",
+        "nanoid": "^5.0.7",
         "preact": "^10.20.1",
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
