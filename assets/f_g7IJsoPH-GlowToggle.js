@@ -1,1 +1,0 @@
-import{u as o}from"./index-DteUcDfi.js";function g({type:c,value:a,icon:l,checked:t=!1,name:e=a,onClick:d=()=>{},...i}){const n=`GlowToggle ${t?"checked":""}`,r=c==="icon"?o("img",{src:l,alt:e}):o("span",{children:e});return o("div",{className:n,"data-type":c,"data-value":a,onClick:d,...i,children:r})}export{g as G};
