@@ -1,1 +1,0 @@
-import{S as e}from"./f_Cg-mUrgf-Selector.js";import{u as r}from"./index-1a63jsUl.js";const c=["Eyes","Mouth","Both"];function s({value:t,onClick:o}){return r(e,{type:"text",options:c,value:t,onClick:o})}export{s as F};
