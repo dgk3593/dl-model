@@ -1,0 +1,1 @@
+import{u as e}from"./index-BMIyI3V6.js";import{S as r}from"./f_DEOUkYU5-Selector.js";const c=["Eyes","Mouth","Both"];function s({value:t,onClick:o}){return e(r,{type:"text",options:c,value:t,onClick:o})}export{s as F};
