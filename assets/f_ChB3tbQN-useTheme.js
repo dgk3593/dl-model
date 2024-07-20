@@ -1,1 +1,0 @@
-import{x as n}from"./index-BMIyI3V6.js";import{T as m,c as o}from"./f_DlU2EVDY-ButtonBase.js";function r(e){return Object.keys(e).length===0}function s(e=null){const t=n(m);return!t||r(t)?e:t}const u=o();function h(e=u){return s(e)}export{s as a,h as u};
