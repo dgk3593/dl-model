@@ -23,7 +23,7 @@
         "idb": "^8.0.0",
         "immer": "^10.1.1",
         "nanoid": "^5.0.7",
-        "preact": "^10.22.1",
+        "preact": "^10.23.0",
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
