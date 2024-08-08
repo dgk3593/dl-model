@@ -27,13 +27,13 @@
         "react-beautiful-dnd": "^13.1.1",
         "react-color": "^2.19.3",
         "stats.js": "^0.17.0",
-        "three": "^0.167.0",
+        "three": "^0.167.1",
         "upng-js": "^2.1.0",
         "zustand": "^4.5.4"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.9.0",
         "gh-pages": "^6.1.1",
-        "vite": "^5.3.5"
+        "vite": "^5.4.0"
     }
 }
