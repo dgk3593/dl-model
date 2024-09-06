@@ -16,3 +16,26 @@ export const fetchDataFromList = async list => {
 
     return Object.fromEntries(entries);
 };
+
+/**
+ * Freeze an object and all its sub-objects recursively
+ * @param {object} obj - the object to freeze
+ * @return {object} the frozen object
+ */
+export function deepFreeze(obj) {
+    if (typeof obj !== "object" || obj === null) {
+        return obj;
+    }
+
+    if (Object.isFrozen(obj)) {
+        return obj;
+    }
+
+    Object.keys(obj).forEach(key => {
+        if (typeof obj[key] === "object") {
+            obj[key] = deepFreeze(obj[key]);
+        }
+    });
+
+    return Object.freeze(obj);
+}
