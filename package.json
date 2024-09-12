@@ -15,8 +15,8 @@
     "dependencies": {
         "@emotion/react": "11.13.3",
         "@emotion/styled": "11.13.0",
-        "@mui/icons-material": "6.0.2",
-        "@mui/material": "6.0.2",
+        "@mui/icons-material": "6.1.0",
+        "@mui/material": "6.1.0",
         "fflate": "0.8.2",
         "file-saver": "2.0.5",
         "fscreen": "1.2.0",
@@ -34,6 +34,6 @@
     "devDependencies": {
         "@preact/preset-vite": "2.9.0",
         "gh-pages": "6.1.1",
-        "vite": "5.4.3"
+        "vite": "5.4.4"
     }
 }
