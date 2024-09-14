@@ -32,8 +32,8 @@
         "zustand": "4.5.5"
     },
     "devDependencies": {
-        "@preact/preset-vite": "2.9.0",
+        "@preact/preset-vite": "2.9.1",
         "gh-pages": "6.1.1",
-        "vite": "5.4.4"
+        "vite": "5.4.5"
     }
 }
