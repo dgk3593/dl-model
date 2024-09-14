@@ -1,1 +1,0 @@
-import{u as o}from"./index-CEXB1s_e.js";function g({type:a,value:c,icon:l,checked:s=!1,name:e=c,onClick:d=()=>{},...t}){return o("div",{className:`GlowToggle ${s?"checked":""}`,"data-type":a,"data-value":c,onClick:d,...t,children:a==="icon"?o("img",{src:l,alt:e}):o("span",{children:e})})}export{g as G};
