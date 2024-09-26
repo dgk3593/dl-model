@@ -34,6 +34,6 @@
     "devDependencies": {
         "@preact/preset-vite": "2.9.1",
         "gh-pages": "6.1.1",
-        "vite": "5.4.7"
+        "vite": "5.4.8"
     }
 }
