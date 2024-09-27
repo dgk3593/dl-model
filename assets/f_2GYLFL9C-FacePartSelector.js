@@ -1,1 +1,0 @@
-import{u as e}from"./index-3T62K6jo.js";import{S as r}from"./f_luimDpq4-Selector.js";const c=["Eyes","Mouth","Both"];function s({value:t,onClick:o}){return e(r,{type:"text",options:c,value:t,onClick:o})}export{s as F};
