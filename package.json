@@ -13,27 +13,27 @@
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
-        "@emotion/react": "11.13.5",
-        "@emotion/styled": "11.13.5",
-        "@mui/icons-material": "6.1.10",
-        "@mui/material": "6.1.10",
+        "@emotion/react": "11.14.0",
+        "@emotion/styled": "11.14.0",
+        "@mui/icons-material": "6.3.0",
+        "@mui/material": "6.3.0",
         "fflate": "0.8.2",
         "file-saver": "2.0.5",
         "fscreen": "1.2.0",
-        "idb": "8.0.0",
+        "idb": "8.0.1",
         "immer": "10.1.1",
         "nanoid": "5.0.9",
-        "preact": "10.25.1",
+        "preact": "10.25.4",
         "react-beautiful-dnd": "13.1.1",
         "react-color": "2.19.3",
         "stats.js": "0.17.0",
-        "three": "0.171.0",
+        "three": "0.172.0",
         "upng-js": "2.1.0",
         "zustand": "5.0.2"
     },
     "devDependencies": {
-        "@preact/preset-vite": "2.9.2",
+        "@preact/preset-vite": "2.9.3",
         "gh-pages": "6.1.1",
-        "vite": "6.0.2"
+        "vite": "6.0.6"
     }
 }

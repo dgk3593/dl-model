@@ -5,7 +5,7 @@ import {
     ShaderMaterial,
     MultiplyOperation,
 } from "three";
-import { MMDToonShader } from "three/examples/jsm/shaders/MMDToonShader.js";
+import { MMDToonShader } from "./MMDToonShader";
 
 class MMDToonMaterial extends ShaderMaterial {
     constructor(parameters) {
