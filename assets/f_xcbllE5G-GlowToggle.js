@@ -1,0 +1,1 @@
+import{u as o}from"./index-DI9Q9CdL.js";function g({type:e,value:a,icon:d,checked:l=!1,name:c=a,onClick:n=()=>{},...s}){return o("div",{className:`GlowToggle ${l?"checked":""}`,"data-type":e,"data-value":a,onClick:n,...s,children:e==="icon"?o("img",{src:d,alt:c}):o("span",{children:c})})}export{g as G};
