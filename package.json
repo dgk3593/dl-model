@@ -23,17 +23,17 @@
         "idb": "8.0.2",
         "immer": "10.1.1",
         "nanoid": "5.1.2",
-        "preact": "10.26.2",
+        "preact": "10.26.4",
         "react-beautiful-dnd": "13.1.1",
         "react-color": "2.19.3",
         "stats.js": "0.17.0",
-        "three": "0.173.0",
+        "three": "0.174.0",
         "upng-js": "2.1.0",
         "zustand": "5.0.3"
     },
     "devDependencies": {
         "@preact/preset-vite": "2.10.1",
-        "gh-pages": "6.3.0",
+        "gh-pages": "6.1.1",
         "vite": "6.2.0"
     }
 }
