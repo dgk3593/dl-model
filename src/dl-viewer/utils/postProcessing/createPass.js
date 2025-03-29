@@ -63,14 +63,12 @@ async function createBloomPass({
     return pass;
 }
 
-async function createSMAAPass({ renderer }) {
+async function createSMAAPass() {
     const { SMAAPass } = await import(
         "three/examples/jsm/postprocessing/SMAAPass"
     );
-    const resolution = new THREE.Vector2();
-    renderer.getSize(resolution);
 
-    const pass = new SMAAPass(resolution.x, resolution.y);
+    const pass = new SMAAPass();
     Object.defineProperty(pass, "propList", {
         value: [],
         writable: false,
@@ -124,14 +122,11 @@ async function createSobelPass({ renderer }) {
     return sobel;
 }
 
-async function createHalftonePass({ renderer }) {
+async function createHalftonePass() {
     const { HalftonePass } = await import(
         "three/examples/jsm/postprocessing/HalftonePass"
     );
-    const resolution = new THREE.Vector2();
-    renderer.getSize(resolution);
-
-    const pass = new HalftonePass(resolution.x, resolution.y, { radius: 4 });
+    const pass = new HalftonePass({ radius: 4 });
     const propList = ["greyscale", "radius", "scatter", "shape"];
     exposeUniforms(pass, propList);
 
