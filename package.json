@@ -14,9 +14,9 @@
     },
     "dependencies": {
         "@emotion/react": "11.14.0",
-        "@emotion/styled": "11.14.0",
-        "@mui/icons-material": "7.1.1",
-        "@mui/material": "7.1.1",
+        "@emotion/styled": "11.14.1",
+        "@mui/icons-material": "7.1.2",
+        "@mui/material": "7.1.2",
         "fflate": "0.8.2",
         "file-saver": "2.0.5",
         "fscreen": "1.2.0",
@@ -29,11 +29,11 @@
         "stats.js": "0.17.0",
         "three": "0.177.0",
         "upng-js": "2.1.0",
-        "zustand": "5.0.5"
+        "zustand": "5.0.6"
     },
     "devDependencies": {
         "@preact/preset-vite": "2.10.1",
         "gh-pages": "6.1.1",
-        "vite": "6.3.5"
+        "vite": "7.0.0"
     }
 }
