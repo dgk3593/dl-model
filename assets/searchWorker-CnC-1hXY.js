@@ -1,0 +1,1 @@
+(function(){"use strict";addEventListener("message",e=>{const{fullList:s=[],query:t,keys:o}=e.data,r=t.toLowerCase(),a=s.filter(l=>o.some(n=>(l[n]?.toLowerCase?.()).includes?.(r)));postMessage(a)})})();

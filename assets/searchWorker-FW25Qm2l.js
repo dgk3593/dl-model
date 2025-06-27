@@ -1,1 +1,0 @@
-(function(){"use strict";addEventListener("message",n=>{const{fullList:r=[],query:c,keys:u}=n.data,a=c.toLowerCase(),i=r.filter(d=>u.some(l=>{var e,t,o;const s=(t=(e=d[l])==null?void 0:e.toLowerCase)==null?void 0:t.call(e);return(o=s.includes)==null?void 0:o.call(s,a)}));postMessage(i)})})();
