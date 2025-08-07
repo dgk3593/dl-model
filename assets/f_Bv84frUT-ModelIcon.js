@@ -1,1 +1,0 @@
-import{u as t}from"./index-DXaiJyD2.js";const a=n=>n&&["b","c","d","h","r","w","e"].includes(n[0]);function r({modelId:n,...o}){const c=a(n)?`img/icon/${n}.png`:"";return c&&t("img",{src:c,alt:n,loading:"lazy",...o})}export{r as M,a as h};
