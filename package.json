@@ -27,7 +27,7 @@
         "react-beautiful-dnd": "13.1.1",
         "react-color": "2.19.3",
         "stats.js": "0.17.0",
-        "three": "0.179.1",
+        "three": "0.180.0",
         "upng-js": "2.1.0",
         "zustand": "5.0.8"
     },
