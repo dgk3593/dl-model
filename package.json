@@ -15,25 +15,25 @@
   "dependencies": {
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
-    "@mui/icons-material": "7.3.5",
-    "@mui/material": "7.3.5",
+    "@mui/icons-material": "7.3.6",
+    "@mui/material": "7.3.6",
     "fflate": "0.8.2",
     "file-saver": "2.0.5",
     "fscreen": "1.2.0",
     "idb": "8.0.3",
-    "immer": "11.0.0",
+    "immer": "11.0.1",
     "nanoid": "5.1.6",
-    "preact": "10.27.2",
+    "preact": "10.28.0",
     "react-beautiful-dnd": "13.1.1",
     "react-color": "2.19.3",
     "stats.js": "0.17.0",
-    "three": "0.181.2",
+    "three": "0.182.0",
     "upng-js": "2.1.0",
-    "zustand": "5.0.8"
+    "zustand": "5.0.9"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.2",
     "gh-pages": "6.1.1",
-    "vite": "7.2.4"
+    "vite": "7.2.7"
   }
 }
