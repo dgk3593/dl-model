@@ -23,11 +23,11 @@
     "idb": "8.0.3",
     "immer": "11.1.4",
     "nanoid": "5.1.6",
-    "preact": "10.28.3",
+    "preact": "10.28.4",
     "react-beautiful-dnd": "13.1.1",
     "react-color": "2.19.3",
     "stats.js": "0.17.0",
-    "three": "0.183.0",
+    "three": "0.183.2",
     "upng-js": "2.1.0",
     "zustand": "5.0.11"
   },
