@@ -1,0 +1,1 @@
+(function(){addEventListener(`message`,e=>{let{fullList:t=[],query:n,keys:r}=e.data,i=n.toLowerCase(),a=t.filter(e=>r.some(t=>(e[t]?.toLowerCase?.()).includes?.(i)));postMessage(a)})})();

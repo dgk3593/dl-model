@@ -1,0 +1,1 @@
+import{T as e}from"./index-Brt2ewrK.js";import{t}from"./f_BMW9VoLm-GlowToggle.js";function n({type:n,value:r,options:i,icons:a=[],onClick:o,labels:s=[]}){let c=e=>{e.stopPropagation();let{value:t}=e.currentTarget.dataset;o(t)};return e(`div`,{className:`Selector`,children:i.map((i,o)=>e(t,{type:n,value:i,name:s[o],icon:a[o],onClick:c,checked:r===i},i))})}export{n as t};

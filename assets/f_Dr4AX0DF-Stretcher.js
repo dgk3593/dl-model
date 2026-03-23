@@ -1,0 +1,1 @@
+import{T as e}from"./index-Brt2ewrK.js";var t=()=>e(`div`,{className:`Stretcher`});export{t};
