@@ -5,38 +5,35 @@ import path from "path";
 // https://vitejs.dev/config/
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-    base: "/dl-model/",
-    plugins: [preact()],
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-            data: path.resolve(__dirname, "./src/data"),
-            hook: path.resolve(__dirname, "./src/SceneController/hook"),
-            components: path.resolve(
-                __dirname,
-                "./src/SceneController/components"
-            ),
-            react: "preact/compat",
-            "react-dom": "preact/compat",
-        },
+  base: "/dl-model/",
+  plugins: [preact()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      data: path.resolve(__dirname, "./src/data"),
+      hook: path.resolve(__dirname, "./src/SceneController/hook"),
+      components: path.resolve(__dirname, "./src/SceneController/components"),
+      react: "preact/compat",
+      "react-dom": "preact/compat",
     },
-    server: {
-        port: 3000,
-        fs: { allow: ["."] },
+  },
+  server: {
+    port: 3000,
+    fs: { allow: ["."] },
+  },
+  build: {
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        manualChunks: { three: ["three"] },
+        chunkFileNames: "assets/f_[hash]-[name].js",
+        assetFileNames: "assets/f_[hash]-[name][extname]",
+      },
     },
-    build: {
-        chunkSizeWarningLimit: 800,
-        rollupOptions: {
-            output: {
-                manualChunks: { three: ["three"] },
-                chunkFileNames: "assets/f_[hash]-[name].js",
-                assetFileNames: "assets/f_[hash]-[name][extname]",
-            },
-        },
+  },
+  oxc: {
+    define: {
+      this: "window",
     },
-    esbuild: {
-        define: {
-            this: "window",
-        },
-    },
+  },
 });
