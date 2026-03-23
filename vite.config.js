@@ -25,7 +25,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
-        manualChunks: { three: ["three"] },
+        manualChunks: id => (id.includes("three") ? "three" : undefined),
         chunkFileNames: "assets/f_[hash]-[name].js",
         assetFileNames: "assets/f_[hash]-[name][extname]",
       },
