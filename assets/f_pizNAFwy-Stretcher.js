@@ -1,0 +1,1 @@
+import{T as e}from"./index-DM84isC4.js";var t=()=>e(`div`,{className:`Stretcher`});export{t};

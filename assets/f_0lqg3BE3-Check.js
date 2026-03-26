@@ -1,0 +1,1 @@
+import{T as e}from"./index-DM84isC4.js";import"./f_AMmyVb4--CircularProgress.js";import{t}from"./f_BPresz93-createSvgIcon.js";var n=t(e(`path`,{d:`M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z`}),`Check`);export{n as t};
