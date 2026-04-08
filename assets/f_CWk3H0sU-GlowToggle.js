@@ -1,0 +1,1 @@
+import{t as e}from"./f_B0r6veDa-jsxRuntime.module.js";function t({type:t,value:n,icon:r,checked:i=!1,name:a=n,onClick:o=()=>void 0,...s}){let c=`GlowToggle ${i?`checked`:``}`,l=t===`icon`?e(`img`,{src:r,alt:a}):e(`span`,{children:a});return e(`div`,{className:c,"data-type":t,"data-value":n,onClick:o,...s,children:l})}export{t};

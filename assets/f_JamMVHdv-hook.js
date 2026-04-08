@@ -1,0 +1,1 @@
+import{b as e,g as t,p as n,w as r}from"./f_bxmvy_T--compat.module.js";import"./f_C1gaMRyi-useToggleState.js";import"./f_sNgttSta-useDebounce.js";n();function i(){let[t,n]=e(0);return[t,()=>n(e=>e+1)]}n();var a=()=>{let e=t(!0);return r(()=>{e.current=!1},[]),e.current};export{i as n,a as t};

@@ -1,0 +1,1 @@
+import{b as e,p as t,w as n}from"./f_bxmvy_T--compat.module.js";t();function r(t,r){let[i,a]=e(t);return n(()=>{let e=setTimeout(()=>{a(t)},r);return()=>{clearTimeout(e)}},[t]),i}export{r as t};

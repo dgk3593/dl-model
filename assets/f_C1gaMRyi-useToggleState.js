@@ -1,0 +1,1 @@
+import{b as e,p as t}from"./f_bxmvy_T--compat.module.js";t();function n(t=!1){let[n,r]=e(t);return[n,()=>r(e=>!e)]}export{n as t};

@@ -1,0 +1,1 @@
+function e(e){if(!e?.userData)return;let{type:t,id:n}=e,{name:r}=e.userData;e.userData.aniSelectState={category:t===`adventurer`?`Adv`:`Personal`,personalAni:{source:n,sourceName:r}}}export{e as t};
