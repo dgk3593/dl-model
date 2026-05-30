@@ -17,23 +17,23 @@
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.9",
-    "fflate": "0.8.2",
+    "fflate": "0.8.3",
     "file-saver": "2.0.5",
     "fscreen": "1.2.0",
     "idb": "8.0.3",
-    "immer": "11.1.4",
-    "nanoid": "5.1.7",
-    "preact": "10.29.1",
+    "immer": "11.1.8",
+    "nanoid": "5.1.11",
+    "preact": "10.29.2",
     "react-beautiful-dnd": "13.1.1",
     "react-color": "2.19.3",
     "stats.js": "0.17.0",
-    "three": "0.183.2",
+    "three": "0.184.0",
     "upng-js": "2.1.0",
-    "zustand": "5.0.12"
+    "zustand": "5.0.14"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.5",
     "gh-pages": "6.1.1",
-    "vite": "8.0.7"
+    "vite": "8.0.14"
   }
 }
