@@ -35,6 +35,14 @@ export const makeGif = ({
       height,
       transparent: "#0000",
     });
+
+    // OVERRIDE: Bypass the broken browser detection and force fast zero-copy memory transfers
+    gif.getTask = function (frame) {
+      const task = GIF.prototype.getTask.call(this, frame);
+      task.canTransfer = true;
+      return task;
+    };
+
     for (let i = 0; i < frames.length; i++) {
       const img = await createImg(frames[i]);
       gif.addFrame(img, { delay });
