@@ -22,7 +22,7 @@ export default defineConfig({
     fs: { allow: ["."] },
   },
   build: {
-    chunkSizeWarningLimit: 800,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: id => (id.includes("three") ? "three" : undefined),

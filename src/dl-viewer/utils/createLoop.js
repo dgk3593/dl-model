@@ -1,80 +1,81 @@
 export default function createLoop(viewer) {
-    let timeScale = 1,
-        reverse = false,
-        paused = false;
+  let timeScale = 1,
+    reverse = false,
+    paused = false;
 
-    const animationLoop = () => {
-        viewer.stats.begin();
+  const animationLoop = () => {
+    viewer.stats.begin();
 
-        viewer.controls.update();
-        const effectiveTimeScale = reverse ? -timeScale : timeScale;
-        const dt = viewer.clock.getDelta() * effectiveTimeScale;
-        paused || viewer.update(dt);
-        viewer.render();
+    viewer.controls.update();
+    const effectiveTimeScale = reverse ? -timeScale : timeScale;
+    viewer.clock.update();
+    const dt = viewer.clock.getDelta() * effectiveTimeScale;
+    paused || viewer.update(dt);
+    viewer.render();
 
-        viewer.stats.end();
-    };
+    viewer.stats.end();
+  };
 
-    let cooldown = false;
-    const renderCallback = () => {
-        if (cooldown) return;
+  let cooldown = false;
+  const renderCallback = () => {
+    if (cooldown) return;
 
-        viewer.render();
-        cooldown = true;
-        setTimeout(() => (cooldown = false), 50);
-    };
+    viewer.render();
+    cooldown = true;
+    setTimeout(() => (cooldown = false), 50);
+  };
 
-    let state = "";
-    const loop = {
-        start() {
-            if (state === "active") return;
+  let state = "";
+  const loop = {
+    start() {
+      if (state === "active") return;
 
-            viewer.renderer.setAnimationLoop(animationLoop);
-            viewer.controls.removeEventListener("change", renderCallback);
-            state = "active";
-        },
-        stop() {
-            if (state === "inactive") return;
+      viewer.renderer.setAnimationLoop(animationLoop);
+      viewer.controls.removeEventListener("change", renderCallback);
+      state = "active";
+    },
+    stop() {
+      if (state === "inactive") return;
 
-            viewer.renderer.setAnimationLoop(null);
-            viewer.controls.addEventListener("change", renderCallback);
-            state = "inactive";
-        },
-        pause() {
-            paused = true;
-        },
-        resume() {
-            paused = false;
-        },
-        get state() {
-            return state;
-        },
-        /**
-         * @return {number}
-         */
-        get timeScale() {
-            return timeScale;
-        },
-        /**
-         * @param {number | string} value
-         */
-        set timeScale(value) {
-            const setValue = parseFloat(value);
-            timeScale = isNaN(setValue) ? 1 : Math.abs(setValue);
-        },
-        get reverse() {
-            return reverse;
-        },
-        set reverse(value) {
-            reverse = !!value;
-        },
-        get paused() {
-            return paused;
-        },
-        set paused(value) {
-            paused = !!value;
-        },
-    };
+      viewer.renderer.setAnimationLoop(null);
+      viewer.controls.addEventListener("change", renderCallback);
+      state = "inactive";
+    },
+    pause() {
+      paused = true;
+    },
+    resume() {
+      paused = false;
+    },
+    get state() {
+      return state;
+    },
+    /**
+     * @return {number}
+     */
+    get timeScale() {
+      return timeScale;
+    },
+    /**
+     * @param {number | string} value
+     */
+    set timeScale(value) {
+      const setValue = parseFloat(value);
+      timeScale = isNaN(setValue) ? 1 : Math.abs(setValue);
+    },
+    get reverse() {
+      return reverse;
+    },
+    set reverse(value) {
+      reverse = !!value;
+    },
+    get paused() {
+      return paused;
+    },
+    set paused(value) {
+      paused = !!value;
+    },
+  };
 
-    return loop;
+  return loop;
 }
