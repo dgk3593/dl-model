@@ -1,0 +1,1 @@
+(function(){let e=(e,t)=>t.length?e.filter(e=>t.every(([t,n])=>n.includes(e[t]))):e;addEventListener(`message`,t=>{let{fullList:n,conditions:r}=t.data,i=e(n,r);postMessage(i)})})();

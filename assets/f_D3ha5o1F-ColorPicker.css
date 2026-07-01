@@ -1,0 +1,1 @@
+.ColorPicker{flex-flow:column wrap;justify-content:center;align-items:center;display:flex}.ColorPicker-select{grid-template-columns:1fr 2.5fr;gap:.5rem;margin-bottom:1rem;display:grid}.ColorPicker-common{flex-direction:column;justify-content:center;gap:.2rem;display:flex}

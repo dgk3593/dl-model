@@ -1,0 +1,1 @@
+.UvFaceSelect{flex-direction:column;justify-content:center;display:flex}.FaceBoxes{grid-template-columns:repeat(3,1fr);gap:1rem;max-width:224px;margin:1rem auto auto;display:grid}.FaceBoxes .FaceBox{cursor:pointer}.FaceBoxes .FaceBox:hover{transform:scale(1.03);box-shadow:4px 4px 8px #101010}
