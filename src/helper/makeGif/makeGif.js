@@ -1,3 +1,5 @@
+import { GIF } from "./gif.js";
+
 /**
  * create HTMLImageElement from data url
  * @param {string} dataUrl
@@ -11,7 +13,6 @@ const createImg = dataUrl =>
   });
 
 /**
- *
  * @param {object} params
  * @param {string[]} params.frames - frames in data URL format
  * @param {number} [params.width]
@@ -26,31 +27,32 @@ export const makeGif = ({
   delay = 30,
 }) =>
   new Promise(async resolve => {
+    const workerUrl = new URL("/assets/gif.worker.js", import.meta.url).href;
+
     const gif = new GIF({
-      workerScript: "assets/gif.worker.js",
-      workers: 2,
+      workerScript: workerUrl,
+      workerOptions: { type: "module" },
+      workers: navigator.hardwareConcurrency || 4,
       quality: 10,
       repeat: 0,
       width,
       height,
-      transparent: "#0000",
+      transparent: 0x000000,
+      background: null,
     });
 
-    // OVERRIDE: Bypass the broken browser detection and force fast zero-copy memory transfers
-    gif.getTask = function (frame) {
-      const task = GIF.prototype.getTask.call(this, frame);
-      task.canTransfer = true;
-      return task;
-    };
+    try {
+      const decodedImages = await Promise.all(frames.map(createImg));
 
-    for (let i = 0; i < frames.length; i++) {
-      const img = await createImg(frames[i]);
-      gif.addFrame(img, { delay });
+      for (let i = 0; i < decodedImages.length; i++) {
+        gif.addFrame(decodedImages[i], { delay });
+      }
+    } catch (error) {
+      console.error("Error preprocessing frames in parallel:", error);
     }
-    gif.on("finished", blob => {
-      gif.freeWorkers.forEach(worker => worker.terminate());
-      resolve(blob);
-    });
+
+    gif.on("finished", resolve);
+
     gif.render();
     console.info(`Render gif from ${gif.frames.length} frames`);
   });

@@ -1,17 +1,18 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"],
-            "components/*": ["src/SceneController/components/*"],
-            "hook/*": ["src/SceneController/hook/*"],
-            "data/*": ["src/data/*"]
-        },
-        "checkJs": true,
-        "target": "es2022",
-        "lib": ["es2022", "DOM", "webworker"],
-        "jsx": "react-jsx",
-        "moduleResolution": "node",
-        "module": "es2020"
-    }
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "assets/*": ["./public/assets/*"],
+      "components/*": ["./src/SceneController/components/*"],
+      "hook/*": ["./src/SceneController/hook/*"],
+      "data/*": ["./src/data/*"]
+    },
+    "checkJs": true,
+    "target": "esnext",
+    "lib": ["esnext", "DOM", "DOM.Iterable", "webworker"],
+    "moduleResolution": "Bundler",
+    "module": "esnext",
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "dist", "public"]
 }
