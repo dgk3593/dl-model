@@ -8,9 +8,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -21,18 +19,17 @@
     "file-saver": "2.0.5",
     "fscreen": "1.2.0",
     "idb": "8.0.3",
-    "immer": "11.1.8",
+    "immer": "11.1.9",
     "nanoid": "5.1.16",
     "preact": "10.29.3",
     "react-color": "2.19.3",
     "stats.js": "0.17.0",
-    "three": "0.185.0",
+    "three": "0.185.1",
     "upng-js": "2.1.0",
     "zustand": "5.0.14"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.5",
-    "gh-pages": "~6.1.1",
-    "vite": "8.1.2"
+    "vite": "8.1.3"
   }
 }
