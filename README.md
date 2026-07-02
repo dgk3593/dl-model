@@ -6,34 +6,83 @@ A web app to view 3D models from the game Dragalia Lost
 
 ### Note: This will stay up for as long as possible
 
+## Prerequisites
+
+This project uses Node.js, npm, and Git.
+
+You will need to install:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (included with Node.js)
+
+## Installation
+
+1. Clone the repo or fork it on GitHub and clone your own copy.
+
+```sh
+git clone https://github.com/dgk3593/dl-model.git
+```
+
+or
+
+```sh
+git clone https://github.com/{YOUR_ACCOUNT_HERE}/dl-model.git
+```
+
+2. Install dependencies:
+
+```sh
+npm install
+```
+
+3. Start the local development server:
+
+```sh
+npm run dev
+```
+
+Then open the URL shown by Vite in your browser.
+
 ## Features
 
--   All adventurers, dragons, weapons, bosses, and more with their animations
--   Apply arbitrary animations on any model and chaining them together
--   Customizable body parts if available
--   Customizable body texture (overdrive, version 1, etc.)
--   Change facial expression of adventurer and dragon models
--   Swap face texture between adventurer models
--   Attach fully customizable models to any joint of another model
--   Customizable outline and material
--   Add aura particles
--   Upload and use animations from FBX files
--   Scene time control
--   Auto rotate
--   Download models as FBX
--   Record video of current animation or custom record
--   Get screenshot or get all frames of current animation with or without background
--   Make GIF of current animation
--   Special capture (rotate, speed draw)
--   Customizable background (solid color, image, or skybox)
--   Customizable lighting
--   Post processing effects
--   Transparent background when loaded in an iframe
--   Add to homescreen to use like a native app on mobile
+- All adventurers, dragons, weapons, bosses, and more with their animations
+- Apply arbitrary animations on any model and chaining them together
+- Customizable body parts if available
+- Customizable body texture (overdrive, version 1, etc.)
+- Change facial expression of adventurer and dragon models
+- Swap face texture between adventurer models
+- Attach fully customizable models to any joint of another model
+- Customizable outline and material
+- Add aura particles
+- Upload and use animations from FBX files
+- Scene time control
+- Auto rotate
+- Download models as FBX
+- Record video of current animation or custom record
+- Get screenshot or get all frames of current animation with or without background
+- Make GIF of current animation
+- Special capture (rotate, speed draw)
+- Customizable background (solid color, image, or skybox)
+- Customizable lighting
+- Post processing effects
+- Transparent background when loaded in an iframe
+- Add to homescreen to use like a native app on mobile
+
+## Development
+
+To get started locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the URL shown by Vite in your browser.
 
 ## Authors
 
--   [@dgk3593](https://www.github.com/dgk3593)
+- [@dgk3593](https://www.github.com/dgk3593)
 
 <a href="https://ko-fi.com/L4L83VOAP" title="Buy me a coffee"><img src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2" alt="Ko-fi" height="48" /></a>
 
@@ -83,17 +132,17 @@ const laxi = await viewer.loadDLModel("c100032_04");
 viewer.add(laxi);
 laxi.position.x = 0.5;
 const laxiAura = laxi.particle.add("aura", {
-    color: "#ff0000",
-    color2: "#ff0000",
-    spread: 0,
+  color: "#ff0000",
+  color2: "#ff0000",
+  spread: 0,
 });
 laxiAura.auraOpacity = 0.75;
 
 const laxiWeaponAuraParam = {
-    color: "#ff0000",
-    color2: "#ffff00",
-    spread: 5,
-    speed: 5,
+  color: "#ff0000",
+  color2: "#ffff00",
+  spread: 5,
+  speed: 5,
 };
 
 const laxiWeaponL = await viewer.loadDLModel("w399012_01");
@@ -105,12 +154,12 @@ laxiWeaponR.attachTo(laxi, "jWeaponR");
 laxiWeaponR.particle.add("aura", laxiWeaponAuraParam);
 
 await mascula.animation.addChain(
-    "KAT_WIN_01_10004501&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>KAT_WIN_02_10004501",
-    false
+  "KAT_WIN_01_10004501&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>KAT_WIN_02_10004501",
+  false,
 );
 await laxi.animation.addChain(
-    "DAG_WIN_01_10003204&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>DAG_WIN_02_10003204",
-    false
+  "DAG_WIN_01_10003204&@0=(mi=2)&@55=(ei=3)&@65=(ei=2)&@75=(mi=4)>DAG_WIN_02_10003204",
+  false,
 );
 
 mascula.animation.play();
