@@ -6,6 +6,31 @@ A web app to view 3D models from the game Dragalia Lost
 
 ### Note: This will stay up for as long as possible
 
+## Features
+
+- All adventurers, dragons, weapons, bosses, and more with their animations
+- Apply arbitrary animations on any model and chaining them together
+- Customizable body parts if available
+- Customizable body texture (overdrive, version 1, etc.)
+- Change facial expression of adventurer and dragon models
+- Swap face texture between adventurer models
+- Attach fully customizable models to any joint of another model
+- Customizable outline and material
+- Add aura particles
+- Upload and use animations from FBX files
+- Scene time control
+- Auto rotate
+- Download models as FBX
+- Record video of current animation or custom record
+- Get screenshot or get all frames of current animation with or without background
+- Make GIF of current animation
+- Special capture (rotate, speed draw)
+- Customizable background (solid color, image, or skybox)
+- Customizable lighting
+- Post processing effects
+- Transparent background when loaded in an iframe
+- Add to homescreen to use like a native app on mobile
+
 ## Prerequisites
 
 This project uses Node.js, npm, and Git.
@@ -43,31 +68,6 @@ npm run dev
 ```
 
 Then open the URL shown by Vite in your browser.
-
-## Features
-
-- All adventurers, dragons, weapons, bosses, and more with their animations
-- Apply arbitrary animations on any model and chaining them together
-- Customizable body parts if available
-- Customizable body texture (overdrive, version 1, etc.)
-- Change facial expression of adventurer and dragon models
-- Swap face texture between adventurer models
-- Attach fully customizable models to any joint of another model
-- Customizable outline and material
-- Add aura particles
-- Upload and use animations from FBX files
-- Scene time control
-- Auto rotate
-- Download models as FBX
-- Record video of current animation or custom record
-- Get screenshot or get all frames of current animation with or without background
-- Make GIF of current animation
-- Special capture (rotate, speed draw)
-- Customizable background (solid color, image, or skybox)
-- Customizable lighting
-- Post processing effects
-- Transparent background when loaded in an iframe
-- Add to homescreen to use like a native app on mobile
 
 ## Development
 
