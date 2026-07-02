@@ -10,7 +10,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.5",
-    "gh-pages": "6.3.0",
+    "gh-pages": "~6.1.1",
     "vite": "8.1.2"
   }
 }
