@@ -1,19 +1,14 @@
-name: Deploy to GitHub Pages
+name: Build and Push to gh-pages Branch
 
 on:
   push:
     branches: [master]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: https://dgk3593.github.io/dl-model/#/
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,11 +24,8 @@ jobs:
           npm ci
           npm run build
 
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages Branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: "./dist"
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: dist
+          branch: gh-pages
