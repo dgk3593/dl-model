@@ -8,7 +8,12 @@ import { Close } from "@mui/icons-material";
  * @param {string} [props.title]
  */
 const CloseButton = ({ onClick, color = "#101010", title }) => (
-    <Box position="absolute" top={0} right={0}>
+    <Box
+        sx={{
+            position: "absolute",
+            top: 0,
+            right: 0
+        }}>
         <IconButton
             sx={{ color: color, zIndex: 5 }}
             onClick={onClick}

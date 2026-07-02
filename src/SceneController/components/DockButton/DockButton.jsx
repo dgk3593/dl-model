@@ -3,7 +3,12 @@ import { ArrowForwardIos } from "@mui/icons-material";
 import "./DockButton.css";
 
 const DockButton = ({ onClick, color = "#101010" }) => (
-    <Box position="absolute" top="2rem" right={0}>
+    <Box
+        sx={{
+            position: "absolute",
+            top: "2rem",
+            right: 0
+        }}>
         <IconButton
             className="DockButton"
             sx={{ color: color }}
