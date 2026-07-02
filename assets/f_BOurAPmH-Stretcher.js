@@ -1,1 +1,0 @@
-import{T as e}from"./index-DFPyHbU0.js";var t=()=>e(`div`,{className:`Stretcher`});export{t};
