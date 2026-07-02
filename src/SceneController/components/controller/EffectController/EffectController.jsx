@@ -17,6 +17,7 @@ function EffectController({
   onDrop,
   onDragEnd,
   isDragOver,
+  isDragging,
 }) {
   const [open, toggleOpen] = useToggleState(target.open ?? false);
   const { type } = target;
@@ -43,7 +44,7 @@ function EffectController({
     <div
       className={`EffectController ${open ? "open" : ""} ${
         isDragOver ? "drag-over" : ""
-      }`}
+      } ${isDragging ? "dragging" : ""}`}
       onDragOver={event => {
         event.preventDefault();
         onDragOver?.(event, index);

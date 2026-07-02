@@ -23,6 +23,7 @@ function ChainAni({
   onDrop,
   onDragEnd,
   isDragOver,
+  isDragging,
 }) {
   const { chain } = target.userData;
 
@@ -39,7 +40,9 @@ function ChainAni({
 
   return (
     <Accordion
-      className={`ChainAni ${isDragOver ? "drag-over" : ""}`}
+      className={`ChainAni ${isDragOver ? "drag-over" : ""} ${
+        isDragging ? "dragging" : ""
+      }`}
       onDragOver={event => {
         event.preventDefault();
         onDragOver?.(event, index);

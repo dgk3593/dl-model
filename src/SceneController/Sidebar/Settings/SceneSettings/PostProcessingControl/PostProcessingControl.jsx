@@ -35,11 +35,13 @@ function PostProcessingControl() {
 
   const dragSourceIndex = useRef(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
+  const [draggingIndex, setDraggingIndex] = useState(null);
 
   const handleDragStart = (event, index) => {
     event.dataTransfer.effectAllowed = "move";
     event.dataTransfer.setData("text/plain", String(index));
     dragSourceIndex.current = index;
+    setDraggingIndex(index);
   };
 
   const handleDragOver = (event, index) => {
@@ -71,6 +73,7 @@ function PostProcessingControl() {
 
   const handleDragEnd = () => {
     setDragOverIndex(null);
+    setDraggingIndex(null);
     dragSourceIndex.current = null;
   };
 
@@ -97,6 +100,7 @@ function PostProcessingControl() {
                 onDrop={handleDrop}
                 onDragEnd={handleDragEnd}
                 isDragOver={dragOverIndex === i}
+                isDragging={draggingIndex === i}
               />
             ))}
           </div>

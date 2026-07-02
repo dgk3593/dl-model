@@ -9,6 +9,7 @@ function ChainAniList({ target }) {
   const chain = target.userData.chain;
   const dragSourceIndex = useRef(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
+  const [draggingIndex, setDraggingIndex] = useState(null);
 
   useEffect(() => {
     const listener = chain.addEventListener("change", updateKey);
@@ -20,6 +21,7 @@ function ChainAniList({ target }) {
     event.dataTransfer.effectAllowed = "move";
     event.dataTransfer.setData("text/plain", String(index));
     dragSourceIndex.current = index;
+    setDraggingIndex(index);
   };
 
   const handleDragOver = (event, index) => {
@@ -50,6 +52,7 @@ function ChainAniList({ target }) {
 
   const handleDragEnd = () => {
     setDragOverIndex(null);
+    setDraggingIndex(null);
     dragSourceIndex.current = null;
   };
 
@@ -66,6 +69,7 @@ function ChainAniList({ target }) {
           onDrop={handleDrop}
           onDragEnd={handleDragEnd}
           isDragOver={dragOverIndex === i}
+          isDragging={draggingIndex === i}
         />
       ))}
     </div>
