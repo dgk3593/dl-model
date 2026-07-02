@@ -58,4 +58,13 @@
     align-self: stretch;
     align-items: center;
     justify-content: center;
+    cursor: grab;
+}
+
+.EffectController-name:active {
+    cursor: grabbing;
+}
+
+.EffectController.drag-over {
+    outline: 2px dashed rgba(255, 255, 255, 0.6);
 }

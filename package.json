@@ -24,7 +24,6 @@
     "immer": "11.1.8",
     "nanoid": "5.1.16",
     "preact": "10.29.3",
-    "react-beautiful-dnd": "13.1.1",
     "react-color": "2.19.3",
     "stats.js": "0.17.0",
     "three": "0.185.0",

@@ -1,47 +1,75 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useKey } from "@/SceneController/hook";
 import ChainAni from "./ChainAni";
 
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
-
 function ChainAniList({ target }) {
-    if (!target?.userData?.chain) return null;
+  if (!target?.userData?.chain) return null;
 
-    const [key, updateKey] = useKey();
-    const chain = target.userData.chain;
+  const [key, updateKey] = useKey();
+  const chain = target.userData.chain;
+  const dragSourceIndex = useRef(null);
+  const [dragOverIndex, setDragOverIndex] = useState(null);
 
-    useEffect(() => {
-        const listener = chain.addEventListener("change", updateKey);
+  useEffect(() => {
+    const listener = chain.addEventListener("change", updateKey);
 
-        return () => chain.removeEventListener("change", listener);
-    }, []);
+    return () => chain.removeEventListener("change", listener);
+  }, []);
 
-    const aniList = provided => (
-        <div key={key} ref={provided.innerRef} {...provided.droppableProps}>
-            {chain.map((ani, i) => (
-                <ChainAni target={target} index={i} ani={ani} key={ani.id} />
-            ))}
-            {provided.placeholder}
-        </div>
-    );
+  const handleDragStart = (event, index) => {
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", String(index));
+    dragSourceIndex.current = index;
+  };
 
-    const onDragEnd = result => {
-        const { destination, source } = result;
-        if (!destination || destination.index === source.index) return;
+  const handleDragOver = (event, index) => {
+    event.preventDefault();
+    if (index !== dragSourceIndex.current) {
+      setDragOverIndex(index);
+    }
+  };
 
-        const newChain = [...chain];
-        const targetAni = newChain.splice(source.index, 1)[0];
-        newChain.splice(destination.index, 0, targetAni);
+  const handleDrop = (event, index) => {
+    event.preventDefault();
+    const source = dragSourceIndex.current;
+    if (source == null || source === index) {
+      setDragOverIndex(null);
+      dragSourceIndex.current = null;
+      return;
+    }
 
-        chain.length = 0;
-        chain.push(...newChain);
-    };
+    const newChain = [...chain];
+    const moved = newChain.splice(source, 1)[0];
+    newChain.splice(index, 0, moved);
 
-    return (
-        <DragDropContext onDragEnd={onDragEnd}>
-            <Droppable droppableId="chainList">{aniList}</Droppable>
-        </DragDropContext>
-    );
+    chain.length = 0;
+    chain.push(...newChain);
+    setDragOverIndex(null);
+    dragSourceIndex.current = null;
+  };
+
+  const handleDragEnd = () => {
+    setDragOverIndex(null);
+    dragSourceIndex.current = null;
+  };
+
+  return (
+    <div key={key}>
+      {chain.map((ani, i) => (
+        <ChainAni
+          target={target}
+          index={i}
+          ani={ani}
+          key={ani.id}
+          onDragStart={handleDragStart}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+          onDragEnd={handleDragEnd}
+          isDragOver={dragOverIndex === i}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default ChainAniList;
