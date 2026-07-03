@@ -12,39 +12,41 @@ import { TextField } from "@mui/material";
  * @param {(newValue: string) => void} [props.onChange]
  */
 function SetString({
-    target,
-    propName,
-    label,
-    inputProps = {},
-    onBeforeChange,
-    onChange,
-    ...others
+  target,
+  propName,
+  label,
+  inputProps = {},
+  onBeforeChange,
+  onChange,
+  ...others
 }) {
-    const [value, setValue] = useState(target[propName]);
+  const [value, setValue] = useState(target[propName]);
 
-    const handleChange = event => {
-        const value = event.currentTarget.value;
-        setValue(value);
+  const handleChange = event => {
+    const value = event.currentTarget.value;
+    setValue(value);
 
-        onBeforeChange?.(value);
-        target[propName] = value;
-        onChange?.(value);
-    };
+    onBeforeChange?.(value);
+    target[propName] = value;
+    onChange?.(value);
+  };
 
-    return (
-        <div className="SetString">
-            <TextField
-                onChange={handleChange}
-                value={value}
-                label={label}
-                size="small"
-                margin="dense"
-                variant="outlined"
-                inputProps={inputProps}
-                {...others}
-            />
-        </div>
-    );
+  return (
+    <div className="SetString">
+      <TextField
+        onChange={handleChange}
+        value={value}
+        label={label}
+        size="small"
+        margin="dense"
+        variant="outlined"
+        slotProps={{
+          htmlInput: inputProps,
+        }}
+        {...others}
+      />
+    </div>
+  );
 }
 
 export default SetString;

@@ -9,39 +9,41 @@ import SidebarModal from "./SidebarModal";
 import Settings from "./Settings";
 import ChainMaker from "./ChainMaker";
 
-const PaperProps = { sx: styles.paper };
-
 function Sidebar({ open }) {
-    const toggleSidebar = useAppState(state => state.sidebar.toggle);
-    const showChainMaker = useChainMakerState(state => state.open);
+  const toggleSidebar = useAppState(state => state.sidebar.toggle);
+  const showChainMaker = useChainMakerState(state => state.open);
 
-    const header = (
-        <Box sx={styles.sidebarHeader}>
-            {githubIcon}
-            {kofi}
-            <CloseButton
-                color="white"
-                onClick={toggleSidebar}
-                title="Close Sidebar"
-            />
-        </Box>
-    );
+  const header = (
+    <Box sx={styles.sidebarHeader}>
+      {githubIcon}
+      {kofi}
+      <CloseButton
+        color="white"
+        onClick={toggleSidebar}
+        title="Close Sidebar"
+      />
+    </Box>
+  );
 
-    return (
-        <Drawer
-            className="Sidebar"
-            open={open}
-            onClose={toggleSidebar}
-            variant="persistent"
-            sx={styles.sidebar}
-            PaperProps={PaperProps}
-        >
-            {header}
-            {showChainMaker ? <ChainMaker /> : <Settings />}
+  return (
+    <Drawer
+      className="Sidebar"
+      open={open}
+      onClose={toggleSidebar}
+      variant="persistent"
+      sx={styles.sidebar}
+      slotProps={{
+        paper: {
+          sx: styles.paper,
+        },
+      }}
+    >
+      {header}
+      {showChainMaker ? <ChainMaker /> : <Settings />}
 
-            <SidebarModal />
-        </Drawer>
-    );
+      <SidebarModal />
+    </Drawer>
+  );
 }
 
 export default Sidebar;

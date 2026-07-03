@@ -14,65 +14,67 @@ import "./SetNumbers.css";
  * @param {string} [props.className]
  */
 function SetNumbers({
-    target,
-    keyList,
-    labels = [],
-    scale = 1,
-    inputProps = {},
-    onBeforeChange = undefined,
-    onChange = undefined,
-    ...others
+  target,
+  keyList,
+  labels = [],
+  scale = 1,
+  inputProps = {},
+  onBeforeChange = undefined,
+  onChange = undefined,
+  ...others
 }) {
-    const initValues = keyList.map(key => target[key] / scale);
-    const [values, setValues] = useState(initValues);
+  const initValues = keyList.map(key => target[key] / scale);
+  const [values, setValues] = useState(initValues);
 
-    const handleChange = event => {
-        const newValue = event.currentTarget.value;
-        if (newValue.endsWith(".")) return;
+  const handleChange = event => {
+    const newValue = event.currentTarget.value;
+    if (newValue.endsWith(".")) return;
 
-        const index = parseInt(event.currentTarget.getAttribute("index"));
-        const value = parseFloat(newValue);
-        if (isNaN(value)) return;
+    const index = parseInt(event.currentTarget.getAttribute("index"));
+    const value = parseFloat(newValue);
+    if (isNaN(value)) return;
 
-        let newValues;
-        setValues(oldValues => {
-            newValues = [...oldValues];
-            newValues[index] = value;
-            return newValues;
-        });
+    let newValues;
+    setValues(oldValues => {
+      newValues = [...oldValues];
+      newValues[index] = value;
+      return newValues;
+    });
 
-        const scaledValue = value * scale;
-        const key = keyList[index];
+    const scaledValue = value * scale;
+    const key = keyList[index];
 
-        onBeforeChange?.(newValues);
-        target[key] = scaledValue;
-        onChange?.(newValues);
-    };
+    onBeforeChange?.(newValues);
+    target[key] = scaledValue;
+    onChange?.(newValues);
+  };
 
-    const handleFocus = event => event.currentTarget.select();
+  const handleFocus = event => event.currentTarget.select();
 
-    return (
-        <div className="SetNumbers" {...others}>
-            {keyList.map((objKey, i) => (
-                <TextField
-                    className="SetNumbers-number"
-                    onChange={handleChange}
-                    value={values[i]}
-                    label={labels[i] ?? objKey}
-                    key={objKey}
-                    size="small"
-                    margin="dense"
-                    variant="outlined"
-                    inputProps={{
-                        type: "number",
-                        index: i,
-                        onFocus: handleFocus,
-                        ...inputProps,
-                    }}
-                />
-            ))}
-        </div>
-    );
+  return (
+    <div className="SetNumbers" {...others}>
+      {keyList.map((objKey, i) => (
+        <TextField
+          className="SetNumbers-number"
+          onChange={handleChange}
+          value={values[i]}
+          label={labels[i] ?? objKey}
+          key={objKey}
+          size="small"
+          margin="dense"
+          variant="outlined"
+          slotProps={{
+            htmlInput: {
+              type: "number",
+              index: i,
+              onFocus: handleFocus,
+              ...inputProps,
+            },
+          }}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default SetNumbers;

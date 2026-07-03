@@ -15,49 +15,46 @@ import { clamp } from "@/SceneController/helper/clamp";
  * @param {boolean} [props.fullWidth]
  */
 function SetNumber({
-    target,
-    propName,
-    label,
-    min,
-    max,
-    step = 1,
-    onBeforeChange,
-    onChange,
-    ...others
+  target,
+  propName,
+  label,
+  min,
+  max,
+  step = 1,
+  onBeforeChange,
+  onChange,
+  ...others
 }) {
-    const [value, setValue] = useState(target[propName]);
+  const [value, setValue] = useState(target[propName]);
 
-    const handleChange = event => {
-        if (!event.currentTarget.value) return;
+  const handleChange = event => {
+    if (!event.currentTarget.value) return;
 
-        const value = parseFloat(event.currentTarget.value) || min;
-        let newValue = clamp(value, min, max);
-        setValue(newValue);
+    const value = parseFloat(event.currentTarget.value) || min;
+    let newValue = clamp(value, min, max);
+    setValue(newValue);
 
-        onBeforeChange?.(newValue);
-        target[propName] = newValue;
-        onChange?.(newValue);
-    };
+    onBeforeChange?.(newValue);
+    target[propName] = newValue;
+    onChange?.(newValue);
+  };
 
-    return (
-        <div className="SetNumber">
-            <TextField
-                onChange={handleChange}
-                value={value}
-                label={label}
-                size="small"
-                margin="dense"
-                variant="outlined"
-                inputProps={{
-                    type: "number",
-                    min,
-                    max,
-                    step,
-                }}
-                {...others}
-            />
-        </div>
-    );
+  return (
+    <div className="SetNumber">
+      <TextField
+        onChange={handleChange}
+        value={value}
+        label={label}
+        size="small"
+        margin="dense"
+        variant="outlined"
+        slotProps={{
+          htmlInput: { type: "number", min, max, step },
+        }}
+        {...others}
+      />
+    </div>
+  );
 }
 
 export default SetNumber;

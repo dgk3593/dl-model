@@ -3,9 +3,9 @@ import { Close, Search } from "@mui/icons-material";
 import { styles } from "./styles";
 
 const ResetButton = ({ onClick }) => (
-    <IconButton onClick={onClick} size="large">
-        <Close />
-    </IconButton>
+  <IconButton onClick={onClick} size="large">
+    <Close />
+  </IconButton>
 );
 
 /**
@@ -15,26 +15,28 @@ const ResetButton = ({ onClick }) => (
  * @param {string} [props.placeholder]
  */
 function Searchbox({ query, onChange, placeholder = "Search by name" }) {
-    const handleChange = event => {
-        const { value } = event.target;
-        onChange(value);
-    };
+  const handleChange = event => {
+    const { value } = event.target;
+    onChange(value);
+  };
 
-    const resetQuery = () => onChange("");
+  const resetQuery = () => onChange("");
 
-    return (
-        <TextField
-            className="SearchBox"
-            value={query}
-            onChange={handleChange}
-            placeholder={placeholder}
-            InputProps={{
-                endAdornment: <ResetButton onClick={resetQuery} />,
-                startAdornment: <Search />,
-            }}
-            sx={styles}
-        />
-    );
+  return (
+    <TextField
+      className="SearchBox"
+      value={query}
+      onChange={handleChange}
+      placeholder={placeholder}
+      slotProps={{
+        input: {
+          endAdornment: <ResetButton onClick={resetQuery} />,
+          startAdornment: <Search />,
+        },
+      }}
+      sx={styles}
+    />
+  );
 }
 
 export default Searchbox;
