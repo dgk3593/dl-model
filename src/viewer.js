@@ -2,7 +2,7 @@
 import * as THREE from "three";
 import { DLViewer } from "./dl-viewer";
 import { batchDownloadPNG } from "./dl-viewer/utils/downloader";
-import { saveAs } from "file-saver";
+import { saveAs } from "@/helper/saveAs";
 
 const viewer = new DLViewer();
 viewer.initData();

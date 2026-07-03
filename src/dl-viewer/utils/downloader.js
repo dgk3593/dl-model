@@ -1,18 +1,18 @@
-import { saveAs } from "file-saver";
+import { saveAs } from "@/helper/saveAs";
 import { pngBlobToZip, pngUrlToZip } from "./createZip";
 
 export function downloadBlob(blob, fileName) {
-    const url = URL.createObjectURL(blob);
+  const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.style.display = "none";
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
 
-    window.URL.revokeObjectURL(url);
-    document.body.removeChild(a);
+  window.URL.revokeObjectURL(url);
+  document.body.removeChild(a);
 }
 
 /** download data URL as the given file name
@@ -20,15 +20,15 @@ export function downloadBlob(blob, fileName) {
  * @param {string} fileName
  */
 export function downloadURL(url, fileName) {
-    const a = document.createElement("a");
-    a.style.display = "none";
-    a.href = url;
-    a.download = fileName;
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = fileName;
 
-    document.body.appendChild(a);
-    a.click();
+  document.body.appendChild(a);
+  a.click();
 
-    document.body.removeChild(a);
+  document.body.removeChild(a);
 }
 
 /**
@@ -37,8 +37,8 @@ export function downloadURL(url, fileName) {
  * @param {string} baseName
  */
 export async function batchDownloadPNG(urls, baseName = "frames") {
-    const file = await pngUrlToZip(urls, baseName);
-    saveAs(file, `${baseName}.zip`);
+  const file = await pngUrlToZip(urls, baseName);
+  saveAs(file, `${baseName}.zip`);
 }
 
 /**
@@ -47,6 +47,6 @@ export async function batchDownloadPNG(urls, baseName = "frames") {
  * @param {string} baseName
  */
 export async function downloadBlobsAsZip(blobs, baseName) {
-    const file = await pngBlobToZip(blobs, baseName);
-    saveAs(file, `${baseName}.zip`);
+  const file = await pngBlobToZip(blobs, baseName);
+  saveAs(file, `${baseName}.zip`);
 }
