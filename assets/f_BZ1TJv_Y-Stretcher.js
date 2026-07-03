@@ -1,0 +1,1 @@
+import{t as e}from"./f_NCUUqUim-jsxRuntime.module.js";var t=()=>e(`div`,{className:`Stretcher`});export{t};

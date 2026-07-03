@@ -1,1 +1,0 @@
-import{T as e}from"./index-BcYoxRam.js";import{t}from"./f_MwV4JNai-Selector.js";var n=[`Eyes`,`Mouth`,`Both`];function r({value:r,onClick:i}){return e(t,{type:`text`,options:n,value:r,onClick:i})}export{r as t};

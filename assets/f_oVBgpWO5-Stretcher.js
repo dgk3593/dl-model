@@ -1,1 +1,0 @@
-import{T as e}from"./index-BcYoxRam.js";var t=()=>e(`div`,{className:`Stretcher`});export{t};
