@@ -1,0 +1,1 @@
+import{t as e}from"./f_D_8-vsn6-jsxRuntime.module.js";import{n as t,t as n}from"./f_dDtO-VsN-DialogTitle.js";import{t as r}from"./f_WQMBKwFp-ColorPicker.js";function i({onSelect:i}){return e(`div`,{className:`BackgroundPicker`,children:[e(n,{sx:{textAlign:`center`},children:`Pick a Color`}),e(t,{children:e(r,{onSelect:i})})]})}export{i as default};

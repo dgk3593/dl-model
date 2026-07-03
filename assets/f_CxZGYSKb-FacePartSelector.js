@@ -1,0 +1,1 @@
+import{t as e}from"./f_D_8-vsn6-jsxRuntime.module.js";import{t}from"./f_D9SeQoy_-Selector.js";var n=[`Eyes`,`Mouth`,`Both`];function r({value:r,onClick:i}){return e(t,{type:`text`,options:n,value:r,onClick:i})}export{r as t};
