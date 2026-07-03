@@ -1,5 +1,5 @@
 // @ts-nocheck
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { DLViewer } from "./dl-viewer";
 import { batchDownloadPNG } from "./dl-viewer/utils/downloader";
 import { saveAs } from "@/helper/saveAs";

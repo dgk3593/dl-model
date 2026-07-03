@@ -1,5 +1,5 @@
 import { MATCAP_SOURCE } from "../../path";
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { createColor, getBool, isHex, syncLoadDispTexture } from "../../utils";
 import { MMDToonMaterial } from "./MMDToonMaterial";
 

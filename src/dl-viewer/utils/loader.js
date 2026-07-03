@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 /** load a 3D model from an FBX file
@@ -6,12 +6,12 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
  * @return { Promise<THREE.Group> }
  */
 export const loadFBXModel = path => {
-    return (
-        path &&
-        new Promise(resolve => {
-            new FBXLoader().load(path, resolve);
-        })
-    );
+  return (
+    path &&
+    new Promise(resolve => {
+      new FBXLoader().load(path, resolve);
+    })
+  );
 };
 
 /** Load a texture
@@ -19,33 +19,33 @@ export const loadFBXModel = path => {
  * @return {Promise<THREE.Texture>}
  */
 export const loadTexture = url => {
-    return (
-        url &&
-        new Promise(resolve => {
-            new THREE.TextureLoader().load(url, resolve);
-        })
-    );
+  return (
+    url &&
+    new Promise(resolve => {
+      new THREE.TextureLoader().load(url, resolve);
+    })
+  );
 };
 
 const skyboxFiles = [
-    "px.png",
-    "nx.png",
-    "py.png",
-    "ny.png",
-    "pz.png",
-    "nz.png",
+  "px.png",
+  "nx.png",
+  "py.png",
+  "ny.png",
+  "pz.png",
+  "nz.png",
 ];
 
 /**
  * @param {string} path
  */
 export const loadSkybox = path => {
-    return (
-        path &&
-        new Promise(resolve => {
-            new THREE.CubeTextureLoader()
-                .setPath(`${path}/`)
-                .load(skyboxFiles, resolve);
-        })
-    );
+  return (
+    path &&
+    new Promise(resolve => {
+      new THREE.CubeTextureLoader()
+        .setPath(`${path}/`)
+        .load(skyboxFiles, resolve);
+    })
+  );
 };

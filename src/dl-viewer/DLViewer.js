@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import {
   DEFAULT_BACKGROUND,

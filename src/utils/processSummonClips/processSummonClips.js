@@ -1,7 +1,7 @@
 import fbxList from "./fileList";
 import { saveAs } from "@/helper/saveAs";
 import { ANIMATION_SOURCE } from "@/dl-viewer/path";
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { myFetch } from "@/helper/myFetch";
 
 const dir = `${ANIMATION_SOURCE}/todo`;

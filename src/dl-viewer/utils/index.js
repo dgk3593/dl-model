@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import { THREE } from "@/helper/three";
 import { PERSPECTIVE_CAM, defaultRendererParams } from "../defaultParams";
 import { loadSkybox, loadTexture } from "./loader";
 import { spAdventurer } from "./spAdventurer";
@@ -9,15 +9,15 @@ export { fetchJsonData } from "./fetchJsonData";
  * @param  {...function} fns
  */
 export const pipe =
-    (...fns) =>
-    x =>
-        fns.reduce((y, f) => f(y), x);
+  (...fns) =>
+  x =>
+    fns.reduce((y, f) => f(y), x);
 
 /**
  * @param {...function} afns - async functions
  */
 export const asyncPipe = (...afns) =>
-    afns.reduce((f, g) => x => f(x).then?.(g));
+  afns.reduce((f, g) => x => f(x).then?.(g));
 
 /**
  * return unique elements of an array
@@ -36,11 +36,11 @@ export const getBool = value => (value === "false" ? false : !!value);
  * @param {*} value
  */
 export const setNestedProp = (object, keys, value) => {
-    if (!keys.length) return;
+  if (!keys.length) return;
 
-    const lastKey = keys.pop();
-    const nestedObject = keys.reduce((obj, key) => obj?.[key], object);
-    nestedObject && (nestedObject[lastKey] = value);
+  const lastKey = keys.pop();
+  const nestedObject = keys.reduce((obj, key) => obj?.[key], object);
+  nestedObject && (nestedObject[lastKey] = value);
 };
 
 /** set a nested property of an object
@@ -48,14 +48,14 @@ export const setNestedProp = (object, keys, value) => {
  * @param {string[]} keys - list of keys
  */
 export const getNestedProp = (object, keys) =>
-    keys.reduce((obj, key) => obj?.[key], object);
+  keys.reduce((obj, key) => obj?.[key], object);
 
 /**
  * @param {string} code
  */
 export function isHex(code) {
-    const regex = /[0-9A-Fa-f]{6}/;
-    return !!regex.test(code);
+  const regex = /[0-9A-Fa-f]{6}/;
+  return !!regex.test(code);
 }
 
 /**
@@ -63,15 +63,15 @@ export function isHex(code) {
  * @param {string} color
  */
 export function createColor(color) {
-    if (isHex(color) && !color.startsWith("#"))
-        return new THREE.Color(`#${color}`);
+  if (isHex(color) && !color.startsWith("#"))
+    return new THREE.Color(`#${color}`);
 
-    return new THREE.Color(color);
+  return new THREE.Color(color);
 }
 
 /** wait ms milliseconds */
 export async function wait(ms = 100) {
-    return await new Promise(resolve => setTimeout(resolve, ms));
+  return await new Promise(resolve => setTimeout(resolve, ms));
 }
 
 /** Extract string of the form "name_separator_value", e.g. name=value, to [name, value]
@@ -80,10 +80,10 @@ export async function wait(ms = 100) {
  * @return {[name:string, value:string]}
  */
 export function extractPair(code, separator = "=") {
-    const [name, ...valuePart] = code.split(separator);
-    const value = valuePart.join(separator);
+  const [name, ...valuePart] = code.split(separator);
+  const value = valuePart.join(separator);
 
-    return [name, value];
+  return [name, value];
 }
 
 /** check if an ID is a blade
@@ -95,28 +95,28 @@ export const isBlade = modelId => modelId.startsWith("w302");
  * @param {string} input
  */
 export const capitalize = ([first, ...rest]) =>
-    `${first.toUpperCase()}${rest.join("")}`;
+  `${first.toUpperCase()}${rest.join("")}`;
 
 /** get model type of a given DL model id
  * @param {string} id
  * @return {DLModelType}
  */
 export function getModelType(id) {
-    if (id === "smith") return "dragon";
-    if (id.endsWith("h")) return "story";
-    if (spAdventurer.includes(id)) return "spAdventurer";
+  if (id === "smith") return "dragon";
+  if (id.endsWith("h")) return "story";
+  if (spAdventurer.includes(id)) return "spAdventurer";
 
-    const types = {
-        c: "adventurer",
-        b: "boss",
-        d: "dragon",
-        e: "enemy",
-        h: "high boss",
-        o: "object",
-        r: "raid boss",
-        w: "weapon",
-    };
-    return types[id[0]] ?? "other";
+  const types = {
+    c: "adventurer",
+    b: "boss",
+    d: "dragon",
+    e: "enemy",
+    h: "high boss",
+    o: "object",
+    r: "raid boss",
+    w: "weapon",
+  };
+  return types[id[0]] ?? "other";
 }
 
 /**
@@ -124,10 +124,10 @@ export function getModelType(id) {
  * @return {THREE.WebGLRenderer}
  */
 export function createRenderer(params = defaultRendererParams) {
-    const renderer = new THREE.WebGLRenderer(params);
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const renderer = new THREE.WebGLRenderer(params);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-    return renderer;
+  return renderer;
 }
 
 /**
@@ -135,53 +135,53 @@ export function createRenderer(params = defaultRendererParams) {
  * @return {THREE.PerspectiveCamera}
  */
 export function createCamera(params = {}) {
-    const { fov, aspect, near, far } = { ...PERSPECTIVE_CAM, ...params };
-    return new THREE.PerspectiveCamera(fov, aspect, near, far);
+  const { fov, aspect, near, far } = { ...PERSPECTIVE_CAM, ...params };
+  return new THREE.PerspectiveCamera(fov, aspect, near, far);
 }
 
 /**
  * @param {string} bg
  */
 export async function createBackground(bg) {
-    if (bg.startsWith("img:")) {
-        const path = bg.replace("img:", "");
-        const background = await loadTexture(path);
-        background.colorSpace = THREE.SRGBColorSpace;
-        background.center.set(0.5, 0);
-        return background;
-    }
+  if (bg.startsWith("img:")) {
+    const path = bg.replace("img:", "");
+    const background = await loadTexture(path);
+    background.colorSpace = THREE.SRGBColorSpace;
+    background.center.set(0.5, 0);
+    return background;
+  }
 
-    if (bg.startsWith("sky:")) {
-        const path = bg.replace("sky:", "");
-        const background = await loadSkybox(path);
-        background.colorSpace = THREE.SRGBColorSpace;
-        return background;
-    }
+  if (bg.startsWith("sky:")) {
+    const path = bg.replace("sky:", "");
+    const background = await loadSkybox(path);
+    background.colorSpace = THREE.SRGBColorSpace;
+    return background;
+  }
 
-    if (bg === "transparent") return null;
+  if (bg === "transparent") return null;
 
-    if (isHex(bg)) {
-        const code = bg.startsWith("#") ? bg : `#${bg}`;
-        return new THREE.Color(code);
-    }
+  if (isHex(bg)) {
+    const code = bg.startsWith("#") ? bg : `#${bg}`;
+    return new THREE.Color(code);
+  }
 }
 
 /**
  * @param {THREE.Material} material
  */
 export function disposeMaterial(material) {
-    material.map?.dispose?.();
-    material.userData.backupMap?.dispose?.();
-    material.dispose();
+  material.map?.dispose?.();
+  material.userData.backupMap?.dispose?.();
+  material.dispose();
 }
 
 /**
  * @param {string} path
  */
 export const syncLoadDispTexture = path => {
-    const texture = new THREE.TextureLoader().load(path);
-    texture.colorSpace = THREE.SRGBColorSpace;
-    return texture;
+  const texture = new THREE.TextureLoader().load(path);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  return texture;
 };
 
 /** Get all meshes and bones of a 3d object
@@ -189,40 +189,40 @@ export const syncLoadDispTexture = path => {
  * @returns {[THREE.Mesh[], THREE.Bone[]]}
  */
 export function getMeshesAndBones(object) {
-    const meshes = [];
-    const bones = [];
-    object.traverse(child => {
-        if (child.isMesh) meshes.push(child);
-        if (child.isBone) bones.push(child);
-    });
+  const meshes = [];
+  const bones = [];
+  object.traverse(child => {
+    if (child.isMesh) meshes.push(child);
+    if (child.isBone) bones.push(child);
+  });
 
-    return [meshes, bones];
+  return [meshes, bones];
 }
 
 /**
  * @param {THREE.Mesh} mesh
  */
 export function disposeMesh(mesh) {
-    if (!mesh) return;
+  if (!mesh) return;
 
-    const material = [mesh.material].flat();
-    material.forEach(mat => {
-        mat.map?.dispose?.();
-        mat.userData?.backupMap?.dispose?.();
-        mat.dispose?.();
-    });
-    mesh.geometry?.dispose?.();
+  const material = [mesh.material].flat();
+  material.forEach(mat => {
+    mat.map?.dispose?.();
+    mat.userData?.backupMap?.dispose?.();
+    mat.dispose?.();
+  });
+  mesh.geometry?.dispose?.();
 }
 
 /** generate date time string */
 export const getDateTimeString = () => {
-    const date = new Date();
-    const dateStr = date.toDateString().replaceAll(" ", "_");
-    const timeStr = date
-        .toLocaleTimeString()
-        .replaceAll(":", "-")
-        .replaceAll(" ", "");
-    return `${dateStr}_${timeStr}`;
+  const date = new Date();
+  const dateStr = date.toDateString().replaceAll(" ", "_");
+  const timeStr = date
+    .toLocaleTimeString()
+    .replaceAll(":", "-")
+    .replaceAll(" ", "");
+  return `${dateStr}_${timeStr}`;
 };
 
 /**
@@ -231,13 +231,13 @@ export const getDateTimeString = () => {
  * @return {{[key: string]: string}}
  */
 export const analyzeCode = code => {
-    if (!code) return {};
-    const parts = code.split("/");
-    return parts.reduce((acc, part) => {
-        const [key, value] = part.split("=");
-        if (key && value) {
-            acc[key] = value;
-        }
-        return acc;
-    }, {});
+  if (!code) return {};
+  const parts = code.split("/");
+  return parts.reduce((acc, part) => {
+    const [key, value] = part.split("=");
+    if (key && value) {
+      acc[key] = value;
+    }
+    return acc;
+  }, {});
 };
