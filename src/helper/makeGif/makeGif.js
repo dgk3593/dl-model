@@ -27,7 +27,7 @@ export const makeGif = ({
   delay = 30,
 }) =>
   new Promise(async resolve => {
-    const workerUrl = new URL("/assets/gif.worker.js", import.meta.url).href;
+    const workerUrl = new URL("./gif.worker.js", import.meta.url).href;
 
     const gif = new GIF({
       workerScript: workerUrl,

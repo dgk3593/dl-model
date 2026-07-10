@@ -16,6 +16,7 @@ export class GIF {
       height: window.innerHeight,
       transparent: null,
       workerScript: "gif.worker.js",
+      workerOptions: {},
       ...options,
     };
 
@@ -106,7 +107,9 @@ export class GIF {
     };
 
     for (let i = 0; i < Math.min(this.options.workers, totalFrames); i++) {
-      freeWorkers.add(new Worker(this.options.workerScript));
+      freeWorkers.add(
+        new Worker(this.options.workerScript, this.options.workerOptions),
+      );
     }
 
     return new Promise((resolve, reject) => {
