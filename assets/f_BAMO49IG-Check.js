@@ -1,0 +1,1 @@
+import{t as e}from"./f_D8oIPz9u-jsxRuntime.module.js";import"./f_BstOlelG-jsx-runtime.js";import{t}from"./f_Sj0xshNs-createSvgIcon.js";var n=t(e(`path`,{d:`M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z`}),`Check`);export{n as t};
