@@ -1,5 +1,8 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
+import { setAutoFreeze } from "immer";
+
+setAutoFreeze(false);
 
 import {
   app,
