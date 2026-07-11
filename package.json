@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.5",
-    "vite": "8.1.4"
+    "vite": "8.1.4",
+    "vite-plugin-glsl": "^1.6.0"
   }
 }

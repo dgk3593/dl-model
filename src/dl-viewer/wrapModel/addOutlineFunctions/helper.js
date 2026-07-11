@@ -1,5 +1,5 @@
-import outlineFrag from "./shader/outline.frag?raw";
-import outlineVert from "./shader/outline.vert?raw";
+import outlineFrag from "./shader/outline.frag";
+import outlineVert from "./shader/outline.vert";
 import { THREE } from "@/helper/three";
 import { disposeMaterial } from "../../utils";
 

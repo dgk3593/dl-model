@@ -1,6 +1,6 @@
 import { THREE } from "@/helper/three";
-import vertexShader from "./shader/aura/aura.vert?raw";
-import fragmentShader from "./shader/aura/aura.frag?raw";
+import vertexShader from "./shader/aura/aura.vert";
+import fragmentShader from "./shader/aura/aura.frag";
 import { DEFAULT_AURA_PARAMS, PROP_LIST } from "./defaultParams";
 import { getBool } from "../../utils";
 

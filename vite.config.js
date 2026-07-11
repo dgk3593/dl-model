@@ -1,12 +1,13 @@
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
+import glsl from "vite-plugin-glsl";
 import path from "path";
 
 // https://vitejs.dev/config/
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   base: "/dl-model/",
-  plugins: [preact()],
+  plugins: [preact(), glsl()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
