@@ -47,6 +47,7 @@ function createAura(meshes, initParams) {
     return [uName, { value }];
   });
   const uniforms = Object.fromEntries(uniformEntries);
+
   const material = createAuraMaterial(uniforms);
   /**
    * @type {THREE.Points[]}
@@ -71,7 +72,6 @@ function createAura(meshes, initParams) {
     const particle = new THREE.Points(geometry, material);
 
     particle.name = "aura";
-    // add skinning if needed
     if (mesh.isSkinnedMesh) {
       particle.type = "SkinnedMesh";
       particle.isSkinnedMesh = true;
@@ -134,6 +134,7 @@ function createAura(meshes, initParams) {
       const parts = code.split("/");
       parts.forEach(part => {
         const [key, value] = part.split("=");
+
         if (!DEFAULT_AURA_PARAMS.map(({ name }) => name).includes(key)) return;
 
         this[key] = value;
@@ -146,17 +147,21 @@ function createAura(meshes, initParams) {
     params[name] = defaultValue;
 
     Object.defineProperty(aura, name, {
+      configurable: true,
       get() {
         return params[name];
       },
       set(value) {
-        params[name] = value;
-        uniforms[uName].value = valueMap?.(value) ?? value;
+        const mappedValue = valueMap?.(value) ?? value;
+        params[name] = mappedValue;
+        if (uniforms[uName]) {
+          uniforms[uName].value = mappedValue;
+        }
       },
     });
   });
   aura.onTimeUpdate = ({ time }) => (aura.time = time);
-  // set initial params
+
   Object.entries(initParams).forEach(([name, value]) => (aura[name] = value));
 
   return aura;

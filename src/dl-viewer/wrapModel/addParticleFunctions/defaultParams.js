@@ -5,6 +5,12 @@ import { THREE } from "@/helper/three";
  */
 export const DEFAULT_AURA_PARAMS = [
   {
+    name: "isPulse",
+    uName: "uIsPulse",
+    defaultValue: false,
+    valueMap: Boolean,
+  },
+  {
     name: "time",
     uName: "uTime",
     defaultValue: 0,
