@@ -25,9 +25,10 @@ function createAuraMaterial(uniforms) {
     fragmentShader,
     uniforms,
     transparent: true,
-    blending: THREE.AdditiveBlending,
+    blending: THREE.NormalBlending,
     depthWrite: false,
     side: THREE.DoubleSide,
+    depthTest: true,
   });
 
   return material;
