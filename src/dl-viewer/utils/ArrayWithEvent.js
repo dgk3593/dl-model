@@ -1,15 +1,6 @@
 import eventDispatcher from "./eventDispatcher";
 
-// Array methods that change the array itself
-const methods = [
-    "push",
-    "pop",
-    "shift",
-    "unshift",
-    "splice",
-    "reverse",
-    "sort",
-];
+/** @typedef {import("../typedef").EventDispatcher} EventDispatcher */
 
 /**
  * @typedef {object} ArrayChangeEvent
@@ -18,29 +9,74 @@ const methods = [
  * @property {Array} args - method arguments
  */
 /**
- * Special array that will dispatch 'change' event when its content is changed with a method
+ * Special array that dispatches a 'change' event when its contents mutate.
+ * @implements {EventDispatcher}
  * @see {@link ArrayChangeEvent}
  */
 export class ArrayWithEvent extends Array {
-    constructor(...args) {
-        super(...args);
-        Object.assign(this, eventDispatcher);
+  constructor(...args) {
+    super(...args);
+  }
 
-        methods.forEach(method => {
-            Object.defineProperty(this, method, {
-                value: (...args) => {
-                    Array.prototype[method].call(this, ...args);
-                    this.dispatchEvent({ type: "change", method, args });
-                },
-                enumerable: false,
-            });
-        });
-    }
+  push(...args) {
+    const result = super.push(...args);
+    this.dispatchEvent({ type: "change", method: "push", args });
+    return result;
+  }
 
-    remove(item) {
-        const index = this.indexOf(item);
-        if (index === -1) return;
+  pop() {
+    const result = super.pop();
+    this.dispatchEvent({ type: "change", method: "pop", args: [] });
+    return result;
+  }
 
-        this.splice(index, 1);
-    }
+  shift() {
+    const result = super.shift();
+    this.dispatchEvent({ type: "change", method: "shift", args: [] });
+    return result;
+  }
+
+  unshift(...args) {
+    const result = super.unshift(...args);
+    this.dispatchEvent({ type: "change", method: "unshift", args });
+    return result;
+  }
+
+  splice(...args) {
+    const result = super.splice(...args);
+    this.dispatchEvent({ type: "change", method: "splice", args });
+    return result;
+  }
+
+  reverse() {
+    const result = super.reverse();
+    this.dispatchEvent({ type: "change", method: "reverse", args: [] });
+    return result;
+  }
+
+  sort(compareFn) {
+    const result = super.sort(compareFn);
+    this.dispatchEvent({ type: "change", method: "sort", args: [compareFn] });
+    return result;
+  }
+
+  copyWithin(...args) {
+    const result = super.copyWithin(...args);
+    this.dispatchEvent({ type: "change", method: "copyWithin", args });
+    return result;
+  }
+
+  fill(...args) {
+    const result = super.fill(...args);
+    this.dispatchEvent({ type: "change", method: "fill", args });
+    return result;
+  }
+
+  remove(item) {
+    const index = this.indexOf(item);
+    if (index === -1) return;
+    this.splice(index, 1);
+  }
 }
+
+Object.assign(ArrayWithEvent.prototype, eventDispatcher);
