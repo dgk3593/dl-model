@@ -18,7 +18,7 @@
     "@uiw/react-color-chrome": "^2.10.3",
     "fflate": "0.8.3",
     "idb": "8.0.3",
-    "immer": "11.1.11",
+    "immer": "11.1.15",
     "nanoid": "6.0.0",
     "preact": "10.29.7",
     "stats.js": "0.17.0",
@@ -27,8 +27,8 @@
     "zustand": "5.0.14"
   },
   "devDependencies": {
-    "@preact/preset-vite": "2.10.5",
-    "vite": "8.1.4",
+    "@preact/preset-vite": "2.10.6",
+    "vite": "8.1.5",
     "vite-plugin-glsl": "^1.6.0"
   }
 }
