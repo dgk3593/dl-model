@@ -18,17 +18,17 @@
     "@uiw/react-color-chrome": "^2.10.3",
     "fflate": "0.8.3",
     "idb": "8.0.3",
-    "immer": "11.1.15",
-    "nanoid": "6.0.0",
-    "preact": "10.29.7",
+    "immer": "11.1.18",
+    "nanoid": "6.0.1",
+    "preact": "10.29.8",
     "stats.js": "0.17.0",
     "three": "0.185.1",
     "upng-js": "2.1.0",
-    "zustand": "5.0.14"
+    "zustand": "5.0.15"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.6",
-    "vite": "8.1.5",
-    "vite-plugin-glsl": "^1.6.0"
+    "vite": "8.2.2",
+    "vite-plugin-glsl": "^1.6.1"
   }
 }
