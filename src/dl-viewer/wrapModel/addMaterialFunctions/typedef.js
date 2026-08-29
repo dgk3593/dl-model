@@ -1,3 +1,5 @@
+export {};
+
 /**
  * @typedef {"Basic" | "Toon" | "Lambert" | "Phong" | "Standard" | "Matcap" | "Physical" | "MMDToon"} MaterialType
  *

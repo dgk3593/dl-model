@@ -27,7 +27,28 @@ import { initViewerData } from "./utils/data/initData";
 import { createLightHandler } from "./utils/createLightHandler";
 import { loadModelFromCode } from "./utils/loadCode";
 
+/**
+ * Main controller for the Dragalia Lost model viewer.
+ *
+ * This class owns the Three.js scene, camera, renderer, controls, lighting,
+ * and animation loop used by the app. It is the primary entry point for
+ * terminal programs that want to load models, add them to the scene, and
+ * control their animation or appearance.
+ *
+ * @example
+ * const viewer = new DLViewer();
+ * await viewer.initData();
+ * const hero = await viewer.loadDLModel("c100045_01");
+ * viewer.add(hero);
+ * hero.animation.addChain("KAT_WIN_01_10004501");
+ */
 export class DLViewer {
+  /**
+   * Creates the viewer, scene, renderer, camera, controls, and animation loop.
+   *
+   * The constructor starts the internal update loop immediately, so the
+   * viewer is ready to render as soon as it is attached to the page.
+   */
   constructor() {
     // event dispatcher functionalities
     Object.assign(this, eventDispatcher);
@@ -143,7 +164,11 @@ export class DLViewer {
     this.dispatchEvent({ type: "dataLoaded" });
   };
 
-  /**Background
+  /**
+   * Current background for the scene.
+   *
+   * This can be a built-in background name or an image path prefixed with
+   * "img:" so the viewer can load a custom backdrop.
    * @type {string}
    */
   _background = "";
@@ -211,9 +236,21 @@ export class DLViewer {
     return this.loadedModel.filter(model => !this.model.includes(model));
   }
 
-  /** Load Dragalia Lost model with specified id
-   * @param {string} id - id of DL model to load
-   * @return {Promise<DLModel>}
+  /**
+   * Loads a Dragalia Lost model by its asset id and wraps it in a DLModel.
+   *
+   * The first call waits for the asset index to finish loading if it has not
+   * already been initialized. The returned object exposes animation, part,
+   * material, attachment, face, and particle helpers for scripting.
+   *
+   * @param {string} [id=DEFAULT_MODEL] Model id such as "c100045_01",
+   *   "w399011_01", or "d210145_01".
+   * @returns {Promise<DLModel>} A wrapped model object ready to be added to
+   *   the scene.
+   * @example
+   * const hero = await viewer.loadDLModel("c100045_01");
+   * viewer.add(hero);
+   * hero.animation.addChain("KAT_WIN_01_10004501");
    */
   async loadDLModel(id = DEFAULT_MODEL) {
     if (!this.dataLoaded)
@@ -255,8 +292,16 @@ export class DLViewer {
    */
   loadModelFromCode = loadModelFromCode;
 
-  /** add an object to scene
-   * @param { object } object
+  /**
+   * Adds an object to the viewer scene.
+   *
+   * The object should expose a `.model` property, which is the Three.js object
+   * attached to the scene. DLModel instances returned by `loadDLModel()` are
+   * the primary use case.
+   *
+   * @param {DLModel | { model: object, detach?: () => void }} object Object to
+   *   add to the scene.
+   * @returns {void}
    */
   add(object) {
     object.detach?.();
@@ -265,14 +310,26 @@ export class DLViewer {
     object.parent = this;
   }
 
-  /** remove an object from scene
-   * @param { object } object
+  /**
+   * Removes an object from the viewer scene.
+   *
+   * @param {DLModel | { model: object }} object Object currently attached to
+   *   the scene.
+   * @returns {void}
    */
   remove(object) {
     this.model.remove(object);
     this.scene.remove(object.model);
   }
 
+  /**
+   * Disposes every loaded DLModel and clears the active scene model list.
+   *
+   * This is useful when preparing a new scene setup or reusing the viewer for
+   * a different set of models.
+   *
+   * @returns {void}
+   */
   disposeAllModels() {
     this.loadedModel.forEach(model => model.dispose?.());
     this.model.length = 0;
@@ -292,8 +349,10 @@ export class DLViewer {
 
   // Methods
   /**
-   * @param {string} id
-   * @return {string}
+   * Resolves the public FBX path for a model id.
+   *
+   * @param {string} id Asset id such as "c100045_01".
+   * @returns {string} The URL of the model FBX file.
    */
   static getModelPath(id) {
     return `${this.source.fbx}/${id}/${id}.fbx`;
@@ -313,9 +372,13 @@ export class DLViewer {
   };
 
   /**
-   * set viewport size, default is the entire viewport
-   * @param {number} [w] - width
-   * @param {number} [h] - height
+   * Resizes the renderer and camera to a specific viewport size.
+   *
+   * When no size is supplied, the current window dimensions are used.
+   *
+   * @param {number} [w] Width in pixels. Defaults to `window.innerWidth`.
+   * @param {number} [h] Height in pixels. Defaults to `window.innerHeight`.
+   * @returns {Promise<DLViewer>} The viewer instance for chaining.
    */
   async setViewport(w, h) {
     await wait(200);
@@ -351,7 +414,10 @@ export class DLViewer {
   }
 
   /**
-   * @param {number} dt
+   * Advances the viewer's animation loop and updates all active models.
+   *
+   * @param {number} dt Time delta in seconds.
+   * @returns {void}
    */
   update(dt) {
     this.animation?.update(dt);
@@ -360,14 +426,29 @@ export class DLViewer {
     this.dispatchEvent({ type: "timeUpdate", dt });
   }
 
+  /**
+   * Stops animation playback for every active model.
+   *
+   * @returns {void}
+   */
   stopAll() {
     this.model.forEach(model => model.animation?.stop?.());
   }
 
+  /**
+   * Starts animation playback for every active model.
+   *
+   * @returns {void}
+   */
   playAll() {
     this.model.forEach(model => model.animation?.play?.());
   }
 
+  /**
+   * Renders the current scene frame.
+   *
+   * @returns {void}
+   */
   render() {
     this.dispatchEvent({ type: "beforeRender" });
 

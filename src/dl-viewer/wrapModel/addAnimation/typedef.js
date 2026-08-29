@@ -1,3 +1,5 @@
+export {};
+
 /**
  * @typedef {object} AniMod
  * @property {number} [timeScale]

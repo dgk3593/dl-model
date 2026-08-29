@@ -1,3 +1,5 @@
+export {};
+
 /**
  * @typedef {object} OutlineParams
  * @property {boolean} enabled
