@@ -17,18 +17,18 @@
     "@mui/material": "^7.3.9",
     "@uiw/react-color-chrome": "^2.10.3",
     "fflate": "0.8.3",
-    "idb": "8.0.3",
-    "immer": "11.1.18",
-    "nanoid": "6.0.1",
-    "preact": "10.29.8",
+    "idb": "8.0.4",
+    "immer": "11.2.3",
+    "nanoid": "6.0.2",
+    "preact": "11.0.1",
     "stats.js": "0.17.0",
-    "three": "0.185.1",
+    "three": "^0.186.1",
     "upng-js": "2.1.0",
     "zustand": "5.0.15"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.6",
-    "vite": "8.2.2",
-    "vite-plugin-glsl": "^1.6.1"
+    "vite": "8.3.4",
+    "vite-plugin-glsl": "^1.6.2"
   }
 }
