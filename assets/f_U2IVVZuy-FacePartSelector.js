@@ -1,0 +1,1 @@
+import{t as e}from"./f_C9-34acx-jsxRuntime.js";import{t}from"./f_Bjff-KXp-Selector.js";var n=[`Eyes`,`Mouth`,`Both`];function r({value:r,onClick:i}){return e(t,{type:`text`,options:n,value:r,onClick:i})}export{r as t};
