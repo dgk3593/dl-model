@@ -1,0 +1,1 @@
+import{t as e}from"./f_BUyM4SmJ-Selector.js";import{t}from"./f_DLmBUJav-jsxRuntime.js";var n=[`Eyes`,`Mouth`,`Both`];function r({value:r,onClick:i}){return t(e,{type:`text`,options:n,value:r,onClick:i})}export{r as t};
