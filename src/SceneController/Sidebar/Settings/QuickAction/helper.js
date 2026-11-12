@@ -3,6 +3,7 @@ import { useActiveModel, useAppState } from "@/state";
 import viewer from "@/viewer";
 import { saveAs } from "@/helper/saveAs";
 import { encode as makeApng } from "upng-js";
+import { makeAnimatedWebp } from "@/helper/makeAnimatedWebp";
 
 function makeRequest(method, url) {
   return new Promise(function (resolve, reject) {
@@ -131,4 +132,46 @@ export const quickApng = () => {
   });
 };
 
+export const quickWebp = () => {
+  const { activeModel } = useActiveModel.getState();
+  const { setLoadingMsg } = useAppState.getState();
+  const { screenshot } = viewer;
+  if (!activeModel) {
+    setLoadingMsg("No model");
+    setTimeout(() => setLoadingMsg(""), 2000);
+    return;
+  }
+
+  setLoadingMsg("Generating frames...");
+  setTimeout(async () => {
+    const frames = screenshot.getAllFramesAsArrayBuffer(activeModel);
+    if (!frames) {
+      setLoadingMsg("Invalid animation");
+      setTimeout(() => setLoadingMsg(""), 2000);
+      return;
+    }
+
+    try {
+      setLoadingMsg(`Creating webp from ${frames.length} frames...`);
+      const { frameRate } = screenshot.settings;
+      const webp = await makeAnimatedWebp(
+        frames,
+        viewer.viewport.width,
+        viewer.viewport.height,
+        Math.ceil(1000 / frameRate)
+      );
+
+      setLoadingMsg("Finished");
+      const fileName = activeModel.userData.name ?? activeModel.id ?? "ani";
+      saveAs(webp, `${fileName}.webp`);
+      setTimeout(() => setLoadingMsg(""), 1000);
+    } catch (error) {
+      console.error("Failed to create animated WebP:", error);
+      setLoadingMsg("Failed to create WebP");
+      setTimeout(() => setLoadingMsg(""), 3000);
+    }
+  });
+};
+
 window.quickApng = quickApng;
+window.quickWebp = quickWebp;

@@ -11,6 +11,7 @@ import { saveAs } from "@/helper/saveAs";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 import { dataUrlToBlob } from "@/SceneController/helper/dataUrlToBlob";
 import { encode as makeApng } from "upng-js";
+import { makeAnimatedWebp } from "@/helper/makeAnimatedWebp";
 
 import "../../SettingGroup.css";
 
@@ -117,10 +118,49 @@ function ScreenshotControl() {
     });
   };
 
+  const createWebp = () => {
+    if (!activeModel) {
+      setLoadingMsg("No model");
+      setTimeout(() => setLoadingMsg(""), 2000);
+      return;
+    }
+
+    setLoadingMsg("Generating frames...");
+    setTimeout(async () => {
+      const frames = screenshot.getAllFramesAsArrayBuffer(activeModel);
+
+      if (!frames) {
+        setLoadingMsg("Invalid animation");
+        setTimeout(() => setLoadingMsg(""), 2000);
+        return;
+      }
+
+      try {
+        setLoadingMsg(`Creating webp from ${frames.length} frames...`);
+        const { frameRate } = screenshot.settings;
+        const webp = await makeAnimatedWebp(
+          frames,
+          viewer.viewport.width,
+          viewer.viewport.height,
+          Math.ceil(1000 / frameRate),
+        );
+
+        setLoadingMsg("Finished");
+        const fileName = activeModel.userData.name ?? activeModel.id ?? "ani";
+        saveAs(webp, `${fileName}.webp`);
+        setTimeout(() => setLoadingMsg(""), 1000);
+      } catch (error) {
+        console.error("Failed to create animated WebP:", error);
+        setLoadingMsg("Failed to create WebP");
+        setTimeout(() => setLoadingMsg(""), 3000);
+      }
+    });
+  };
+
   return (
     <Accordion className="SettingGroup">
       <>
-        <div>Screenshot/GIF/APNG</div>
+        <div>Screenshot/Animation</div>
         <Button
           onClick={copyScreenshot}
           title="Copy screenshot to clipboard"
@@ -153,6 +193,14 @@ function ScreenshotControl() {
           startIcon={<Download />}
         >
           Create APNG
+        </Button>
+
+        <Button
+          onClick={createWebp}
+          title="Create animated WebP of current animation"
+          startIcon={<Download />}
+        >
+          Create WebP
         </Button>
       </>
     </Accordion>

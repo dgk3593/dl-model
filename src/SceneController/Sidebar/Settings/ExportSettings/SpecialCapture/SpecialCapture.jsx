@@ -59,6 +59,24 @@ function SpecialCapture() {
                         Get GIF
                     </Button>
 
+                    <Button
+                        data-type="apng"
+                        onClick={handleCapture}
+                        title="Download as APNG"
+                        startIcon={<Download />}
+                    >
+                        Get APNG
+                    </Button>
+
+                    <Button
+                        data-type="webp"
+                        onClick={handleCapture}
+                        title="Download as animated WebP"
+                        startIcon={<Download />}
+                    >
+                        Get WebP
+                    </Button>
+
                     {viewer.record && (
                         <Button
                             data-type="clip"

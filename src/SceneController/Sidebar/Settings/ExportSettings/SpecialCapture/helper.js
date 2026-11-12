@@ -2,6 +2,7 @@ import { useAppState, useActiveModel } from "@/state";
 import { pngUrlToZip } from "@/dl-viewer/utils/createZip";
 import { saveAs } from "@/helper/saveAs";
 import viewer from "@/viewer";
+import { encodeAnimatedFrames } from "@/helper/encodeAnimatedFrames";
 
 const { setLoadingMsg } = useAppState.getState();
 
@@ -51,12 +52,69 @@ const getGif = getFrames => async () => {
   });
 };
 
+const getApng = getFrames => () => {
+  setLoadingMsg("Generating frames...");
+  setTimeout(async () => {
+    try {
+      const frames = await getFrames(true);
+      if (!frames?.length) throw new Error("No frames were captured.");
+      setLoadingMsg(`Creating APNG from ${frames.length} frames...`);
+      const { frameRate = 30 } = viewer.userData.specialCapture ?? {};
+      const delay = Math.ceil(1000 / frameRate);
+      const apng = await encodeAnimatedFrames(
+        "apng",
+        frames,
+        viewer.canvas.width,
+        viewer.canvas.height,
+        delay,
+      );
+
+      setLoadingMsg("Finished");
+      saveAs(apng, "spCapture.png");
+      setTimeout(() => setLoadingMsg(""), 1000);
+    } catch (error) {
+      console.error("Failed to create special capture APNG:", error);
+      setLoadingMsg("Failed to create APNG");
+      setTimeout(() => setLoadingMsg(""), 3000);
+    }
+  });
+};
+
+const getWebp = getFrames => () => {
+  setLoadingMsg("Generating frames...");
+  setTimeout(async () => {
+    try {
+      const frames = await getFrames(true);
+      if (!frames?.length) throw new Error("No frames were captured.");
+      setLoadingMsg(`Creating WebP from ${frames.length} frames...`);
+      const { frameRate = 30 } = viewer.userData.specialCapture ?? {};
+      const webp = await encodeAnimatedFrames(
+        "webp",
+        frames,
+        viewer.canvas.width,
+        viewer.canvas.height,
+        Math.ceil(1000 / frameRate),
+      );
+
+      setLoadingMsg("Finished");
+      saveAs(webp, "spCapture.webp");
+      setTimeout(() => setLoadingMsg(""), 1000);
+    } catch (error) {
+      console.error("Failed to create special capture WebP:", error);
+      setLoadingMsg("Failed to create WebP");
+      setTimeout(() => setLoadingMsg(""), 3000);
+    }
+  });
+};
+
 export const programs = [
   {
     value: "rotate",
     label: "Rotate",
     frames: downloadFrames(getRotateFrames),
     gif: getGif(getRotateFrames),
+    apng: getApng(raw => getRotateFrames(raw)),
+    webp: getWebp(raw => getRotateFrames(raw)),
     clip: getRotateClip,
     preview: previewRotate,
   },
@@ -65,12 +123,40 @@ export const programs = [
     label: "Speed Draw",
     frames: downloadFrames(getSpeedDrawFrames),
     gif: getGif(getSpeedDrawFrames),
+    apng: getApng(raw => getSpeedDrawFrames(raw)),
+    webp: getWebp(raw => getSpeedDrawFrames(raw)),
     clip: getSpeedDrawClip,
     preview: previewSpeedDraw,
   },
 ];
 
-async function getRotateFrames() {
+function getCanvasPixels() {
+  const { width, height } = viewer.canvas;
+  const context = viewer.renderer.getContext();
+  const pixels = new Uint8Array(width * height * 4);
+  context.readPixels(
+    0,
+    0,
+    width,
+    height,
+    context.RGBA,
+    context.UNSIGNED_BYTE,
+    pixels,
+  );
+
+  const bytesPerRow = width * 4;
+  const row = new Uint8Array(bytesPerRow);
+  for (let y = 0, halfHeight = height >> 1; y < halfHeight; y++) {
+    const top = y * bytesPerRow;
+    const bottom = (height - y - 1) * bytesPerRow;
+    row.set(pixels.subarray(top, top + bytesPerRow));
+    pixels.copyWithin(top, bottom, bottom + bytesPerRow);
+    pixels.set(row, bottom);
+  }
+  return pixels.buffer;
+}
+
+async function getRotateFrames(raw = false) {
   const { frameRate = 30, duration = 5 } = viewer.userData.specialCapture ?? {};
 
   let tmp = viewer.scene.background;
@@ -101,8 +187,7 @@ async function getRotateFrames() {
     viewer.controls.update();
 
     viewer.render();
-    const frame = viewer.canvas.toDataURL();
-    frames.push(frame);
+    frames.push(raw ? getCanvasPixels() : viewer.canvas.toDataURL());
 
     phi += dphi;
   }
@@ -207,7 +292,7 @@ const getPointCounts = model => {
   return [...modelMeshes, ...attachmentMeshes].map(getPointCount);
 };
 
-async function getSpeedDrawFrames() {
+async function getSpeedDrawFrames(raw = false) {
   const model = useActiveModel.getState().activeModel;
   const list = getPointCounts(model).sort((a, b) => b.count - a.count);
   const count = list.map(({ count }) => count);
@@ -243,8 +328,7 @@ async function getSpeedDrawFrames() {
     }
 
     viewer.render();
-    const frame = viewer.canvas.toDataURL();
-    frames.push(frame);
+    frames.push(raw ? getCanvasPixels() : viewer.canvas.toDataURL());
   }
   viewer.scene.background = tmp;
   return frames;
